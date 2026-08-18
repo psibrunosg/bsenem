@@ -1,0 +1,112 @@
+/* src/assets/styles/components/radio.css */
+.radio {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: var(--space-2);
+  cursor: pointer;
+  font-size: var(--text-sm);
+  color: var(--text-primary);
+  user-select: none;
+}
+
+.radio.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.radio-input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+}
+
+.radio-circle {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  border: 2px solid var(--border-medium);
+  border-radius: var(--radius-full);
+  background: var(--bg-card);
+  transition: all var(--transition-fast);
+}
+
+.radio:hover:not(.disabled) .radio-circle {
+  border-color: var(--border-dark);
+}
+
+.radio-input:focus-visible + .radio-circle {
+  box-shadow: var(--shadow-focus);
+}
+
+.radio-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: var(--radius-full);
+  background: var(--orange-500);
+  opacity: 0;
+  transform: scale(0);
+  transition: all var(--transition-fast);
+}
+
+.radio-input:checked + .radio-circle {
+  border-color: var(--orange-500);
+}
+
+.radio-input:checked + .radio-circle .radio-dot {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.radio-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  line-height: 1.4;
+}
+
+.radio-label {
+  font-weight: var(--font-medium);
+}
+
+.radio-description {
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+}
+
+/* Radio group */
+.radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.radio-group-horizontal {
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.radio-group-legend {
+  font-size: var(--text-sm);
+  font-weight: var(--font-semibold);
+  color: var(--text-primary);
+  margin-bottom: var(--space-2);
+}
+
+.radio-group-options {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.radio-group-horizontal .radio-group-options {
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+}

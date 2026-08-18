@@ -1,0 +1,135 @@
+/* src/assets/styles/components/tabs.css */
+.tabs {
+  width: 100%;
+}
+
+.tabs-list {
+  display: flex;
+  gap: var(--space-1);
+  border-bottom: 1px solid var(--border-light);
+}
+
+.tabs-vertical .tabs-list {
+  flex-direction: column;
+  border-bottom: none;
+  border-right: 1px solid var(--border-light);
+  padding-right: var(--space-4);
+  margin-right: var(--space-4);
+}
+
+.tabs-trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-4);
+  font-size: var(--text-sm);
+  font-weight: var(--font-medium);
+  color: var(--text-secondary);
+  background: transparent;
+  border: none;
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  white-space: nowrap;
+  position: relative;
+}
+
+.tabs-vertical .tabs-trigger {
+  border-radius: var(--radius-lg);
+  border-bottom: none;
+  border-right: 2px solid transparent;
+}
+
+.tabs-trigger:hover:not(.disabled) {
+  color: var(--text-primary);
+  background: var(--bg-hover);
+}
+
+.tabs-trigger:focus-visible {
+  outline: none;
+  box-shadow: var(--shadow-focus);
+}
+
+.tabs-trigger.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Variants */
+.tabs-line .tabs-trigger.active {
+  color: var(--orange-500);
+}
+
+.tabs-line .tabs-trigger.active::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--orange-500);
+  border-radius: 2px 2px 0 0;
+}
+
+.tabs-vertical.tabs-line .tabs-trigger.active::after {
+  bottom: auto;
+  right: -1px;
+  left: auto;
+  top: 0;
+  width: 2px;
+  height: 100%;
+  border-radius: 0 2px 2px 0;
+}
+
+.tabs-enclosed .tabs-trigger {
+  border: 1px solid var(--border-light);
+  border-bottom: none;
+  margin-bottom: -1px;
+}
+
+.tabs-enclosed .tabs-trigger.active {
+  background: var(--bg-card);
+  color: var(--orange-500);
+  border-color: var(--border-medium);
+  border-bottom-color: var(--bg-card);
+}
+
+.tabs-soft .tabs-trigger.active {
+  background: var(--orange-50);
+  color: var(--orange-700);
+}
+
+@media (prefers-color-scheme: dark) {
+  .tabs-soft .tabs-trigger.active {
+    background: var(--orange-900);
+    color: var(--orange-200);
+  }
+}
+
+.tabs-indicator {
+  position: absolute;
+  bottom: 0;
+  height: 2px;
+  background: var(--orange-500);
+  border-radius: 2px 2px 0 0;
+  transition: all var(--transition-normal);
+  pointer-events: none;
+}
+
+.tabs-content {
+  padding: var(--space-4) 0;
+}
+
+.tabs-panel {
+  display: none;
+  animation: fade-in var(--transition-fast) ease-out;
+}
+
+.tabs-panel.active {
+  display: block;
+}
+
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}

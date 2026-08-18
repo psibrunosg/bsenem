@@ -1,0 +1,392 @@
+/* src/assets/styles/layout/mini-player.css */
+.mini-player {
+  grid-column: 1 / -1;
+  grid-row: 3;
+  height: var(--mini-player-height);
+  background: var(--bg-card);
+  border-top: 1px solid var(--border-light);
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  padding: 0 var(--space-4);
+  position: relative;
+  z-index: 15;
+  transition: transform var(--transition-normal), opacity var(--transition-normal);
+}
+
+.app-shell.mini-player-hidden .mini-player {
+  transform: translateY(100%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+@media (max-width: 1024px) {
+  .mini-player {
+    grid-row: 3;
+    grid-column: 1;
+    padding: 0 var(--space-3);
+  }
+}
+
+/* Track info */
+.mini-player-track {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  flex: 1;
+  min-width: 0;
+}
+
+.mini-player-thumbnail {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-md);
+  object-fit: cover;
+  flex-shrink: 0;
+  background: var(--bg-tertiary);
+}
+
+.mini-player-thumbnail-placeholder {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-md);
+  background: var(--bg-tertiary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+  flex-shrink: 0;
+}
+
+.mini-player-thumbnail-placeholder i {
+  width: 24px;
+  height: 24px;
+}
+
+.mini-player-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.mini-player-title {
+  font-size: var(--text-sm);
+  font-weight: var(--font-medium);
+  color: var(--text-primary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.mini-player-artist {
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-top: 1px;
+}
+
+/* Controls */
+.mini-player-controls {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  flex: 1;
+  justify-content: center;
+}
+
+.mini-player-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-full);
+  color: var(--text-secondary);
+  background: transparent;
+  transition: all var(--transition-fast);
+}
+
+.mini-player-btn:hover {
+  background: var(--bg-hover);
+  color: var(--text-primary);
+}
+
+.mini-player-btn:active {
+  transform: scale(0.95);
+}
+
+.mini-player-btn i {
+  width: 20px;
+  height: 20px;
+}
+
+.mini-player-btn.play-btn {
+  width: 44px;
+  height: 44px;
+  background: var(--orange-500);
+  color: var(--text-inverse);
+  box-shadow: var(--shadow-md);
+}
+
+.mini-player-btn.play-btn:hover {
+  background: var(--orange-600);
+  color: var(--text-inverse);
+}
+
+.mini-player-btn.play-btn i {
+  width: 24px;
+  height: 24px;
+}
+
+/* Progress */
+.mini-player-progress {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  flex: 1;
+  max-width: 300px;
+  min-width: 120px;
+}
+
+.mini-player-time {
+  font-size: var(--text-xs);
+  font-family: var(--font-mono);
+  color: var(--text-muted);
+  min-width: 40px;
+  text-align: center;
+}
+
+.mini-player-time.current {
+  text-align: right;
+}
+
+.mini-player-time.total {
+  text-align: left;
+}
+
+.mini-player-seek {
+  flex: 1;
+  height: 4px;
+  background: var(--bg-tertiary);
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  position: relative;
+  appearance: none;
+}
+
+.mini-player-seek::-webkit-slider-thumb {
+  appearance: none;
+  width: 12px;
+  height: 12px;
+  border-radius: var(--radius-full);
+  background: var(--orange-500);
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity var(--transition-fast), transform var(--transition-fast);
+  box-shadow: var(--shadow-sm);
+}
+
+.mini-player-seek:hover::-webkit-slider-thumb,
+.mini-player-seek:focus::-webkit-slider-thumb {
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+.mini-player-seek::-moz-range-thumb {
+  width: 12px;
+  height: 12px;
+  border-radius: var(--radius-full);
+  background: var(--orange-500);
+  border: none;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity var(--transition-fast), transform var(--transition-fast);
+}
+
+.mini-player-seek:hover::-moz-range-thumb,
+.mini-player-seek:focus::-moz-range-thumb {
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+.mini-player-seek-fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: var(--orange-500);
+  border-radius: var(--radius-full);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Volume */
+.mini-player-volume {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.mini-player-volume-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-full);
+  color: var(--text-secondary);
+  background: transparent;
+  transition: all var(--transition-fast);
+}
+
+.mini-player-volume-btn:hover {
+  background: var(--bg-hover);
+  color: var(--text-primary);
+}
+
+.mini-player-volume-btn i {
+  width: 20px;
+  height: 20px;
+}
+
+.mini-player-volume-slider {
+  width: 80px;
+  height: 4px;
+  background: var(--bg-tertiary);
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  appearance: none;
+}
+
+.mini-player-volume-slider::-webkit-slider-thumb {
+  appearance: none;
+  width: 12px;
+  height: 12px;
+  border-radius: var(--radius-full);
+  background: var(--orange-500);
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity var(--transition-fast), transform var(--transition-fast);
+}
+
+.mini-player-volume-slider:hover::-webkit-slider-thumb,
+.mini-player-volume-slider:focus::-webkit-slider-thumb {
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+.mini-player-volume-slider::-moz-range-thumb {
+  width: 12px;
+  height: 12px;
+  border-radius: var(--radius-full);
+  background: var(--orange-500);
+  border: none;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity var(--transition-fast), transform var(--transition-fast);
+}
+
+.mini-player-volume-slider:hover::-moz-range-thumb,
+.mini-player-volume-slider:focus::-moz-range-thumb {
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+/* Speed indicator */
+.mini-player-speed {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 50px;
+  height: 28px;
+  padding: 0 var(--space-2);
+  font-size: var(--text-xs);
+  font-weight: var(--font-medium);
+  font-family: var(--font-mono);
+  color: var(--text-secondary);
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  user-select: none;
+}
+
+.mini-player-speed:hover {
+  background: var(--bg-tertiary);
+  border-color: var(--border-medium);
+  color: var(--text-primary);
+}
+
+/* Fullscreen button */
+.mini-player-fullscreen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-full);
+  color: var(--text-secondary);
+  background: transparent;
+  transition: all var(--transition-fast);
+}
+
+.mini-player-fullscreen:hover {
+  background: var(--bg-hover);
+  color: var(--text-primary);
+}
+
+.mini-player-fullscreen i {
+  width: 20px;
+  height: 20px;
+}
+
+/* Expanded mini player (for video) */
+.mini-player.expanded {
+  height: 200px;
+  padding: var(--space-4);
+}
+
+.mini-player.expanded .mini-player-thumbnail {
+  width: 120px;
+  height: 68px;
+  border-radius: var(--radius-lg);
+}
+
+.mini-player.expanded .mini-player-thumbnail-placeholder {
+  width: 120px;
+  height: 68px;
+  border-radius: var(--radius-lg);
+}
+
+.mini-player.expanded .mini-player-title {
+  font-size: var(--text-base);
+}
+
+.mini-player.expanded .mini-player-artist {
+  font-size: var(--text-sm);
+}
+
+/* Loading state */
+.mini-player.loading .mini-player-seek {
+  background: linear-gradient(90deg, var(--bg-tertiary) 25%, var(--bg-secondary) 50%, var(--bg-tertiary) 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+  to { background-position: -200% 0; }
+}
+
+/* Empty state */
+.mini-player.empty .mini-player-track,
+.mini-player.empty .mini-player-controls,
+.mini-player.empty .mini-player-progress {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.mini-player.empty .mini-player-title {
+  color: var(--text-muted);
+}

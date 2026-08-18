@@ -1,0 +1,72 @@
+/* src/assets/styles/components/tooltip.css */
+.tooltip {
+  position: absolute;
+  z-index: 100;
+  pointer-events: none;
+  font-size: var(--text-xs);
+  line-height: 1.4;
+}
+
+.tooltip-content {
+  display: flex;
+  align-items: center;
+  padding: var(--space-1) var(--space-2);
+  background: var(--neutral-900);
+  color: var(--neutral-50);
+  border-radius: var(--radius-md);
+  white-space: nowrap;
+  box-shadow: var(--shadow-lg);
+}
+
+@media (prefers-color-scheme: dark) {
+  .tooltip-content {
+    background: var(--neutral-100);
+    color: var(--neutral-900);
+  }
+}
+
+.tooltip-arrow {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: inherit;
+  transform: rotate(45deg);
+}
+
+.tooltip-top .tooltip-arrow {
+  bottom: -4px;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+}
+
+.tooltip-bottom .tooltip-arrow {
+  top: -4px;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+}
+
+.tooltip-left .tooltip-arrow {
+  right: -4px;
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.tooltip-right .tooltip-arrow {
+  left: -4px;
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.tooltip-visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.tooltip:not(.tooltip-visible) {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.tooltip {
+  transition: opacity var(--transition-fast), visibility var(--transition-fast);
+}

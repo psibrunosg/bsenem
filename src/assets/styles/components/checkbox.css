@@ -1,0 +1,129 @@
+/* src/assets/styles/components/checkbox.css */
+.checkbox {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: var(--space-2);
+  cursor: pointer;
+  font-size: var(--text-sm);
+  color: var(--text-primary);
+  user-select: none;
+}
+
+.checkbox.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.checkbox-input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+}
+
+.checkbox-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  border: 2px solid var(--border-medium);
+  border-radius: var(--radius-sm);
+  background: var(--bg-card);
+  transition: all var(--transition-fast);
+}
+
+.checkbox:hover:not(.disabled) .checkbox-box {
+  border-color: var(--border-dark);
+}
+
+.checkbox-input:focus-visible + .checkbox-box {
+  box-shadow: var(--shadow-focus);
+}
+
+.checkbox-input:checked + .checkbox-box {
+  background: var(--orange-500);
+  border-color: var(--orange-500);
+}
+
+.checkbox-input:checked:hover + .checkbox-box {
+  background: var(--orange-600);
+  border-color: var(--orange-600);
+}
+
+.checkbox.indeterminate .checkbox-box {
+  background: var(--orange-500);
+  border-color: var(--orange-500);
+}
+
+.checkbox-check,
+.checkbox-indeterminate {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  stroke: var(--text-inverse);
+  opacity: 0;
+  transform: scale(0.5);
+  transition: all var(--transition-fast);
+}
+
+.checkbox-input:checked + .checkbox-box .checkbox-check {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.checkbox.indeterminate .checkbox-indeterminate {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.checkbox-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  line-height: 1.4;
+}
+
+.checkbox-label {
+  font-weight: var(--font-medium);
+}
+
+.checkbox-description {
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+}
+
+/* Checkbox group */
+.checkbox-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.checkbox-group-horizontal {
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.checkbox-group-legend {
+  font-size: var(--text-sm);
+  font-weight: var(--font-semibold);
+  color: var(--text-primary);
+  margin-bottom: var(--space-2);
+}
+
+.checkbox-group-options {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.checkbox-group-horizontal .checkbox-group-options {
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+}
