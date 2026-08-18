@@ -3,23 +3,26 @@ const CACHE_NAME = 'bsenem-v1';
 const STATIC_CACHE = 'bsenem-static-v1';
 const DYNAMIC_CACHE = 'bsenem-dynamic-v1';
 
-// Assets to precache
+// Detect base path from service worker location
+const BASE_PATH = new URL(self.location.href).pathname.replace(/\/sw\.js$/, '');
+
+// Assets to precache (relative to base path)
 const STATIC_ASSETS = [
-  '/',
-  '/index.html',
-  '/manifest.json',
-  '/assets/index.css',
-  '/assets/index.js'
+  `${BASE_PATH}/`,
+  `${BASE_PATH}/index.html`,
+  `${BASE_PATH}/manifest.json`
 ];
 
 // Install event - precache static assets
 self.addEventListener('install', (event) => {
-  console.log('[SW] Installing...');
+  console.log('[SW] Installing...', BASE_PATH);
   event.waitUntil(
     caches.open(STATIC_CACHE)
       .then((cache) => {
         console.log('[SW] Precaching static assets');
-        return cache.addAll(STATIC_ASSETS);
+        return cache.addAll(STATIC_ASSETS).catch(err => {
+          console.log('[SW] Precache skipped (dev mode?):', err.message);
+        });
       })
       .then(() => self.skipWaiting())
   );
@@ -95,7 +98,7 @@ async function networkFirst(request) {
 
     // Return offline page for navigation requests
     if (request.mode === 'navigate') {
-      return caches.match('/index.html');
+      return caches.match(`${BASE_PATH}/index.html`);
     }
     return new Response('Offline', { status: 503 });
   }
@@ -103,7 +106,7 @@ async function networkFirst(request) {
 
 // Check if URL is static asset
 function isStaticAsset(pathname) {
-  return pathname.startsWith('/assets/') ||
+  return pathname.includes('/assets/') ||
          pathname.endsWith('.css') ||
          pathname.endsWith('.js') ||
          pathname.endsWith('.png') ||
@@ -123,7 +126,6 @@ self.addEventListener('message', (event) => {
 self.addEventListener('sync', (event) => {
   if (event.tag === 'sync-data') {
     console.log('[SW] Background sync triggered');
-    // Implement sync logic here
   }
 });
 
@@ -134,10 +136,10 @@ self.addEventListener('push', (event) => {
   const data = event.data.json();
   const options = {
     body: data.body || 'Nova notificação do BS Estudos',
-    icon: '/icon-192.png',
-    badge: '/badge-72.png',
+    icon: `${BASE_PATH}/icon-192.svg`,
+    badge: `${BASE_PATH}/icon-192.svg`,
     vibrate: [100, 50, 100],
-    data: data.url || '/'
+    data: data.url || `${BASE_PATH}/`
   };
 
   event.waitUntil(
