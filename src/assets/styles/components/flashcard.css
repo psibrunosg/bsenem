@@ -1,0 +1,543 @@
+/* src/assets/styles/components/flashcard.css */
+
+/* Flashcard */
+.flashcard {
+  width: 100%;
+  max-width: 500px;
+  height: 320px;
+  perspective: 1000px;
+  cursor: pointer;
+  outline: none;
+}
+
+.flashcard-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-style: preserve-3d;
+}
+
+.flashcard.flipped .flashcard-inner {
+  transform: rotateY(180deg);
+}
+
+.flashcard-front,
+.flashcard-back {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  background: var(--color-surface);
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+}
+
+.flashcard-back {
+  transform: rotateY(180deg);
+}
+
+.flashcard-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  background: var(--color-surface-alt);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.flashcard-subject {
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  color: var(--color-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.flashcard-flip-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: transparent;
+  border: none;
+  border-radius: var(--radius-md);
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.flashcard-flip-btn:hover {
+  background: var(--color-surface);
+  color: var(--color-text);
+}
+
+.flashcard-content {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  text-align: center;
+}
+
+.flashcard-text {
+  margin: 0;
+  font-size: var(--font-size-lg);
+  color: var(--color-text);
+  line-height: 1.5;
+}
+
+.flashcard-footer {
+  padding: 12px;
+  text-align: center;
+}
+
+.flashcard-hint {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-tertiary);
+}
+
+/* Rating Controls */
+.flashcard-controls {
+  display: flex;
+  gap: 8px;
+  padding: 16px;
+  background: var(--color-surface-alt);
+  border-top: 1px solid var(--color-border);
+}
+
+.flashcard-rating-btn {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 12px 8px;
+  background: var(--color-surface);
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius-md);
+  color: var(--color-text);
+  font-size: var(--font-size-xs);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.flashcard-rating-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+
+.flashcard-rating-btn.again {
+  border-color: var(--color-error);
+  color: var(--color-error);
+}
+
+.flashcard-rating-btn.again:hover {
+  background: var(--color-error);
+  color: #fff;
+}
+
+.flashcard-rating-btn.hard {
+  border-color: var(--color-warning);
+  color: var(--color-warning);
+}
+
+.flashcard-rating-btn.hard:hover {
+  background: var(--color-warning);
+  color: #fff;
+}
+
+.flashcard-rating-btn.good {
+  border-color: var(--color-success);
+  color: var(--color-success);
+}
+
+.flashcard-rating-btn.good:hover {
+  background: var(--color-success);
+  color: #fff;
+}
+
+.flashcard-rating-btn.easy {
+  border-color: var(--color-info);
+  color: var(--color-info);
+}
+
+.flashcard-rating-btn.easy:hover {
+  background: var(--color-info);
+  color: #fff;
+}
+
+/* Review Queue */
+.review-queue {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.review-header {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.review-progress-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: var(--font-size-lg);
+  color: var(--color-text);
+}
+
+.review-current {
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.review-separator {
+  color: var(--color-text-secondary);
+}
+
+.review-progress-bar {
+  height: 8px;
+  background: var(--color-border);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.review-progress-fill {
+  height: 100%;
+  background: var(--color-primary);
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+.review-stats {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+.review-stat {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+}
+
+.review-correct {
+  color: var(--color-success);
+}
+
+.review-incorrect {
+  color: var(--color-error);
+}
+
+.review-card-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.review-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.review-skip-btn {
+  padding: 8px 16px;
+  background: transparent;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.review-skip-btn:hover {
+  background: var(--color-surface-alt);
+  color: var(--color-text);
+}
+
+.review-keyboard-hints {
+  display: flex;
+  gap: 16px;
+  font-size: var(--font-size-xs);
+  color: var(--color-text-tertiary);
+}
+
+.review-keyboard-hints kbd {
+  padding: 2px 6px;
+  background: var(--color-surface-alt);
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  font-family: var(--font-mono);
+  font-size: 10px;
+}
+
+/* Empty & Complete States */
+.review-empty,
+.review-complete {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 24px;
+  text-align: center;
+}
+
+.review-empty i,
+.review-complete-icon i {
+  color: var(--color-text-tertiary);
+  margin-bottom: 16px;
+}
+
+.review-empty h3,
+.review-complete h3 {
+  margin: 0;
+  font-size: var(--font-size-lg);
+  color: var(--color-text);
+}
+
+.review-empty p,
+.review-complete p {
+  margin: 8px 0 24px;
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+}
+
+/* Flashcard Manager */
+.flashcard-manager {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.flashcard-manager-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.flashcard-manager-header h2 {
+  margin: 0;
+  font-size: var(--font-size-xl);
+  color: var(--color-text);
+}
+
+.flashcard-manager-actions {
+  display: flex;
+  gap: 8px;
+}
+
+/* Form */
+.flashcard-manager-form {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  margin-bottom: 24px;
+  overflow: hidden;
+}
+
+.flashcard-form-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  background: var(--color-surface-alt);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.flashcard-form-header h3 {
+  margin: 0;
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.flashcard-form-body {
+  padding: 20px;
+}
+
+.flashcard-form-group {
+  margin-bottom: 16px;
+}
+
+.flashcard-form-group:last-child {
+  margin-bottom: 0;
+}
+
+.flashcard-form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  color: var(--color-text);
+}
+
+.flashcard-form-group textarea,
+.flashcard-form-group input,
+.flashcard-form-group select {
+  width: 100%;
+}
+
+.flashcard-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.flashcard-form-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  padding: 16px 20px;
+  background: var(--color-surface-alt);
+  border-top: 1px solid var(--color-border);
+}
+
+/* List */
+.flashcard-list-header {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.flashcard-list-header .input {
+  flex: 1;
+}
+
+.flashcard-list-header .select {
+  width: 200px;
+}
+
+.flashcard-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.flashcard-list-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 48px 24px;
+  color: var(--color-text-secondary);
+  text-align: center;
+}
+
+.flashcard-list-empty i {
+  margin-bottom: 16px;
+  opacity: 0.5;
+}
+
+.flashcard-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  transition: all 0.2s ease;
+}
+
+.flashcard-item:hover {
+  border-color: var(--color-primary);
+  box-shadow: var(--shadow-sm);
+}
+
+.flashcard-item-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.flashcard-item-front {
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  color: var(--color-text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.flashcard-item-back {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-secondary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-top: 4px;
+}
+
+.flashcard-item-meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: var(--font-size-xs);
+  color: var(--color-text-secondary);
+}
+
+.flashcard-item-subject {
+  font-weight: 500;
+}
+
+.flashcard-item-actions {
+  display: flex;
+  gap: 4px;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .flashcard {
+    height: 280px;
+  }
+  
+  .flashcard-controls {
+    flex-wrap: wrap;
+  }
+  
+  .flashcard-rating-btn {
+    min-width: calc(50% - 4px);
+  }
+  
+  .flashcard-manager-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  
+  .flashcard-manager-actions {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  
+  .flashcard-form-row {
+    grid-template-columns: 1fr;
+  }
+  
+  .flashcard-list-header {
+    flex-direction: column;
+  }
+  
+  .flashcard-list-header .select {
+    width: 100%;
+  }
+  
+  .flashcard-item {
+    flex-wrap: wrap;
+  }
+  
+  .flashcard-item-meta {
+    width: 100%;
+    justify-content: flex-start;
+  }
+}

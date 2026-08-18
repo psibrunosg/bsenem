@@ -28,6 +28,10 @@
 @import './components/video.css';
 @import './components/audio.css';
 @import './components/playlist.css';
+@import './components/flashcard.css';
+@import './components/notes.css';
+@import './components/exam.css';
+@import './components/dashboard.css';
 
 /* Pages */
 @import './pages.css';

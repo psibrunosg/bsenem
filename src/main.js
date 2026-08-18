@@ -3,6 +3,10 @@ import '@styles/main.css';
 import { AppShell } from '@components/AppShell.js';
 import { VideoPage } from '@pages/VideoPage.js';
 import { AudioPage } from '@pages/AudioPage.js';
+import { FlashcardsPage } from '@pages/FlashcardsPage.js';
+import { NotesPage } from '@pages/NotesPage.js';
+import { ExamsPage } from '@pages/ExamsPage.js';
+import { DashboardPage } from '@pages/DashboardPage.js';
 import { keyboard, setupGlobalShortcuts } from '@utils/keyboard.js';
 import { confetti, triggerConfetti } from '@utils/confetti.js';
 
@@ -37,8 +41,12 @@ const appElement = app.render();
 document.getElementById('app').appendChild(appElement);
 
 // Register routes
+app.registerRoute('dashboard', DashboardPage);
 app.registerRoute('video', VideoPage);
 app.registerRoute('audio', AudioPage);
+app.registerRoute('flashcards', FlashcardsPage);
+app.registerRoute('notes', NotesPage);
+app.registerRoute('exams', ExamsPage);
 
 // Initialize theme from localStorage
 (() => {
