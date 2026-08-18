@@ -70,10 +70,67 @@ Acesse `http://localhost:8765`
 ## Comandos
 
 ```bash
-npm run dev      # Servidor de desenvolvimento
+npm run dev      # Servidor de desenvolvimento (frontend)
 npm run build    # Build de produção
 npm run preview  # Preview do build
+npm run test     # Executar testes
 ```
+
+## Backend (PHP API)
+
+### Iniciar Backend
+
+```bash
+# Requer PHP 8.0+ com SQLite
+cd backend
+php -S localhost:8000 router.php
+```
+
+Acesse API em `http://localhost:8000/api`
+
+### Estrutura Backend
+
+```
+backend/
+├── api/index.php           # Router principal
+├── config/
+│   ├── database.php        # Conexão SQLite + helpers
+│   ├── cors.php            # CORS headers
+│   └── response.php        # Respostas JSON padronizadas
+├── controllers/
+│   ├── AuthController.php  # Registro, login, perfil
+│   ├── FlashcardController.php  # CRUD + revisão SRS
+│   ├── NoteController.php  # CRUD + busca
+│   └── ProgressController.php   # Dashboard, heatmap, XP
+├── database/
+│   └── schema.sql          # Schema SQLite completo
+├── middleware/
+│   └── auth.php            # JWT auth
+├── public/index.php        # Entry point
+└── router.php              # PHP built-in server router
+```
+
+### API Endpoints
+
+| Método | Rota | Descrição |
+|--------|------|-----------|
+| POST | `/api/auth/register` | Registrar usuário |
+| POST | `/api/auth/login` | Login |
+| GET | `/api/auth/me` | Dados do usuário logado |
+| GET | `/api/flashcards` | Listar flashcards |
+| POST | `/api/flashcards` | Criar flashcard |
+| PUT | `/api/flashcards/{id}` | Atualizar flashcard |
+| DELETE | `/api/flashcards/{id}` | Deletar flashcard |
+| POST | `/api/flashcards/{id}/review` | Revisar card (SM-2) |
+| GET | `/api/flashcards/due/count` | Cards pendentes |
+| GET | `/api/notes` | Listar notas |
+| POST | `/api/notes` | Criar nota |
+| PUT | `/api/notes/{id}` | Atualizar nota |
+| DELETE | `/api/notes/{id}` | Deletar nota |
+| GET | `/api/notes/search?q=` | Buscar notas |
+| GET | `/api/progress/dashboard` | Dados do dashboard |
+| GET | `/api/progress/heatmap?year=` | Dados do heatmap |
+| POST | `/api/progress/study` | Registrar sessão de estudo |
 
 ## Estrutura do Projeto
 
@@ -83,9 +140,16 @@ bsenem/
 │   ├── assets/styles/    # CSS (tokens, componentes, layout)
 │   ├── components/       # Componentes vanilla JS
 │   ├── pages/            # Páginas de cada funcionalidade
+│   ├── tests/            # Testes unitários (Vitest)
 │   ├── utils/            # Utilitários (keyboard, SRS, confetti)
 │   └── main.js           # Entry point
-├── public/               # Assets estáticos
+├── backend/              # API REST PHP
+│   ├── api/              # Router
+│   ├── config/           # Database, CORS, Response
+│   ├── controllers/      # Auth, Flashcards, Notes, Progress
+│   ├── database/         # Schema SQL
+│   └── middleware/        # Auth JWT
+├── public/               # Assets estáticos + manifest.json
 ├── dist/                 # Build de produção
 └── package.json
 ```
@@ -145,9 +209,10 @@ server {
 - [x] Fase 6: Anotações
 - [x] Fase 7: Simulados
 - [x] Fase 8: Dashboard Gamificado
-- [ ] Fase 9: Backend PHP + Tauri Desktop
-- [ ] Service Worker PWA
-- [ ] Testes unitários
+- [x] Fase 9: Backend PHP (API REST + SQLite)
+- [x] Service Worker PWA
+- [x] Testes unitários (Vitest)
+- [ ] Fase 9: Tauri Desktop
 
 ## Licença
 

@@ -6,13 +6,17 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
+    "test": "vitest run",
+    "test:watch": "vitest",
     "tauri": "tauri"
   },
   "dependencies": {
     "lucide": "^0.400.0"
   },
   "devDependencies": {
+    "@tauri-apps/cli": "^2.0.0",
+    "jsdom": "^30.0.1",
     "vite": "^5.0.0",
-    "@tauri-apps/cli": "^2.0.0"
+    "vitest": "^4.1.11"
   }
 }

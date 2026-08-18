@@ -26,5 +26,14 @@ export default defineConfig({
       '@utils': '/src/utils'
     }
   },
-  css: { devSourcemap: true }
+  css: { devSourcemap: true },
+  test: {
+    globals: true,
+    environment: 'jsdom',
+    include: ['src/tests/**/*.test.js'],
+    coverage: {
+      provider: 'v8',
+      reporter: ['text', 'html']
+    }
+  }
 });

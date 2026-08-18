@@ -85,6 +85,28 @@ document.addEventListener('dblclick', (e) => {
   }
 });
 
+// Register Service Worker for PWA
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', async () => {
+    try {
+      const registration = await navigator.serviceWorker.register('/sw.js');
+      console.log('[PWA] Service Worker registered:', registration.scope);
+      
+      // Listen for updates
+      registration.addEventListener('updatefound', () => {
+        const newWorker = registration.installing;
+        newWorker.addEventListener('statechange', () => {
+          if (newWorker.state === 'activated') {
+            console.log('[PWA] New version available');
+          }
+        });
+      });
+    } catch (error) {
+      console.log('[PWA] Service Worker registration failed:', error);
+    }
+  });
+}
+
 // Make app globally accessible for debugging
 window.bsApp = app;
 
