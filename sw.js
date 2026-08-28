@@ -1,7 +1,7 @@
 // public/sw.js
-const CACHE_NAME = 'bsenem-v1';
-const STATIC_CACHE = 'bsenem-static-v1';
-const DYNAMIC_CACHE = 'bsenem-dynamic-v1';
+const CACHE_NAME = 'bsenem-v2';
+const STATIC_CACHE = 'bsenem-static-v2';
+const DYNAMIC_CACHE = 'bsenem-dynamic-v2';
 
 // Detect base path from service worker location
 const BASE_PATH = new URL(self.location.href).pathname.replace(/\/sw\.js$/, '');
@@ -154,3 +154,4 @@ self.addEventListener('notificationclick', (event) => {
     clients.openWindow(event.notification.data)
   );
 });
+
