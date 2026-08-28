@@ -161,4 +161,58 @@ class NoteController {
         
         Response::success($notes);
     }
+    
+    public static function generateFlashcards($id) {
+        $userId = Auth::requireAuth();
+        $db = Database::getInstance();
+        
+        $note = $db->fetch("SELECT content, subject_id FROM notes WHERE id = ? AND user_id = ?", [$id, $userId]);
+        if (!$note) Response::notFound('Note not found');
+
+        $apiKey = getenv('GEMINI_API_KEY') ?: ($_ENV['GEMINI_API_KEY'] ?? '');
+        if (empty($apiKey)) {
+            Response::error('Chave da API do Gemini nao configurada no .env');
+        }
+
+        $prompt = "Crie ate 5 flashcards diretos e curtos (frente e verso) com base no seguinte texto. Retorne APENAS um JSON no formato: [{\"front\": \"pergunta\", \"back\": \"resposta\"}]. Texto: \n" . strip_tags($note['content']);
+        
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_URL, 'https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=' . $apiKey);
+        curl_setopt($ch, CURLOPT_POST, true);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_HTTPHEADER, ['Content-Type: application/json']);
+        curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode([
+            'contents' => [['parts' => [['text' => $prompt]]]]
+        ]));
+        
+        $response = curl_exec($ch);
+        curl_close($ch);
+        
+        $data = json_decode($response, true);
+        $text = $data['candidates'][0]['content']['parts'][0]['text'] ?? '';
+        
+        preg_match('/\[.*\]/s', $text, $matches);
+        $cards = json_decode($matches[0] ?? '[]', true);
+        
+        if (empty($cards)) {
+            Response::error('Nao foi possivel gerar os flashcards. Tente novamente.');
+        }
+
+        $created = 0;
+        foreach ($cards as $card) {
+            if (!empty($card['front']) && !empty($card['back'])) {
+                $db->insert('flashcards', [
+                    'user_id' => $userId,
+                    'subject_id' => $note['subject_id'],
+                    'front_content' => $card['front'],
+                    'back_content' => $card['back'],
+                    'difficulty' => 1,
+                    'next_review' => date('Y-m-d H:i:s')
+                ]);
+                $created++;
+            }
+        }
+
+        Response::success(['message' => "$created flashcards gerados com IA!"]);
+    }
 }

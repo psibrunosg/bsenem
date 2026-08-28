@@ -19,6 +19,8 @@ export class VideoPlayer {
     this.availableQualities = options.availableQualities ?? ['auto', '1080p', '720p', '480p', '360p'];
     this.subtitles = options.subtitles ?? [];
     this.currentSubtitle = options.currentSubtitle ?? null;
+    this.breakpoints = options.breakpoints ?? [];
+    this.activeBreakpoint = null;
     
     // Callbacks
     this.onPlay = options.onPlay ?? (() => {});
@@ -75,6 +77,8 @@ export class VideoPlayer {
           </button>
         </div>
         
+        <div class="video-quiz-overlay" style="display: none;"></div>
+        
         <div class="video-controls" data-hidden="true">
           <div class="video-progress-wrapper" data-action="progress">
             <div class="video-progress-bar">
@@ -122,6 +126,9 @@ export class VideoPlayer {
               </div>
               
               <div class="video-settings">
+                <button class="video-btn" aria-label="Criar Corte/Anotação" data-action="clip" style="color: var(--orange-500);">
+                  <i data-lucide="scissors" class="w-5 h-5"></i>
+                </button>
                 <button class="video-btn" aria-label="Legendas" data-action="subtitles">
                   <i data-lucide="message-square" class="w-5 h-5"></i>
                 </button>
@@ -238,6 +245,9 @@ export class VideoPlayer {
       case 'play':
       case 'play-pause':
         this.togglePlayPause();
+        break;
+      case 'clip':
+        this.createClip();
         break;
       case 'rewind10':
         this.seekRelative(-10);
@@ -415,6 +425,7 @@ export class VideoPlayer {
 
   // Video controls
   play() {
+    if (this.activeBreakpoint) return;
     this.videoElement.play().catch(() => {});
   }
 
@@ -428,6 +439,10 @@ export class VideoPlayer {
   }
 
   seek(time) {
+    const skippedBp = this.breakpoints.find(bp => !bp.resolved && time > bp.time && this.currentTime < bp.time);
+    if (skippedBp) {
+      time = skippedBp.time;
+    }
     this.videoElement.currentTime = Math.max(0, Math.min(this.duration, time));
   }
 
@@ -578,6 +593,15 @@ export class VideoPlayer {
 
   updateProgress() {
     this.currentTime = this.videoElement.currentTime;
+    
+    // Check breakpoints
+    const activeBp = this.breakpoints.find(bp => !bp.resolved && this.currentTime >= bp.time);
+    if (activeBp && !this.activeBreakpoint) {
+      this.activeBreakpoint = activeBp;
+      this.pause();
+      this.showQuiz(activeBp);
+    }
+    
     const percentage = this.duration > 0 ? (this.currentTime / this.duration) * 100 : 0;
     
     const played = this.element.querySelector('.video-progress-played');
@@ -600,11 +624,95 @@ export class VideoPlayer {
     }
   }
 
+  showQuiz(breakpoint) {
+    const overlay = this.element.querySelector('.video-quiz-overlay');
+    if (!overlay) return;
+    
+    overlay.style.display = 'flex';
+    this.hideControls();
+    
+    overlay.innerHTML = `
+      <div class="video-quiz-container">
+        <h3>Desafio Rápido!</h3>
+        <p class="quiz-question">${breakpoint.question}</p>
+        <div class="quiz-options">
+          ${breakpoint.options.map((opt, i) => `
+            <button class="quiz-option-btn" data-index="${i}">${opt}</button>
+          `).join('')}
+        </div>
+        <div class="quiz-feedback" style="display: none;"></div>
+      </div>
+    `;
+    
+    const btns = overlay.querySelectorAll('.quiz-option-btn');
+    btns.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        const index = parseInt(e.target.dataset.index);
+        const feedback = overlay.querySelector('.quiz-feedback');
+        
+        // Reset all classes
+        btns.forEach(b => { b.classList.remove('correct', 'wrong'); b.disabled = true; });
+        
+        if (index === breakpoint.answer) {
+          e.target.classList.add('correct');
+          feedback.textContent = 'Resposta correta! Continuando o vídeo...';
+          feedback.style.color = 'var(--success)';
+          feedback.style.display = 'block';
+          
+          setTimeout(() => {
+            breakpoint.resolved = true;
+            this.activeBreakpoint = null;
+            this.hideQuiz();
+            this.renderBreakpoints();
+            this.play();
+          }, 1500);
+        } else {
+          e.target.classList.add('wrong');
+          // Highlight correct answer
+          btns[breakpoint.answer].classList.add('correct');
+          feedback.textContent = 'Ops, a resposta certa era a verde! Continuando...';
+          feedback.style.color = 'var(--error)';
+          feedback.style.display = 'block';
+          
+          setTimeout(() => {
+            breakpoint.resolved = true;
+            this.activeBreakpoint = null;
+            this.hideQuiz();
+            this.renderBreakpoints();
+            this.play();
+          }, 2500);
+        }
+      });
+    });
+  }
+
+  hideQuiz() {
+    const overlay = this.element.querySelector('.video-quiz-overlay');
+    if (overlay) overlay.style.display = 'none';
+  }
+
   updateDuration() {
     this.duration = this.videoElement.duration || 0;
     const totalTime = this.element.querySelector('.video-time-total');
     if (totalTime) totalTime.textContent = this.formatTime(this.duration);
+    this.renderBreakpoints();
     this.onDurationChange(this.duration);
+  }
+
+  renderBreakpoints() {
+    const bar = this.element.querySelector('.video-progress-bar');
+    if (!bar) return;
+    
+    bar.querySelectorAll('.video-progress-marker').forEach(m => m.remove());
+    if (this.duration <= 0) return;
+    
+    this.breakpoints.forEach(bp => {
+      const marker = document.createElement('div');
+      marker.className = 'video-progress-marker';
+      marker.style.left = `${(bp.time / this.duration) * 100}%`;
+      if (bp.resolved) marker.classList.add('resolved');
+      bar.appendChild(marker);
+    });
   }
 
   updateVolumeUI() {
@@ -833,9 +941,77 @@ export class VideoPlayer {
     this.title = title;
   }
 
+  setBreakpoints(breakpoints) {
+    this.breakpoints = breakpoints ?? [];
+    this.activeBreakpoint = null;
+    this.hideQuiz();
+    this.renderBreakpoints();
+  }
+
   setSubtitles(subtitles) {
-    this.subtitles = subtitles;
-    // Rebuild tracks would be needed
+    this.subtitles = subtitles ?? [];
+    
+    // Clear existing tracks
+    const existingTracks = this.videoElement.querySelectorAll('track');
+    existingTracks.forEach(t => t.remove());
+    
+    // Add new tracks
+    this.subtitles.forEach(sub => {
+      const track = document.createElement('track');
+      track.kind = 'subtitles';
+      track.src = sub.src;
+      track.srclang = sub.lang;
+      track.label = sub.label;
+      if (sub.default) track.default = true;
+      this.videoElement.appendChild(track);
+    });
+
+    // Update subtitles menu UI
+    const subtitlesMenu = this.element.querySelector('.video-subtitles-menu');
+    if (subtitlesMenu) {
+      subtitlesMenu.innerHTML = \`
+        <button class="video-menu-item" role="menuitem" data-subtitle="off">
+          <span>Desativadas</span>
+          <i data-lucide="check" class="w-4 h-4" style="display:none"></i>
+        </button>
+        \${this.subtitles.map(sub => \`
+          <button class="video-menu-item" role="menuitem" data-subtitle="\${sub.lang}">
+            <span>\${sub.label}</span>
+            <i data-lucide="check" class="w-4 h-4" style="display:none"></i>
+          </button>
+        \`).join('')}
+      \`;
+      if (typeof lucide !== 'undefined') lucide.createIcons(subtitlesMenu);
+    }
+  }
+
+  createClip() {
+    let text = '';
+    const tracks = this.videoElement.textTracks;
+    for (let i = 0; i < tracks.length; i++) {
+      if (tracks[i].mode === 'showing' || tracks[i].mode === 'hidden') {
+        const activeCues = tracks[i].activeCues;
+        if (activeCues && activeCues.length > 0) {
+          text = Array.from(activeCues).map(cue => cue.text).join(' ');
+          break;
+        }
+      }
+    }
+    
+    this.breakpoints.push({
+      time: this.currentTime,
+      type: 'clip',
+      resolved: true
+    });
+    this.renderBreakpoints();
+    
+    window.dispatchEvent(new CustomEvent('video-clip-created', {
+      detail: {
+        time: this.currentTime,
+        text: text,
+        title: this.title
+      }
+    }));
   }
 
   destroy() {
@@ -845,3 +1021,4 @@ export class VideoPlayer {
     if (this.element?.parentNode) this.element.parentNode.removeChild(this.element);
   }
 }
+

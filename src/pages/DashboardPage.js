@@ -4,6 +4,8 @@ import { XPBar } from '@components/XPBar.js';
 import { StreakCounter } from '@components/StreakCounter.js';
 import { StatsDashboard } from '@components/StatsDashboard.js';
 
+import { api } from '@utils/api.js';
+
 export class DashboardPage {
   constructor(options = {}) {
     this.app = options.app;
@@ -15,35 +17,29 @@ export class DashboardPage {
     this.stats = null;
     this.element = null;
     
-    this.activityData = this.loadActivityData();
+    this.activityData = {};
+    this.dashboardData = null;
   }
 
-  loadActivityData() {
+  async loadActivityData() {
     try {
-      const data = localStorage.getItem('bsenem_activity');
-      return data ? JSON.parse(data) : this.generateSampleData();
-    } catch {
-      return this.generateSampleData();
-    }
-  }
-
-  generateSampleData() {
-    const data = {};
-    const today = new Date();
-    
-    for (let i = 0; i < 365; i++) {
-      const date = new Date(today);
-      date.setDate(date.getDate() - i);
-      const dateStr = date.toISOString().split('T')[0];
-      
-      // Random activity (more recent = more likely)
-      const random = Math.random();
-      if (random > 0.4) {
-        data[dateStr] = Math.floor(Math.random() * 15) + 1;
+      const res = await api.get('/progress/heatmap');
+      if (res.success) {
+        this.activityData = res.data;
+        if (this.heatmap) {
+          this.heatmap.updateData(this.activityData);
+        }
       }
+      
+      const resDash = await api.get('/progress/dashboard');
+      if (resDash.success) {
+        this.dashboardData = resDash.data;
+        // Optionally update components with real stats
+        // this.stats.updateStats(this.getUserStats());
+      }
+    } catch (e) {
+      console.error('Failed to load dashboard data', e);
     }
-    
-    return data;
   }
 
   render() {
@@ -67,6 +63,7 @@ export class DashboardPage {
     `;
 
     this.initComponents();
+    this.loadActivityData();
     return this.element;
   }
 

@@ -375,3 +375,109 @@
     width: 60px;
   }
 }
+
+/* Quiz Overlay */
+.video-quiz-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(8px);
+  z-index: 15;
+}
+
+.video-quiz-container {
+  background: var(--surface-bg);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  width: 90%;
+  max-width: 500px;
+  text-align: center;
+  color: var(--text-primary);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  animation: popIn 0.3s ease-out;
+}
+
+.video-quiz-container h3 {
+  font-family: var(--font-heading);
+  color: var(--color-primary);
+  margin-bottom: 16px;
+  font-size: var(--font-size-xl);
+}
+
+.video-quiz-container .quiz-question {
+  font-size: var(--font-size-lg);
+  margin-bottom: 24px;
+}
+
+.quiz-options {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.quiz-option-btn {
+  background: var(--surface-hover);
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+  padding: 16px;
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-md);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: left;
+}
+
+.quiz-option-btn:hover:not(:disabled) {
+  background: var(--surface-active);
+  border-color: var(--color-primary);
+}
+
+.quiz-option-btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.quiz-option-btn.correct {
+  background: rgba(16, 185, 129, 0.1) !important;
+  border-color: var(--color-success) !important;
+  color: var(--color-success) !important;
+}
+
+.quiz-option-btn.wrong {
+  background: rgba(239, 68, 68, 0.1) !important;
+  border-color: var(--color-error) !important;
+  color: var(--color-error) !important;
+}
+
+.quiz-feedback {
+  font-weight: 600;
+  margin-top: 16px;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes popIn {
+  from { transform: scale(0.9); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+
+.video-progress-marker {
+  position: absolute;
+  top: 0;
+  width: 4px;
+  height: 100%;
+  background: var(--color-warning, #f59e0b);
+  transform: translateX(-50%);
+  z-index: 2;
+  border-radius: 2px;
+  transition: background 0.3s ease;
+}
+.video-progress-marker.resolved {
+  background: var(--color-success, #10b981);
+}
+

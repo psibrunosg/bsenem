@@ -1,75 +1,60 @@
 // src/utils/SRSEngine.js - Spaced Repetition System (SM-2 Algorithm)
 
+import { api } from './api.js';
+
 export class SRSEngine {
-  constructor(storageKey = 'bsenem_srs') {
-    this.storageKey = storageKey;
-    this.cards = this.load();
+  constructor() {
+    this.cards = [];
   }
 
-  load() {
+  async init() {
     try {
-      const data = localStorage.getItem(this.storageKey);
-      return data ? JSON.parse(data) : [];
-    } catch {
-      return [];
+      const res = await api.get('/flashcards?per_page=1000');
+      if (res.success) {
+        this.cards = res.data.data; // paginated data
+      }
+    } catch (e) {
+      console.error('Failed to load flashcards', e);
     }
   }
 
-  save() {
-    localStorage.setItem(this.storageKey, JSON.stringify(this.cards));
-  }
-
-  createCard(front, back, options = {}) {
-    const card = {
-      id: options.id || this.generateId(),
+  async createCard(front, back, options = {}) {
+    const res = await api.post('/flashcards', {
       front,
       back,
-      subject: options.subject || '',
+      subject_id: options.subject || null,
       tags: options.tags || [],
-      media: options.media || null,
-      
-      // SM-2 fields
-      easeFactor: 2.5,
-      interval: 0,
-      repetitions: 0,
-      dueDate: new Date().toISOString(),
-      lastReview: null,
-      
-      // Stats
-      totalReviews: 0,
-      correctReviews: 0,
-      streak: 0,
-      
-      // Metadata
-      createdAt: new Date().toISOString(),
-      updatedAt: new Date().toISOString()
-    };
-
-    this.cards.push(card);
-    this.save();
-    return card;
+      media_url: options.media || null
+    });
+    
+    if (res.success) {
+      this.cards.push(res.data);
+      return res.data;
+    }
+    return null;
   }
 
-  updateCard(cardId, updates) {
-    const index = this.cards.findIndex(c => c.id === cardId);
-    if (index === -1) return null;
-
-    this.cards[index] = {
-      ...this.cards[index],
-      ...updates,
-      updatedAt: new Date().toISOString()
-    };
-    this.save();
-    return this.cards[index];
+  async updateCard(cardId, updates) {
+    const res = await api.put(\`/flashcards/\${cardId}\`, updates);
+    if (res.success) {
+      const index = this.cards.findIndex(c => c.id == cardId);
+      if (index !== -1) {
+        this.cards[index] = res.data;
+      }
+      return res.data;
+    }
+    return null;
   }
 
-  deleteCard(cardId) {
-    this.cards = this.cards.filter(c => c.id !== cardId);
-    this.save();
+  async deleteCard(cardId) {
+    const res = await api.delete(\`/flashcards/\${cardId}\`);
+    if (res.success) {
+      this.cards = this.cards.filter(c => c.id != cardId);
+    }
   }
 
   getCard(cardId) {
-    return this.cards.find(c => c.id === cardId) || null;
+    return this.cards.find(c => c.id == cardId) || null;
   }
 
   getAllCards() {
@@ -85,61 +70,19 @@ export class SRSEngine {
   }
 
   // SM-2 Algorithm implementation
-  review(cardId, quality) {
+  async review(cardId, quality) {
     // quality: 0 = Again, 1 = Hard, 2 = Good, 3 = Easy
-    const card = this.getCard(cardId);
-    if (!card) return null;
-
-    const now = new Date();
-    const lastReview = card.lastReview ? new Date(card.lastReview) : null;
+    const res = await api.put(\`/flashcards/\${cardId}/review\`, { quality });
     
-    // Update review count
-    card.totalReviews++;
-    card.lastReview = now.toISOString();
-
-    // SM-2 algorithm
-    if (quality < 1) {
-      // Failed - reset
-      card.repetitions = 0;
-      card.interval = 1;
-      card.streak = 0;
-    } else {
-      // Passed
-      card.correctReviews++;
-      card.streak++;
-
-      if (card.repetitions === 0) {
-        card.interval = 1;
-      } else if (card.repetitions === 1) {
-        card.interval = 6;
-      } else {
-        card.interval = Math.round(card.interval * card.easeFactor);
+    if (res.success && res.data.card) {
+      // Update local card
+      const index = this.cards.findIndex(c => c.id == cardId);
+      if (index !== -1) {
+        this.cards[index] = res.data.card;
       }
-      card.repetitions++;
+      return res.data;
     }
-
-    // Update ease factor
-    // EF' = EF + (0.1 - (3 - q) * (0.08 + (3 - q) * 0.02))
-    card.easeFactor = Math.max(1.3, 
-      card.easeFactor + (0.1 - (3 - quality) * (0.08 + (3 - quality) * 0.02))
-    );
-
-    // Adjust interval based on quality
-    if (quality === 1) {
-      card.interval = Math.max(1, Math.round(card.interval * 0.8));
-    } else if (quality === 3) {
-      card.interval = Math.round(card.interval * 1.3);
-    }
-
-    // Set due date
-    const dueDate = new Date(now);
-    dueDate.setDate(dueDate.getDate() + card.interval);
-    card.dueDate = dueDate.toISOString();
-
-    card.updatedAt = now.toISOString();
-    this.save();
-
-    return card;
+    return null;
   }
 
   getDueCards(limit = 20) {

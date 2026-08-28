@@ -2,6 +2,8 @@
 // backend/api/index.php
 
 require_once __DIR__ . '/../config/cors.php';
+require_once __DIR__ . '/../utils/env.php';
+loadEnv();
 require_once __DIR__ . '/../config/database.php';
 require_once __DIR__ . '/../config/response.php';
 require_once __DIR__ . '/../middleware/auth.php';
@@ -9,6 +11,7 @@ require_once __DIR__ . '/../controllers/AuthController.php';
 require_once __DIR__ . '/../controllers/FlashcardController.php';
 require_once __DIR__ . '/../controllers/NoteController.php';
 require_once __DIR__ . '/../controllers/ProgressController.php';
+require_once __DIR__ . '/../controllers/ExamController.php';
 
 initializeDatabase();
 
@@ -38,6 +41,16 @@ $id = getSegment(1);
 $sub = getSegment(2);
 
 match(true) {
+    $resource === 'notes' && ctype_digit((string)$id) && $sub === 'flashcards' && $method === 'POST'
+        => NoteController::generateFlashcards((int)$id),
+
+    // Auth routes
+    $resource === 'auth' && $id === 'forgot-password' && $method === 'POST'
+        => AuthController::forgotPassword(),
+
+    $resource === 'auth' && $id === 'reset-password' && $method === 'POST'
+        => AuthController::resetPassword(),
+
     // Auth routes
     $resource === 'auth' && $id === 'register' && $method === 'POST'
         => AuthController::register(),
@@ -99,6 +112,13 @@ match(true) {
     $resource === 'progress' && $id === 'study' && $method === 'POST'
         => ProgressController::recordStudy(),
 
+    // Exam routes
+    $resource === 'exams' && $id === 'attempt' && $method === 'POST'
+        => ExamController::attempt(),
+
     // Fallback
     default => Response::notFound('Endpoint not found')
 };
+
+
+

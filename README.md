@@ -1,6 +1,6 @@
 # BS Estudos
 
-Plataforma de estudos para o ENEM e vestibulares, construída com JavaScript vanilla e Vite.
+Plataforma de estudos para o ENEM e vestibulares, construída com JavaScript vanilla, HTML, CSS e PHP.
 
 ![License](https://img.shields.io/badge/license-MIT-green)
 ![Version](https://img.shields.io/badge/version-1.0.0-blue)
@@ -46,35 +46,25 @@ Plataforma de estudos para o ENEM e vestibulares, construída com JavaScript van
 ## Tecnologias
 
 - **JavaScript** vanilla (ES Modules)
-- **Vite** 5.x para build e dev server
+- **PHP** para API REST
 - **Lucide** para ícones
 - **CSS** vanilla com design tokens
 - **localStorage** para persistência
 
 ## Instalação
 
+Como o projeto agora é Vanilla JS + PHP, basta rodar o servidor PHP embutido na raiz do projeto (ou usar Apache/Nginx).
+
 ```bash
 # Clonar repositório
 git clone https://github.com/seu-usuario/bsenem.git
 cd bsenem
 
-# Instalar dependências
-npm install
-
-# Iniciar servidor de desenvolvimento
-npm run dev
+# Iniciar servidor (exemplo com PHP embutido)
+php -S localhost:8000
 ```
 
-Acesse `http://localhost:8765`
-
-## Comandos
-
-```bash
-npm run dev      # Servidor de desenvolvimento (frontend)
-npm run build    # Build de produção
-npm run preview  # Preview do build
-npm run test     # Executar testes
-```
+Acesse `http://localhost:8000`
 
 ## Backend (PHP API)
 
@@ -140,7 +130,6 @@ bsenem/
 │   ├── assets/styles/    # CSS (tokens, componentes, layout)
 │   ├── components/       # Componentes vanilla JS
 │   ├── pages/            # Páginas de cada funcionalidade
-│   ├── tests/            # Testes unitários (Vitest)
 │   ├── utils/            # Utilitários (keyboard, SRS, confetti)
 │   └── main.js           # Entry point
 ├── backend/              # API REST PHP
@@ -149,9 +138,8 @@ bsenem/
 │   ├── controllers/      # Auth, Flashcards, Notes, Progress
 │   ├── database/         # Schema SQL
 │   └── middleware/        # Auth JWT
-├── public/               # Assets estáticos + manifest.json
-├── dist/                 # Build de produção
-└── package.json
+├── manifest.json         # PWA Manifest
+└── index.html            # Entry point HTML
 ```
 
 ## Rotas
@@ -179,25 +167,15 @@ bsenem/
 
 ## Deploy
 
-### Netlify/Vercel
-```bash
-npm run build
-npx netlify deploy --prod --dir=dist
-```
-
-### GitHub Pages
-```bash
-npm run build
-# Copiar dist/ para branch gh-pages
-```
-
-### Servidor Estático
+### Servidor Estático (Apache/Nginx/Hostinger)
+Basta copiar todos os arquivos do projeto para a pasta pública (htdocs, public_html, etc.) do seu servidor com suporte a PHP.
 ```nginx
 server {
     listen 80;
-    root /var/www/bs-estudos/dist;
-    index index.html;
+    root /var/www/bs-estudos;
+    index index.html index.php;
     location / { try_files $uri $uri/ /index.html; }
+    location /api { try_files $uri $uri/ /backend/public/index.php?$query_string; }
 }
 ```
 
@@ -211,7 +189,6 @@ server {
 - [x] Fase 8: Dashboard Gamificado
 - [x] Fase 9: Backend PHP (API REST + SQLite)
 - [x] Service Worker PWA
-- [x] Testes unitários (Vitest)
 - [ ] Fase 9: Tauri Desktop
 
 ## Licença

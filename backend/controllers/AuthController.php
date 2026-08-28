@@ -4,6 +4,8 @@
 require_once __DIR__ . '/../config/database.php';
 require_once __DIR__ . '/../config/response.php';
 require_once __DIR__ . '/../middleware/auth.php';
+require_once __DIR__ . '/../utils/Turnstile.php';
+require_once __DIR__ . '/../utils/Resend.php';
 
 class AuthController {
     public static function register() {
@@ -104,6 +106,58 @@ class AuthController {
         Response::success(['user' => $user]);
     }
     
+        public static function forgotPassword() {
+        $data = json_decode(file_get_contents('php://input'), true);
+        if (!Turnstile::verify($data['turnstileToken'] ?? '')) {
+            Response::error('Verificação de segurança falhou.');
+        }
+
+        $email = trim(strtolower($data['email'] ?? ''));
+        if (empty($email)) Response::error('Email is required');
+
+        $db = Database::getInstance();
+        $user = $db->fetch("SELECT id, name FROM users WHERE email = ?", [$email]);
+        
+        if ($user) {
+            $token = bin2hex(random_bytes(32));
+            $expires = date('Y-m-d H:i:s', time() + 3600); // 1 hora
+            $db->query("UPDATE users SET reset_token = ?, reset_token_expires = ? WHERE id = ?", [$token, $expires, $user['id']]);
+            
+            // Send email via Resend
+            $html = "<h2>Recuperação de Senha</h2><p>Olá " . $user['name'] . ",</p><p>Use o token abaixo para redefinir sua senha:</p><p><b>" . $token . "</b></p><p>Este token expira em 1 hora.</p>";
+            Resend::sendEmail($email, 'BSenem - Recuperação de Senha', $html);
+        }
+
+        // Always return success to prevent email enumeration
+        Response::success(['message' => 'Se o e-mail existir, as instruções foram enviadas.']);
+    }
+
+    public static function resetPassword() {
+        $data = json_decode(file_get_contents('php://input'), true);
+        if (!Turnstile::verify($data['turnstileToken'] ?? '')) {
+            Response::error('Verificação de segurança falhou.');
+        }
+
+        $token = $data['token'] ?? '';
+        $newPassword = $data['password'] ?? '';
+
+        if (empty($token) || strlen($newPassword) < 6) {
+            Response::error('Token inválido ou senha muito curta.');
+        }
+
+        $db = Database::getInstance();
+        $user = $db->fetch("SELECT id FROM users WHERE reset_token = ? AND reset_token_expires > ?", [$token, date('Y-m-d H:i:s')]);
+
+        if (!$user) {
+            Response::error('Token inválido ou expirado.');
+        }
+
+        $passwordHash = Auth::hashPassword($newPassword);
+        $db->query("UPDATE users SET password_hash = ?, reset_token = NULL, reset_token_expires = NULL WHERE id = ?", [$passwordHash, $user['id']]);
+
+        Response::success(['message' => 'Senha alterada com sucesso!']);
+    }
+
     public static function updateProfile() {
         $userId = Auth::requireAuth();
         $data = json_decode(file_get_contents('php://input'), true);
@@ -128,3 +182,4 @@ class AuthController {
         Response::success(null, 'Profile updated');
     }
 }
+

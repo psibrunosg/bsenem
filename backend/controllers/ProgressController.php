@@ -126,7 +126,7 @@ class ProgressController {
             Response::error('Type and duration are required');
         }
 
-        $validTypes = ['video', 'audio', 'flashcards', 'notes', 'exam'];
+        $validTypes = ['video', 'audio', 'flashcards', 'notes', 'exam', 'pomodoro'];
         if (!in_array($data['type'], $validTypes)) {
             Response::error('Invalid study type');
         }
@@ -185,3 +185,4 @@ class ProgressController {
         ], 'Study session recorded');
     }
 }
+

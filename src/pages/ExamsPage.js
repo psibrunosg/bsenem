@@ -21,22 +21,22 @@ export class ExamsPage {
     // Sample exams
     return [
       {
-        id: 'exam_1',
-        title: 'Simulado ENEM - Ciências da Natureza',
+        id: 1,
+        title: 'Simulado ENEM 2023 - 1º Dia',
         subject: 'Geral',
         timeLimit: 90,
         questions: this.generateSampleQuestions('natureza', 10)
       },
       {
-        id: 'exam_2',
-        title: 'Matemática - Funções',
+        id: 2,
+        title: 'Simulado Matemática - Funções',
         subject: 'Matemática',
         timeLimit: 60,
         questions: this.generateSampleQuestions('matematica', 8)
       },
       {
-        id: 'exam_3',
-        title: 'Português - Interpretação de Texto',
+        id: 3,
+        title: 'Simulado Português - Gramática',
         subject: 'Língua Portuguesa',
         timeLimit: 45,
         questions: this.generateSampleQuestions('portugues', 6)
@@ -219,7 +219,7 @@ export class ExamsPage {
   }
 
   startExam(examId) {
-    const exam = this.exams.find(e => e.id === examId);
+    const exam = this.exams.find(e => e.id == examId);
     if (!exam) return;
 
     this.currentExam = exam;

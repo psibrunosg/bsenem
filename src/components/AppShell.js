@@ -1,7 +1,8 @@
-// src/components/AppShell.js
 import { Sidebar } from './Sidebar.js';
 import { Header } from './Header.js';
 import { MiniPlayer } from './MiniPlayer.js';
+import { triggerConfetti } from '../utils/confetti.js';
+import { api } from '../utils/api.js';
 
 export class AppShell {
   constructor(options = {}) {
@@ -26,7 +27,8 @@ export class AppShell {
       onSearch: (query, callback) => this.handleSearch(query, callback),
       onThemeToggle: () => this.toggleTheme(),
       onUserMenuAction: (action) => this.handleUserMenuAction(action),
-      onCommandPalette: (action) => this.handleCommandAction(action)
+      onCommandPalette: (action) => this.handleCommandAction(action),
+      onPomodoroComplete: (mode) => this.handlePomodoroComplete(mode)
     });
     
     this.miniPlayer = new MiniPlayer({
@@ -132,8 +134,12 @@ export class AppShell {
           user: this.user,
           subjects: this.subjects
         });
+        
+        // Render could be sync or async
+        const renderedElement = await component.render();
+        
         this.contentElement.innerHTML = '';
-        this.contentElement.appendChild(component.render());
+        this.contentElement.appendChild(renderedElement);
         if (typeof lucide !== 'undefined') lucide.createIcons();
       } catch (error) {
         console.error('Error rendering route:', error);
@@ -170,7 +176,8 @@ export class AppShell {
       flashcards: 'Flashcards',
       notes: 'Anotações',
       exams: 'Simulados',
-      stats: 'Estatísticas'
+      stats: 'Estatísticas',
+      library: 'Arquivos Locais'
     };
     return titles[route] || route.charAt(0).toUpperCase() + route.slice(1);
   }
@@ -206,6 +213,26 @@ export class AppShell {
   toggleMiniPlayer() {
     this.miniPlayerHidden = !this.miniPlayerHidden;
     this.element.classList.toggle('mini-player-hidden', this.miniPlayerHidden);
+  }
+
+  // Pomodoro
+  async handlePomodoroComplete(mode) {
+    if (mode === 'break') { // means focus just ended
+      triggerConfetti(window.innerWidth / 2, window.innerHeight / 2);
+      
+      // Save to SQL backend
+      try {
+        const res = await api.post('/progress/study', {
+          type: 'pomodoro',
+          duration: 25 * 60
+        });
+        if (res.success) {
+          this.setUser({ xp: this.user.xp + res.data.xp_earned });
+        }
+      } catch (e) {
+        console.error('Failed to save pomodoro session', e);
+      }
+    }
   }
 
   // Theme

@@ -1,4 +1,7 @@
 // src/components/ResultsScreen.js
+import { XPAnimation } from './XPAnimation.js';
+import { api } from '../utils/api.js';
+
 export class ResultsScreen {
   constructor(options = {}) {
     this.results = options.results ?? null;
@@ -8,6 +11,23 @@ export class ResultsScreen {
     this.onBack = options.onBack ?? (() => {});
     
     this.element = null;
+    
+    if (this.results) {
+      this.saveExamAttempt();
+    }
+  }
+
+  async saveExamAttempt() {
+    try {
+      await api.post('/exams/attempt', {
+        exam_id: this.results.exam?.id,
+        score: Math.round(this.results.score),
+        answers: this.results.questionResults,
+        time_spent: this.results.totalTime || 0
+      });
+    } catch (e) {
+      console.error('Failed to save exam attempt', e);
+    }
   }
 
   render() {
@@ -95,6 +115,19 @@ export class ResultsScreen {
         </div>
       </div>
       
+      ${incorrect > 0 ? `
+        <div class="results-recommendations" style="margin-top: 24px; padding: 16px; background: rgba(239, 68, 68, 0.1); border: 1px solid var(--color-error); border-radius: var(--radius-lg);">
+          <h3 style="color: var(--color-error); margin-bottom: 8px; display: flex; align-items: center; gap: 8px;">
+            <i data-lucide="alert-triangle" class="w-5 h-5"></i>
+            Recomendações de Estudo
+          </h3>
+          <p style="margin-bottom: 12px; font-size: 0.95em;">Com base nos seus erros, recomendamos revisar os tópicos deste simulado antes de tentar novamente.</p>
+          <button class="btn btn-primary btn-sm" data-action="go-to-video" style="width: 100%;">
+            <i data-lucide="play-circle" class="w-4 h-4"></i> Assistir Aula de Revisão
+          </button>
+        </div>
+      ` : ''}
+      
       <div class="results-actions">
         <button class="btn btn-secondary" data-action="back">
           <i data-lucide="arrow-left" class="w-4 h-4"></i>
@@ -145,6 +178,10 @@ export class ResultsScreen {
           break;
         case 'back':
           this.onBack();
+          break;
+        case 'go-to-video':
+          // Navigate to video route
+          window.location.hash = '#video';
           break;
       }
     });

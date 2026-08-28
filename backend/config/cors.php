@@ -1,12 +1,10 @@
 <?php
 // backend/config/cors.php
 
-// Allow requests from Vite dev server and production
+// Allow requests from dev server
 $allowedOrigins = [
-    'http://localhost:8765',
-    'http://127.0.0.1:8765',
-    'http://localhost:3000',
-    'http://localhost:8080'
+    'http://localhost:8000',
+    'http://127.0.0.1:8000'
 ];
 
 $origin = $_SERVER['HTTP_ORIGIN'] ?? '';
