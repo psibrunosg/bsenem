@@ -5,8 +5,6 @@ require_once __DIR__ . '/../config/database.php';
 require_once __DIR__ . '/../config/response.php';
 
 class Auth {
-    private static $secret = 'bs-estudos-secret-key-change-in-production';
-    
     public static function generateToken($userId) {
         $payload = [
             'user_id' => $userId,
@@ -14,8 +12,10 @@ class Auth {
             'exp' => time() + (7 * 24 * 60 * 60) // 7 days
         ];
         
-        return self::base64UrlEncode(json_encode($payload)) . '.' . 
-               self::base64UrlEncode(hash_hmac('sha256', json_encode($payload), self::$secret, true));
+        $payloadEncoded = self::base64UrlEncode(json_encode($payload, JSON_THROW_ON_ERROR));
+        $signature = hash_hmac('sha256', $payloadEncoded, self::secret(), true);
+
+        return $payloadEncoded . '.' . self::base64UrlEncode($signature);
     }
     
     public static function verifyToken($token) {
@@ -25,21 +25,23 @@ class Auth {
         if (count($parts) !== 2) return null;
         
         [$payloadEncoded, $signature] = $parts;
-        $payload = json_decode(self::base64UrlDecode($payloadEncoded), true);
-        
-        if (!$payload) return null;
-        
-        // Check expiration
-        if (isset($payload['exp']) && $payload['exp'] < time()) {
-            return null;
-        }
-        
         // Verify signature
         $expectedSignature = self::base64UrlEncode(
-            hash_hmac('sha256', $payloadEncoded, self::$secret, true)
+            hash_hmac('sha256', $payloadEncoded, self::secret(), true)
         );
         
         if (!hash_equals($expectedSignature, $signature)) {
+            return null;
+        }
+
+        $decodedPayload = self::base64UrlDecode($payloadEncoded);
+        if ($decodedPayload === false) return null;
+
+        $payload = json_decode($decodedPayload, true);
+        if (!is_array($payload) || !isset($payload['user_id'], $payload['exp'])) return null;
+
+        // Check expiration
+        if ($payload['exp'] < time()) {
             return null;
         }
         
@@ -71,6 +73,15 @@ class Auth {
     
     public static function verifyPassword($password, $hash) {
         return password_verify($password, $hash);
+    }
+
+    private static function secret() {
+        $secret = getenv('APP_TOKEN_SECRET');
+        if (!is_string($secret) || strlen($secret) < 32) {
+            throw new RuntimeException('Authentication is not configured');
+        }
+
+        return $secret;
     }
     
     private static function base64UrlEncode($data) {

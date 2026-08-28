@@ -89,7 +89,7 @@ document.addEventListener('dblclick', (e) => {
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', async () => {
     try {
-      const registration = await navigator.serviceWorker.register('/sw.js');
+      const registration = await navigator.serviceWorker.register(`${import.meta.env.BASE_URL}sw.js`);
       console.log('[PWA] Service Worker registered:', registration.scope);
       
       // Listen for updates

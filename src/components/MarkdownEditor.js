@@ -95,7 +95,7 @@ export class MarkdownEditor {
       
       <div class="editor-body">
         <div class="editor-write-mode">
-          <textarea class="editor-textarea" placeholder="Escreva sua nota em Markdown...">${this.content}</textarea>
+          <textarea class="editor-textarea" placeholder="Escreva sua nota em Markdown...">${this.escapeHtml(this.content)}</textarea>
         </div>
         <div class="editor-preview-mode" style="display: none;">
           <div class="editor-preview-content markdown-body"></div>
@@ -108,8 +108,8 @@ export class MarkdownEditor {
           <div class="editor-tags-list">
             ${this.tags.map(tag => `
               <span class="editor-tag">
-                ${tag}
-                <button class="editor-tag-remove" data-tag="${tag}">&times;</button>
+                ${this.escapeHtml(tag)}
+                <button class="editor-tag-remove" data-tag="${this.escapeHtml(tag)}">&times;</button>
               </span>
             `).join('')}
           </div>
@@ -367,7 +367,9 @@ export class MarkdownEditor {
   markdownToHtml(text) {
     if (!text) return '';
 
-    let html = text
+    let html = this.escapeHtml(text)
+      // Code blocks
+      .replace(/```(\w*)\n([\s\S]*?)```/g, '<pre><code class="language-$1">$2</code></pre>')
       // Headers
       .replace(/^### (.*$)/gm, '<h3>$1</h3>')
       .replace(/^## (.*$)/gm, '<h2>$1</h2>')
@@ -380,8 +382,6 @@ export class MarkdownEditor {
       .replace(/~~(.*?)~~/g, '<del>$1</del>')
       // Code
       .replace(/`(.*?)`/g, '<code>$1</code>')
-      // Code blocks
-      .replace(/```(\w*)\n([\s\S]*?)```/g, '<pre><code class="language-$1">$2</code></pre>')
       // Blockquotes
       .replace(/^> (.*$)/gm, '<blockquote>$1</blockquote>')
       // Lists
@@ -389,10 +389,10 @@ export class MarkdownEditor {
       .replace(/^- \[x\] (.*$)/gm, '<li class="task-item"><input type="checkbox" checked disabled> $1</li>')
       .replace(/^- (.*$)/gm, '<li>$1</li>')
       .replace(/^\d+\. (.*$)/gm, '<li>$1</li>')
-      // Links
-      .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank">$1</a>')
       // Images
-      .replace(/!\[([^\]]*)\]\(([^)]+)\)/g, '<img src="$2" alt="$1">')
+      .replace(/!\[([^\]]*)\]\(([^)]+)\)/g, (_match, alt, url) => `<img src="${this.safeUrl(url)}" alt="${alt}">`)
+      // Links
+      .replace(/\[([^\]]+)\]\(([^)]+)\)/g, (_match, label, url) => `<a href="${this.safeUrl(url)}" target="_blank" rel="noopener noreferrer">${label}</a>`)
       // Horizontal rules
       .replace(/^---$/gm, '<hr>')
       // Paragraphs
@@ -400,6 +400,20 @@ export class MarkdownEditor {
       .replace(/\n/g, '<br>');
 
     return `<p>${html}</p>`;
+  }
+
+  safeUrl(url) {
+    const normalized = String(url).trim();
+    if (normalized.startsWith('/') || normalized.startsWith('./') || normalized.startsWith('../')) {
+      return normalized;
+    }
+
+    try {
+      const parsed = new URL(normalized);
+      return ['http:', 'https:'].includes(parsed.protocol) ? parsed.href : '#';
+    } catch {
+      return '#';
+    }
   }
 
   detectWikiLinks(text) {
@@ -420,8 +434,8 @@ export class MarkdownEditor {
 
     tagsList.innerHTML = this.tags.map(tag => `
       <span class="editor-tag">
-        ${tag}
-        <button class="editor-tag-remove" data-tag="${tag}">&times;</button>
+        ${this.escapeHtml(tag)}
+        <button class="editor-tag-remove" data-tag="${this.escapeHtml(tag)}">&times;</button>
       </span>
     `).join('');
   }

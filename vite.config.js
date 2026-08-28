@@ -1,9 +1,8 @@
 // vite.config.js
 import { defineConfig } from 'vite';
 
-export default defineConfig(({ mode }) => {
-  const isProd = mode === 'production';
-  const basePath = process.env.BASE_PATH || (isProd ? '/bsenem/' : './');
+export default defineConfig(() => {
+  const basePath = process.env.BASE_PATH || '/';
   
   return {
     root: '.',
@@ -12,13 +11,8 @@ export default defineConfig(({ mode }) => {
     build: {
       outDir: 'dist',
       assetsDir: 'assets',
-      sourcemap: true,
-      minify: 'esbuild',
-      rollupOptions: {
-        output: {
-          manualChunks: { vendor: ['lucide'] }
-        }
-      }
+      sourcemap: false,
+      minify: 'esbuild'
     },
     resolve: {
       alias: {

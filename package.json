@@ -7,6 +7,7 @@
     "build": "vite build",
     "preview": "vite preview",
     "test": "vitest run",
+    "test:backend": "php backend/tests/auth_test.php",
     "test:watch": "vitest",
     "tauri": "tauri"
   },

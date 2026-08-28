@@ -98,14 +98,14 @@ export class NotesPage {
     }
 
     return filteredNotes.map(note => `
-      <div class="notes-list-item ${this.currentNote?.id === note.id ? 'active' : ''}" data-note-id="${note.id}">
-        <div class="notes-list-item-title">${note.title || 'Sem título'}</div>
+      <div class="notes-list-item ${this.currentNote?.id === note.id ? 'active' : ''}" data-note-id="${this.escapeHtml(note.id)}">
+        <div class="notes-list-item-title">${this.escapeHtml(note.title || 'Sem título')}</div>
         <div class="notes-list-item-preview">${this.getPreview(note.content)}</div>
         <div class="notes-list-item-meta">
           <span class="notes-list-item-date">${this.formatDate(note.updatedAt)}</span>
           ${note.tags?.length ? `
             <div class="notes-list-item-tags">
-              ${note.tags.slice(0, 2).map(tag => `<span class="notes-tag">${tag}</span>`).join('')}
+              ${note.tags.slice(0, 2).map(tag => `<span class="notes-tag">${this.escapeHtml(tag)}</span>`).join('')}
               ${note.tags.length > 2 ? `<span class="notes-tag more">+${note.tags.length - 2}</span>` : ''}
             </div>
           ` : ''}
@@ -259,7 +259,8 @@ export class NotesPage {
       .replace(/\[([^\]]+)\]\([^)]+\)/g, '$1')
       .trim();
     
-    return plain.length > maxLength ? plain.substring(0, maxLength) + '...' : plain;
+    const preview = plain.length > maxLength ? plain.substring(0, maxLength) + '...' : plain;
+    return this.escapeHtml(preview);
   }
 
   formatDate(dateStr) {
@@ -298,6 +299,12 @@ export class NotesPage {
         setTimeout(() => toast.remove(), 300);
       }, 2000);
     }, 10);
+  }
+
+  escapeHtml(value) {
+    const div = document.createElement('div');
+    div.textContent = String(value ?? '');
+    return div.innerHTML;
   }
 
   destroy() {

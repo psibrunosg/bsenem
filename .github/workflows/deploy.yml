@@ -33,10 +33,11 @@ jobs:
       - name: Run tests
         run: npm run test
 
+      - name: Run backend authentication tests
+        run: npm run test:backend
+
       - name: Build
         run: npm run build
-        env:
-          BASE_PATH: /bsenem
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
