@@ -87,9 +87,9 @@ class Database {
 // Initialize database schema
 function initializeDatabase() {
     try {
-        \ = Database::getInstance();
-        \->execute('ALTER TABLE users ADD COLUMN reset_token TEXT;');
-        \->execute('ALTER TABLE users ADD COLUMN reset_token_expires DATETIME;');
+        $db = Database::getInstance();
+        $db->execute('ALTER TABLE users ADD COLUMN reset_token TEXT;');
+        $db->execute('ALTER TABLE users ADD COLUMN reset_token_expires DATETIME;');
     } catch(Exception \) {}
     $db = Database::getInstance()->getConnection();
     $schema = file_get_contents(__DIR__ . '/../database/schema.sql');
@@ -109,5 +109,6 @@ if (basename(__FILE__) === basename($_SERVER['SCRIPT_FILENAME'] ?? '')) {
     initializeDatabase();
     echo json_encode(['message' => 'Database initialized successfully']);
 }
+
 
 
