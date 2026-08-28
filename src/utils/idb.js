@@ -1,4 +1,4 @@
-﻿export const idb = {
+export const idb = {
   dbPromise: new Promise((resolve, reject) => {
     const request = indexedDB.open('bsenem-store', 1);
     request.onupgradeneeded = () => request.result.createObjectStore('keyval');

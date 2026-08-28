@@ -1,4 +1,4 @@
-﻿export class PomodoroWidget {
+export class PomodoroWidget {
   constructor(options = {}) {
     this.onComplete = options.onComplete || (() => {});
     this.element = null;

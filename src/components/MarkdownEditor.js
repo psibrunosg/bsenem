@@ -1,4 +1,4 @@
-﻿// src/components/MarkdownEditor.js
+// src/components/MarkdownEditor.js
 export class MarkdownEditor {
   constructor(options = {}) {
     this.content = options.content ?? '';

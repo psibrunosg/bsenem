@@ -1,4 +1,4 @@
-﻿// src/components/VideoPlayer.js
+// src/components/VideoPlayer.js
 export class VideoPlayer {
   constructor(options = {}) {
     this.src = options.src ?? null;

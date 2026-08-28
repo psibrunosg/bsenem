@@ -1,4 +1,4 @@
-﻿import { Sidebar } from './Sidebar.js';
+import { Sidebar } from './Sidebar.js';
 import { Header } from './Header.js';
 import { MiniPlayer } from './MiniPlayer.js';
 import { triggerConfetti } from '../utils/confetti.js';

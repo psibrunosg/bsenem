@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 class Turnstile {
     public static function verify($token) {
         $secret = getenv('TURNSTILE_SECRET_KEY') ?: ($_ENV['TURNSTILE_SECRET_KEY'] ?? '');

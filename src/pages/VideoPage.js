@@ -1,4 +1,4 @@
-﻿// src/pages/VideoPage.js
+// src/pages/VideoPage.js
 import { VideoPlayer } from '@components/VideoPlayer.js';
 import { Playlist } from '@components/Playlist.js';
 import { Switch } from '@components/Switch.js';

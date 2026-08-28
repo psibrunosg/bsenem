@@ -1,4 +1,4 @@
-﻿// src/pages/NotesPage.js
+// src/pages/NotesPage.js
 import { MarkdownEditor } from '@components/MarkdownEditor.js';
 
 import { api } from '@utils/api.js';

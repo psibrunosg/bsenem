@@ -1,4 +1,4 @@
-﻿// src/pages/LibraryPage.js
+// src/pages/LibraryPage.js
 
 import { idb } from '@utils/idb.js';
 

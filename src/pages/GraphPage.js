@@ -1,4 +1,4 @@
-﻿// src/pages/GraphPage.js
+// src/pages/GraphPage.js
 import { api } from '@utils/api.js';
 
 export class GraphPage {

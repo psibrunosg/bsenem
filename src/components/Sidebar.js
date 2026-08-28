@@ -1,4 +1,4 @@
-﻿// src/components/Sidebar.js
+// src/components/Sidebar.js
 export class Sidebar {
   constructor(options = {}) {
     this.collapsed = options.collapsed ?? false;

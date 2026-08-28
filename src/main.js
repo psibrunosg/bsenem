@@ -1,4 +1,4 @@
-﻿import { AppShell } from '@components/AppShell.js';
+import { AppShell } from '@components/AppShell.js';
 import { VideoPage } from '@pages/VideoPage.js';
 import { AudioPage } from '@pages/AudioPage.js';
 import { FlashcardsPage } from '@pages/FlashcardsPage.js';

@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 class Resend {
     public static function sendEmail($to, $subject, $html) {
         $apiKey = getenv('RESEND_API_KEY') ?: ($_ENV['RESEND_API_KEY'] ?? '');
