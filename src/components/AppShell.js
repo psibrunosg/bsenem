@@ -97,6 +97,13 @@ export class AppShell {
     this.routes.set(path, component);
   }
 
+  start(route = 'dashboard') {
+    const initialRoute = this.routes.has(route) ? route : 'dashboard';
+    this.currentRoute = initialRoute;
+    this.sidebar.setActiveRoute(initialRoute);
+    this.renderRoute(initialRoute);
+  }
+
   navigate(route) {
     this.currentRoute = route;
     this.sidebar.setActiveRoute(route);
@@ -217,9 +224,8 @@ export class AppShell {
     // For now, return mock results
     const mockResults = [
       { id: '1', title: 'Matemática - Funções Quadráticas', category: 'Videoaulas', icon: 'play-circle', route: 'video', meta: '45 min • Matemática' },
-      { id: '2', title: 'Direito Constitucional - Princípios', category: 'PDFs', icon: 'file-text', route: 'pdf', meta: '120 páginas • Direito' },
-      { id: '3', title: 'Flashcards - Biologia Celular', category: 'Flashcards', icon: 'card-stack', route: 'flashcards', meta: '50 cards • Biologia' },
-      { id: '4', title: 'Simulado ENEM 2023', category: 'Simulados', icon: 'clipboard-check', route: 'exams', meta: '180 questões • Misto' }
+      { id: '2', title: 'Flashcards - Biologia Celular', category: 'Flashcards', icon: 'card-stack', route: 'flashcards', meta: '50 cards • Biologia' },
+      { id: '3', title: 'Simulado ENEM 2023', category: 'Simulados', icon: 'clipboard-check', route: 'exams', meta: '180 questões • Misto' }
     ].filter(r => r.title.toLowerCase().includes(query.toLowerCase()) || r.meta.toLowerCase().includes(query.toLowerCase()));
     
     callback(mockResults);
@@ -300,7 +306,7 @@ export class AppShell {
         this.navigate('notes');
         break;
       case 'start-review':
-        this.navigate('review');
+        this.navigate('flashcards');
         break;
       case 'open-exam':
         this.navigate('exams');

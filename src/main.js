@@ -48,6 +48,13 @@ app.registerRoute('flashcards', FlashcardsPage);
 app.registerRoute('notes', NotesPage);
 app.registerRoute('exams', ExamsPage);
 
+const initialRoute = window.location.hash.replace(/^#/, '') || 'dashboard';
+app.start(initialRoute);
+
+window.addEventListener('popstate', () => {
+  app.start(window.location.hash.replace(/^#/, '') || 'dashboard');
+});
+
 // Initialize theme from localStorage
 (() => {
   const saved = localStorage.getItem('theme');

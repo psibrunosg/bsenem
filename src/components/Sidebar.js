@@ -17,9 +17,7 @@ export class Sidebar {
       {
         title: 'Principal',
         items: [
-          { id: 'dashboard', icon: 'layout-dashboard', label: 'Dashboard' },
-          { id: 'study', icon: 'book-open', label: 'Estudar' },
-          { id: 'review', icon: 'rotate-ccw', label: 'Revisão', badge: '12' }
+          { id: 'dashboard', icon: 'layout-dashboard', label: 'Dashboard' }
         ]
       },
       {
@@ -27,7 +25,6 @@ export class Sidebar {
         items: [
           { id: 'video', icon: 'play-circle', label: 'Videoaulas' },
           { id: 'audio', icon: 'music', label: 'Áudios' },
-          { id: 'pdf', icon: 'file-text', label: 'PDFs' },
           { id: 'flashcards', icon: 'card-stack', label: 'Flashcards' }
         ]
       },
@@ -35,8 +32,7 @@ export class Sidebar {
         title: 'Ferramentas',
         items: [
           { id: 'notes', icon: 'pen-tool', label: 'Anotações' },
-          { id: 'exams', icon: 'clipboard-check', label: 'Simulados' },
-          { id: 'stats', icon: 'bar-chart-2', label: 'Estatísticas' }
+          { id: 'exams', icon: 'clipboard-check', label: 'Simulados' }
         ]
       }
     ];

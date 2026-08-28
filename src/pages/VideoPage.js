@@ -9,32 +9,30 @@ export class VideoPage {
     this.playlist = null;
     this.element = null;
     
+    const demoVideo = 'https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4';
     this.videoItems = [
       {
         id: 1,
         title: 'Introdução à Matemática - Funções Quadráticas',
         artist: 'Prof. Carlos Silva',
-        src: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4',
-        poster: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/images/BigBuckBunny.jpg',
-        duration: 596,
+        src: demoVideo,
+        duration: 5,
         subject: 'Matemática'
       },
       {
         id: 2,
         title: 'Física Mecânica - Leis de Newton',
         artist: 'Prof. Ana Costa',
-        src: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4',
-        poster: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/images/ElephantsDream.jpg',
-        duration: 653,
+        src: demoVideo,
+        duration: 5,
         subject: 'Física'
       },
       {
         id: 3,
         title: 'Química Orgânica - Hidrocarbonetos',
         artist: 'Prof. Maria Santos',
-        src: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4',
-        poster: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/images/ForBiggerBlazes.jpg',
-        duration: 15,
+        src: demoVideo,
+        duration: 5,
         subject: 'Química'
       }
     ];

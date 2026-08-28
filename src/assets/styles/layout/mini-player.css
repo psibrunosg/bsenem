@@ -1,7 +1,5 @@
 /* src/assets/styles/layout/mini-player.css */
 .mini-player {
-  grid-column: 1 / -1;
-  grid-row: 3;
   height: var(--mini-player-height);
   background: var(--bg-card);
   border-top: 1px solid var(--border-light);
@@ -10,7 +8,6 @@
   gap: var(--space-4);
   padding: 0 var(--space-4);
   position: relative;
-  z-index: 15;
   transition: transform var(--transition-normal), opacity var(--transition-normal);
 }
 
@@ -22,8 +19,6 @@
 
 @media (max-width: 1024px) {
   .mini-player {
-    grid-row: 3;
-    grid-column: 1;
     padding: 0 var(--space-3);
   }
 }
