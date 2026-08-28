@@ -1,4 +1,4 @@
-﻿export class XPAnimation {
+export class XPAnimation {
     constructor(container, amount, startXP) {
         this.container = container;
         this.amount = amount;
