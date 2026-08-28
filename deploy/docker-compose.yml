@@ -1,11 +1,20 @@
 ﻿version: '3.8'
 services:
-  app:
+  frontend:
+    image: nginx:alpine
+    volumes:
+      - ../:/var/www/bsenem
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf
+    ports:
+      - "80:80"
+    depends_on:
+      - api
+    restart: unless-stopped
+
+  api:
     image: php:8.2-cli
     volumes:
-      - ../:/var/www/html
-    working_dir: /var/www/html/backend/api
+      - ../:/var/www/bsenem
+    working_dir: /var/www/bsenem/backend/api
     command: php -S 0.0.0.0:8000 index.php
-    ports:
-      - "8000:8000"
     restart: unless-stopped
