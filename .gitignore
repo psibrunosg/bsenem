@@ -1,9 +1,3 @@
-# Dependencies
-node_modules/
-
-# Build output
-dist/
-
 # IDE
 .vscode/
 .idea/
@@ -16,13 +10,9 @@ Thumbs.db
 
 # Environment
 .env
-.env.local
-.env.*.local
 
 # Logs
 *.log
-npm-debug.log*
 
 # Cache
 .cache/
-.vite/

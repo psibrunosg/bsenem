@@ -1,4 +1,4 @@
-// src/components/MarkdownEditor.js
+﻿// src/components/MarkdownEditor.js
 export class MarkdownEditor {
   constructor(options = {}) {
     this.content = options.content ?? '';
@@ -8,6 +8,7 @@ export class MarkdownEditor {
     
     this.onChange = options.onChange ?? (() => {});
     this.onSave = options.onSave ?? (() => {});
+    this.onAIFlashcards = options.onAIFlashcards ?? (() => {});
     this.onLinkClick = options.onLinkClick ?? (() => {});
     
     this.element = null;
@@ -22,7 +23,7 @@ export class MarkdownEditor {
       <div class="editor-header">
         <input type="text" class="editor-title-input" value="${this.escapeHtml(this.title)}" placeholder="Título da nota...">
         <div class="editor-actions">
-          <button class="editor-action-btn" data-action="save" title="Salvar (Ctrl+S)">
+          <button class="editor-action-btn" data-action="ai-flashcards" title="Gerar Flashcards (IA)" style="color: var(--orange-500);">`n            <i data-lucide="sparkles" class="w-4 h-4"></i>`n          </button>`n          <button class="editor-action-btn" data-action="save" title="Salvar (Ctrl+S)">
             <i data-lucide="save" class="w-4 h-4"></i>
           </button>
           <button class="editor-action-btn" data-action="toggle-preview" title="Preview (Ctrl+P)">
@@ -475,3 +476,5 @@ export class MarkdownEditor {
     if (this.element?.parentNode) this.element.parentNode.removeChild(this.element);
   }
 }
+
+

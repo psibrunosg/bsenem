@@ -1,5 +1,7 @@
-// src/pages/NotesPage.js
+﻿// src/pages/NotesPage.js
 import { MarkdownEditor } from '@components/MarkdownEditor.js';
+
+import { api } from '@utils/api.js';
 
 export class NotesPage {
   constructor(options = {}) {
@@ -8,22 +10,62 @@ export class NotesPage {
     this.currentView = 'editor'; // 'editor' | 'list'
     
     this.editor = null;
-    this.notes = this.loadNotes();
+    this.notes = [];
     this.currentNote = null;
     this.element = null;
   }
 
-  loadNotes() {
+  async loadNotes() {
     try {
-      const data = localStorage.getItem('bsenem_notes');
-      return data ? JSON.parse(data) : [];
-    } catch {
-      return [];
+      const res = await api.get('/notes');
+      if (res.success) {
+        this.notes = res.data;
+        this.updateNotesList();
+      }
+    } catch (e) {
+      console.error('Failed to load notes', e);
     }
   }
 
-  saveNotes() {
-    localStorage.setItem('bsenem_notes', JSON.stringify(this.notes));
+  async saveNotes(note) {
+    try {
+      if (note.isNew) {
+        const res = await api.post('/notes', note);
+        if (res.success) {
+          note.id = res.data.id;
+          delete note.isNew;
+        }
+      } else {
+        await api.put(\`/notes/\${note.id}\`, note);
+      }
+    } catch (e) {
+      console.error('Failed to save note', e);
+    }
+  }
+
+  async generateFlashcards() {
+    if (!this.currentNote || this.currentNote.isNew) {
+      alert('Salve a anotação primeiro antes de gerar flashcards!');
+      return;
+    }
+    
+    // Create an overlay spinner
+    const btn = this.element.querySelector('[data-action="ai-flashcards"]');
+    if (btn) btn.innerHTML = '<div class="spinner" style="width: 16px; height: 16px; border-color: var(--orange-500); border-top-color: transparent;"></div>';
+    
+    try {
+      const res = await api.post(/notes/\/flashcards);
+      if (res.success) {
+        alert(res.data.message || 'Flashcards gerados com sucesso!');
+      } else {
+        alert(res.error || 'Erro ao gerar flashcards.');
+      }
+    } catch (e) {
+      alert('Erro de conexão.');
+    } finally {
+      if (btn) btn.innerHTML = '<i data-lucide="sparkles" class="w-4 h-4"></i>';
+      if (typeof lucide !== 'undefined') lucide.createIcons(btn.parentElement);
+    }
   }
 
   render() {
@@ -38,11 +80,15 @@ export class NotesPage {
       
       <div class="notes-layout">
         <div class="notes-sidebar">
-          <div class="notes-sidebar-header">
-            <button class="btn btn-primary btn-sm" data-action="new-note">
-              <i data-lucide="plus" class="w-4 h-4"></i>
-              Nova Nota
-            </button>
+          <div class="notes-sidebar-header" style="display: flex; flex-direction: column; gap: 8px;">
+            <div style="display: flex; gap: 8px;">
+              <button class="btn btn-primary btn-sm" data-action="new-note" style="flex: 1;">
+                <i data-lucide="plus" class="w-4 h-4"></i> Nova
+              </button>
+              <button class="btn btn-secondary btn-sm" data-action="feynman-challenge" style="flex: 1;" title="Método Feynman">
+                <i data-lucide="brain" class="w-4 h-4"></i> Feynman
+              </button>
+            </div>
             <input type="text" class="input" placeholder="Buscar notas..." data-action="search">
           </div>
           
@@ -63,6 +109,8 @@ export class NotesPage {
 
     this.bindEvents();
     if (typeof lucide !== 'undefined') lucide.createIcons(this.element);
+
+    this.loadNotes();
 
     return this.element;
   }
@@ -119,6 +167,8 @@ export class NotesPage {
     if (!container) return;
 
     this.editor = new MarkdownEditor({
+      onAIFlashcards: () => this.generateFlashcards(),
+
       title: this.currentNote.title,
       content: this.currentNote.content,
       tags: this.currentNote.tags || [],
@@ -139,6 +189,9 @@ export class NotesPage {
       switch (action) {
         case 'new-note':
           this.createNote();
+          break;
+        case 'feynman-challenge':
+          this.createFeynmanNote();
           break;
       }
 
@@ -161,17 +214,55 @@ export class NotesPage {
 
   createNote() {
     const note = {
-      id: `note_${Date.now()}`,
-      title: '',
+      id: `temp_${Date.now()}`,
+      title: 'Nova Nota',
       content: '',
       tags: [],
       wikiLinks: [],
+      isNew: true,
       createdAt: new Date().toISOString(),
       updatedAt: new Date().toISOString()
     };
 
     this.notes.unshift(note);
-    this.saveNotes();
+    this.saveNotes(note);
+    this.selectNote(note.id);
+    this.updateNotesList();
+  }
+
+  createFeynmanNote() {
+    const feynmanTemplate = `# Método Feynman: [Tema Aqui]
+
+## 1. O Conceito (Simplifique)
+*Explique o conceito como se estivesse ensinando para uma criança de 12 anos. Evite jargões.*
+> Escreva aqui...
+
+## 2. A Analogia
+*Crie uma analogia do dia a dia para fixar.*
+> Isso é como quando...
+
+## 3. Identificação de Lacunas
+*O que ficou confuso na sua própria explicação?*
+- [ ] Ponto que preciso revisar: ...
+
+## 4. Revisão (Simplifique mais)
+*Reescreva a explicação de forma ainda mais clara.*
+> Nova explicação...
+`;
+
+    const note = {
+      id: \`temp_\${Date.now()}\`,
+      title: 'Novo Desafio Feynman',
+      content: feynmanTemplate,
+      tags: ['feynman'],
+      wikiLinks: [],
+      isNew: true,
+      createdAt: new Date().toISOString(),
+      updatedAt: new Date().toISOString()
+    };
+
+    this.notes.unshift(note);
+    this.saveNotes(note);
     this.selectNote(note.id);
     this.updateNotesList();
   }
@@ -193,7 +284,7 @@ export class NotesPage {
     
     this.currentNote.content = content;
     this.currentNote.updatedAt = new Date().toISOString();
-    this.saveNotes();
+    this.saveNotes(this.currentNote);
   }
 
   handleSave(data) {
@@ -205,7 +296,7 @@ export class NotesPage {
     this.currentNote.wikiLinks = data.wikiLinks;
     this.currentNote.updatedAt = new Date().toISOString();
 
-    this.saveNotes();
+    this.saveNotes(this.currentNote);
     this.updateNotesList();
     
     // Show success feedback
@@ -223,17 +314,18 @@ export class NotesPage {
     } else {
       // Create new note with this title
       const newNote = {
-        id: `note_${Date.now()}`,
+        id: `temp_${Date.now()}`,
         title: target,
         content: '',
         tags: [],
         wikiLinks: [],
+        isNew: true,
         createdAt: new Date().toISOString(),
         updatedAt: new Date().toISOString()
       };
 
       this.notes.unshift(newNote);
-      this.saveNotes();
+      this.saveNotes(newNote);
       this.selectNote(newNote.id);
       this.updateNotesList();
     }
@@ -305,3 +397,5 @@ export class NotesPage {
     if (this.element?.parentNode) this.element.parentNode.removeChild(this.element);
   }
 }
+
+

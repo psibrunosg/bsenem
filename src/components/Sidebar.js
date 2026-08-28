@@ -1,4 +1,4 @@
-// src/components/Sidebar.js
+﻿// src/components/Sidebar.js
 export class Sidebar {
   constructor(options = {}) {
     this.collapsed = options.collapsed ?? false;
@@ -28,7 +28,8 @@ export class Sidebar {
           { id: 'video', icon: 'play-circle', label: 'Videoaulas' },
           { id: 'audio', icon: 'music', label: 'Áudios' },
           { id: 'pdf', icon: 'file-text', label: 'PDFs' },
-          { id: 'flashcards', icon: 'card-stack', label: 'Flashcards' }
+          { id: 'flashcards', icon: 'card-stack', label: 'Flashcards' },
+          { id: 'library', icon: 'folder-open', label: 'Arquivos Locais' }
         ]
       },
       {

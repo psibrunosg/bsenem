@@ -1,12 +1,16 @@
-// src/pages/VideoPage.js
+﻿// src/pages/VideoPage.js
 import { VideoPlayer } from '@components/VideoPlayer.js';
 import { Playlist } from '@components/Playlist.js';
+import { Switch } from '@components/Switch.js';
+import { api } from '@utils/api.js';
 
 export class VideoPage {
   constructor(options = {}) {
     this.app = options.app;
     this.videoPlayer = null;
     this.playlist = null;
+    this.modeSwitch = null;
+    this.isInteractiveMode = localStorage.getItem('studyMode') !== 'traditional';
     this.element = null;
     
     this.videoItems = [
@@ -17,7 +21,21 @@ export class VideoPage {
         src: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4',
         poster: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/images/BigBuckBunny.jpg',
         duration: 596,
-        subject: 'Matemática'
+        subject: 'Matemática',
+        breakpoints: [
+          {
+            time: 10,
+            question: 'Qual é o coeficiente que determina a concavidade da parábola em uma função quadrática f(x) = ax² + bx + c?',
+            options: ['O coeficiente c', 'O coeficiente b', 'O coeficiente a', 'O discriminante (delta)'],
+            answer: 2
+          },
+          {
+            time: 180,
+            question: 'Se a > 0, a concavidade da parábola é voltada para:',
+            options: ['Cima', 'Baixo', 'Direita', 'Esquerda'],
+            answer: 0
+          }
+        ]
       },
       {
         id: 2,
@@ -50,10 +68,25 @@ export class VideoPage {
       title: this.videoItems[0].title,
       description: this.videoItems[0].artist,
       duration: this.videoItems[0].duration,
+      breakpoints: this.isInteractiveMode ? this.videoItems[0].breakpoints : [],
       onPlay: () => this.onVideoPlay(),
       onPause: () => this.onVideoPause(),
       onTimeUpdate: (time, duration) => this.onTimeUpdate(time, duration),
       onEnded: () => this.onVideoEnded()
+    });
+
+    this.modeSwitch = new Switch({
+      checked: this.isInteractiveMode,
+      label: 'Modo Interativo (Microlearning)',
+      description: 'Pausa o vídeo para quizzes rápidos.',
+      onChange: (checked) => {
+        this.isInteractiveMode = checked;
+        localStorage.setItem('studyMode', checked ? 'interactive' : 'traditional');
+        
+        // Update current video breakpoints
+        const currentItem = this.videoItems[this.playlist.currentIndex];
+        this.videoPlayer.setBreakpoints(checked ? currentItem.breakpoints : []);
+      }
     });
 
     this.playlist = new Playlist({
@@ -67,9 +100,12 @@ export class VideoPage {
     });
 
     this.element.innerHTML = `
-      <div class="page-header">
-        <h1>Videoaulas</h1>
-        <p>Assista videoaulas e acompanhe o progresso</p>
+      <div class="page-header" style="display: flex; justify-content: space-between; align-items: flex-start;">
+        <div>
+          <h1>Videoaulas</h1>
+          <p>Assista videoaulas e acompanhe o progresso</p>
+        </div>
+        <div class="page-header-actions"></div>
       </div>
       
       <div class="video-page-content">
@@ -89,12 +125,65 @@ export class VideoPage {
 
     const playerContainer = this.element.querySelector('.video-player-container');
     const playlistContainer = this.element.querySelector('.video-playlist-container');
+    const headerActions = this.element.querySelector('.page-header-actions');
 
     playerContainer.appendChild(this.videoPlayer.render());
     playlistContainer.appendChild(this.playlist.render());
+    headerActions.appendChild(this.modeSwitch.render());
 
     // Connect player to app's mini player
     this.connectToMiniPlayer();
+    
+    window.addEventListener('video-clip-created', async (e) => {
+      const { time, text, title } = e.detail;
+      const formattedTime = this.videoPlayer.formatTime(time);
+      
+      const content = `[${formattedTime}] ${title}\n> ${text || 'Corte marcado.'}\n\n`;
+      
+      try {
+        await api.post('/notes', {
+          title: `Anotações: ${title}`,
+          content: content
+        });
+        
+        // Show a quick notification
+        const toast = document.createElement('div');
+        toast.className = 'toast success animate-slide-up';
+        toast.innerHTML = `<i data-lucide="check-circle" class="w-5 h-5"></i> Corte salvo nas Anotações! [${formattedTime}]`;
+        toast.style.position = 'fixed';
+        toast.style.bottom = '80px';
+        toast.style.right = '24px';
+        toast.style.zIndex = '9999';
+        toast.style.background = 'var(--success)';
+        toast.style.color = '#fff';
+        toast.style.padding = '12px 24px';
+        toast.style.borderRadius = 'var(--radius-md)';
+        toast.style.display = 'flex';
+        toast.style.gap = '8px';
+        toast.style.alignItems = 'center';
+        toast.style.boxShadow = 'var(--shadow-lg)';
+        document.body.appendChild(toast);
+        if (typeof lucide !== 'undefined') lucide.createIcons(toast);
+        
+        setTimeout(() => toast.remove(), 3000);
+      } catch (err) {
+        console.error('Failed to save clip to notes', err);
+      }
+    });
+
+    // Listen for local files
+    window.addEventListener('play-local-video', (e) => {
+      this.videoPlayer.setSrc(e.detail.src);
+      this.videoPlayer.setTitle(e.detail.title);
+      if (e.detail.subtitles) {
+        this.videoPlayer.setSubtitles(e.detail.subtitles);
+      }
+      this.element.querySelector('.video-title').textContent = e.detail.title;
+      this.element.querySelector('.video-artist').textContent = 'Arquivo Local';
+      this.element.querySelector('.video-subject').textContent = 'Biblioteca Local';
+      this.videoPlayer.setBreakpoints([]); // Local files don't have built-in breakpoints yet
+      this.videoPlayer.play();
+    });
 
     return this.element;
   }
@@ -134,7 +223,21 @@ export class VideoPage {
     // Could update progress UI
   }
 
-  onVideoEnded() {
+  async onVideoEnded() {
+    // Record study session to SQL backend
+    try {
+      const currentItem = this.videoItems[this.playlist.currentIndex];
+      const durationInSeconds = currentItem ? currentItem.duration : 0;
+      if (durationInSeconds > 0) {
+        await api.post('/progress/study', {
+          type: 'video',
+          duration: durationInSeconds
+        });
+      }
+    } catch (e) {
+      console.error('Failed to record video study session', e);
+    }
+
     // Play next in playlist
     const nextItem = this.playlist.getNextItem();
     if (nextItem) {
@@ -149,6 +252,8 @@ export class VideoPage {
   onPlaylistSelect(item, index) {
     this.videoPlayer.setSrc(item.src, item.poster);
     this.videoPlayer.setTitle(item.title);
+    this.videoPlayer.setBreakpoints(this.isInteractiveMode ? item.breakpoints : []);
+    this.videoPlayer.setSubtitles(item.subtitles || []);
     this.videoPlayer.play();
   }
 
@@ -171,3 +276,8 @@ export class VideoPage {
     if (this.element?.parentNode) this.element.parentNode.removeChild(this.element);
   }
 }
+
+
+
+
+

@@ -6,11 +6,19 @@ export class Header {
     this.onThemeToggle = options.onThemeToggle ?? (() => {});
     this.onUserMenuAction = options.onUserMenuAction ?? (() => {});
     this.onCommandPalette = options.onCommandPalette ?? (() => {});
+    this.onPomodoroComplete = options.onPomodoroComplete ?? (() => {});
     this.user = options.user ?? { name: 'Estudante', email: 'estudante@email.com', avatar: null };
     this.searchResults = options.searchResults ?? [];
     this.showCommandPalette = false;
     this.showUserMenu = false;
     this.showSearchResults = false;
+    
+    // Pomodoro State
+    this.pomodoroTime = 25 * 60;
+    this.pomodoroMode = 'focus'; // focus | break
+    this.pomodoroInterval = null;
+    this.pomodoroActive = false;
+    
     this.element = null;
     this.commandPalette = null;
     this.backdrop = null;
@@ -37,7 +45,11 @@ export class Header {
           <div class="search-results" role="listbox" aria-label="Resultados da busca"></div>
         </div>
       </div>
-      <div class="header-right">
+      <div class="header-right" style="display: flex; align-items: center; gap: 8px;">
+        <div class="pomodoro-timer" style="display: flex; align-items: center; gap: 8px; margin-right: 8px; background: var(--surface-bg); padding: 4px 12px; border-radius: 20px; border: 1px solid var(--border-color); cursor: pointer;" data-action="toggle-pomodoro" title="Iniciar Pomodoro (25 min)">
+          <i data-lucide="timer" class="w-4 h-4 text-primary"></i>
+          <span class="pomodoro-time" style="font-family: var(--font-mono); font-weight: 600;">25:00</span>
+        </div>
         <button class="header-action theme-toggle" aria-label="Alternar tema" data-action="theme-toggle">
           <i data-lucide="sun" class="w-5 h-5 sun-icon"></i>
           <i data-lucide="moon" class="w-5 h-5 moon-icon"></i>
@@ -160,6 +172,14 @@ export class Header {
     if (themeToggle) {
       themeToggle.addEventListener('click', () => {
         this.onThemeToggle();
+      });
+    }
+
+    // Pomodoro toggle
+    const pomodoroToggle = this.element.querySelector('[data-action="toggle-pomodoro"]');
+    if (pomodoroToggle) {
+      pomodoroToggle.addEventListener('click', () => {
+        this.togglePomodoro();
       });
     }
 
@@ -300,6 +320,70 @@ export class Header {
     this.showUserMenu = false;
     dropdown?.classList.remove('open');
     trigger?.setAttribute('aria-expanded', 'false');
+  }
+
+  // Pomodoro Logic
+  togglePomodoro() {
+    if (this.pomodoroActive) {
+      this.stopPomodoro();
+    } else {
+      this.startPomodoro();
+    }
+  }
+
+  startPomodoro() {
+    this.pomodoroActive = true;
+    const widget = this.element.querySelector('.pomodoro-timer');
+    widget.style.borderColor = 'var(--primary)';
+    widget.style.boxShadow = '0 0 0 2px var(--primary-light)';
+    
+    this.pomodoroInterval = setInterval(() => {
+      this.pomodoroTime--;
+      this.updatePomodoroDisplay();
+
+      if (this.pomodoroTime <= 0) {
+        this.completePomodoroCycle();
+      }
+    }, 1000);
+  }
+
+  stopPomodoro() {
+    this.pomodoroActive = false;
+    clearInterval(this.pomodoroInterval);
+    const widget = this.element.querySelector('.pomodoro-timer');
+    widget.style.borderColor = 'var(--border-color)';
+    widget.style.boxShadow = 'none';
+  }
+
+  updatePomodoroDisplay() {
+    const timeDisplay = this.element.querySelector('.pomodoro-time');
+    const mins = Math.floor(this.pomodoroTime / 60);
+    const secs = this.pomodoroTime % 60;
+    timeDisplay.textContent = \`\${mins.toString().padStart(2, '0')}:\${secs.toString().padStart(2, '0')}\`;
+  }
+
+  completePomodoroCycle() {
+    this.stopPomodoro();
+    
+    // Play sound / notification (optional)
+    if (this.pomodoroMode === 'focus') {
+      // Finished focus -> Start break
+      this.pomodoroMode = 'break';
+      this.pomodoroTime = 5 * 60; // 5 min
+      this.element.querySelector('.pomodoro-timer').title = "Iniciar Pausa (5 min)";
+      this.element.querySelector('.pomodoro-timer').style.background = "var(--success-bg)";
+      
+      // Call external handler to trigger confetti and give XP
+      this.onPomodoroComplete(this.pomodoroMode); // actually completed focus
+      
+    } else {
+      // Finished break -> Start focus
+      this.pomodoroMode = 'focus';
+      this.pomodoroTime = 25 * 60; // 25 min
+      this.element.querySelector('.pomodoro-timer').title = "Iniciar Pomodoro (25 min)";
+      this.element.querySelector('.pomodoro-timer').style.background = "var(--surface-bg)";
+    }
+    this.updatePomodoroDisplay();
   }
 
   // Command Palette (Ctrl+K)

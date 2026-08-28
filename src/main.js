@@ -1,116 +1,118 @@
-// src/main.js
-import '@styles/main.css';
-import { AppShell } from '@components/AppShell.js';
+﻿import { AppShell } from '@components/AppShell.js';
 import { VideoPage } from '@pages/VideoPage.js';
 import { AudioPage } from '@pages/AudioPage.js';
 import { FlashcardsPage } from '@pages/FlashcardsPage.js';
 import { NotesPage } from '@pages/NotesPage.js';
 import { ExamsPage } from '@pages/ExamsPage.js';
 import { DashboardPage } from '@pages/DashboardPage.js';
+import { LibraryPage } from '@pages/LibraryPage.js';
+import { GraphPage } from '@pages/GraphPage.js';
+import { LoginPage } from '@pages/LoginPage.js';
 import { keyboard, setupGlobalShortcuts } from '@utils/keyboard.js';
 import { confetti, triggerConfetti } from '@utils/confetti.js';
+import { api } from '@utils/api.js';
 
-// Initialize Lucide icons
 if (typeof lucide !== 'undefined') {
   lucide.createIcons();
 }
 
-// Create and mount AppShell
-const app = new AppShell({
-  user: {
-    name: 'João Silva',
-    email: 'joao@email.com',
-    level: 5,
-    xp: 3420,
-    xpMax: 5000,
-    streak: 12
-  },
-  subjects: [
-    { id: 'math', name: 'Matemática', color: '#3b82f6', icon: 'calculator' },
-    { id: 'portuguese', name: 'Português', color: '#10b981', icon: 'book-open' },
-    { id: 'history', name: 'História', color: '#f59e0b', icon: 'landmark' },
-    { id: 'geography', name: 'Geografia', color: '#8b5cf6', icon: 'globe' },
-    { id: 'biology', name: 'Biologia', color: '#ec4899', icon: 'dna' },
-    { id: 'chemistry', name: 'Química', color: '#ef4444', icon: 'flask-conical' },
-    { id: 'physics', name: 'Física', color: '#06b6d4', icon: 'atom' },
-    { id: 'english', name: 'Inglês', color: '#84cc16', icon: 'languages' }
-  ]
-});
+async function bootApp() {
+  const container = document.getElementById('app');
+  let user = null;
 
-const appElement = app.render();
-document.getElementById('app').appendChild(appElement);
-
-// Register routes
-app.registerRoute('dashboard', DashboardPage);
-app.registerRoute('video', VideoPage);
-app.registerRoute('audio', AudioPage);
-app.registerRoute('flashcards', FlashcardsPage);
-app.registerRoute('notes', NotesPage);
-app.registerRoute('exams', ExamsPage);
-
-// Initialize theme from localStorage
-(() => {
-  const saved = localStorage.getItem('theme');
-  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-  const theme = saved || (prefersDark ? 'dark' : 'light');
-  document.documentElement.setAttribute('data-theme', theme);
-})();
-
-// Global keyboard shortcuts setup - connected to app
-setupGlobalShortcuts({
-  playPause: () => app.miniPlayer.togglePlayPause(),
-  seekBackward10: () => app.miniPlayer.onSeek(Math.max(0, app.miniPlayer.currentTime - 10)),
-  seekForward10: () => app.miniPlayer.onSeek(Math.min(app.miniPlayer.duration, app.miniPlayer.currentTime + 10)),
-  seekBackward30: () => app.miniPlayer.onSeek(Math.max(0, app.miniPlayer.currentTime - 30)),
-  seekForward30: () => app.miniPlayer.onSeek(Math.min(app.miniPlayer.duration, app.miniPlayer.currentTime + 30)),
-  volumeUp: () => app.miniPlayer.setVolume(Math.min(1, app.miniPlayer.volume + 0.1)),
-  volumeDown: () => app.miniPlayer.setVolume(Math.max(0, app.miniPlayer.volume - 0.1)),
-  mute: () => app.miniPlayer.toggleMute(),
-  fullscreen: () => app.miniPlayer.onFullscreen(),
-  speedCycle: () => app.miniPlayer.cyclePlaybackRate(),
-  nextTrack: () => app.miniPlayer.onNext(),
-  prevTrack: () => app.miniPlayer.onPrev(),
-  search: () => {
-    const searchInput = document.querySelector('.global-search .input');
-    searchInput?.focus();
-  },
-  toggleSidebar: () => app.toggleSidebar(),
-  showHelp: () => app.showShortcutsHelp()
-});
-
-// Test confetti on double-click (for debugging)
-document.addEventListener('dblclick', (e) => {
-  if (e.ctrlKey || e.metaKey) {
-    triggerConfetti(e.clientX, e.clientY);
-  }
-});
-
-// Register Service Worker for PWA
-if ('serviceWorker' in navigator) {
-  window.addEventListener('load', async () => {
+  const token = localStorage.getItem('token');
+  if (token) {
     try {
-      const registration = await navigator.serviceWorker.register('/sw.js');
-      console.log('[PWA] Service Worker registered:', registration.scope);
-      
-      // Listen for updates
-      registration.addEventListener('updatefound', () => {
-        const newWorker = registration.installing;
-        newWorker.addEventListener('statechange', () => {
-          if (newWorker.state === 'activated') {
-            console.log('[PWA] New version available');
-          }
-        });
-      });
-    } catch (error) {
-      console.log('[PWA] Service Worker registration failed:', error);
+      const res = await api.get('/auth/me');
+      if (res.success && res.data) {
+        user = res.data.user;
+      } else {
+        localStorage.removeItem('token');
+      }
+    } catch(e) {
+      localStorage.removeItem('token');
     }
-  });
+  }
+
+  if (user) {
+    mountApp(user, container);
+  } else {
+    const loginPage = new LoginPage({
+      onSuccess: (loggedInUser) => {
+        loginPage.destroy();
+        mountApp(loggedInUser, container);
+      }
+    });
+    container.appendChild(loginPage.render());
+  }
 }
 
-// Make app globally accessible for debugging
-window.bsApp = app;
+function mountApp(dbUser, container) {
+  if (dbUser && !dbUser.xpMax) dbUser.xpMax = 5000;
+  const app = new AppShell({
+    user: dbUser,
+    subjects: [
+      { id: 'math', name: 'Matemática', color: '#3b82f6', icon: 'calculator' },
+      { id: 'portuguese', name: 'Português', color: '#10b981', icon: 'book-open' },
+      { id: 'history', name: 'História', color: '#f59e0b', icon: 'landmark' },
+      { id: 'geography', name: 'Geografia', color: '#8b5cf6', icon: 'globe' },
+      { id: 'biology', name: 'Biologia', color: '#ec4899', icon: 'dna' },
+      { id: 'chemistry', name: 'Química', color: '#ef4444', icon: 'flask-conical' },
+      { id: 'physics', name: 'Física', color: '#06b6d4', icon: 'atom' },
+      { id: 'english', name: 'Inglês', color: '#84cc16', icon: 'languages' }
+    ]
+  });
 
-console.log('🚀 BS Estudos iniciado!');
-console.log('🎮 Atalhos globais ativos. Pressione "?" para ver a lista.');
-console.log('🎉 Teste confetti: window.testConfetti() ou Ctrl+Duplo-clique');
-console.log('📱 App disponível em: window.bsApp');
+  const appElement = app.render();
+  container.appendChild(appElement);
+
+  app.registerRoute('dashboard', DashboardPage);
+  app.registerRoute('video', VideoPage);
+  app.registerRoute('audio', AudioPage);
+  app.registerRoute('flashcards', FlashcardsPage);
+  app.registerRoute('notes', NotesPage);
+  app.registerRoute('exams', ExamsPage);
+  app.registerRoute('library', LibraryPage);
+  app.registerRoute('graph', GraphPage);
+
+  (() => {
+    const saved = localStorage.getItem('theme');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const theme = saved || (prefersDark ? 'dark' : 'light');
+    document.documentElement.setAttribute('data-theme', theme);
+  })();
+
+  setupGlobalShortcuts(app);
+  window.testConfetti = triggerConfetti;
+  
+  document.addEventListener('dblclick', (e) => {
+    if (e.ctrlKey || e.metaKey) {
+      triggerConfetti(e.clientX, e.clientY);
+    }
+  });
+
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', async () => {
+      try {
+        const registration = await navigator.serviceWorker.register('/sw.js');
+        registration.addEventListener('updatefound', () => {
+          const newWorker = registration.installing;
+          newWorker.addEventListener('statechange', () => {
+            if (newWorker.state === 'activated') {
+              console.log('[PWA] New version available');
+            }
+          });
+        });
+      } catch (error) {
+        console.log('[PWA] SW failed:', error);
+      }
+    });
+  }
+
+  window.bsApp = app;
+}
+
+bootApp();
+
+
+
