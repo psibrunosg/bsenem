@@ -1,4 +1,5 @@
 import { idb as browserIdb } from '../utils/idb.js';
+import { validateLocalExam } from './examSchema.js';
 
 const MEDIA_TYPES = new Map([
   ['mp4', 'video'], ['webm', 'video'], ['ogv', 'video'],
@@ -27,7 +28,10 @@ export class LocalLibraryService {
   async restore() {
     const handle = await this.idb.get('local-library-handle');
     if (!handle) return { items: [], diagnostics: [] };
-    if (await permission(handle) !== 'granted') throw localError('permission-denied');
+    if (await permission(handle) !== 'granted') {
+      this.clearCatalog();
+      throw localError('permission-denied');
+    }
     return this.refresh(handle);
   }
 
@@ -45,7 +49,10 @@ export class LocalLibraryService {
   }
 
   async scan(handle) {
-    if (await permission(handle) === 'denied') throw localError('permission-denied');
+    if (await permission(handle) === 'denied') {
+      this.clearCatalog();
+      throw localError('permission-denied');
+    }
     const files = [];
     const diagnostics = [];
     this.fileHandles.clear();
@@ -57,6 +64,18 @@ export class LocalLibraryService {
     }
     const items = [];
     for (const entry of files) {
+      if (isExam(entry.name)) {
+        const exam = await localExam(entry, diagnostics);
+        if (!exam) continue;
+        const id = this.createId();
+        items.push({
+          id, relativePath: [...entry.path, entry.name].join('/'), title: entry.name.slice(0, -'.bsestudos.exam.json'.length),
+          area: entry.path[0] || '', collection: collection(entry.path), resourceType: 'exam', extension: 'bsestudos.exam.json',
+          size: entry.file.size, modifiedAt: entry.file.lastModified, transcriptId: null
+        });
+        this.fileHandles.set(id, entry.handle);
+        continue;
+      }
       const resourceType = MEDIA_TYPES.get(entry.extension);
       if (!resourceType) {
         if (!SIDECAR_TYPES.has(entry.extension)) diagnostics.push({ name: entry.name, code: 'unsupported-extension' });
@@ -98,6 +117,13 @@ export class LocalLibraryService {
     this.objectUrls.clear();
   }
 
+  clearCatalog() {
+    this.items = [];
+    this.diagnostics = [];
+    this.fileHandles.clear();
+    this.releaseObjectUrls();
+  }
+
   async libraryId() {
     let id = await this.idb.get('local-library-id');
     if (!id) id = this.createId();
@@ -125,11 +151,7 @@ async function visit(directory, path, files, diagnostics) {
 }
 
 function transcriptFor(entry, sidecars) {
-  const direct = sidecars.get(sidecarKey(entry.path, entry.basename));
-  if (direct) return direct;
-  const parent = entry.path.length && TYPE_FOLDERS.has(entry.path.at(-1).toLocaleLowerCase())
-    ? sidecars.get(sidecarKey(entry.path.slice(0, -1), entry.basename)) : null;
-  return parent || null;
+  return sidecars.get(sidecarKey(entry.path, entry.basename)) || null;
 }
 function sidecarKey(path, basename) { return `${path.join('/')}\u0000${basename}`; }
 function collection(path) { return path.slice(1).filter(part => !TYPE_FOLDERS.has(part.toLocaleLowerCase())).join('/'); }
@@ -137,5 +159,15 @@ function ext(name) { const index = name.lastIndexOf('.'); return index < 0 ? '' 
 function base(name) { const index = name.lastIndexOf('.'); return index < 0 ? name : name.slice(0, index); }
 function hidden(name) { return name.startsWith('.'); }
 async function permission(handle) { return typeof handle.queryPermission === 'function' ? handle.queryPermission({ mode: 'read' }) : 'granted'; }
+function isExam(name) { return name.endsWith('.bsestudos.exam.json'); }
+async function localExam(entry, diagnostics) {
+  try {
+    const exam = JSON.parse(await entry.file.text());
+    const result = validateLocalExam(exam);
+    if (result.valid) return exam;
+    diagnostics.push({ name: entry.name, code: 'invalid-exam', errors: result.errors });
+  } catch { diagnostics.push({ name: entry.name, code: 'invalid-exam' }); }
+  return null;
+}
 function localError(code) { return Object.assign(new Error(code), { code }); }
 function defaultId() { return globalThis.crypto?.randomUUID?.() || `${Date.now()}-${Math.random()}`; }

@@ -19,9 +19,9 @@ describe('LocalLibraryService', () => {
   it('scans accepted files recursively and attaches captions from the same directory', async () => {
     const result = await service.scan(fakeDirectory({
       UNIFATECIE: directory({ Modulo: directory({
-        Videos: directory({ 'Aula 01.mp4': file('video/mp4') }),
+        Videos: directory({ 'Aula 01.mp4': file('video/mp4'), 'Aula 01.vtt': file('text/vtt') }),
         PDFs: directory({ 'Aula 01.pdf': file('application/pdf') }),
-        'Aula 01.vtt': file('text/vtt'), desktop: file('text/plain'), 'desktop.ini': file('text/plain')
+        desktop: file('text/plain'), 'desktop.ini': file('text/plain')
       }) })
     }));
 
@@ -59,6 +59,43 @@ describe('LocalLibraryService', () => {
     const result = await service.scan(fakeDirectory({ Area: directory({ 'sumiu.mp3': vanishedFile(), 'Aula.pdf': file('application/pdf') }) }));
     expect(result.items).toHaveLength(1);
     expect(result.diagnostics).toContainEqual(expect.objectContaining({ name: 'sumiu.mp3', code: 'file-unavailable' }));
+  });
+
+  it('does not attach a sidecar from a parent directory', async () => {
+    const result = await service.scan(fakeDirectory({ Area: directory({
+      Videos: directory({ 'Aula.mp4': file('video/mp4') }), 'Aula.vtt': file('text/vtt')
+    }) }));
+    expect(result.items[0].transcript).toBeUndefined();
+  });
+
+  it('catalogs only a valid exact local exam filename', async () => {
+    const exam = JSON.stringify({
+      schema: 'bsestudos.exam.v1', id: 'enem-2026', title: 'ENEM 2026', durationMinutes: 330,
+      questions: [{ id: 'q1', statement: 'Questao', options: ['A', 'B', 'C', 'D', 'E'], correctOption: 0 }]
+    });
+    const result = await service.scan(fakeDirectory({ Area: directory({
+      'enem.bsestudos.exam.json': file('application/json', { text: async () => exam }),
+      'almost.bsestudos.exam.json.bak': file('application/json', { text: async () => exam })
+    }) }));
+    expect(result.items.map(item => [item.title, item.resourceType])).toEqual([['enem', 'exam']]);
+  });
+
+  it('clears the in-memory catalog when permission is denied after indexing', async () => {
+    const handle = { ...fakeDirectory({ Area: directory({ 'Aula.pdf': file('application/pdf') }) }), async queryPermission() { return 'granted'; } };
+    await service.refresh(handle);
+    const itemId = service.items[0].id;
+    handle.queryPermission = async () => 'denied';
+    await expect(service.refresh(handle)).rejects.toMatchObject({ code: 'permission-denied' });
+    expect(service.search('aula')).toEqual([]);
+    expect(service.getItem(itemId)).toBeNull();
+  });
+
+  it('reports a file removed after indexing when creating its object URL', async () => {
+    let exists = true;
+    const handle = { kind: 'file', async getFile() { if (!exists) throw new DOMException('gone', 'NotFoundError'); return { type: 'audio/mpeg', size: 12, lastModified: 7 }; } };
+    const result = await service.refresh(fakeDirectory({ Area: directory({ 'Aula.mp3': handle }) }));
+    exists = false;
+    await expect(service.createObjectUrl(result.items[0])).rejects.toMatchObject({ code: 'file-unavailable' });
   });
 
   it('searches titles without case distinction', async () => {
