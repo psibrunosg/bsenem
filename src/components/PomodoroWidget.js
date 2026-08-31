@@ -10,7 +10,7 @@ export class PomodoroWidget {
   render() {
     this.element = document.createElement('div');
     this.element.className = 'pomodoro-widget';
-    this.element.style.cssText = 
+    this.element.style.cssText = `
       display: flex;
       align-items: center;
       gap: 8px;
@@ -25,13 +25,13 @@ export class PomodoroWidget {
       user-select: none;
       box-shadow: var(--shadow-sm);
       transition: all 0.2s;
-    ;
+    `;
 
-    this.element.innerHTML = 
+    this.element.innerHTML = `
       <i data-lucide="timer" class="w-4 h-4"></i>
       <span class="time-display">25:00</span>
       <i data-lucide="play" class="w-4 h-4 play-icon"></i>
-    ;
+    `;
 
     this.bindEvents();
     if (typeof lucide !== 'undefined') lucide.createIcons(this.element);
@@ -71,6 +71,6 @@ export class PomodoroWidget {
   updateDisplay() {
     const mins = Math.floor(this.timeLeft / 60).toString().padStart(2, '0');
     const secs = (this.timeLeft % 60).toString().padStart(2, '0');
-    this.element.querySelector('.time-display').textContent = \:\;
+    this.element.querySelector('.time-display').textContent = `${mins}:${secs}`;
   }
 }

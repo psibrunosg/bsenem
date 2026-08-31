@@ -31,7 +31,7 @@ export class LibraryPage {
     this.element = document.createElement('div');
     this.element.className = 'library-page';
     
-    this.element.innerHTML = \
+    this.element.innerHTML = `
       <div class="page-header">
         <h1>Biblioteca Local (HD/Drive)</h1>
         <p>Acesse seus v�deos e PDFs diretamente do seu PC, sem fazer upload.</p>
@@ -51,7 +51,7 @@ export class LibraryPage {
         <div class="library-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 16px;">
         </div>
       </div>
-    \;
+    `;
 
     this.bindEvents();
 
@@ -98,8 +98,8 @@ export class LibraryPage {
     
     await this.traverseDirectory(dirHandle, '');
     
-    this.element.querySelector('.library-status').textContent = 
-      \Pasta conectada: \ (\ arquivos)\;
+    this.element.querySelector('.library-status').textContent =
+      `Pasta conectada: ${this.files.length} (${this.subtitlesFiles.length} arquivos)`;
       
     this.renderFiles();
   }
@@ -126,16 +126,20 @@ export class LibraryPage {
       return;
     }
 
-    grid.innerHTML = this.files.map((file, index) => \
-      <div class="library-item card" data-index="\" style="padding: 16px; border-radius: var(--radius-lg); background: var(--surface-bg); border: 1px solid var(--border-color);">
+    grid.innerHTML = this.files.map((file, index) => `
+      <div class="library-item card" data-index="${index}" style="padding: 16px; border-radius: var(--radius-lg); background: var(--surface-bg); border: 1px solid var(--border-color);">
         <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px;">
-          <i data-lucide="\" class="w-8 h-8 text-primary"></i>
+          <i data-lucide="${file.type === 'pdf' ? 'file-text' : 'play-circle'}" class="w-8 h-8 text-primary"></i>
           <div style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
-            <strong title="\">\</strong>
-            <div style="font-size: 12px; color: var(--text-secondary); overflow: hidden; text-overflow: ellipsis;">\</div>
+            <strong title="${file.name}">${file.name}</strong>
+            <div style="font-size: 12px; color: var(--text-secondary); overflow: hidden; text-overflow: ellipsis;">${file.type.toUpperCase()}</div>
           </div>
         </div>
-        \
+        <button class="btn btn-secondary" data-action="play-video">Abrir</button>
+      </div>
+    `).join('');
+
+  }
 
   async playVideo(fileObj) {
     try {

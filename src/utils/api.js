@@ -11,10 +11,10 @@ export const api = {
     };
     
     if (token) {
-      headers['Authorization'] = \Bearer \\;
+      headers['Authorization'] = `Bearer ${token}`;
     }
     
-    const url = endpoint.startsWith('http') ? endpoint : \\\\;
+    const url = endpoint.startsWith('http') ? endpoint : `${API_BASE}${endpoint}`;
     
     const response = await fetch(url, {
       ...options,

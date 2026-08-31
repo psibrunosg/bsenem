@@ -35,7 +35,7 @@ export class SRSEngine {
   }
 
   async updateCard(cardId, updates) {
-    const res = await api.put(\`/flashcards/\${cardId}\`, updates);
+    const res = await api.put(`/flashcards/${cardId}`, updates);
     if (res.success) {
       const index = this.cards.findIndex(c => c.id == cardId);
       if (index !== -1) {
@@ -47,7 +47,7 @@ export class SRSEngine {
   }
 
   async deleteCard(cardId) {
-    const res = await api.delete(\`/flashcards/\${cardId}\`);
+    const res = await api.delete(`/flashcards/${cardId}`);
     if (res.success) {
       this.cards = this.cards.filter(c => c.id != cardId);
     }
@@ -72,7 +72,7 @@ export class SRSEngine {
   // SM-2 Algorithm implementation
   async review(cardId, quality) {
     // quality: 0 = Again, 1 = Hard, 2 = Good, 3 = Easy
-    const res = await api.put(\`/flashcards/\${cardId}/review\`, { quality });
+    const res = await api.put(`/flashcards/${cardId}/review`, { quality });
     
     if (res.success && res.data.card) {
       // Update local card

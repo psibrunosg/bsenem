@@ -969,18 +969,18 @@ export class VideoPlayer {
     // Update subtitles menu UI
     const subtitlesMenu = this.element.querySelector('.video-subtitles-menu');
     if (subtitlesMenu) {
-      subtitlesMenu.innerHTML = \`
+      subtitlesMenu.innerHTML = `
         <button class="video-menu-item" role="menuitem" data-subtitle="off">
           <span>Desativadas</span>
           <i data-lucide="check" class="w-4 h-4" style="display:none"></i>
         </button>
-        \${this.subtitles.map(sub => \`
-          <button class="video-menu-item" role="menuitem" data-subtitle="\${sub.lang}">
-            <span>\${sub.label}</span>
+        ${this.subtitles.map(sub => `
+          <button class="video-menu-item" role="menuitem" data-subtitle="${sub.lang}">
+            <span>${sub.label}</span>
             <i data-lucide="check" class="w-4 h-4" style="display:none"></i>
           </button>
-        \`).join('')}
-      \`;
+        `).join('')}
+      `;
       if (typeof lucide !== 'undefined') lucide.createIcons(subtitlesMenu);
     }
   }

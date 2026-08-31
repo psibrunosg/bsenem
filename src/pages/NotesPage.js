@@ -36,7 +36,7 @@ export class NotesPage {
           delete note.isNew;
         }
       } else {
-        await api.put(\`/notes/\${note.id}\`, note);
+        await api.put(`/notes/${note.id}`, note);
       }
     } catch (e) {
       console.error('Failed to save note', e);
@@ -54,7 +54,7 @@ export class NotesPage {
     if (btn) btn.innerHTML = '<div class="spinner" style="width: 16px; height: 16px; border-color: var(--orange-500); border-top-color: transparent;"></div>';
     
     try {
-      const res = await api.post(/notes/\/flashcards);
+      const res = await api.post(`/notes/${this.currentNote.id}/flashcards`);
       if (res.success) {
         alert(res.data.message || 'Flashcards gerados com sucesso!');
       } else {
@@ -251,7 +251,7 @@ export class NotesPage {
 `;
 
     const note = {
-      id: \`temp_\${Date.now()}\`,
+      id: `temp_${Date.now()}`,
       title: 'Novo Desafio Feynman',
       content: feynmanTemplate,
       tags: ['feynman'],
