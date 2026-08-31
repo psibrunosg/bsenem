@@ -23,7 +23,10 @@ export class MarkdownEditor {
       <div class="editor-header">
         <input type="text" class="editor-title-input" value="${this.escapeHtml(this.title)}" placeholder="Título da nota...">
         <div class="editor-actions">
-          <button class="editor-action-btn" data-action="ai-flashcards" title="Gerar Flashcards (IA)" style="color: var(--orange-500);">`n            <i data-lucide="sparkles" class="w-4 h-4"></i>`n          </button>`n          <button class="editor-action-btn" data-action="save" title="Salvar (Ctrl+S)">
+          <button class="editor-action-btn" data-action="ai-flashcards" title="Gerar Flashcards (IA)" style="color: var(--orange-500);">
+            <i data-lucide="sparkles" class="w-4 h-4"></i>
+          </button>
+          <button class="editor-action-btn" data-action="save" title="Salvar (Ctrl+S)">
             <i data-lucide="save" class="w-4 h-4"></i>
           </button>
           <button class="editor-action-btn" data-action="toggle-preview" title="Preview (Ctrl+P)">

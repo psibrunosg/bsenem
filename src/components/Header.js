@@ -359,7 +359,7 @@ export class Header {
     const timeDisplay = this.element.querySelector('.pomodoro-time');
     const mins = Math.floor(this.pomodoroTime / 60);
     const secs = this.pomodoroTime % 60;
-    timeDisplay.textContent = \`\${mins.toString().padStart(2, '0')}:\${secs.toString().padStart(2, '0')}\`;
+    timeDisplay.textContent = `${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
   }
 
   completePomodoroCycle() {

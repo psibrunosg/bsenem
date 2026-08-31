@@ -59,11 +59,11 @@ export class FlashcardsPage {
     this.element.className = 'flashcards-page';
     
     // Show a loading state while fetching from API
-    this.element.innerHTML = \`<div class="loading" style="padding: 2rem; text-align: center;">Carregando flashcards...</div>\`;
+    this.element.innerHTML = `<div class="loading" style="padding: 2rem; text-align: center;">Carregando flashcards...</div>`;
     
     await srsEngine.init();
     
-    this.element.innerHTML = \`
+    this.element.innerHTML = `
       <div class="page-header">
         <h1>Flashcards</h1>
         <p>Revise seus flashcards com repetição espaçada</p>
@@ -103,7 +103,7 @@ export class FlashcardsPage {
         <div class="flashcards-review-container"></div>
         <div class="flashcards-manager-container" style="display: none;"></div>
       </div>
-    \`;
+    `;
 
     this.initComponents();
     this.bindEvents();
