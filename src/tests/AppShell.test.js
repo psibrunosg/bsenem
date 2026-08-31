@@ -3,7 +3,8 @@ import { AppShell } from '../components/AppShell.js';
 import { Sidebar } from '../components/Sidebar.js';
 
 class DashboardRoute {
-  render() {
+  async render() {
+    await Promise.resolve();
     const element = document.createElement('section');
     element.textContent = 'Dashboard carregado';
     return element;
@@ -11,12 +12,16 @@ class DashboardRoute {
 }
 
 describe('AppShell', () => {
-  it('renders the requested initial route after routes are registered', () => {
+  it('returns a promise that resolves after the requested initial route is mounted', async () => {
     const app = new AppShell();
     const element = app.render();
     app.registerRoute('dashboard', DashboardRoute);
 
-    app.start('dashboard');
+    const routePromise = app.start('dashboard');
+
+    expect(routePromise).toBeInstanceOf(Promise);
+    expect(element.querySelector('.app-content').textContent).not.toContain('Dashboard carregado');
+    await routePromise;
 
     expect(element.querySelector('.app-content').textContent).toContain('Dashboard carregado');
   });

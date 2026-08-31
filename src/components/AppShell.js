@@ -103,7 +103,7 @@ export class AppShell {
     const initialRoute = this.routes.has(route) ? route : 'dashboard';
     this.currentRoute = initialRoute;
     this.sidebar.setActiveRoute(initialRoute);
-    this.renderRoute(initialRoute);
+    return this.renderRoute(initialRoute);
   }
 
   navigate(route) {
