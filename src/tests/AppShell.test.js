@@ -58,4 +58,21 @@ describe('local resource bridge', () => {
     expect(app.consumeLocalResource('video')).toBe(video);
     expect(app.consumeLocalResource('video')).toBeNull();
   });
+
+  it('destroys the active local-media route before mounting another route', async () => {
+    const revokeObjectURL = vi.fn();
+    const app = new AppShell();
+    const oldRoute = { render: vi.fn(() => document.createElement('section')), destroy: vi.fn(() => revokeObjectURL('blob:local')) };
+    class MediaRoute { constructor() { return oldRoute; } }
+    class NextRoute { render() { return document.createElement('section'); } }
+    app.render();
+    app.registerRoute('video', MediaRoute);
+    app.registerRoute('dashboard', NextRoute);
+
+    await app.renderRoute('video');
+    await app.renderRoute('dashboard');
+
+    expect(oldRoute.destroy).toHaveBeenCalledOnce();
+    expect(revokeObjectURL).toHaveBeenCalledWith('blob:local');
+  });
 });

@@ -50,6 +50,7 @@ export class AppShell {
     this.contentElement = null;
     this.routes = new Map();
     this.commandPalette = null;
+    this.activeRouteComponent = null;
   }
 
   render() {
@@ -121,6 +122,8 @@ export class AppShell {
   }
 
   async renderRoute(route) {
+    this.activeRouteComponent?.destroy?.();
+    this.activeRouteComponent = null;
     // Show loading
     this.contentElement.innerHTML = `
       <div class="flex items-center justify-center min-h-[400px]">
@@ -143,6 +146,7 @@ export class AppShell {
         
         this.contentElement.innerHTML = '';
         this.contentElement.appendChild(renderedElement);
+        this.activeRouteComponent = component;
         if (typeof lucide !== 'undefined') lucide.createIcons();
       } catch (error) {
         console.error('Error rendering route:', error);
@@ -406,6 +410,7 @@ export class AppShell {
 
   // Cleanup
   destroy() {
+    this.activeRouteComponent?.destroy?.();
     this.sidebar.destroy();
     this.header.destroy();
     this.miniPlayer.destroy();

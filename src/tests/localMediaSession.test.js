@@ -57,4 +57,14 @@ describe('LocalMediaSession', () => {
     await expect(LocalMediaSession.open({ id: 'aula-1', handle: { getFile: vi.fn().mockRejectedValue(new DOMException('gone', 'NotFoundError')) } }))
       .rejects.toMatchObject({ code: 'file-unavailable' });
   });
+
+  it('revokes the primary URL when its sidecar became unavailable', async () => {
+    const revokeObjectURL = vi.fn();
+    vi.stubGlobal('URL', { createObjectURL: vi.fn(() => 'blob:primary'), revokeObjectURL });
+    const item = itemWithSrt('00:00:01,000 --> 00:00:02,000\nOlá');
+    item.sidecarHandle = { getFile: vi.fn().mockRejectedValue(new DOMException('gone', 'NotFoundError')) };
+
+    await expect(LocalMediaSession.open(item)).rejects.toMatchObject({ code: 'file-unavailable' });
+    expect(revokeObjectURL).toHaveBeenCalledWith('blob:primary');
+  });
 });

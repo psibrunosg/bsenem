@@ -2,15 +2,17 @@ export class LocalMediaSession {
   constructor(item) { this.item = item; this.src = ''; this.captions = []; this.transcriptText = ''; this.diagnostics = []; this.urls = []; }
   static async open(item, library) {
     const session = new LocalMediaSession(item);
-    session.src = session.url(await file(item.handle ?? item.fileHandle ?? library?.fileHandles?.get(item.id)));
-    const sidecar = item.sidecarHandle ?? item.transcriptHandle ?? library?.fileHandles?.get(item.transcript?.id);
-    if (!sidecar) return session;
-    const transcript = await file(sidecar);
-    const extension = String(item.transcript?.name ?? transcript.name).split('.').pop().toLowerCase();
-    if (extension === 'txt') session.transcriptText = await transcript.text();
-    if (extension === 'vtt') session.captions = [caption(session.url(transcript))];
-    if (extension === 'srt') session.captions = [caption(session.url(new Blob([vtt(await transcript.text(), session.diagnostics)], { type: 'text/vtt' })) )];
-    return session;
+    try {
+      session.src = session.url(await file(item.handle ?? item.fileHandle ?? library?.fileHandles?.get(item.id)));
+      const sidecar = item.sidecarHandle ?? item.transcriptHandle ?? library?.fileHandles?.get(item.transcript?.id);
+      if (!sidecar) return session;
+      const transcript = await file(sidecar);
+      const extension = String(item.transcript?.name ?? transcript.name).split('.').pop().toLowerCase();
+      if (extension === 'txt') session.transcriptText = await transcript.text();
+      if (extension === 'vtt') session.captions = [caption(session.url(transcript))];
+      if (extension === 'srt') session.captions = [caption(session.url(new Blob([vtt(await transcript.text(), session.diagnostics)], { type: 'text/vtt' })) )];
+      return session;
+    } catch (error) { session.close(); throw error; }
   }
   url(file) { const url = URL.createObjectURL(file); this.urls.push(url); return url; }
   close() { this.urls.forEach((url) => URL.revokeObjectURL(url)); this.urls = []; }
