@@ -37,4 +37,25 @@ describe('Sidebar', () => {
     expect(routes).not.toContain('pdf');
     expect(routes).not.toContain('stats');
   });
+
+  it('registers Biblioteca local as an implemented route', () => {
+    const routes = [...new Sidebar().render().querySelectorAll('[data-route]')].map((item) => item.dataset.route);
+
+    expect(routes).toContain('library');
+  });
+});
+
+describe('local resource bridge', () => {
+  it('keeps a selected resource in memory until its matching player consumes it', () => {
+    const app = new AppShell();
+    app.render();
+    const video = { id: 'video-1', resourceType: 'video' };
+
+    app.openLocalResource(video);
+
+    expect(app.currentRoute).toBe('video');
+    expect(app.consumeLocalResource('audio')).toBeNull();
+    expect(app.consumeLocalResource('video')).toBe(video);
+    expect(app.consumeLocalResource('video')).toBeNull();
+  });
 });

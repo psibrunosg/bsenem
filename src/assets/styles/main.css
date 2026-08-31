@@ -32,6 +32,7 @@
 @import './components/notes.css';
 @import './components/exam.css';
 @import './components/dashboard.css';
+@import './components/library.css';
 
 /* Pages */
 @import './pages.css';

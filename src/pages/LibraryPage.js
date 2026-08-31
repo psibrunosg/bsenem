@@ -1,184 +1,92 @@
-// src/pages/LibraryPage.js
-
-import { idb } from '@utils/idb.js';
-
 export class LibraryPage {
   constructor(options = {}) {
     this.app = options.app;
+    this.library = options.library;
+    this.items = this.library?.items ?? [];
+    this.state = !this.library ? 'unavailable' : this.items.length ? 'ready' : 'disconnected';
     this.element = null;
-    this.directoryHandle = null;
-    this.init();
-    this.files = []; this.subtitlesFiles = [];
   }
 
-  async init() {
-    try {
-      const handle = await idb.get('library-folder');
-      if (handle) {
-        // Request permission if needed
-        const options = { mode: 'read' };
-        if (await handle.queryPermission(options) === 'granted' || await handle.requestPermission(options) === 'granted') {
-          this.directoryHandle = handle;
-          await this.scanDirectory(handle);
-        }
-      }
-    } catch (e) {
-      console.log('No saved folder found');
-    }
-  }
-
-  render() {
-    this.element = document.createElement('div');
+  async render() {
+    this.element = document.createElement('section');
     this.element.className = 'library-page';
-    
-    this.element.innerHTML = `
-      <div class="page-header">
-        <h1>Biblioteca Local (HD/Drive)</h1>
-        <p>Acesse seus v�deos e PDFs diretamente do seu PC, sem fazer upload.</p>
-      </div>
-      
-      <div class="library-content" style="padding: 24px;">
-        <div class="library-controls" style="margin-bottom: 24px;">
-          <button class="btn btn-primary" data-action="connect-folder">
-            <i data-lucide="folder-open" class="w-5 h-5"></i>
-            Conectar Pasta Local
-          </button>
-          <span class="library-status" style="margin-left: 12px; color: var(--text-secondary);">
-            Nenhuma pasta conectada
-          </span>
-        </div>
-        
-        <div class="library-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 16px;">
-        </div>
-      </div>
-    `;
-
-    this.bindEvents();
-
-    if (typeof lucide !== 'undefined') lucide.createIcons(this.element);
-
+    this.element.addEventListener('click', (event) => this.handleClick(event));
+    this.update();
     return this.element;
   }
 
-  bindEvents() {
-    this.element.addEventListener('click', (e) => {
-      const action = e.target.closest('[data-action]')?.dataset.action;
-      if (action === 'connect-folder') {
-        this.selectLocalFolder();
-      } else if (action === 'play-video') {
-        const index = e.target.closest('.library-item').dataset.index;
-        this.playVideo(this.files[index]);
-      }
-    });
+  async handleClick(event) {
+    const action = event.target.closest('[data-action]')?.dataset.action;
+    if (action === 'connect') await this.load('connect');
+    if (action === 'refresh') await this.load('refresh');
+    const id = event.target.closest('[data-resource-id]')?.dataset.resourceId;
+    if (id) this.app?.openLocalResource?.(this.items.find((item) => item.id === id));
   }
 
-  async selectLocalFolder() {
-    try {
-      if (!window.showDirectoryPicker) {
-        alert('Seu navegador n�o suporta a API de leitura de pastas (File System Access API). Use Chrome ou Edge Desktop.');
-        return;
-      }
-
-      const dirHandle = await window.showDirectoryPicker();
-      await this.scanDirectory(dirHandle);
-      this.directoryHandle = dirHandle;
-      await idb.set('library-folder', dirHandle);
-
-    } catch (err) {
-      if (err.name !== 'AbortError') {
-        console.error(err);
-        alert('Erro ao acessar a pasta: ' + err.message);
-      }
-    }
-  }
-
-  async scanDirectory(dirHandle) {
-    this.element.querySelector('.library-status').textContent = 'Escaneando...';
-    this.files = []; this.subtitlesFiles = [];
-    
-    await this.traverseDirectory(dirHandle, '');
-    
-    this.element.querySelector('.library-status').textContent =
-      `Pasta conectada: ${this.files.length} (${this.subtitlesFiles.length} arquivos)`;
-      
-    this.renderFiles();
-  }
-
-  async traverseDirectory(dirHandle, path) {
-    for await (const entry of dirHandle.values()) {
-      if (entry.kind === 'file') {
-        const ext = entry.name.split('.').pop().toLowerCase();
-        if (['mp4', 'webm', 'mkv', 'pdf'].includes(ext)) {
-          this.files.push({ handle: entry, path: path + entry.name, type: ext, name: entry.name, basePath: path });
-        } else if (['vtt', 'srt'].includes(ext)) {
-          this.subtitlesFiles.push({ handle: entry, path: path + entry.name, type: ext, name: entry.name, basePath: path });
-        }
-      } else if (entry.kind === 'directory') {
-        await this.traverseDirectory(entry, path + entry.name + '/');
-      }
-    }
-  }
-
-  renderFiles() {
-    const grid = this.element.querySelector('.library-grid');
-    if (this.files.length === 0) {
-      grid.innerHTML = '<p class="text-secondary">Nenhum v�deo ou PDF encontrado nesta pasta.</p>';
+  async load(method) {
+    if (!this.library?.[method]) {
+      this.state = 'unavailable';
+      this.update();
       return;
     }
-
-    grid.innerHTML = this.files.map((file, index) => `
-      <div class="library-item card" data-index="${index}" style="padding: 16px; border-radius: var(--radius-lg); background: var(--surface-bg); border: 1px solid var(--border-color);">
-        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px;">
-          <i data-lucide="${file.type === 'pdf' ? 'file-text' : 'play-circle'}" class="w-8 h-8 text-primary"></i>
-          <div style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
-            <strong title="${file.name}">${file.name}</strong>
-            <div style="font-size: 12px; color: var(--text-secondary); overflow: hidden; text-overflow: ellipsis;">${file.type.toUpperCase()}</div>
-          </div>
-        </div>
-        <button class="btn btn-secondary" data-action="play-video">Abrir</button>
-      </div>
-    `).join('');
-
-  }
-
-  async playVideo(fileObj) {
+    const previousState = this.state;
+    this.state = 'scanning';
+    this.update();
     try {
-      const file = await fileObj.handle.getFile();
-      const url = URL.createObjectURL(file);
-      
-      const baseName = fileObj.name.replace(/\.[^/.]+$/, "");
-      const matchedSubs = this.subtitlesFiles.filter(sub => sub.name.startsWith(baseName) && sub.basePath === fileObj.basePath);
-      
-      const subtitles = [];
-      for (const sub of matchedSubs) {
-        const subFile = await sub.handle.getFile();
-        const subUrl = URL.createObjectURL(subFile);
-        subtitles.push({
-          src: subUrl,
-          lang: sub.name.includes('en') ? 'en' : 'pt',
-          label: sub.name.includes('en') ? 'Inglês' : 'Português',
-          default: subtitles.length === 0
-        });
-      }
-      
-      this.app.navigate('video');
-      
-      setTimeout(() => {
-        window.dispatchEvent(new CustomEvent('play-local-video', { 
-          detail: { src: url, title: fileObj.name, subtitles } 
-        }));
-      }, 200);
-      
-    } catch (e) {
-      console.error(e);
-      alert('Erro ao reproduzir: ' + e.message);
+      const result = await this.library[method]();
+      this.items = result?.items ?? this.library.items ?? [];
+      this.state = this.items.length ? 'ready' : 'empty';
+    } catch (error) {
+      if (error?.name === 'AbortError') this.state = previousState;
+      else this.state = error?.code === 'permission-denied' ? 'revoked' : 'unavailable';
     }
+    this.update();
   }
 
-  destroy() {
-    if (this.element?.parentNode) this.element.parentNode.removeChild(this.element);
+  update() {
+    this.element.innerHTML = `
+      <header class="page-header">
+        <h1>Biblioteca local</h1>
+        <p>Seus materiais permanecem na pasta escolhida neste dispositivo.</p>
+      </header>
+      <div class="library-content">${this.content()}</div>
+    `;
+  }
+
+  content() {
+    if (this.state === 'scanning') return '<p class="library-state" role="status">Atualizando biblioteca…</p>';
+    if (this.state === 'disconnected') return this.stateCard('Conectar pasta de estudos', 'Escolha uma pasta para listar materiais locais.', 'Conectar pasta');
+    if (this.state === 'revoked') return this.stateCard('Permissão revogada', 'Reconecte a pasta para continuar acessando seus materiais.', 'Reconectar');
+    if (this.state === 'unavailable') return this.stateCard('Biblioteca indisponível', 'Não foi possível acessar a biblioteca local neste momento.', 'Tentar novamente');
+    if (this.state === 'empty') return `${this.controls()}<p class="library-state">Nenhum material compatível foi encontrado nesta pasta.</p>`;
+    return `${this.controls()}<div class="library-groups">${this.groups()}</div>`;
+  }
+
+  stateCard(title, description, label) {
+    return `<div class="library-state library-state-card"><h2>${title}</h2><p>${description}</p><button class="btn btn-primary" data-action="connect">${label}</button></div>`;
+  }
+
+  controls() {
+    return '<div class="library-controls"><span>Biblioteca conectada</span><button class="btn btn-secondary" data-action="refresh">Atualizar</button></div>';
+  }
+
+  groups() {
+    const groups = new Map();
+    for (const item of this.items) {
+      const area = item.area || 'Sem área';
+      const collection = item.collection || 'Sem coleção';
+      const key = `${area}\u0000${collection}`;
+      if (!groups.has(key)) groups.set(key, { area, collection, items: [] });
+      groups.get(key).items.push(item);
+    }
+    return [...groups.values()].map(({ area, collection, items }) => `
+      <section class="library-group"><h2>${escape(area)}</h2><h3>${escape(collection)}</h3>
+        <div class="library-items">${items.map((item) => `<button class="library-item" data-resource-id="${escape(item.id)}"><span>${escape(item.title)}</span><small>${escape(item.resourceType)}</small></button>`).join('')}</div>
+      </section>
+    `).join('');
   }
 }
 
-
-
+function escape(value) {
+  return String(value).replace(/[&<>"']/g, (character) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[character]);
+}

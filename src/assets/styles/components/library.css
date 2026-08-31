@@ -1,0 +1,12 @@
+.library-content { display: grid; gap: 1.5rem; padding: 1.5rem; }
+.library-controls { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+.library-state { color: var(--text-secondary); }
+.library-state-card { max-width: 42rem; padding: 1.5rem; border: 1px solid var(--border-color); border-radius: var(--radius-lg); background: var(--surface-bg); }
+.library-state-card h2, .library-state-card p { margin: 0 0 0.75rem; }
+.library-groups { display: grid; gap: 1.5rem; }
+.library-group h2, .library-group h3 { margin: 0; }
+.library-group h3 { color: var(--text-secondary); font-size: 0.875rem; font-weight: 400; }
+.library-items { display: grid; grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr)); gap: 0.75rem; margin-top: 0.75rem; }
+.library-item { display: grid; gap: 0.25rem; padding: 1rem; text-align: left; border: 1px solid var(--border-color); border-radius: var(--radius-md); background: var(--surface-bg); color: inherit; cursor: pointer; }
+.library-item:hover, .library-item:focus-visible { border-color: var(--primary); outline: none; }
+.library-item small { color: var(--text-secondary); text-transform: capitalize; }

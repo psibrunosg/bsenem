@@ -12,6 +12,8 @@ export class AppShell {
     this.currentRoute = 'dashboard';
     this.user = options.user ?? { name: 'Estudante', email: 'estudante@email.com', level: 1, xp: 0, xpMax: 1000, streak: 0 };
     this.subjects = options.subjects ?? [];
+    this.libraryService = options.libraryService ?? null;
+    this.pendingLocalResource = null;
     
     this.sidebar = new Sidebar({
       collapsed: this.sidebarCollapsed,
@@ -132,7 +134,8 @@ export class AppShell {
         const component = new Component({ 
           app: this,
           user: this.user,
-          subjects: this.subjects
+          subjects: this.subjects,
+          library: this.libraryService
         });
         
         // Render could be sync or async
@@ -369,6 +372,22 @@ export class AppShell {
   setSubjects(subjects) {
     this.subjects = subjects;
     this.sidebar.setSubjects(subjects);
+  }
+
+  setLibraryService(service) {
+    this.libraryService = service;
+  }
+
+  openLocalResource(item) {
+    this.pendingLocalResource = item;
+    this.navigate(item.resourceType === 'audio' ? 'audio' : item.resourceType === 'video' ? 'video' : 'library');
+  }
+
+  consumeLocalResource(type) {
+    if (this.pendingLocalResource?.resourceType !== type) return null;
+    const item = this.pendingLocalResource;
+    this.pendingLocalResource = null;
+    return item;
   }
 
   // Player public API

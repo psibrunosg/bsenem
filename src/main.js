@@ -7,6 +7,8 @@ import { FlashcardsPage } from '@pages/FlashcardsPage.js';
 import { NotesPage } from '@pages/NotesPage.js';
 import { ExamsPage } from '@pages/ExamsPage.js';
 import { DashboardPage } from '@pages/DashboardPage.js';
+import { LibraryPage } from '@pages/LibraryPage.js';
+import { LocalLibraryService } from '@services/LocalLibraryService.js';
 import { keyboard, setupGlobalShortcuts } from '@utils/keyboard.js';
 import { confetti, triggerConfetti } from '@utils/confetti.js';
 
@@ -39,6 +41,7 @@ const app = new AppShell({
 
 const appElement = app.render();
 document.getElementById('app').appendChild(appElement);
+app.setLibraryService(new LocalLibraryService());
 
 // Register routes
 app.registerRoute('dashboard', DashboardPage);
@@ -47,6 +50,7 @@ app.registerRoute('audio', AudioPage);
 app.registerRoute('flashcards', FlashcardsPage);
 app.registerRoute('notes', NotesPage);
 app.registerRoute('exams', ExamsPage);
+app.registerRoute('library', LibraryPage);
 
 const initialRoute = window.location.hash.replace(/^#/, '') || 'dashboard';
 app.start(initialRoute);
