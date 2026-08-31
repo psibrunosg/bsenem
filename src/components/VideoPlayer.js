@@ -53,7 +53,6 @@ export class VideoPlayer {
           class="video-element"
           ${this.poster ? `poster="${this.poster}"` : ''}
           playsinline
-          crossorigin="anonymous"
         >
           ${this.src ? `<source src="${this.src}" type="video/mp4">` : ''}
           ${this.subtitles.map(sub => `

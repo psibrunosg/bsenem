@@ -17,6 +17,16 @@
   gap: 20px;
 }
 
+.transcript-panel {
+  margin-top: 20px;
+  padding: 16px;
+  background: var(--color-surface);
+  border-radius: var(--radius-md);
+}
+
+.transcript-panel input { width: 100%; margin-top: 8px; }
+.transcript-results { white-space: pre-wrap; margin-top: 12px; }
+
 /* Header */
 .audio-header {
   display: flex;

@@ -1,3 +1,6 @@
+import { PDFViewer } from '@components/PDFViewer.js';
+import { LocalMediaSession } from '@services/localMediaSession.js';
+
 export class LibraryPage {
   constructor(options = {}) {
     this.app = options.app;
@@ -5,6 +8,8 @@ export class LibraryPage {
     this.items = this.library?.items ?? [];
     this.state = !this.library ? 'unavailable' : this.items.length ? 'ready' : 'disconnected';
     this.element = null;
+    this.pdfViewer = null;
+    this.session = null;
   }
 
   async render() {
@@ -12,7 +17,20 @@ export class LibraryPage {
     this.element.className = 'library-page';
     this.element.addEventListener('click', (event) => this.handleClick(event));
     this.update();
+    const item = this.app?.consumeLocalResource?.('pdf');
+    if (item) await this.openPdf(item);
     return this.element;
+  }
+
+  async openPdf(item) {
+    try {
+      this.session = await LocalMediaSession.open(item, this.library);
+      this.pdfViewer = new PDFViewer({ title: item.title });
+      this.element.querySelector('.library-content').appendChild(this.pdfViewer.render());
+      this.pdfViewer.setSrc(this.session.src);
+    } catch (error) {
+      this.element.querySelector('.library-content').insertAdjacentHTML('beforeend', `<p class="library-state">${escape(error.message)}</p>`);
+    }
   }
 
   async handleClick(event) {
@@ -84,6 +102,12 @@ export class LibraryPage {
         <div class="library-items">${items.map((item) => `<button class="library-item" data-resource-id="${escape(item.id)}"><span>${escape(item.title)}</span><small>${escape(item.resourceType)}</small></button>`).join('')}</div>
       </section>
     `).join('');
+  }
+
+  destroy() {
+    this.pdfViewer?.destroy();
+    this.session?.close();
+    if (this.element?.parentNode) this.element.parentNode.removeChild(this.element);
   }
 }
 

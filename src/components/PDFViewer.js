@@ -174,8 +174,8 @@ export class PDFViewer {
 
     try {
       // Dynamic import of PDF.js
-      const pdfjsLib = await import('pdfjs-dist');
-      pdfjsLib.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjsLib.version}/pdf.worker.min.js`;
+      const moduleName = 'pdfjs-dist';
+      const pdfjsLib = await import(/* @vite-ignore */ moduleName);
 
       const loadingTask = pdfjsLib.getDocument(src);
       this.pdfDoc = await loadingTask.promise;
@@ -229,6 +229,19 @@ export class PDFViewer {
     }
 
     this.scrollToPage(this.currentPage);
+  }
+
+  setSrc(src) {
+    this.src = src;
+    const container = this.element?.querySelector('.pdf-pages-container');
+    if (!container) return;
+    container.innerHTML = '';
+    const object = document.createElement('object');
+    object.type = 'application/pdf';
+    object.data = src;
+    object.className = 'pdf-local-document';
+    container.appendChild(object);
+    this.showLoading(false);
   }
 
   async renderCurrentPage() {

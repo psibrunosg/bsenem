@@ -1,171 +1,23 @@
-// src/pages/VideoPage.js
 import { VideoPlayer } from '@components/VideoPlayer.js';
-import { Playlist } from '@components/Playlist.js';
+import { LocalMediaSession } from '@services/localMediaSession.js';
 
 export class VideoPage {
-  constructor(options = {}) {
-    this.app = options.app;
-    this.videoPlayer = null;
-    this.playlist = null;
-    this.element = null;
-    
-    const demoVideo = 'https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4';
-    this.videoItems = [
-      {
-        id: 1,
-        title: 'Introdução à Matemática - Funções Quadráticas',
-        artist: 'Prof. Carlos Silva',
-        src: demoVideo,
-        duration: 5,
-        subject: 'Matemática'
-      },
-      {
-        id: 2,
-        title: 'Física Mecânica - Leis de Newton',
-        artist: 'Prof. Ana Costa',
-        src: demoVideo,
-        duration: 5,
-        subject: 'Física'
-      },
-      {
-        id: 3,
-        title: 'Química Orgânica - Hidrocarbonetos',
-        artist: 'Prof. Maria Santos',
-        src: demoVideo,
-        duration: 5,
-        subject: 'Química'
-      }
-    ];
-  }
-
-  render() {
-    this.element = document.createElement('div');
+  constructor(options = {}) { this.app = options.app; this.library = options.library; this.videoPlayer = null; this.session = null; this.element = null; }
+  async render() {
+    const item = this.app?.consumeLocalResource?.('video');
+    this.element = document.createElement('section');
     this.element.className = 'video-page';
-    
-    this.videoPlayer = new VideoPlayer({
-      src: this.videoItems[0].src,
-      poster: this.videoItems[0].poster,
-      title: this.videoItems[0].title,
-      description: this.videoItems[0].artist,
-      duration: this.videoItems[0].duration,
-      onPlay: () => this.onVideoPlay(),
-      onPause: () => this.onVideoPause(),
-      onTimeUpdate: (time, duration) => this.onTimeUpdate(time, duration),
-      onEnded: () => this.onVideoEnded()
-    });
-
-    this.playlist = new Playlist({
-      items: this.videoItems,
-      currentIndex: 0,
-      onPlay: () => this.onPlaylistPlay(),
-      onSelect: (item, index) => this.onPlaylistSelect(item, index),
-      onRemove: (index) => this.onPlaylistRemove(index),
-      onReorder: (items) => this.onPlaylistReorder(items),
-      onClear: () => this.onPlaylistClear()
-    });
-
-    this.element.innerHTML = `
-      <div class="page-header">
-        <h1>Videoaulas</h1>
-        <p>Assista videoaulas e acompanhe o progresso</p>
-      </div>
-      
-      <div class="video-page-content">
-        <div class="video-main">
-          <div class="video-player-container"></div>
-          <div class="video-info-panel">
-            <h2 class="video-title">${this.videoItems[0].title}</h2>
-            <p class="video-artist">${this.videoItems[0].artist}</p>
-            <p class="video-subject">${this.videoItems[0].subject}</p>
-          </div>
-        </div>
-        <div class="video-sidebar">
-          <div class="video-playlist-container"></div>
-        </div>
-      </div>
-    `;
-
-    const playerContainer = this.element.querySelector('.video-player-container');
-    const playlistContainer = this.element.querySelector('.video-playlist-container');
-
-    playerContainer.appendChild(this.videoPlayer.render());
-    playlistContainer.appendChild(this.playlist.render());
-
-    // Connect player to app's mini player
-    this.connectToMiniPlayer();
-
+    this.element.innerHTML = '<header class="page-header"><h1>Videoaulas</h1><p>Reproduza materiais da sua biblioteca local.</p></header><div class="video-player-container"></div><p class="local-media-state"></p>';
+    if (!item) return this.empty('Selecione uma videoaula na biblioteca local.');
+    try {
+      this.session = await LocalMediaSession.open(item, this.library);
+      this.videoPlayer = new VideoPlayer({ title: item.title });
+      this.element.querySelector('.video-player-container').appendChild(this.videoPlayer.render());
+      this.videoPlayer.setSrc(this.session.src);
+      this.videoPlayer.setSubtitles(this.session.captions);
+    } catch (error) { this.empty(error.message); }
     return this.element;
   }
-
-  connectToMiniPlayer() {
-    if (!this.app) return;
-
-    // Override player callbacks to sync with mini player
-    this.videoPlayer.onPlay = () => {
-      this.app.miniPlayer.setTrack({
-        title: this.videoItems[this.playlist.currentIndex].title,
-        artist: this.videoItems[this.playlist.currentIndex].artist,
-        type: 'video',
-        duration: this.videoItems[this.playlist.currentIndex].duration
-      });
-      this.app.miniPlayer.play();
-    };
-
-    this.videoPlayer.onPause = () => {
-      this.app.miniPlayer.pause();
-    };
-
-    this.videoPlayer.onTimeUpdate = (time, duration) => {
-      this.app.miniPlayer.setProgress(time, duration);
-    };
-  }
-
-  onVideoPlay() {
-    console.log('Video playing');
-  }
-
-  onVideoPause() {
-    console.log('Video paused');
-  }
-
-  onTimeUpdate(time, duration) {
-    // Could update progress UI
-  }
-
-  onVideoEnded() {
-    // Play next in playlist
-    const nextItem = this.playlist.getNextItem();
-    if (nextItem) {
-      this.playlist.selectNext();
-    }
-  }
-
-  onPlaylistPlay() {
-    this.videoPlayer.togglePlayPause();
-  }
-
-  onPlaylistSelect(item, index) {
-    this.videoPlayer.setSrc(item.src, item.poster);
-    this.videoPlayer.setTitle(item.title);
-    this.videoPlayer.play();
-  }
-
-  onPlaylistRemove(index) {
-    console.log('Removed from playlist:', index);
-  }
-
-  onPlaylistReorder(items) {
-    console.log('Playlist reordered');
-  }
-
-  onPlaylistClear() {
-    this.videoPlayer.pause();
-    this.videoPlayer.setSrc('', null);
-  }
-
-  destroy() {
-    this.videoPlayer?.destroy();
-    this.playlist?.destroy();
-    if (this.element?.parentNode) this.element.parentNode.removeChild(this.element);
-  }
+  empty(message) { this.element.querySelector('.local-media-state').textContent = message; return this.element; }
+  destroy() { this.videoPlayer?.destroy(); this.session?.close(); if (this.element?.parentNode) this.element.parentNode.removeChild(this.element); }
 }
