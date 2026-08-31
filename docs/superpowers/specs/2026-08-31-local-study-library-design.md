@@ -15,6 +15,7 @@ Substituir conteúdo demonstrativo por uma biblioteca pessoal local. A pessoa se
 - O navegador abre o seletor de pasta somente após clique explícito do usuário e solicita apenas permissão de leitura.
 - A estrutura atual de pastas é preservada. O catálogo interpreta, mas não renomeia, cria, move ou apaga arquivos.
 - O produto deve indexar a biblioteca inteira, não só materiais de ENEM: cursos, graduação, artigos, livros e outras áreas permanecem organizáveis por área e pasta.
+- A sessão, matérias exibidas, XP, sequência e métricas do painel devem partir de dados reais. O produto não pode usar perfil, disciplinas, números aleatórios ou progresso construídos em código como fallback visual.
 - O primeiro lançamento suporta arquivos de mídia e documentos. Um simulado só aparece quando existir um arquivo local validado no formato `bsestudos.exam.v1`; não há questões de exemplo.
 - Flashcards automáticos de exemplo, playlists demonstrativas, mídia externa de demonstração e simulados hardcoded são removidos. Flashcards criados pelo usuário não são apagados.
 
@@ -111,6 +112,9 @@ Aula 01.txt
 - A página de simulados não cria exames ou perguntas em código. Ela lista apenas arquivos `.bsestudos.exam.json` validados ou exibe estado vazio.
 - `FlashcardsPage` deixa de executar qualquer semeadura; os controles de criação, importação e revisão de cards reais continuam disponíveis.
 - O mini-player recebe apenas metadados já obtidos localmente, sem chamadas novas ao backend para a mídia.
+- `main.js` deixa de inicializar `AppShell` com o perfil, disciplinas, XP ou sequência demonstrativos. Com token válido, a sessão é restaurada pelo endpoint de perfil; sem token válido, a tela de autenticação é apresentada em vez de um painel preenchido artificialmente.
+- O painel substitui métricas aleatórias por respostas reais do backend. Na ausência de atividade, mostra zero e estados vazios; não calcula estatísticas de exemplo.
+- A `LibraryPage` existente é a base da implementação, mas será reparada, registrada como rota e separada em unidades testáveis de acesso à pasta, varredura, associação de transcrições e renderização. Nenhum segundo scanner paralelo será criado.
 - O projeto recupera um manifesto de dependências e scripts de teste/build reprodutíveis antes das mudanças funcionais. Essa é uma pré-condição para testes de regressão.
 
 ## Contrato de simulado local `bsestudos.exam.v1`
@@ -146,8 +150,9 @@ Validação obrigatória: `schema` exato, `id` e `title` não vazios, `durationM
 5. Nenhum teste, requisição, log, telemetria ou API transmite bytes de mídia, caminhos locais, títulos ou conteúdo das transcrições para a VPS.
 6. Apenas simulados `.bsestudos.exam.json` válidos aparecem na tela de simulados.
 7. Flashcards existentes do usuário são preservados e nenhuma semente é criada para uma conta nova.
-8. Os testes unitários cobrem varredura, exclusões, associação de transcrições, validação de simulados, perda de permissão e estados vazios; testes de interface cobrem a seleção simulada de pasta e os players com URLs de objeto.
-9. Build, testes do frontend, lint PHP e testes PHP podem ser executados por comandos declarados no repositório antes de release.
+8. Sem sessão autenticada, o produto não renderiza o perfil demonstrativo: apresenta autenticação; com sessão autenticada, perfil e painel usam respostas reais.
+9. Os testes unitários cobrem varredura, exclusões, associação de transcrições, validação de simulados, perda de permissão e estados vazios; testes de interface cobrem a seleção simulada de pasta, restauração de sessão e os players com URLs de objeto.
+10. Build, testes do frontend, lint PHP e testes PHP podem ser executados por comandos declarados no repositório antes de release.
 
 ## Fora de escopo
 
