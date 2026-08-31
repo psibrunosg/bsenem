@@ -27,3 +27,6 @@ npm-debug.log*
 # Cache
 .cache/
 .vite/
+
+# Isolated agent worktrees
+.worktrees/
