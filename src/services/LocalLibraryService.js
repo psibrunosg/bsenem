@@ -1,0 +1,141 @@
+import { idb as browserIdb } from '../utils/idb.js';
+
+const MEDIA_TYPES = new Map([
+  ['mp4', 'video'], ['webm', 'video'], ['ogv', 'video'],
+  ['mp3', 'audio'], ['m4a', 'audio'], ['wav', 'audio'], ['ogg', 'audio'], ['opus', 'audio'],
+  ['pdf', 'pdf']
+]);
+const SIDECAR_TYPES = new Set(['vtt', 'srt', 'txt']);
+const TYPE_FOLDERS = new Set(['pdfs', 'videos', 'áudios', 'audios']);
+
+export class LocalLibraryService {
+  constructor({ idb = browserIdb, createId = defaultId } = {}) {
+    this.idb = idb;
+    this.createId = createId;
+    this.items = [];
+    this.diagnostics = [];
+    this.fileHandles = new Map();
+    this.objectUrls = new Map();
+  }
+
+  async connect() {
+    const handle = await window.showDirectoryPicker({ mode: 'read', id: 'bs-estudos-library' });
+    await this.idb.set('local-library-handle', handle);
+    return this.refresh(handle);
+  }
+
+  async restore() {
+    const handle = await this.idb.get('local-library-handle');
+    if (!handle) return { items: [], diagnostics: [] };
+    if (await permission(handle) !== 'granted') throw localError('permission-denied');
+    return this.refresh(handle);
+  }
+
+  async refresh(handle) {
+    handle ||= await this.idb.get('local-library-handle');
+    if (!handle) return { items: [], diagnostics: [] };
+    const result = await this.scan(handle);
+    this.items = result.items;
+    this.diagnostics = result.diagnostics;
+    await this.idb.set('local-library-handle', handle);
+    await this.idb.set('local-library-id', await this.libraryId());
+    await this.idb.set('local-library-items', result.items);
+    await this.idb.set('local-library-diagnostics', result.diagnostics);
+    return result;
+  }
+
+  async scan(handle) {
+    if (await permission(handle) === 'denied') throw localError('permission-denied');
+    const files = [];
+    const diagnostics = [];
+    this.fileHandles.clear();
+    await visit(handle, [], files, diagnostics);
+    const sidecars = new Map();
+    for (const entry of files.filter(entry => SIDECAR_TYPES.has(entry.extension))) {
+      entry.id = this.createId();
+      sidecars.set(sidecarKey(entry.path, entry.basename), entry);
+    }
+    const items = [];
+    for (const entry of files) {
+      const resourceType = MEDIA_TYPES.get(entry.extension);
+      if (!resourceType) {
+        if (!SIDECAR_TYPES.has(entry.extension)) diagnostics.push({ name: entry.name, code: 'unsupported-extension' });
+        continue;
+      }
+      const id = this.createId();
+      const transcript = resourceType === 'pdf' ? null : transcriptFor(entry, sidecars);
+      const item = {
+        id, relativePath: [...entry.path, entry.name].join('/'), title: entry.basename,
+        area: entry.path[0] || '', collection: collection(entry.path), resourceType, extension: entry.extension,
+        size: entry.file.size, modifiedAt: entry.file.lastModified, transcriptId: transcript?.id ?? null
+      };
+      if (transcript) item.transcript = { id: transcript.id, name: transcript.name, kind: transcript.extension === 'txt' ? 'text' : 'captions' };
+      items.push(item);
+      this.fileHandles.set(id, entry.handle);
+    }
+    return { items, diagnostics };
+  }
+
+  search(query) {
+    const term = String(query || '').toLocaleLowerCase();
+    return this.items.filter(item => `${item.title} ${item.area} ${item.collection}`.toLocaleLowerCase().includes(term));
+  }
+
+  getItem(id) { return this.items.find(item => item.id === id) || null; }
+
+  async createObjectUrl(item) {
+    const handle = this.fileHandles.get(item.id);
+    if (!handle) throw localError('file-unavailable');
+    try {
+      const url = URL.createObjectURL(await handle.getFile());
+      this.objectUrls.set(item.id, url);
+      return url;
+    } catch { throw localError('file-unavailable'); }
+  }
+
+  releaseObjectUrls() {
+    for (const url of this.objectUrls.values()) URL.revokeObjectURL(url);
+    this.objectUrls.clear();
+  }
+
+  async libraryId() {
+    let id = await this.idb.get('local-library-id');
+    if (!id) id = this.createId();
+    return id;
+  }
+}
+
+async function visit(directory, path, files, diagnostics) {
+  for await (const handle of directory.values()) {
+    const name = handle.name;
+    if (hidden(name) || name.toLowerCase() === 'desktop.ini' || name.toLowerCase().endsWith('.lnk')) {
+      diagnostics.push({ name, code: 'ignored-system-file' });
+      continue;
+    }
+    if (handle.kind === 'directory') {
+      if (name.toLowerCase() === 'cache') { diagnostics.push({ name, code: 'ignored-cache-directory' }); continue; }
+      await visit(handle, [...path, name], files, diagnostics);
+      continue;
+    }
+    const extension = ext(name);
+    try {
+      files.push({ handle, file: await handle.getFile(), name, path, extension, basename: base(name) });
+    } catch { diagnostics.push({ name, code: 'file-unavailable' }); }
+  }
+}
+
+function transcriptFor(entry, sidecars) {
+  const direct = sidecars.get(sidecarKey(entry.path, entry.basename));
+  if (direct) return direct;
+  const parent = entry.path.length && TYPE_FOLDERS.has(entry.path.at(-1).toLocaleLowerCase())
+    ? sidecars.get(sidecarKey(entry.path.slice(0, -1), entry.basename)) : null;
+  return parent || null;
+}
+function sidecarKey(path, basename) { return `${path.join('/')}\u0000${basename}`; }
+function collection(path) { return path.slice(1).filter(part => !TYPE_FOLDERS.has(part.toLocaleLowerCase())).join('/'); }
+function ext(name) { const index = name.lastIndexOf('.'); return index < 0 ? '' : name.slice(index + 1).toLocaleLowerCase(); }
+function base(name) { const index = name.lastIndexOf('.'); return index < 0 ? name : name.slice(0, index); }
+function hidden(name) { return name.startsWith('.'); }
+async function permission(handle) { return typeof handle.queryPermission === 'function' ? handle.queryPermission({ mode: 'read' }) : 'granted'; }
+function localError(code) { return Object.assign(new Error(code), { code }); }
+function defaultId() { return globalThis.crypto?.randomUUID?.() || `${Date.now()}-${Math.random()}`; }
