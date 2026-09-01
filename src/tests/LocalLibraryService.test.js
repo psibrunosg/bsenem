@@ -28,6 +28,10 @@ describe('LocalLibraryService', () => {
     expect(result.items.map(({ title, resourceType }) => [title, resourceType]))
       .toEqual([['Aula 01', 'video'], ['Aula 01', 'pdf']]);
     expect(result.items[0].transcript.kind).toBe('captions');
+    expect(result.items[0]).toMatchObject({
+      pathSegments: ['UNIFATECIE', 'Modulo', 'Videos'], rawTitle: 'Aula 01', typeFolder: 'Videos'
+    });
+    expect(Object.isFrozen(result.items[0].pathSegments)).toBe(true);
     expect(result.diagnostics).toContainEqual(expect.objectContaining({ name: 'desktop.ini', code: 'ignored-system-file' }));
   });
 
@@ -114,6 +118,14 @@ describe('LocalLibraryService', () => {
     expect(picker).toHaveBeenCalledWith({ mode: 'read', id: 'bs-estudos-library' });
     expect(store.set).toHaveBeenCalledWith('local-library-handle', handle);
     expect(store.set).toHaveBeenCalledWith('local-library-id', 'library-id');
+    expect(store.set).not.toHaveBeenCalledWith('local-library-catalog', expect.anything());
+  });
+
+  it('returns and keeps an in-memory catalog when refreshing a local library', async () => {
+    const result = await service.refresh(fakeDirectory({ Curso: directory({ Videos: directory({ '01-Aula.mp4': file('video/mp4') }) }) }));
+
+    expect(result.catalog.courses[0].modules[0].lessons[0]).toMatchObject({ title: 'Aula', video: { id: 'library-id' } });
+    expect(service.catalog).toBe(result.catalog);
   });
 
   it('resets only the local library connection and catalog', async () => {
