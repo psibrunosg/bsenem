@@ -1,4 +1,14 @@
 services:
+  frontend:
+    networks:
+      default:
+      shared_proxy:
+
   api:
     env_file:
       - ./api.env
+
+networks:
+  shared_proxy:
+    external: true
+    name: deploy-nginx-fpm_default
