@@ -14,4 +14,14 @@ describe('LoginPage', () => {
     expect(element.innerHTML).not.toContain('turnstile');
     expect(document.querySelector('script[src*="challenges.cloudflare.com"]')).toBeNull();
   });
+
+  it('renders the branded private-access layout', () => {
+    const element = new LoginPage({ api: { post: vi.fn() } }).render();
+
+    expect(element.classList.contains('login-page')).toBe(true);
+    expect(element.querySelector('.login-brand')).not.toBeNull();
+    expect(element.querySelector('.login-panel')).not.toBeNull();
+    expect(element.querySelector('.login-form')).not.toBeNull();
+    expect(element.querySelector('.login-submit')).not.toBeNull();
+  });
 });

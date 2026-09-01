@@ -33,6 +33,7 @@
 @import './components/exam.css';
 @import './components/dashboard.css';
 @import './components/library.css';
+@import './components/login.css';
 
 /* Pages */
 @import './pages.css';
