@@ -57,6 +57,19 @@ describe('LibraryPage', () => {
     await vi.waitFor(() => expect(library.refresh).toHaveBeenCalledOnce());
   });
 
+  it('lets the user choose another folder from a connected library', async () => {
+    const library = { items: [item()], connect: vi.fn().mockResolvedValue({ items: [item({ title: 'Nova aula' })] }) };
+    const page = new LibraryPage({ library });
+    const element = await page.render();
+
+    const changeFolder = element.querySelector('[data-action="change-folder"]');
+    expect(changeFolder?.textContent).toContain('Trocar pasta');
+
+    changeFolder.click();
+    await vi.waitFor(() => expect(element.textContent).toContain('Nova aula'));
+    expect(library.connect).toHaveBeenCalledOnce();
+  });
+
   it('groups resources by area and collection', async () => {
     const page = new LibraryPage({ library: { items: [item(), item({ id: 'pdf-1', title: 'Resumo', resourceType: 'pdf' })] } });
     const element = await page.render();

@@ -37,6 +37,7 @@ export class LibraryPage {
     const action = event.target.closest('[data-action]')?.dataset.action;
     if (action === 'connect') await this.load('connect');
     if (action === 'refresh') await this.load('refresh');
+    if (action === 'change-folder') await this.load('connect');
     const id = event.target.closest('[data-resource-id]')?.dataset.resourceId;
     if (id) this.app?.openLocalResource?.(this.items.find((item) => item.id === id));
   }
@@ -85,7 +86,7 @@ export class LibraryPage {
   }
 
   controls() {
-    return '<div class="library-controls"><span>Biblioteca conectada</span><button class="btn btn-secondary" data-action="refresh">Atualizar</button></div>';
+    return '<div class="library-controls"><span>Biblioteca conectada</span><div class="library-control-actions"><button class="btn btn-secondary" data-action="change-folder">Trocar pasta</button><button class="btn btn-secondary" data-action="refresh">Atualizar</button></div></div>';
   }
 
   groups() {

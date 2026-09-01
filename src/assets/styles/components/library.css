@@ -1,5 +1,6 @@
 .library-content { display: grid; gap: 1.5rem; padding: 1.5rem; }
 .library-controls { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+.library-control-actions { display: flex; flex-wrap: wrap; gap: 0.5rem; }
 .library-state { color: var(--text-secondary); }
 .library-state-card { max-width: 42rem; padding: 1.5rem; border: 1px solid var(--border-color); border-radius: var(--radius-lg); background: var(--surface-bg); }
 .library-state-card h2, .library-state-card p { margin: 0 0 0.75rem; }
