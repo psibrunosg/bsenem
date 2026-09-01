@@ -1,0 +1,26 @@
+{
+  "run_id": "2026-09-01-local-library-player-analytics",
+  "runtime": "codex-desktop",
+  "resolved_models": { "arbiter": "gpt-5" },
+  "repository": "C:\\Users\\ACPO Empreendimentos\\Documents\\Github\\bsenem",
+  "selected_roadmap": "docs/superpowers/specs/2026-09-01-local-course-library-and-player-design.md",
+  "current_task": "library-player-analytics",
+  "last_accepted_task": "none",
+  "correction_cycle": 0,
+  "worktree": "C:\\Users\\ACPO Empreendimentos\\Documents\\Github\\bsenem",
+  "branch": "main",
+  "base_sha": "1f9b367dbb097a124f62e76eb33fccdcaad32238",
+  "head_sha": "1f9b367dbb097a124f62e76eb33fccdcaad32238",
+  "verdicts": [{ "task_id": "baseline", "verdict": "PASS" }],
+  "commands": [
+    { "command": "npm test", "exit_code": 0 },
+    { "command": "npm run test:backend", "exit_code": 0 },
+    { "command": "npm run lint:php", "exit_code": 0 },
+    { "command": "npm run build", "exit_code": 0 }
+  ],
+  "evidence": ["task-contract.md"],
+  "last_safe_state": "BASELINE",
+  "next_allowed_step": "implement",
+  "active_gates": ["test-first", "review", "migration-release"],
+  "blockers": []
+}
