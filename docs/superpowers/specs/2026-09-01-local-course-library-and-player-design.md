@@ -129,7 +129,68 @@ Ao abrir outra aula, a sessão passa a representar somente essa nova aula. Naveg
 - A lista única do módulo vai abaixo do player em telas menores, sem duplicar conteúdo.
 - Contraste e estados de foco devem manter legibilidade no tema atual claro e escuro.
 
-## Critérios de aceite
+## Correção de dados e análises do dashboard
+
+### Diagnóstico registrado
+
+Esta correção parte de evidências no código atual, e não de uma suposição visual:
+
+1. `StatsDashboard` cria valores fixos para `Desempenho por Matéria` e `Atividade Recente`; portanto esses blocos não representam a conta autenticada.
+2. `DashboardPage` renderiza os cards antes de terminar as chamadas de `/progress/heatmap` e `/progress/dashboard`; após a resposta, ela guarda os dados mas não atualiza o componente de estatísticas.
+3. O `activity_log`, que alimenta heatmap e meta semanal, é atualizado pelo endpoint genérico de estudo. Hoje o fluxo de pomodoro é o único chamador no shell; revisão de flashcard registra `study_sessions`, mas não atualiza o resumo diário, e tentativa de simulado também não alimenta esse resumo.
+4. Vídeos e áudios da biblioteca local não possuem ainda um registrador de progresso, então não podem compor tempo de estudo, atividade recente ou desempenho por módulo de forma honesta.
+
+### Fonte de verdade
+
+O dashboard passa a trabalhar somente com fatos persistidos e identificados pela origem:
+
+| Origem | Persistência | Dados exibidos |
+| --- | --- | --- |
+| Flashcards | Banco da conta | revisões, acertos, precisão, data e matéria quando houver |
+| Simulados | Banco da conta | tentativa concluída, nota e tempo gasto |
+| Pomodoro e estudo autenticado | Banco da conta | minutos, sessões, XP e dia de atividade |
+| Biblioteca local | armazenamento local do navegador | minutos ouvidos/assistidos, aula, curso e módulo; nenhum arquivo é enviado |
+
+O dashboard combina os agregados autorizados do servidor com os agregados locais da biblioteca atual. Ele deve deixar claro quando um dado é deste dispositivo, em vez de fingir sincronização entre computadores.
+
+### Modelo de eventos e contagem
+
+1. Centralizar o registro de atividade do banco em uma rotina idempotente por evento concluído. Flashcard, simulado, pomodoro e sessão de estudo devem alimentar tanto `study_sessions` quanto o resumo diário aplicável em `activity_log`.
+2. Ao reproduzir mídia local, registrar checkpoints locais em intervalos mínimos e no pause/encerramento, sem contar o mesmo trecho duas vezes. Os checkpoints devem ser vinculados ao identificador interno da aula, curso e módulo — nunca ao conteúdo do arquivo.
+3. Um evento de mídia só entra nas análises depois de atingir um limiar mínimo de reprodução efetiva; seek para frente ou repetição não infla o tempo estudado.
+4. Mudanças de vídeo para áudio da mesma aula continuam a mesma sessão lógica, preservando o tempo sem gerar atividade duplicada.
+5. O usuário autenticado é o único escopo de qualquer dado de banco. Dados locais ficam isolados pelo perfil e pelo navegador/dispositivo que autorizou a pasta.
+
+### Contrato de leitura do dashboard
+
+- A página aguarda e aplica a resposta de dados antes de substituir os estados de carregamento; erro de uma fonte não pode apagar dados válidos da outra.
+- `Tempo total`, `Sessões hoje`, `Cards revisados` e `Precisão` mostram somente agregados reais. A precisão é exibida como indisponível quando não houver revisões, nunca como porcentagem fictícia.
+- `Meta semanal` deriva dos dias com atividade real, usando a semana local do usuário e não uma contagem sequencial artificial de bolinhas preenchidas.
+- `Desempenho por Matéria` será renomeado conforme a fonte disponível: matérias dos flashcards/simulados e cursos ou módulos da biblioteca local. Cada linha exibe uma medida explícita, como minutos estudados, precisão ou aulas concluídas; métricas diferentes não serão somadas como se fossem a mesma coisa.
+- `Atividade Recente` mostra somente eventos reais, ordenados por data. Cada item informa origem, conteúdo/módulo quando houver, medida e horário relativo acessível.
+- Quando ainda não houver histórico, os três blocos mostram estado vazio orientativo, não nomes, percentuais ou atividades de demonstração.
+- Heatmap, sequência e XP continuam consistentes com o mesmo resumo diário que alimenta os cards.
+
+### Estados e falhas de dados
+
+| Situação | Resposta da interface |
+| --- | --- |
+| Nenhuma atividade real | estado vazio com orientação para iniciar uma aula, revisão ou simulado |
+| API indisponível | mensagem de falha específica para dados sincronizados; análises locais válidas continuam visíveis |
+| Biblioteca não conectada | seção local explica que o desempenho de aulas será mostrado depois da conexão |
+| Permissão local revogada | preservar o histórico local já consolidado quando possível e pedir reconexão para novos registros |
+| Evento inválido ou repetido | não alterar contadores; registrar erro técnico sem expor detalhe sensível ao usuário |
+
+## Critérios de aceite: dados e análises
+
+9. Não existem arrays de matéria, porcentagem, atividade ou horário fictícios nos componentes de análise.
+10. O retorno de `/progress/dashboard` atualiza efetivamente os cards, sem depender de recarregar a página.
+11. Flashcards, simulados, pomodoro e estudo autenticado atualizam os seus resumos diários de modo consistente e sem duplicidade.
+12. Tempo de vídeo/áudio local é contado uma única vez por reprodução efetiva, permanece local e aparece no curso/módulo correto.
+13. Dashboard vazio, falha de API e biblioteca desconectada são estados distinguíveis e sem dados inventados.
+14. Testes automatizados cobrem agregação, deduplicação, carregamento assíncrono, estados vazios e isolamento entre usuários.
+
+## Critérios de aceite: biblioteca e player
 
 1. Uma árvore de pastas como o contrato é convertida em curso, módulos, submódulos e tipos, sem exibir as pastas técnicas de tipo como níveis desnecessários.
 2. Prefixos técnicos são ocultos quando há título descritivo; códigos puros não aparecem como nome de card.
