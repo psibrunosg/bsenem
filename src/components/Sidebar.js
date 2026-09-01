@@ -27,7 +27,7 @@ export class Sidebar {
           { id: 'video', icon: 'play-circle', label: 'Videoaulas' },
           { id: 'audio', icon: 'music', label: 'Áudios' },
           { id: 'library', icon: 'folder-open', label: 'Biblioteca local' },
-          { id: 'flashcards', icon: 'card-stack', label: 'Flashcards' }
+          { id: 'flashcards', icon: 'layers', label: 'Flashcards' }
         ]
       },
       {
