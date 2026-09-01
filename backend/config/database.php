@@ -1,19 +1,18 @@
 <?php
-// backend/config/database.php
+
+declare(strict_types=1);
+
+require_once __DIR__ . '/../database/Migrator.php';
 
 class Database {
     private static $instance = null;
     private $pdo;
 
-    private $host = 'localhost';
-    private $db_name = 'bsenem';
-    private $username = 'root';
-    private $password = '';
-
     private function __construct() {
         try {
+            $path = getenv('APP_DB_PATH') ?: __DIR__ . '/../database/bsenem.db';
             $this->pdo = new PDO(
-                "sqlite:" . __DIR__ . "/../database/bsenem.db",
+                "sqlite:" . $path,
                 null,
                 null,
                 [
@@ -23,12 +22,11 @@ class Database {
                 ]
             );
             
-            // Enable WAL mode for better concurrency
             $this->pdo->exec('PRAGMA journal_mode=WAL');
             $this->pdo->exec('PRAGMA foreign_keys=ON');
-            
+            Migrator::migrate($this->pdo);
         } catch (PDOException $e) {
-            die(json_encode(['error' => 'Database connection failed: ' . $e->getMessage()]));
+            throw new RuntimeException('Database connection failed.', 0, $e);
         }
     }
 
@@ -37,6 +35,18 @@ class Database {
             self::$instance = new self();
         }
         return self::$instance;
+    }
+
+    public static function resetForTests(): void {
+        if (getenv('APP_ENV') !== 'test') {
+            throw new RuntimeException('Database reset is available only in test mode.');
+        }
+
+        if (!getenv('APP_DB_PATH')) {
+            throw new RuntimeException('Test database path must be explicit.');
+        }
+
+        self::$instance = null;
     }
 
     public function getConnection() {
@@ -84,30 +94,18 @@ class Database {
     }
 }
 
-// Initialize database schema
-function initializeDatabase() {
-    try {
-        $db = Database::getInstance();
-        $db->query('ALTER TABLE users ADD COLUMN reset_token TEXT;');
-        $db->query('ALTER TABLE users ADD COLUMN reset_token_expires DATETIME;');
-    } catch(Exception $e) {}
-    $db = Database::getInstance()->getConnection();
-    $schema = file_get_contents(__DIR__ . '/../database/schema.sql');
-    
-    // Execute each statement separately
-    $statements = array_filter(array_map('trim', explode(';', $schema)));
-    
-    foreach ($statements as $statement) {
-        if (!empty($statement)) {
-            $db->exec($statement);
-        }
-    }
+function initializeDatabase(): void {
+    Database::getInstance();
 }
 
-// Run initialization if this file is executed directly
 if (basename(__FILE__) === basename($_SERVER['SCRIPT_FILENAME'] ?? '')) {
-    initializeDatabase();
-    echo json_encode(['message' => 'Database initialized successfully']);
+    try {
+        initializeDatabase();
+        echo json_encode(['message' => 'Database initialized successfully']);
+    } catch (Throwable $error) {
+        http_response_code(500);
+        echo json_encode(['error' => 'Database initialization failed']);
+    }
 }
 
 
