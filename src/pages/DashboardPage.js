@@ -9,7 +9,7 @@ import { api } from '@utils/api.js';
 export class DashboardPage {
   constructor(options = {}) {
     this.app = options.app;
-    this.user = options.user ?? { level: 1, xp: 0, xpMax: 1000, streak: 0 };
+    this.user = options.user;
     
     this.heatmap = null;
     this.xpBar = null;
@@ -49,7 +49,7 @@ export class DashboardPage {
     this.element.innerHTML = `
       <div class="page-header">
         <h1>Dashboard</h1>
-        <p>Bem-vindo de volta, ${this.app?.user?.name || 'Estudante'}!</p>
+        <p>Bem-vindo de volta, ${this.user.name}!</p>
       </div>
       
       <div class="dashboard-top-section">
@@ -113,15 +113,18 @@ export class DashboardPage {
   }
 
   getUserStats() {
-    const totalStudyTime = Object.values(this.activityData).reduce((sum, val) => sum + val * 5, 0);
-    const today = new Date().toISOString().split('T')[0];
-    const sessionsToday = this.activityData[today] || 0;
+    const dashboard = this.dashboardData ?? {};
+    const flashcards = dashboard.flashcards ?? {};
+    const totalStudyTime = Number(dashboard.total_study_minutes ?? 0);
+    const today = dashboard.today ?? {};
+    const sessionsToday = Number(today.study_minutes ?? 0);
+    const totalReviews = Number(flashcards.total_reviews ?? 0);
     
     return {
       totalStudyTime,
       sessionsToday,
-      cardsReviewed: Math.floor(Math.random() * 50) + 10,
-      accuracy: Math.floor(Math.random() * 30) + 70,
+      cardsReviewed: totalReviews,
+      accuracy: totalReviews ? Math.round(Number(flashcards.correct_reviews ?? 0) / totalReviews * 100) : 0,
       streak: this.user.streak,
       level: this.user.level,
       xp: this.user.xp,
@@ -162,21 +165,6 @@ export class DashboardPage {
 
   handleDayClick(date, value) {
     console.log('Day clicked:', date, value);
-  }
-
-  recordActivity() {
-    const today = new Date().toISOString().split('T')[0];
-    this.activityData[today] = (this.activityData[today] || 0) + 1;
-    
-    localStorage.setItem('bsenem_activity', JSON.stringify(this.activityData));
-    
-    if (this.heatmap) {
-      this.heatmap.updateData(this.activityData);
-    }
-    
-    if (this.streak && !this.hasStudiedToday()) {
-      this.streak.incrementStreak();
-    }
   }
 
   destroy() {
