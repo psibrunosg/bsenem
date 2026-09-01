@@ -1,6 +1,9 @@
 import { PDFViewer } from '@components/PDFViewer.js';
 import { confirmModal } from '@components/Modal.js';
 import { LocalMediaSession } from '@services/localMediaSession.js';
+import { CourseTree } from '@components/CourseTree.js';
+import { renderLessonCard, renderMaterialCard } from '@components/LessonCard.js';
+import { buildCourseCatalog } from '@services/courseCatalog.js';
 
 export class LibraryPage {
   constructor(options = {}) {
@@ -11,6 +14,10 @@ export class LibraryPage {
       { title: 'Resetar biblioteca?', confirmText: 'Resetar biblioteca', cancelText: 'Cancelar', danger: true }
     ));
     this.items = this.library?.items ?? [];
+    this.catalog = this.library?.catalog ?? buildCourseCatalog(this.items);
+    this.selectedNodeId = firstModuleId(this.catalog.courses);
+    this.typeFilter = 'all';
+    this.expandedNodeIds = expandedNodeIds(this.catalog.courses);
     this.state = !this.library ? 'unavailable' : this.items.length ? 'ready' : 'disconnected';
     this.element = null;
     this.pdfViewer = null;
@@ -34,7 +41,10 @@ export class LibraryPage {
       this.element.querySelector('.library-content').appendChild(this.pdfViewer.render());
       this.pdfViewer.setSrc(this.session.src);
     } catch (error) {
-      this.element.querySelector('.library-content').insertAdjacentHTML('beforeend', `<p class="library-state">${escape(error.message)}</p>`);
+      const message = document.createElement('p');
+      message.className = 'library-state';
+      message.textContent = error.message;
+      this.element.querySelector('.library-content').appendChild(message);
     }
   }
 
@@ -44,8 +54,11 @@ export class LibraryPage {
     if (action === 'refresh') await this.load('refresh');
     if (action === 'change-folder') await this.load('connect');
     if (action === 'reset-library') await this.reset();
-    const id = event.target.closest('[data-resource-id]')?.dataset.resourceId;
-    if (id) this.app?.openLocalResource?.(this.items.find((item) => item.id === id));
+    const filter = event.target.closest('[data-library-filter]')?.dataset.libraryFilter;
+    if (filter) {
+      this.typeFilter = filter;
+      this.update();
+    }
   }
 
   async load(method) {
@@ -60,6 +73,8 @@ export class LibraryPage {
     try {
       const result = await this.library[method]();
       this.items = result?.items ?? this.library.items ?? [];
+      this.catalog = result?.catalog ?? this.library.catalog ?? buildCourseCatalog(this.items);
+      this.reconcileSelection();
       this.state = this.items.length ? 'ready' : 'empty';
     } catch (error) {
       if (error?.name === 'AbortError') this.state = previousState;
@@ -76,51 +91,146 @@ export class LibraryPage {
     this.session = null;
     await this.library.reset();
     this.items = [];
+    this.catalog = buildCourseCatalog([]);
+    this.selectedNodeId = null;
+    this.expandedNodeIds = new Set();
     this.state = 'disconnected';
     this.update();
   }
 
   update() {
-    this.element.innerHTML = `
-      <header class="page-header">
-        <h1>Biblioteca local</h1>
-        <p>Seus materiais permanecem na pasta escolhida neste dispositivo.</p>
-      </header>
-      <div class="library-content">${this.content()}</div>
-    `;
+    this.element.replaceChildren();
+    const header = document.createElement('header');
+    header.className = 'page-header';
+    const title = document.createElement('h1');
+    title.textContent = 'Biblioteca local';
+    const description = document.createElement('p');
+    description.textContent = 'Seus materiais permanecem na pasta escolhida neste dispositivo.';
+    header.append(title, description);
+    const content = document.createElement('div');
+    content.className = 'library-content';
+    content.appendChild(this.content());
+    this.element.append(header, content);
   }
 
   content() {
-    if (this.state === 'scanning') return '<p class="library-state" role="status">Atualizando biblioteca…</p>';
+    if (this.state === 'scanning') return message('Atualizando biblioteca…', { status: true });
     if (this.state === 'disconnected') return this.stateCard('Conectar pasta de estudos', 'Escolha uma pasta para listar materiais locais.', 'Conectar pasta');
     if (this.state === 'revoked') return this.stateCard('Permissão revogada', 'Reconecte a pasta para continuar acessando seus materiais.', 'Reconectar');
     if (this.state === 'unavailable') return this.stateCard('Biblioteca indisponível', 'Não foi possível acessar a biblioteca local neste momento.', 'Tentar novamente');
-    if (this.state === 'empty') return `${this.controls()}<p class="library-state">Nenhum material compatível foi encontrado nesta pasta.</p>`;
-    return `${this.controls()}<div class="library-groups">${this.groups()}</div>`;
+    const wrapper = document.createElement('div');
+    wrapper.className = 'library-ready';
+    wrapper.appendChild(this.controls());
+    if (this.state === 'empty') {
+      wrapper.appendChild(message('Nenhum material compatível foi encontrado nesta pasta.'));
+      return wrapper;
+    }
+    wrapper.appendChild(this.libraryLayout());
+    return wrapper;
   }
 
   stateCard(title, description, label) {
-    return `<div class="library-state library-state-card"><h2>${title}</h2><p>${description}</p><button class="btn btn-primary" data-action="connect">${label}</button></div>`;
+    const card = document.createElement('div');
+    card.className = 'library-state library-state-card';
+    const heading = document.createElement('h2');
+    heading.textContent = title;
+    const copy = document.createElement('p');
+    copy.textContent = description;
+    const button = document.createElement('button');
+    button.className = 'btn btn-primary';
+    button.dataset.action = 'connect';
+    button.textContent = label;
+    card.append(heading, copy, button);
+    return card;
   }
 
   controls() {
-    return '<div class="library-controls"><span>Biblioteca conectada</span><div class="library-control-actions"><button class="btn btn-secondary" data-action="change-folder">Trocar pasta</button><button class="btn btn-secondary" data-action="refresh">Atualizar</button><button class="btn btn-ghost" data-action="reset-library">Resetar biblioteca</button></div></div>';
+    const controls = document.createElement('div');
+    controls.className = 'library-controls';
+    const status = document.createElement('span');
+    status.textContent = 'Biblioteca conectada';
+    const actions = document.createElement('div');
+    actions.className = 'library-control-actions';
+    for (const [action, label, className] of [
+      ['change-folder', 'Trocar pasta', 'btn btn-secondary'],
+      ['refresh', 'Atualizar', 'btn btn-secondary'],
+      ['reset-library', 'Resetar biblioteca', 'btn btn-ghost']
+    ]) {
+      const button = document.createElement('button');
+      button.className = className;
+      button.dataset.action = action;
+      button.textContent = label;
+      actions.appendChild(button);
+    }
+    controls.append(status, actions);
+    return controls;
   }
 
-  groups() {
-    const groups = new Map();
-    for (const item of this.items) {
-      const area = item.area || 'Sem área';
-      const collection = item.collection || 'Sem coleção';
-      const key = `${area}\u0000${collection}`;
-      if (!groups.has(key)) groups.set(key, { area, collection, items: [] });
-      groups.get(key).items.push(item);
+  libraryLayout() {
+    const layout = document.createElement('div');
+    layout.className = 'course-library-layout';
+    const tree = new CourseTree({
+      courses: this.catalog.courses,
+      selectedNodeId: this.selectedNodeId,
+      expandedNodeIds: this.expandedNodeIds,
+      onSelect: (id) => this.selectNode(id),
+      onToggle: (id, expanded) => this.toggleNode(id, expanded)
+    });
+    layout.appendChild(tree.render());
+    layout.appendChild(this.selectedModuleContent());
+    return layout;
+  }
+
+  selectedModuleContent() {
+    const content = document.createElement('section');
+    content.className = 'course-library-selection';
+    const selected = findNode(this.catalog.courses, this.selectedNodeId);
+    const heading = document.createElement('h2');
+    heading.textContent = selected ? `${selected.course.title} / ${selected.node.title}` : 'Conteúdos';
+    const filters = document.createElement('div');
+    filters.className = 'library-type-filters';
+    filters.setAttribute('aria-label', 'Filtrar materiais');
+    for (const [filter, label] of [['all', 'Todos'], ['video', 'Vídeos'], ['audio', 'Áudios'], ['pdf', 'PDFs']]) {
+      const button = document.createElement('button');
+      button.type = 'button';
+      button.className = 'btn btn-secondary library-type-filter';
+      button.dataset.libraryFilter = filter;
+      button.setAttribute('aria-pressed', String(this.typeFilter === filter));
+      button.textContent = label;
+      filters.appendChild(button);
     }
-    return [...groups.values()].map(({ area, collection, items }) => `
-      <section class="library-group"><h2>${escape(area)}</h2><h3>${escape(collection)}</h3>
-        <div class="library-items">${items.map((item) => `<button class="library-item" data-resource-id="${escape(item.id)}"><span>${escape(item.title)}</span><small>${escape(item.resourceType)}</small></button>`).join('')}</div>
-      </section>
-    `).join('');
+    const cards = document.createElement('div');
+    cards.className = 'lesson-card-grid';
+    const entries = selected ? filteredEntries(selected.node, this.typeFilter) : [];
+    for (const lesson of entries.lessons || []) cards.appendChild(renderLessonCard({ lesson, onOpenId: (id) => this.openResource(id) }));
+    for (const material of entries.materials || []) cards.appendChild(renderMaterialCard({ item: material, onOpenId: (id) => this.openResource(id) }));
+    content.append(heading, filters);
+    if (cards.childElementCount) content.appendChild(cards);
+    else content.appendChild(message(`Não há ${filterLabel(this.typeFilter)} neste módulo. Escolha outro filtro para ver os demais materiais.`));
+    return content;
+  }
+
+  selectNode(id) {
+    const selected = findNode(this.catalog.courses, id);
+    if (!selected) return;
+    this.selectedNodeId = selected.node ? id : firstModuleId(selected.course.modules);
+    this.update();
+  }
+
+  toggleNode(id, expanded) {
+    if (expanded) this.expandedNodeIds.add(id);
+    else this.expandedNodeIds.delete(id);
+  }
+
+  openResource(id) {
+    const item = this.items.find((candidate) => candidate.id === id);
+    if (item) this.app?.openLocalResource?.(item);
+  }
+
+  reconcileSelection() {
+    const selected = findNode(this.catalog.courses, this.selectedNodeId);
+    if (!selected?.node) this.selectedNodeId = firstModuleId(this.catalog.courses);
+    this.expandedNodeIds = expandedNodeIds(this.catalog.courses, this.expandedNodeIds);
   }
 
   destroy() {
@@ -130,6 +240,67 @@ export class LibraryPage {
   }
 }
 
-function escape(value) {
-  return String(value).replace(/[&<>"']/g, (character) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[character]);
+function message(text, { status = false } = {}) {
+  const element = document.createElement('p');
+  element.className = 'library-state';
+  if (status) element.setAttribute('role', 'status');
+  element.textContent = text;
+  return element;
+}
+
+function expandedNodeIds(courses, previous = new Set()) {
+  const ids = new Set(previous);
+  for (const course of courses) {
+    ids.add(course.id);
+    addModuleIds(course.modules, ids);
+  }
+  return ids;
+}
+
+function addModuleIds(modules, ids) {
+  for (const module of modules) {
+    ids.add(module.id);
+    addModuleIds(module.children || [], ids);
+  }
+}
+
+function firstModuleId(courses) {
+  for (const course of courses || []) {
+    const id = firstModuleId(course.modules);
+    if (id) return id;
+  }
+  for (const module of courses || []) {
+    if (module.lessons?.length || module.materials?.length) return module.id;
+    const id = firstModuleId(module.children);
+    if (id) return id;
+  }
+  return null;
+}
+
+function findNode(courses, id) {
+  for (const course of courses || []) {
+    if (course.id === id) return { course };
+    const node = findModule(course.modules, id);
+    if (node) return { course, node };
+  }
+  return null;
+}
+
+function findModule(modules, id) {
+  for (const module of modules || []) {
+    if (module.id === id) return module;
+    const found = findModule(module.children, id);
+    if (found) return found;
+  }
+  return null;
+}
+
+function filteredEntries(module, type) {
+  const lessons = (module.lessons || []).filter((lesson) => type === 'all' || lesson[type]);
+  const materials = type === 'all' || type === 'pdf' ? module.materials || [] : [];
+  return { lessons, materials };
+}
+
+function filterLabel(type) {
+  return ({ all: 'materiais', video: 'vídeos', audio: 'áudios', pdf: 'PDFs' })[type] || 'materiais';
 }
