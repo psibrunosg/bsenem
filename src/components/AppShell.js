@@ -10,7 +10,9 @@ export class AppShell {
     this.sidebarMobileOpen = false;
     this.miniPlayerHidden = false;
     this.currentRoute = 'dashboard';
-    this.user = options.user ?? { name: 'Estudante', email: 'estudante@email.com', level: 1, xp: 0, xpMax: 1000, streak: 0 };
+    if (!options.user?.id) throw new Error('Authenticated user is required.');
+    this.user = options.user;
+    this.onLogout = options.onLogout ?? (() => {});
     this.subjects = options.subjects ?? [];
     this.libraryService = options.libraryService ?? null;
     this.pendingLocalResource = null;
@@ -254,15 +256,7 @@ export class AppShell {
 
   // Search
   async handleSearch(query, callback) {
-    // This would typically call an API
-    // For now, return mock results
-    const mockResults = [
-      { id: '1', title: 'Matemática - Funções Quadráticas', category: 'Videoaulas', icon: 'play-circle', route: 'video', meta: '45 min • Matemática' },
-      { id: '2', title: 'Flashcards - Biologia Celular', category: 'Flashcards', icon: 'card-stack', route: 'flashcards', meta: '50 cards • Biologia' },
-      { id: '3', title: 'Simulado ENEM 2023', category: 'Simulados', icon: 'clipboard-check', route: 'exams', meta: '180 questões • Misto' }
-    ].filter(r => r.title.toLowerCase().includes(query.toLowerCase()) || r.meta.toLowerCase().includes(query.toLowerCase()));
-    
-    callback(mockResults);
+    callback([]);
   }
 
   // User menu actions
@@ -284,6 +278,12 @@ export class AppShell {
         this.logout();
         break;
     }
+  }
+
+  async logout() {
+    await api.post('/auth/logout').catch(() => null);
+    this.destroy();
+    this.onLogout();
   }
 
   showShortcutsHelp() {

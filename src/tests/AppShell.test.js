@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import { AppShell } from '../components/AppShell.js';
 import { Sidebar } from '../components/Sidebar.js';
+const user = { id: 1, name: 'Teste', email: 'teste@example.test', level: 1, xp: 0, xpMax: 1000, streak: 0 };
 
 class DashboardRoute {
   async render() {
@@ -13,7 +14,7 @@ class DashboardRoute {
 
 describe('AppShell', () => {
   it('returns a promise that resolves after the requested initial route is mounted', async () => {
-    const app = new AppShell();
+    const app = new AppShell({ user });
     const element = app.render();
     app.registerRoute('dashboard', DashboardRoute);
 
@@ -29,7 +30,7 @@ describe('AppShell', () => {
 
 describe('Sidebar', () => {
   it('does not expose routes without an implemented page', () => {
-    const sidebar = new Sidebar();
+    const sidebar = new Sidebar({ user });
     const routes = [...sidebar.render().querySelectorAll('[data-route]')].map((item) => item.dataset.route);
 
     expect(routes).not.toContain('study');
@@ -39,7 +40,7 @@ describe('Sidebar', () => {
   });
 
   it('registers Biblioteca local as an implemented route', () => {
-    const routes = [...new Sidebar().render().querySelectorAll('[data-route]')].map((item) => item.dataset.route);
+    const routes = [...new Sidebar({ user }).render().querySelectorAll('[data-route]')].map((item) => item.dataset.route);
 
     expect(routes).toContain('library');
   });
@@ -47,7 +48,7 @@ describe('Sidebar', () => {
 
 describe('local resource bridge', () => {
   it('keeps a selected resource in memory until its matching player consumes it', () => {
-    const app = new AppShell();
+    const app = new AppShell({ user });
     app.render();
     const video = { id: 'video-1', resourceType: 'video' };
 
@@ -61,7 +62,7 @@ describe('local resource bridge', () => {
 
   it('destroys the active local-media route before mounting another route', async () => {
     const revokeObjectURL = vi.fn();
-    const app = new AppShell();
+    const app = new AppShell({ user });
     const oldRoute = { render: vi.fn(() => document.createElement('section')), destroy: vi.fn(() => revokeObjectURL('blob:local')) };
     class MediaRoute { constructor() { return oldRoute; } }
     class NextRoute { render() { return document.createElement('section'); } }

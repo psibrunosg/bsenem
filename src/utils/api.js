@@ -3,37 +3,14 @@ const API_BASE = '/api'; // Handled by PHP built-in server or Apache/Nginx
 
 export const api = {
   async request(endpoint, options = {}) {
-    const token = localStorage.getItem('token');
-    
-    const headers = {
-      'Content-Type': 'application/json',
-      ...options.headers,
-    };
-    
-    if (token) {
-      headers['Authorization'] = `Bearer ${token}`;
-    }
-    
     const url = endpoint.startsWith('http') ? endpoint : `${API_BASE}${endpoint}`;
-    
     const response = await fetch(url, {
       ...options,
-      headers
+      credentials: 'same-origin',
+      headers: { 'Content-Type': 'application/json', ...options.headers }
     });
-    
-    if (response.status === 401) {
-      // Token expired or invalid
-      localStorage.removeItem('token');
-      window.location.hash = '#login';
-      return { success: false, error: 'Unauthorized' };
-    }
-    
-    try {
-      return await response.json();
-    } catch (e) {
-      if (response.ok) return { success: true };
-      throw e;
-    }
+    const payload = await response.json().catch(() => ({}));
+    return { ...payload, status: response.status };
   },
   
   get(endpoint, options = {}) {

@@ -6,7 +6,8 @@ export class Sidebar {
     this.onNavigate = options.onNavigate ?? (() => {});
     this.onToggleCollapse = options.onToggleCollapse ?? (() => {});
     this.currentRoute = options.currentRoute ?? 'dashboard';
-    this.user = options.user ?? { name: 'Estudante', level: 1, xp: 0, xpMax: 1000, streak: 0 };
+    if (!options.user?.id) throw new Error('Authenticated user is required.');
+    this.user = options.user;
     this.subjects = options.subjects ?? [];
     this.element = null;
     this.overlay = null;

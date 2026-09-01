@@ -7,7 +7,8 @@ export class Header {
     this.onUserMenuAction = options.onUserMenuAction ?? (() => {});
     this.onCommandPalette = options.onCommandPalette ?? (() => {});
     this.onPomodoroComplete = options.onPomodoroComplete ?? (() => {});
-    this.user = options.user ?? { name: 'Estudante', email: 'estudante@email.com', avatar: null };
+    if (!options.user?.id) throw new Error('Authenticated user is required.');
+    this.user = options.user;
     this.searchResults = options.searchResults ?? [];
     this.showCommandPalette = false;
     this.showUserMenu = false;
