@@ -18,20 +18,26 @@
     { "command": "npm test -- courseCatalog.test.js", "exit_code": 1 },
     { "command": "npm test -- courseCatalog.test.js LocalLibraryService.test.js", "exit_code": 0 },
     { "command": "npm test", "exit_code": 0 },
+    { "command": "npm test -- courseCatalog.test.js LocalLibraryService.test.js", "exit_code": 1 },
+    { "command": "npm test -- courseCatalog.test.js LocalLibraryService.test.js", "exit_code": 0 },
+    { "command": "npm test", "exit_code": 0 },
     { "command": "git diff --check", "exit_code": 0 },
     { "command": "git rev-parse HEAD", "exit_code": 0 }
   ],
   "positive_tests": [
     "Typed folders collapse into course and module nodes.",
     "Same-stem video and audio pair within one module.",
+    "Case-only raw stem differences remain separate lessons in one module.",
     "Raw scanner facts are frozen and catalog remains in memory.",
-    "Targeted scanner and catalog suite passed with 16 tests.",
-    "Full frontend suite passed with 60 tests."
+    "No-handle restore and refresh return an empty catalog.",
+    "Targeted scanner and catalog suite passed with 18 tests.",
+    "Full frontend suite passed with 62 tests."
   ],
   "negative_tests": [
     "Initial catalog import failed before the module existed.",
     "Code-only title falls back to a neutral label.",
     "Media with a common stem in separate modules do not pair.",
+    "Media with raw stems that differ only by case do not pair.",
     "No recomputable catalog entry is written to IndexedDB."
   ],
   "findings": [
@@ -45,9 +51,9 @@
     }
   ],
   "evidence": [
-    "Base and head SHA are both 40ce80e5705efa19e5d8a78beddca5933f3cc5a7 because no commit was created.",
-    "Focused suite passed after the final correction: 2 files and 16 tests.",
-    "Full suite passed: 15 files and 60 tests."
+    "The arbiter commits after implementer work, so base and head SHA remain identical by role design.",
+    "Focused suite passed after fix round 1: 2 files and 18 tests.",
+    "Full suite passed after fix round 1: 15 files and 62 tests."
   ],
   "remaining_risks": [
     "The pure item interface does not supply a selected-root label, so a typed-root-only library uses a neutral course title."

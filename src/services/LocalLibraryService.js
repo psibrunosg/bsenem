@@ -14,6 +14,7 @@ export class LocalLibraryService {
     this.createId = createId;
     this.items = [];
     this.diagnostics = [];
+    this.catalog = buildCourseCatalog([]);
     this.fileHandles = new Map();
     this.objectUrls = new Map();
   }

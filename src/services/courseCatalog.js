@@ -38,7 +38,7 @@ export function buildCourseCatalog(items) {
 
     if (item.resourceType === 'video' || item.resourceType === 'audio') {
       const stem = rawStem(item);
-      const lessonKey = `${course.id}\u0000${module.id}\u0000${fold(stem)}`;
+      const lessonKey = `${course.id}\u0000${module.id}\u0000${stem}`;
       let lesson = lessons.get(lessonKey);
       if (!lesson) {
         lesson = {
@@ -147,10 +147,6 @@ function displayItem(item) {
 
 function rawStem(item) {
   return String(item.rawTitle ?? item.title ?? '');
-}
-
-function fold(value) {
-  return String(value).normalize('NFC').toLocaleLowerCase('und');
 }
 
 function escapePath(segments) {

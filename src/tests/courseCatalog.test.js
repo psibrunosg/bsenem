@@ -35,4 +35,17 @@ describe('courseCatalog', () => {
 
     expect(catalog.lessons.size).toBe(2);
   });
+
+  it('does not pair media whose raw stems differ only by case', () => {
+    const catalog = buildCourseCatalog([
+      item('video-one', ['Curso', 'Módulo', 'Vídeos'], 'Aula', 'video'),
+      item('audio-two', ['Curso', 'Módulo', 'Áudios'], 'aula', 'audio')
+    ]);
+
+    expect(catalog.lessons.size).toBe(2);
+    expect(catalog.courses[0].modules[0].lessons).toEqual(expect.arrayContaining([
+      expect.objectContaining({ video: expect.objectContaining({ id: 'video-one' }), audio: null }),
+      expect.objectContaining({ video: null, audio: expect.objectContaining({ id: 'audio-two' }) })
+    ]));
+  });
 });

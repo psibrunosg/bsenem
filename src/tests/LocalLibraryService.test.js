@@ -128,6 +128,11 @@ describe('LocalLibraryService', () => {
     expect(service.catalog).toBe(result.catalog);
   });
 
+  it('returns an empty catalog when restore or refresh has no connected handle', async () => {
+    await expect(service.restore()).resolves.toMatchObject({ catalog: { courses: [] } });
+    await expect(service.refresh()).resolves.toMatchObject({ catalog: { courses: [] } });
+  });
+
   it('resets only the local library connection and catalog', async () => {
     await service.refresh(fakeDirectory({ Area: directory({ 'Aula.pdf': file('application/pdf') }) }));
 
