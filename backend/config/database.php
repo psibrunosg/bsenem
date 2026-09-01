@@ -83,14 +83,12 @@ class Database {
         $sql = "UPDATE {$table} SET {$set} WHERE {$where}";
         $params = array_merge(array_values($data), $whereParams);
         
-        $this->query($sql, $params);
-        return $this->pdo->rowCount();
+        return $this->query($sql, $params)->rowCount();
     }
 
     public function delete($table, $where, $params = []) {
         $sql = "DELETE FROM {$table} WHERE {$where}";
-        $this->query($sql, $params);
-        return $this->pdo->rowCount();
+        return $this->query($sql, $params)->rowCount();
     }
 }
 

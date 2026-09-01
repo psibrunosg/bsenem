@@ -58,6 +58,9 @@ match(true) {
     $resource === 'auth' && $id === 'login' && $method === 'POST'
         => AuthController::login(),
 
+    $resource === 'auth' && $id === 'logout' && $method === 'POST'
+        => AuthController::logout(),
+
     $resource === 'auth' && $id === 'me' && $method === 'GET'
         => AuthController::me(),
 

@@ -1,94 +1,98 @@
 <?php
-// backend/middleware/auth.php
+
+declare(strict_types=1);
 
 require_once __DIR__ . '/../config/database.php';
 require_once __DIR__ . '/../config/response.php';
 
 class Auth {
-    public static function generateToken($userId) {
-        $payload = [
-            'user_id' => $userId,
-            'iat' => time(),
-            'exp' => time() + (7 * 24 * 60 * 60) // 7 days
-        ];
-        
-        $payloadEncoded = self::base64UrlEncode(json_encode($payload, JSON_THROW_ON_ERROR));
-        $signature = hash_hmac('sha256', $payloadEncoded, self::secret(), true);
+    private const SESSION_COOKIE = 'bsenem_session';
+    private const SESSION_LIFETIME = 604800;
 
-        return $payloadEncoded . '.' . self::base64UrlEncode($signature);
-    }
-    
-    public static function verifyToken($token) {
-        if (!$token) return null;
-        
-        $parts = explode('.', $token);
-        if (count($parts) !== 2) return null;
-        
-        [$payloadEncoded, $signature] = $parts;
-        // Verify signature
-        $expectedSignature = self::base64UrlEncode(
-            hash_hmac('sha256', $payloadEncoded, self::secret(), true)
+    public static function createSession(int $userId): string {
+        $token = bin2hex(random_bytes(32));
+        $expiresAt = date('Y-m-d H:i:s', time() + self::SESSION_LIFETIME);
+
+        Database::getInstance()->query(
+            'INSERT INTO auth_sessions (user_id, token_hash, expires_at) VALUES (?, ?, ?)',
+            [$userId, hash('sha256', $token), $expiresAt]
         );
-        
-        if (!hash_equals($expectedSignature, $signature)) {
-            return null;
-        }
 
-        $decodedPayload = self::base64UrlDecode($payloadEncoded);
-        if ($decodedPayload === false) return null;
-
-        $payload = json_decode($decodedPayload, true);
-        if (!is_array($payload) || !isset($payload['user_id'], $payload['exp'])) return null;
-
-        // Check expiration
-        if ($payload['exp'] < time()) {
-            return null;
-        }
-        
-        return $payload['user_id'] ?? null;
+        return $token;
     }
-    
-    public static function requireAuth() {
+
+    public static function findUserIdByToken(?string $token): ?int {
+        if (!is_string($token) || !preg_match('/^[a-f0-9]{64}$/D', $token)) {
+            return null;
+        }
+
+        $userId = Database::getInstance()->fetch(
+            'SELECT user_id FROM auth_sessions WHERE token_hash = ? AND expires_at > CURRENT_TIMESTAMP',
+            [hash('sha256', $token)]
+        )['user_id'] ?? null;
+
+        return $userId === null ? null : (int) $userId;
+    }
+
+    public static function revokeToken(?string $token): void {
+        if (!is_string($token) || $token === '') {
+            return;
+        }
+
+        Database::getInstance()->query(
+            'DELETE FROM auth_sessions WHERE token_hash = ?',
+            [hash('sha256', $token)]
+        );
+    }
+
+    public static function revokeCurrentSession(): void {
+        self::revokeToken($_COOKIE[self::SESSION_COOKIE] ?? null);
+    }
+
+    public static function setSessionCookie(string $token): void {
+        setcookie(self::SESSION_COOKIE, $token, [
+            'expires' => time() + self::SESSION_LIFETIME,
+            'path' => '/',
+            'secure' => getenv('APP_ENV') === 'production',
+            'httponly' => true,
+            'samesite' => 'Lax',
+        ]);
+    }
+
+    public static function clearSessionCookie(): void {
+        setcookie(self::SESSION_COOKIE, '', [
+            'expires' => time() - 3600,
+            'path' => '/',
+            'secure' => getenv('APP_ENV') === 'production',
+            'httponly' => true,
+            'samesite' => 'Lax',
+        ]);
+    }
+
+    public static function requireAuth(): int {
         $userId = self::getUserId();
-        if (!$userId) {
+        if ($userId === null) {
             Response::unauthorized('Authentication required');
         }
+
         return $userId;
     }
-    
-    public static function getUserId() {
-        $headers = getallheaders();
-        $authHeader = $headers['Authorization'] ?? $headers['authorization'] ?? '';
-        
-        if (preg_match('/Bearer\s+(.+)$/i', $authHeader, $matches)) {
-            return self::verifyToken($matches[1]);
+
+    public static function getUserId(): ?int {
+        return self::findUserIdByToken($_COOKIE[self::SESSION_COOKIE] ?? null);
+    }
+
+    public static function hashPassword(string $password): string {
+        $algorithm = defined('PASSWORD_ARGON2ID') ? PASSWORD_ARGON2ID : PASSWORD_DEFAULT;
+        $hash = password_hash($password, $algorithm);
+        if ($hash === false) {
+            throw new RuntimeException('Unable to hash password.');
         }
-        
-        return null;
+
+        return $hash;
     }
-    
-    public static function hashPassword($password) {
-        return password_hash($password, PASSWORD_BCRYPT);
-    }
-    
-    public static function verifyPassword($password, $hash) {
+
+    public static function verifyPassword(string $password, string $hash): bool {
         return password_verify($password, $hash);
-    }
-
-    private static function secret() {
-        $secret = getenv('APP_TOKEN_SECRET');
-        if (!is_string($secret) || strlen($secret) < 32) {
-            throw new RuntimeException('Authentication is not configured');
-        }
-
-        return $secret;
-    }
-    
-    private static function base64UrlEncode($data) {
-        return rtrim(strtr(base64_encode($data), '+/', '-_'), '=');
-    }
-    
-    private static function base64UrlDecode($data) {
-        return base64_decode(strtr($data, '-_', '+/'));
     }
 }

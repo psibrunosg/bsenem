@@ -1,5 +1,6 @@
 <?php
 
+require_once __DIR__ . '/../config/database.php';
 require_once __DIR__ . '/../middleware/auth.php';
 
 function expectTrue($condition, $message) {
@@ -9,18 +10,37 @@ function expectTrue($condition, $message) {
     }
 }
 
-putenv('APP_TOKEN_SECRET=');
-
-try {
-    Auth::generateToken(7);
-    expectTrue(false, 'Authentication must fail closed without APP_TOKEN_SECRET');
-} catch (RuntimeException $exception) {
-    expectTrue(true, 'Missing secret is rejected');
+$path = tempnam(sys_get_temp_dir(), 'bsenem-auth-test-');
+if ($path === false) {
+    throw new RuntimeException('Unable to create isolated test database.');
 }
 
-putenv('APP_TOKEN_SECRET=test-secret-0123456789-0123456789-0123456789');
-$token = Auth::generateToken(7);
-expectTrue(Auth::verifyToken($token) === 7, 'A generated token must verify for its user');
-expectTrue(Auth::verifyToken($token . 'x') === null, 'A modified token must be rejected');
+putenv('APP_ENV=test');
+putenv("APP_DB_PATH={$path}");
+
+try {
+    Database::resetForTests();
+    $pdo = Database::getInstance()->getConnection();
+    $pdo->prepare('INSERT INTO users (name, email, password_hash) VALUES (?, ?, ?)')->execute([
+        'Auth test user',
+        'auth@example.test',
+        str_repeat('x', 60),
+    ]);
+
+    $userId = (int) $pdo->lastInsertId();
+    $token = Auth::createSession($userId);
+    expectTrue(strlen($token) === 64, 'Session token is opaque');
+    expectTrue(Auth::findUserIdByToken($token) === $userId, 'Stored session resolves user');
+    expectTrue(Auth::findUserIdByToken($token . 'x') === null, 'Changed session is rejected');
+} finally {
+    unset($pdo);
+    Database::resetForTests();
+    gc_collect_cycles();
+    foreach ([$path, "{$path}-wal", "{$path}-shm"] as $databaseFile) {
+        if (is_file($databaseFile)) {
+            unlink($databaseFile);
+        }
+    }
+}
 
 echo "Auth tests passed" . PHP_EOL;
