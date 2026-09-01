@@ -124,6 +124,16 @@ export class LocalLibraryService {
     this.releaseObjectUrls();
   }
 
+  async reset() {
+    this.clearCatalog();
+    await Promise.all([
+      'local-library-handle',
+      'local-library-id',
+      'local-library-items',
+      'local-library-diagnostics'
+    ].map((key) => this.idb.delete(key)));
+  }
+
   async libraryId() {
     let id = await this.idb.get('local-library-id');
     if (!id) id = this.createId();

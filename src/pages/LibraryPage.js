@@ -1,10 +1,15 @@
 import { PDFViewer } from '@components/PDFViewer.js';
+import { confirmModal } from '@components/Modal.js';
 import { LocalMediaSession } from '@services/localMediaSession.js';
 
 export class LibraryPage {
   constructor(options = {}) {
     this.app = options.app;
     this.library = options.library;
+    this.confirmReset = options.confirmReset ?? (() => confirmModal(
+      'A pasta e o catálogo salvos neste navegador serão removidos. Seus arquivos originais não serão apagados.',
+      { title: 'Resetar biblioteca?', confirmText: 'Resetar biblioteca', cancelText: 'Cancelar', danger: true }
+    ));
     this.items = this.library?.items ?? [];
     this.state = !this.library ? 'unavailable' : this.items.length ? 'ready' : 'disconnected';
     this.element = null;
@@ -38,6 +43,7 @@ export class LibraryPage {
     if (action === 'connect') await this.load('connect');
     if (action === 'refresh') await this.load('refresh');
     if (action === 'change-folder') await this.load('connect');
+    if (action === 'reset-library') await this.reset();
     const id = event.target.closest('[data-resource-id]')?.dataset.resourceId;
     if (id) this.app?.openLocalResource?.(this.items.find((item) => item.id === id));
   }
@@ -59,6 +65,18 @@ export class LibraryPage {
       if (error?.name === 'AbortError') this.state = previousState;
       else this.state = error?.code === 'permission-denied' ? 'revoked' : 'unavailable';
     }
+    this.update();
+  }
+
+  async reset() {
+    if (!this.library?.reset || !(await this.confirmReset())) return;
+    this.pdfViewer?.destroy();
+    this.session?.close();
+    this.pdfViewer = null;
+    this.session = null;
+    await this.library.reset();
+    this.items = [];
+    this.state = 'disconnected';
     this.update();
   }
 
@@ -86,7 +104,7 @@ export class LibraryPage {
   }
 
   controls() {
-    return '<div class="library-controls"><span>Biblioteca conectada</span><div class="library-control-actions"><button class="btn btn-secondary" data-action="change-folder">Trocar pasta</button><button class="btn btn-secondary" data-action="refresh">Atualizar</button></div></div>';
+    return '<div class="library-controls"><span>Biblioteca conectada</span><div class="library-control-actions"><button class="btn btn-secondary" data-action="change-folder">Trocar pasta</button><button class="btn btn-secondary" data-action="refresh">Atualizar</button><button class="btn btn-ghost" data-action="reset-library">Resetar biblioteca</button></div></div>';
   }
 
   groups() {

@@ -115,4 +115,17 @@ describe('LocalLibraryService', () => {
     expect(store.set).toHaveBeenCalledWith('local-library-handle', handle);
     expect(store.set).toHaveBeenCalledWith('local-library-id', 'library-id');
   });
+
+  it('resets only the local library connection and catalog', async () => {
+    await service.refresh(fakeDirectory({ Area: directory({ 'Aula.pdf': file('application/pdf') }) }));
+
+    await service.reset();
+
+    expect(service.items).toEqual([]);
+    expect(service.diagnostics).toEqual([]);
+    expect(store.delete).toHaveBeenCalledWith('local-library-handle');
+    expect(store.delete).toHaveBeenCalledWith('local-library-id');
+    expect(store.delete).toHaveBeenCalledWith('local-library-items');
+    expect(store.delete).toHaveBeenCalledWith('local-library-diagnostics');
+  });
 });

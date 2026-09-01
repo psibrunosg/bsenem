@@ -70,6 +70,19 @@ describe('LibraryPage', () => {
     expect(library.connect).toHaveBeenCalledOnce();
   });
 
+  it('resets the browser catalog only after confirmation', async () => {
+    const library = { items: [item()], reset: vi.fn().mockResolvedValue() };
+    const confirmReset = vi.fn().mockResolvedValue(true);
+    const page = new LibraryPage({ library, confirmReset });
+    const element = await page.render();
+
+    element.querySelector('[data-action="reset-library"]').click();
+    await vi.waitFor(() => expect(library.reset).toHaveBeenCalledOnce());
+
+    expect(confirmReset).toHaveBeenCalledOnce();
+    expect(element.textContent).toContain('Conectar pasta de estudos');
+  });
+
   it('groups resources by area and collection', async () => {
     const page = new LibraryPage({ library: { items: [item(), item({ id: 'pdf-1', title: 'Resumo', resourceType: 'pdf' })] } });
     const element = await page.render();
