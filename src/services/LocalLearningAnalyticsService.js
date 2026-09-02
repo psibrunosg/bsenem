@@ -2,6 +2,7 @@ import { idb as browserIdb } from '../utils/idb.js';
 
 const SCHEMA_VERSION = 1;
 const STORAGE_MESSAGE = 'O progresso local não pôde ser salvo neste navegador. Libere espaço ou permita o armazenamento do site.';
+const storageLocks = new Map();
 
 export class LocalLearningAnalyticsService {
   constructor({ idb = browserIdb, userId, libraryId, libraryFingerprint = null, clock = () => new Date() } = {}) {
@@ -10,18 +11,17 @@ export class LocalLearningAnalyticsService {
     this.idb = idb;
     this.clock = clock;
     this.libraryFingerprint = normalizedFingerprint(libraryFingerprint);
-    this.key = `local-learning:${userId}:${libraryId}`;
+    this.scopeKey = `local-learning:${userId}:${libraryId}`;
+    this.key = `${this.scopeKey}:fingerprint:${encodeURIComponent(this.libraryFingerprint || 'unversioned')}`;
+    this.activeFingerprintKey = `${this.scopeKey}:active-fingerprint`;
     this.memoryState = emptyState(this.libraryFingerprint);
     this.memoryInitialized = false;
     this.storageAvailable = true;
     this.stateStatus = readyStatus();
-    this.operationQueue = Promise.resolve();
   }
 
   recordRange(record) {
-    const operation = this.operationQueue.then(() => this.recordRangeNow(record));
-    this.operationQueue = operation.catch(() => undefined);
-    return operation;
+    return withStorageLock(this.scopeKey, () => this.recordRangeNow(record));
   }
 
   async recordRangeNow(record) {
@@ -51,14 +51,22 @@ export class LocalLearningAnalyticsService {
   }
 
   async getSummary(now = this.clock()) {
-    await this.operationQueue;
-    return summarize(await this.readState(), now, this.stateStatus);
+    return withStorageLock(this.scopeKey, async () => summarize(await this.readState(), now, this.stateStatus));
   }
 
   async readState() {
     if (!this.storageAvailable) return this.memoryState;
     try {
       const stored = await this.idb.get(this.key);
+      if (stored === undefined) {
+        const activeFingerprint = await this.idb.get(this.activeFingerprintKey);
+        this.memoryState = emptyState(this.libraryFingerprint);
+        this.memoryInitialized = true;
+        this.stateStatus = activeFingerprint !== undefined && activeFingerprint !== this.libraryFingerprint
+          ? staleLibraryStatus()
+          : readyStatus();
+        return this.memoryState;
+      }
       if (!validState(stored)) {
         this.memoryState = emptyState(this.libraryFingerprint);
         this.memoryInitialized = true;
@@ -85,6 +93,7 @@ export class LocalLearningAnalyticsService {
     if (!this.storageAvailable) return;
     try {
       await this.idb.set(this.key, state);
+      await this.idb.set(this.activeFingerprintKey, this.libraryFingerprint);
       this.stateStatus = readyStatus();
     } catch (error) {
       this.useMemoryFallback(error);
@@ -229,9 +238,39 @@ function validState(state) {
   return state !== null
     && typeof state === 'object'
     && state.schemaVersion === SCHEMA_VERSION
+    && (state.libraryFingerprint === null || typeof state.libraryFingerprint === 'string')
     && state.lessons !== null
     && typeof state.lessons === 'object'
-    && !Array.isArray(state.lessons);
+    && !Array.isArray(state.lessons)
+    && Object.entries(state.lessons).every(([lessonId, lesson]) => validLesson(lessonId, lesson));
+}
+
+function validLesson(lessonId, lesson) {
+  return Boolean(String(lessonId).trim())
+    && lesson !== null
+    && typeof lesson === 'object'
+    && typeof lesson.courseTitle === 'string'
+    && typeof lesson.moduleTitle === 'string'
+    && Number.isFinite(lesson.durationSeconds)
+    && lesson.durationSeconds > 0
+    && Array.isArray(lesson.intervals)
+    && lesson.intervals.every((interval) => validInterval(interval, lesson.durationSeconds))
+    && Array.isArray(lesson.activity)
+    && lesson.activity.every((entry) => entry !== null
+      && typeof entry === 'object'
+      && validInterval([entry.fromSeconds, entry.toSeconds], lesson.durationSeconds)
+      && validTimestamp(entry.recordedAt) !== null)
+    && validTimestamp(lesson.lastInteractionAt) !== null;
+}
+
+function validInterval(interval, duration) {
+  return Array.isArray(interval)
+    && interval.length === 2
+    && Number.isFinite(interval[0])
+    && Number.isFinite(interval[1])
+    && interval[0] >= 0
+    && interval[1] > interval[0]
+    && interval[1] <= duration;
 }
 
 function clone(value) {
@@ -260,4 +299,16 @@ function staleSchemaStatus() {
 
 function storageUnavailableStatus() {
   return { code: 'storage-unavailable', persistent: false, message: STORAGE_MESSAGE };
+}
+
+function withStorageLock(scopeKey, operation) {
+  const lockName = `bsenem:${scopeKey}`;
+  if (globalThis.navigator?.locks?.request) return globalThis.navigator.locks.request(lockName, operation);
+  const previous = storageLocks.get(scopeKey) || Promise.resolve();
+  const current = previous.catch(() => undefined).then(operation);
+  const tail = current.catch(() => undefined);
+  storageLocks.set(scopeKey, tail);
+  return current.finally(() => {
+    if (storageLocks.get(scopeKey) === tail) storageLocks.delete(scopeKey);
+  });
 }

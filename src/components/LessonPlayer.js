@@ -3,7 +3,6 @@ import { TranscriptPanel } from '@components/TranscriptPanel.js';
 
 const MODES = new Set(['video', 'audio']);
 const MIN_RECORDED_RANGE_SECONDS = 15;
-const MAX_CONTIGUOUS_FORWARD_STEP_SECONDS = 30;
 
 export class LessonPlayer {
   constructor({ lesson, initialMode = 'video', library = null, onPlayback = null } = {}) {
@@ -21,6 +20,8 @@ export class LessonPlayer {
     this.intendedPlaying = false;
     this.lastPlaybackTime = 0;
     this.pendingPlayback = null;
+    this.seekInProgress = false;
+    this.ignoreNextTimeUpdate = false;
     this.mediaListeners = [];
     this.mediaRequestId = 0;
     this.pendingCandidate = null;
@@ -158,6 +159,10 @@ export class LessonPlayer {
       return false;
     }
 
+    if (this.media) this.captureForwardProgress();
+    if (lesson?.id === this.lesson?.id && this.media) {
+      playbackState = this.capturePlaybackState();
+    }
     const duration = Number.isFinite(media.duration) ? Math.max(0, media.duration) : null;
     const carriedTime = finiteTime(playbackState.currentTime);
     media.currentTime = duration === null ? carriedTime : Math.min(carriedTime, duration);
@@ -228,8 +233,7 @@ export class LessonPlayer {
     });
     this.element.querySelector('[data-control="seek"]').addEventListener('input', (event) => {
       if (!this.media) return;
-      this.media.currentTime = clampTime(event.currentTarget.value, this.media.duration);
-      this.media.dispatchEvent(new Event('timeupdate'));
+      this.seekTo(event.currentTarget.value);
     });
     this.element.querySelector('[data-control="volume"]').addEventListener('input', (event) => {
       if (!this.media) return;
@@ -266,6 +270,15 @@ export class LessonPlayer {
     this.listen(media, 'timeupdate', () => {
       this.syncTimeControl();
       this.captureForwardProgress();
+    });
+    this.listen(media, 'seeking', () => {
+      this.seekInProgress = true;
+      this.pendingPlayback = null;
+      this.lastPlaybackTime = finiteTime(media.currentTime);
+    });
+    this.listen(media, 'seeked', () => {
+      this.lastPlaybackTime = finiteTime(media.currentTime);
+      this.seekInProgress = false;
     });
     this.listen(media, 'volumechange', () => this.syncVolumeControls());
     this.listen(media, 'ratechange', () => this.syncRateControl());
@@ -310,7 +323,15 @@ export class LessonPlayer {
 
   seekBy(seconds) {
     if (!this.media) return;
-    this.media.currentTime = clampTime(this.media.currentTime + seconds, this.media.duration);
+    this.seekTo(this.media.currentTime + seconds);
+  }
+
+  seekTo(value) {
+    if (!this.media) return;
+    this.pendingPlayback = null;
+    this.media.currentTime = clampTime(value, this.media.duration);
+    this.lastPlaybackTime = finiteTime(this.media.currentTime);
+    this.ignoreNextTimeUpdate = true;
     this.media.dispatchEvent(new Event('timeupdate'));
   }
 
@@ -439,13 +460,13 @@ export class LessonPlayer {
     const currentTime = finiteTime(this.media.currentTime);
     const previousTime = finiteTime(this.lastPlaybackTime);
     this.lastPlaybackTime = currentTime;
-    if (!this.intendedPlaying || currentTime <= previousTime) {
-      if (currentTime !== previousTime) this.discardShortPendingRange();
+    if (this.ignoreNextTimeUpdate) {
+      this.ignoreNextTimeUpdate = false;
       return;
     }
-    const step = currentTime - previousTime;
-    if (step > MAX_CONTIGUOUS_FORWARD_STEP_SECONDS) {
-      this.discardShortPendingRange();
+    if (this.seekInProgress) return;
+    if (!this.intendedPlaying || currentTime <= previousTime) {
+      if (currentTime !== previousTime) this.discardShortPendingRange();
       return;
     }
     if (!this.pendingPlayback || this.pendingPlayback.lesson.id !== this.lesson?.id) {

@@ -3,8 +3,8 @@
   "role": "implementer",
   "runtime": "codex-desktop",
   "model_tier": "frontier",
-  "base_sha": "2f643d91910c79d687d518c3262b444cb4c40378",
-  "head_sha": "2f643d91910c79d687d518c3262b444cb4c40378",
+  "base_sha": "0c97d671ef1072b71d377caaf87b90ea8a681193",
+  "head_sha": "0c97d671ef1072b71d377caaf87b90ea8a681193",
   "verdict": "PASS",
   "files": [
     "src/services/LocalLearningAnalyticsService.js",
@@ -31,21 +31,31 @@
     { "command": "npm run build", "exit_code": 1 },
     { "command": "npm run build outside restrictive sandbox", "exit_code": 0 },
     { "command": "git diff --check", "exit_code": 0 },
-    { "command": "git rev-parse HEAD", "exit_code": 0 }
+    { "command": "git rev-parse HEAD", "exit_code": 0 },
+    { "command": "npm test -- LocalLearningAnalyticsService.test.js MediaPages.test.js -t distinct-service-instances|malformed-nested|settles-heatmap|recreates-local|forward-seek|backward-seek|latest-old-media", "exit_code": 1 },
+    { "command": "npm test -- LocalLearningAnalyticsService.test.js MediaPages.test.js -t distinct-service-instances|malformed-nested|settles-heatmap|recreates-local|forward-seek|backward-seek|latest-old-media", "exit_code": 0 },
+    { "command": "npm test -- LocalLearningAnalyticsService.test.js MediaPages.test.js", "exit_code": 0 },
+    { "command": "npm test", "exit_code": 0 },
+    { "command": "npm run build outside restrictive sandbox", "exit_code": 0 },
+    { "command": "git diff --check", "exit_code": 0 }
   ],
   "positive_tests": [
     "Overlapping and adjacent ranges merge without duplicate watched time.",
-    "Concurrent checkpoints serialize without lost writes.",
+    "Concurrent checkpoints from distinct instances serialize without lost writes through a shared lock.",
     "Authenticated user and library keys remain isolated.",
     "Stale schema and library fingerprints return empty factual summaries.",
     "Finite duration caps ranges and completion, performance, today, and recent values derive from stored facts.",
     "Quota and security failures keep current-session facts in memory and expose actionable status.",
-    "The player records only forward ranges of at least 15 seconds and rejects forward seeks.",
+    "The player records only forward ranges of at least 15 seconds and rejects explicit forward and backward seeks without a time-gap heuristic.",
+    "Delayed format replacement carries the latest actual old-media position.",
+    "Malformed nested persisted lessons, intervals, activity, and timestamps return stale-schema without throwing.",
+    "Library identity and size or modified-time fingerprint changes create a distinct analytics service and cache key.",
+    "Heatmap and dashboard account endpoints settle independently and retain the successful source.",
     "Pause, ended, lesson replacement, destroy, and format continuity preserve one logical range.",
     "Dashboard account and local sources settle independently.",
     "A deferred recorder initializes after a library folder is connected later.",
-    "Final focused suite passed with 33 tests.",
-    "Final full frontend suite passed with 99 tests.",
+    "Final focused suite passed with 38 tests.",
+    "Final full frontend suite passed with 104 tests.",
     "Production build passed with 35 transformed modules."
   ],
   "negative_tests": [
@@ -74,12 +84,16 @@
     {
       "severity": "info",
       "evidence": "Git diff check completed without whitespace errors."
+    },
+    {
+      "severity": "info",
+      "evidence": "All seven reviewer findings were reproduced before correction and passed after the focused fixes."
     }
   ],
   "evidence": [
     "Service, player, dashboard settlement, concurrency, and deferred-connection behaviors each failed before implementation and passed afterward.",
-    "Final focused tests passed: 2 files and 33 tests.",
-    "Final full frontend tests passed: 16 files and 99 tests.",
+    "Final focused tests passed: 2 files and 38 tests.",
+    "Final full frontend tests passed: 16 files and 104 tests.",
     "The final production build passed outside the restrictive sandbox.",
     "No server, migration, package, secret, deployment, commit, or publication action occurred."
   ],

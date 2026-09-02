@@ -54,25 +54,28 @@ describe('LocalLearningAnalyticsService', () => {
 
     expect((await serviceFor(idb, 'u2', 'library-a').getSummary(day)).totalMinutes).toBe(0);
     expect((await serviceFor(idb, 'u1', 'library-b').getSummary(day)).totalMinutes).toBe(0);
-    expect([...idb.values.keys()]).toEqual(['local-learning:u1:library-a']);
+    expect([...idb.values.keys()]).toContain('local-learning:u1:library-a:fingerprint:unversioned');
   });
 
-  it('serializes concurrent checkpoints so one storage write cannot erase another', async () => {
-    const service = serviceFor(memoryStore());
+  it('serializes concurrent checkpoints from distinct service instances so one write cannot erase another', async () => {
+    const idb = memoryStore();
+    const first = serviceFor(idb);
+    const second = serviceFor(idb);
 
     await Promise.all([
-      service.recordRange(range('lesson-a', 0, 60)),
-      service.recordRange(range('lesson-b', 0, 60, { moduleTitle: 'Genética' }))
+      first.recordRange(range('lesson-a', 0, 60)),
+      second.recordRange(range('lesson-b', 0, 60, { moduleTitle: 'Genética' }))
     ]);
 
-    expect((await service.getSummary(day)).totalMinutes).toBe(2);
+    expect((await first.getSummary(day)).totalMinutes).toBe(2);
   });
 
   it('stores a schema version and only opaque lesson facts, labels, durations, ranges, and timestamps', async () => {
     const idb = memoryStore();
-    await serviceFor(idb).recordRange(range('lesson-a', 0.2, 15.7));
+    const service = serviceFor(idb);
+    await service.recordRange(range('lesson-a', 0.2, 15.7));
 
-    expect(idb.values.get('local-learning:u1:library-a')).toEqual({
+    expect(idb.values.get(service.key)).toEqual({
       schemaVersion: 1,
       libraryFingerprint: null,
       lessons: {
@@ -98,6 +101,31 @@ describe('LocalLearningAnalyticsService', () => {
     expect(staleSummary.totalMinutes).toBe(0);
     expect(staleSummary.recent).toEqual([]);
     expect(staleSummary.status.code).toBe('stale-library');
+    expect([...idb.values.keys()]).toContain('local-learning:u1:library-a:fingerprint:scan-a');
+  });
+
+  it('treats malformed nested lesson and interval data as a stale schema instead of throwing', async () => {
+    const idb = memoryStore();
+    const service = serviceFor(idb);
+    idb.values.set(service.key, {
+      schemaVersion: 1,
+      libraryFingerprint: null,
+      lessons: {
+        broken: {
+          courseTitle: 'Biologia',
+          moduleTitle: 'Genética',
+          durationSeconds: 120,
+          intervals: [['not-a-number', 30]],
+          activity: [{ fromSeconds: 0, toSeconds: 20, recordedAt: 'invalid-date' }],
+          lastInteractionAt: 'invalid-date'
+        }
+      }
+    });
+
+    const summary = await service.getSummary(day);
+
+    expect(summary.totalMinutes).toBe(0);
+    expect(summary.status.code).toBe('stale-schema');
   });
 
   it('caps ranges at finite media duration and derives today and recent activity from real records', async () => {
@@ -244,10 +272,52 @@ describe('DashboardPage local analytics loading', () => {
 
     const result = await page.loadActivityData();
 
-    expect(result.account).toEqual({
+    expect(result.account).toMatchObject({
       status: 'ready',
       data: { heatmap: { '2026-09-01': 20 }, dashboard: { total_study_minutes: 20 } }
     });
     expect(result.local.status).toBe('error');
+  });
+
+  it('settles heatmap and dashboard endpoints independently and retains the successful account source', async () => {
+    vi.spyOn(api, 'get')
+      .mockRejectedValueOnce(new Error('heatmap offline'))
+      .mockResolvedValueOnce({ success: true, data: { total_study_minutes: 42 } });
+    const page = new DashboardPage({ user: { id: 'u1', name: 'Ana' }, library: null });
+
+    const result = await page.loadActivityData();
+
+    expect(result.account.status).toBe('partial');
+    expect(result.account.sources).toEqual({ heatmap: 'error', dashboard: 'ready' });
+    expect(result.account.data).toEqual({ heatmap: {}, dashboard: { total_study_minutes: 42 } });
+    expect(page.dashboardData).toEqual({ total_study_minutes: 42 });
+  });
+
+  it('recreates local analytics when library identity or media metadata changes', async () => {
+    vi.spyOn(api, 'get')
+      .mockResolvedValue({ success: true, data: {} });
+    const idb = memoryStore();
+    await idb.set('local-library-handle', { kind: 'directory' });
+    const video = { id: 'video-1', size: 10, modifiedAt: 100 };
+    const lesson = { id: 'lesson-1', video, audio: null };
+    const libraryId = vi.fn().mockResolvedValueOnce('library-a').mockResolvedValueOnce('library-a').mockResolvedValue('library-b');
+    const library = { idb, items: [video], catalog: { lessons: new Map([['lesson-1', lesson]]) }, libraryId };
+    const services = [
+      { getSummary: vi.fn().mockResolvedValue({ status: { code: 'ready' } }), recordRange: vi.fn().mockResolvedValue({ status: { code: 'ready' } }) },
+      { getSummary: vi.fn().mockResolvedValue({ status: { code: 'ready' } }), recordRange: vi.fn().mockResolvedValue({ status: { code: 'ready' } }) },
+      { getSummary: vi.fn().mockResolvedValue({ status: { code: 'ready' } }), recordRange: vi.fn().mockResolvedValue({ status: { code: 'ready' } }) }
+    ];
+    const analyticsFactory = vi.fn(() => services.shift());
+    const page = new DashboardPage({ user: { id: 'u1', name: 'Ana' }, library, analyticsFactory });
+    await page.loadActivityData();
+    const firstFingerprint = analyticsFactory.mock.calls[0][0].libraryFingerprint;
+    video.modifiedAt = 200;
+
+    await library.learningAnalytics.recordRange(range('lesson-a', 0, 15));
+    const changedFingerprint = analyticsFactory.mock.calls[1][0].libraryFingerprint;
+    await library.learningAnalytics.recordRange(range('lesson-a', 15, 30));
+
+    expect(changedFingerprint).not.toBe(firstFingerprint);
+    expect(analyticsFactory.mock.calls[2][0]).toMatchObject({ libraryId: 'library-b' });
   });
 });

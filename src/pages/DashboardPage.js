@@ -15,6 +15,7 @@ export class DashboardPage {
     this.analyticsFactory = options.analyticsFactory ?? ((serviceOptions) => new LocalLearningAnalyticsService(serviceOptions));
     this.localAnalyticsService = null;
     this.localAnalyticsFingerprint = null;
+    this.localAnalyticsLibraryId = null;
     this.localAnalyticsBridge = { recordRange: (event) => this.recordLocalRange(event) };
     
     this.heatmap = null;
@@ -38,15 +39,15 @@ export class DashboardPage {
       this.loadLocalData()
     ]);
     this.dataSources.account = accountResult.status === 'fulfilled'
-      ? { status: 'ready', data: accountResult.value }
+      ? accountResult.value
       : { status: 'error', data: null, error: accountResult.reason };
     this.dataSources.local = localResult.status === 'fulfilled'
       ? localResult.value
       : { status: 'error', data: unavailableLocalSummary('local-error') };
 
-    if (this.dataSources.account.status === 'ready') {
-      this.activityData = this.dataSources.account.data.heatmap;
-      this.dashboardData = this.dataSources.account.data.dashboard;
+    if (this.dataSources.account.status === 'ready' || this.dataSources.account.status === 'partial') {
+      if (this.dataSources.account.sources.heatmap === 'ready') this.activityData = this.dataSources.account.data.heatmap;
+      if (this.dataSources.account.sources.dashboard === 'ready') this.dashboardData = this.dataSources.account.data.dashboard;
       this.heatmap?.updateData(this.activityData);
     }
     this.localSummary = this.dataSources.local.data;
@@ -55,12 +56,24 @@ export class DashboardPage {
   }
 
   async loadAccountData() {
-    const [heatmap, dashboard] = await Promise.all([
+    const [heatmapResult, dashboardResult] = await Promise.allSettled([
       api.get('/progress/heatmap'),
       api.get('/progress/dashboard')
     ]);
-    if (!heatmap?.success || !dashboard?.success) throw new Error('Account analytics are unavailable.');
-    return { heatmap: heatmap.data ?? {}, dashboard: dashboard.data ?? {} };
+    const heatmapReady = heatmapResult.status === 'fulfilled' && heatmapResult.value?.success;
+    const dashboardReady = dashboardResult.status === 'fulfilled' && dashboardResult.value?.success;
+    const readyCount = Number(Boolean(heatmapReady)) + Number(Boolean(dashboardReady));
+    return {
+      status: readyCount === 2 ? 'ready' : readyCount === 1 ? 'partial' : 'error',
+      data: {
+        heatmap: heatmapReady ? heatmapResult.value.data ?? {} : {},
+        dashboard: dashboardReady ? dashboardResult.value.data ?? {} : {}
+      },
+      sources: {
+        heatmap: heatmapReady ? 'ready' : 'error',
+        dashboard: dashboardReady ? 'ready' : 'error'
+      }
+    };
   }
 
   async loadLocalData() {
@@ -87,7 +100,9 @@ export class DashboardPage {
     const libraryId = await this.library.libraryId();
     if (!libraryId) return null;
     const fingerprint = catalogFingerprint(this.library.catalog);
-    if (this.localAnalyticsService && this.localAnalyticsFingerprint === fingerprint) return this.localAnalyticsService;
+    if (this.localAnalyticsService
+      && this.localAnalyticsFingerprint === fingerprint
+      && this.localAnalyticsLibraryId === libraryId) return this.localAnalyticsService;
     this.localAnalyticsService = this.analyticsFactory({
       idb: this.library.idb,
       userId: this.user.id,
@@ -95,6 +110,7 @@ export class DashboardPage {
       libraryFingerprint: fingerprint
     });
     this.localAnalyticsFingerprint = fingerprint;
+    this.localAnalyticsLibraryId = libraryId;
     return this.localAnalyticsService;
   }
 
@@ -247,7 +263,7 @@ function unavailableLocalSummary(code = 'library-unavailable') {
 
 function catalogFingerprint(catalog) {
   const lessons = [...(catalog?.lessons?.values?.() || [])]
-    .map((lesson) => `${lesson.id}:${lesson.video ? 'v' : ''}${lesson.audio ? 'a' : ''}`)
+    .map((lesson) => `${lesson.id}:${mediaFingerprint(lesson.video)}:${mediaFingerprint(lesson.audio)}`)
     .sort()
     .join('|');
   let hash = 2166136261;
@@ -256,4 +272,14 @@ function catalogFingerprint(catalog) {
     hash = Math.imul(hash, 16777619);
   }
   return `catalog-v1:${(hash >>> 0).toString(16).padStart(8, '0')}`;
+}
+
+function mediaFingerprint(item) {
+  if (!item) return '-';
+  return `${item.id || ''}:${finiteMetadata(item.size)}:${finiteMetadata(item.modifiedAt)}:${item.extension || ''}`;
+}
+
+function finiteMetadata(value) {
+  const number = Number(value);
+  return Number.isFinite(number) && number >= 0 ? number : '';
 }

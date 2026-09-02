@@ -440,17 +440,35 @@ describe('LessonPlayer', () => {
     player.media.dispatchEvent(new Event('play'));
     player.media.currentTime = 5;
     player.media.dispatchEvent(new Event('timeupdate'));
-    player.media.currentTime = 70;
+    player.element.querySelector('[data-action="forward"]').click();
+    player.media.currentTime = 25;
     player.media.dispatchEvent(new Event('timeupdate'));
-    player.media.currentTime = 80;
-    player.media.dispatchEvent(new Event('timeupdate'));
-    player.media.currentTime = 90;
+    player.media.currentTime = 35;
     player.media.dispatchEvent(new Event('timeupdate'));
 
     player.media.dispatchEvent(new Event('pause'));
 
     expect(onPlayback).toHaveBeenCalledOnce();
-    expect(onPlayback.mock.calls[0][0]).toMatchObject({ fromSeconds: 70, toSeconds: 90 });
+    expect(onPlayback.mock.calls[0][0]).toMatchObject({ fromSeconds: 15, toSeconds: 35 });
+  });
+
+  it('does not count a backward seek and accepts normal progress gaps longer than thirty seconds', async () => {
+    vi.stubGlobal('URL', { createObjectURL: vi.fn(() => 'blob:video'), revokeObjectURL: vi.fn() });
+    const onPlayback = vi.fn();
+    const player = await renderPlayer(pairedLesson({ audio: null }), undefined, { onPlayback });
+    Object.defineProperty(player.media, 'paused', { configurable: true, value: false });
+    player.media.dispatchEvent(new Event('play'));
+    player.media.currentTime = 40;
+    player.media.dispatchEvent(new Event('timeupdate'));
+    expect(onPlayback.mock.calls[0][0]).toMatchObject({ fromSeconds: 0, toSeconds: 40 });
+    player.media.currentTime = 10;
+    player.media.dispatchEvent(new Event('seeking'));
+    player.media.dispatchEvent(new Event('seeked'));
+    player.media.currentTime = 25;
+    player.media.dispatchEvent(new Event('timeupdate'));
+
+    expect(onPlayback).toHaveBeenCalledTimes(2);
+    expect(onPlayback.mock.calls[1][0]).toMatchObject({ fromSeconds: 10, toSeconds: 25 });
   });
 
   it('carries a pending range across a format switch without duplicate events', async () => {
@@ -470,6 +488,36 @@ describe('LessonPlayer', () => {
 
     expect(onPlayback).toHaveBeenCalledOnce();
     expect(onPlayback.mock.calls[0][0]).toMatchObject({ lessonId: 'lesson-1', fromSeconds: 0, toSeconds: 20 });
+  });
+
+  it('uses the latest old-media position while an alternate format waits for metadata', async () => {
+    vi.stubGlobal('URL', { createObjectURL: vi.fn((file) => `blob:${file.name}`), revokeObjectURL: vi.fn() });
+    const player = await renderPlayer(pairedLesson());
+    const oldMedia = player.media;
+    Object.defineProperty(oldMedia, 'paused', { configurable: true, value: false });
+    oldMedia.dispatchEvent(new Event('play'));
+    oldMedia.currentTime = 8;
+    oldMedia.dispatchEvent(new Event('timeupdate'));
+    const nativeCreateElement = document.createElement.bind(document);
+    let audioCandidate;
+    vi.spyOn(document, 'createElement').mockImplementation((tagName, options) => {
+      const element = nativeCreateElement(tagName, options);
+      if (tagName === 'audio') audioCandidate = element;
+      return element;
+    });
+    HTMLMediaElement.prototype.load.mockImplementation(function load() {
+      if (!this.hasAttribute('src') || this.tagName === 'VIDEO') return;
+    });
+
+    const switching = player.switchMode('audio');
+    await vi.waitFor(() => expect(audioCandidate).toBeDefined());
+    oldMedia.currentTime = 18;
+    oldMedia.dispatchEvent(new Event('timeupdate'));
+    Object.defineProperty(audioCandidate, 'duration', { configurable: true, value: 120 });
+    audioCandidate.dispatchEvent(new Event('loadedmetadata'));
+    await switching;
+
+    expect(player.media.currentTime).toBe(18);
   });
 
   it('surfaces an actionable warning when the playback recorder falls back from persistent storage', async () => {
