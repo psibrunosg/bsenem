@@ -1,7 +1,13 @@
-import { describe, expect, it, vi } from 'vitest';
+import { afterEach, describe, expect, it, vi } from 'vitest';
 import { AppShell } from '../components/AppShell.js';
 import { Sidebar } from '../components/Sidebar.js';
+import { VideoPage } from '../pages/VideoPage.js';
 const user = { id: 1, name: 'Teste', email: 'teste@example.test', level: 1, xp: 0, xpMax: 1000, streak: 0 };
+
+afterEach(() => {
+  vi.unstubAllGlobals();
+  vi.restoreAllMocks();
+});
 
 class DashboardRoute {
   async render() {
@@ -102,5 +108,52 @@ describe('local resource bridge', () => {
 
     expect(oldRoute.destroy).toHaveBeenCalledOnce();
     expect(revokeObjectURL).toHaveBeenCalledWith('blob:local');
+  });
+
+  it('cancels a pending media route and ignores its late render after navigating away', async () => {
+    const revokeObjectURL = vi.fn();
+    vi.stubGlobal('URL', { createObjectURL: vi.fn(() => 'blob:pending-video'), revokeObjectURL });
+    vi.spyOn(HTMLMediaElement.prototype, 'load').mockImplementation(() => {});
+    vi.spyOn(HTMLMediaElement.prototype, 'pause').mockImplementation(() => {});
+    const video = {
+      id: 'video-pending',
+      title: 'Aula pendente',
+      resourceType: 'video',
+      extension: 'mp4',
+      handle: { getFile: vi.fn().mockResolvedValue(new File(['video'], 'pending.mp4')) }
+    };
+    const lesson = { id: 'lesson-pending', title: 'Aula pendente', courseId: 'course-1', moduleId: 'module-1', video, audio: null, transcript: null };
+    const libraryService = {
+      catalog: {
+        courses: [],
+        itemToLessonId: new Map([[video.id, lesson.id]]),
+        lessons: new Map([[lesson.id, lesson]])
+      }
+    };
+    const app = new AppShell({ user, libraryService });
+    const shell = app.render();
+    app.registerRoute('video', VideoPage);
+    app.registerRoute('dashboard', DashboardRoute);
+    const nativeCreateElement = document.createElement.bind(document);
+    let pendingMedia;
+    vi.spyOn(document, 'createElement').mockImplementation((tagName, options) => {
+      const element = nativeCreateElement(tagName, options);
+      if (tagName === 'video') pendingMedia = element;
+      return element;
+    });
+
+    app.openLocalResource(video);
+    await vi.waitFor(() => expect(pendingMedia).toBeDefined());
+    app.navigate('dashboard');
+    await vi.waitFor(() => expect(shell.querySelector('.app-content').textContent).toContain('Dashboard carregado'));
+
+    pendingMedia.dispatchEvent(new Event('loadedmetadata'));
+    await new Promise((resolve) => setTimeout(resolve, 0));
+
+    expect(pendingMedia.getAttribute('src')).toBeNull();
+    expect(revokeObjectURL).toHaveBeenCalledWith('blob:pending-video');
+    expect(shell.querySelector('.app-content').textContent).toContain('Dashboard carregado');
+    expect(shell.querySelector('.lesson-player')).toBeNull();
+    expect(app.activeRouteComponent).toBeInstanceOf(DashboardRoute);
   });
 });

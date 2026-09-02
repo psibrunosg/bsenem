@@ -3,8 +3,8 @@
   "role": "implementer",
   "runtime": "codex-desktop",
   "model_tier": "frontier",
-  "base_sha": "80083cae053ba0c5d9ccf44151858efb5b48448d",
-  "head_sha": "80083cae053ba0c5d9ccf44151858efb5b48448d",
+  "base_sha": "a55e1f8cf6b3ee30c9541ebd9fa75be02177e8c4",
+  "head_sha": "a55e1f8cf6b3ee30c9541ebd9fa75be02177e8c4",
   "verdict": "PASS",
   "files": [
     "src/components/LessonPlayer.js",
@@ -42,6 +42,12 @@
     { "command": "npm test -- MediaPages.test.js AppShell.test.js", "exit_code": 0 },
     { "command": "npm test", "exit_code": 0 },
     { "command": "npm run build", "exit_code": 0 },
+    { "command": "git diff --check", "exit_code": 0 },
+    { "command": "npm test -- AppShell.test.js -t \"cancels a pending media route\"", "exit_code": 1 },
+    { "command": "npm test -- AppShell.test.js -t \"cancels a pending media route\"", "exit_code": 0 },
+    { "command": "npm test -- MediaPages.test.js AppShell.test.js", "exit_code": 0 },
+    { "command": "npm test", "exit_code": 0 },
+    { "command": "npm run build", "exit_code": 0 },
     { "command": "git diff --check", "exit_code": 0 }
   ],
   "positive_tests": [
@@ -54,8 +60,10 @@
     "Only the newest deferred concurrent lesson selection commits lesson, session, media, and render state.",
     "Metadata-pending candidates abort and settle when superseded or destroyed.",
     "Candidate abort detaches metadata listeners, clears media src, and revokes session URLs.",
-    "Focused suite passed with 23 tests.",
-    "Full frontend suite passed with 81 tests.",
+    "A pending media route is destroyed when a newer navigation begins.",
+    "A late obsolete media render cannot replace the newer dashboard or active route owner.",
+    "Focused suite passed with 24 tests.",
+    "Full frontend suite passed with 82 tests.",
     "Production build passed with 34 transformed modules."
   ],
   "negative_tests": [
@@ -65,7 +73,8 @@
     "The global mini-player surface and lifecycle are absent.",
     "Markup-shaped lesson titles do not create injected elements.",
     "An obsolete deferred candidate cannot replace the newest selection and closes its object URL.",
-    "A metadata event that never arrives cannot retain a superseded or destroyed candidate."
+    "A metadata event that never arrives cannot retain a superseded or destroyed candidate.",
+    "An obsolete route continuation cannot mutate shell DOM or active ownership."
   ],
   "findings": [
     {
@@ -95,6 +104,10 @@
     {
       "severity": "info",
       "evidence": "One explicitly owned pending candidate is aborted and cleaned idempotently on supersession or destruction."
+    },
+    {
+      "severity": "info",
+      "evidence": "Route request and component identity gate every post-render DOM mutation."
     }
   ],
   "evidence": [
@@ -102,8 +115,9 @@
     "A regression test failed before alternate-load rollback and passed afterward.",
     "Reviewer regression tests failed before request identity and atomic commit, then passed after the fix.",
     "Lifecycle regression tests failed before pending-candidate abort and passed after the fix.",
-    "Final focused tests passed: 2 files, 23 tests.",
-    "Final full frontend tests passed: 15 files, 81 tests.",
+    "Route-race regression failed before early ownership and request gating, then passed after the fix.",
+    "Final focused tests passed: 2 files, 24 tests.",
+    "Final full frontend tests passed: 15 files, 82 tests.",
     "The final production build passed.",
     "The arbiter commit workflow keeps base and head SHA identical before review."
   ],

@@ -39,6 +39,7 @@ export class AppShell {
     this.routes = new Map();
     this.commandPalette = null;
     this.activeRouteComponent = null;
+    this.routeRequestId = 0;
   }
 
   render() {
@@ -97,16 +98,18 @@ export class AppShell {
   navigate(route) {
     this.currentRoute = route;
     this.sidebar.setActiveRoute(route);
-    this.renderRoute(route);
+    const routePromise = this.renderRoute(route);
     
     // Close mobile sidebar on navigation
     if (this.sidebarMobileOpen) this.closeMobileSidebar();
     
     // Update URL without reload (for future router)
     window.history.pushState({ route }, '', `#${route}`);
+    return routePromise;
   }
 
   async renderRoute(route) {
+    const requestId = ++this.routeRequestId;
     this.activeRouteComponent?.destroy?.();
     this.activeRouteComponent = null;
     // Show loading
@@ -118,22 +121,27 @@ export class AppShell {
 
     const Component = this.routes.get(route);
     if (Component) {
+      let component = null;
       try {
-        const component = new Component({ 
+        component = new Component({
           app: this,
           user: this.user,
           subjects: this.subjects,
           library: this.libraryService
         });
-        
+        this.activeRouteComponent = component;
+
         // Render could be sync or async
         const renderedElement = await component.render();
-        
+        if (!this.isCurrentRouteRequest(requestId, component)) return;
+
         this.contentElement.innerHTML = '';
         this.contentElement.appendChild(renderedElement);
-        this.activeRouteComponent = component;
         if (typeof lucide !== 'undefined') lucide.createIcons();
       } catch (error) {
+        if (!this.isCurrentRouteRequest(requestId, component)) return;
+        component?.destroy?.();
+        this.activeRouteComponent = null;
         console.error('Error rendering route:', error);
         this.contentElement.innerHTML = `
           <div class="text-center py-12">
@@ -144,6 +152,7 @@ export class AppShell {
         `;
       }
     } else {
+      if (!this.isCurrentRouteRequest(requestId)) return;
       // Default fallback
       this.contentElement.innerHTML = `
         <div class="text-center py-12">
@@ -154,7 +163,14 @@ export class AppShell {
       `;
     }
     
-    if (typeof lucide !== 'undefined') lucide.createIcons();
+    if (this.isCurrentRouteRequest(requestId)) {
+      if (typeof lucide !== 'undefined') lucide.createIcons();
+    }
+  }
+
+  isCurrentRouteRequest(requestId, component = null) {
+    return requestId === this.routeRequestId
+      && (!component || component === this.activeRouteComponent);
   }
 
   getRouteTitle(route) {
@@ -377,7 +393,9 @@ export class AppShell {
 
   // Cleanup
   destroy() {
+    this.routeRequestId += 1;
     this.activeRouteComponent?.destroy?.();
+    this.activeRouteComponent = null;
     this.sidebar.destroy();
     this.header.destroy();
     if (this.element?.parentNode) this.element.parentNode.removeChild(this.element);
