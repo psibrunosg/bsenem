@@ -2,13 +2,17 @@ import { LocalMediaSession } from '@services/localMediaSession.js';
 import { TranscriptPanel } from '@components/TranscriptPanel.js';
 
 const MODES = new Set(['video', 'audio']);
+const MIN_RECORDED_RANGE_SECONDS = 15;
+const MAX_CONTIGUOUS_FORWARD_STEP_SECONDS = 30;
 
 export class LessonPlayer {
-  constructor({ lesson, initialMode = 'video', library = null, onPlayback = () => {} } = {}) {
+  constructor({ lesson, initialMode = 'video', library = null, onPlayback = null } = {}) {
     this.lesson = lesson;
     this.initialMode = initialMode;
     this.library = library;
-    this.onPlayback = onPlayback;
+    this.onPlayback = typeof onPlayback === 'function'
+      ? onPlayback
+      : (event) => this.library?.learningAnalytics?.recordRange(event);
     this.element = null;
     this.media = null;
     this.mode = null;
@@ -16,6 +20,7 @@ export class LessonPlayer {
     this.transcriptPanel = null;
     this.intendedPlaying = false;
     this.lastPlaybackTime = 0;
+    this.pendingPlayback = null;
     this.mediaListeners = [];
     this.mediaRequestId = 0;
     this.pendingCandidate = null;
@@ -158,6 +163,7 @@ export class LessonPlayer {
     media.currentTime = duration === null ? carriedTime : Math.min(carriedTime, duration);
 
     this.removeMediaListeners();
+    if (lesson?.id !== this.lesson?.id) this.flushPendingPlayback(false);
     this.releaseMedia();
     this.session?.close();
     this.lesson = lesson;
@@ -240,24 +246,26 @@ export class LessonPlayer {
   bindMedia(media) {
     this.listen(media, 'play', () => {
       this.intendedPlaying = true;
+      this.lastPlaybackTime = finiteTime(media.currentTime);
       this.setStatus('');
       this.syncPlayControl();
-      this.emitPlayback(true);
     });
     this.listen(media, 'pause', () => {
       if (this.destroyed || media !== this.media) return;
+      this.captureForwardProgress();
       this.intendedPlaying = false;
       this.syncPlayControl();
-      this.emitPlayback(false);
+      this.flushPendingPlayback(false);
     });
     this.listen(media, 'ended', () => {
+      this.captureForwardProgress();
       this.intendedPlaying = false;
       this.syncPlayControl();
-      this.emitPlayback(false);
+      this.flushPendingPlayback(false);
     });
     this.listen(media, 'timeupdate', () => {
       this.syncTimeControl();
-      this.emitPlayback(!media.paused);
+      this.captureForwardProgress();
     });
     this.listen(media, 'volumechange', () => this.syncVolumeControls());
     this.listen(media, 'ratechange', () => this.syncRateControl());
@@ -426,12 +434,83 @@ export class LessonPlayer {
     this.element.querySelector('[data-action="play"]').textContent = this.intendedPlaying && !this.media.paused ? 'Pausar' : 'Reproduzir';
   }
 
-  emitPlayback(playing) {
+  captureForwardProgress() {
     if (!this.media || this.destroyed) return;
     const currentTime = finiteTime(this.media.currentTime);
     const previousTime = finiteTime(this.lastPlaybackTime);
-    this.onPlayback({ lesson: this.lesson, mode: this.mode, previousTime, currentTime, playing: Boolean(playing) });
     this.lastPlaybackTime = currentTime;
+    if (!this.intendedPlaying || currentTime <= previousTime) {
+      if (currentTime !== previousTime) this.discardShortPendingRange();
+      return;
+    }
+    const step = currentTime - previousTime;
+    if (step > MAX_CONTIGUOUS_FORWARD_STEP_SECONDS) {
+      this.discardShortPendingRange();
+      return;
+    }
+    if (!this.pendingPlayback || this.pendingPlayback.lesson.id !== this.lesson?.id) {
+      this.pendingPlayback = {
+        lesson: this.lesson,
+        mode: this.mode,
+        fromSeconds: previousTime,
+        toSeconds: currentTime,
+        durationSeconds: finiteDuration(this.media.duration)
+      };
+    } else if (Math.abs(this.pendingPlayback.toSeconds - previousTime) <= 1) {
+      this.pendingPlayback.toSeconds = currentTime;
+      this.pendingPlayback.durationSeconds = finiteDuration(this.media.duration);
+    } else {
+      this.discardShortPendingRange();
+      this.pendingPlayback = {
+        lesson: this.lesson,
+        mode: this.mode,
+        fromSeconds: previousTime,
+        toSeconds: currentTime,
+        durationSeconds: finiteDuration(this.media.duration)
+      };
+    }
+    if (this.pendingPlayback.toSeconds - this.pendingPlayback.fromSeconds >= MIN_RECORDED_RANGE_SECONDS) {
+      this.flushPendingPlayback(true);
+    }
+  }
+
+  discardShortPendingRange() {
+    if (!this.pendingPlayback) return;
+    if (this.pendingPlayback.toSeconds - this.pendingPlayback.fromSeconds < MIN_RECORDED_RANGE_SECONDS) {
+      this.pendingPlayback = null;
+    }
+  }
+
+  flushPendingPlayback(playing) {
+    const pending = this.pendingPlayback;
+    this.pendingPlayback = null;
+    if (!pending || pending.toSeconds - pending.fromSeconds < MIN_RECORDED_RANGE_SECONDS) return;
+    const labels = lessonLabels(this.library?.catalog?.courses || [], pending.lesson);
+    const event = {
+      lesson: pending.lesson,
+      lessonId: pending.lesson.id,
+      courseTitle: labels.courseTitle,
+      moduleTitle: labels.moduleTitle,
+      mode: pending.mode,
+      previousTime: pending.fromSeconds,
+      currentTime: pending.toSeconds,
+      fromSeconds: pending.fromSeconds,
+      toSeconds: pending.toSeconds,
+      durationSeconds: pending.durationSeconds,
+      recordedAt: new Date().toISOString(),
+      playing: Boolean(playing)
+    };
+    try {
+      Promise.resolve(this.onPlayback(event))
+        .then((snapshot) => {
+          if (snapshot?.status?.persistent === false && snapshot.status.message) {
+            this.setStatus(snapshot.status.message);
+          }
+        })
+        .catch(() => this.setStatus('O progresso local não pôde ser registrado. Tente novamente.'));
+    } catch {
+      this.setStatus('O progresso local não pôde ser registrado. Tente novamente.');
+    }
   }
 
   setStatus(message) {
@@ -440,6 +519,8 @@ export class LessonPlayer {
 
   destroy() {
     if (this.destroyed) return;
+    this.captureForwardProgress();
+    this.flushPendingPlayback(false);
     this.destroyed = true;
     this.mediaRequestId += 1;
     this.cancelPendingCandidate();
@@ -459,6 +540,11 @@ function defaultPlaybackState() {
 function finiteTime(value) {
   const number = Number(value);
   return Number.isFinite(number) && number >= 0 ? number : 0;
+}
+
+function finiteDuration(value) {
+  const number = Number(value);
+  return Number.isFinite(number) && number > 0 ? number : 0;
 }
 
 function finiteVolume(value) {
@@ -523,6 +609,19 @@ function findModule(courses, moduleId) {
     if (found) return found;
   }
   return null;
+}
+
+function lessonLabels(courses, lesson) {
+  for (const course of courses) {
+    const module = findModuleIn(course.modules || [], lesson?.moduleId);
+    if (module) {
+      return {
+        courseTitle: course.title || 'Curso local',
+        moduleTitle: module.title || 'Módulo local'
+      };
+    }
+  }
+  return { courseTitle: 'Curso local', moduleTitle: 'Módulo local' };
 }
 
 function findModuleIn(modules, moduleId) {

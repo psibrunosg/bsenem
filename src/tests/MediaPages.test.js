@@ -246,6 +246,7 @@ describe('LessonPlayer', () => {
     const oldMedia = player.media;
 
     const selection = player.selectLesson(second);
+    oldMedia.dispatchEvent(new Event('play'));
     oldMedia.currentTime = 17;
     oldMedia.dispatchEvent(new Event('timeupdate'));
 
@@ -398,6 +399,112 @@ describe('LessonPlayer', () => {
     expect(player.element.querySelectorAll('.lesson-player-queue [aria-current="true"]')).toHaveLength(1);
     expect(player.element.querySelector('img')).toBeNull();
     expect(player.element.textContent).toContain('<img src=x onerror=alert(1)>');
+  });
+
+  it('flushes one factual watched range after at least fifteen forward seconds on pause', async () => {
+    vi.stubGlobal('URL', { createObjectURL: vi.fn(() => 'blob:video'), revokeObjectURL: vi.fn() });
+    const onPlayback = vi.fn();
+    const player = await renderPlayer(pairedLesson({ audio: null }), undefined, { onPlayback });
+    Object.defineProperty(player.media, 'paused', { configurable: true, value: false });
+    player.media.currentTime = 0;
+    player.media.dispatchEvent(new Event('play'));
+    player.media.currentTime = 8;
+    player.media.dispatchEvent(new Event('timeupdate'));
+    player.media.currentTime = 16;
+    player.media.dispatchEvent(new Event('timeupdate'));
+
+    player.media.dispatchEvent(new Event('pause'));
+
+    expect(onPlayback).toHaveBeenCalledOnce();
+    expect(onPlayback).toHaveBeenCalledWith({
+      lesson: expect.objectContaining({ id: 'lesson-1' }),
+      lessonId: 'lesson-1',
+      courseTitle: 'Biologia',
+      moduleTitle: 'Neurociência',
+      mode: 'video',
+      previousTime: 0,
+      currentTime: 16,
+      fromSeconds: 0,
+      toSeconds: 16,
+      durationSeconds: 120,
+      recordedAt: expect.any(String),
+      playing: true
+    });
+  });
+
+  it('does not count a forward seek as watched time', async () => {
+    vi.stubGlobal('URL', { createObjectURL: vi.fn(() => 'blob:video'), revokeObjectURL: vi.fn() });
+    const onPlayback = vi.fn();
+    const player = await renderPlayer(pairedLesson({ audio: null }), undefined, { onPlayback });
+    Object.defineProperty(player.media, 'paused', { configurable: true, value: false });
+    player.media.dispatchEvent(new Event('play'));
+    player.media.currentTime = 5;
+    player.media.dispatchEvent(new Event('timeupdate'));
+    player.media.currentTime = 70;
+    player.media.dispatchEvent(new Event('timeupdate'));
+    player.media.currentTime = 80;
+    player.media.dispatchEvent(new Event('timeupdate'));
+    player.media.currentTime = 90;
+    player.media.dispatchEvent(new Event('timeupdate'));
+
+    player.media.dispatchEvent(new Event('pause'));
+
+    expect(onPlayback).toHaveBeenCalledOnce();
+    expect(onPlayback.mock.calls[0][0]).toMatchObject({ fromSeconds: 70, toSeconds: 90 });
+  });
+
+  it('carries a pending range across a format switch without duplicate events', async () => {
+    vi.stubGlobal('URL', { createObjectURL: vi.fn((file) => `blob:${file.name}`), revokeObjectURL: vi.fn() });
+    const onPlayback = vi.fn();
+    const player = await renderPlayer(pairedLesson(), undefined, { onPlayback });
+    Object.defineProperty(player.media, 'paused', { configurable: true, value: false });
+    player.media.dispatchEvent(new Event('play'));
+    player.media.currentTime = 10;
+    player.media.dispatchEvent(new Event('timeupdate'));
+
+    await player.switchMode('audio');
+    Object.defineProperty(player.media, 'paused', { configurable: true, value: false });
+    player.media.currentTime = 20;
+    player.media.dispatchEvent(new Event('timeupdate'));
+    player.media.dispatchEvent(new Event('pause'));
+
+    expect(onPlayback).toHaveBeenCalledOnce();
+    expect(onPlayback.mock.calls[0][0]).toMatchObject({ lessonId: 'lesson-1', fromSeconds: 0, toSeconds: 20 });
+  });
+
+  it('surfaces an actionable warning when the playback recorder falls back from persistent storage', async () => {
+    vi.stubGlobal('URL', { createObjectURL: vi.fn(() => 'blob:video'), revokeObjectURL: vi.fn() });
+    const onPlayback = vi.fn().mockResolvedValue({
+      status: {
+        code: 'storage-unavailable',
+        persistent: false,
+        message: 'O progresso local não pôde ser salvo neste navegador. Libere espaço ou permita o armazenamento do site.'
+      }
+    });
+    const player = await renderPlayer(pairedLesson({ audio: null }), undefined, { onPlayback });
+    Object.defineProperty(player.media, 'paused', { configurable: true, value: false });
+    player.media.dispatchEvent(new Event('play'));
+    player.media.currentTime = 15;
+    player.media.dispatchEvent(new Event('timeupdate'));
+    player.media.dispatchEvent(new Event('pause'));
+
+    await vi.waitFor(() => expect(player.element.querySelector('.lesson-player-status').textContent).toContain('Libere espaço'));
+  });
+
+  it('records through the analytics service installed on the library when no callback is supplied', async () => {
+    vi.stubGlobal('URL', { createObjectURL: vi.fn(() => 'blob:video'), revokeObjectURL: vi.fn() });
+    const recordRange = vi.fn().mockResolvedValue({ status: { code: 'ready', persistent: true, message: '' } });
+    const lesson = pairedLesson({ audio: null });
+    const library = libraryFor([lesson]);
+    library.learningAnalytics = { recordRange };
+    const player = await renderPlayer(lesson, library);
+    Object.defineProperty(player.media, 'paused', { configurable: true, value: false });
+    player.media.dispatchEvent(new Event('play'));
+    player.media.currentTime = 15;
+    player.media.dispatchEvent(new Event('timeupdate'));
+
+    await vi.waitFor(() => expect(recordRange).toHaveBeenCalledOnce());
+    expect(recordRange.mock.calls[0][0]).toMatchObject({ lessonId: 'lesson-1', fromSeconds: 0, toSeconds: 15 });
   });
 
   it('closes the current local media session when destroyed', async () => {

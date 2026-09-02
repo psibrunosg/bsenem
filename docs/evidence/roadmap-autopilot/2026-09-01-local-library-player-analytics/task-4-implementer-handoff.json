@@ -1,0 +1,91 @@
+{
+  "task_id": "task-4-local-learning-analytics",
+  "role": "implementer",
+  "runtime": "codex-desktop",
+  "model_tier": "frontier",
+  "base_sha": "2f643d91910c79d687d518c3262b444cb4c40378",
+  "head_sha": "2f643d91910c79d687d518c3262b444cb4c40378",
+  "verdict": "PASS",
+  "files": [
+    "src/services/LocalLearningAnalyticsService.js",
+    "src/components/LessonPlayer.js",
+    "src/pages/DashboardPage.js",
+    "src/tests/LocalLearningAnalyticsService.test.js",
+    "src/tests/MediaPages.test.js",
+    ".superpowers/sdd/2026-09-01-local-library-player-analytics/task-4-report.md",
+    "docs/evidence/roadmap-autopilot/2026-09-01-local-library-player-analytics/task-4-implementer-handoff.json"
+  ],
+  "commands": [
+    { "command": "npm test -- LocalLearningAnalyticsService.test.js", "exit_code": 1 },
+    { "command": "npm test -- LocalLearningAnalyticsService.test.js", "exit_code": 0 },
+    { "command": "npm test -- MediaPages.test.js -t fifteen|forward seek|pending range|falls back", "exit_code": 1 },
+    { "command": "npm test -- MediaPages.test.js -t fifteen|forward seek|pending range|falls back|old-media", "exit_code": 0 },
+    { "command": "npm test -- LocalLearningAnalyticsService.test.js --reporter=verbose", "exit_code": 1 },
+    { "command": "npm test -- LocalLearningAnalyticsService.test.js MediaPages.test.js --reporter=verbose", "exit_code": 0 },
+    { "command": "npm test -- LocalLearningAnalyticsService.test.js MediaPages.test.js -t concurrent-checkpoints|installed-library", "exit_code": 1 },
+    { "command": "npm test -- LocalLearningAnalyticsService.test.js MediaPages.test.js -t concurrent-checkpoints|installed-library", "exit_code": 0 },
+    { "command": "npm test -- LocalLearningAnalyticsService.test.js -t deferred-recorder", "exit_code": 1 },
+    { "command": "npm test -- LocalLearningAnalyticsService.test.js -t deferred-recorder|account-APIs-fail", "exit_code": 0 },
+    { "command": "npm test -- LocalLearningAnalyticsService.test.js MediaPages.test.js", "exit_code": 0 },
+    { "command": "npm test", "exit_code": 0 },
+    { "command": "npm run build", "exit_code": 1 },
+    { "command": "npm run build outside restrictive sandbox", "exit_code": 0 },
+    { "command": "git diff --check", "exit_code": 0 },
+    { "command": "git rev-parse HEAD", "exit_code": 0 }
+  ],
+  "positive_tests": [
+    "Overlapping and adjacent ranges merge without duplicate watched time.",
+    "Concurrent checkpoints serialize without lost writes.",
+    "Authenticated user and library keys remain isolated.",
+    "Stale schema and library fingerprints return empty factual summaries.",
+    "Finite duration caps ranges and completion, performance, today, and recent values derive from stored facts.",
+    "Quota and security failures keep current-session facts in memory and expose actionable status.",
+    "The player records only forward ranges of at least 15 seconds and rejects forward seeks.",
+    "Pause, ended, lesson replacement, destroy, and format continuity preserve one logical range.",
+    "Dashboard account and local sources settle independently.",
+    "A deferred recorder initializes after a library folder is connected later.",
+    "Final focused suite passed with 33 tests.",
+    "Final full frontend suite passed with 99 tests.",
+    "Production build passed with 35 transformed modules."
+  ],
+  "negative_tests": [
+    "Another user or library cannot read the scoped analytics key.",
+    "Replayed overlaps, adjacent checkpoints, and format switches do not inflate totals.",
+    "Forward seeks and playback shorter than 15 seconds are not recorded.",
+    "A stale catalog fingerprint does not reuse prior scan analytics.",
+    "Account API failure does not erase valid local data.",
+    "Local identity failure does not erase valid account data.",
+    "No folder produces an explicit unavailable summary and does not construct the service.",
+    "Persistence denial does not claim that current-session data was saved."
+  ],
+  "findings": [
+    {
+      "severity": "info",
+      "evidence": "Binding plan clarification applied: analytics persistence uses the injected IndexedDB adapter, not localStorage."
+    },
+    {
+      "severity": "info",
+      "evidence": "Persisted analytics contain only schema/fingerprint, opaque lesson IDs, display labels, finite duration, rounded intervals, and timestamps."
+    },
+    {
+      "severity": "info",
+      "evidence": "The arbiter base and head SHA remain identical because no commit was authorized."
+    },
+    {
+      "severity": "info",
+      "evidence": "Git diff check completed without whitespace errors."
+    }
+  ],
+  "evidence": [
+    "Service, player, dashboard settlement, concurrency, and deferred-connection behaviors each failed before implementation and passed afterward.",
+    "Final focused tests passed: 2 files and 33 tests.",
+    "Final full frontend tests passed: 16 files and 99 tests.",
+    "The final production build passed outside the restrictive sandbox.",
+    "No server, migration, package, secret, deployment, commit, or publication action occurred."
+  ],
+  "remaining_risks": [
+    "Native media timing, codecs, background throttling, File System Access permissions, and real quota behavior require the later interactive browser gate.",
+    "Task 6 remains responsible for replacing legacy dashboard visual fixture rows with the factual source view model."
+  ],
+  "next_allowed_step": "review"
+}

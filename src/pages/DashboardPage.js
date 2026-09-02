@@ -3,6 +3,7 @@ import { HeatmapCalendar } from '@components/HeatmapCalendar.js';
 import { XPBar } from '@components/XPBar.js';
 import { StreakCounter } from '@components/StreakCounter.js';
 import { StatsDashboard } from '@components/StatsDashboard.js';
+import { LocalLearningAnalyticsService } from '@services/LocalLearningAnalyticsService.js';
 
 import { api } from '@utils/api.js';
 
@@ -10,6 +11,11 @@ export class DashboardPage {
   constructor(options = {}) {
     this.app = options.app;
     this.user = options.user;
+    this.library = options.library ?? null;
+    this.analyticsFactory = options.analyticsFactory ?? ((serviceOptions) => new LocalLearningAnalyticsService(serviceOptions));
+    this.localAnalyticsService = null;
+    this.localAnalyticsFingerprint = null;
+    this.localAnalyticsBridge = { recordRange: (event) => this.recordLocalRange(event) };
     
     this.heatmap = null;
     this.xpBar = null;
@@ -19,27 +25,77 @@ export class DashboardPage {
     
     this.activityData = {};
     this.dashboardData = null;
+    this.localSummary = unavailableLocalSummary();
+    this.dataSources = {
+      account: { status: 'loading', data: null },
+      local: { status: 'loading', data: null }
+    };
   }
 
   async loadActivityData() {
-    try {
-      const res = await api.get('/progress/heatmap');
-      if (res.success) {
-        this.activityData = res.data;
-        if (this.heatmap) {
-          this.heatmap.updateData(this.activityData);
-        }
-      }
-      
-      const resDash = await api.get('/progress/dashboard');
-      if (resDash.success) {
-        this.dashboardData = resDash.data;
-        // Optionally update components with real stats
-        // this.stats.updateStats(this.getUserStats());
-      }
-    } catch (e) {
-      console.error('Failed to load dashboard data', e);
+    const [accountResult, localResult] = await Promise.allSettled([
+      this.loadAccountData(),
+      this.loadLocalData()
+    ]);
+    this.dataSources.account = accountResult.status === 'fulfilled'
+      ? { status: 'ready', data: accountResult.value }
+      : { status: 'error', data: null, error: accountResult.reason };
+    this.dataSources.local = localResult.status === 'fulfilled'
+      ? localResult.value
+      : { status: 'error', data: unavailableLocalSummary('local-error') };
+
+    if (this.dataSources.account.status === 'ready') {
+      this.activityData = this.dataSources.account.data.heatmap;
+      this.dashboardData = this.dataSources.account.data.dashboard;
+      this.heatmap?.updateData(this.activityData);
     }
+    this.localSummary = this.dataSources.local.data;
+    this.stats?.updateStats(this.getUserStats());
+    return this.dataSources;
+  }
+
+  async loadAccountData() {
+    const [heatmap, dashboard] = await Promise.all([
+      api.get('/progress/heatmap'),
+      api.get('/progress/dashboard')
+    ]);
+    if (!heatmap?.success || !dashboard?.success) throw new Error('Account analytics are unavailable.');
+    return { heatmap: heatmap.data ?? {}, dashboard: dashboard.data ?? {} };
+  }
+
+  async loadLocalData() {
+    if (!this.user?.id || !this.library || typeof this.library.libraryId !== 'function') {
+      return { status: 'unavailable', data: unavailableLocalSummary() };
+    }
+    this.library.learningAnalytics = this.localAnalyticsBridge;
+    const service = await this.ensureLocalAnalyticsService();
+    if (!service) return { status: 'unavailable', data: unavailableLocalSummary() };
+    const summary = await service.getSummary();
+    const status = summary.status?.code === 'ready' ? 'ready' : 'degraded';
+    return { status, data: summary };
+  }
+
+  async recordLocalRange(event) {
+    const service = await this.ensureLocalAnalyticsService();
+    if (!service) return unavailableLocalSummary();
+    return service.recordRange(event);
+  }
+
+  async ensureLocalAnalyticsService() {
+    if (!this.user?.id || !this.library || typeof this.library.libraryId !== 'function') return null;
+    if (this.library.idb?.get && !await this.library.idb.get('local-library-handle')) return null;
+    const libraryId = await this.library.libraryId();
+    if (!libraryId) return null;
+    const fingerprint = catalogFingerprint(this.library.catalog);
+    if (this.localAnalyticsService && this.localAnalyticsFingerprint === fingerprint) return this.localAnalyticsService;
+    this.localAnalyticsService = this.analyticsFactory({
+      idb: this.library.idb,
+      userId: this.user.id,
+      libraryId,
+      libraryFingerprint: fingerprint
+    });
+    this.localAnalyticsFingerprint = fingerprint;
+    return this.localAnalyticsService;
   }
 
   render() {
@@ -174,4 +230,30 @@ export class DashboardPage {
     this.stats?.destroy();
     if (this.element?.parentNode) this.element.parentNode.removeChild(this.element);
   }
+}
+
+function unavailableLocalSummary(code = 'library-unavailable') {
+  const message = code === 'library-unavailable'
+    ? 'Dados da biblioteca estarão disponíveis após conectar uma pasta.'
+    : 'Os dados locais não puderam ser carregados. Verifique o armazenamento deste navegador.';
+  return {
+    totalMinutes: 0,
+    todayMinutes: 0,
+    performance: [],
+    recent: [],
+    status: { code, persistent: false, message }
+  };
+}
+
+function catalogFingerprint(catalog) {
+  const lessons = [...(catalog?.lessons?.values?.() || [])]
+    .map((lesson) => `${lesson.id}:${lesson.video ? 'v' : ''}${lesson.audio ? 'a' : ''}`)
+    .sort()
+    .join('|');
+  let hash = 2166136261;
+  for (let index = 0; index < lessons.length; index += 1) {
+    hash ^= lessons.charCodeAt(index);
+    hash = Math.imul(hash, 16777619);
+  }
+  return `catalog-v1:${(hash >>> 0).toString(16).padStart(8, '0')}`;
 }
