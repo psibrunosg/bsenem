@@ -43,9 +43,15 @@ function libraryFor(lessons) {
   };
 }
 
-async function renderPlayer(lesson, library = libraryFor([lesson])) {
+function deferred() {
+  let resolve;
+  const promise = new Promise((done) => { resolve = done; });
+  return { promise, resolve };
+}
+
+async function renderPlayer(lesson, library = libraryFor([lesson]), options = {}) {
   const { LessonPlayer } = await import('../components/LessonPlayer.js');
-  const player = new LessonPlayer({ lesson, initialMode: lesson.video ? 'video' : 'audio', library });
+  const player = new LessonPlayer({ lesson, initialMode: lesson.video ? 'video' : 'audio', library, ...options });
   await player.render();
   return player;
 }
@@ -220,6 +226,67 @@ describe('LessonPlayer', () => {
 
     await player.moveInQueue(-1);
     expect(player.lesson.id).toBe('lesson-1');
+  });
+
+  it('attributes old-media playback events to the active lesson while another lesson is still loading', async () => {
+    vi.stubGlobal('URL', { createObjectURL: vi.fn((file) => `blob:${file.name}`), revokeObjectURL: vi.fn() });
+    const pendingFile = deferred();
+    const first = pairedLesson({ audio: null });
+    const second = pairedLesson({
+      id: 'lesson-2',
+      title: 'Medula espinhal',
+      video: localItem('video', { id: 'video-2', handle: { getFile: vi.fn(() => pendingFile.promise) } }),
+      audio: null
+    });
+    const events = [];
+    const player = await renderPlayer(first, libraryFor([first, second]), { onPlayback: (event) => events.push(event) });
+    const oldMedia = player.media;
+
+    const selection = player.selectLesson(second);
+    oldMedia.currentTime = 17;
+    oldMedia.dispatchEvent(new Event('timeupdate'));
+
+    expect(player.lesson.id).toBe('lesson-1');
+    expect(events.at(-1).lesson.id).toBe('lesson-1');
+
+    pendingFile.resolve(new File(['lesson-2'], 'lesson-2.mp4'));
+    await selection;
+  });
+
+  it('lets only the newest concurrent lesson selection commit media and render state', async () => {
+    const revokeObjectURL = vi.fn();
+    vi.stubGlobal('URL', { createObjectURL: vi.fn((file) => `blob:${file.name}`), revokeObjectURL });
+    const fileB = deferred();
+    const fileC = deferred();
+    const lessonA = pairedLesson({ audio: null });
+    const lessonB = pairedLesson({
+      id: 'lesson-2',
+      title: 'Medula espinhal',
+      video: localItem('video', { id: 'video-2', handle: { getFile: vi.fn(() => fileB.promise) } }),
+      audio: null
+    });
+    const lessonC = pairedLesson({
+      id: 'lesson-3',
+      title: 'Cerebelo',
+      video: localItem('video', { id: 'video-3', handle: { getFile: vi.fn(() => fileC.promise) } }),
+      audio: null
+    });
+    const player = await renderPlayer(lessonA, libraryFor([lessonA, lessonB, lessonC]));
+
+    const selectionB = player.selectLesson(lessonB);
+    const selectionC = player.selectLesson(lessonC);
+    fileC.resolve(new File(['lesson-3'], 'lesson-3.mp4'));
+    await expect(selectionC).resolves.toBe(true);
+    fileB.resolve(new File(['lesson-2'], 'lesson-2.mp4'));
+    await expect(selectionB).resolves.toBe(false);
+
+    expect(player.lesson.id).toBe('lesson-3');
+    expect(player.mode).toBe('video');
+    expect(player.session.item.id).toBe('video-3');
+    expect(player.media.src).toContain('blob:lesson-3.mp4');
+    expect(player.element.querySelector('.lesson-player-title').textContent).toBe('Cerebelo');
+    expect(player.element.querySelector('[data-lesson-id="lesson-3"]').getAttribute('aria-current')).toBe('true');
+    expect(revokeObjectURL).toHaveBeenCalledWith('blob:lesson-2.mp4');
   });
 
   it('keeps controls synchronized and renders one active module queue safely', async () => {

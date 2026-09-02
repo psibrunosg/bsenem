@@ -17,6 +17,7 @@ export class LessonPlayer {
     this.intendedPlaying = false;
     this.lastPlaybackTime = 0;
     this.mediaListeners = [];
+    this.mediaRequestId = 0;
     this.destroyed = false;
   }
 
@@ -80,14 +81,14 @@ export class LessonPlayer {
     this.bindControls();
     const mode = this.availableMode(this.initialMode, this.lesson);
     if (!mode) throw new Error('Arquivo local indisponível. Atualize a biblioteca e tente novamente.');
-    await this.replaceMedia(mode, defaultPlaybackState());
+    await this.replaceMedia(mode, defaultPlaybackState(), this.lesson);
     return this.element;
   }
 
   async switchMode(mode) {
     if (!MODES.has(mode) || !this.lesson?.[mode]) return false;
     if (mode === this.mode) return true;
-    return this.replaceMedia(mode, this.capturePlaybackState());
+    return this.replaceMedia(mode, this.capturePlaybackState(), this.lesson);
   }
 
   async selectLesson(lesson) {
@@ -96,30 +97,22 @@ export class LessonPlayer {
     carried.currentTime = 0;
     const mode = this.availableMode(this.mode, lesson);
     if (!mode) return false;
-    const previousLesson = this.lesson;
-    this.lesson = lesson;
-    try {
-      const changed = await this.replaceMedia(mode, carried);
-      if (!changed) this.lesson = previousLesson;
-      return changed;
-    } catch (error) {
-      this.lesson = previousLesson;
-      throw error;
-    }
+    return this.replaceMedia(mode, carried, lesson);
   }
 
-  async replaceMedia(mode, playbackState) {
-    const item = this.lesson?.[mode];
+  async replaceMedia(mode, playbackState, lesson = this.lesson) {
+    const item = lesson?.[mode];
     if (!item || this.destroyed) return false;
+    const requestId = ++this.mediaRequestId;
 
     let nextSession;
     try {
       nextSession = await LocalMediaSession.open(item, this.library);
     } catch (error) {
-      this.setStatus(`${error.message} Atualize a biblioteca e tente novamente.`);
+      if (this.isCurrentRequest(requestId)) this.setStatus(`${error.message} Atualize a biblioteca e tente novamente.`);
       return false;
     }
-    if (this.destroyed) {
+    if (!this.isCurrentRequest(requestId)) {
       nextSession.close();
       return false;
     }
@@ -144,10 +137,10 @@ export class LessonPlayer {
     } catch {
       this.releaseMedia(media);
       nextSession.close();
-      this.setStatus('Arquivo local indisponÃ­vel. Atualize a biblioteca e tente novamente.');
+      if (this.isCurrentRequest(requestId)) this.setStatus('Arquivo local indisponível. Atualize a biblioteca e tente novamente.');
       return false;
     }
-    if (this.destroyed) {
+    if (!this.isCurrentRequest(requestId)) {
       this.releaseMedia(media);
       nextSession.close();
       return false;
@@ -160,6 +153,7 @@ export class LessonPlayer {
     this.removeMediaListeners();
     this.releaseMedia();
     this.session?.close();
+    this.lesson = lesson;
     this.session = nextSession;
     this.mode = mode;
     this.media = media;
@@ -180,12 +174,17 @@ export class LessonPlayer {
       try {
         await media.play();
       } catch {
+        if (!this.isCurrentRequest(requestId) || media !== this.media) return false;
         this.intendedPlaying = false;
         this.setStatus('Reprodução pausada. Selecione Reproduzir para continuar.');
         this.syncPlayControl();
       }
     }
-    return true;
+    return this.isCurrentRequest(requestId) && media === this.media;
+  }
+
+  isCurrentRequest(requestId) {
+    return !this.destroyed && requestId === this.mediaRequestId;
   }
 
   bindControls() {
@@ -420,6 +419,7 @@ export class LessonPlayer {
   destroy() {
     if (this.destroyed) return;
     this.destroyed = true;
+    this.mediaRequestId += 1;
     this.removeMediaListeners();
     this.releaseMedia();
     this.session?.close();

@@ -3,8 +3,8 @@
   "role": "implementer",
   "runtime": "codex-desktop",
   "model_tier": "frontier",
-  "base_sha": "d97c9537dcbf1f3e6729addc037907b9a2edf8b5",
-  "head_sha": "d97c9537dcbf1f3e6729addc037907b9a2edf8b5",
+  "base_sha": "e7ad89bb8975ec2ac6c47b767b30f5014c0c23f5",
+  "head_sha": "e7ad89bb8975ec2ac6c47b767b30f5014c0c23f5",
   "verdict": "PASS",
   "files": [
     "src/components/LessonPlayer.js",
@@ -30,7 +30,13 @@
     { "command": "npm run build", "exit_code": 0 },
     { "command": "git diff --check", "exit_code": 0 },
     { "command": "ConvertFrom-Json task-3-implementer-handoff.json", "exit_code": 0 },
-    { "command": "git rev-parse HEAD", "exit_code": 0 }
+    { "command": "git rev-parse HEAD", "exit_code": 0 },
+    { "command": "npm test -- MediaPages.test.js -t old-media|newest concurrent", "exit_code": 1 },
+    { "command": "npm test -- MediaPages.test.js -t old-media|newest concurrent", "exit_code": 0 },
+    { "command": "npm test -- MediaPages.test.js AppShell.test.js", "exit_code": 0 },
+    { "command": "npm test", "exit_code": 0 },
+    { "command": "npm run build", "exit_code": 0 },
+    { "command": "git diff --check", "exit_code": 0 }
   ],
   "positive_tests": [
     "Paired media switching preserves time, volume, mute, rate, and play intent.",
@@ -38,8 +44,10 @@
     "Native controls change seek, volume, mute, rate, and module position.",
     "Video and audio pages each render one full player and one queue.",
     "Switching and destruction release native media and object URLs.",
-    "Focused suite passed with 19 tests.",
-    "Full frontend suite passed with 77 tests.",
+    "Playback events remain attributed to the active lesson while a candidate is pending.",
+    "Only the newest deferred concurrent lesson selection commits lesson, session, media, and render state.",
+    "Focused suite passed with 21 tests.",
+    "Full frontend suite passed with 79 tests.",
     "Production build passed with 34 transformed modules."
   ],
   "negative_tests": [
@@ -47,7 +55,8 @@
     "An alternate metadata failure preserves the current session and closes the failed candidate.",
     "A stale catalog mapping renders an actionable local-media state.",
     "The global mini-player surface and lifecycle are absent.",
-    "Markup-shaped lesson titles do not create injected elements."
+    "Markup-shaped lesson titles do not create injected elements.",
+    "An obsolete deferred candidate cannot replace the newest selection and closes its object URL."
   ],
   "findings": [
     {
@@ -65,13 +74,22 @@
     {
       "severity": "info",
       "evidence": "Git diff check completed without whitespace errors."
+    },
+    {
+      "severity": "info",
+      "evidence": "Monotonic request identity gates candidate installation after every asynchronous boundary."
+    },
+    {
+      "severity": "info",
+      "evidence": "Lesson, session, media, listeners, title, transcript, format controls, and queue commit together only for the current validated candidate."
     }
   ],
   "evidence": [
     "A regression test failed before the previous-media release correction and passed afterward.",
     "A regression test failed before alternate-load rollback and passed afterward.",
-    "Final focused tests passed: 2 files, 19 tests.",
-    "Final full frontend tests passed: 15 files, 77 tests.",
+    "Reviewer regression tests failed before request identity and atomic commit, then passed after the fix.",
+    "Final focused tests passed: 2 files, 21 tests.",
+    "Final full frontend tests passed: 15 files, 79 tests.",
     "The final production build passed.",
     "The arbiter commit workflow keeps base and head SHA identical before review."
   ],
