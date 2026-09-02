@@ -18,6 +18,7 @@ export class LessonPlayer {
     this.lastPlaybackTime = 0;
     this.mediaListeners = [];
     this.mediaRequestId = 0;
+    this.pendingCandidate = null;
     this.destroyed = false;
   }
 
@@ -103,6 +104,7 @@ export class LessonPlayer {
   async replaceMedia(mode, playbackState, lesson = this.lesson) {
     const item = lesson?.[mode];
     if (!item || this.destroyed) return false;
+    this.cancelPendingCandidate();
     const requestId = ++this.mediaRequestId;
 
     let nextSession;
@@ -129,20 +131,25 @@ export class LessonPlayer {
     media.volume = finiteVolume(playbackState.volume);
     media.muted = Boolean(playbackState.muted);
     media.playbackRate = finiteRate(playbackState.playbackRate);
+    const controller = new AbortController();
+    const candidate = { requestId, media, session: nextSession, controller, cleaned: false };
+    this.pendingCandidate = candidate;
 
     try {
-      const ready = metadataReady(media);
+      const ready = metadataReady(media, controller.signal);
       media.load();
       await ready;
-    } catch {
-      this.releaseMedia(media);
-      nextSession.close();
-      if (this.isCurrentRequest(requestId)) this.setStatus('Arquivo local indisponível. Atualize a biblioteca e tente novamente.');
+    } catch (error) {
+      if (this.pendingCandidate === candidate) this.pendingCandidate = null;
+      this.cleanupCandidate(candidate);
+      if (error?.name !== 'AbortError' && this.isCurrentRequest(requestId)) {
+        this.setStatus('Arquivo local indisponível. Atualize a biblioteca e tente novamente.');
+      }
       return false;
     }
+    if (this.pendingCandidate === candidate) this.pendingCandidate = null;
     if (!this.isCurrentRequest(requestId)) {
-      this.releaseMedia(media);
-      nextSession.close();
+      this.cleanupCandidate(candidate);
       return false;
     }
 
@@ -185,6 +192,21 @@ export class LessonPlayer {
 
   isCurrentRequest(requestId) {
     return !this.destroyed && requestId === this.mediaRequestId;
+  }
+
+  cancelPendingCandidate() {
+    const candidate = this.pendingCandidate;
+    if (!candidate) return;
+    this.pendingCandidate = null;
+    candidate.controller.abort();
+    this.cleanupCandidate(candidate);
+  }
+
+  cleanupCandidate(candidate) {
+    if (!candidate || candidate.cleaned) return;
+    candidate.cleaned = true;
+    this.releaseMedia(candidate.media);
+    candidate.session.close();
   }
 
   bindControls() {
@@ -420,6 +442,7 @@ export class LessonPlayer {
     if (this.destroyed) return;
     this.destroyed = true;
     this.mediaRequestId += 1;
+    this.cancelPendingCandidate();
     this.removeMediaListeners();
     this.releaseMedia();
     this.session?.close();
@@ -453,7 +476,8 @@ function clampTime(value, duration) {
   return Number.isFinite(duration) ? Math.min(time, Math.max(0, duration)) : time;
 }
 
-function metadataReady(media) {
+function metadataReady(media, signal) {
+  if (signal?.aborted) return Promise.reject(abortError());
   if (media.readyState >= 1) return Promise.resolve();
   return new Promise((resolve, reject) => {
     const loaded = () => {
@@ -464,13 +488,23 @@ function metadataReady(media) {
       cleanup();
       reject(new Error('Arquivo local indisponível.'));
     };
+    const aborted = () => {
+      cleanup();
+      reject(abortError());
+    };
     const cleanup = () => {
       media.removeEventListener('loadedmetadata', loaded);
       media.removeEventListener('error', failed);
+      signal?.removeEventListener('abort', aborted);
     };
     media.addEventListener('loadedmetadata', loaded, { once: true });
     media.addEventListener('error', failed, { once: true });
+    signal?.addEventListener('abort', aborted, { once: true });
   });
+}
+
+function abortError() {
+  return new DOMException('Media candidate superseded.', 'AbortError');
 }
 
 function captionTrack(caption) {

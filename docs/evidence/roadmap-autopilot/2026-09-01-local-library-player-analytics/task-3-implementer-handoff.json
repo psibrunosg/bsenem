@@ -3,8 +3,8 @@
   "role": "implementer",
   "runtime": "codex-desktop",
   "model_tier": "frontier",
-  "base_sha": "e7ad89bb8975ec2ac6c47b767b30f5014c0c23f5",
-  "head_sha": "e7ad89bb8975ec2ac6c47b767b30f5014c0c23f5",
+  "base_sha": "80083cae053ba0c5d9ccf44151858efb5b48448d",
+  "head_sha": "80083cae053ba0c5d9ccf44151858efb5b48448d",
   "verdict": "PASS",
   "files": [
     "src/components/LessonPlayer.js",
@@ -36,6 +36,12 @@
     { "command": "npm test -- MediaPages.test.js AppShell.test.js", "exit_code": 0 },
     { "command": "npm test", "exit_code": 0 },
     { "command": "npm run build", "exit_code": 0 },
+    { "command": "git diff --check", "exit_code": 0 },
+    { "command": "npm test -- MediaPages.test.js -t metadata-pending", "exit_code": 1 },
+    { "command": "npm test -- MediaPages.test.js -t metadata-pending", "exit_code": 0 },
+    { "command": "npm test -- MediaPages.test.js AppShell.test.js", "exit_code": 0 },
+    { "command": "npm test", "exit_code": 0 },
+    { "command": "npm run build", "exit_code": 0 },
     { "command": "git diff --check", "exit_code": 0 }
   ],
   "positive_tests": [
@@ -46,8 +52,10 @@
     "Switching and destruction release native media and object URLs.",
     "Playback events remain attributed to the active lesson while a candidate is pending.",
     "Only the newest deferred concurrent lesson selection commits lesson, session, media, and render state.",
-    "Focused suite passed with 21 tests.",
-    "Full frontend suite passed with 79 tests.",
+    "Metadata-pending candidates abort and settle when superseded or destroyed.",
+    "Candidate abort detaches metadata listeners, clears media src, and revokes session URLs.",
+    "Focused suite passed with 23 tests.",
+    "Full frontend suite passed with 81 tests.",
     "Production build passed with 34 transformed modules."
   ],
   "negative_tests": [
@@ -56,7 +64,8 @@
     "A stale catalog mapping renders an actionable local-media state.",
     "The global mini-player surface and lifecycle are absent.",
     "Markup-shaped lesson titles do not create injected elements.",
-    "An obsolete deferred candidate cannot replace the newest selection and closes its object URL."
+    "An obsolete deferred candidate cannot replace the newest selection and closes its object URL.",
+    "A metadata event that never arrives cannot retain a superseded or destroyed candidate."
   ],
   "findings": [
     {
@@ -82,14 +91,19 @@
     {
       "severity": "info",
       "evidence": "Lesson, session, media, listeners, title, transcript, format controls, and queue commit together only for the current validated candidate."
+    },
+    {
+      "severity": "info",
+      "evidence": "One explicitly owned pending candidate is aborted and cleaned idempotently on supersession or destruction."
     }
   ],
   "evidence": [
     "A regression test failed before the previous-media release correction and passed afterward.",
     "A regression test failed before alternate-load rollback and passed afterward.",
     "Reviewer regression tests failed before request identity and atomic commit, then passed after the fix.",
-    "Final focused tests passed: 2 files, 21 tests.",
-    "Final full frontend tests passed: 15 files, 79 tests.",
+    "Lifecycle regression tests failed before pending-candidate abort and passed after the fix.",
+    "Final focused tests passed: 2 files, 23 tests.",
+    "Final full frontend tests passed: 15 files, 81 tests.",
     "The final production build passed.",
     "The arbiter commit workflow keeps base and head SHA identical before review."
   ],

@@ -9,7 +9,10 @@ const localItem = (resourceType, overrides = {}) => ({
   handle: handle(new File(['conteúdo'], `aula.${resourceType === 'video' ? 'mp4' : resourceType === 'audio' ? 'mp3' : 'pdf'}`)), ...overrides
 });
 
-afterEach(() => vi.unstubAllGlobals());
+afterEach(() => {
+  vi.unstubAllGlobals();
+  vi.restoreAllMocks();
+});
 beforeEach(() => {
   vi.spyOn(HTMLMediaElement.prototype, 'load').mockImplementation(function load() {
     Object.defineProperty(this, 'duration', { configurable: true, value: 120 });
@@ -287,6 +290,90 @@ describe('LessonPlayer', () => {
     expect(player.element.querySelector('.lesson-player-title').textContent).toBe('Cerebelo');
     expect(player.element.querySelector('[data-lesson-id="lesson-3"]').getAttribute('aria-current')).toBe('true');
     expect(revokeObjectURL).toHaveBeenCalledWith('blob:lesson-2.mp4');
+  });
+
+  it('aborts and releases a metadata-pending candidate when a newer selection supersedes it', async () => {
+    const revokeObjectURL = vi.fn();
+    vi.stubGlobal('URL', { createObjectURL: vi.fn((file) => `blob:${file.name}`), revokeObjectURL });
+    const lessonA = pairedLesson({ audio: null });
+    const lessonB = pairedLesson({
+      id: 'lesson-2',
+      title: 'Medula espinhal',
+      video: localItem('video', { id: 'video-2', handle: handle(new File(['lesson-2'], 'pending-b.mp4')) }),
+      audio: null
+    });
+    const lessonC = pairedLesson({
+      id: 'lesson-3',
+      title: 'Cerebelo',
+      video: localItem('video', { id: 'video-3', handle: handle(new File(['lesson-3'], 'lesson-c.mp4')) }),
+      audio: null
+    });
+    const player = await renderPlayer(lessonA, libraryFor([lessonA, lessonB, lessonC]));
+    const nativeCreateElement = document.createElement.bind(document);
+    const candidates = [];
+    vi.spyOn(document, 'createElement').mockImplementation((tagName, options) => {
+      const element = nativeCreateElement(tagName, options);
+      if (tagName === 'video' || tagName === 'audio') candidates.push(element);
+      return element;
+    });
+    HTMLMediaElement.prototype.load.mockImplementation(function load() {
+      if (this.src.endsWith('lesson-c.mp4')) {
+        Object.defineProperty(this, 'duration', { configurable: true, value: 120 });
+        queueMicrotask(() => this.dispatchEvent(new Event('loadedmetadata')));
+      }
+    });
+
+    let resultB;
+    const selectionB = player.selectLesson(lessonB).then((result) => { resultB = result; });
+    await vi.waitFor(() => expect(candidates).toHaveLength(1));
+    const candidateB = candidates[0];
+    const removeEventListener = vi.spyOn(candidateB, 'removeEventListener');
+
+    await expect(player.selectLesson(lessonC)).resolves.toBe(true);
+    await vi.waitFor(() => expect(resultB).toBe(false));
+    await selectionB;
+
+    expect(candidateB.getAttribute('src')).toBeNull();
+    expect(removeEventListener).toHaveBeenCalledWith('loadedmetadata', expect.any(Function));
+    expect(removeEventListener).toHaveBeenCalledWith('error', expect.any(Function));
+    expect(revokeObjectURL).toHaveBeenCalledWith('blob:pending-b.mp4');
+    expect(player.lesson.id).toBe('lesson-3');
+    expect(player.media.src).toContain('blob:lesson-c.mp4');
+  });
+
+  it('aborts and releases a metadata-pending candidate when the player is destroyed', async () => {
+    const revokeObjectURL = vi.fn();
+    vi.stubGlobal('URL', { createObjectURL: vi.fn((file) => `blob:${file.name}`), revokeObjectURL });
+    const lessonA = pairedLesson({ audio: null });
+    const lessonB = pairedLesson({
+      id: 'lesson-2',
+      title: 'Medula espinhal',
+      video: localItem('video', { id: 'video-2', handle: handle(new File(['lesson-2'], 'pending-destroy.mp4')) }),
+      audio: null
+    });
+    const player = await renderPlayer(lessonA, libraryFor([lessonA, lessonB]));
+    const nativeCreateElement = document.createElement.bind(document);
+    let candidate;
+    vi.spyOn(document, 'createElement').mockImplementation((tagName, options) => {
+      const element = nativeCreateElement(tagName, options);
+      if (tagName === 'video' || tagName === 'audio') candidate = element;
+      return element;
+    });
+    HTMLMediaElement.prototype.load.mockImplementation(() => {});
+
+    let selectionResult;
+    const selection = player.selectLesson(lessonB).then((result) => { selectionResult = result; });
+    await vi.waitFor(() => expect(candidate).toBeDefined());
+    const removeEventListener = vi.spyOn(candidate, 'removeEventListener');
+
+    player.destroy();
+    await vi.waitFor(() => expect(selectionResult).toBe(false));
+    await selection;
+
+    expect(candidate.getAttribute('src')).toBeNull();
+    expect(removeEventListener).toHaveBeenCalledWith('loadedmetadata', expect.any(Function));
+    expect(removeEventListener).toHaveBeenCalledWith('error', expect.any(Function));
+    expect(revokeObjectURL).toHaveBeenCalledWith('blob:pending-destroy.mp4');
   });
 
   it('keeps controls synchronized and renders one active module queue safely', async () => {
