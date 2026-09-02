@@ -21,8 +21,9 @@ export class LocalLibraryService {
 
   async connect() {
     const handle = await window.showDirectoryPicker({ mode: 'read', id: 'bs-estudos-library' });
-    await this.idb.set('local-library-handle', handle);
-    return this.refresh(handle);
+    const storedHandle = await this.idb.get('local-library-handle');
+    const sameEntry = storedHandle ? await compareEntries(storedHandle, handle) : null;
+    return this.refresh(handle, { rotateIdentity: sameEntry === false });
   }
 
   async restore() {
@@ -35,7 +36,7 @@ export class LocalLibraryService {
     return this.refresh(handle);
   }
 
-  async refresh(handle) {
+  async refresh(handle, { rotateIdentity = false } = {}) {
     handle ||= await this.idb.get('local-library-handle');
     if (!handle) return { items: [], diagnostics: [], catalog: this.catalog };
     const result = await this.scan(handle);
@@ -43,7 +44,7 @@ export class LocalLibraryService {
     this.diagnostics = result.diagnostics;
     this.catalog = buildCourseCatalog(result.items);
     await this.idb.set('local-library-handle', handle);
-    await this.idb.set('local-library-id', await this.libraryId());
+    await this.idb.set('local-library-id', rotateIdentity ? this.createId() : await this.libraryId());
     await this.idb.set('local-library-items', result.items);
     await this.idb.set('local-library-diagnostics', result.diagnostics);
     return { ...result, catalog: this.catalog };
@@ -174,6 +175,14 @@ function ext(name) { const index = name.lastIndexOf('.'); return index < 0 ? '' 
 function base(name) { const index = name.lastIndexOf('.'); return index < 0 ? name : name.slice(0, index); }
 function hidden(name) { return name.startsWith('.'); }
 async function permission(handle) { return typeof handle.queryPermission === 'function' ? handle.queryPermission({ mode: 'read' }) : 'granted'; }
+async function compareEntries(storedHandle, selectedHandle) {
+  if (storedHandle === selectedHandle) return true;
+  try {
+    if (typeof storedHandle.isSameEntry === 'function') return Boolean(await storedHandle.isSameEntry(selectedHandle));
+    if (typeof selectedHandle.isSameEntry === 'function') return Boolean(await selectedHandle.isSameEntry(storedHandle));
+  } catch { return null; }
+  return null;
+}
 function isExam(name) { return name.endsWith('.bsestudos.exam.json'); }
 async function localExam(entry, diagnostics) {
   try {

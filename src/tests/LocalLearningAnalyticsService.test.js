@@ -320,4 +320,48 @@ describe('DashboardPage local analytics loading', () => {
     expect(changedFingerprint).not.toBe(firstFingerprint);
     expect(analyticsFactory.mock.calls[2][0]).toMatchObject({ libraryId: 'library-b' });
   });
+
+  it('reuses analytics after an unchanged rescan and invalidates it when stable media facts change', async () => {
+    vi.spyOn(api, 'get').mockResolvedValue({ success: true, data: {} });
+    const idb = memoryStore();
+    await idb.set('local-library-handle', { kind: 'directory' });
+    const catalog = (id, overrides = {}) => ({ lessons: new Map([['lesson:Curso/Modulo/Aula', {
+      id: 'lesson:Curso/Modulo/Aula',
+      video: {
+        id,
+        relativePath: 'Curso/Modulo/Videos/Aula.mp4',
+        resourceType: 'video',
+        extension: 'mp4',
+        size: 10,
+        modifiedAt: 100,
+        ...overrides
+      },
+      audio: null
+    }]]) });
+    const services = [
+      { getSummary: vi.fn().mockResolvedValue({ status: { code: 'ready' } }), recordRange: vi.fn() },
+      { getSummary: vi.fn().mockResolvedValue({ status: { code: 'ready' } }), recordRange: vi.fn() }
+    ];
+    const analyticsFactory = vi.fn(() => services.shift());
+    const library = {
+      idb,
+      items: [],
+      catalog: catalog('scanner-uuid-1'),
+      libraryId: vi.fn().mockResolvedValue('library-a')
+    };
+    const page = new DashboardPage({ user: { id: 'u1', name: 'Ana' }, library, analyticsFactory });
+    await page.loadActivityData();
+    const initialFingerprint = analyticsFactory.mock.calls[0][0].libraryFingerprint;
+
+    library.catalog = catalog('scanner-uuid-2');
+    await library.learningAnalytics.recordRange(range('lesson-a', 0, 15));
+
+    expect(analyticsFactory).toHaveBeenCalledTimes(1);
+
+    library.catalog = catalog('scanner-uuid-3', { modifiedAt: 101 });
+    await library.learningAnalytics.recordRange(range('lesson-a', 15, 30));
+
+    expect(analyticsFactory).toHaveBeenCalledTimes(2);
+    expect(analyticsFactory.mock.calls[1][0].libraryFingerprint).not.toBe(initialFingerprint);
+  });
 });

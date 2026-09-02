@@ -121,6 +121,38 @@ describe('LocalLibraryService', () => {
     expect(store.set).not.toHaveBeenCalledWith('local-library-catalog', expect.anything());
   });
 
+  it('rotates identity only when the picker selects a different folder', async () => {
+    const folder = (entryKey) => ({
+      ...fakeDirectory({}),
+      entryKey,
+      async isSameEntry(other) { return this.entryKey === other.entryKey; }
+    });
+    const originalFolder = folder('original');
+    const sameFolderAgain = folder('original');
+    const replacementFolder = folder('replacement');
+    const picker = vi.fn()
+      .mockResolvedValueOnce(originalFolder)
+      .mockResolvedValueOnce(sameFolderAgain)
+      .mockResolvedValueOnce(replacementFolder);
+    const ids = ['library-a', 'library-b'];
+    const identityService = new LocalLibraryService({ idb: store, createId: () => ids.shift() });
+    const previousWindow = globalThis.window;
+    globalThis.window = { showDirectoryPicker: picker };
+
+    try {
+      await identityService.connect();
+      expect(await store.get('local-library-id')).toBe('library-a');
+
+      await identityService.connect();
+      expect(await store.get('local-library-id')).toBe('library-a');
+
+      await identityService.connect();
+      expect(await store.get('local-library-id')).toBe('library-b');
+    } finally {
+      globalThis.window = previousWindow;
+    }
+  });
+
   it('returns and keeps an in-memory catalog when refreshing a local library', async () => {
     const result = await service.refresh(fakeDirectory({ Curso: directory({ Videos: directory({ '01-Aula.mp4': file('video/mp4') }) }) }));
 

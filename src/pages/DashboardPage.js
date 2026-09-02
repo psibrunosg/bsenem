@@ -276,7 +276,13 @@ function catalogFingerprint(catalog) {
 
 function mediaFingerprint(item) {
   if (!item) return '-';
-  return `${item.id || ''}:${finiteMetadata(item.size)}:${finiteMetadata(item.modifiedAt)}:${item.extension || ''}`;
+  return JSON.stringify([
+    item.relativePath || '',
+    item.resourceType || '',
+    item.extension || '',
+    finiteMetadata(item.size),
+    finiteMetadata(item.modifiedAt)
+  ]);
 }
 
 function finiteMetadata(value) {

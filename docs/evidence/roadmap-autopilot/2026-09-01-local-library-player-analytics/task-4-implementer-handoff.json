@@ -3,14 +3,16 @@
   "role": "implementer",
   "runtime": "codex-desktop",
   "model_tier": "frontier",
-  "base_sha": "0c97d671ef1072b71d377caaf87b90ea8a681193",
-  "head_sha": "0c97d671ef1072b71d377caaf87b90ea8a681193",
+  "base_sha": "d7122f670e1b2979b0fb47fa055e6c2b1ceeb78a",
+  "head_sha": "d7122f670e1b2979b0fb47fa055e6c2b1ceeb78a",
   "verdict": "PASS",
   "files": [
     "src/services/LocalLearningAnalyticsService.js",
     "src/components/LessonPlayer.js",
     "src/pages/DashboardPage.js",
+    "src/services/LocalLibraryService.js",
     "src/tests/LocalLearningAnalyticsService.test.js",
+    "src/tests/LocalLibraryService.test.js",
     "src/tests/MediaPages.test.js",
     ".superpowers/sdd/2026-09-01-local-library-player-analytics/task-4-report.md",
     "docs/evidence/roadmap-autopilot/2026-09-01-local-library-player-analytics/task-4-implementer-handoff.json"
@@ -37,7 +39,16 @@
     { "command": "npm test -- LocalLearningAnalyticsService.test.js MediaPages.test.js", "exit_code": 0 },
     { "command": "npm test", "exit_code": 0 },
     { "command": "npm run build outside restrictive sandbox", "exit_code": 0 },
-    { "command": "git diff --check", "exit_code": 0 }
+    { "command": "git diff --check", "exit_code": 0 },
+    { "command": "npm test -- src/tests/LocalLibraryService.test.js src/tests/LocalLearningAnalyticsService.test.js -t rotates-identity-or-unchanged-rescan", "exit_code": 1 },
+    { "command": "npm test -- src/tests/LocalLibraryService.test.js src/tests/LocalLearningAnalyticsService.test.js -t rotates-identity-or-unchanged-rescan", "exit_code": 0 },
+    { "command": "npm test -- src/tests/LibraryPage.test.js src/tests/LocalLibraryService.test.js src/tests/LocalLearningAnalyticsService.test.js src/tests/MediaPages.test.js", "exit_code": 0 },
+    { "command": "npm test", "exit_code": 0 },
+    { "command": "npm run build", "exit_code": 1 },
+    { "command": "npm run build outside restrictive sandbox", "exit_code": 0 },
+    { "command": "git diff --check", "exit_code": 0 },
+    { "command": "strict JSON.parse task-4-implementer-handoff.json", "exit_code": 0 },
+    { "command": "git rev-parse HEAD", "exit_code": 0 }
   ],
   "positive_tests": [
     "Overlapping and adjacent ranges merge without duplicate watched time.",
@@ -56,7 +67,9 @@
     "A deferred recorder initializes after a library folder is connected later.",
     "Final focused suite passed with 38 tests.",
     "Final full frontend suite passed with 104 tests.",
-    "Production build passed with 35 transformed modules."
+    "Production build passed with 35 transformed modules.",
+    "A confirmed different directory selected through the production change-folder path rotates the library identity, while selecting or refreshing the same directory preserves it.",
+    "Unchanged rescans keep one analytics fingerprint even when scanner-generated media UUIDs change; stable media path and file facts drive invalidation."
   ],
   "negative_tests": [
     "Another user or library cannot read the scoped analytics key.",
@@ -66,7 +79,9 @@
     "Account API failure does not erase valid local data.",
     "Local identity failure does not erase valid account data.",
     "No folder produces an explicit unavailable summary and does not construct the service.",
-    "Persistence denial does not claim that current-session data was saved."
+    "Persistence denial does not claim that current-session data was saved.",
+    "Changing folders cannot reuse analytics scoped to the prior directory.",
+    "Transient scanner UUID churn cannot invalidate unchanged-library analytics."
   ],
   "findings": [
     {
@@ -88,12 +103,16 @@
     {
       "severity": "info",
       "evidence": "All seven reviewer findings were reproduced before correction and passed after the focused fixes."
+    },
+    {
+      "severity": "info",
+      "evidence": "Both Task 4 rereview P1 findings were reproduced in RED and passed after the narrow identity and fingerprint fixes."
     }
   ],
   "evidence": [
     "Service, player, dashboard settlement, concurrency, and deferred-connection behaviors each failed before implementation and passed afterward.",
-    "Final focused tests passed: 2 files and 38 tests.",
-    "Final full frontend tests passed: 16 files and 104 tests.",
+    "Final rereview-focused tests passed: 4 files and 68 tests.",
+    "Final full frontend tests passed: 16 files and 106 tests.",
     "The final production build passed outside the restrictive sandbox.",
     "No server, migration, package, secret, deployment, commit, or publication action occurred."
   ],
