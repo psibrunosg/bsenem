@@ -11,28 +11,69 @@ const localItem = (resourceType, overrides = {}) => ({
 
 afterEach(() => vi.unstubAllGlobals());
 beforeEach(() => {
-  vi.spyOn(HTMLMediaElement.prototype, 'load').mockImplementation(() => {});
+  vi.spyOn(HTMLMediaElement.prototype, 'load').mockImplementation(function load() {
+    Object.defineProperty(this, 'duration', { configurable: true, value: 120 });
+    queueMicrotask(() => this.dispatchEvent(new Event('loadedmetadata')));
+  });
+  vi.spyOn(HTMLMediaElement.prototype, 'play').mockResolvedValue(undefined);
+  vi.spyOn(HTMLMediaElement.prototype, 'pause').mockImplementation(() => {});
   vi.spyOn(HTMLCanvasElement.prototype, 'getContext').mockReturnValue({ clearRect() {}, fillRect() {}, scale() {} });
 });
 
+function pairedLesson(overrides = {}) {
+  return {
+    id: 'lesson-1',
+    title: 'Sistema nervoso',
+    courseId: 'course-1',
+    moduleId: 'module-1',
+    video: localItem('video'),
+    audio: localItem('audio'),
+    transcript: null,
+    ...overrides
+  };
+}
+
+function libraryFor(lessons) {
+  return {
+    catalog: {
+      courses: [{ id: 'course-1', title: 'Biologia', modules: [{ id: 'module-1', title: 'Neurociência', children: [], lessons, materials: [] }] }],
+      lessons: new Map(lessons.map((lesson) => [lesson.id, lesson])),
+      itemToLessonId: new Map(lessons.flatMap((lesson) => [lesson.video, lesson.audio].filter(Boolean).map((item) => [item.id, lesson.id])))
+    }
+  };
+}
+
+async function renderPlayer(lesson, library = libraryFor([lesson])) {
+  const { LessonPlayer } = await import('../components/LessonPlayer.js');
+  const player = new LessonPlayer({ lesson, initialMode: lesson.video ? 'video' : 'audio', library });
+  await player.render();
+  return player;
+}
+
 describe('local media pages', () => {
-  it('uses the pending local video resource without a playlist or external URL', async () => {
+  it('uses the pending local video lesson in the shared full player', async () => {
     vi.stubGlobal('URL', { createObjectURL: vi.fn(() => 'blob:video'), revokeObjectURL: vi.fn() });
-    const page = new VideoPage({ app: { consumeLocalResource: vi.fn(() => localItem('video')) } });
+    const lesson = pairedLesson({ audio: null });
+    const page = new VideoPage({ app: { consumeLocalLesson: vi.fn(() => ({ lesson, initialMode: 'video' })) }, library: libraryFor([lesson]) });
     const element = await page.render();
 
     expect(element.querySelector('video').src).toContain('blob:video');
-    expect(element.querySelector('.video-playlist-container')).toBeNull();
+    expect(element.querySelectorAll('.lesson-player')).toHaveLength(1);
+    expect(element.querySelectorAll('.lesson-player-queue').length).toBe(1);
+    expect(element.querySelector('.lesson-player-format-toggle')).toBeNull();
     expect(element.innerHTML).not.toMatch(/https?:/);
   });
 
   it('shows a searchable transcript for a local audio TXT sidecar', async () => {
     vi.stubGlobal('URL', { createObjectURL: vi.fn(() => 'blob:audio'), revokeObjectURL: vi.fn() });
     const audio = localItem('audio', { transcript: { kind: 'text', name: 'aula.txt' }, sidecarHandle: handle({ name: 'aula.txt', text: async () => 'Sistema nervoso central' }) });
-    const page = new AudioPage({ app: { consumeLocalResource: vi.fn(() => audio) } });
+    const lesson = pairedLesson({ video: null, audio, transcript: audio.transcript });
+    const page = new AudioPage({ app: { consumeLocalLesson: vi.fn(() => ({ lesson, initialMode: 'audio' })) }, library: libraryFor([lesson]) });
     const element = await page.render();
 
     expect(element.querySelector('audio').src).toContain('blob:audio');
+    expect(element.querySelectorAll('.lesson-player')).toHaveLength(1);
+    expect(element.querySelectorAll('.lesson-player-queue')).toHaveLength(1);
     expect(element.querySelector('.transcript-panel').textContent).toContain('Sistema nervoso central');
     expect(element.innerHTML).not.toMatch(/https?:/);
   });
@@ -43,5 +84,175 @@ describe('local media pages', () => {
     const element = await page.render();
 
     expect(element.querySelector('.pdf-viewer')).not.toBeNull();
+  });
+
+  it('shows an actionable state when a selected item no longer resolves to a lesson', async () => {
+    const page = new VideoPage({ app: { consumeLocalLesson: vi.fn(() => ({ lesson: null, initialMode: 'video', error: 'Arquivo local indisponível. Atualize a biblioteca e tente novamente.' })) } });
+
+    const element = await page.render();
+
+    expect(element.querySelector('.local-media-state').textContent).toContain('Atualize a biblioteca');
+    expect(element.querySelector('video')).toBeNull();
+  });
+});
+
+describe('LessonPlayer', () => {
+  it('switches a paired lesson without losing time, volume, mute, rate, or intended play state', async () => {
+    const revokeObjectURL = vi.fn();
+    vi.stubGlobal('URL', { createObjectURL: vi.fn((file) => `blob:${file.name}`), revokeObjectURL });
+    const player = await renderPlayer(pairedLesson());
+    player.media.currentTime = 42;
+    player.media.volume = 0.4;
+    player.media.muted = true;
+    player.media.playbackRate = 1.5;
+    player.intendedPlaying = true;
+
+    await expect(player.switchMode('audio')).resolves.toBe(true);
+
+    expect(player.mode).toBe('audio');
+    expect(player.media.currentTime).toBe(42);
+    expect(player.media.volume).toBe(0.4);
+    expect(player.media.muted).toBe(true);
+    expect(player.media.playbackRate).toBe(1.5);
+    expect(player.intendedPlaying).toBe(true);
+    expect(player.element.querySelectorAll('video, audio')).toHaveLength(1);
+    expect(HTMLMediaElement.prototype.play).toHaveBeenCalledOnce();
+    expect(revokeObjectURL).toHaveBeenCalledWith('blob:aula.mp4');
+  });
+
+  it('stops and detaches the previous media element when switching formats', async () => {
+    vi.stubGlobal('URL', { createObjectURL: vi.fn((file) => `blob:${file.name}`), revokeObjectURL: vi.fn() });
+    const player = await renderPlayer(pairedLesson());
+    const previousMedia = player.media;
+    HTMLMediaElement.prototype.pause.mockClear();
+
+    await player.switchMode('audio');
+
+    expect(HTMLMediaElement.prototype.pause).toHaveBeenCalledOnce();
+    expect(previousMedia.getAttribute('src')).toBeNull();
+    expect(player.element.querySelectorAll('video, audio')).toHaveLength(1);
+  });
+
+  it('keeps the selected format paused and actionable when play resumption is rejected', async () => {
+    vi.stubGlobal('URL', { createObjectURL: vi.fn((file) => `blob:${file.name}`), revokeObjectURL: vi.fn() });
+    const player = await renderPlayer(pairedLesson());
+    player.media.currentTime = 36;
+    player.media.volume = 0.45;
+    player.media.muted = true;
+    player.media.playbackRate = 1.25;
+    player.intendedPlaying = true;
+    HTMLMediaElement.prototype.play.mockRejectedValueOnce(new DOMException('Blocked', 'NotAllowedError'));
+
+    await expect(player.switchMode('audio')).resolves.toBe(true);
+
+    expect(player.mode).toBe('audio');
+    expect(player.media.currentTime).toBe(36);
+    expect(player.media.volume).toBe(0.45);
+    expect(player.media.muted).toBe(true);
+    expect(player.media.playbackRate).toBe(1.25);
+    expect(player.intendedPlaying).toBe(false);
+    expect(player.element.querySelector('[data-action="play"]').textContent).toBe('Reproduzir');
+    expect(player.element.querySelector('.lesson-player-status').textContent).toContain('Selecione Reproduzir');
+  });
+
+  it('keeps the current session when the alternate media cannot load', async () => {
+    const revokeObjectURL = vi.fn();
+    vi.stubGlobal('URL', { createObjectURL: vi.fn((file) => `blob:${file.name}`), revokeObjectURL });
+    HTMLMediaElement.prototype.load.mockImplementation(function load() {
+      if (!this.hasAttribute('src')) return;
+      Object.defineProperty(this, 'duration', { configurable: true, value: 120 });
+      queueMicrotask(() => this.dispatchEvent(new Event(this.src.endsWith('.mp3') ? 'error' : 'loadedmetadata')));
+    });
+    const player = await renderPlayer(pairedLesson());
+    const previousMedia = player.media;
+    player.media.currentTime = 29;
+    player.media.volume = 0.35;
+
+    await expect(player.switchMode('audio')).resolves.toBe(false);
+
+    expect(player.mode).toBe('video');
+    expect(player.media).toBe(previousMedia);
+    expect(player.media.currentTime).toBe(29);
+    expect(player.media.volume).toBe(0.35);
+    expect(revokeObjectURL).toHaveBeenCalledWith('blob:aula.mp3');
+    expect(revokeObjectURL).not.toHaveBeenCalledWith('blob:aula.mp4');
+    expect(player.element.querySelector('.lesson-player-status').textContent).toContain('Atualize a biblioteca');
+  });
+
+  it('rejects an unavailable format without replacing media or changing playback state', async () => {
+    const revokeObjectURL = vi.fn();
+    vi.stubGlobal('URL', { createObjectURL: vi.fn(() => 'blob:video'), revokeObjectURL });
+    const lesson = pairedLesson({ audio: null });
+    const player = await renderPlayer(lesson);
+    player.media.currentTime = 18;
+    player.media.volume = 0.25;
+    const originalMedia = player.media;
+
+    await expect(player.switchMode('audio')).resolves.toBe(false);
+
+    expect(player.mode).toBe('video');
+    expect(player.media).toBe(originalMedia);
+    expect(player.media.currentTime).toBe(18);
+    expect(player.media.volume).toBe(0.25);
+    expect(revokeObjectURL).not.toHaveBeenCalled();
+    expect(player.element.querySelector('.lesson-player-format-toggle')).toBeNull();
+  });
+
+  it('uses the player controls to change rate, seek, and move through the single module queue', async () => {
+    vi.stubGlobal('URL', { createObjectURL: vi.fn((file) => `blob:${file.name}`), revokeObjectURL: vi.fn() });
+    const first = pairedLesson();
+    const second = pairedLesson({ id: 'lesson-2', title: 'Medula espinhal', video: localItem('video', { id: 'video-2' }), audio: null });
+    const player = await renderPlayer(first, libraryFor([first, second]));
+    const rate = player.element.querySelector('[data-control="rate"]');
+
+    rate.value = '1.5';
+    rate.dispatchEvent(new Event('change', { bubbles: true }));
+    player.media.currentTime = 12;
+    player.element.querySelector('[data-action="forward"]').click();
+    expect(player.media.currentTime).toBe(22);
+    await player.moveInQueue(1);
+
+    expect(player.lesson.id).toBe('lesson-2');
+    expect(player.media.currentTime).toBe(0);
+    expect(player.media.playbackRate).toBe(1.5);
+    expect(player.element.querySelectorAll('.lesson-player-queue')).toHaveLength(1);
+    expect(player.element.querySelector('[data-lesson-id="lesson-2"]').getAttribute('aria-current')).toBe('true');
+
+    await player.moveInQueue(-1);
+    expect(player.lesson.id).toBe('lesson-1');
+  });
+
+  it('keeps controls synchronized and renders one active module queue safely', async () => {
+    vi.stubGlobal('URL', { createObjectURL: vi.fn((file) => `blob:${file.name}`), revokeObjectURL: vi.fn() });
+    const first = pairedLesson({ title: '<img src=x onerror=alert(1)>' });
+    const second = pairedLesson({ id: 'lesson-2', title: 'Medula espinhal', video: localItem('video', { id: 'video-2' }), audio: null });
+    const player = await renderPlayer(first, libraryFor([first, second]));
+    const volume = player.element.querySelector('[data-control="volume"]');
+    const mute = player.element.querySelector('[data-action="mute"]');
+
+    volume.value = '0.3';
+    volume.dispatchEvent(new Event('input', { bubbles: true }));
+    mute.click();
+    player.media.currentTime = 24;
+    player.media.dispatchEvent(new Event('timeupdate'));
+
+    expect(player.media.volume).toBe(0.3);
+    expect(player.media.muted).toBe(true);
+    expect(mute.getAttribute('aria-pressed')).toBe('true');
+    expect(player.element.querySelector('[data-control="seek"]').value).toBe('24');
+    expect(player.element.querySelectorAll('.lesson-player-queue')).toHaveLength(1);
+    expect(player.element.querySelectorAll('.lesson-player-queue [aria-current="true"]')).toHaveLength(1);
+    expect(player.element.querySelector('img')).toBeNull();
+    expect(player.element.textContent).toContain('<img src=x onerror=alert(1)>');
+  });
+
+  it('closes the current local media session when destroyed', async () => {
+    const revokeObjectURL = vi.fn();
+    vi.stubGlobal('URL', { createObjectURL: vi.fn(() => 'blob:video'), revokeObjectURL });
+    const player = await renderPlayer(pairedLesson({ audio: null }));
+
+    player.destroy();
+
+    expect(revokeObjectURL).toHaveBeenCalledWith('blob:video');
   });
 });

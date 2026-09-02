@@ -1,4 +1,4 @@
-import { describe, expect, it } from 'vitest';
+import { describe, expect, it, vi } from 'vitest';
 import { AppShell } from '../components/AppShell.js';
 import { Sidebar } from '../components/Sidebar.js';
 const user = { id: 1, name: 'Teste', email: 'teste@example.test', level: 1, xp: 0, xpMax: 1000, streak: 0 };
@@ -13,6 +13,15 @@ class DashboardRoute {
 }
 
 describe('AppShell', () => {
+  it('does not render or construct a global mini-player surface', () => {
+    const app = new AppShell({ user });
+
+    const element = app.render();
+
+    expect(element.querySelector('.mini-player-container')).toBeNull();
+    expect(app.miniPlayer).toBeUndefined();
+  });
+
   it('returns a promise that resolves after the requested initial route is mounted', async () => {
     const app = new AppShell({ user });
     const element = app.render();
@@ -47,17 +56,35 @@ describe('Sidebar', () => {
 });
 
 describe('local resource bridge', () => {
-  it('keeps a selected resource in memory until its matching player consumes it', () => {
-    const app = new AppShell({ user });
-    app.render();
+  it('resolves a selected media item to one pending catalog lesson', () => {
     const video = { id: 'video-1', resourceType: 'video' };
+    const lesson = { id: 'lesson-1', video, audio: null };
+    const libraryService = {
+      catalog: {
+        itemToLessonId: new Map([[video.id, lesson.id]]),
+        lessons: new Map([[lesson.id, lesson]])
+      }
+    };
+    const app = new AppShell({ user, libraryService });
+    app.render();
 
     app.openLocalResource(video);
 
     expect(app.currentRoute).toBe('video');
-    expect(app.consumeLocalResource('audio')).toBeNull();
-    expect(app.consumeLocalResource('video')).toBe(video);
-    expect(app.consumeLocalResource('video')).toBeNull();
+    expect(app.consumeLocalLesson()).toEqual({ lesson, initialMode: 'video' });
+    expect(app.consumeLocalLesson()).toBeNull();
+  });
+
+  it('preserves the existing PDF resource path without treating it as a lesson', () => {
+    const app = new AppShell({ user, libraryService: { catalog: { itemToLessonId: new Map(), lessons: new Map() } } });
+    app.render();
+    const pdf = { id: 'pdf-1', resourceType: 'pdf' };
+
+    app.openLocalResource(pdf);
+
+    expect(app.currentRoute).toBe('library');
+    expect(app.consumeLocalResource('pdf')).toBe(pdf);
+    expect(app.consumeLocalLesson()).toBeNull();
   });
 
   it('destroys the active local-media route before mounting another route', async () => {

@@ -5,7 +5,6 @@
 @import './layout/app-shell.css';
 @import './layout/sidebar.css';
 @import './layout/header.css';
-@import './layout/mini-player.css';
 
 /* Components */
 @import './components/button.css';
@@ -34,6 +33,7 @@
 @import './components/dashboard.css';
 @import './components/library.css';
 @import './components/course-library.css';
+@import './components/lesson-player.css';
 @import './components/login.css';
 
 /* Pages */

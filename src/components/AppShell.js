@@ -1,6 +1,5 @@
 import { Sidebar } from './Sidebar.js';
 import { Header } from './Header.js';
-import { MiniPlayer } from './MiniPlayer.js';
 import { triggerConfetti } from '../utils/confetti.js';
 import { api } from '../utils/api.js';
 
@@ -8,7 +7,6 @@ export class AppShell {
   constructor(options = {}) {
     this.sidebarCollapsed = false;
     this.sidebarMobileOpen = false;
-    this.miniPlayerHidden = false;
     this.currentRoute = 'dashboard';
     if (!options.user?.id) throw new Error('Authenticated user is required.');
     this.user = options.user;
@@ -16,6 +14,7 @@ export class AppShell {
     this.subjects = options.subjects ?? [];
     this.libraryService = options.libraryService ?? null;
     this.pendingLocalResource = null;
+    this.pendingLocalLesson = null;
     
     this.sidebar = new Sidebar({
       collapsed: this.sidebarCollapsed,
@@ -35,19 +34,6 @@ export class AppShell {
       onPomodoroComplete: (mode) => this.handlePomodoroComplete(mode)
     });
     
-    this.miniPlayer = new MiniPlayer({
-      onPlay: () => this.handlePlayerPlay(),
-      onPause: () => this.handlePlayerPause(),
-      onSeek: (time) => this.handlePlayerSeek(time),
-      onVolumeChange: (vol) => this.handleVolumeChange(vol),
-      onMuteToggle: (muted) => this.handleMuteToggle(muted),
-      onRateChange: (rate) => this.handleRateChange(rate),
-      onNext: () => this.handlePlayerNext(),
-      onPrev: () => this.handlePlayerPrev(),
-      onFullscreen: () => this.handleFullscreen(),
-      onExpand: (expanded) => this.handlePlayerExpand(expanded)
-    });
-    
     this.element = null;
     this.contentElement = null;
     this.routes = new Map();
@@ -64,18 +50,15 @@ export class AppShell {
         <div class="app-header-container"></div>
         <main class="app-content" role="main"></main>
       </div>
-      <div class="mini-player-container"></div>
     `;
 
     // Mount components
     const sidebarContainer = this.element.querySelector('.app-sidebar-container');
     const headerContainer = this.element.querySelector('.app-header-container');
-    const miniPlayerContainer = this.element.querySelector('.mini-player-container');
     this.contentElement = this.element.querySelector('.app-content');
 
     sidebarContainer.appendChild(this.sidebar.render());
     headerContainer.appendChild(this.header.render());
-    miniPlayerContainer.appendChild(this.miniPlayer.render());
 
     // Listen for header events
     this.element.addEventListener('header:toggle-menu', () => this.toggleMobileSidebar());
@@ -218,12 +201,6 @@ export class AppShell {
     else this.openMobileSidebar();
   }
 
-  // Mini player controls
-  toggleMiniPlayer() {
-    this.miniPlayerHidden = !this.miniPlayerHidden;
-    this.element.classList.toggle('mini-player-hidden', this.miniPlayerHidden);
-  }
-
   // Pomodoro
   async handlePomodoroComplete(mode) {
     if (mode === 'break') { // means focus just ended
@@ -354,18 +331,6 @@ export class AppShell {
     }
   }
 
-  // Player handlers
-  handlePlayerPlay() { console.log('Player: play'); }
-  handlePlayerPause() { console.log('Player: pause'); }
-  handlePlayerSeek(time) { console.log('Player: seek', time); }
-  handleVolumeChange(vol) { console.log('Player: volume', vol); }
-  handleMuteToggle(muted) { console.log('Player: mute', muted); }
-  handleRateChange(rate) { console.log('Player: rate', rate); }
-  handlePlayerNext() { console.log('Player: next'); }
-  handlePlayerPrev() { console.log('Player: prev'); }
-  handleFullscreen() { console.log('Player: fullscreen'); }
-  handlePlayerExpand(expanded) { console.log('Player: expand', expanded); }
-
   // User management
   setUser(user) {
     this.user = { ...this.user, ...user };
@@ -383,8 +348,18 @@ export class AppShell {
   }
 
   openLocalResource(item) {
-    this.pendingLocalResource = item;
-    this.navigate(item.resourceType === 'audio' ? 'audio' : item.resourceType === 'video' ? 'video' : 'library');
+    if (item?.resourceType === 'pdf') {
+      this.pendingLocalResource = item;
+      this.navigate('library');
+      return;
+    }
+    const initialMode = item?.resourceType === 'audio' ? 'audio' : 'video';
+    const lessonId = this.libraryService?.catalog?.itemToLessonId?.get(item?.id);
+    const lesson = lessonId ? this.libraryService?.catalog?.lessons?.get(lessonId) : null;
+    this.pendingLocalLesson = lesson
+      ? { lesson, initialMode }
+      : { lesson: null, initialMode, error: 'Arquivo local indisponível. Atualize a biblioteca e tente novamente.' };
+    this.navigate(initialMode);
   }
 
   consumeLocalResource(type) {
@@ -394,18 +369,10 @@ export class AppShell {
     return item;
   }
 
-  // Player public API
-  setTrack(track) {
-    this.miniPlayer.setTrack(track);
-  }
-
-  setPlayerProgress(currentTime, duration) {
-    this.miniPlayer.setProgress(currentTime, duration);
-  }
-
-  setPlayerPlaying(playing) {
-    if (playing) this.miniPlayer.play();
-    else this.miniPlayer.pause();
+  consumeLocalLesson() {
+    const pending = this.pendingLocalLesson;
+    this.pendingLocalLesson = null;
+    return pending;
   }
 
   // Cleanup
@@ -413,7 +380,6 @@ export class AppShell {
     this.activeRouteComponent?.destroy?.();
     this.sidebar.destroy();
     this.header.destroy();
-    this.miniPlayer.destroy();
     if (this.element?.parentNode) this.element.parentNode.removeChild(this.element);
   }
 }
