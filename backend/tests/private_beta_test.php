@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 require_once __DIR__ . '/../config/database.php';
 require_once __DIR__ . '/../middleware/auth.php';
+require_once __DIR__ . '/../utils/GeneratedFlashcards.php';
 
 function expectSame(mixed $expected, mixed $actual, string $message): void {
     if ($expected !== $actual) {
@@ -90,6 +91,15 @@ try {
         'INSERT INTO users (name, email, password_hash) VALUES (?, ?, ?)'
     )->execute(['Second user', 'second@example.test', str_repeat('y', 60)]);
     $secondUserId = (int) $pdo->lastInsertId();
+
+    $generatedCount = GeneratedFlashcards::persist(Database::getInstance(), $firstUserId, null, [
+        ['front' => 'Pergunta gerada', 'back' => 'Resposta gerada'],
+        ['front' => '', 'back' => 'Ignorada']
+    ]);
+    expectSame(1, $generatedCount, 'Only complete generated cards are persisted');
+    $generatedCard = Database::getInstance()->fetch('SELECT front, back, due_date FROM flashcards WHERE user_id = ? AND front = ?', [$firstUserId, 'Pergunta gerada']);
+    expectSame('Resposta gerada', $generatedCard['back'], 'Generated card uses the current flashcard schema');
+    expectTrue(!empty($generatedCard['due_date']), 'Generated card is due for review immediately');
 
     $token = Auth::createSession($firstUserId);
     expectSame($firstUserId, Auth::findUserIdByToken($token), 'Stored session resolves its user');

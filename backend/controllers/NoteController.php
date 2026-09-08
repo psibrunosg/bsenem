@@ -4,6 +4,7 @@
 require_once __DIR__ . '/../config/database.php';
 require_once __DIR__ . '/../config/response.php';
 require_once __DIR__ . '/../middleware/auth.php';
+require_once __DIR__ . '/../utils/GeneratedFlashcards.php';
 
 class NoteController {
     public static function index() {
@@ -198,20 +199,7 @@ class NoteController {
             Response::error('Nao foi possivel gerar os flashcards. Tente novamente.');
         }
 
-        $created = 0;
-        foreach ($cards as $card) {
-            if (!empty($card['front']) && !empty($card['back'])) {
-                $db->insert('flashcards', [
-                    'user_id' => $userId,
-                    'subject_id' => $note['subject_id'],
-                    'front_content' => $card['front'],
-                    'back_content' => $card['back'],
-                    'difficulty' => 1,
-                    'next_review' => date('Y-m-d H:i:s')
-                ]);
-                $created++;
-            }
-        }
+        $created = GeneratedFlashcards::persist($db, $userId, $note['subject_id'] === null ? null : (int)$note['subject_id'], $cards);
 
         Response::success(['message' => "$created flashcards gerados com IA!"]);
     }

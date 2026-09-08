@@ -83,7 +83,7 @@ export class FlashcardsPage {
     this.manager = null;
     this.reviewQueue = new ReviewQueue({
       cards: due,
-      onRating: (cardId, quality) => { void this.recordReview(cardId, quality); },
+      onRating: (cardId, quality) => this.recordReview(cardId, quality),
       onComplete: () => { this.status = 'Revisão concluída.'; }
     });
     const header = this.renderHeader();
@@ -127,9 +127,14 @@ export class FlashcardsPage {
   async recordReview(cardId, quality) {
     try {
       const response = await this.api.post(`/flashcards/${cardId}/review`, { quality });
-      if (!response?.success) this.status = 'A avaliação não foi registrada. Tente novamente.';
+      if (!response?.success) {
+        this.status = 'A avaliação não foi registrada. Tente novamente.';
+        return false;
+      }
+      return true;
     } catch {
       this.status = 'A avaliação não foi registrada. Tente novamente.';
+      return false;
     }
   }
 

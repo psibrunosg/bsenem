@@ -13,6 +13,7 @@ export class ReviewQueue {
     
     this.element = null;
     this.flashcard = null;
+    this.isSavingRating = false;
   }
 
   render() {
@@ -46,6 +47,7 @@ export class ReviewQueue {
       </div>
       
       <div class="review-card-container"></div>
+      <p class="review-status" role="alert"></p>
       
       <div class="review-footer">
         <button class="review-skip-btn" data-action="skip">
@@ -112,11 +114,18 @@ export class ReviewQueue {
     });
   }
 
-  handleRating(rating) {
+  async handleRating(rating) {
     const card = this.cards[this.currentIndex];
-    if (!card) return;
+    if (!card || this.isSavingRating) return;
 
-    this.onRating(card.id, rating);
+    this.isSavingRating = true;
+    const saved = await Promise.resolve(this.onRating(card.id, rating)).catch(() => false);
+    this.isSavingRating = false;
+    if (saved === false) {
+      const status = this.element.querySelector('.review-status');
+      if (status) status.textContent = 'A avaliação não foi registrada. Tente novamente.';
+      return;
+    }
 
     // Update stats
     const correctEl = this.element.querySelector('.review-correct');

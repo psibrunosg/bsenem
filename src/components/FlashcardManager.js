@@ -272,7 +272,7 @@ export class FlashcardManager {
   }
 
   editCard(cardId) {
-    const card = this.cards.find(c => c.id === cardId);
+    const card = this.cards.find(c => String(c.id) === String(cardId));
     if (card) {
       this.showForm(card);
     }
