@@ -7,6 +7,7 @@ export class NotesPage {
   constructor(options = {}) {
     this.app = options.app;
     this.subjects = options.subjects ?? [];
+    this.api = options.apiClient ?? api;
     this.currentView = 'editor'; // 'editor' | 'list'
     
     this.editor = null;
@@ -17,7 +18,7 @@ export class NotesPage {
 
   async loadNotes() {
     try {
-      const res = await api.get('/notes');
+      const res = await this.api.get('/notes');
       if (res.success) {
         this.notes = res.data;
         this.updateNotesList();
@@ -30,17 +31,20 @@ export class NotesPage {
   async saveNotes(note) {
     try {
       if (note.isNew) {
-        const res = await api.post('/notes', note);
+      const res = await this.api.post('/notes', note);
         if (res.success) {
           note.id = res.data.id;
           delete note.isNew;
+          return true;
         }
       } else {
-        await api.put(`/notes/${note.id}`, note);
+        const res = await this.api.put(`/notes/${note.id}`, note);
+        return Boolean(res?.success);
       }
     } catch (e) {
       console.error('Failed to save note', e);
     }
+    return false;
   }
 
   async generateFlashcards() {
@@ -54,7 +58,7 @@ export class NotesPage {
     if (btn) btn.innerHTML = '<div class="spinner" style="width: 16px; height: 16px; border-color: var(--orange-500); border-top-color: transparent;"></div>';
     
     try {
-      const res = await api.post(`/notes/${this.currentNote.id}/flashcards`);
+      const res = await this.api.post(`/notes/${this.currentNote.id}/flashcards`);
       if (res.success) {
         alert(res.data.message || 'Flashcards gerados com sucesso!');
       } else {
@@ -183,6 +187,11 @@ export class NotesPage {
 
   bindEvents() {
     this.element.addEventListener('click', (e) => {
+      const noteItem = e.target.closest('.notes-list-item');
+      if (noteItem) {
+        this.selectNote(noteItem.dataset.noteId);
+        return;
+      }
       const action = e.target.closest('[data-action]')?.dataset.action;
       if (!action) return;
 
@@ -195,12 +204,6 @@ export class NotesPage {
           break;
       }
 
-      // Note selection
-      const noteItem = e.target.closest('.notes-list-item');
-      if (noteItem) {
-        const noteId = noteItem.dataset.noteId;
-        this.selectNote(noteId);
-      }
     });
 
     // Search
@@ -287,7 +290,7 @@ export class NotesPage {
     this.saveNotes(this.currentNote);
   }
 
-  handleSave(data) {
+  async handleSave(data) {
     if (!this.currentNote) return;
 
     this.currentNote.title = data.title;
@@ -296,11 +299,10 @@ export class NotesPage {
     this.currentNote.wikiLinks = data.wikiLinks;
     this.currentNote.updatedAt = new Date().toISOString();
 
-    this.saveNotes(this.currentNote);
+    const saved = await this.saveNotes(this.currentNote);
     this.updateNotesList();
     
-    // Show success feedback
-    this.showToast('Nota salva com sucesso!');
+    this.showToast(saved ? 'Nota salva com sucesso!' : 'Não foi possível salvar a nota.');
   }
 
   handleLinkClick(target) {
