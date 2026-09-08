@@ -1,7 +1,7 @@
 // src/components/StatsDashboard.js
 export class StatsDashboard {
   constructor(options = {}) {
-    this.stats = options.stats ?? {
+    const defaults = {
       totalStudyTime: 0,
       sessionsToday: 0,
       cardsReviewed: 0,
@@ -10,8 +10,11 @@ export class StatsDashboard {
       level: 1,
       xp: 0,
       weeklyGoal: 7,
-      weeklyCompleted: 0
+      weeklyCompleted: 0,
+      subjectPerformance: [],
+      recentActivity: []
     };
+    this.stats = { ...defaults, ...(options.stats ?? {}) };
     
     this.element = null;
   }
@@ -75,7 +78,7 @@ export class StatsDashboard {
         </div>
         
         <div class="stats-section">
-          <h3 class="stats-section-title">Desempenho por Matéria</h3>
+          <h3 class="stats-section-title">Atividade por Matéria</h3>
           <div class="subject-stats">
             ${this.renderSubjectStats()}
           </div>
@@ -112,49 +115,43 @@ export class StatsDashboard {
   }
 
   renderSubjectStats() {
-    const subjects = [
-      { name: 'Matemática', progress: 75, color: '#3b82f6' },
-      { name: 'Português', progress: 60, color: '#10b981' },
-      { name: 'História', progress: 45, color: '#f59e0b' },
-      { name: 'Biologia', progress: 80, color: '#ec4899' },
-      { name: 'Física', progress: 55, color: '#06b6d4' }
-    ];
-
-    return subjects.map(subject => `
+    const subjects = Array.isArray(this.stats.subjectPerformance) ? this.stats.subjectPerformance : [];
+    if (!subjects.length) return '<p class="stats-empty">Ainda não há sessões vinculadas a uma matéria.</p>';
+    return subjects.map((subject, index) => {
+      const progress = Math.max(0, Math.min(100, Math.round(Number(subject.progress ?? subject.accuracy ?? 0))));
+      const color = ['#3b82f6', '#10b981', '#f59e0b', '#ec4899', '#06b6d4'][index % 5];
+      return `
       <div class="subject-stat">
         <div class="subject-stat-info">
-          <span class="subject-stat-name">${subject.name}</span>
-          <span class="subject-stat-percent">${subject.progress}%</span>
+          <span class="subject-stat-name">${this.escapeHtml(subject.name)}</span>
+          <span class="subject-stat-percent">${progress}%</span>
         </div>
         <div class="subject-stat-bar">
-          <div class="subject-stat-fill" style="width: ${subject.progress}%; background: ${subject.color}"></div>
+          <div class="subject-stat-fill" style="width: ${progress}%; background: ${color}"></div>
         </div>
       </div>
-    `).join('');
+    `;
+    }).join('');
   }
 
   renderRecentActivity() {
-    const activities = [
-      { type: 'flashcard', text: 'Revisou 15 cards de Biologia', time: '2h atrás', icon: 'layers' },
-      { type: 'exam', text: 'Completou simulado de Matemática', time: '5h atrás', icon: 'clipboard-check' },
-      { type: 'note', text: 'Criou anotação sobre Funções', time: 'Ontem', icon: 'file-text' },
-      { type: 'video', text: 'Assistiu aula de História', time: 'Ontem', icon: 'play-circle' }
-    ];
-
-    return activities.map(activity => `
+    const activities = Array.isArray(this.stats.recentActivity) ? this.stats.recentActivity : [];
+    if (!activities.length) return '<p class="stats-empty">Nenhuma atividade registrada ainda.</p>';
+    return activities.map((activity) => `
       <div class="activity-item">
         <div class="activity-icon">
           <i data-lucide="${activity.icon}" class="w-4 h-4"></i>
         </div>
         <div class="activity-content">
-          <span class="activity-text">${activity.text}</span>
-          <span class="activity-time">${activity.time}</span>
+          <span class="activity-text">${this.escapeHtml(activityLabel(activity))}</span>
+          <span class="activity-time">${this.escapeHtml(activityTime(activity))}</span>
         </div>
       </div>
     `).join('');
   }
 
   formatTime(minutes) {
+    minutes = Number.isFinite(Number(minutes)) ? Math.max(0, Number(minutes)) : 0;
     if (minutes < 60) return `${minutes}min`;
     const hours = Math.floor(minutes / 60);
     const mins = minutes % 60;
@@ -163,12 +160,28 @@ export class StatsDashboard {
 
   updateStats(stats) {
     this.stats = { ...this.stats, ...stats };
+    const oldElement = this.element;
     const newElement = this.render();
-    this.element.replaceWith(newElement);
-    this.element = newElement;
+    if (oldElement?.isConnected) oldElement.replaceWith(newElement);
   }
 
   destroy() {
     if (this.element?.parentNode) this.element.parentNode.removeChild(this.element);
   }
+
+  escapeHtml(value) {
+    const element = document.createElement('div');
+    element.textContent = String(value ?? '');
+    return element.innerHTML;
+  }
+}
+
+function activityLabel(activity) {
+  const labels = { video: 'Assistiu aula', audio: 'Ouviu áudio', flashcards: 'Revisou flashcards', notes: 'Editou anotação', exam: 'Concluiu simulado', pomodoro: 'Concluiu Pomodoro' };
+  return `${labels[activity.type] ?? 'Registrou estudo'}${activity.subject ? `: ${activity.subject}` : ''}`;
+}
+
+function activityTime(activity) {
+  const minutes = Math.round(Number(activity.duration ?? 0) / 60);
+  return minutes > 0 ? `${minutes} min` : 'Agora';
 }

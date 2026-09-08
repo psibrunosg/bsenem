@@ -31,6 +31,10 @@ class ProgressController {
             'cards_reviewed' => 0,
             'exams_completed' => 0
         ];
+        $todayActivity['sessions_count'] = (int) ($db->fetch(
+            'SELECT COUNT(*) as count FROM study_sessions WHERE user_id = ? AND date(started_at) = ?',
+            [$userId, $today]
+        )['count'] ?? 0);
 
         $weekStart = date('Y-m-d', strtotime('monday this week'));
         $weekStats = $db->fetch(
@@ -72,6 +76,25 @@ class ProgressController {
             [$userId]
         );
 
+        $subjectActivity = $db->fetchAll(
+            "SELECT COALESCE(s.name, 'Sem matéria') as name, COALESCE(SUM(ss.duration), 0) as duration_seconds
+             FROM study_sessions ss
+             LEFT JOIN subjects s ON ss.subject_id = s.id
+             WHERE ss.user_id = ?
+             GROUP BY ss.subject_id, s.name
+             HAVING COALESCE(SUM(ss.duration), 0) > 0
+             ORDER BY duration_seconds DESC
+             LIMIT 5",
+            [$userId]
+        );
+        $totalSubjectDuration = array_sum(array_map(static fn($row) => (int) $row['duration_seconds'], $subjectActivity));
+        foreach ($subjectActivity as &$subject) {
+            $subject['progress'] = $totalSubjectDuration > 0
+                ? (int) round(((int) $subject['duration_seconds'] / $totalSubjectDuration) * 100)
+                : 0;
+        }
+        unset($subject);
+
         $achievements = $db->fetchAll(
             "SELECT a.*, ua.unlocked_at 
              FROM user_achievements ua 
@@ -94,6 +117,7 @@ class ProgressController {
             'flashcards' => $flashcardStats,
             'exams' => $examStats,
             'recent_sessions' => $recentSessions,
+            'subject_activity' => $subjectActivity,
             'achievements' => $achievements,
             'total_study_minutes' => $totalStudyMinutes
         ]);

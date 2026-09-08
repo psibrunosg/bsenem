@@ -189,7 +189,7 @@ export class DashboardPage {
     const flashcards = dashboard.flashcards ?? {};
     const totalStudyTime = Number(dashboard.total_study_minutes ?? 0);
     const today = dashboard.today ?? {};
-    const sessionsToday = Number(today.study_minutes ?? 0);
+    const sessionsToday = Number(today.sessions_count ?? 0);
     const totalReviews = Number(flashcards.total_reviews ?? 0);
     
     return {
@@ -201,7 +201,18 @@ export class DashboardPage {
       level: this.user.level,
       xp: this.user.xp,
       weeklyGoal: 7,
-      weeklyCompleted: this.getWeeklyCompleted()
+      weeklyCompleted: this.getWeeklyCompleted(),
+      subjectPerformance: (dashboard.subject_activity ?? []).map((subject) => ({
+        name: subject.name,
+        minutes: Number(subject.duration_seconds ?? 0) / 60,
+        progress: Number(subject.progress ?? 0)
+      })),
+      recentActivity: (dashboard.recent_sessions ?? []).map((session) => ({
+        type: session.type,
+        subject: session.subject_name,
+        duration: Number(session.duration ?? 0),
+        startedAt: session.started_at
+      }))
     };
   }
 

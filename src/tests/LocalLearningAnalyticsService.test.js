@@ -192,6 +192,24 @@ describe('LocalLearningAnalyticsService', () => {
 describe('DashboardPage local analytics loading', () => {
   afterEach(() => vi.restoreAllMocks());
 
+  it('maps factual account aggregates to dashboard stats without treating minutes as sessions', () => {
+    const page = new DashboardPage({ user: { id: 'u1', name: 'Ana', streak: 0, level: 1, xp: 0 }, library: null });
+    page.dashboardData = {
+      total_study_minutes: 120,
+      today: { study_minutes: 45, sessions_count: 3 },
+      flashcards: { total_reviews: 10, correct_reviews: 8 },
+      subject_activity: [{ name: 'Anatomia', duration_seconds: 2700, progress: 100 }],
+      recent_sessions: [{ type: 'video', subject_name: 'Anatomia', duration: 2700, started_at: '2026-09-08 12:00:00' }]
+    };
+
+    expect(page.getUserStats()).toMatchObject({
+      totalStudyTime: 120,
+      sessionsToday: 3,
+      subjectPerformance: [{ name: 'Anatomia', minutes: 45, progress: 100 }],
+      recentActivity: [{ type: 'video', subject: 'Anatomia', duration: 2700 }]
+    });
+  });
+
   it('retains a valid local summary when account APIs fail and exposes its recorder to the player', async () => {
     vi.spyOn(api, 'get').mockRejectedValue(new Error('offline'));
     const localSummary = { totalMinutes: 3, todayMinutes: 1, performance: [], recent: [], status: { code: 'ready', persistent: true, message: '' } };
