@@ -19,6 +19,25 @@ describe('private beta empty states', () => {
     expect(new ExamsPage({ subjects: [] }).exams).toEqual([]);
   });
 
+  it('lists and starts a validated local exam from the learner library', () => {
+    const exam = {
+      id: 'anatomia-01', title: 'Anatomia', durationMinutes: 30,
+      questions: [{ id: 'q1', statement: 'Qual é o osso?', options: ['A', 'B', 'C', 'D', 'E'], correctOption: 1 }]
+    };
+    const library = {
+      items: [{ id: 'local-exam', resourceType: 'exam', title: 'Anatomia', collection: 'Saúde' }],
+      getExam: vi.fn(() => exam)
+    };
+    const page = new ExamsPage({ library });
+    const element = page.render();
+
+    expect(element.textContent).toContain('Anatomia');
+    element.querySelector('[data-action="start-exam"]').click();
+
+    expect(library.getExam).toHaveBeenCalledWith('local-exam');
+    expect(element.querySelector('.exam-player')).not.toBeNull();
+  });
+
   it('loads due cards and opens a review queue from the flashcards page', async () => {
     api.get.mockResolvedValueOnce({
       success: true,

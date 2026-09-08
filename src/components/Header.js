@@ -19,6 +19,7 @@ export class Header {
     this.pomodoroMode = 'focus'; // focus | break
     this.pomodoroInterval = null;
     this.pomodoroActive = false;
+    this.completedFocusCycles = 0;
     
     this.element = null;
     this.commandPalette = null;
@@ -351,6 +352,7 @@ export class Header {
   stopPomodoro() {
     this.pomodoroActive = false;
     clearInterval(this.pomodoroInterval);
+    this.pomodoroInterval = null;
     const widget = this.element.querySelector('.pomodoro-timer');
     widget.style.borderColor = 'var(--border-color)';
     widget.style.boxShadow = 'none';
@@ -369,9 +371,11 @@ export class Header {
     // Play sound / notification (optional)
     if (this.pomodoroMode === 'focus') {
       // Finished focus -> Start break
+      this.completedFocusCycles += 1;
       this.pomodoroMode = 'break';
-      this.pomodoroTime = 5 * 60; // 5 min
-      this.element.querySelector('.pomodoro-timer').title = "Iniciar Pausa (5 min)";
+      const breakMinutes = this.completedFocusCycles % 4 === 0 ? 15 : 5;
+      this.pomodoroTime = breakMinutes * 60;
+      this.element.querySelector('.pomodoro-timer').title = `Iniciar Pausa (${breakMinutes} min)`;
       this.element.querySelector('.pomodoro-timer').style.background = "var(--success-bg)";
       
       // Call external handler to trigger confetti and give XP
@@ -507,6 +511,7 @@ export class Header {
   }
 
   destroy() {
+    this.stopPomodoro();
     this.closeCommandPalette();
     if (this.element?.parentNode) this.element.parentNode.removeChild(this.element);
   }

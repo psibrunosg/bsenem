@@ -82,6 +82,7 @@ describe('LocalLibraryService', () => {
       'almost.bsestudos.exam.json.bak': file('application/json', { text: async () => exam })
     }) }));
     expect(result.items.map(item => [item.title, item.resourceType])).toEqual([['enem', 'exam']]);
+    expect(service.getExam(result.items[0].id)).toMatchObject({ id: 'enem-2026', title: 'ENEM 2026' });
   });
 
   it('clears the in-memory catalog when permission is denied after indexing', async () => {

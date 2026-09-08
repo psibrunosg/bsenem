@@ -16,6 +16,7 @@ export class LocalLibraryService {
     this.diagnostics = [];
     this.catalog = buildCourseCatalog([]);
     this.fileHandles = new Map();
+    this.localExams = new Map();
     this.objectUrls = new Map();
   }
 
@@ -58,6 +59,7 @@ export class LocalLibraryService {
     const files = [];
     const diagnostics = [];
     this.fileHandles.clear();
+    this.localExams.clear();
     await visit(handle, [], files, diagnostics);
     const sidecars = new Map();
     for (const entry of files.filter(entry => SIDECAR_TYPES.has(entry.extension))) {
@@ -77,6 +79,7 @@ export class LocalLibraryService {
           pathSegments: Object.freeze([...entry.path]), rawTitle: entry.name.slice(0, -'.bsestudos.exam.json'.length), typeFolder: typeFolder(entry.path)
         }));
         this.fileHandles.set(id, entry.handle);
+        this.localExams.set(id, Object.freeze(exam));
         continue;
       }
       const resourceType = MEDIA_TYPES.get(entry.extension);
@@ -105,6 +108,7 @@ export class LocalLibraryService {
   }
 
   getItem(id) { return this.items.find(item => item.id === id) || null; }
+  getExam(id) { return this.localExams.get(id) || null; }
 
   async createObjectUrl(item) {
     const handle = this.fileHandles.get(item.id);
@@ -126,6 +130,7 @@ export class LocalLibraryService {
     this.diagnostics = [];
     this.catalog = buildCourseCatalog([]);
     this.fileHandles.clear();
+    this.localExams.clear();
     this.releaseObjectUrls();
   }
 

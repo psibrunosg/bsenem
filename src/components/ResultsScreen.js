@@ -5,6 +5,7 @@ import { api } from '../utils/api.js';
 export class ResultsScreen {
   constructor(options = {}) {
     this.results = options.results ?? null;
+    this.persistAttempt = options.persistAttempt ?? true;
     
     this.onReview = options.onReview ?? (() => {});
     this.onRetry = options.onRetry ?? (() => {});
@@ -12,7 +13,7 @@ export class ResultsScreen {
     
     this.element = null;
     
-    if (this.results) {
+    if (this.results && this.persistAttempt) {
       this.saveExamAttempt();
     }
   }
