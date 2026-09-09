@@ -47,4 +47,18 @@ describe('NotesPage', () => {
 
     expect(page.showToast).toHaveBeenCalledWith('Não foi possível salvar a nota.');
   });
+
+  it('does not leave an unsaved Feynman template pretending to be a saved note', async () => {
+    const page = new NotesPage();
+    page.loadNotes = async () => {};
+    page.render();
+    page.saveNotes = vi.fn().mockResolvedValue(false);
+    page.showToast = vi.fn();
+
+    await page.createFeynmanNote();
+
+    expect(page.notes).toEqual([]);
+    expect(page.currentNote).toBeNull();
+    expect(page.showToast).toHaveBeenCalledWith('Não foi possível criar o roteiro Feynman.');
+  });
 });

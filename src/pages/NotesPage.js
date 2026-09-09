@@ -233,7 +233,7 @@ export class NotesPage {
     this.updateNotesList();
   }
 
-  createFeynmanNote() {
+  async createFeynmanNote() {
     const feynmanTemplate = `# Método Feynman: [Tema Aqui]
 
 ## 1. O Conceito (Simplifique)
@@ -265,9 +265,20 @@ export class NotesPage {
     };
 
     this.notes.unshift(note);
-    this.saveNotes(note);
+    const saved = await this.saveNotes(note);
+    if (!saved) {
+      this.notes = this.notes.filter((item) => item !== note);
+      this.currentNote = null;
+      this.updateNotesList();
+      const container = this.element.querySelector('.notes-editor-container');
+      if (container) container.innerHTML = this.renderEmptyState();
+      this.showToast('Não foi possível criar o roteiro Feynman.');
+      return false;
+    }
     this.selectNote(note.id);
     this.updateNotesList();
+    this.showToast('Roteiro Feynman criado.');
+    return true;
   }
 
   selectNote(noteId) {
