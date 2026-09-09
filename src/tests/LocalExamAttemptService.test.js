@@ -21,4 +21,15 @@ describe('LocalExamAttemptService', () => {
       examId: 'anatomia-01', questionId: 'q1', questionText: 'Qual osso?', selectedAnswer: 0, correctAnswer: 1
     })]);
   });
+
+  it('syncs a completed local attempt to the authenticated endpoint without losing the local copy', async () => {
+    const api = { post: vi.fn().mockResolvedValue({ success: true }) };
+    const service = new LocalExamAttemptService({ idb: memoryStore(), userId: 'user-1', libraryId: 'library-a', apiClient: api });
+    await service.record({ exam: { id: 'anatomia-01', title: 'Anatomia' }, score: 50, totalQuestions: 2, totalTime: 120, questionResults: [] });
+
+    expect(api.post).toHaveBeenCalledWith('/exams/local-attempt', expect.objectContaining({
+      library_id: 'library-a', local_exam_id: 'anatomia-01', score: 50, total_questions: 2, time_spent: 120
+    }));
+    await expect(service.listErrors()).resolves.toEqual([]);
+  });
 });

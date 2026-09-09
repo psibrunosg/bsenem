@@ -118,6 +118,8 @@ match(true) {
     // Exam routes
     $resource === 'exams' && $id === 'attempt' && $method === 'POST'
         => ExamController::attempt(),
+    $resource === 'exams' && $id === 'local-attempt' && $method === 'POST'
+        => ExamController::localAttempt(),
 
     // Fallback
     default => Response::notFound('Endpoint not found')

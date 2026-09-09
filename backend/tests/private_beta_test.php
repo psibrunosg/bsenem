@@ -6,6 +6,7 @@ require_once __DIR__ . '/../config/database.php';
 require_once __DIR__ . '/../middleware/auth.php';
 require_once __DIR__ . '/../utils/GeneratedFlashcards.php';
 require_once __DIR__ . '/../utils/FlashcardReviewActivity.php';
+require_once __DIR__ . '/../utils/LocalExamAttempts.php';
 
 function expectSame(mixed $expected, mixed $actual, string $message): void {
     if ($expected !== $actual) {
@@ -75,14 +76,14 @@ try {
     $pdo = Database::getInstance()->getConnection();
     expectSame(0, (int) $pdo->query('SELECT COUNT(*) FROM users')->fetchColumn(), 'New databases have no users');
     expectSame(0, (int) $pdo->query('SELECT COUNT(*) FROM flashcards')->fetchColumn(), 'New databases have no flashcards');
-    expectSame(2, (int) $pdo->query('SELECT COUNT(*) FROM schema_migrations')->fetchColumn(), 'Both migrations run once');
+    expectSame(3, (int) $pdo->query('SELECT COUNT(*) FROM schema_migrations')->fetchColumn(), 'All migrations run once');
     expectTrue(
         (bool) $pdo->query("SELECT name FROM sqlite_master WHERE type = 'table' AND name = 'auth_sessions'")->fetchColumn(),
         'Session table exists'
     );
 
     initializeDatabase();
-    expectSame(2, (int) $pdo->query('SELECT COUNT(*) FROM schema_migrations')->fetchColumn(), 'Migrations are idempotent');
+    expectSame(3, (int) $pdo->query('SELECT COUNT(*) FROM schema_migrations')->fetchColumn(), 'Migrations are idempotent');
 
     $firstUserId = (int) $pdo->prepare(
         'INSERT INTO users (name, email, password_hash) VALUES (?, ?, ?)'
@@ -109,6 +110,14 @@ try {
     $reviewActivity = Database::getInstance()->fetch('SELECT cards_reviewed, xp_earned FROM activity_log WHERE user_id = ?', [$firstUserId]);
     expectSame(1, (int) $reviewActivity['cards_reviewed'], 'Flashcard review increments the daily card total');
     expectSame(3, (int) $reviewActivity['xp_earned'], 'Flashcard review increments the daily XP total');
+
+    $localAttemptId = LocalExamAttempts::record(Database::getInstance(), $firstUserId, [
+        'library_id' => 'library-a', 'local_exam_id' => 'anatomia-01', 'exam_title' => 'Anatomia',
+        'score' => 75, 'total_questions' => 4, 'time_spent' => 300, 'answers' => [['questionId' => 'q1', 'isCorrect' => true]]
+    ]);
+    $localAttempt = Database::getInstance()->fetch('SELECT local_exam_id, score, total_questions FROM local_exam_attempts WHERE id = ?', [$localAttemptId]);
+    expectSame('anatomia-01', $localAttempt['local_exam_id'], 'Local attempts retain the source exam identifier');
+    expectSame(75, (int) $localAttempt['score'], 'Local attempts retain the factual score');
 
     $token = Auth::createSession($firstUserId);
     expectSame($firstUserId, Auth::findUserIdByToken($token), 'Stored session resolves its user');

@@ -2,13 +2,15 @@ import { ExamPlayer } from '@components/ExamPlayer.js';
 import { ResultsScreen } from '@components/ResultsScreen.js';
 import { toExamPlayerQuestion } from '@services/examSchema.js';
 import { LocalExamAttemptService } from '@services/LocalExamAttemptService.js';
+import { api as defaultApi } from '@utils/api.js';
 
 export class ExamsPage {
-  constructor({ subjects = [], user, library, attemptService = null } = {}) {
+  constructor({ subjects = [], user, library, attemptService = null, apiClient = defaultApi } = {}) {
     this.subjects = subjects;
     this.library = library;
     this.user = user;
     this.attemptService = attemptService;
+    this.api = apiClient;
     this.errors = [];
     this.exams = this.collectExams();
     this.element = null;
@@ -93,7 +95,7 @@ export class ExamsPage {
     if (this.attemptService) return this.attemptService;
     if (!this.user?.id || !this.library?.idb || typeof this.library.libraryId !== 'function') return null;
     const libraryId = await this.library.libraryId();
-    this.attemptService = new LocalExamAttemptService({ idb: this.library.idb, userId: this.user.id, libraryId });
+    this.attemptService = new LocalExamAttemptService({ idb: this.library.idb, userId: this.user.id, libraryId, apiClient: this.api });
     return this.attemptService;
   }
 
