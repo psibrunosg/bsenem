@@ -38,6 +38,28 @@ describe('private beta empty states', () => {
     expect(element.querySelector('.exam-player')).not.toBeNull();
   });
 
+  it('shows the persisted local error notebook without example entries', () => {
+    const page = new ExamsPage();
+    const element = page.render();
+    page.errors = [{ examTitle: 'Anatomia', questionText: 'Qual osso?' }];
+
+    page.showErrors();
+
+    expect(element.querySelector('.exams-error-notebook').textContent).toContain('Qual osso?');
+    expect(element.textContent).not.toContain('Matemática');
+  });
+
+  it('records errors when a local exam is completed', async () => {
+    const attemptService = { listErrors: vi.fn().mockResolvedValue([]), record: vi.fn().mockResolvedValue([{ questionId: 'q1' }]) };
+    const page = new ExamsPage({ attemptService });
+    page.render();
+
+    page.showResults({ exam: { id: 'anatomia', title: 'Anatomia' }, score: 0, totalQuestions: 1, correct: 0, incorrect: 1, unanswered: 0, totalTime: 0, questionResults: [{ questionId: 'q1', isCorrect: false }] });
+    await vi.waitFor(() => expect(attemptService.record).toHaveBeenCalled());
+
+    expect(page.errors).toEqual([{ questionId: 'q1' }]);
+  });
+
   it('loads due cards and opens a review queue from the flashcards page', async () => {
     api.get.mockResolvedValueOnce({
       success: true,

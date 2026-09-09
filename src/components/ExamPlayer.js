@@ -253,8 +253,10 @@ export class ExamPlayer {
 
       return {
         questionId: question.id,
+        questionText: question.text,
         selectedAnswer: answer,
         correctAnswer: question.correctAnswer,
+        explanation: question.explanation,
         isCorrect,
         flagged: this.flagged.has(question.id)
       };

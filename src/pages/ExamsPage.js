@@ -1,11 +1,15 @@
 import { ExamPlayer } from '@components/ExamPlayer.js';
 import { ResultsScreen } from '@components/ResultsScreen.js';
 import { toExamPlayerQuestion } from '@services/examSchema.js';
+import { LocalExamAttemptService } from '@services/LocalExamAttemptService.js';
 
 export class ExamsPage {
-  constructor({ subjects = [], library } = {}) {
+  constructor({ subjects = [], user, library, attemptService = null } = {}) {
     this.subjects = subjects;
     this.library = library;
+    this.user = user;
+    this.attemptService = attemptService;
+    this.errors = [];
     this.exams = this.collectExams();
     this.element = null;
     this.player = null;
@@ -18,6 +22,7 @@ export class ExamsPage {
     this.element = document.createElement('div');
     this.element.className = 'exams-page';
     this.renderList();
+    void this.loadErrors();
     return this.element;
   }
 
@@ -27,7 +32,7 @@ export class ExamsPage {
     this.resultsScreen?.destroy();
     this.resultsScreen = null;
     this.exams = this.collectExams();
-    this.element.replaceChildren(this.header(), this.examList());
+    this.element.replaceChildren(this.header(), this.errorNotebookLink(), this.examList());
   }
 
   header() {
@@ -66,6 +71,32 @@ export class ExamsPage {
     return list;
   }
 
+  errorNotebookLink() {
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.className = 'btn btn-secondary';
+    button.dataset.action = 'show-errors';
+    button.textContent = `Caderno de erros (${this.errors.length})`;
+    button.disabled = this.errors.length === 0;
+    button.addEventListener('click', () => this.showErrors());
+    return button;
+  }
+
+  async loadErrors() {
+    const service = await this.ensureAttemptService();
+    if (!service) return;
+    this.errors = await service.listErrors();
+    if (this.element && !this.player && !this.resultsScreen) this.renderList();
+  }
+
+  async ensureAttemptService() {
+    if (this.attemptService) return this.attemptService;
+    if (!this.user?.id || !this.library?.idb || typeof this.library.libraryId !== 'function') return null;
+    const libraryId = await this.library.libraryId();
+    this.attemptService = new LocalExamAttemptService({ idb: this.library.idb, userId: this.user.id, libraryId });
+    return this.attemptService;
+  }
+
   startExam(itemId) {
     const source = this.library?.getExam?.(itemId);
     const item = this.exams.find((exam) => exam.id === itemId);
@@ -92,6 +123,39 @@ export class ExamsPage {
       onReview: () => this.startReview(results)
     });
     this.element.replaceChildren(this.header(), this.resultsScreen.render());
+    void this.recordErrors(results);
+  }
+
+  async recordErrors(results) {
+    const service = await this.ensureAttemptService();
+    if (!service) return;
+    const errors = await service.record(results);
+    this.errors = [...errors, ...this.errors];
+  }
+
+  showErrors() {
+    const section = document.createElement('section');
+    section.className = 'exams-error-notebook';
+    const title = document.createElement('h2');
+    title.textContent = 'Caderno de erros';
+    section.appendChild(title);
+    for (const error of this.errors) {
+      const item = document.createElement('article');
+      item.className = 'exam-list-item';
+      const question = document.createElement('p');
+      question.textContent = error.questionText || 'Questão sem enunciado';
+      const source = document.createElement('small');
+      source.textContent = error.examTitle;
+      item.append(question, source);
+      section.appendChild(item);
+    }
+    const back = document.createElement('button');
+    back.type = 'button';
+    back.className = 'btn btn-secondary';
+    back.textContent = 'Voltar aos simulados';
+    back.addEventListener('click', () => this.renderList());
+    section.appendChild(back);
+    this.element.replaceChildren(this.header(), section);
   }
 
   startReview(results) {
