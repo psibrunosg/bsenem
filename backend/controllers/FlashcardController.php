@@ -4,6 +4,7 @@
 require_once __DIR__ . '/../config/database.php';
 require_once __DIR__ . '/../config/response.php';
 require_once __DIR__ . '/../middleware/auth.php';
+require_once __DIR__ . '/../utils/FlashcardReviewActivity.php';
 
 class FlashcardController {
     public static function index() {
@@ -216,14 +217,7 @@ class FlashcardController {
         // Update user XP
         $db->query("UPDATE users SET xp = xp + ? WHERE id = ?", [$xpEarned, $userId]);
         
-        // Log study session
-        $db->insert('study_sessions', [
-            'user_id' => $userId,
-            'type' => 'flashcards',
-            'resource_id' => $id,
-            'duration' => 0,
-            'xp_earned' => $xpEarned
-        ]);
+        FlashcardReviewActivity::record($db, $userId, $card['subject_id'] === null ? null : (int) $card['subject_id'], (int) $id, $xpEarned);
         
         Response::success([
             'card' => $db->fetch("SELECT * FROM flashcards WHERE id = ?", [$id]),

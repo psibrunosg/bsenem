@@ -5,6 +5,7 @@ declare(strict_types=1);
 require_once __DIR__ . '/../config/database.php';
 require_once __DIR__ . '/../middleware/auth.php';
 require_once __DIR__ . '/../utils/GeneratedFlashcards.php';
+require_once __DIR__ . '/../utils/FlashcardReviewActivity.php';
 
 function expectSame(mixed $expected, mixed $actual, string $message): void {
     if ($expected !== $actual) {
@@ -100,6 +101,14 @@ try {
     $generatedCard = Database::getInstance()->fetch('SELECT front, back, due_date FROM flashcards WHERE user_id = ? AND front = ?', [$firstUserId, 'Pergunta gerada']);
     expectSame('Resposta gerada', $generatedCard['back'], 'Generated card uses the current flashcard schema');
     expectTrue(!empty($generatedCard['due_date']), 'Generated card is due for review immediately');
+
+    FlashcardReviewActivity::record(Database::getInstance(), $firstUserId, null, 99, 3);
+    $reviewSession = Database::getInstance()->fetch('SELECT type, resource_id, xp_earned FROM study_sessions WHERE user_id = ? AND resource_id = ?', [$firstUserId, 99]);
+    expectSame('flashcards', $reviewSession['type'], 'Flashcard review creates a factual study session');
+    expectSame(3, (int) $reviewSession['xp_earned'], 'Flashcard review session keeps earned XP');
+    $reviewActivity = Database::getInstance()->fetch('SELECT cards_reviewed, xp_earned FROM activity_log WHERE user_id = ?', [$firstUserId]);
+    expectSame(1, (int) $reviewActivity['cards_reviewed'], 'Flashcard review increments the daily card total');
+    expectSame(3, (int) $reviewActivity['xp_earned'], 'Flashcard review increments the daily XP total');
 
     $token = Auth::createSession($firstUserId);
     expectSame($firstUserId, Auth::findUserIdByToken($token), 'Stored session resolves its user');
