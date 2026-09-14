@@ -22,6 +22,7 @@ export function validateLocalExam(input) {
 export function toExamPlayerQuestion(question) {
   const playerQuestion = { id: question.id, text: question.statement, answers: question.options, correctAnswer: question.correctOption };
   if (question.explanation !== undefined) playerQuestion.explanation = question.explanation;
+  if (question.image !== undefined) playerQuestion.image = question.image;
   return playerQuestion;
 }
 

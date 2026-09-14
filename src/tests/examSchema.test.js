@@ -37,4 +37,14 @@ describe('local exam schema', () => {
       id: 'q-001', text: 'Enunciado', answers: ['A', 'B', 'C', 'D', 'E'], correctAnswer: 0
     });
   });
+
+  it('preserves image property in toExamPlayerQuestion when present', () => {
+    const question = {
+      ...validExam().questions[0],
+      image: 'data/enem/images/enem_2023_q001_img1.png'
+    };
+    expect(toExamPlayerQuestion(question)).toMatchObject({
+      image: 'data/enem/images/enem_2023_q001_img1.png'
+    });
+  });
 });
