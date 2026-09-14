@@ -3,13 +3,17 @@ import re
 import time
 from typing import Dict, List, Optional, Tuple
 import requests
+import urllib3
 from bs4 import BeautifulSoup
+
+urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
 
 def get_session() -> requests.Session:
     session = requests.Session()
     session.headers.update({"User-Agent": USER_AGENT})
+    session.verify = False
     return session
 
 def is_regular_exam(href: str, text: str) -> bool:
@@ -40,7 +44,6 @@ def select_year_pdfs(year: int, links: List[Tuple[str, str]]) -> Dict[str, Optio
     gabaritos = [(txt, href) for txt, href in regular_links if is_gabarito(href, txt)]
     
     # 1. Dia 1 Prova
-    # Prefer CD1 / azul / dia 1
     for txt, href in provas:
         fn = href.split("/")[-1].lower()
         t = txt.lower()
@@ -71,7 +74,6 @@ def select_year_pdfs(year: int, links: List[Tuple[str, str]]) -> Dict[str, Optio
                 break
 
     # 3. Dia 2 Prova
-    # Prefer CD5 / amarelo / cinza / dia 2
     for txt, href in provas:
         fn = href.split("/")[-1].lower()
         t = txt.lower()
@@ -110,7 +112,7 @@ def fetch_year_links(year: int, session: Optional[requests.Session] = None) -> L
     
     for attempt in range(3):
         try:
-            resp = session.get(url, timeout=30)
+            resp = session.get(url, timeout=30, verify=False)
             if resp.status_code == 200:
                 soup = BeautifulSoup(resp.text, "html.parser")
                 links: List[Tuple[str, str]] = []
@@ -137,7 +139,7 @@ def download_file(url: str, dest_path: str, session: Optional[requests.Session] 
     temp_path = dest_path + ".tmp"
     for attempt in range(3):
         try:
-            with session.get(url, stream=True, timeout=60) as resp:
+            with session.get(url, stream=True, timeout=60, verify=False) as resp:
                 resp.raise_for_status()
                 with open(temp_path, "wb") as f:
                     for chunk in resp.iter_content(chunk_size=65536):
