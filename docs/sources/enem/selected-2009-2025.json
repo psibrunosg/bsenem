@@ -1,0 +1,859 @@
+{
+  "schema": "bsestudos.enem-canonical-selection.v1",
+  "generatedAt": "2026-09-15T12:00:27.391Z",
+  "sourceInventory": "docs/sources/enem/official-index-2009-2025.json",
+  "cadernoCount": 34,
+  "gabaritoCount": 34,
+  "selections": [
+    {
+      "year": 2009,
+      "day": 1,
+      "selectionReason": "preferred-caderno",
+      "prova": {
+        "year": 2009,
+        "application": "regular",
+        "documentKind": "prova",
+        "officialUrl": "https://download.inep.gov.br/educacao_basica/enem/provas/2009/dia1_caderno1_azul.pdf",
+        "sourcePageUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2009",
+        "discoveredAt": "2026-09-15T11:54:16.051Z",
+        "sourceLabel": "1º Dia - Caderno 1 - Azul",
+        "day": 1
+      },
+      "gabarito": {
+        "year": 2009,
+        "application": "regular",
+        "documentKind": "gabarito",
+        "officialUrl": "https://download.inep.gov.br/educacao_basica/enem/gabaritos/2009/gabarito_dia1.pdf",
+        "sourcePageUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2009",
+        "discoveredAt": "2026-09-15T11:54:16.051Z",
+        "sourceLabel": "1º Dia - Caderno 1 - Azul",
+        "day": 1
+      }
+    },
+    {
+      "year": 2009,
+      "day": 2,
+      "selectionReason": "preferred-caderno",
+      "prova": {
+        "year": 2009,
+        "application": "regular",
+        "documentKind": "prova",
+        "officialUrl": "https://download.inep.gov.br/educacao_basica/enem/provas/2009/dia2_caderno5_amarelo.pdf",
+        "sourcePageUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2009",
+        "discoveredAt": "2026-09-15T11:54:16.051Z",
+        "sourceLabel": "2º Dia - Caderno 5 - Amarelo",
+        "day": 2
+      },
+      "gabarito": {
+        "year": 2009,
+        "application": "regular",
+        "documentKind": "gabarito",
+        "officialUrl": "https://download.inep.gov.br/educacao_basica/enem/gabaritos/2009/gabarito_dia2.pdf",
+        "sourcePageUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2009",
+        "discoveredAt": "2026-09-15T11:54:16.051Z",
+        "sourceLabel": "2º Dia - Caderno 5 - Amarelo",
+        "day": 2
+      }
+    },
+    {
+      "year": 2010,
+      "day": 1,
+      "selectionReason": "preferred-caderno",
+      "prova": {
+        "year": 2010,
+        "application": "regular",
+        "documentKind": "prova",
+        "officialUrl": "https://download.inep.gov.br/educacao_basica/enem/provas/2010/dia1_caderno1_azul.pdf",
+        "sourcePageUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2010",
+        "discoveredAt": "2026-09-15T11:54:16.051Z",
+        "sourceLabel": "Dia 1 - Caderno 1 - Azul – Aplicação regular",
+        "day": 1
+      },
+      "gabarito": {
+        "year": 2010,
+        "application": "regular",
+        "documentKind": "gabarito",
+        "officialUrl": "https://download.inep.gov.br/educacao_basica/enem/provas/2010/dia1_caderno1_azul_com_gab.pdf",
+        "sourcePageUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2010",
+        "discoveredAt": "2026-09-15T11:54:16.051Z",
+        "sourceLabel": "Dia 1 - Caderno 1 - Azul – Aplicação regular",
+        "day": 1
+      }
+    },
+    {
+      "year": 2010,
+      "day": 2,
+      "selectionReason": "preferred-caderno",
+      "prova": {
+        "year": 2010,
+        "application": "regular",
+        "documentKind": "prova",
+        "officialUrl": "https://download.inep.gov.br/educacao_basica/enem/provas/2010/dia2_caderno5_amarelo.pdf",
+        "sourcePageUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2010",
+        "discoveredAt": "2026-09-15T11:54:16.051Z",
+        "sourceLabel": "Dia 2 - Caderno 5 - Amarelo – Aplicação regular",
+        "day": 2
+      },
+      "gabarito": {
+        "year": 2010,
+        "application": "regular",
+        "documentKind": "gabarito",
+        "officialUrl": "https://download.inep.gov.br/educacao_basica/enem/provas/2010/dia2_caderno5_amarelo_com_gab.pdf",
+        "sourcePageUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2010",
+        "discoveredAt": "2026-09-15T11:54:16.051Z",
+        "sourceLabel": "Dia 2 - Caderno 5 - Amarelo – Aplicação regular",
+        "day": 2
+      }
+    },
+    {
+      "year": 2011,
+      "day": 1,
+      "selectionReason": "preferred-caderno",
+      "prova": {
+        "year": 2011,
+        "application": "regular",
+        "documentKind": "prova",
+        "officialUrl": "https://download.inep.gov.br/educacao_basica/enem/provas/2011/dia1_caderno1_azul.pdf",
+        "sourcePageUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2011",
+        "discoveredAt": "2026-09-15T11:54:16.051Z",
+        "sourceLabel": "1º Dia - Caderno 1 - Azul – Aplicação regular",
+        "day": 1
+      },
+      "gabarito": {
+        "year": 2011,
+        "application": "regular",
+        "documentKind": "gabarito",
+        "officialUrl": "https://download.inep.gov.br/educacao_basica/enem/gabaritos/2011/01_AZUL_GABARITO.pdf",
+        "sourcePageUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2011",
+        "discoveredAt": "2026-09-15T11:54:16.051Z",
+        "sourceLabel": "1º Dia - Caderno 1 - Azul – Aplicação regular",
+        "day": 1
+      }
+    },
+    {
+      "year": 2011,
+      "day": 2,
+      "selectionReason": "preferred-caderno",
+      "prova": {
+        "year": 2011,
+        "application": "regular",
+        "documentKind": "prova",
+        "officialUrl": "https://download.inep.gov.br/educacao_basica/enem/provas/2011/dia2_caderno5_amarelo.pdf",
+        "sourcePageUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2011",
+        "discoveredAt": "2026-09-15T11:54:16.051Z",
+        "sourceLabel": "2º Dia - Caderno 5 - Amarelo – Aplicação regular",
+        "day": 2
+      },
+      "gabarito": {
+        "year": 2011,
+        "application": "regular",
+        "documentKind": "gabarito",
+        "officialUrl": "https://download.inep.gov.br/educacao_basica/enem/gabaritos/2011/05_AMARELO_GABARITO.pdf",
+        "sourcePageUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2011",
+        "discoveredAt": "2026-09-15T11:54:16.051Z",
+        "sourceLabel": "2º Dia - Caderno 5 - Amarelo – Aplicação regular",
+        "day": 2
+      }
+    },
+    {
+      "year": 2012,
+      "day": 1,
+      "selectionReason": "preferred-caderno",
+      "prova": {
+        "year": 2012,
+        "application": "regular",
+        "documentKind": "prova",
+        "officialUrl": "https://download.inep.gov.br/educacao_basica/enem/provas/2012/dia1_caderno1_azul.pdf",
+        "sourcePageUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2012",
+        "discoveredAt": "2026-09-15T11:54:16.051Z",
+        "sourceLabel": "1º Dia - Caderno 1 - Azul – Aplicação regular",
+        "day": 1
+      },
+      "gabarito": {
+        "year": 2012,
+        "application": "regular",
+        "documentKind": "gabarito",
+        "officialUrl": "https://download.inep.gov.br/educacao_basica/enem/gabaritos/2012/dia1_azul.pdf",
+        "sourcePageUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2012",
+        "discoveredAt": "2026-09-15T11:54:16.051Z",
+        "sourceLabel": "1º Dia - Caderno 1 - Azul – Aplicação regular",
+        "day": 1
+      }
+    },
+    {
+      "year": 2012,
+      "day": 2,
+      "selectionReason": "preferred-caderno",
+      "prova": {
+        "year": 2012,
+        "application": "regular",
+        "documentKind": "prova",
+        "officialUrl": "https://download.inep.gov.br/educacao_basica/enem/provas/2012/dia2_caderno5_amarelo.pdf",
+        "sourcePageUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2012",
+        "discoveredAt": "2026-09-15T11:54:16.051Z",
+        "sourceLabel": "2º Dia - Caderno 5 - Amarelo – Aplicação regular",
+        "day": 2
+      },
+      "gabarito": {
+        "year": 2012,
+        "application": "regular",
+        "documentKind": "gabarito",
+        "officialUrl": "https://download.inep.gov.br/educacao_basica/enem/gabaritos/2012/dia2_amarelo.pdf",
+        "sourcePageUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2012",
+        "discoveredAt": "2026-09-15T11:54:16.051Z",
+        "sourceLabel": "2º Dia - Caderno 5 - Amarelo – Aplicação regular",
+        "day": 2
+      }
+    },
+    {
+      "year": 2013,
+      "day": 1,
+      "selectionReason": "preferred-caderno",
+      "prova": {
+        "year": 2013,
+        "application": "regular",
+        "documentKind": "prova",
+        "officialUrl": "https://download.inep.gov.br/educacao_basica/enem/provas/2013/dia1_caderno1_azul.pdf",
+        "sourcePageUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2013",
+        "discoveredAt": "2026-09-15T11:54:16.051Z",
+        "sourceLabel": "1º Dia - Caderno 1 - Azul – Aplicação regular",
+        "day": 1
+      },
+      "gabarito": {
+        "year": 2013,
+        "application": "regular",
+        "documentKind": "gabarito",
+        "officialUrl": "https://download.inep.gov.br/educacao_basica/enem/gabaritos/2013/dia1_azul.pdf",
+        "sourcePageUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2013",
+        "discoveredAt": "2026-09-15T11:54:16.051Z",
+        "sourceLabel": "1º Dia - Caderno 1 - Azul – Aplicação regular",
+        "day": 1
+      }
+    },
+    {
+      "year": 2013,
+      "day": 2,
+      "selectionReason": "preferred-caderno",
+      "prova": {
+        "year": 2013,
+        "application": "regular",
+        "documentKind": "prova",
+        "officialUrl": "https://download.inep.gov.br/educacao_basica/enem/provas/2013/dia2_caderno5_amarelo.pdf",
+        "sourcePageUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2013",
+        "discoveredAt": "2026-09-15T11:54:16.051Z",
+        "sourceLabel": "2º Dia - Caderno 5 - Amarelo – Aplicação regular",
+        "day": 2
+      },
+      "gabarito": {
+        "year": 2013,
+        "application": "regular",
+        "documentKind": "gabarito",
+        "officialUrl": "https://download.inep.gov.br/educacao_basica/enem/gabaritos/2013/dia2_amarelo.pdf",
+        "sourcePageUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2013",
+        "discoveredAt": "2026-09-15T11:54:16.051Z",
+        "sourceLabel": "2º Dia - Caderno 5 - Amarelo – Aplicação regular",
+        "day": 2
+      }
+    },
+    {
+      "year": 2014,
+      "day": 1,
+      "selectionReason": "preferred-caderno",
+      "prova": {
+        "year": 2014,
+        "application": "regular",
+        "documentKind": "prova",
+        "officialUrl": "https://download.inep.gov.br/educacao_basica/enem/provas/2014/2014_PV_impresso_D1_CD1.pdf",
+        "sourcePageUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2014",
+        "discoveredAt": "2026-09-15T11:54:16.051Z",
+        "sourceLabel": "1º Dia - Caderno 1 - Azul – Aplicação regular",
+        "day": 1
+      },
+      "gabarito": {
+        "year": 2014,
+        "application": "regular",
+        "documentKind": "gabarito",
+        "officialUrl": "https://download.inep.gov.br/educacao_basica/enem/gabaritos/2014/CADERNO_1_AZUL_SABADO.pdf",
+        "sourcePageUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2014",
+        "discoveredAt": "2026-09-15T11:54:16.051Z",
+        "sourceLabel": "1º Dia - Caderno 1 - Azul – Aplicação regular",
+        "day": 1
+      }
+    },
+    {
+      "year": 2014,
+      "day": 2,
+      "selectionReason": "preferred-caderno",
+      "prova": {
+        "year": 2014,
+        "application": "regular",
+        "documentKind": "prova",
+        "officialUrl": "https://download.inep.gov.br/educacao_basica/enem/provas/2014/2014_PV_impresso_D2_CD5.pdf",
+        "sourcePageUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2014",
+        "discoveredAt": "2026-09-15T11:54:16.051Z",
+        "sourceLabel": "2º Dia - Caderno 5 - Amarelo – Aplicação regular",
+        "day": 2
+      },
+      "gabarito": {
+        "year": 2014,
+        "application": "regular",
+        "documentKind": "gabarito",
+        "officialUrl": "https://download.inep.gov.br/educacao_basica/enem/gabaritos/2014/CADERNO_5_AMARELO_DOMINGO.pdf",
+        "sourcePageUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2014",
+        "discoveredAt": "2026-09-15T11:54:16.051Z",
+        "sourceLabel": "2º Dia - Caderno 5 - Amarelo – Aplicação regular",
+        "day": 2
+      }
+    },
+    {
+      "year": 2015,
+      "day": 1,
+      "selectionReason": "preferred-caderno",
+      "prova": {
+        "year": 2015,
+        "application": "regular",
+        "documentKind": "prova",
+        "officialUrl": "https://download.inep.gov.br/educacao_basica/enem/provas/2015/2015_PV_impresso_D1_CD1.pdf",
+        "sourcePageUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2015",
+        "discoveredAt": "2026-09-15T11:54:16.051Z",
+        "sourceLabel": "1º Dia - Caderno 1 - Azul – Aplicação regular",
+        "day": 1
+      },
+      "gabarito": {
+        "year": 2015,
+        "application": "regular",
+        "documentKind": "gabarito",
+        "officialUrl": "https://download.inep.gov.br/educacao_basica/enem/gabaritos/2015/CADERNO_1_AZUL_SABADO.pdf",
+        "sourcePageUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2015",
+        "discoveredAt": "2026-09-15T11:54:16.051Z",
+        "sourceLabel": "1º Dia - Caderno 1 - Azul – Aplicação regular",
+        "day": 1
+      }
+    },
+    {
+      "year": 2015,
+      "day": 2,
+      "selectionReason": "preferred-caderno",
+      "prova": {
+        "year": 2015,
+        "application": "regular",
+        "documentKind": "prova",
+        "officialUrl": "https://download.inep.gov.br/educacao_basica/enem/provas/2015/2015_PV_impresso_D2_CD5.pdf",
+        "sourcePageUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2015",
+        "discoveredAt": "2026-09-15T11:54:16.051Z",
+        "sourceLabel": "2º Dia - Caderno 5 - Amarelo – Aplicação regular",
+        "day": 2
+      },
+      "gabarito": {
+        "year": 2015,
+        "application": "regular",
+        "documentKind": "gabarito",
+        "officialUrl": "https://download.inep.gov.br/educacao_basica/enem/gabaritos/2015/CADERNO_5_AMARELO_DOMINGO.pdf",
+        "sourcePageUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2015",
+        "discoveredAt": "2026-09-15T11:54:16.051Z",
+        "sourceLabel": "2º Dia - Caderno 5 - Amarelo – Aplicação regular",
+        "day": 2
+      }
+    },
+    {
+      "year": 2016,
+      "day": 1,
+      "selectionReason": "preferred-caderno",
+      "prova": {
+        "year": 2016,
+        "application": "regular",
+        "documentKind": "prova",
+        "officialUrl": "https://download.inep.gov.br/educacao_basica/enem/provas/2016/2016_PV_impresso_D1_CD1.pdf",
+        "sourcePageUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2016",
+        "discoveredAt": "2026-09-15T11:54:16.051Z",
+        "sourceLabel": "1º Dia - Caderno 1 - Azul – Aplicação regular",
+        "day": 1
+      },
+      "gabarito": {
+        "year": 2016,
+        "application": "regular",
+        "documentKind": "gabarito",
+        "officialUrl": "https://download.inep.gov.br/educacao_basica/enem/gabaritos/2016/GAB_ENEM_2016_DIA_1_01_AZUL.pdf",
+        "sourcePageUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2016",
+        "discoveredAt": "2026-09-15T11:54:16.051Z",
+        "sourceLabel": "1º Dia - Caderno 1 - Azul – Aplicação regular",
+        "day": 1
+      }
+    },
+    {
+      "year": 2016,
+      "day": 2,
+      "selectionReason": "preferred-caderno",
+      "prova": {
+        "year": 2016,
+        "application": "regular",
+        "documentKind": "prova",
+        "officialUrl": "https://download.inep.gov.br/educacao_basica/enem/provas/2016/2016_PV_impresso_D2_CD5.pdf",
+        "sourcePageUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2016",
+        "discoveredAt": "2026-09-15T11:54:16.051Z",
+        "sourceLabel": "2º Dia - Caderno 5 - Amarelo – Aplicação regular",
+        "day": 2
+      },
+      "gabarito": {
+        "year": 2016,
+        "application": "regular",
+        "documentKind": "gabarito",
+        "officialUrl": "https://download.inep.gov.br/educacao_basica/enem/gabaritos/2016/GAB_ENEM_2016_DIA_2_05_AMARELO.pdf",
+        "sourcePageUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2016",
+        "discoveredAt": "2026-09-15T11:54:16.051Z",
+        "sourceLabel": "2º Dia - Caderno 5 - Amarelo – Aplicação regular",
+        "day": 2
+      }
+    },
+    {
+      "year": 2017,
+      "day": 1,
+      "selectionReason": "preferred-caderno",
+      "prova": {
+        "year": 2017,
+        "application": "regular",
+        "documentKind": "prova",
+        "officialUrl": "https://download.inep.gov.br/educacao_basica/enem/provas/2017/2017_PV_impresso_D1_CD1.pdf",
+        "sourcePageUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2017",
+        "discoveredAt": "2026-09-15T11:54:16.051Z",
+        "sourceLabel": "1º Dia - Caderno 1 - Azul – Aplicação regular",
+        "day": 1
+      },
+      "gabarito": {
+        "year": 2017,
+        "application": "regular",
+        "documentKind": "gabarito",
+        "officialUrl": "https://download.inep.gov.br/educacao_basica/enem/gabaritos/2017/cad_1_gabarito_azul_5112017.pdf",
+        "sourcePageUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2017",
+        "discoveredAt": "2026-09-15T11:54:16.051Z",
+        "sourceLabel": "1º Dia - Caderno 1 - Azul – Aplicação regular",
+        "day": 1
+      }
+    },
+    {
+      "year": 2017,
+      "day": 2,
+      "selectionReason": "preferred-caderno",
+      "prova": {
+        "year": 2017,
+        "application": "regular",
+        "documentKind": "prova",
+        "officialUrl": "https://download.inep.gov.br/educacao_basica/enem/provas/2017/2017_PV_impresso_D2_CD5.pdf",
+        "sourcePageUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2017",
+        "discoveredAt": "2026-09-15T11:54:16.051Z",
+        "sourceLabel": "2º Dia - Caderno 5 - Amarelo – Aplicação regular",
+        "day": 2
+      },
+      "gabarito": {
+        "year": 2017,
+        "application": "regular",
+        "documentKind": "gabarito",
+        "officialUrl": "https://download.inep.gov.br/educacao_basica/enem/gabaritos/2017/cad_5_gabarito_amarelo_12112017.pdf",
+        "sourcePageUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2017",
+        "discoveredAt": "2026-09-15T11:54:16.051Z",
+        "sourceLabel": "2º Dia - Caderno 5 - Amarelo – Aplicação regular",
+        "day": 2
+      }
+    },
+    {
+      "year": 2018,
+      "day": 1,
+      "selectionReason": "preferred-caderno",
+      "prova": {
+        "year": 2018,
+        "application": "regular",
+        "documentKind": "prova",
+        "officialUrl": "https://download.inep.gov.br/educacao_basica/enem/provas/2018/2018_PV_impresso_D1_CD1.pdf",
+        "sourcePageUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2018",
+        "discoveredAt": "2026-09-15T11:54:16.051Z",
+        "sourceLabel": "1º Dia - Caderno 1 - Azul – Aplicação regular",
+        "day": 1
+      },
+      "gabarito": {
+        "year": 2018,
+        "application": "regular",
+        "documentKind": "gabarito",
+        "officialUrl": "https://download.inep.gov.br/educacao_basica/enem/gabaritos/2018/GAB_ENEM_2018_DIA_1_AZUL.pdf",
+        "sourcePageUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2018",
+        "discoveredAt": "2026-09-15T11:54:16.051Z",
+        "sourceLabel": "1º Dia - Caderno 1 - Azul – Aplicação regular",
+        "day": 1
+      }
+    },
+    {
+      "year": 2018,
+      "day": 2,
+      "selectionReason": "preferred-caderno",
+      "prova": {
+        "year": 2018,
+        "application": "regular",
+        "documentKind": "prova",
+        "officialUrl": "https://download.inep.gov.br/educacao_basica/enem/provas/2018/2DIA_05_AMARELO_BAIXA.pdf",
+        "sourcePageUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2018",
+        "discoveredAt": "2026-09-15T11:54:16.051Z",
+        "sourceLabel": "2º Dia - Caderno 5 - Amarelo – Aplicação regular",
+        "day": 2
+      },
+      "gabarito": {
+        "year": 2018,
+        "application": "regular",
+        "documentKind": "gabarito",
+        "officialUrl": "https://download.inep.gov.br/educacao_basica/enem/gabaritos/2018/GAB_ENEM_2018_DIA_2_AMARELO.pdf",
+        "sourcePageUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2018",
+        "discoveredAt": "2026-09-15T11:54:16.051Z",
+        "sourceLabel": "2º Dia - Caderno 5 - Amarelo – Aplicação regular",
+        "day": 2
+      }
+    },
+    {
+      "year": 2019,
+      "day": 1,
+      "selectionReason": "preferred-caderno",
+      "prova": {
+        "year": 2019,
+        "application": "regular",
+        "documentKind": "prova",
+        "officialUrl": "https://download.inep.gov.br/educacao_basica/enem/provas/2019/2019_PV_impresso_D1_CD1.pdf",
+        "sourcePageUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2019",
+        "discoveredAt": "2026-09-15T11:54:16.051Z",
+        "sourceLabel": "1º Dia – Caderno 1 – Azul – Aplicação Regular",
+        "day": 1
+      },
+      "gabarito": {
+        "year": 2019,
+        "application": "regular",
+        "documentKind": "gabarito",
+        "officialUrl": "https://download.inep.gov.br/educacao_basica/enem/gabaritos/2019/gabarito_1_dia_caderno_1_azul_aplicacao_regular.pdf",
+        "sourcePageUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2019",
+        "discoveredAt": "2026-09-15T11:54:16.051Z",
+        "sourceLabel": "1º Dia – Caderno 1 – Azul – Aplicação Regular",
+        "day": 1
+      }
+    },
+    {
+      "year": 2019,
+      "day": 2,
+      "selectionReason": "preferred-caderno",
+      "prova": {
+        "year": 2019,
+        "application": "regular",
+        "documentKind": "prova",
+        "officialUrl": "https://download.inep.gov.br/educacao_basica/enem/provas/2019/2019_PV_impresso_D2_CD5.pdf",
+        "sourcePageUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2019",
+        "discoveredAt": "2026-09-15T11:54:16.051Z",
+        "sourceLabel": "2º Dia – Caderno 5 – Amarelo – Aplicação Regular",
+        "day": 2
+      },
+      "gabarito": {
+        "year": 2019,
+        "application": "regular",
+        "documentKind": "gabarito",
+        "officialUrl": "https://download.inep.gov.br/educacao_basica/enem/gabaritos/2019/gabarito_2_dia_caderno_5_amarelo_aplicacao_regular.pdf",
+        "sourcePageUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2019",
+        "discoveredAt": "2026-09-15T11:54:16.051Z",
+        "sourceLabel": "2º Dia – Caderno 5 – Amarelo – Aplicação Regular",
+        "day": 2
+      }
+    },
+    {
+      "year": 2020,
+      "day": 1,
+      "selectionReason": "preferred-caderno",
+      "prova": {
+        "year": 2020,
+        "application": "regular",
+        "documentKind": "prova",
+        "officialUrl": "https://download.inep.gov.br/enem/provas_e_gabaritos/2020_PV_impresso_D1_CD1.pdf",
+        "sourcePageUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2020",
+        "discoveredAt": "2026-09-15T11:54:16.051Z",
+        "sourceLabel": "1º Dia - Caderno 1 – Azul – Aplicação Regular",
+        "day": 1
+      },
+      "gabarito": {
+        "year": 2020,
+        "application": "regular",
+        "documentKind": "gabarito",
+        "officialUrl": "https://download.inep.gov.br/enem/provas_e_gabaritos/2020_GB_impresso_D1_CD1.pdf",
+        "sourcePageUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2020",
+        "discoveredAt": "2026-09-15T11:54:16.051Z",
+        "sourceLabel": "1º Dia - Caderno 1 – Azul – Aplicação Regular",
+        "day": 1
+      }
+    },
+    {
+      "year": 2020,
+      "day": 2,
+      "selectionReason": "preferred-caderno",
+      "prova": {
+        "year": 2020,
+        "application": "regular",
+        "documentKind": "prova",
+        "officialUrl": "https://download.inep.gov.br/enem/provas_e_gabaritos/2020_PV_impresso_D2_CD5.pdf",
+        "sourcePageUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2020",
+        "discoveredAt": "2026-09-15T11:54:16.051Z",
+        "sourceLabel": "2º Dia - Caderno 5 – Amarelo – Aplicação Regular",
+        "day": 2
+      },
+      "gabarito": {
+        "year": 2020,
+        "application": "regular",
+        "documentKind": "gabarito",
+        "officialUrl": "https://download.inep.gov.br/enem/provas_e_gabaritos/2020_GB_impresso_D2_CD5.pdf",
+        "sourcePageUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2020",
+        "discoveredAt": "2026-09-15T11:54:16.051Z",
+        "sourceLabel": "2º Dia - Caderno 5 – Amarelo – Aplicação Regular",
+        "day": 2
+      }
+    },
+    {
+      "year": 2021,
+      "day": 1,
+      "selectionReason": "preferred-caderno",
+      "prova": {
+        "year": 2021,
+        "application": "regular",
+        "documentKind": "prova",
+        "officialUrl": "https://download.inep.gov.br/enem/provas_e_gabaritos/2021_PV_impresso_D1_CD1.pdf",
+        "sourcePageUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2021",
+        "discoveredAt": "2026-09-15T11:54:16.051Z",
+        "sourceLabel": "1º Dia – Caderno 1 – Azul – Aplicação Regular",
+        "day": 1
+      },
+      "gabarito": {
+        "year": 2021,
+        "application": "regular",
+        "documentKind": "gabarito",
+        "officialUrl": "https://download.inep.gov.br/enem/provas_e_gabaritos/2021_GB_impresso_D1_CD1.pdf",
+        "sourcePageUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2021",
+        "discoveredAt": "2026-09-15T11:54:16.051Z",
+        "sourceLabel": "1º Dia – Caderno 1 – Azul – Aplicação Regular",
+        "day": 1
+      }
+    },
+    {
+      "year": 2021,
+      "day": 2,
+      "selectionReason": "preferred-caderno",
+      "prova": {
+        "year": 2021,
+        "application": "regular",
+        "documentKind": "prova",
+        "officialUrl": "https://download.inep.gov.br/enem/provas_e_gabaritos/2021_PV_impresso_D2_CD5.pdf",
+        "sourcePageUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2021",
+        "discoveredAt": "2026-09-15T11:54:16.051Z",
+        "sourceLabel": "2º Dia – Caderno 5 – Amarelo – Aplicação Regular",
+        "day": 2
+      },
+      "gabarito": {
+        "year": 2021,
+        "application": "regular",
+        "documentKind": "gabarito",
+        "officialUrl": "https://download.inep.gov.br/enem/provas_e_gabaritos/2021_GB_impresso_D2_CD5.pdf",
+        "sourcePageUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2021",
+        "discoveredAt": "2026-09-15T11:54:16.051Z",
+        "sourceLabel": "2º Dia – Caderno 5 – Amarelo – Aplicação Regular",
+        "day": 2
+      }
+    },
+    {
+      "year": 2022,
+      "day": 1,
+      "selectionReason": "preferred-caderno",
+      "prova": {
+        "year": 2022,
+        "application": "regular",
+        "documentKind": "prova",
+        "officialUrl": "https://download.inep.gov.br/enem/provas_e_gabaritos/2022_PV_impresso_D1_CD1.pdf",
+        "sourcePageUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2022",
+        "discoveredAt": "2026-09-15T11:54:16.051Z",
+        "sourceLabel": "1º Dia – Caderno 1 – Azul – Aplicação Regular",
+        "day": 1
+      },
+      "gabarito": {
+        "year": 2022,
+        "application": "regular",
+        "documentKind": "gabarito",
+        "officialUrl": "https://download.inep.gov.br/enem/provas_e_gabaritos/2022_GB_impresso_D1_CD1.pdf",
+        "sourcePageUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2022",
+        "discoveredAt": "2026-09-15T11:54:16.051Z",
+        "sourceLabel": "1º Dia – Caderno 1 – Azul – Aplicação Regular",
+        "day": 1
+      }
+    },
+    {
+      "year": 2022,
+      "day": 2,
+      "selectionReason": "preferred-caderno",
+      "prova": {
+        "year": 2022,
+        "application": "regular",
+        "documentKind": "prova",
+        "officialUrl": "https://download.inep.gov.br/enem/provas_e_gabaritos/2022_PV_impresso_D2_CD5.pdf",
+        "sourcePageUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2022",
+        "discoveredAt": "2026-09-15T11:54:16.051Z",
+        "sourceLabel": "2º Dia – Caderno 5 – Amarelo – Aplicação Regular",
+        "day": 2
+      },
+      "gabarito": {
+        "year": 2022,
+        "application": "regular",
+        "documentKind": "gabarito",
+        "officialUrl": "https://download.inep.gov.br/enem/provas_e_gabaritos/2022_GB_impresso_D2_CD5.pdf",
+        "sourcePageUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2022",
+        "discoveredAt": "2026-09-15T11:54:16.051Z",
+        "sourceLabel": "2º Dia – Caderno 5 – Amarelo – Aplicação Regular",
+        "day": 2
+      }
+    },
+    {
+      "year": 2023,
+      "day": 1,
+      "selectionReason": "preferred-caderno",
+      "prova": {
+        "year": 2023,
+        "application": "regular",
+        "documentKind": "prova",
+        "officialUrl": "https://download.inep.gov.br/enem/provas_e_gabaritos/2023_PV_impresso_D1_CD1.pdf",
+        "sourcePageUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2023",
+        "discoveredAt": "2026-09-15T11:54:16.051Z",
+        "sourceLabel": "1º Dia – Caderno 1 – Azul – Aplicação Regular",
+        "day": 1
+      },
+      "gabarito": {
+        "year": 2023,
+        "application": "regular",
+        "documentKind": "gabarito",
+        "officialUrl": "https://download.inep.gov.br/enem/provas_e_gabaritos/2023_GB_impresso_D1_CD1.pdf",
+        "sourcePageUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2023",
+        "discoveredAt": "2026-09-15T11:54:16.051Z",
+        "sourceLabel": "1º Dia – Caderno 1 – Azul – Aplicação Regular",
+        "day": 1
+      }
+    },
+    {
+      "year": 2023,
+      "day": 2,
+      "selectionReason": "preferred-caderno",
+      "prova": {
+        "year": 2023,
+        "application": "regular",
+        "documentKind": "prova",
+        "officialUrl": "https://download.inep.gov.br/enem/provas_e_gabaritos/2023_PV_impresso_D2_CD5.pdf",
+        "sourcePageUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2023",
+        "discoveredAt": "2026-09-15T11:54:16.051Z",
+        "sourceLabel": "2º Dia – Caderno 5 – Amarelo – Aplicação Regular",
+        "day": 2
+      },
+      "gabarito": {
+        "year": 2023,
+        "application": "regular",
+        "documentKind": "gabarito",
+        "officialUrl": "https://download.inep.gov.br/enem/provas_e_gabaritos/2023_GB_impresso_D2_CD5.pdf",
+        "sourcePageUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2023",
+        "discoveredAt": "2026-09-15T11:54:16.051Z",
+        "sourceLabel": "2º Dia – Caderno 5 – Amarelo – Aplicação Regular",
+        "day": 2
+      }
+    },
+    {
+      "year": 2024,
+      "day": 1,
+      "selectionReason": "preferred-caderno",
+      "prova": {
+        "year": 2024,
+        "application": "regular",
+        "documentKind": "prova",
+        "officialUrl": "https://download.inep.gov.br/enem/provas_e_gabaritos/2024_PV_impresso_D1_CD1.pdf",
+        "sourcePageUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2024",
+        "discoveredAt": "2026-09-15T11:54:16.051Z",
+        "sourceLabel": "1º Dia – Caderno 1 – Azul – Aplicação Regular",
+        "day": 1
+      },
+      "gabarito": {
+        "year": 2024,
+        "application": "regular",
+        "documentKind": "gabarito",
+        "officialUrl": "https://download.inep.gov.br/enem/provas_e_gabaritos/2024_GB_impresso_D1_CD1.pdf",
+        "sourcePageUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2024",
+        "discoveredAt": "2026-09-15T11:54:16.051Z",
+        "sourceLabel": "1º Dia – Caderno 1 – Azul – Aplicação Regular",
+        "day": 1
+      }
+    },
+    {
+      "year": 2024,
+      "day": 2,
+      "selectionReason": "preferred-caderno",
+      "prova": {
+        "year": 2024,
+        "application": "regular",
+        "documentKind": "prova",
+        "officialUrl": "https://download.inep.gov.br/enem/provas_e_gabaritos/2024_PV_impresso_D2_CD5.pdf",
+        "sourcePageUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2024",
+        "discoveredAt": "2026-09-15T11:54:16.051Z",
+        "sourceLabel": "2º Dia – Caderno 5 – Amarelo – Aplicação Regular",
+        "day": 2
+      },
+      "gabarito": {
+        "year": 2024,
+        "application": "regular",
+        "documentKind": "gabarito",
+        "officialUrl": "https://download.inep.gov.br/enem/provas_e_gabaritos/2024_GB_impresso_D2_CD5.pdf",
+        "sourcePageUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2024",
+        "discoveredAt": "2026-09-15T11:54:16.051Z",
+        "sourceLabel": "2º Dia – Caderno 5 – Amarelo – Aplicação Regular",
+        "day": 2
+      }
+    },
+    {
+      "year": 2025,
+      "day": 1,
+      "selectionReason": "preferred-caderno",
+      "prova": {
+        "year": 2025,
+        "application": "regular",
+        "documentKind": "prova",
+        "officialUrl": "https://download.inep.gov.br/enem/provas_e_gabaritos/2025_PV_impresso_D1_CD1.pdf",
+        "sourcePageUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2025",
+        "discoveredAt": "2026-09-15T11:54:16.051Z",
+        "sourceLabel": "1º Dia – Caderno 1 – Azul – Aplicação Regular",
+        "day": 1
+      },
+      "gabarito": {
+        "year": 2025,
+        "application": "regular",
+        "documentKind": "gabarito",
+        "officialUrl": "https://download.inep.gov.br/enem/provas_e_gabaritos/2025_GB_impresso_D1_CD1.pdf",
+        "sourcePageUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2025",
+        "discoveredAt": "2026-09-15T11:54:16.051Z",
+        "sourceLabel": "1º Dia – Caderno 1 – Azul – Aplicação Regular",
+        "day": 1
+      }
+    },
+    {
+      "year": 2025,
+      "day": 2,
+      "selectionReason": "preferred-caderno",
+      "prova": {
+        "year": 2025,
+        "application": "regular",
+        "documentKind": "prova",
+        "officialUrl": "https://download.inep.gov.br/enem/provas_e_gabaritos/2025_PV_impresso_D2_CD5.pdf",
+        "sourcePageUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2025",
+        "discoveredAt": "2026-09-15T11:54:16.051Z",
+        "sourceLabel": "2º Dia – Caderno 5 – Amarelo – Aplicação Regular",
+        "day": 2
+      },
+      "gabarito": {
+        "year": 2025,
+        "application": "regular",
+        "documentKind": "gabarito",
+        "officialUrl": "https://download.inep.gov.br/enem/provas_e_gabaritos/2025_GB_impresso_D2_CD5.pdf",
+        "sourcePageUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2025",
+        "discoveredAt": "2026-09-15T11:54:16.051Z",
+        "sourceLabel": "2º Dia – Caderno 5 – Amarelo – Aplicação Regular",
+        "day": 2
+      }
+    }
+  ]
+}

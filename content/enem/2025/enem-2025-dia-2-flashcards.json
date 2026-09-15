@@ -1,0 +1,959 @@
+[
+  {
+    "front": "ENEM 2025 Dia 2, questão 91: qual ideia resolve o item sobre física - calor?",
+    "back": "Irradiação. A lâmpada emite radiação eletromagnética, que pode transportar energia no vácuo e no ar; convecção exige fluido em movimento.",
+    "tags": [
+      "enem",
+      "2025",
+      "dia-2",
+      "questao-91",
+      "física-calor"
+    ]
+  },
+  {
+    "front": "ENEM 2025 Dia 2, questão 92: qual ideia resolve o item sobre biologia - cadeias alimentares?",
+    "back": "A ausência da dieta natural que fornece o composto. A toxina é sequestrada da alimentação; sem as presas que a contêm, o animal não a acumula.",
+    "tags": [
+      "enem",
+      "2025",
+      "dia-2",
+      "questao-92",
+      "biologia-cadeias-alimentares"
+    ]
+  },
+  {
+    "front": "ENEM 2025 Dia 2, questão 93: qual ideia resolve o item sobre biologia - imunologia?",
+    "back": "A indução da produção de anticorpos neutralizadores. O antígeno estimula linfócitos; os anticorpos produzidos reconhecem e neutralizam o agente em contato futuro.",
+    "tags": [
+      "enem",
+      "2025",
+      "dia-2",
+      "questao-93",
+      "biologia-imunologia"
+    ]
+  },
+  {
+    "front": "ENEM 2025 Dia 2, questão 94: qual ideia resolve o item sobre ecologia - espécies invasoras?",
+    "back": "Redução da diversidade de espécies nativas. A espécie invasora ocupa espaço e recursos, reduzindo populações nativas e a diversidade local.",
+    "tags": [
+      "enem",
+      "2025",
+      "dia-2",
+      "questao-94",
+      "ecologia-espécies-invasoras"
+    ]
+  },
+  {
+    "front": "ENEM 2025 Dia 2, questão 95: qual ideia resolve o item sobre biologia - biomas?",
+    "back": "Caatinga. A Caatinga apresenta clima semiárido e longos períodos secos, condições semelhantes às descritas.",
+    "tags": [
+      "enem",
+      "2025",
+      "dia-2",
+      "questao-95",
+      "biologia-biomas"
+    ]
+  },
+  {
+    "front": "ENEM 2025 Dia 2, questão 96: qual ideia resolve o item sobre química - separação de misturas?",
+    "back": "Destilada. A destilação separa a água dos sais por vaporização e condensação, produzindo água com poucos íons.",
+    "tags": [
+      "enem",
+      "2025",
+      "dia-2",
+      "questao-96",
+      "química-separação-de-misturas"
+    ]
+  },
+  {
+    "front": "ENEM 2025 Dia 2, questão 97: qual ideia resolve o item sobre biologia - visão?",
+    "back": "Dilatação da pupila, permitindo mais luz atingir a retina. No escuro a pupila dilata. Mais luz do flash alcança a retina vascularizada e retorna avermelhada.",
+    "tags": [
+      "enem",
+      "2025",
+      "dia-2",
+      "questao-97",
+      "biologia-visão"
+    ]
+  },
+  {
+    "front": "ENEM 2025 Dia 2, questão 98: qual ideia resolve o item sobre biologia - toxicologia?",
+    "back": "Evitar romper e contaminar a carne com esses órgãos. Como o calor não destrói a toxina, o controle é impedir que o conteúdo dos órgãos alcance a parte comestível.",
+    "tags": [
+      "enem",
+      "2025",
+      "dia-2",
+      "questao-98",
+      "biologia-toxicologia"
+    ]
+  },
+  {
+    "front": "ENEM 2025 Dia 2, questão 99: qual ideia resolve o item sobre biologia - organelas?",
+    "back": "Lisossomo. Lisossomos contêm enzimas hidrolíticas ácidas responsáveis pela digestão intracelular de macromoléculas.",
+    "tags": [
+      "enem",
+      "2025",
+      "dia-2",
+      "questao-99",
+      "biologia-organelas"
+    ]
+  },
+  {
+    "front": "ENEM 2025 Dia 2, questão 100: qual ideia resolve o item sobre ecologia - clima?",
+    "back": "Ampliar o plantio e a manutenção de árvores. A fotossíntese fixa CO2 em matéria orgânica; fontes renováveis evitam emissões, mas não removem diretamente o gás já emitido.",
+    "tags": [
+      "enem",
+      "2025",
+      "dia-2",
+      "questao-100",
+      "ecologia-clima"
+    ]
+  },
+  {
+    "front": "ENEM 2025 Dia 2, questão 101: qual ideia resolve o item sobre física - ondas eletromagnéticas?",
+    "back": "Aumenta. Como c = λf, com a velocidade da luz aproximadamente constante, diminuir o comprimento de onda aumenta a frequência.",
+    "tags": [
+      "enem",
+      "2025",
+      "dia-2",
+      "questao-101",
+      "física-ondas-eletromagnéticas"
+    ]
+  },
+  {
+    "front": "ENEM 2025 Dia 2, questão 102: qual ideia resolve o item sobre genética - cruzamentos?",
+    "back": "3 dominantes para 1 recessivo. O quadro de Punnett produz AA, Aa, Aa e aa: três genótipos manifestam o fenótipo dominante.",
+    "tags": [
+      "enem",
+      "2025",
+      "dia-2",
+      "questao-102",
+      "genética-cruzamentos"
+    ]
+  },
+  {
+    "front": "ENEM 2025 Dia 2, questão 103: qual ideia resolve o item sobre física - atrito?",
+    "back": "Permanece constante no trecho inclinado. No plano de ângulo constante, N = mg cos θ é constante; logo f = μN também é constante.",
+    "tags": [
+      "enem",
+      "2025",
+      "dia-2",
+      "questao-103",
+      "física-atrito"
+    ]
+  },
+  {
+    "front": "ENEM 2025 Dia 2, questão 104: qual ideia resolve o item sobre física - campo elétrico?",
+    "back": "Para baixo. A força elétrica é F = qE. Como a carga do elétron é negativa, sua força tem sentido oposto ao campo.",
+    "tags": [
+      "enem",
+      "2025",
+      "dia-2",
+      "questao-104",
+      "física-campo-elétrico"
+    ]
+  },
+  {
+    "front": "ENEM 2025 Dia 2, questão 105: qual ideia resolve o item sobre física - ondas sonoras?",
+    "back": "Ressonância. A frequência da fonte coincide com a frequência natural, aumentando a amplitude da vibração da taça.",
+    "tags": [
+      "enem",
+      "2025",
+      "dia-2",
+      "questao-105",
+      "física-ondas-sonoras"
+    ]
+  },
+  {
+    "front": "ENEM 2025 Dia 2, questão 106: qual ideia resolve o item sobre química orgânica?",
+    "back": "Cetona. A oxidação de álcool secundário remove hidrogênios do carbono ligado à hidroxila e forma um grupo carbonila interno.",
+    "tags": [
+      "enem",
+      "2025",
+      "dia-2",
+      "questao-106",
+      "química-orgânica"
+    ]
+  },
+  {
+    "front": "ENEM 2025 Dia 2, questão 107: qual ideia resolve o item sobre ecologia - poluição térmica?",
+    "back": "Diminuição da solubilidade do oxigênio na água. A solubilidade de gases diminui quando a temperatura da água aumenta, reduzindo o oxigênio disponível.",
+    "tags": [
+      "enem",
+      "2025",
+      "dia-2",
+      "questao-107",
+      "ecologia-poluição-térmica"
+    ]
+  },
+  {
+    "front": "ENEM 2025 Dia 2, questão 108: qual ideia resolve o item sobre química - fórmulas?",
+    "back": "Nano3. Basta substituir Az por N, mantendo uma unidade de sódio, nitrogênio e três oxigênios.",
+    "tags": [
+      "enem",
+      "2025",
+      "dia-2",
+      "questao-108",
+      "química-fórmulas"
+    ]
+  },
+  {
+    "front": "ENEM 2025 Dia 2, questão 109: qual ideia resolve o item sobre química orgânica?",
+    "back": "Fenol. Fenóis têm hidroxila ligada diretamente a um carbono de anel aromático.",
+    "tags": [
+      "enem",
+      "2025",
+      "dia-2",
+      "questao-109",
+      "química-orgânica"
+    ]
+  },
+  {
+    "front": "ENEM 2025 Dia 2, questão 110: qual ideia resolve o item sobre física nuclear?",
+    "back": "0,0625 mg. 26,5 anos correspondem a cinco meias-vidas: 2,00 × (1/2)^5 = 0,0625 mg.",
+    "tags": [
+      "enem",
+      "2025",
+      "dia-2",
+      "questao-110",
+      "física-nuclear"
+    ]
+  },
+  {
+    "front": "ENEM 2025 Dia 2, questão 111: qual ideia resolve o item sobre ecologia - saneamento?",
+    "back": "Eutrofização. A redução de matéria orgânica e nutrientes diminui a proliferação excessiva de algas e a queda de oxigênio na água.",
+    "tags": [
+      "enem",
+      "2025",
+      "dia-2",
+      "questao-111",
+      "ecologia-saneamento"
+    ]
+  },
+  {
+    "front": "ENEM 2025 Dia 2, questão 112: qual ideia resolve o item sobre biologia - vitaminas?",
+    "back": "Xeroftalmia. A vitamina A é necessária para a visão e para a manutenção de tecidos epiteliais; sua falta pode causar xeroftalmia.",
+    "tags": [
+      "enem",
+      "2025",
+      "dia-2",
+      "questao-112",
+      "biologia-vitaminas"
+    ]
+  },
+  {
+    "front": "ENEM 2025 Dia 2, questão 113: qual ideia resolve o item sobre física - eletricidade?",
+    "back": "A tensão de saída especificada pelo aparelho. Uma tensão inadequada pode impedir o funcionamento ou danificar o circuito; o carregador deve fornecer a tensão prevista.",
+    "tags": [
+      "enem",
+      "2025",
+      "dia-2",
+      "questao-113",
+      "física-eletricidade"
+    ]
+  },
+  {
+    "front": "ENEM 2025 Dia 2, questão 114: qual ideia resolve o item sobre química - estequiometria?",
+    "back": "Alumínio. O alumínio perde elétrons ao formar Al2O3; quem se oxida promove a redução do nióbio e é o agente redutor.",
+    "tags": [
+      "enem",
+      "2025",
+      "dia-2",
+      "questao-114",
+      "química-estequiometria"
+    ]
+  },
+  {
+    "front": "ENEM 2025 Dia 2, questão 116: qual ideia resolve o item sobre física - acústica?",
+    "back": "10 000 vezes maior. Intensidades de fontes independentes se somam: I_total = 10 000 I_uma.",
+    "tags": [
+      "enem",
+      "2025",
+      "dia-2",
+      "questao-116",
+      "física-acústica"
+    ]
+  },
+  {
+    "front": "ENEM 2025 Dia 2, questão 117: qual ideia resolve o item sobre química - separação?",
+    "back": "Superfície hidrofílica e oleofóbica. Ela interage com água e repele óleo, permitindo separação seletiva das fases.",
+    "tags": [
+      "enem",
+      "2025",
+      "dia-2",
+      "questao-117",
+      "química-separação"
+    ]
+  },
+  {
+    "front": "ENEM 2025 Dia 2, questão 118: qual ideia resolve o item sobre biologia - hormônios?",
+    "back": "Desreguladores endócrinos. Esses compostos interferem na sinalização hormonal mesmo em baixas concentrações.",
+    "tags": [
+      "enem",
+      "2025",
+      "dia-2",
+      "questao-118",
+      "biologia-hormônios"
+    ]
+  },
+  {
+    "front": "ENEM 2025 Dia 2, questão 119: qual ideia resolve o item sobre química - mudanças de estado?",
+    "back": "Resfriar o material e mantê-lo abaixo de 7 °c. Abaixo do ponto de ebulição, a pressão de vapor é menor e menos líquido passa para a fase gasosa.",
+    "tags": [
+      "enem",
+      "2025",
+      "dia-2",
+      "questao-119",
+      "química-mudanças-de-estado"
+    ]
+  },
+  {
+    "front": "ENEM 2025 Dia 2, questão 120: qual ideia resolve o item sobre física - cinemática?",
+    "back": "0,30 s. t = d/v = 0,15 m / 0,50 m/s = 0,30 s.",
+    "tags": [
+      "enem",
+      "2025",
+      "dia-2",
+      "questao-120",
+      "física-cinemática"
+    ]
+  },
+  {
+    "front": "ENEM 2025 Dia 2, questão 122: qual ideia resolve o item sobre biologia - fotossíntese?",
+    "back": "Na membrana plasmática e em suas dobras. Bactérias não têm cloroplastos; seus pigmentos fotossintéticos ficam associados a membranas internas derivadas da membrana plasmática.",
+    "tags": [
+      "enem",
+      "2025",
+      "dia-2",
+      "questao-122",
+      "biologia-fotossíntese"
+    ]
+  },
+  {
+    "front": "ENEM 2025 Dia 2, questão 123: qual ideia resolve o item sobre química - equilíbrio?",
+    "back": "Aumentar a temperatura. A reação direta é endotérmica; pelo princípio de Le Chatelier, o aumento de temperatura favorece o sentido que absorve calor.",
+    "tags": [
+      "enem",
+      "2025",
+      "dia-2",
+      "questao-123",
+      "química-equilíbrio"
+    ]
+  },
+  {
+    "front": "ENEM 2025 Dia 2, questão 124: qual ideia resolve o item sobre física - pressão?",
+    "back": "0,80 m. P = ρgh; h = 10 000/(1 250 × 10) = 0,80 m.",
+    "tags": [
+      "enem",
+      "2025",
+      "dia-2",
+      "questao-124",
+      "física-pressão"
+    ]
+  },
+  {
+    "front": "ENEM 2025 Dia 2, questão 125: qual ideia resolve o item sobre física - circuitos?",
+    "back": "3 placas. Em série, as tensões somam: 3 × 34 V = 102 V, valor dentro da faixa.",
+    "tags": [
+      "enem",
+      "2025",
+      "dia-2",
+      "questao-125",
+      "física-circuitos"
+    ]
+  },
+  {
+    "front": "ENEM 2025 Dia 2, questão 126: qual ideia resolve o item sobre química - gases?",
+    "back": "Aproximadamente 0,108 mol. n = PV/RT = 4,00/(0,082 × 453) ≈ 0,108 mol.",
+    "tags": [
+      "enem",
+      "2025",
+      "dia-2",
+      "questao-126",
+      "química-gases"
+    ]
+  },
+  {
+    "front": "ENEM 2025 Dia 2, questão 127: qual ideia resolve o item sobre física - vetores?",
+    "back": "A velocidade do avião em relação ao ar. A soma vetorial da velocidade do avião em relação ao ar com a do vento fornece a velocidade em relação ao solo.",
+    "tags": [
+      "enem",
+      "2025",
+      "dia-2",
+      "questao-127",
+      "física-vetores"
+    ]
+  },
+  {
+    "front": "ENEM 2025 Dia 2, questão 128: qual ideia resolve o item sobre química - eletroquímica?",
+    "back": "Redução do sulfeto de prata e oxidação do alumínio. O alumínio cede elétrons; a prata no composto recebe elétrons e retorna à forma metálica.",
+    "tags": [
+      "enem",
+      "2025",
+      "dia-2",
+      "questao-128",
+      "química-eletroquímica"
+    ]
+  },
+  {
+    "front": "ENEM 2025 Dia 2, questão 129: qual ideia resolve o item sobre física - lançamento oblíquo?",
+    "back": "A componente horizontal. A única aceleração é a gravidade, vertical; assim a velocidade horizontal não se altera.",
+    "tags": [
+      "enem",
+      "2025",
+      "dia-2",
+      "questao-129",
+      "física-lançamento-oblíquo"
+    ]
+  },
+  {
+    "front": "ENEM 2025 Dia 2, questão 130: qual ideia resolve o item sobre química - cinética?",
+    "back": "A energia de ativação. A enzima oferece caminho reacional alternativo com barreira energética menor.",
+    "tags": [
+      "enem",
+      "2025",
+      "dia-2",
+      "questao-130",
+      "química-cinética"
+    ]
+  },
+  {
+    "front": "ENEM 2025 Dia 2, questão 131: qual ideia resolve o item sobre biologia - parasitologia?",
+    "back": "Esquistossomose. Caramujos de água doce atuam como hospedeiros intermediários do Schistosoma.",
+    "tags": [
+      "enem",
+      "2025",
+      "dia-2",
+      "questao-131",
+      "biologia-parasitologia"
+    ]
+  },
+  {
+    "front": "ENEM 2025 Dia 2, questão 132: qual ideia resolve o item sobre química - adsorção?",
+    "back": "Porque possui grande área superficial porosa. Os poros ampliam a superfície de contato, aumentando a adsorção de moléculas.",
+    "tags": [
+      "enem",
+      "2025",
+      "dia-2",
+      "questao-132",
+      "química-adsorção"
+    ]
+  },
+  {
+    "front": "ENEM 2025 Dia 2, questão 133: qual ideia resolve o item sobre biologia - ritmos?",
+    "back": "Relógio biológico circadiano. Ritmos circadianos são mecanismos endógenos sincronizados, em condições naturais, por ciclos ambientais.",
+    "tags": [
+      "enem",
+      "2025",
+      "dia-2",
+      "questao-133",
+      "biologia-ritmos"
+    ]
+  },
+  {
+    "front": "ENEM 2025 Dia 2, questão 134: qual ideia resolve o item sobre biologia - aves?",
+    "back": "A impermeabilização das penas. A camada hidrofóbica mantém ar entre as penas; ao perder essa proteção, a ave absorve água e perde flutuação.",
+    "tags": [
+      "enem",
+      "2025",
+      "dia-2",
+      "questao-134",
+      "biologia-aves"
+    ]
+  },
+  {
+    "front": "ENEM 2025 Dia 2, questão 135: qual ideia resolve o item sobre física - potência?",
+    "back": "4 400 w. P = UI = 220 V × 20 A = 4 400 W.",
+    "tags": [
+      "enem",
+      "2025",
+      "dia-2",
+      "questao-135",
+      "física-potência"
+    ]
+  },
+  {
+    "front": "ENEM 2025 Dia 2, questão 136: qual ideia resolve o item sobre matemática - razão?",
+    "back": "15 copos. 3/2 = x/10, portanto x = 15.",
+    "tags": [
+      "enem",
+      "2025",
+      "dia-2",
+      "questao-136",
+      "matemática-razão"
+    ]
+  },
+  {
+    "front": "ENEM 2025 Dia 2, questão 137: qual ideia resolve o item sobre matemática - porcentagem?",
+    "back": "R$ 170. 15% de 200 é 30; 200 − 30 = 170.",
+    "tags": [
+      "enem",
+      "2025",
+      "dia-2",
+      "questao-137",
+      "matemática-porcentagem"
+    ]
+  },
+  {
+    "front": "ENEM 2025 Dia 2, questão 138: qual ideia resolve o item sobre matemática - média?",
+    "back": "7,5. (6 + 7 + 8 + 9)/4 = 30/4 = 7,5.",
+    "tags": [
+      "enem",
+      "2025",
+      "dia-2",
+      "questao-138",
+      "matemática-média"
+    ]
+  },
+  {
+    "front": "ENEM 2025 Dia 2, questão 139: qual ideia resolve o item sobre matemática - geometria plana?",
+    "back": "30 cm². A = base × altura / 2 = 12 × 5 / 2 = 30.",
+    "tags": [
+      "enem",
+      "2025",
+      "dia-2",
+      "questao-139",
+      "matemática-geometria-plana"
+    ]
+  },
+  {
+    "front": "ENEM 2025 Dia 2, questão 140: qual ideia resolve o item sobre matemática - leitura de rótulos?",
+    "back": "200 g. 8 × 25 g = 200 g.",
+    "tags": [
+      "enem",
+      "2025",
+      "dia-2",
+      "questao-140",
+      "matemática-leitura-de-rótulos"
+    ]
+  },
+  {
+    "front": "ENEM 2025 Dia 2, questão 141: qual ideia resolve o item sobre matemática - poliedros?",
+    "back": "30 arestas. Pela relação de Euler V − A + F = 2: 20 − A + 12 = 2, então A = 30.",
+    "tags": [
+      "enem",
+      "2025",
+      "dia-2",
+      "questao-141",
+      "matemática-poliedros"
+    ]
+  },
+  {
+    "front": "ENEM 2025 Dia 2, questão 142: qual ideia resolve o item sobre matemática - gráficos?",
+    "back": "Permanece constante. Trecho horizontal representa valor constante ao longo do tempo.",
+    "tags": [
+      "enem",
+      "2025",
+      "dia-2",
+      "questao-142",
+      "matemática-gráficos"
+    ]
+  },
+  {
+    "front": "ENEM 2025 Dia 2, questão 143: qual ideia resolve o item sobre matemática - velocidade média?",
+    "back": "10 m/s. v = d/t = 100/10 = 10 m/s.",
+    "tags": [
+      "enem",
+      "2025",
+      "dia-2",
+      "questao-143",
+      "matemática-velocidade-média"
+    ]
+  },
+  {
+    "front": "ENEM 2025 Dia 2, questão 144: qual ideia resolve o item sobre matemática - coordenadas?",
+    "back": "A coordenada x. O plano yz é definido por x = 0; a projeção preserva y e z.",
+    "tags": [
+      "enem",
+      "2025",
+      "dia-2",
+      "questao-144",
+      "matemática-coordenadas"
+    ]
+  },
+  {
+    "front": "ENEM 2025 Dia 2, questão 145: qual ideia resolve o item sobre matemática - probabilidade?",
+    "back": "30%. Há 30 casos favoráveis entre 100 pessoas: 30/100 = 30%.",
+    "tags": [
+      "enem",
+      "2025",
+      "dia-2",
+      "questao-145",
+      "matemática-probabilidade"
+    ]
+  },
+  {
+    "front": "ENEM 2025 Dia 2, questão 146: qual ideia resolve o item sobre matemática - consumo?",
+    "back": "17 m³. Distância semanal: 210 km. Consumo: 210/13 ≈ 16,15 m³; a menor capacidade inteira suficiente é 17.",
+    "tags": [
+      "enem",
+      "2025",
+      "dia-2",
+      "questao-146",
+      "matemática-consumo"
+    ]
+  },
+  {
+    "front": "ENEM 2025 Dia 2, questão 147: qual ideia resolve o item sobre matemática - lugares geométricos?",
+    "back": "Os pontos da mediatriz de ab. A mediatriz é o conjunto dos pontos equidistantes das extremidades de um segmento.",
+    "tags": [
+      "enem",
+      "2025",
+      "dia-2",
+      "questao-147",
+      "matemática-lugares-geométricos"
+    ]
+  },
+  {
+    "front": "ENEM 2025 Dia 2, questão 148: qual ideia resolve o item sobre matemática - comparação de dados?",
+    "back": "Adquirir 15 romances. Déficit = demanda − estoque = 65 − 50 = 15.",
+    "tags": [
+      "enem",
+      "2025",
+      "dia-2",
+      "questao-148",
+      "matemática-comparação-de-dados"
+    ]
+  },
+  {
+    "front": "ENEM 2025 Dia 2, questão 149: qual ideia resolve o item sobre matemática - porcentagens?",
+    "back": "30. 15% de 200 = 0,15 × 200 = 30.",
+    "tags": [
+      "enem",
+      "2025",
+      "dia-2",
+      "questao-149",
+      "matemática-porcentagens"
+    ]
+  },
+  {
+    "front": "ENEM 2025 Dia 2, questão 150: qual ideia resolve o item sobre matemática - escala?",
+    "back": "2 m. 4 cm × 50 = 200 cm = 2 m.",
+    "tags": [
+      "enem",
+      "2025",
+      "dia-2",
+      "questao-150",
+      "matemática-escala"
+    ]
+  },
+  {
+    "front": "ENEM 2025 Dia 2, questão 151: qual ideia resolve o item sobre matemática - contagem?",
+    "back": "4 000 000. Há 4 escolhas para o primeiro algarismo e 10 escolhas para cada um dos seis seguintes: 4 × 10^6.",
+    "tags": [
+      "enem",
+      "2025",
+      "dia-2",
+      "questao-151",
+      "matemática-contagem"
+    ]
+  },
+  {
+    "front": "ENEM 2025 Dia 2, questão 152: qual ideia resolve o item sobre matemática - proporcionalidade?",
+    "back": "1 800. A produção é proporcional a funcionários × horas: 720 × (5×9)/(3×6) = 1 800.",
+    "tags": [
+      "enem",
+      "2025",
+      "dia-2",
+      "questao-152",
+      "matemática-proporcionalidade"
+    ]
+  },
+  {
+    "front": "ENEM 2025 Dia 2, questão 153: qual ideia resolve o item sobre matemática - poliedros?",
+    "back": "30 vértices. Arestas: (12×5 + 20×3)/2 = 60. Euler: V − 60 + 32 = 2, então V = 30.",
+    "tags": [
+      "enem",
+      "2025",
+      "dia-2",
+      "questao-153",
+      "matemática-poliedros"
+    ]
+  },
+  {
+    "front": "ENEM 2025 Dia 2, questão 154: qual ideia resolve o item sobre matemática - permutações?",
+    "back": "1/24. Há 4! = 24 distribuições equiprováveis e apenas uma é completamente correta.",
+    "tags": [
+      "enem",
+      "2025",
+      "dia-2",
+      "questao-154",
+      "matemática-permutações"
+    ]
+  },
+  {
+    "front": "ENEM 2025 Dia 2, questão 155: qual ideia resolve o item sobre matemática - leitura de gráficos?",
+    "back": "100. 0,40 × 250 = 100.",
+    "tags": [
+      "enem",
+      "2025",
+      "dia-2",
+      "questao-155",
+      "matemática-leitura-de-gráficos"
+    ]
+  },
+  {
+    "front": "ENEM 2025 Dia 2, questão 156: qual ideia resolve o item sobre matemática - vetores?",
+    "back": "5 km. Os deslocamentos são perpendiculares: √(3² + 4²) = 5.",
+    "tags": [
+      "enem",
+      "2025",
+      "dia-2",
+      "questao-156",
+      "matemática-vetores"
+    ]
+  },
+  {
+    "front": "ENEM 2025 Dia 2, questão 157: qual ideia resolve o item sobre matemática - estatística?",
+    "back": "Metade das idades é menor ou igual a 25 e metade é maior ou igual a 25. A mediana é o valor central da lista ordenada e divide os dados em duas metades.",
+    "tags": [
+      "enem",
+      "2025",
+      "dia-2",
+      "questao-157",
+      "matemática-estatística"
+    ]
+  },
+  {
+    "front": "ENEM 2025 Dia 2, questão 158: qual ideia resolve o item sobre matemática - pace?",
+    "back": "1 500 s. Tempo total = 5 × 300 s = 1 500 s.",
+    "tags": [
+      "enem",
+      "2025",
+      "dia-2",
+      "questao-158",
+      "matemática-pace"
+    ]
+  },
+  {
+    "front": "ENEM 2025 Dia 2, questão 159: qual ideia resolve o item sobre matemática - funções?",
+    "back": "14. Substituindo: D = 2 + 3×4 = 14.",
+    "tags": [
+      "enem",
+      "2025",
+      "dia-2",
+      "questao-159",
+      "matemática-funções"
+    ]
+  },
+  {
+    "front": "ENEM 2025 Dia 2, questão 160: qual ideia resolve o item sobre matemática - trajetos?",
+    "back": "7 quarteirões. Em deslocamentos por ruas ortogonais, somam-se os trechos: 4 + 3 = 7.",
+    "tags": [
+      "enem",
+      "2025",
+      "dia-2",
+      "questao-160",
+      "matemática-trajetos"
+    ]
+  },
+  {
+    "front": "ENEM 2025 Dia 2, questão 161: qual ideia resolve o item sobre matemática - custos?",
+    "back": "R$ 10 000. Se 500 é 5%, o total é 500/0,05 = 10 000.",
+    "tags": [
+      "enem",
+      "2025",
+      "dia-2",
+      "questao-161",
+      "matemática-custos"
+    ]
+  },
+  {
+    "front": "ENEM 2025 Dia 2, questão 162: qual ideia resolve o item sobre matemática - princípio multiplicativo?",
+    "back": "20 × 18 × 16. Escolhe-se a primeira pessoa entre 20, a segunda fora do casal dela entre 18 e a terceira fora dos dois casais entre 16.",
+    "tags": [
+      "enem",
+      "2025",
+      "dia-2",
+      "questao-162",
+      "matemática-princípio-multiplicativo"
+    ]
+  },
+  {
+    "front": "ENEM 2025 Dia 2, questão 163: qual ideia resolve o item sobre matemática - escala?",
+    "back": "1:150. 30 m = 3 000 cm; 20:3 000 simplifica para 1:150.",
+    "tags": [
+      "enem",
+      "2025",
+      "dia-2",
+      "questao-163",
+      "matemática-escala"
+    ]
+  },
+  {
+    "front": "ENEM 2025 Dia 2, questão 164: qual ideia resolve o item sobre matemática - razão?",
+    "back": "T/f = 1,59. “T é 1,59 vezes F” significa T = 1,59F; dividindo por F, T/F = 1,59.",
+    "tags": [
+      "enem",
+      "2025",
+      "dia-2",
+      "questao-164",
+      "matemática-razão"
+    ]
+  },
+  {
+    "front": "ENEM 2025 Dia 2, questão 165: qual ideia resolve o item sobre matemática - custos?",
+    "back": "R$ 245,20. Despesa = 14 240 + 120×43,20 = 19 424. Receita necessária = 29 424; por vaga: 29 424/120 = 245,20.",
+    "tags": [
+      "enem",
+      "2025",
+      "dia-2",
+      "questao-165",
+      "matemática-custos"
+    ]
+  },
+  {
+    "front": "ENEM 2025 Dia 2, questão 166: qual ideia resolve o item sobre matemática - volume?",
+    "back": "80. 1 cm³ = 1 mL; 20 000/250 = 80.",
+    "tags": [
+      "enem",
+      "2025",
+      "dia-2",
+      "questao-166",
+      "matemática-volume"
+    ]
+  },
+  {
+    "front": "ENEM 2025 Dia 2, questão 167: qual ideia resolve o item sobre matemática - produção?",
+    "back": "400 toneladas. 200×40 = 8 000 sacas; 8 000×50 kg = 400 000 kg = 400 t.",
+    "tags": [
+      "enem",
+      "2025",
+      "dia-2",
+      "questao-167",
+      "matemática-produção"
+    ]
+  },
+  {
+    "front": "ENEM 2025 Dia 2, questão 168: qual ideia resolve o item sobre matemática - volume de cilindro?",
+    "back": "8,37 cm³. V = πr²h = 3,1×3²×0,3 = 8,37 cm³.",
+    "tags": [
+      "enem",
+      "2025",
+      "dia-2",
+      "questao-168",
+      "matemática-volume-de-cilindro"
+    ]
+  },
+  {
+    "front": "ENEM 2025 Dia 2, questão 169: qual ideia resolve o item sobre matemática - probabilidade?",
+    "back": "Artur. Dois lançamentos dão a Artur mais chances de obter valor alto; a condição de empate favorece João, mas não elimina a vantagem do máximo de dois dados.",
+    "tags": [
+      "enem",
+      "2025",
+      "dia-2",
+      "questao-169",
+      "matemática-probabilidade"
+    ]
+  },
+  {
+    "front": "ENEM 2025 Dia 2, questão 170: qual ideia resolve o item sobre matemática - análise dimensional?",
+    "back": "Cd/m². Dividir cd por m² produz cd/m².",
+    "tags": [
+      "enem",
+      "2025",
+      "dia-2",
+      "questao-170",
+      "matemática-análise-dimensional"
+    ]
+  },
+  {
+    "front": "ENEM 2025 Dia 2, questão 171: qual ideia resolve o item sobre matemática - sequência?",
+    "back": "100 + 3n. O saldo líquido por rodada é +4 − 1 = +3; após n rodadas, soma-se 3n.",
+    "tags": [
+      "enem",
+      "2025",
+      "dia-2",
+      "questao-171",
+      "matemática-sequência"
+    ]
+  },
+  {
+    "front": "ENEM 2025 Dia 2, questão 172: qual ideia resolve o item sobre matemática - consumo?",
+    "back": "R$ 14. A custa 2×20 = 40 e B custa 3×18 = 54; a diferença é 54 − 40 = 14.",
+    "tags": [
+      "enem",
+      "2025",
+      "dia-2",
+      "questao-172",
+      "matemática-consumo"
+    ]
+  },
+  {
+    "front": "ENEM 2025 Dia 2, questão 173: qual ideia resolve o item sobre matemática - orçamento?",
+    "back": "R$ 1 200. 20×20 + 10×40 + 400 = 400 + 400 + 400 = 1 200.",
+    "tags": [
+      "enem",
+      "2025",
+      "dia-2",
+      "questao-173",
+      "matemática-orçamento"
+    ]
+  },
+  {
+    "front": "ENEM 2025 Dia 2, questão 174: qual ideia resolve o item sobre matemática - volume?",
+    "back": "7,5 l. V = 2,5×1,5×2 = 7,5 dm³; 1 dm³ equivale a 1 L.",
+    "tags": [
+      "enem",
+      "2025",
+      "dia-2",
+      "questao-174",
+      "matemática-volume"
+    ]
+  },
+  {
+    "front": "ENEM 2025 Dia 2, questão 175: qual ideia resolve o item sobre matemática - geometria espacial?",
+    "back": "34 cm. O lado deve acomodar o diâmetro mais 1 cm de cada lado: 32 + 2 = 34 cm.",
+    "tags": [
+      "enem",
+      "2025",
+      "dia-2",
+      "questao-175",
+      "matemática-geometria-espacial"
+    ]
+  },
+  {
+    "front": "ENEM 2025 Dia 2, questão 176: qual ideia resolve o item sobre matemática - logaritmos?",
+    "back": "10. 12/4 = 3, então log10(100K) = 3; 100K = 1 000 e K = 10.",
+    "tags": [
+      "enem",
+      "2025",
+      "dia-2",
+      "questao-176",
+      "matemática-logaritmos"
+    ]
+  },
+  {
+    "front": "ENEM 2025 Dia 2, questão 177: qual ideia resolve o item sobre matemática - áreas?",
+    "back": "121,5 m². Área do semicírculo = πr²/2 = 3×81/2 = 121,5 m².",
+    "tags": [
+      "enem",
+      "2025",
+      "dia-2",
+      "questao-177",
+      "matemática-áreas"
+    ]
+  },
+  {
+    "front": "ENEM 2025 Dia 2, questão 179: qual ideia resolve o item sobre matemática - combinatória?",
+    "back": "30. Escolhe-se qual item especial recebe (2 formas) e mais 2 entre os outros 6: 2×C(6,2) = 2×15 = 30.",
+    "tags": [
+      "enem",
+      "2025",
+      "dia-2",
+      "questao-179",
+      "matemática-combinatória"
+    ]
+  },
+  {
+    "front": "ENEM 2025 Dia 2, questão 180: qual ideia resolve o item sobre matemática - velocidade média?",
+    "back": "7,5 km. A velocidade é 4,5/45 = 0,1 km/min. Em 75 min, percorre 0,1×75 = 7,5 km.",
+    "tags": [
+      "enem",
+      "2025",
+      "dia-2",
+      "questao-180",
+      "matemática-velocidade-média"
+    ]
+  }
+]

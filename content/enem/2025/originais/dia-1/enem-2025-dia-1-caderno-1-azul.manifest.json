@@ -1,0 +1,1250 @@
+{
+  "schema": "bsestudos.enem-original-page-manifest.v1",
+  "year": 2025,
+  "day": 1,
+  "booklet": "Caderno 1 - Azul",
+  "sourcePdf": "docs/sources/enem/2025/aplicacao-regular/enem-2025-dia-1-caderno-1-azul-prova.pdf",
+  "sourceGabarito": "docs/sources/enem/2025/aplicacao-regular/enem-2025-dia-1-caderno-1-azul-gabarito.pdf",
+  "sourcePageIndex": "docs/sources/enem/2025/aplicacao-regular/rendered/page-index.json",
+  "provenance": {
+    "obtainedBy": "GPT-5.6 Luna",
+    "manifestCreatedBy": "GPT-5.6 Terra",
+    "orchestratedBy": "GPT-6 Astra"
+  },
+  "coverage": {
+    "distinctVariants": 95,
+    "english": 5,
+    "spanish": 5,
+    "common": 85,
+    "publishedToPlayer": false
+  },
+  "items": [
+    {
+      "variantId": "d1-ingles-q001",
+      "question": 1,
+      "language": "ingles",
+      "officialAnswer": "D",
+      "asset": "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-02.png",
+      "contextAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-02.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-03.png"
+      ],
+      "status": "preserved_official_page_pending_local_image_integration"
+    },
+    {
+      "variantId": "d1-ingles-q002",
+      "question": 2,
+      "language": "ingles",
+      "officialAnswer": "D",
+      "asset": "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-02.png",
+      "contextAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-02.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-03.png"
+      ],
+      "status": "preserved_official_page_pending_local_image_integration"
+    },
+    {
+      "variantId": "d1-ingles-q003",
+      "question": 3,
+      "language": "ingles",
+      "officialAnswer": "D",
+      "asset": "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-02.png",
+      "contextAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-02.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-03.png"
+      ],
+      "status": "preserved_official_page_pending_local_image_integration"
+    },
+    {
+      "variantId": "d1-ingles-q004",
+      "question": 4,
+      "language": "ingles",
+      "officialAnswer": "E",
+      "asset": "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-03.png",
+      "contextAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-02.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-03.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-04.png"
+      ],
+      "status": "preserved_official_page_pending_local_image_integration"
+    },
+    {
+      "variantId": "d1-ingles-q005",
+      "question": 5,
+      "language": "ingles",
+      "officialAnswer": "A",
+      "asset": "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-03.png",
+      "contextAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-02.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-03.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-04.png"
+      ],
+      "status": "preserved_official_page_pending_local_image_integration"
+    },
+    {
+      "variantId": "d1-espanhol-q001",
+      "question": 1,
+      "language": "espanhol",
+      "officialAnswer": "B",
+      "asset": "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-04.png",
+      "contextAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-03.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-04.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-05.png"
+      ],
+      "status": "preserved_official_page_pending_local_image_integration"
+    },
+    {
+      "variantId": "d1-espanhol-q002",
+      "question": 2,
+      "language": "espanhol",
+      "officialAnswer": "A",
+      "asset": "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-04.png",
+      "contextAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-03.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-04.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-05.png"
+      ],
+      "status": "preserved_official_page_pending_local_image_integration"
+    },
+    {
+      "variantId": "d1-espanhol-q003",
+      "question": 3,
+      "language": "espanhol",
+      "officialAnswer": "D",
+      "asset": "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-04.png",
+      "contextAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-03.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-04.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-05.png"
+      ],
+      "status": "preserved_official_page_pending_local_image_integration"
+    },
+    {
+      "variantId": "d1-espanhol-q004",
+      "question": 4,
+      "language": "espanhol",
+      "officialAnswer": "D",
+      "asset": "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-05.png",
+      "contextAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-04.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-05.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-06.png"
+      ],
+      "status": "preserved_official_page_pending_local_image_integration"
+    },
+    {
+      "variantId": "d1-espanhol-q005",
+      "question": 5,
+      "language": "espanhol",
+      "officialAnswer": "C",
+      "asset": "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-05.png",
+      "contextAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-04.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-05.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-06.png"
+      ],
+      "status": "preserved_official_page_pending_local_image_integration"
+    },
+    {
+      "variantId": "d1-common-q006",
+      "question": 6,
+      "language": "common",
+      "officialAnswer": "E",
+      "asset": "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-07.png",
+      "contextAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-06.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-07.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-08.png"
+      ],
+      "status": "preserved_official_page_pending_local_image_integration"
+    },
+    {
+      "variantId": "d1-common-q007",
+      "question": 7,
+      "language": "common",
+      "officialAnswer": "C",
+      "asset": "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-07.png",
+      "contextAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-06.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-07.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-08.png"
+      ],
+      "status": "preserved_official_page_pending_local_image_integration"
+    },
+    {
+      "variantId": "d1-common-q008",
+      "question": 8,
+      "language": "common",
+      "officialAnswer": "D",
+      "asset": "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-07.png",
+      "contextAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-06.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-07.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-08.png"
+      ],
+      "status": "preserved_official_page_pending_local_image_integration"
+    },
+    {
+      "variantId": "d1-common-q009",
+      "question": 9,
+      "language": "common",
+      "officialAnswer": "C",
+      "asset": "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-07.png",
+      "contextAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-06.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-07.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-08.png"
+      ],
+      "status": "preserved_official_page_pending_local_image_integration"
+    },
+    {
+      "variantId": "d1-common-q010",
+      "question": 10,
+      "language": "common",
+      "officialAnswer": "E",
+      "asset": "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-07.png",
+      "contextAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-06.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-07.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-08.png"
+      ],
+      "status": "preserved_official_page_pending_local_image_integration"
+    },
+    {
+      "variantId": "d1-common-q011",
+      "question": 11,
+      "language": "common",
+      "officialAnswer": "B",
+      "asset": "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-08.png",
+      "contextAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-07.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-08.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-09.png"
+      ],
+      "status": "preserved_official_page_pending_local_image_integration"
+    },
+    {
+      "variantId": "d1-common-q012",
+      "question": 12,
+      "language": "common",
+      "officialAnswer": "C",
+      "asset": "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-08.png",
+      "contextAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-07.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-08.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-09.png"
+      ],
+      "status": "preserved_official_page_pending_local_image_integration"
+    },
+    {
+      "variantId": "d1-common-q013",
+      "question": 13,
+      "language": "common",
+      "officialAnswer": "E",
+      "asset": "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-08.png",
+      "contextAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-07.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-08.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-09.png"
+      ],
+      "status": "preserved_official_page_pending_local_image_integration"
+    },
+    {
+      "variantId": "d1-common-q014",
+      "question": 14,
+      "language": "common",
+      "officialAnswer": "C",
+      "asset": "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-08.png",
+      "contextAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-07.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-08.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-09.png"
+      ],
+      "status": "preserved_official_page_pending_local_image_integration"
+    },
+    {
+      "variantId": "d1-common-q015",
+      "question": 15,
+      "language": "common",
+      "officialAnswer": "A",
+      "asset": "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-09.png",
+      "contextAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-08.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-09.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-10.png"
+      ],
+      "status": "preserved_official_page_pending_local_image_integration"
+    },
+    {
+      "variantId": "d1-common-q016",
+      "question": 16,
+      "language": "common",
+      "officialAnswer": "E",
+      "asset": "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-09.png",
+      "contextAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-08.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-09.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-10.png"
+      ],
+      "status": "preserved_official_page_pending_local_image_integration"
+    },
+    {
+      "variantId": "d1-common-q017",
+      "question": 17,
+      "language": "common",
+      "officialAnswer": "C",
+      "asset": "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-09.png",
+      "contextAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-08.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-09.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-10.png"
+      ],
+      "status": "preserved_official_page_pending_local_image_integration"
+    },
+    {
+      "variantId": "d1-common-q018",
+      "question": 18,
+      "language": "common",
+      "officialAnswer": "A",
+      "asset": "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-10.png",
+      "contextAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-09.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-10.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-11.png"
+      ],
+      "status": "preserved_official_page_pending_local_image_integration"
+    },
+    {
+      "variantId": "d1-common-q019",
+      "question": 19,
+      "language": "common",
+      "officialAnswer": "E",
+      "asset": "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-10.png",
+      "contextAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-09.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-10.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-11.png"
+      ],
+      "status": "preserved_official_page_pending_local_image_integration"
+    },
+    {
+      "variantId": "d1-common-q020",
+      "question": 20,
+      "language": "common",
+      "officialAnswer": "B",
+      "asset": "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-10.png",
+      "contextAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-09.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-10.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-11.png"
+      ],
+      "status": "preserved_official_page_pending_local_image_integration"
+    },
+    {
+      "variantId": "d1-common-q021",
+      "question": 21,
+      "language": "common",
+      "officialAnswer": "C",
+      "asset": "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-10.png",
+      "contextAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-09.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-10.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-11.png"
+      ],
+      "status": "preserved_official_page_pending_local_image_integration"
+    },
+    {
+      "variantId": "d1-common-q022",
+      "question": 22,
+      "language": "common",
+      "officialAnswer": "B",
+      "asset": "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-11.png",
+      "contextAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-10.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-11.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-12.png"
+      ],
+      "status": "preserved_official_page_pending_local_image_integration"
+    },
+    {
+      "variantId": "d1-common-q023",
+      "question": 23,
+      "language": "common",
+      "officialAnswer": "C",
+      "asset": "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-11.png",
+      "contextAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-10.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-11.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-12.png"
+      ],
+      "status": "preserved_official_page_pending_local_image_integration"
+    },
+    {
+      "variantId": "d1-common-q024",
+      "question": 24,
+      "language": "common",
+      "officialAnswer": "B",
+      "asset": "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-12.png",
+      "contextAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-11.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-12.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-13.png"
+      ],
+      "status": "preserved_official_page_pending_local_image_integration"
+    },
+    {
+      "variantId": "d1-common-q025",
+      "question": 25,
+      "language": "common",
+      "officialAnswer": "E",
+      "asset": "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-12.png",
+      "contextAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-11.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-12.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-13.png"
+      ],
+      "status": "preserved_official_page_pending_local_image_integration"
+    },
+    {
+      "variantId": "d1-common-q026",
+      "question": 26,
+      "language": "common",
+      "officialAnswer": "B",
+      "asset": "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-13.png",
+      "contextAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-12.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-13.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-14.png"
+      ],
+      "status": "preserved_official_page_pending_local_image_integration"
+    },
+    {
+      "variantId": "d1-common-q027",
+      "question": 27,
+      "language": "common",
+      "officialAnswer": "A",
+      "asset": "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-13.png",
+      "contextAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-12.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-13.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-14.png"
+      ],
+      "status": "preserved_official_page_pending_local_image_integration"
+    },
+    {
+      "variantId": "d1-common-q028",
+      "question": 28,
+      "language": "common",
+      "officialAnswer": "B",
+      "asset": "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-13.png",
+      "contextAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-12.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-13.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-14.png"
+      ],
+      "status": "preserved_official_page_pending_local_image_integration"
+    },
+    {
+      "variantId": "d1-common-q029",
+      "question": 29,
+      "language": "common",
+      "officialAnswer": "A",
+      "asset": "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-13.png",
+      "contextAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-12.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-13.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-14.png"
+      ],
+      "status": "preserved_official_page_pending_local_image_integration"
+    },
+    {
+      "variantId": "d1-common-q030",
+      "question": 30,
+      "language": "common",
+      "officialAnswer": "B",
+      "asset": "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-14.png",
+      "contextAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-13.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-14.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-15.png"
+      ],
+      "status": "preserved_official_page_pending_local_image_integration"
+    },
+    {
+      "variantId": "d1-common-q031",
+      "question": 31,
+      "language": "common",
+      "officialAnswer": "D",
+      "asset": "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-14.png",
+      "contextAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-13.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-14.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-15.png"
+      ],
+      "status": "preserved_official_page_pending_local_image_integration"
+    },
+    {
+      "variantId": "d1-common-q032",
+      "question": 32,
+      "language": "common",
+      "officialAnswer": "E",
+      "asset": "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-14.png",
+      "contextAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-13.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-14.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-15.png"
+      ],
+      "status": "preserved_official_page_pending_local_image_integration"
+    },
+    {
+      "variantId": "d1-common-q033",
+      "question": 33,
+      "language": "common",
+      "officialAnswer": "B",
+      "asset": "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-14.png",
+      "contextAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-13.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-14.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-15.png"
+      ],
+      "status": "preserved_official_page_pending_local_image_integration"
+    },
+    {
+      "variantId": "d1-common-q034",
+      "question": 34,
+      "language": "common",
+      "officialAnswer": "C",
+      "asset": "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-15.png",
+      "contextAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-14.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-15.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-16.png"
+      ],
+      "status": "preserved_official_page_pending_local_image_integration"
+    },
+    {
+      "variantId": "d1-common-q035",
+      "question": 35,
+      "language": "common",
+      "officialAnswer": "E",
+      "asset": "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-15.png",
+      "contextAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-14.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-15.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-16.png"
+      ],
+      "status": "preserved_official_page_pending_local_image_integration"
+    },
+    {
+      "variantId": "d1-common-q036",
+      "question": 36,
+      "language": "common",
+      "officialAnswer": "D",
+      "asset": "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-15.png",
+      "contextAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-14.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-15.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-16.png"
+      ],
+      "status": "preserved_official_page_pending_local_image_integration"
+    },
+    {
+      "variantId": "d1-common-q037",
+      "question": 37,
+      "language": "common",
+      "officialAnswer": "A",
+      "asset": "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-16.png",
+      "contextAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-15.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-16.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-17.png"
+      ],
+      "status": "preserved_official_page_pending_local_image_integration"
+    },
+    {
+      "variantId": "d1-common-q038",
+      "question": 38,
+      "language": "common",
+      "officialAnswer": "B",
+      "asset": "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-16.png",
+      "contextAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-15.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-16.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-17.png"
+      ],
+      "status": "preserved_official_page_pending_local_image_integration"
+    },
+    {
+      "variantId": "d1-common-q039",
+      "question": 39,
+      "language": "common",
+      "officialAnswer": "C",
+      "asset": "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-17.png",
+      "contextAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-16.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-17.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-18.png"
+      ],
+      "status": "preserved_official_page_pending_local_image_integration"
+    },
+    {
+      "variantId": "d1-common-q040",
+      "question": 40,
+      "language": "common",
+      "officialAnswer": "A",
+      "asset": "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-17.png",
+      "contextAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-16.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-17.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-18.png"
+      ],
+      "status": "preserved_official_page_pending_local_image_integration"
+    },
+    {
+      "variantId": "d1-common-q041",
+      "question": 41,
+      "language": "common",
+      "officialAnswer": "B",
+      "asset": "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-18.png",
+      "contextAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-17.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-18.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-19.png"
+      ],
+      "status": "preserved_official_page_pending_local_image_integration"
+    },
+    {
+      "variantId": "d1-common-q042",
+      "question": 42,
+      "language": "common",
+      "officialAnswer": "A",
+      "asset": "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-18.png",
+      "contextAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-17.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-18.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-19.png"
+      ],
+      "status": "preserved_official_page_pending_local_image_integration"
+    },
+    {
+      "variantId": "d1-common-q043",
+      "question": 43,
+      "language": "common",
+      "officialAnswer": "D",
+      "asset": "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-19.png",
+      "contextAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-18.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-19.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-20.png"
+      ],
+      "status": "preserved_official_page_pending_local_image_integration"
+    },
+    {
+      "variantId": "d1-common-q044",
+      "question": 44,
+      "language": "common",
+      "officialAnswer": "D",
+      "asset": "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-19.png",
+      "contextAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-18.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-19.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-20.png"
+      ],
+      "status": "preserved_official_page_pending_local_image_integration"
+    },
+    {
+      "variantId": "d1-common-q045",
+      "question": 45,
+      "language": "common",
+      "officialAnswer": "C",
+      "asset": "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-19.png",
+      "contextAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-18.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-19.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-20.png"
+      ],
+      "status": "preserved_official_page_pending_local_image_integration"
+    },
+    {
+      "variantId": "d1-common-q046",
+      "question": 46,
+      "language": "common",
+      "officialAnswer": "E",
+      "asset": "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-22.png",
+      "contextAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-21.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-22.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-23.png"
+      ],
+      "status": "preserved_official_page_pending_local_image_integration"
+    },
+    {
+      "variantId": "d1-common-q047",
+      "question": 47,
+      "language": "common",
+      "officialAnswer": "D",
+      "asset": "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-22.png",
+      "contextAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-21.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-22.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-23.png"
+      ],
+      "status": "preserved_official_page_pending_local_image_integration"
+    },
+    {
+      "variantId": "d1-common-q048",
+      "question": 48,
+      "language": "common",
+      "officialAnswer": "E",
+      "asset": "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-22.png",
+      "contextAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-21.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-22.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-23.png"
+      ],
+      "status": "preserved_official_page_pending_local_image_integration"
+    },
+    {
+      "variantId": "d1-common-q049",
+      "question": 49,
+      "language": "common",
+      "officialAnswer": "C",
+      "asset": "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-23.png",
+      "contextAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-22.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-23.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-24.png"
+      ],
+      "status": "preserved_official_page_pending_local_image_integration"
+    },
+    {
+      "variantId": "d1-common-q050",
+      "question": 50,
+      "language": "common",
+      "officialAnswer": "A",
+      "asset": "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-23.png",
+      "contextAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-22.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-23.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-24.png"
+      ],
+      "status": "preserved_official_page_pending_local_image_integration"
+    },
+    {
+      "variantId": "d1-common-q051",
+      "question": 51,
+      "language": "common",
+      "officialAnswer": "D",
+      "asset": "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-23.png",
+      "contextAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-22.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-23.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-24.png"
+      ],
+      "status": "preserved_official_page_pending_local_image_integration"
+    },
+    {
+      "variantId": "d1-common-q052",
+      "question": 52,
+      "language": "common",
+      "officialAnswer": "C",
+      "asset": "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-24.png",
+      "contextAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-23.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-24.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-25.png"
+      ],
+      "status": "preserved_official_page_pending_local_image_integration"
+    },
+    {
+      "variantId": "d1-common-q053",
+      "question": 53,
+      "language": "common",
+      "officialAnswer": "E",
+      "asset": "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-24.png",
+      "contextAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-23.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-24.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-25.png"
+      ],
+      "status": "preserved_official_page_pending_local_image_integration"
+    },
+    {
+      "variantId": "d1-common-q054",
+      "question": 54,
+      "language": "common",
+      "officialAnswer": "E",
+      "asset": "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-24.png",
+      "contextAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-23.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-24.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-25.png"
+      ],
+      "status": "preserved_official_page_pending_local_image_integration"
+    },
+    {
+      "variantId": "d1-common-q055",
+      "question": 55,
+      "language": "common",
+      "officialAnswer": "D",
+      "asset": "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-24.png",
+      "contextAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-23.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-24.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-25.png"
+      ],
+      "status": "preserved_official_page_pending_local_image_integration"
+    },
+    {
+      "variantId": "d1-common-q056",
+      "question": 56,
+      "language": "common",
+      "officialAnswer": "C",
+      "asset": "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-24.png",
+      "contextAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-23.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-24.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-25.png"
+      ],
+      "status": "preserved_official_page_pending_local_image_integration"
+    },
+    {
+      "variantId": "d1-common-q057",
+      "question": 57,
+      "language": "common",
+      "officialAnswer": "A",
+      "asset": "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-25.png",
+      "contextAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-24.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-25.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-26.png"
+      ],
+      "status": "preserved_official_page_pending_local_image_integration"
+    },
+    {
+      "variantId": "d1-common-q058",
+      "question": 58,
+      "language": "common",
+      "officialAnswer": "D",
+      "asset": "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-25.png",
+      "contextAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-24.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-25.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-26.png"
+      ],
+      "status": "preserved_official_page_pending_local_image_integration"
+    },
+    {
+      "variantId": "d1-common-q059",
+      "question": 59,
+      "language": "common",
+      "officialAnswer": "B",
+      "asset": "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-25.png",
+      "contextAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-24.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-25.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-26.png"
+      ],
+      "status": "preserved_official_page_pending_local_image_integration"
+    },
+    {
+      "variantId": "d1-common-q060",
+      "question": 60,
+      "language": "common",
+      "officialAnswer": "D",
+      "asset": "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-25.png",
+      "contextAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-24.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-25.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-26.png"
+      ],
+      "status": "preserved_official_page_pending_local_image_integration"
+    },
+    {
+      "variantId": "d1-common-q061",
+      "question": 61,
+      "language": "common",
+      "officialAnswer": "E",
+      "asset": "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-25.png",
+      "contextAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-24.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-25.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-26.png"
+      ],
+      "status": "preserved_official_page_pending_local_image_integration"
+    },
+    {
+      "variantId": "d1-common-q062",
+      "question": 62,
+      "language": "common",
+      "officialAnswer": "B",
+      "asset": "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-26.png",
+      "contextAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-25.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-26.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-27.png"
+      ],
+      "status": "preserved_official_page_pending_local_image_integration"
+    },
+    {
+      "variantId": "d1-common-q063",
+      "question": 63,
+      "language": "common",
+      "officialAnswer": "B",
+      "asset": "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-26.png",
+      "contextAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-25.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-26.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-27.png"
+      ],
+      "status": "preserved_official_page_pending_local_image_integration"
+    },
+    {
+      "variantId": "d1-common-q064",
+      "question": 64,
+      "language": "common",
+      "officialAnswer": "A",
+      "asset": "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-26.png",
+      "contextAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-25.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-26.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-27.png"
+      ],
+      "status": "preserved_official_page_pending_local_image_integration"
+    },
+    {
+      "variantId": "d1-common-q065",
+      "question": 65,
+      "language": "common",
+      "officialAnswer": "C",
+      "asset": "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-27.png",
+      "contextAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-26.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-27.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-28.png"
+      ],
+      "status": "preserved_official_page_pending_local_image_integration"
+    },
+    {
+      "variantId": "d1-common-q066",
+      "question": 66,
+      "language": "common",
+      "officialAnswer": "D",
+      "asset": "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-27.png",
+      "contextAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-26.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-27.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-28.png"
+      ],
+      "status": "preserved_official_page_pending_local_image_integration"
+    },
+    {
+      "variantId": "d1-common-q067",
+      "question": 67,
+      "language": "common",
+      "officialAnswer": "D",
+      "asset": "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-27.png",
+      "contextAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-26.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-27.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-28.png"
+      ],
+      "status": "preserved_official_page_pending_local_image_integration"
+    },
+    {
+      "variantId": "d1-common-q068",
+      "question": 68,
+      "language": "common",
+      "officialAnswer": "E",
+      "asset": "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-27.png",
+      "contextAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-26.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-27.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-28.png"
+      ],
+      "status": "preserved_official_page_pending_local_image_integration"
+    },
+    {
+      "variantId": "d1-common-q069",
+      "question": 69,
+      "language": "common",
+      "officialAnswer": "C",
+      "asset": "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-27.png",
+      "contextAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-26.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-27.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-28.png"
+      ],
+      "status": "preserved_official_page_pending_local_image_integration"
+    },
+    {
+      "variantId": "d1-common-q070",
+      "question": 70,
+      "language": "common",
+      "officialAnswer": "B",
+      "asset": "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-28.png",
+      "contextAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-27.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-28.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-29.png"
+      ],
+      "status": "preserved_official_page_pending_local_image_integration"
+    },
+    {
+      "variantId": "d1-common-q071",
+      "question": 71,
+      "language": "common",
+      "officialAnswer": "A",
+      "asset": "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-28.png",
+      "contextAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-27.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-28.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-29.png"
+      ],
+      "status": "preserved_official_page_pending_local_image_integration"
+    },
+    {
+      "variantId": "d1-common-q072",
+      "question": 72,
+      "language": "common",
+      "officialAnswer": "D",
+      "asset": "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-28.png",
+      "contextAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-27.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-28.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-29.png"
+      ],
+      "status": "preserved_official_page_pending_local_image_integration"
+    },
+    {
+      "variantId": "d1-common-q073",
+      "question": 73,
+      "language": "common",
+      "officialAnswer": "A",
+      "asset": "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-28.png",
+      "contextAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-27.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-28.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-29.png"
+      ],
+      "status": "preserved_official_page_pending_local_image_integration"
+    },
+    {
+      "variantId": "d1-common-q074",
+      "question": 74,
+      "language": "common",
+      "officialAnswer": "B",
+      "asset": "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-28.png",
+      "contextAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-27.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-28.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-29.png"
+      ],
+      "status": "preserved_official_page_pending_local_image_integration"
+    },
+    {
+      "variantId": "d1-common-q075",
+      "question": 75,
+      "language": "common",
+      "officialAnswer": "B",
+      "asset": "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-28.png",
+      "contextAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-27.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-28.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-29.png"
+      ],
+      "status": "preserved_official_page_pending_local_image_integration"
+    },
+    {
+      "variantId": "d1-common-q076",
+      "question": 76,
+      "language": "common",
+      "officialAnswer": "C",
+      "asset": "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-29.png",
+      "contextAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-28.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-29.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-30.png"
+      ],
+      "status": "preserved_official_page_pending_local_image_integration"
+    },
+    {
+      "variantId": "d1-common-q077",
+      "question": 77,
+      "language": "common",
+      "officialAnswer": "A",
+      "asset": "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-29.png",
+      "contextAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-28.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-29.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-30.png"
+      ],
+      "status": "preserved_official_page_pending_local_image_integration"
+    },
+    {
+      "variantId": "d1-common-q078",
+      "question": 78,
+      "language": "common",
+      "officialAnswer": "B",
+      "asset": "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-29.png",
+      "contextAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-28.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-29.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-30.png"
+      ],
+      "status": "preserved_official_page_pending_local_image_integration"
+    },
+    {
+      "variantId": "d1-common-q079",
+      "question": 79,
+      "language": "common",
+      "officialAnswer": "A",
+      "asset": "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-29.png",
+      "contextAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-28.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-29.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-30.png"
+      ],
+      "status": "preserved_official_page_pending_local_image_integration"
+    },
+    {
+      "variantId": "d1-common-q080",
+      "question": 80,
+      "language": "common",
+      "officialAnswer": "C",
+      "asset": "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-29.png",
+      "contextAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-28.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-29.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-30.png"
+      ],
+      "status": "preserved_official_page_pending_local_image_integration"
+    },
+    {
+      "variantId": "d1-common-q081",
+      "question": 81,
+      "language": "common",
+      "officialAnswer": "E",
+      "asset": "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-30.png",
+      "contextAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-29.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-30.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-31.png"
+      ],
+      "status": "preserved_official_page_pending_local_image_integration"
+    },
+    {
+      "variantId": "d1-common-q082",
+      "question": 82,
+      "language": "common",
+      "officialAnswer": "E",
+      "asset": "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-30.png",
+      "contextAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-29.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-30.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-31.png"
+      ],
+      "status": "preserved_official_page_pending_local_image_integration"
+    },
+    {
+      "variantId": "d1-common-q083",
+      "question": 83,
+      "language": "common",
+      "officialAnswer": "D",
+      "asset": "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-30.png",
+      "contextAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-29.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-30.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-31.png"
+      ],
+      "status": "preserved_official_page_pending_local_image_integration"
+    },
+    {
+      "variantId": "d1-common-q084",
+      "question": 84,
+      "language": "common",
+      "officialAnswer": "D",
+      "asset": "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-30.png",
+      "contextAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-29.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-30.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-31.png"
+      ],
+      "status": "preserved_official_page_pending_local_image_integration"
+    },
+    {
+      "variantId": "d1-common-q085",
+      "question": 85,
+      "language": "common",
+      "officialAnswer": "B",
+      "asset": "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-30.png",
+      "contextAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-29.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-30.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-31.png"
+      ],
+      "status": "preserved_official_page_pending_local_image_integration"
+    },
+    {
+      "variantId": "d1-common-q086",
+      "question": 86,
+      "language": "common",
+      "officialAnswer": "C",
+      "asset": "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-31.png",
+      "contextAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-30.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-31.png"
+      ],
+      "status": "preserved_official_page_pending_local_image_integration"
+    },
+    {
+      "variantId": "d1-common-q087",
+      "question": 87,
+      "language": "common",
+      "officialAnswer": "B",
+      "asset": "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-31.png",
+      "contextAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-30.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-31.png"
+      ],
+      "status": "preserved_official_page_pending_local_image_integration"
+    },
+    {
+      "variantId": "d1-common-q088",
+      "question": 88,
+      "language": "common",
+      "officialAnswer": "C",
+      "asset": "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-31.png",
+      "contextAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-30.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-31.png"
+      ],
+      "status": "preserved_official_page_pending_local_image_integration"
+    },
+    {
+      "variantId": "d1-common-q089",
+      "question": 89,
+      "language": "common",
+      "officialAnswer": "E",
+      "asset": "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-31.png",
+      "contextAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-30.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-31.png"
+      ],
+      "status": "preserved_official_page_pending_local_image_integration"
+    },
+    {
+      "variantId": "d1-common-q090",
+      "question": 90,
+      "language": "common",
+      "officialAnswer": "A",
+      "asset": "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-31.png",
+      "contextAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-30.png",
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-1-caderno-1-azul/pagina-31.png"
+      ],
+      "status": "preserved_official_page_pending_local_image_integration"
+    }
+  ]
+}

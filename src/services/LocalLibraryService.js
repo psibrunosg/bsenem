@@ -17,6 +17,7 @@ export class LocalLibraryService {
     this.catalog = buildCourseCatalog([]);
     this.fileHandles = new Map();
     this.localExams = new Map();
+    this.examImageHandles = new Map();
     this.objectUrls = new Map();
   }
 
@@ -56,10 +57,12 @@ export class LocalLibraryService {
       this.clearCatalog();
       throw localError('permission-denied');
     }
+    this.releaseObjectUrls();
     const files = [];
     const diagnostics = [];
     this.fileHandles.clear();
     this.localExams.clear();
+    this.examImageHandles.clear();
     await visit(handle, [], files, diagnostics);
     const sidecars = new Map();
     for (const entry of files.filter(entry => SIDECAR_TYPES.has(entry.extension))) {
@@ -69,8 +72,9 @@ export class LocalLibraryService {
     const items = [];
     for (const entry of files) {
       if (isExam(entry.name)) {
-        const exam = await localExam(entry, diagnostics);
-        if (!exam) continue;
+        const examResult = await localExam(entry, diagnostics, files);
+        if (!examResult) continue;
+        const { exam, imageHandles } = examResult;
         const id = this.createId();
         items.push(Object.freeze({
           id, relativePath: [...entry.path, entry.name].join('/'), title: entry.name.slice(0, -'.bsestudos.exam.json'.length),
@@ -80,6 +84,7 @@ export class LocalLibraryService {
         }));
         this.fileHandles.set(id, entry.handle);
         this.localExams.set(id, Object.freeze(exam));
+        this.examImageHandles.set(id, imageHandles);
         continue;
       }
       const resourceType = MEDIA_TYPES.get(entry.extension);
@@ -110,6 +115,29 @@ export class LocalLibraryService {
   getItem(id) { return this.items.find(item => item.id === id) || null; }
   getExam(id) { return this.localExams.get(id) || null; }
 
+  async openExam(id) {
+    const exam = this.getExam(id);
+    if (!exam) return null;
+    const imageHandles = this.examImageHandles.get(id) || new Map();
+    const clonedQuestions = await Promise.all(
+      (exam.questions || []).map(async (q) => {
+        if (!Array.isArray(q.images)) return { ...q };
+        const blobUrls = await Promise.all(
+          q.images.map(async (imgPath) => {
+            const handle = imageHandles.get(imgPath);
+            const file = await handle.getFile();
+            const url = URL.createObjectURL(file);
+            const key = `${id}:${imgPath}`;
+            this.objectUrls.set(key, url);
+            return url;
+          })
+        );
+        return { ...q, images: blobUrls };
+      })
+    );
+    return { ...exam, questions: clonedQuestions };
+  }
+
   async createObjectUrl(item) {
     const handle = this.fileHandles.get(item.id);
     if (!handle) throw localError('file-unavailable');
@@ -131,6 +159,7 @@ export class LocalLibraryService {
     this.catalog = buildCourseCatalog([]);
     this.fileHandles.clear();
     this.localExams.clear();
+    this.examImageHandles.clear();
     this.releaseObjectUrls();
   }
 
@@ -165,9 +194,41 @@ async function visit(directory, path, files, diagnostics) {
     }
     const extension = ext(name);
     try {
-      files.push({ handle, file: await handle.getFile(), name, path, extension, basename: base(name) });
+      files.push({ handle, file: await handle.getFile(), name, path, extension, basename: base(name), dirHandle: directory });
     } catch { diagnostics.push({ name, code: 'file-unavailable' }); }
   }
+}
+
+const SUPPORTED_EXAM_IMAGES = new Set(['png', 'webp', 'jpg', 'jpeg']);
+
+async function resolveExamImage(dirHandle, relativePath) {
+  const parts = relativePath.split('/');
+  const filename = parts.pop();
+  let currentDir = dirHandle;
+  for (const part of parts) {
+    if (!currentDir || typeof currentDir.getDirectoryHandle !== 'function') {
+      throw localError('exam-image-missing');
+    }
+    try {
+      currentDir = await currentDir.getDirectoryHandle(part);
+    } catch {
+      throw localError('exam-image-missing');
+    }
+  }
+  if (!currentDir || typeof currentDir.getFileHandle !== 'function') {
+    throw localError('exam-image-missing');
+  }
+  let fileHandle;
+  try {
+    fileHandle = await currentDir.getFileHandle(filename);
+  } catch {
+    throw localError('exam-image-missing');
+  }
+  const extension = ext(filename);
+  if (!SUPPORTED_EXAM_IMAGES.has(extension)) {
+    throw localError('exam-image-unsupported');
+  }
+  return fileHandle;
 }
 
 function transcriptFor(entry, sidecars) {
@@ -193,9 +254,29 @@ async function localExam(entry, diagnostics) {
   try {
     const exam = JSON.parse(await entry.file.text());
     const result = validateLocalExam(exam);
-    if (result.valid) return exam;
-    diagnostics.push({ name: entry.name, code: 'invalid-exam', errors: result.errors });
-  } catch { diagnostics.push({ name: entry.name, code: 'invalid-exam' }); }
+    if (!result.valid) {
+      diagnostics.push({ name: entry.name, code: 'invalid-exam', errors: result.errors });
+      return null;
+    }
+    const imageHandles = new Map();
+    for (const question of exam.questions || []) {
+      if (Array.isArray(question.images)) {
+        for (const imgPath of question.images) {
+          try {
+            const handle = await resolveExamImage(entry.dirHandle, imgPath);
+            imageHandles.set(imgPath, handle);
+          } catch (err) {
+            const code = err.code === 'exam-image-unsupported' ? 'exam-image-unsupported' : 'exam-image-missing';
+            diagnostics.push({ name: entry.name, code });
+            return null;
+          }
+        }
+      }
+    }
+    return { exam, imageHandles };
+  } catch {
+    diagnostics.push({ name: entry.name, code: 'invalid-exam' });
+  }
   return null;
 }
 function localError(code) { return Object.assign(new Error(code), { code }); }

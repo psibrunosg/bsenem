@@ -1,0 +1,66 @@
+{
+  "sourceAuthority": "Instituto Nacional de Estudos e Pesquisas Educacionais Anísio Teixeira (Inep)",
+  "sourceIndexUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos/2025",
+  "year": 2025,
+  "application": "regular",
+  "retrievedAt": "2026-09-14",
+  "coverage": {
+    "days": 2,
+    "distinctNumberedQuestions": 180,
+    "day1PrintedLanguageAlternatives": 5,
+    "day1LanguageChoices": ["inglês", "espanhol"],
+    "day1AnsweredQuestions": 90,
+    "day2AnsweredQuestions": 90
+  },
+  "renderedAssets": {
+    "format": "PNG",
+    "dpi": 150,
+    "pageCountPerBooklet": 32,
+    "index": "rendered/page-index.json",
+    "day1Directory": "rendered/dia-1-caderno-1-azul",
+    "day2Directory": "rendered/dia-2-caderno-5-amarelo",
+    "filenamePattern": "pagina-{page:02d}.png",
+    "fidelity": "Página completa, incluindo textos-base, enunciados, alternativas, tabelas e figuras; usar páginas adjacentes conforme page-index quando houver continuidade."
+  },
+  "files": [
+    {
+      "day": 1,
+      "booklet": "Caderno 1 - Azul",
+      "kind": "prova",
+      "languageCoverage": ["inglês", "espanhol"],
+      "localPath": "enem-2025-dia-1-caderno-1-azul-prova.pdf",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2025_PV_impresso_D1_CD1.pdf",
+      "sha256": "a0f19f878d4ef3ba94c3e0f5ef9e57c13fb046d4bb362f72651898b473ddb7c8",
+      "bytes": 3343529,
+      "pages": 32
+    },
+    {
+      "day": 1,
+      "booklet": "Caderno 1 - Azul",
+      "kind": "gabarito",
+      "localPath": "enem-2025-dia-1-caderno-1-azul-gabarito.pdf",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2025_GB_impresso_D1_CD1.pdf",
+      "sha256": "583ac1950cd1927c42c971c270f96c0e33816844084fd5866a13bf94d8e08a81",
+      "bytes": 132331
+    },
+    {
+      "day": 2,
+      "booklet": "Caderno 5 - Amarelo",
+      "kind": "prova",
+      "localPath": "enem-2025-dia-2-caderno-5-amarelo-prova.pdf",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2025_PV_impresso_D2_CD5.pdf",
+      "sha256": "0a59697676989b55e6f3e40636fad164c1c26868ddba37d04e4fffc101168298",
+      "bytes": 3157985,
+      "pages": 32
+    },
+    {
+      "day": 2,
+      "booklet": "Caderno 5 - Amarelo",
+      "kind": "gabarito",
+      "localPath": "enem-2025-dia-2-caderno-5-amarelo-gabarito.pdf",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2025_GB_impresso_D2_CD5.pdf",
+      "sha256": "4feea3658a94e20fa226028824b22538cb1b7e405a6a6e547d6a7131e5c97c22",
+      "bytes": 294764
+    }
+  ]
+}

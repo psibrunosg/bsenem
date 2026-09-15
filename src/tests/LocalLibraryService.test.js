@@ -3,7 +3,20 @@ import { LocalLibraryService } from '../services/LocalLibraryService.js';
 
 const file = (type, extra = {}) => ({ kind: 'file', async getFile() { return { type, size: 12, lastModified: 7, ...extra }; } });
 const vanishedFile = () => ({ kind: 'file', async getFile() { throw new DOMException('gone', 'NotFoundError'); } });
-const directory = entries => ({ kind: 'directory', async *values() { for (const [name, value] of Object.entries(entries)) yield { name, ...value }; } });
+const directory = entries => ({
+  kind: 'directory',
+  async *values() { for (const [name, value] of Object.entries(entries)) yield { name, ...value }; },
+  async getDirectoryHandle(name) {
+    const value = entries[name];
+    if (!value || value.kind !== 'directory') throw new DOMException('missing', 'NotFoundError');
+    return { name, ...value };
+  },
+  async getFileHandle(name) {
+    const value = entries[name];
+    if (!value || value.kind !== 'file') throw new DOMException('missing', 'NotFoundError');
+    return { name, ...value };
+  }
+});
 const fakeDirectory = directory;
 const memoryStore = () => {
   const values = new Map();
@@ -83,6 +96,43 @@ describe('LocalLibraryService', () => {
     }) }));
     expect(result.items.map(item => [item.title, item.resourceType])).toEqual([['enem', 'exam']]);
     expect(service.getExam(result.items[0].id)).toMatchObject({ id: 'enem-2026', title: 'ENEM 2026' });
+  });
+
+  it('hydrates each approved local image in order and revokes it on refresh', async () => {
+    const exam = JSON.stringify({
+      schema: 'bsestudos.exam.v1', id: 'enem-2025', title: 'ENEM 2025', durationMinutes: 330,
+      questions: [{ id: 'q1', renderMode: 'facsimile', questionNumber: 1, images: ['assets/q1.png', 'assets/q1b.webp'], correctOption: 0 }]
+    });
+    const create = vi.spyOn(URL, 'createObjectURL').mockReturnValueOnce('blob:q1').mockReturnValueOnce('blob:q1b');
+    const revoke = vi.spyOn(URL, 'revokeObjectURL').mockImplementation(() => {});
+    try {
+      const result = await service.scan(fakeDirectory({ Area: directory({
+        'enem.bsestudos.exam.json': file('application/json', { text: async () => exam }),
+        assets: directory({ 'q1.png': file('image/png'), 'q1b.webp': file('image/webp') })
+      }) }));
+      const opened = await service.openExam(result.items[0].id);
+      expect(opened.questions[0].images).toEqual(['blob:q1', 'blob:q1b']);
+      expect(create).toHaveBeenCalledTimes(2);
+      await service.scan(fakeDirectory({}));
+      expect(revoke).toHaveBeenCalledWith('blob:q1');
+      expect(revoke).toHaveBeenCalledWith('blob:q1b');
+    } finally {
+      create.mockRestore();
+      revoke.mockRestore();
+    }
+  });
+
+  it('refuses to catalog a facsimile whose declared image is missing or not a supported image', async () => {
+    const exam = JSON.stringify({
+      schema: 'bsestudos.exam.v1', id: 'enem-2025', title: 'ENEM 2025', durationMinutes: 330,
+      questions: [{ id: 'q1', renderMode: 'facsimile', questionNumber: 1, images: ['assets/q1.svg'], correctOption: 0 }]
+    });
+    const result = await service.scan(fakeDirectory({ Area: directory({
+      'enem.bsestudos.exam.json': file('application/json', { text: async () => exam }),
+      assets: directory({ 'q1.svg': file('image/svg+xml') })
+    }) }));
+    expect(result.items).toEqual([]);
+    expect(result.diagnostics).toContainEqual(expect.objectContaining({ name: 'enem.bsestudos.exam.json', code: 'exam-image-unsupported' }));
   });
 
   it('clears the in-memory catalog when permission is denied after indexing', async () => {

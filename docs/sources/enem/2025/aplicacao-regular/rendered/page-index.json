@@ -1,0 +1,27 @@
+{
+  "source": "manifest.json",
+  "rendering": { "format": "PNG", "dpi": 150, "pageImageIsComplete": true, "note": "Cada questão deve conservar as páginas adjacentes indicadas quando texto-base, figura ou alternativas atravessarem a quebra." },
+  "day1": {
+    "booklet": "Caderno 1 - Azul",
+    "pdf": "../enem-2025-dia-1-caderno-1-azul-prova.pdf",
+    "pages": [
+      {"page":2,"questions":"01-03","language":"inglês"},{"page":3,"questions":"04-05","language":"inglês"},
+      {"page":4,"questions":"01-03","language":"espanhol"},{"page":5,"questions":"04-05","language":"espanhol"},
+      {"page":6,"questions":"06-10"},{"page":7,"questions":"06-10"},{"page":8,"questions":"11-14"},{"page":9,"questions":"15-17"},{"page":10,"questions":"18-21"},{"page":11,"questions":"22-23"},{"page":12,"questions":"24-25"},{"page":13,"questions":"26-29"},{"page":14,"questions":"30-33"},{"page":15,"questions":"34-36"},{"page":16,"questions":"37-38"},{"page":17,"questions":"39-40"},{"page":18,"questions":"41-42"},{"page":19,"questions":"43-45"},
+      {"page":20,"content":"proposta de redação"},{"page":21,"content":"instruções para a redação"},
+      {"page":22,"questions":"46-48"},{"page":23,"questions":"49-51"},{"page":24,"questions":"52-56"},{"page":25,"questions":"57-61"},{"page":26,"questions":"62-64"},{"page":27,"questions":"65-69"},{"page":28,"questions":"70-75"},{"page":29,"questions":"76-80"},{"page":30,"questions":"81-85"},{"page":31,"questions":"86-90"}
+    ],
+    "imageDirectory": "dia-1-caderno-1-azul"
+  },
+  "day2": {
+    "booklet": "Caderno 5 - Amarelo",
+    "pdf": "../enem-2025-dia-2-caderno-5-amarelo-prova.pdf",
+    "pages": [
+      {"page":2,"questions":"91-94"},{"page":3,"questions":"95-100"},{"page":4,"questions":"101"},{"page":5,"questions":"102-103"},{"page":6,"questions":"104-106"},{"page":7,"questions":"107-108"},{"page":8,"questions":"109-112"},{"page":9,"questions":"113-115"},{"page":10,"questions":"116-117"},{"page":11,"questions":"118-121"},{"page":12,"questions":"122-125"},{"page":13,"questions":"126-128"},{"page":14,"questions":"129-131"},{"page":15,"questions":"132-135"},
+      {"page":16,"questions":"136-139"},{"page":17,"questions":"140-143"},{"page":18,"questions":"144"},{"page":19,"questions":"145-146"},{"page":20,"questions":"147-148"},{"page":21,"questions":"149-150"},{"page":22,"questions":"151-154"},{"page":23,"questions":"155-156"},{"page":24,"questions":"157-158"},{"page":25,"questions":"159-161"},{"page":26,"questions":"162-166"},{"page":27,"questions":"167"},{"page":28,"questions":"168-171"},{"page":29,"questions":"172-173"},{"page":30,"questions":"174-176"},{"page":31,"questions":"177-180"}
+    ],
+    "imageDirectory": "dia-2-caderno-5-amarelo"
+  },
+  "filenamePattern": "pagina-{page:02d}.png",
+  "printedPageNote": "page é o índice PDF; a numeração impressa do caderno aparece no rodapé e pode diferir da capa/índice."
+}

@@ -1,0 +1,745 @@
+{
+  "schema": "bsestudos.enem-content-manifest.v1",
+  "year": 2025,
+  "day": 2,
+  "booklet": "Caderno 5 - Amarelo",
+  "source_acquired_by": "GPT-5.6 Luna",
+  "content_created_by": "GPT-5.6 Terra",
+  "sourceFiles": {
+    "prova": "docs/sources/enem/2025/aplicacao-regular/enem-2025-dia-2-caderno-5-amarelo-prova.pdf",
+    "gabarito": "docs/sources/enem/2025/aplicacao-regular/enem-2025-dia-2-caderno-5-amarelo-gabarito.pdf"
+  },
+  "coverage": {
+    "numberedQuestions": 90,
+    "validQuestions": 87,
+    "annulledExcludedFromScoring": [
+      115,
+      121,
+      178
+    ],
+    "flashcards": 87
+  },
+  "questions": [
+    {
+      "question": 91,
+      "status": "adaptada_textual_autossuficiente",
+      "sourcePage": null,
+      "sourceQuestion": 91,
+      "gabarito": "C",
+      "blocker": "Visual ou texto original não é reproduzido; resposta da adaptação é demonstrada de modo independente."
+    },
+    {
+      "question": 92,
+      "status": "adaptada_textual_autossuficiente",
+      "sourcePage": null,
+      "sourceQuestion": 92,
+      "gabarito": "B",
+      "blocker": "Visual ou texto original não é reproduzido; resposta da adaptação é demonstrada de modo independente."
+    },
+    {
+      "question": 93,
+      "status": "adaptada_textual_autossuficiente",
+      "sourcePage": null,
+      "sourceQuestion": 93,
+      "gabarito": "D",
+      "blocker": "Visual ou texto original não é reproduzido; resposta da adaptação é demonstrada de modo independente."
+    },
+    {
+      "question": 94,
+      "status": "adaptada_textual_autossuficiente",
+      "sourcePage": null,
+      "sourceQuestion": 94,
+      "gabarito": "D",
+      "blocker": "Visual ou texto original não é reproduzido; resposta da adaptação é demonstrada de modo independente."
+    },
+    {
+      "question": 95,
+      "status": "adaptada_textual_autossuficiente",
+      "sourcePage": null,
+      "sourceQuestion": 95,
+      "gabarito": "C",
+      "blocker": "Visual ou texto original não é reproduzido; resposta da adaptação é demonstrada de modo independente."
+    },
+    {
+      "question": 96,
+      "status": "adaptada_textual_autossuficiente",
+      "sourcePage": null,
+      "sourceQuestion": 96,
+      "gabarito": "D",
+      "blocker": "Visual ou texto original não é reproduzido; resposta da adaptação é demonstrada de modo independente."
+    },
+    {
+      "question": 97,
+      "status": "adaptada_textual_autossuficiente",
+      "sourcePage": null,
+      "sourceQuestion": 97,
+      "gabarito": "A",
+      "blocker": "Visual ou texto original não é reproduzido; resposta da adaptação é demonstrada de modo independente."
+    },
+    {
+      "question": 98,
+      "status": "adaptada_textual_autossuficiente",
+      "sourcePage": null,
+      "sourceQuestion": 98,
+      "gabarito": "E",
+      "blocker": "Visual ou texto original não é reproduzido; resposta da adaptação é demonstrada de modo independente."
+    },
+    {
+      "question": 99,
+      "status": "adaptada_textual_autossuficiente",
+      "sourcePage": null,
+      "sourceQuestion": 99,
+      "gabarito": "A",
+      "blocker": "Visual ou texto original não é reproduzido; resposta da adaptação é demonstrada de modo independente."
+    },
+    {
+      "question": 100,
+      "status": "adaptada_textual_autossuficiente",
+      "sourcePage": null,
+      "sourceQuestion": 100,
+      "gabarito": "A",
+      "blocker": "Visual ou texto original não é reproduzido; resposta da adaptação é demonstrada de modo independente."
+    },
+    {
+      "question": 101,
+      "status": "adaptada_textual_autossuficiente",
+      "sourcePage": null,
+      "sourceQuestion": 101,
+      "gabarito": "A",
+      "blocker": "Visual ou texto original não é reproduzido; resposta da adaptação é demonstrada de modo independente."
+    },
+    {
+      "question": 102,
+      "status": "adaptada_textual_autossuficiente",
+      "sourcePage": null,
+      "sourceQuestion": 102,
+      "gabarito": "E",
+      "blocker": "Visual ou texto original não é reproduzido; resposta da adaptação é demonstrada de modo independente."
+    },
+    {
+      "question": 103,
+      "status": "adaptada_textual_autossuficiente",
+      "sourcePage": null,
+      "sourceQuestion": 103,
+      "gabarito": "C",
+      "blocker": "Visual ou texto original não é reproduzido; resposta da adaptação é demonstrada de modo independente."
+    },
+    {
+      "question": 104,
+      "status": "adaptada_textual_autossuficiente",
+      "sourcePage": null,
+      "sourceQuestion": 104,
+      "gabarito": "B",
+      "blocker": "Visual ou texto original não é reproduzido; resposta da adaptação é demonstrada de modo independente."
+    },
+    {
+      "question": 105,
+      "status": "adaptada_textual_autossuficiente",
+      "sourcePage": null,
+      "sourceQuestion": 105,
+      "gabarito": "B",
+      "blocker": "Visual ou texto original não é reproduzido; resposta da adaptação é demonstrada de modo independente."
+    },
+    {
+      "question": 106,
+      "status": "adaptada_textual_autossuficiente",
+      "sourcePage": null,
+      "sourceQuestion": 106,
+      "gabarito": "C",
+      "blocker": "Visual ou texto original não é reproduzido; resposta da adaptação é demonstrada de modo independente."
+    },
+    {
+      "question": 107,
+      "status": "adaptada_textual_autossuficiente",
+      "sourcePage": null,
+      "sourceQuestion": 107,
+      "gabarito": "E",
+      "blocker": "Visual ou texto original não é reproduzido; resposta da adaptação é demonstrada de modo independente."
+    },
+    {
+      "question": 108,
+      "status": "adaptada_textual_autossuficiente",
+      "sourcePage": null,
+      "sourceQuestion": 108,
+      "gabarito": "A",
+      "blocker": "Visual ou texto original não é reproduzido; resposta da adaptação é demonstrada de modo independente."
+    },
+    {
+      "question": 109,
+      "status": "adaptada_textual_autossuficiente",
+      "sourcePage": null,
+      "sourceQuestion": 109,
+      "gabarito": "E",
+      "blocker": "Visual ou texto original não é reproduzido; resposta da adaptação é demonstrada de modo independente."
+    },
+    {
+      "question": 110,
+      "status": "adaptada_textual_autossuficiente",
+      "sourcePage": null,
+      "sourceQuestion": 110,
+      "gabarito": "E",
+      "blocker": "Visual ou texto original não é reproduzido; resposta da adaptação é demonstrada de modo independente."
+    },
+    {
+      "question": 111,
+      "status": "adaptada_textual_autossuficiente",
+      "sourcePage": null,
+      "sourceQuestion": 111,
+      "gabarito": "B",
+      "blocker": "Visual ou texto original não é reproduzido; resposta da adaptação é demonstrada de modo independente."
+    },
+    {
+      "question": 112,
+      "status": "adaptada_textual_autossuficiente",
+      "sourcePage": null,
+      "sourceQuestion": 112,
+      "gabarito": "D",
+      "blocker": "Visual ou texto original não é reproduzido; resposta da adaptação é demonstrada de modo independente."
+    },
+    {
+      "question": 113,
+      "status": "adaptada_textual_autossuficiente",
+      "sourcePage": null,
+      "sourceQuestion": 113,
+      "gabarito": "E",
+      "blocker": "Visual ou texto original não é reproduzido; resposta da adaptação é demonstrada de modo independente."
+    },
+    {
+      "question": 114,
+      "status": "adaptada_textual_autossuficiente",
+      "sourcePage": null,
+      "sourceQuestion": 114,
+      "gabarito": "E",
+      "blocker": "Visual ou texto original não é reproduzido; resposta da adaptação é demonstrada de modo independente."
+    },
+    {
+      "question": 115,
+      "status": "anulada_excluida_do_pontuado",
+      "sourcePage": null,
+      "sourceQuestion": 115,
+      "gabarito": "Anulado",
+      "blocker": null
+    },
+    {
+      "question": 116,
+      "status": "adaptada_textual_autossuficiente",
+      "sourcePage": null,
+      "sourceQuestion": 116,
+      "gabarito": "A",
+      "blocker": "Visual ou texto original não é reproduzido; resposta da adaptação é demonstrada de modo independente."
+    },
+    {
+      "question": 117,
+      "status": "adaptada_textual_autossuficiente",
+      "sourcePage": null,
+      "sourceQuestion": 117,
+      "gabarito": "B",
+      "blocker": "Visual ou texto original não é reproduzido; resposta da adaptação é demonstrada de modo independente."
+    },
+    {
+      "question": 118,
+      "status": "adaptada_textual_autossuficiente",
+      "sourcePage": null,
+      "sourceQuestion": 118,
+      "gabarito": "B",
+      "blocker": "Visual ou texto original não é reproduzido; resposta da adaptação é demonstrada de modo independente."
+    },
+    {
+      "question": 119,
+      "status": "adaptada_textual_autossuficiente",
+      "sourcePage": null,
+      "sourceQuestion": 119,
+      "gabarito": "B",
+      "blocker": "Visual ou texto original não é reproduzido; resposta da adaptação é demonstrada de modo independente."
+    },
+    {
+      "question": 120,
+      "status": "adaptada_textual_autossuficiente",
+      "sourcePage": null,
+      "sourceQuestion": 120,
+      "gabarito": "D",
+      "blocker": "Visual ou texto original não é reproduzido; resposta da adaptação é demonstrada de modo independente."
+    },
+    {
+      "question": 121,
+      "status": "anulada_excluida_do_pontuado",
+      "sourcePage": null,
+      "sourceQuestion": 121,
+      "gabarito": "Anulado",
+      "blocker": null
+    },
+    {
+      "question": 122,
+      "status": "adaptada_textual_autossuficiente",
+      "sourcePage": null,
+      "sourceQuestion": 122,
+      "gabarito": "C",
+      "blocker": "Visual ou texto original não é reproduzido; resposta da adaptação é demonstrada de modo independente."
+    },
+    {
+      "question": 123,
+      "status": "adaptada_textual_autossuficiente",
+      "sourcePage": null,
+      "sourceQuestion": 123,
+      "gabarito": "D",
+      "blocker": "Visual ou texto original não é reproduzido; resposta da adaptação é demonstrada de modo independente."
+    },
+    {
+      "question": 124,
+      "status": "adaptada_textual_autossuficiente",
+      "sourcePage": null,
+      "sourceQuestion": 124,
+      "gabarito": "C",
+      "blocker": "Visual ou texto original não é reproduzido; resposta da adaptação é demonstrada de modo independente."
+    },
+    {
+      "question": 125,
+      "status": "adaptada_textual_autossuficiente",
+      "sourcePage": null,
+      "sourceQuestion": 125,
+      "gabarito": "B",
+      "blocker": "Visual ou texto original não é reproduzido; resposta da adaptação é demonstrada de modo independente."
+    },
+    {
+      "question": 126,
+      "status": "adaptada_textual_autossuficiente",
+      "sourcePage": null,
+      "sourceQuestion": 126,
+      "gabarito": "B",
+      "blocker": "Visual ou texto original não é reproduzido; resposta da adaptação é demonstrada de modo independente."
+    },
+    {
+      "question": 127,
+      "status": "adaptada_textual_autossuficiente",
+      "sourcePage": null,
+      "sourceQuestion": 127,
+      "gabarito": "B",
+      "blocker": "Visual ou texto original não é reproduzido; resposta da adaptação é demonstrada de modo independente."
+    },
+    {
+      "question": 128,
+      "status": "adaptada_textual_autossuficiente",
+      "sourcePage": null,
+      "sourceQuestion": 128,
+      "gabarito": "D",
+      "blocker": "Visual ou texto original não é reproduzido; resposta da adaptação é demonstrada de modo independente."
+    },
+    {
+      "question": 129,
+      "status": "adaptada_textual_autossuficiente",
+      "sourcePage": null,
+      "sourceQuestion": 129,
+      "gabarito": "C",
+      "blocker": "Visual ou texto original não é reproduzido; resposta da adaptação é demonstrada de modo independente."
+    },
+    {
+      "question": 130,
+      "status": "adaptada_textual_autossuficiente",
+      "sourcePage": null,
+      "sourceQuestion": 130,
+      "gabarito": "E",
+      "blocker": "Visual ou texto original não é reproduzido; resposta da adaptação é demonstrada de modo independente."
+    },
+    {
+      "question": 131,
+      "status": "adaptada_textual_autossuficiente",
+      "sourcePage": null,
+      "sourceQuestion": 131,
+      "gabarito": "A",
+      "blocker": "Visual ou texto original não é reproduzido; resposta da adaptação é demonstrada de modo independente."
+    },
+    {
+      "question": 132,
+      "status": "adaptada_textual_autossuficiente",
+      "sourcePage": null,
+      "sourceQuestion": 132,
+      "gabarito": "D",
+      "blocker": "Visual ou texto original não é reproduzido; resposta da adaptação é demonstrada de modo independente."
+    },
+    {
+      "question": 133,
+      "status": "adaptada_textual_autossuficiente",
+      "sourcePage": null,
+      "sourceQuestion": 133,
+      "gabarito": "D",
+      "blocker": "Visual ou texto original não é reproduzido; resposta da adaptação é demonstrada de modo independente."
+    },
+    {
+      "question": 134,
+      "status": "adaptada_textual_autossuficiente",
+      "sourcePage": null,
+      "sourceQuestion": 134,
+      "gabarito": "C",
+      "blocker": "Visual ou texto original não é reproduzido; resposta da adaptação é demonstrada de modo independente."
+    },
+    {
+      "question": 135,
+      "status": "adaptada_textual_autossuficiente",
+      "sourcePage": null,
+      "sourceQuestion": 135,
+      "gabarito": "D",
+      "blocker": "Visual ou texto original não é reproduzido; resposta da adaptação é demonstrada de modo independente."
+    },
+    {
+      "question": 136,
+      "status": "adaptada_textual_autossuficiente",
+      "sourcePage": null,
+      "sourceQuestion": 136,
+      "gabarito": "C",
+      "blocker": "Visual ou texto original não é reproduzido; resposta da adaptação é demonstrada de modo independente."
+    },
+    {
+      "question": 137,
+      "status": "adaptada_textual_autossuficiente",
+      "sourcePage": null,
+      "sourceQuestion": 137,
+      "gabarito": "E",
+      "blocker": "Visual ou texto original não é reproduzido; resposta da adaptação é demonstrada de modo independente."
+    },
+    {
+      "question": 138,
+      "status": "adaptada_textual_autossuficiente",
+      "sourcePage": null,
+      "sourceQuestion": 138,
+      "gabarito": "C",
+      "blocker": "Visual ou texto original não é reproduzido; resposta da adaptação é demonstrada de modo independente."
+    },
+    {
+      "question": 139,
+      "status": "adaptada_textual_autossuficiente",
+      "sourcePage": null,
+      "sourceQuestion": 139,
+      "gabarito": "C",
+      "blocker": "Visual ou texto original não é reproduzido; resposta da adaptação é demonstrada de modo independente."
+    },
+    {
+      "question": 140,
+      "status": "adaptada_textual_autossuficiente",
+      "sourcePage": null,
+      "sourceQuestion": 140,
+      "gabarito": "A",
+      "blocker": "Visual ou texto original não é reproduzido; resposta da adaptação é demonstrada de modo independente."
+    },
+    {
+      "question": 141,
+      "status": "adaptada_textual_autossuficiente",
+      "sourcePage": null,
+      "sourceQuestion": 141,
+      "gabarito": "D",
+      "blocker": "Visual ou texto original não é reproduzido; resposta da adaptação é demonstrada de modo independente."
+    },
+    {
+      "question": 142,
+      "status": "adaptada_textual_autossuficiente",
+      "sourcePage": null,
+      "sourceQuestion": 142,
+      "gabarito": "D",
+      "blocker": "Visual ou texto original não é reproduzido; resposta da adaptação é demonstrada de modo independente."
+    },
+    {
+      "question": 143,
+      "status": "adaptada_textual_autossuficiente",
+      "sourcePage": null,
+      "sourceQuestion": 143,
+      "gabarito": "B",
+      "blocker": "Visual ou texto original não é reproduzido; resposta da adaptação é demonstrada de modo independente."
+    },
+    {
+      "question": 144,
+      "status": "adaptada_textual_autossuficiente",
+      "sourcePage": null,
+      "sourceQuestion": 144,
+      "gabarito": "E",
+      "blocker": "Visual ou texto original não é reproduzido; resposta da adaptação é demonstrada de modo independente."
+    },
+    {
+      "question": 145,
+      "status": "adaptada_textual_autossuficiente",
+      "sourcePage": null,
+      "sourceQuestion": 145,
+      "gabarito": "B",
+      "blocker": "Visual ou texto original não é reproduzido; resposta da adaptação é demonstrada de modo independente."
+    },
+    {
+      "question": 146,
+      "status": "adaptada_textual_autossuficiente",
+      "sourcePage": null,
+      "sourceQuestion": 146,
+      "gabarito": "C",
+      "blocker": "Visual ou texto original não é reproduzido; resposta da adaptação é demonstrada de modo independente."
+    },
+    {
+      "question": 147,
+      "status": "adaptada_textual_autossuficiente",
+      "sourcePage": null,
+      "sourceQuestion": 147,
+      "gabarito": "A",
+      "blocker": "Visual ou texto original não é reproduzido; resposta da adaptação é demonstrada de modo independente."
+    },
+    {
+      "question": 148,
+      "status": "adaptada_textual_autossuficiente",
+      "sourcePage": null,
+      "sourceQuestion": 148,
+      "gabarito": "C",
+      "blocker": "Visual ou texto original não é reproduzido; resposta da adaptação é demonstrada de modo independente."
+    },
+    {
+      "question": 149,
+      "status": "adaptada_textual_autossuficiente",
+      "sourcePage": null,
+      "sourceQuestion": 149,
+      "gabarito": "E",
+      "blocker": "Visual ou texto original não é reproduzido; resposta da adaptação é demonstrada de modo independente."
+    },
+    {
+      "question": 150,
+      "status": "adaptada_textual_autossuficiente",
+      "sourcePage": null,
+      "sourceQuestion": 150,
+      "gabarito": "C",
+      "blocker": "Visual ou texto original não é reproduzido; resposta da adaptação é demonstrada de modo independente."
+    },
+    {
+      "question": 151,
+      "status": "adaptada_textual_autossuficiente",
+      "sourcePage": null,
+      "sourceQuestion": 151,
+      "gabarito": "B",
+      "blocker": "Visual ou texto original não é reproduzido; resposta da adaptação é demonstrada de modo independente."
+    },
+    {
+      "question": 152,
+      "status": "adaptada_textual_autossuficiente",
+      "sourcePage": null,
+      "sourceQuestion": 152,
+      "gabarito": "D",
+      "blocker": "Visual ou texto original não é reproduzido; resposta da adaptação é demonstrada de modo independente."
+    },
+    {
+      "question": 153,
+      "status": "adaptada_textual_autossuficiente",
+      "sourcePage": null,
+      "sourceQuestion": 153,
+      "gabarito": "D",
+      "blocker": "Visual ou texto original não é reproduzido; resposta da adaptação é demonstrada de modo independente."
+    },
+    {
+      "question": 154,
+      "status": "adaptada_textual_autossuficiente",
+      "sourcePage": null,
+      "sourceQuestion": 154,
+      "gabarito": "D",
+      "blocker": "Visual ou texto original não é reproduzido; resposta da adaptação é demonstrada de modo independente."
+    },
+    {
+      "question": 155,
+      "status": "adaptada_textual_autossuficiente",
+      "sourcePage": null,
+      "sourceQuestion": 155,
+      "gabarito": "B",
+      "blocker": "Visual ou texto original não é reproduzido; resposta da adaptação é demonstrada de modo independente."
+    },
+    {
+      "question": 156,
+      "status": "adaptada_textual_autossuficiente",
+      "sourcePage": null,
+      "sourceQuestion": 156,
+      "gabarito": "A",
+      "blocker": "Visual ou texto original não é reproduzido; resposta da adaptação é demonstrada de modo independente."
+    },
+    {
+      "question": 157,
+      "status": "adaptada_textual_autossuficiente",
+      "sourcePage": null,
+      "sourceQuestion": 157,
+      "gabarito": "D",
+      "blocker": "Visual ou texto original não é reproduzido; resposta da adaptação é demonstrada de modo independente."
+    },
+    {
+      "question": 158,
+      "status": "adaptada_textual_autossuficiente",
+      "sourcePage": null,
+      "sourceQuestion": 158,
+      "gabarito": "E",
+      "blocker": "Visual ou texto original não é reproduzido; resposta da adaptação é demonstrada de modo independente."
+    },
+    {
+      "question": 159,
+      "status": "adaptada_textual_autossuficiente",
+      "sourcePage": null,
+      "sourceQuestion": 159,
+      "gabarito": "E",
+      "blocker": "Visual ou texto original não é reproduzido; resposta da adaptação é demonstrada de modo independente."
+    },
+    {
+      "question": 160,
+      "status": "adaptada_textual_autossuficiente",
+      "sourcePage": null,
+      "sourceQuestion": 160,
+      "gabarito": "A",
+      "blocker": "Visual ou texto original não é reproduzido; resposta da adaptação é demonstrada de modo independente."
+    },
+    {
+      "question": 161,
+      "status": "adaptada_textual_autossuficiente",
+      "sourcePage": null,
+      "sourceQuestion": 161,
+      "gabarito": "B",
+      "blocker": "Visual ou texto original não é reproduzido; resposta da adaptação é demonstrada de modo independente."
+    },
+    {
+      "question": 162,
+      "status": "adaptada_textual_autossuficiente",
+      "sourcePage": null,
+      "sourceQuestion": 162,
+      "gabarito": "B",
+      "blocker": "Visual ou texto original não é reproduzido; resposta da adaptação é demonstrada de modo independente."
+    },
+    {
+      "question": 163,
+      "status": "adaptada_textual_autossuficiente",
+      "sourcePage": null,
+      "sourceQuestion": 163,
+      "gabarito": "E",
+      "blocker": "Visual ou texto original não é reproduzido; resposta da adaptação é demonstrada de modo independente."
+    },
+    {
+      "question": 164,
+      "status": "adaptada_textual_autossuficiente",
+      "sourcePage": null,
+      "sourceQuestion": 164,
+      "gabarito": "C",
+      "blocker": "Visual ou texto original não é reproduzido; resposta da adaptação é demonstrada de modo independente."
+    },
+    {
+      "question": 165,
+      "status": "adaptada_textual_autossuficiente",
+      "sourcePage": null,
+      "sourceQuestion": 165,
+      "gabarito": "C",
+      "blocker": "Visual ou texto original não é reproduzido; resposta da adaptação é demonstrada de modo independente."
+    },
+    {
+      "question": 166,
+      "status": "adaptada_textual_autossuficiente",
+      "sourcePage": null,
+      "sourceQuestion": 166,
+      "gabarito": "D",
+      "blocker": "Visual ou texto original não é reproduzido; resposta da adaptação é demonstrada de modo independente."
+    },
+    {
+      "question": 167,
+      "status": "adaptada_textual_autossuficiente",
+      "sourcePage": null,
+      "sourceQuestion": 167,
+      "gabarito": "A",
+      "blocker": "Visual ou texto original não é reproduzido; resposta da adaptação é demonstrada de modo independente."
+    },
+    {
+      "question": 168,
+      "status": "adaptada_textual_autossuficiente",
+      "sourcePage": null,
+      "sourceQuestion": 168,
+      "gabarito": "B",
+      "blocker": "Visual ou texto original não é reproduzido; resposta da adaptação é demonstrada de modo independente."
+    },
+    {
+      "question": 169,
+      "status": "adaptada_textual_autossuficiente",
+      "sourcePage": null,
+      "sourceQuestion": 169,
+      "gabarito": "E",
+      "blocker": "Visual ou texto original não é reproduzido; resposta da adaptação é demonstrada de modo independente."
+    },
+    {
+      "question": 170,
+      "status": "adaptada_textual_autossuficiente",
+      "sourcePage": null,
+      "sourceQuestion": 170,
+      "gabarito": "A",
+      "blocker": "Visual ou texto original não é reproduzido; resposta da adaptação é demonstrada de modo independente."
+    },
+    {
+      "question": 171,
+      "status": "adaptada_textual_autossuficiente",
+      "sourcePage": null,
+      "sourceQuestion": 171,
+      "gabarito": "D",
+      "blocker": "Visual ou texto original não é reproduzido; resposta da adaptação é demonstrada de modo independente."
+    },
+    {
+      "question": 172,
+      "status": "adaptada_textual_autossuficiente",
+      "sourcePage": null,
+      "sourceQuestion": 172,
+      "gabarito": "D",
+      "blocker": "Visual ou texto original não é reproduzido; resposta da adaptação é demonstrada de modo independente."
+    },
+    {
+      "question": 173,
+      "status": "adaptada_textual_autossuficiente",
+      "sourcePage": null,
+      "sourceQuestion": 173,
+      "gabarito": "E",
+      "blocker": "Visual ou texto original não é reproduzido; resposta da adaptação é demonstrada de modo independente."
+    },
+    {
+      "question": 174,
+      "status": "adaptada_textual_autossuficiente",
+      "sourcePage": null,
+      "sourceQuestion": 174,
+      "gabarito": "B",
+      "blocker": "Visual ou texto original não é reproduzido; resposta da adaptação é demonstrada de modo independente."
+    },
+    {
+      "question": 175,
+      "status": "adaptada_textual_autossuficiente",
+      "sourcePage": null,
+      "sourceQuestion": 175,
+      "gabarito": "E",
+      "blocker": "Visual ou texto original não é reproduzido; resposta da adaptação é demonstrada de modo independente."
+    },
+    {
+      "question": 176,
+      "status": "adaptada_textual_autossuficiente",
+      "sourcePage": null,
+      "sourceQuestion": 176,
+      "gabarito": "A",
+      "blocker": "Visual ou texto original não é reproduzido; resposta da adaptação é demonstrada de modo independente."
+    },
+    {
+      "question": 177,
+      "status": "adaptada_textual_autossuficiente",
+      "sourcePage": null,
+      "sourceQuestion": 177,
+      "gabarito": "A",
+      "blocker": "Visual ou texto original não é reproduzido; resposta da adaptação é demonstrada de modo independente."
+    },
+    {
+      "question": 178,
+      "status": "anulada_excluida_do_pontuado",
+      "sourcePage": null,
+      "sourceQuestion": 178,
+      "gabarito": "Anulado",
+      "blocker": null
+    },
+    {
+      "question": 179,
+      "status": "adaptada_textual_autossuficiente",
+      "sourcePage": null,
+      "sourceQuestion": 179,
+      "gabarito": "C",
+      "blocker": "Visual ou texto original não é reproduzido; resposta da adaptação é demonstrada de modo independente."
+    },
+    {
+      "question": 180,
+      "status": "adaptada_textual_autossuficiente",
+      "sourcePage": null,
+      "sourceQuestion": 180,
+      "gabarito": "C",
+      "blocker": "Visual ou texto original não é reproduzido; resposta da adaptação é demonstrada de modo independente."
+    }
+  ],
+  "adaptationNotice": "Cada item do simulado é uma adaptação textual autossuficiente. O gabarito oficial é registrado apenas como proveniência da questão-fonte e não valida a resposta pedagógica da adaptação."
+}

@@ -1,0 +1,1611 @@
+{
+  "schema": "bsestudos.enem-original-manifest.v1",
+  "year": 2025,
+  "day": 2,
+  "booklet": "Caderno 5 - Amarelo",
+  "source_acquired_by": "GPT-5.6 Luna",
+  "content_created_by": "GPT-5.6 Terra",
+  "sourceFiles": {
+    "prova": "docs/sources/enem/2025/aplicacao-regular/enem-2025-dia-2-caderno-5-amarelo-prova.pdf",
+    "gabarito": "docs/sources/enem/2025/aplicacao-regular/enem-2025-dia-2-caderno-5-amarelo-gabarito.pdf"
+  },
+  "sha256": {
+    "prova": "0a59697676989b55e6f3e40636fad164c1c26868ddba37d04e4fffc101168298",
+    "gabarito": "4feea3658a94e20fa226028824b22538cb1b7e405a6a6e547d6a7131e5c97c22",
+    "transcricao": "1045af35066e15031ef5f23244229f4738303f1e067fd4c2125cd43395a7e56f"
+  },
+  "renderedPageIndex": "docs/sources/enem/2025/aplicacao-regular/rendered/page-index.json",
+  "allRenderedPages": [
+    "docs/sources/enem/2025/aplicacao-regular/rendered/dia-2-caderno-5-amarelo/pagina-01.png",
+    "docs/sources/enem/2025/aplicacao-regular/rendered/dia-2-caderno-5-amarelo/pagina-02.png",
+    "docs/sources/enem/2025/aplicacao-regular/rendered/dia-2-caderno-5-amarelo/pagina-03.png",
+    "docs/sources/enem/2025/aplicacao-regular/rendered/dia-2-caderno-5-amarelo/pagina-04.png",
+    "docs/sources/enem/2025/aplicacao-regular/rendered/dia-2-caderno-5-amarelo/pagina-05.png",
+    "docs/sources/enem/2025/aplicacao-regular/rendered/dia-2-caderno-5-amarelo/pagina-06.png",
+    "docs/sources/enem/2025/aplicacao-regular/rendered/dia-2-caderno-5-amarelo/pagina-07.png",
+    "docs/sources/enem/2025/aplicacao-regular/rendered/dia-2-caderno-5-amarelo/pagina-08.png",
+    "docs/sources/enem/2025/aplicacao-regular/rendered/dia-2-caderno-5-amarelo/pagina-09.png",
+    "docs/sources/enem/2025/aplicacao-regular/rendered/dia-2-caderno-5-amarelo/pagina-10.png",
+    "docs/sources/enem/2025/aplicacao-regular/rendered/dia-2-caderno-5-amarelo/pagina-11.png",
+    "docs/sources/enem/2025/aplicacao-regular/rendered/dia-2-caderno-5-amarelo/pagina-12.png",
+    "docs/sources/enem/2025/aplicacao-regular/rendered/dia-2-caderno-5-amarelo/pagina-13.png",
+    "docs/sources/enem/2025/aplicacao-regular/rendered/dia-2-caderno-5-amarelo/pagina-14.png",
+    "docs/sources/enem/2025/aplicacao-regular/rendered/dia-2-caderno-5-amarelo/pagina-15.png",
+    "docs/sources/enem/2025/aplicacao-regular/rendered/dia-2-caderno-5-amarelo/pagina-16.png",
+    "docs/sources/enem/2025/aplicacao-regular/rendered/dia-2-caderno-5-amarelo/pagina-17.png",
+    "docs/sources/enem/2025/aplicacao-regular/rendered/dia-2-caderno-5-amarelo/pagina-18.png",
+    "docs/sources/enem/2025/aplicacao-regular/rendered/dia-2-caderno-5-amarelo/pagina-19.png",
+    "docs/sources/enem/2025/aplicacao-regular/rendered/dia-2-caderno-5-amarelo/pagina-20.png",
+    "docs/sources/enem/2025/aplicacao-regular/rendered/dia-2-caderno-5-amarelo/pagina-21.png",
+    "docs/sources/enem/2025/aplicacao-regular/rendered/dia-2-caderno-5-amarelo/pagina-22.png",
+    "docs/sources/enem/2025/aplicacao-regular/rendered/dia-2-caderno-5-amarelo/pagina-23.png",
+    "docs/sources/enem/2025/aplicacao-regular/rendered/dia-2-caderno-5-amarelo/pagina-24.png",
+    "docs/sources/enem/2025/aplicacao-regular/rendered/dia-2-caderno-5-amarelo/pagina-25.png",
+    "docs/sources/enem/2025/aplicacao-regular/rendered/dia-2-caderno-5-amarelo/pagina-26.png",
+    "docs/sources/enem/2025/aplicacao-regular/rendered/dia-2-caderno-5-amarelo/pagina-27.png",
+    "docs/sources/enem/2025/aplicacao-regular/rendered/dia-2-caderno-5-amarelo/pagina-28.png",
+    "docs/sources/enem/2025/aplicacao-regular/rendered/dia-2-caderno-5-amarelo/pagina-29.png",
+    "docs/sources/enem/2025/aplicacao-regular/rendered/dia-2-caderno-5-amarelo/pagina-30.png",
+    "docs/sources/enem/2025/aplicacao-regular/rendered/dia-2-caderno-5-amarelo/pagina-31.png",
+    "docs/sources/enem/2025/aplicacao-regular/rendered/dia-2-caderno-5-amarelo/pagina-32.png"
+  ],
+  "transcriptionEncoding": "UTF-8",
+  "transcriptionLayout": "Cada página é transcrita em duas seções explícitas, coluna esquerda seguida da coluna direita; a imagem PNG completa da página é a fonte de verdade para figuras, tabelas e qualquer continuidade visual.",
+  "questions": [
+    {
+      "question": 91,
+      "sourceQuestion": 91,
+      "sourcePage": 2,
+      "sourcePages": [
+        2
+      ],
+      "answerStatus": "gabarito_oficial",
+      "officialAnswer": "C",
+      "transcription": "enem-2025-dia-2-caderno-5-amarelo.transcricao.txt",
+      "visualAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-2-caderno-5-amarelo/pagina-02.png"
+      ],
+      "technicalValidation": "pagina_renderizada_presente",
+      "editorialReviewStatus": "pendente_revisao_independente",
+      "integrationStatus": "fonte_visual_preservada_em_pagina_renderizada; bloqueada_para_player_atual_sem_suporte_a_imagem"
+    },
+    {
+      "question": 92,
+      "sourceQuestion": 92,
+      "sourcePage": 2,
+      "sourcePages": [
+        2
+      ],
+      "answerStatus": "gabarito_oficial",
+      "officialAnswer": "B",
+      "transcription": "enem-2025-dia-2-caderno-5-amarelo.transcricao.txt",
+      "visualAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-2-caderno-5-amarelo/pagina-02.png"
+      ],
+      "technicalValidation": "pagina_renderizada_presente",
+      "editorialReviewStatus": "pendente_revisao_independente",
+      "integrationStatus": "fonte_visual_preservada_em_pagina_renderizada; bloqueada_para_player_atual_sem_suporte_a_imagem"
+    },
+    {
+      "question": 93,
+      "sourceQuestion": 93,
+      "sourcePage": 2,
+      "sourcePages": [
+        2
+      ],
+      "answerStatus": "gabarito_oficial",
+      "officialAnswer": "D",
+      "transcription": "enem-2025-dia-2-caderno-5-amarelo.transcricao.txt",
+      "visualAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-2-caderno-5-amarelo/pagina-02.png"
+      ],
+      "technicalValidation": "pagina_renderizada_presente",
+      "editorialReviewStatus": "pendente_revisao_independente",
+      "integrationStatus": "fonte_visual_preservada_em_pagina_renderizada; bloqueada_para_player_atual_sem_suporte_a_imagem"
+    },
+    {
+      "question": 94,
+      "sourceQuestion": 94,
+      "sourcePage": 2,
+      "sourcePages": [
+        2
+      ],
+      "answerStatus": "gabarito_oficial",
+      "officialAnswer": "D",
+      "transcription": "enem-2025-dia-2-caderno-5-amarelo.transcricao.txt",
+      "visualAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-2-caderno-5-amarelo/pagina-02.png"
+      ],
+      "technicalValidation": "pagina_renderizada_presente",
+      "editorialReviewStatus": "pendente_revisao_independente",
+      "integrationStatus": "fonte_visual_preservada_em_pagina_renderizada; bloqueada_para_player_atual_sem_suporte_a_imagem"
+    },
+    {
+      "question": 95,
+      "sourceQuestion": 95,
+      "sourcePage": 3,
+      "sourcePages": [
+        3
+      ],
+      "answerStatus": "gabarito_oficial",
+      "officialAnswer": "C",
+      "transcription": "enem-2025-dia-2-caderno-5-amarelo.transcricao.txt",
+      "visualAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-2-caderno-5-amarelo/pagina-03.png"
+      ],
+      "technicalValidation": "pagina_renderizada_presente",
+      "editorialReviewStatus": "pendente_revisao_independente",
+      "integrationStatus": "fonte_visual_preservada_em_pagina_renderizada; bloqueada_para_player_atual_sem_suporte_a_imagem"
+    },
+    {
+      "question": 96,
+      "sourceQuestion": 96,
+      "sourcePage": 3,
+      "sourcePages": [
+        3
+      ],
+      "answerStatus": "gabarito_oficial",
+      "officialAnswer": "D",
+      "transcription": "enem-2025-dia-2-caderno-5-amarelo.transcricao.txt",
+      "visualAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-2-caderno-5-amarelo/pagina-03.png"
+      ],
+      "technicalValidation": "pagina_renderizada_presente",
+      "editorialReviewStatus": "pendente_revisao_independente",
+      "integrationStatus": "fonte_visual_preservada_em_pagina_renderizada; bloqueada_para_player_atual_sem_suporte_a_imagem"
+    },
+    {
+      "question": 97,
+      "sourceQuestion": 97,
+      "sourcePage": 3,
+      "sourcePages": [
+        3
+      ],
+      "answerStatus": "gabarito_oficial",
+      "officialAnswer": "A",
+      "transcription": "enem-2025-dia-2-caderno-5-amarelo.transcricao.txt",
+      "visualAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-2-caderno-5-amarelo/pagina-03.png"
+      ],
+      "technicalValidation": "pagina_renderizada_presente",
+      "editorialReviewStatus": "pendente_revisao_independente",
+      "integrationStatus": "fonte_visual_preservada_em_pagina_renderizada; bloqueada_para_player_atual_sem_suporte_a_imagem"
+    },
+    {
+      "question": 98,
+      "sourceQuestion": 98,
+      "sourcePage": 3,
+      "sourcePages": [
+        3
+      ],
+      "answerStatus": "gabarito_oficial",
+      "officialAnswer": "E",
+      "transcription": "enem-2025-dia-2-caderno-5-amarelo.transcricao.txt",
+      "visualAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-2-caderno-5-amarelo/pagina-03.png"
+      ],
+      "technicalValidation": "pagina_renderizada_presente",
+      "editorialReviewStatus": "pendente_revisao_independente",
+      "integrationStatus": "fonte_visual_preservada_em_pagina_renderizada; bloqueada_para_player_atual_sem_suporte_a_imagem"
+    },
+    {
+      "question": 99,
+      "sourceQuestion": 99,
+      "sourcePage": 3,
+      "sourcePages": [
+        3
+      ],
+      "answerStatus": "gabarito_oficial",
+      "officialAnswer": "A",
+      "transcription": "enem-2025-dia-2-caderno-5-amarelo.transcricao.txt",
+      "visualAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-2-caderno-5-amarelo/pagina-03.png"
+      ],
+      "technicalValidation": "pagina_renderizada_presente",
+      "editorialReviewStatus": "pendente_revisao_independente",
+      "integrationStatus": "fonte_visual_preservada_em_pagina_renderizada; bloqueada_para_player_atual_sem_suporte_a_imagem"
+    },
+    {
+      "question": 100,
+      "sourceQuestion": 100,
+      "sourcePage": 3,
+      "sourcePages": [
+        3
+      ],
+      "answerStatus": "gabarito_oficial",
+      "officialAnswer": "A",
+      "transcription": "enem-2025-dia-2-caderno-5-amarelo.transcricao.txt",
+      "visualAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-2-caderno-5-amarelo/pagina-03.png"
+      ],
+      "technicalValidation": "pagina_renderizada_presente",
+      "editorialReviewStatus": "pendente_revisao_independente",
+      "integrationStatus": "fonte_visual_preservada_em_pagina_renderizada; bloqueada_para_player_atual_sem_suporte_a_imagem"
+    },
+    {
+      "question": 101,
+      "sourceQuestion": 101,
+      "sourcePage": 4,
+      "sourcePages": [
+        4
+      ],
+      "answerStatus": "gabarito_oficial",
+      "officialAnswer": "A",
+      "transcription": "enem-2025-dia-2-caderno-5-amarelo.transcricao.txt",
+      "visualAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-2-caderno-5-amarelo/pagina-04.png"
+      ],
+      "technicalValidation": "pagina_renderizada_presente",
+      "editorialReviewStatus": "pendente_revisao_independente",
+      "integrationStatus": "fonte_visual_preservada_em_pagina_renderizada; bloqueada_para_player_atual_sem_suporte_a_imagem"
+    },
+    {
+      "question": 102,
+      "sourceQuestion": 102,
+      "sourcePage": 5,
+      "sourcePages": [
+        5
+      ],
+      "answerStatus": "gabarito_oficial",
+      "officialAnswer": "E",
+      "transcription": "enem-2025-dia-2-caderno-5-amarelo.transcricao.txt",
+      "visualAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-2-caderno-5-amarelo/pagina-05.png"
+      ],
+      "technicalValidation": "pagina_renderizada_presente",
+      "editorialReviewStatus": "pendente_revisao_independente",
+      "integrationStatus": "fonte_visual_preservada_em_pagina_renderizada; bloqueada_para_player_atual_sem_suporte_a_imagem"
+    },
+    {
+      "question": 103,
+      "sourceQuestion": 103,
+      "sourcePage": 5,
+      "sourcePages": [
+        5
+      ],
+      "answerStatus": "gabarito_oficial",
+      "officialAnswer": "C",
+      "transcription": "enem-2025-dia-2-caderno-5-amarelo.transcricao.txt",
+      "visualAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-2-caderno-5-amarelo/pagina-05.png"
+      ],
+      "technicalValidation": "pagina_renderizada_presente",
+      "editorialReviewStatus": "pendente_revisao_independente",
+      "integrationStatus": "fonte_visual_preservada_em_pagina_renderizada; bloqueada_para_player_atual_sem_suporte_a_imagem"
+    },
+    {
+      "question": 104,
+      "sourceQuestion": 104,
+      "sourcePage": 6,
+      "sourcePages": [
+        6
+      ],
+      "answerStatus": "gabarito_oficial",
+      "officialAnswer": "B",
+      "transcription": "enem-2025-dia-2-caderno-5-amarelo.transcricao.txt",
+      "visualAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-2-caderno-5-amarelo/pagina-06.png"
+      ],
+      "technicalValidation": "pagina_renderizada_presente",
+      "editorialReviewStatus": "pendente_revisao_independente",
+      "integrationStatus": "fonte_visual_preservada_em_pagina_renderizada; bloqueada_para_player_atual_sem_suporte_a_imagem"
+    },
+    {
+      "question": 105,
+      "sourceQuestion": 105,
+      "sourcePage": 6,
+      "sourcePages": [
+        6
+      ],
+      "answerStatus": "gabarito_oficial",
+      "officialAnswer": "B",
+      "transcription": "enem-2025-dia-2-caderno-5-amarelo.transcricao.txt",
+      "visualAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-2-caderno-5-amarelo/pagina-06.png"
+      ],
+      "technicalValidation": "pagina_renderizada_presente",
+      "editorialReviewStatus": "pendente_revisao_independente",
+      "integrationStatus": "fonte_visual_preservada_em_pagina_renderizada; bloqueada_para_player_atual_sem_suporte_a_imagem"
+    },
+    {
+      "question": 106,
+      "sourceQuestion": 106,
+      "sourcePage": 6,
+      "sourcePages": [
+        6
+      ],
+      "answerStatus": "gabarito_oficial",
+      "officialAnswer": "C",
+      "transcription": "enem-2025-dia-2-caderno-5-amarelo.transcricao.txt",
+      "visualAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-2-caderno-5-amarelo/pagina-06.png"
+      ],
+      "technicalValidation": "pagina_renderizada_presente",
+      "editorialReviewStatus": "pendente_revisao_independente",
+      "integrationStatus": "fonte_visual_preservada_em_pagina_renderizada; bloqueada_para_player_atual_sem_suporte_a_imagem"
+    },
+    {
+      "question": 107,
+      "sourceQuestion": 107,
+      "sourcePage": 7,
+      "sourcePages": [
+        7
+      ],
+      "answerStatus": "gabarito_oficial",
+      "officialAnswer": "E",
+      "transcription": "enem-2025-dia-2-caderno-5-amarelo.transcricao.txt",
+      "visualAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-2-caderno-5-amarelo/pagina-07.png"
+      ],
+      "technicalValidation": "pagina_renderizada_presente",
+      "editorialReviewStatus": "pendente_revisao_independente",
+      "integrationStatus": "fonte_visual_preservada_em_pagina_renderizada; bloqueada_para_player_atual_sem_suporte_a_imagem"
+    },
+    {
+      "question": 108,
+      "sourceQuestion": 108,
+      "sourcePage": 7,
+      "sourcePages": [
+        7
+      ],
+      "answerStatus": "gabarito_oficial",
+      "officialAnswer": "A",
+      "transcription": "enem-2025-dia-2-caderno-5-amarelo.transcricao.txt",
+      "visualAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-2-caderno-5-amarelo/pagina-07.png"
+      ],
+      "technicalValidation": "pagina_renderizada_presente",
+      "editorialReviewStatus": "pendente_revisao_independente",
+      "integrationStatus": "fonte_visual_preservada_em_pagina_renderizada; bloqueada_para_player_atual_sem_suporte_a_imagem"
+    },
+    {
+      "question": 109,
+      "sourceQuestion": 109,
+      "sourcePage": 8,
+      "sourcePages": [
+        8
+      ],
+      "answerStatus": "gabarito_oficial",
+      "officialAnswer": "E",
+      "transcription": "enem-2025-dia-2-caderno-5-amarelo.transcricao.txt",
+      "visualAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-2-caderno-5-amarelo/pagina-08.png"
+      ],
+      "technicalValidation": "pagina_renderizada_presente",
+      "editorialReviewStatus": "pendente_revisao_independente",
+      "integrationStatus": "fonte_visual_preservada_em_pagina_renderizada; bloqueada_para_player_atual_sem_suporte_a_imagem"
+    },
+    {
+      "question": 110,
+      "sourceQuestion": 110,
+      "sourcePage": 8,
+      "sourcePages": [
+        8
+      ],
+      "answerStatus": "gabarito_oficial",
+      "officialAnswer": "E",
+      "transcription": "enem-2025-dia-2-caderno-5-amarelo.transcricao.txt",
+      "visualAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-2-caderno-5-amarelo/pagina-08.png"
+      ],
+      "technicalValidation": "pagina_renderizada_presente",
+      "editorialReviewStatus": "pendente_revisao_independente",
+      "integrationStatus": "fonte_visual_preservada_em_pagina_renderizada; bloqueada_para_player_atual_sem_suporte_a_imagem"
+    },
+    {
+      "question": 111,
+      "sourceQuestion": 111,
+      "sourcePage": 8,
+      "sourcePages": [
+        8
+      ],
+      "answerStatus": "gabarito_oficial",
+      "officialAnswer": "B",
+      "transcription": "enem-2025-dia-2-caderno-5-amarelo.transcricao.txt",
+      "visualAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-2-caderno-5-amarelo/pagina-08.png"
+      ],
+      "technicalValidation": "pagina_renderizada_presente",
+      "editorialReviewStatus": "pendente_revisao_independente",
+      "integrationStatus": "fonte_visual_preservada_em_pagina_renderizada; bloqueada_para_player_atual_sem_suporte_a_imagem"
+    },
+    {
+      "question": 112,
+      "sourceQuestion": 112,
+      "sourcePage": 8,
+      "sourcePages": [
+        8
+      ],
+      "answerStatus": "gabarito_oficial",
+      "officialAnswer": "D",
+      "transcription": "enem-2025-dia-2-caderno-5-amarelo.transcricao.txt",
+      "visualAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-2-caderno-5-amarelo/pagina-08.png"
+      ],
+      "technicalValidation": "pagina_renderizada_presente",
+      "editorialReviewStatus": "pendente_revisao_independente",
+      "integrationStatus": "fonte_visual_preservada_em_pagina_renderizada; bloqueada_para_player_atual_sem_suporte_a_imagem"
+    },
+    {
+      "question": 113,
+      "sourceQuestion": 113,
+      "sourcePage": 9,
+      "sourcePages": [
+        9
+      ],
+      "answerStatus": "gabarito_oficial",
+      "officialAnswer": "E",
+      "transcription": "enem-2025-dia-2-caderno-5-amarelo.transcricao.txt",
+      "visualAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-2-caderno-5-amarelo/pagina-09.png"
+      ],
+      "technicalValidation": "pagina_renderizada_presente",
+      "editorialReviewStatus": "pendente_revisao_independente",
+      "integrationStatus": "fonte_visual_preservada_em_pagina_renderizada; bloqueada_para_player_atual_sem_suporte_a_imagem"
+    },
+    {
+      "question": 114,
+      "sourceQuestion": 114,
+      "sourcePage": 9,
+      "sourcePages": [
+        9
+      ],
+      "answerStatus": "gabarito_oficial",
+      "officialAnswer": "E",
+      "transcription": "enem-2025-dia-2-caderno-5-amarelo.transcricao.txt",
+      "visualAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-2-caderno-5-amarelo/pagina-09.png"
+      ],
+      "technicalValidation": "pagina_renderizada_presente",
+      "editorialReviewStatus": "pendente_revisao_independente",
+      "integrationStatus": "fonte_visual_preservada_em_pagina_renderizada; bloqueada_para_player_atual_sem_suporte_a_imagem"
+    },
+    {
+      "question": 115,
+      "sourceQuestion": 115,
+      "sourcePage": 9,
+      "sourcePages": [
+        9
+      ],
+      "answerStatus": "anulada_sem_resposta_pontuada",
+      "officialAnswer": "Anulado",
+      "transcription": "enem-2025-dia-2-caderno-5-amarelo.transcricao.txt",
+      "visualAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-2-caderno-5-amarelo/pagina-09.png"
+      ],
+      "technicalValidation": "pagina_renderizada_presente",
+      "editorialReviewStatus": "pendente_revisao_independente",
+      "integrationStatus": "fonte_visual_preservada_em_pagina_renderizada; bloqueada_para_player_atual_sem_suporte_a_imagem"
+    },
+    {
+      "question": 116,
+      "sourceQuestion": 116,
+      "sourcePage": 10,
+      "sourcePages": [
+        10
+      ],
+      "answerStatus": "gabarito_oficial",
+      "officialAnswer": "A",
+      "transcription": "enem-2025-dia-2-caderno-5-amarelo.transcricao.txt",
+      "visualAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-2-caderno-5-amarelo/pagina-10.png"
+      ],
+      "technicalValidation": "pagina_renderizada_presente",
+      "editorialReviewStatus": "pendente_revisao_independente",
+      "integrationStatus": "fonte_visual_preservada_em_pagina_renderizada; bloqueada_para_player_atual_sem_suporte_a_imagem"
+    },
+    {
+      "question": 117,
+      "sourceQuestion": 117,
+      "sourcePage": 10,
+      "sourcePages": [
+        10
+      ],
+      "answerStatus": "gabarito_oficial",
+      "officialAnswer": "B",
+      "transcription": "enem-2025-dia-2-caderno-5-amarelo.transcricao.txt",
+      "visualAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-2-caderno-5-amarelo/pagina-10.png"
+      ],
+      "technicalValidation": "pagina_renderizada_presente",
+      "editorialReviewStatus": "pendente_revisao_independente",
+      "integrationStatus": "fonte_visual_preservada_em_pagina_renderizada; bloqueada_para_player_atual_sem_suporte_a_imagem"
+    },
+    {
+      "question": 118,
+      "sourceQuestion": 118,
+      "sourcePage": 11,
+      "sourcePages": [
+        11
+      ],
+      "answerStatus": "gabarito_oficial",
+      "officialAnswer": "B",
+      "transcription": "enem-2025-dia-2-caderno-5-amarelo.transcricao.txt",
+      "visualAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-2-caderno-5-amarelo/pagina-11.png"
+      ],
+      "technicalValidation": "pagina_renderizada_presente",
+      "editorialReviewStatus": "pendente_revisao_independente",
+      "integrationStatus": "fonte_visual_preservada_em_pagina_renderizada; bloqueada_para_player_atual_sem_suporte_a_imagem"
+    },
+    {
+      "question": 119,
+      "sourceQuestion": 119,
+      "sourcePage": 11,
+      "sourcePages": [
+        11
+      ],
+      "answerStatus": "gabarito_oficial",
+      "officialAnswer": "B",
+      "transcription": "enem-2025-dia-2-caderno-5-amarelo.transcricao.txt",
+      "visualAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-2-caderno-5-amarelo/pagina-11.png"
+      ],
+      "technicalValidation": "pagina_renderizada_presente",
+      "editorialReviewStatus": "pendente_revisao_independente",
+      "integrationStatus": "fonte_visual_preservada_em_pagina_renderizada; bloqueada_para_player_atual_sem_suporte_a_imagem"
+    },
+    {
+      "question": 120,
+      "sourceQuestion": 120,
+      "sourcePage": 11,
+      "sourcePages": [
+        11
+      ],
+      "answerStatus": "gabarito_oficial",
+      "officialAnswer": "D",
+      "transcription": "enem-2025-dia-2-caderno-5-amarelo.transcricao.txt",
+      "visualAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-2-caderno-5-amarelo/pagina-11.png"
+      ],
+      "technicalValidation": "pagina_renderizada_presente",
+      "editorialReviewStatus": "pendente_revisao_independente",
+      "integrationStatus": "fonte_visual_preservada_em_pagina_renderizada; bloqueada_para_player_atual_sem_suporte_a_imagem"
+    },
+    {
+      "question": 121,
+      "sourceQuestion": 121,
+      "sourcePage": 11,
+      "sourcePages": [
+        11
+      ],
+      "answerStatus": "anulada_sem_resposta_pontuada",
+      "officialAnswer": "Anulado",
+      "transcription": "enem-2025-dia-2-caderno-5-amarelo.transcricao.txt",
+      "visualAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-2-caderno-5-amarelo/pagina-11.png"
+      ],
+      "technicalValidation": "pagina_renderizada_presente",
+      "editorialReviewStatus": "pendente_revisao_independente",
+      "integrationStatus": "fonte_visual_preservada_em_pagina_renderizada; bloqueada_para_player_atual_sem_suporte_a_imagem"
+    },
+    {
+      "question": 122,
+      "sourceQuestion": 122,
+      "sourcePage": 12,
+      "sourcePages": [
+        12
+      ],
+      "answerStatus": "gabarito_oficial",
+      "officialAnswer": "C",
+      "transcription": "enem-2025-dia-2-caderno-5-amarelo.transcricao.txt",
+      "visualAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-2-caderno-5-amarelo/pagina-12.png"
+      ],
+      "technicalValidation": "pagina_renderizada_presente",
+      "editorialReviewStatus": "pendente_revisao_independente",
+      "integrationStatus": "fonte_visual_preservada_em_pagina_renderizada; bloqueada_para_player_atual_sem_suporte_a_imagem"
+    },
+    {
+      "question": 123,
+      "sourceQuestion": 123,
+      "sourcePage": 12,
+      "sourcePages": [
+        12
+      ],
+      "answerStatus": "gabarito_oficial",
+      "officialAnswer": "D",
+      "transcription": "enem-2025-dia-2-caderno-5-amarelo.transcricao.txt",
+      "visualAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-2-caderno-5-amarelo/pagina-12.png"
+      ],
+      "technicalValidation": "pagina_renderizada_presente",
+      "editorialReviewStatus": "pendente_revisao_independente",
+      "integrationStatus": "fonte_visual_preservada_em_pagina_renderizada; bloqueada_para_player_atual_sem_suporte_a_imagem"
+    },
+    {
+      "question": 124,
+      "sourceQuestion": 124,
+      "sourcePage": 12,
+      "sourcePages": [
+        12
+      ],
+      "answerStatus": "gabarito_oficial",
+      "officialAnswer": "C",
+      "transcription": "enem-2025-dia-2-caderno-5-amarelo.transcricao.txt",
+      "visualAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-2-caderno-5-amarelo/pagina-12.png"
+      ],
+      "technicalValidation": "pagina_renderizada_presente",
+      "editorialReviewStatus": "pendente_revisao_independente",
+      "integrationStatus": "fonte_visual_preservada_em_pagina_renderizada; bloqueada_para_player_atual_sem_suporte_a_imagem"
+    },
+    {
+      "question": 125,
+      "sourceQuestion": 125,
+      "sourcePage": 12,
+      "sourcePages": [
+        12
+      ],
+      "answerStatus": "gabarito_oficial",
+      "officialAnswer": "B",
+      "transcription": "enem-2025-dia-2-caderno-5-amarelo.transcricao.txt",
+      "visualAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-2-caderno-5-amarelo/pagina-12.png"
+      ],
+      "technicalValidation": "pagina_renderizada_presente",
+      "editorialReviewStatus": "pendente_revisao_independente",
+      "integrationStatus": "fonte_visual_preservada_em_pagina_renderizada; bloqueada_para_player_atual_sem_suporte_a_imagem"
+    },
+    {
+      "question": 126,
+      "sourceQuestion": 126,
+      "sourcePage": 13,
+      "sourcePages": [
+        13
+      ],
+      "answerStatus": "gabarito_oficial",
+      "officialAnswer": "B",
+      "transcription": "enem-2025-dia-2-caderno-5-amarelo.transcricao.txt",
+      "visualAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-2-caderno-5-amarelo/pagina-13.png"
+      ],
+      "technicalValidation": "pagina_renderizada_presente",
+      "editorialReviewStatus": "pendente_revisao_independente",
+      "integrationStatus": "fonte_visual_preservada_em_pagina_renderizada; bloqueada_para_player_atual_sem_suporte_a_imagem"
+    },
+    {
+      "question": 127,
+      "sourceQuestion": 127,
+      "sourcePage": 13,
+      "sourcePages": [
+        13
+      ],
+      "answerStatus": "gabarito_oficial",
+      "officialAnswer": "B",
+      "transcription": "enem-2025-dia-2-caderno-5-amarelo.transcricao.txt",
+      "visualAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-2-caderno-5-amarelo/pagina-13.png"
+      ],
+      "technicalValidation": "pagina_renderizada_presente",
+      "editorialReviewStatus": "pendente_revisao_independente",
+      "integrationStatus": "fonte_visual_preservada_em_pagina_renderizada; bloqueada_para_player_atual_sem_suporte_a_imagem"
+    },
+    {
+      "question": 128,
+      "sourceQuestion": 128,
+      "sourcePage": 13,
+      "sourcePages": [
+        13
+      ],
+      "answerStatus": "gabarito_oficial",
+      "officialAnswer": "D",
+      "transcription": "enem-2025-dia-2-caderno-5-amarelo.transcricao.txt",
+      "visualAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-2-caderno-5-amarelo/pagina-13.png"
+      ],
+      "technicalValidation": "pagina_renderizada_presente",
+      "editorialReviewStatus": "pendente_revisao_independente",
+      "integrationStatus": "fonte_visual_preservada_em_pagina_renderizada; bloqueada_para_player_atual_sem_suporte_a_imagem"
+    },
+    {
+      "question": 129,
+      "sourceQuestion": 129,
+      "sourcePage": 14,
+      "sourcePages": [
+        14
+      ],
+      "answerStatus": "gabarito_oficial",
+      "officialAnswer": "C",
+      "transcription": "enem-2025-dia-2-caderno-5-amarelo.transcricao.txt",
+      "visualAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-2-caderno-5-amarelo/pagina-14.png"
+      ],
+      "technicalValidation": "pagina_renderizada_presente",
+      "editorialReviewStatus": "pendente_revisao_independente",
+      "integrationStatus": "fonte_visual_preservada_em_pagina_renderizada; bloqueada_para_player_atual_sem_suporte_a_imagem"
+    },
+    {
+      "question": 130,
+      "sourceQuestion": 130,
+      "sourcePage": 14,
+      "sourcePages": [
+        14
+      ],
+      "answerStatus": "gabarito_oficial",
+      "officialAnswer": "E",
+      "transcription": "enem-2025-dia-2-caderno-5-amarelo.transcricao.txt",
+      "visualAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-2-caderno-5-amarelo/pagina-14.png"
+      ],
+      "technicalValidation": "pagina_renderizada_presente",
+      "editorialReviewStatus": "pendente_revisao_independente",
+      "integrationStatus": "fonte_visual_preservada_em_pagina_renderizada; bloqueada_para_player_atual_sem_suporte_a_imagem"
+    },
+    {
+      "question": 131,
+      "sourceQuestion": 131,
+      "sourcePage": 14,
+      "sourcePages": [
+        14
+      ],
+      "answerStatus": "gabarito_oficial",
+      "officialAnswer": "A",
+      "transcription": "enem-2025-dia-2-caderno-5-amarelo.transcricao.txt",
+      "visualAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-2-caderno-5-amarelo/pagina-14.png"
+      ],
+      "technicalValidation": "pagina_renderizada_presente",
+      "editorialReviewStatus": "pendente_revisao_independente",
+      "integrationStatus": "fonte_visual_preservada_em_pagina_renderizada; bloqueada_para_player_atual_sem_suporte_a_imagem"
+    },
+    {
+      "question": 132,
+      "sourceQuestion": 132,
+      "sourcePage": 15,
+      "sourcePages": [
+        15
+      ],
+      "answerStatus": "gabarito_oficial",
+      "officialAnswer": "D",
+      "transcription": "enem-2025-dia-2-caderno-5-amarelo.transcricao.txt",
+      "visualAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-2-caderno-5-amarelo/pagina-15.png"
+      ],
+      "technicalValidation": "pagina_renderizada_presente",
+      "editorialReviewStatus": "pendente_revisao_independente",
+      "integrationStatus": "fonte_visual_preservada_em_pagina_renderizada; bloqueada_para_player_atual_sem_suporte_a_imagem"
+    },
+    {
+      "question": 133,
+      "sourceQuestion": 133,
+      "sourcePage": 15,
+      "sourcePages": [
+        15
+      ],
+      "answerStatus": "gabarito_oficial",
+      "officialAnswer": "D",
+      "transcription": "enem-2025-dia-2-caderno-5-amarelo.transcricao.txt",
+      "visualAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-2-caderno-5-amarelo/pagina-15.png"
+      ],
+      "technicalValidation": "pagina_renderizada_presente",
+      "editorialReviewStatus": "pendente_revisao_independente",
+      "integrationStatus": "fonte_visual_preservada_em_pagina_renderizada; bloqueada_para_player_atual_sem_suporte_a_imagem"
+    },
+    {
+      "question": 134,
+      "sourceQuestion": 134,
+      "sourcePage": 15,
+      "sourcePages": [
+        15
+      ],
+      "answerStatus": "gabarito_oficial",
+      "officialAnswer": "C",
+      "transcription": "enem-2025-dia-2-caderno-5-amarelo.transcricao.txt",
+      "visualAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-2-caderno-5-amarelo/pagina-15.png"
+      ],
+      "technicalValidation": "pagina_renderizada_presente",
+      "editorialReviewStatus": "pendente_revisao_independente",
+      "integrationStatus": "fonte_visual_preservada_em_pagina_renderizada; bloqueada_para_player_atual_sem_suporte_a_imagem"
+    },
+    {
+      "question": 135,
+      "sourceQuestion": 135,
+      "sourcePage": 15,
+      "sourcePages": [
+        15
+      ],
+      "answerStatus": "gabarito_oficial",
+      "officialAnswer": "D",
+      "transcription": "enem-2025-dia-2-caderno-5-amarelo.transcricao.txt",
+      "visualAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-2-caderno-5-amarelo/pagina-15.png"
+      ],
+      "technicalValidation": "pagina_renderizada_presente",
+      "editorialReviewStatus": "pendente_revisao_independente",
+      "integrationStatus": "fonte_visual_preservada_em_pagina_renderizada; bloqueada_para_player_atual_sem_suporte_a_imagem"
+    },
+    {
+      "question": 136,
+      "sourceQuestion": 136,
+      "sourcePage": 16,
+      "sourcePages": [
+        16
+      ],
+      "answerStatus": "gabarito_oficial",
+      "officialAnswer": "C",
+      "transcription": "enem-2025-dia-2-caderno-5-amarelo.transcricao.txt",
+      "visualAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-2-caderno-5-amarelo/pagina-16.png"
+      ],
+      "technicalValidation": "pagina_renderizada_presente",
+      "editorialReviewStatus": "pendente_revisao_independente",
+      "integrationStatus": "fonte_visual_preservada_em_pagina_renderizada; bloqueada_para_player_atual_sem_suporte_a_imagem"
+    },
+    {
+      "question": 137,
+      "sourceQuestion": 137,
+      "sourcePage": 16,
+      "sourcePages": [
+        16
+      ],
+      "answerStatus": "gabarito_oficial",
+      "officialAnswer": "E",
+      "transcription": "enem-2025-dia-2-caderno-5-amarelo.transcricao.txt",
+      "visualAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-2-caderno-5-amarelo/pagina-16.png"
+      ],
+      "technicalValidation": "pagina_renderizada_presente",
+      "editorialReviewStatus": "pendente_revisao_independente",
+      "integrationStatus": "fonte_visual_preservada_em_pagina_renderizada; bloqueada_para_player_atual_sem_suporte_a_imagem"
+    },
+    {
+      "question": 138,
+      "sourceQuestion": 138,
+      "sourcePage": 16,
+      "sourcePages": [
+        16
+      ],
+      "answerStatus": "gabarito_oficial",
+      "officialAnswer": "C",
+      "transcription": "enem-2025-dia-2-caderno-5-amarelo.transcricao.txt",
+      "visualAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-2-caderno-5-amarelo/pagina-16.png"
+      ],
+      "technicalValidation": "pagina_renderizada_presente",
+      "editorialReviewStatus": "pendente_revisao_independente",
+      "integrationStatus": "fonte_visual_preservada_em_pagina_renderizada; bloqueada_para_player_atual_sem_suporte_a_imagem"
+    },
+    {
+      "question": 139,
+      "sourceQuestion": 139,
+      "sourcePage": 16,
+      "sourcePages": [
+        16
+      ],
+      "answerStatus": "gabarito_oficial",
+      "officialAnswer": "C",
+      "transcription": "enem-2025-dia-2-caderno-5-amarelo.transcricao.txt",
+      "visualAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-2-caderno-5-amarelo/pagina-16.png"
+      ],
+      "technicalValidation": "pagina_renderizada_presente",
+      "editorialReviewStatus": "pendente_revisao_independente",
+      "integrationStatus": "fonte_visual_preservada_em_pagina_renderizada; bloqueada_para_player_atual_sem_suporte_a_imagem"
+    },
+    {
+      "question": 140,
+      "sourceQuestion": 140,
+      "sourcePage": 17,
+      "sourcePages": [
+        17
+      ],
+      "answerStatus": "gabarito_oficial",
+      "officialAnswer": "A",
+      "transcription": "enem-2025-dia-2-caderno-5-amarelo.transcricao.txt",
+      "visualAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-2-caderno-5-amarelo/pagina-17.png"
+      ],
+      "technicalValidation": "pagina_renderizada_presente",
+      "editorialReviewStatus": "pendente_revisao_independente",
+      "integrationStatus": "fonte_visual_preservada_em_pagina_renderizada; bloqueada_para_player_atual_sem_suporte_a_imagem"
+    },
+    {
+      "question": 141,
+      "sourceQuestion": 141,
+      "sourcePage": 17,
+      "sourcePages": [
+        17
+      ],
+      "answerStatus": "gabarito_oficial",
+      "officialAnswer": "D",
+      "transcription": "enem-2025-dia-2-caderno-5-amarelo.transcricao.txt",
+      "visualAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-2-caderno-5-amarelo/pagina-17.png"
+      ],
+      "technicalValidation": "pagina_renderizada_presente",
+      "editorialReviewStatus": "pendente_revisao_independente",
+      "integrationStatus": "fonte_visual_preservada_em_pagina_renderizada; bloqueada_para_player_atual_sem_suporte_a_imagem"
+    },
+    {
+      "question": 142,
+      "sourceQuestion": 142,
+      "sourcePage": 17,
+      "sourcePages": [
+        17
+      ],
+      "answerStatus": "gabarito_oficial",
+      "officialAnswer": "D",
+      "transcription": "enem-2025-dia-2-caderno-5-amarelo.transcricao.txt",
+      "visualAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-2-caderno-5-amarelo/pagina-17.png"
+      ],
+      "technicalValidation": "pagina_renderizada_presente",
+      "editorialReviewStatus": "pendente_revisao_independente",
+      "integrationStatus": "fonte_visual_preservada_em_pagina_renderizada; bloqueada_para_player_atual_sem_suporte_a_imagem"
+    },
+    {
+      "question": 143,
+      "sourceQuestion": 143,
+      "sourcePage": 17,
+      "sourcePages": [
+        17
+      ],
+      "answerStatus": "gabarito_oficial",
+      "officialAnswer": "B",
+      "transcription": "enem-2025-dia-2-caderno-5-amarelo.transcricao.txt",
+      "visualAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-2-caderno-5-amarelo/pagina-17.png"
+      ],
+      "technicalValidation": "pagina_renderizada_presente",
+      "editorialReviewStatus": "pendente_revisao_independente",
+      "integrationStatus": "fonte_visual_preservada_em_pagina_renderizada; bloqueada_para_player_atual_sem_suporte_a_imagem"
+    },
+    {
+      "question": 144,
+      "sourceQuestion": 144,
+      "sourcePage": 18,
+      "sourcePages": [
+        18
+      ],
+      "answerStatus": "gabarito_oficial",
+      "officialAnswer": "E",
+      "transcription": "enem-2025-dia-2-caderno-5-amarelo.transcricao.txt",
+      "visualAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-2-caderno-5-amarelo/pagina-18.png"
+      ],
+      "technicalValidation": "pagina_renderizada_presente",
+      "editorialReviewStatus": "pendente_revisao_independente",
+      "integrationStatus": "fonte_visual_preservada_em_pagina_renderizada; bloqueada_para_player_atual_sem_suporte_a_imagem"
+    },
+    {
+      "question": 145,
+      "sourceQuestion": 145,
+      "sourcePage": 19,
+      "sourcePages": [
+        19
+      ],
+      "answerStatus": "gabarito_oficial",
+      "officialAnswer": "B",
+      "transcription": "enem-2025-dia-2-caderno-5-amarelo.transcricao.txt",
+      "visualAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-2-caderno-5-amarelo/pagina-19.png"
+      ],
+      "technicalValidation": "pagina_renderizada_presente",
+      "editorialReviewStatus": "pendente_revisao_independente",
+      "integrationStatus": "fonte_visual_preservada_em_pagina_renderizada; bloqueada_para_player_atual_sem_suporte_a_imagem"
+    },
+    {
+      "question": 146,
+      "sourceQuestion": 146,
+      "sourcePage": 19,
+      "sourcePages": [
+        19
+      ],
+      "answerStatus": "gabarito_oficial",
+      "officialAnswer": "C",
+      "transcription": "enem-2025-dia-2-caderno-5-amarelo.transcricao.txt",
+      "visualAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-2-caderno-5-amarelo/pagina-19.png"
+      ],
+      "technicalValidation": "pagina_renderizada_presente",
+      "editorialReviewStatus": "pendente_revisao_independente",
+      "integrationStatus": "fonte_visual_preservada_em_pagina_renderizada; bloqueada_para_player_atual_sem_suporte_a_imagem"
+    },
+    {
+      "question": 147,
+      "sourceQuestion": 147,
+      "sourcePage": 20,
+      "sourcePages": [
+        20
+      ],
+      "answerStatus": "gabarito_oficial",
+      "officialAnswer": "A",
+      "transcription": "enem-2025-dia-2-caderno-5-amarelo.transcricao.txt",
+      "visualAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-2-caderno-5-amarelo/pagina-20.png"
+      ],
+      "technicalValidation": "pagina_renderizada_presente",
+      "editorialReviewStatus": "pendente_revisao_independente",
+      "integrationStatus": "fonte_visual_preservada_em_pagina_renderizada; bloqueada_para_player_atual_sem_suporte_a_imagem"
+    },
+    {
+      "question": 148,
+      "sourceQuestion": 148,
+      "sourcePage": 20,
+      "sourcePages": [
+        20
+      ],
+      "answerStatus": "gabarito_oficial",
+      "officialAnswer": "C",
+      "transcription": "enem-2025-dia-2-caderno-5-amarelo.transcricao.txt",
+      "visualAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-2-caderno-5-amarelo/pagina-20.png"
+      ],
+      "technicalValidation": "pagina_renderizada_presente",
+      "editorialReviewStatus": "pendente_revisao_independente",
+      "integrationStatus": "fonte_visual_preservada_em_pagina_renderizada; bloqueada_para_player_atual_sem_suporte_a_imagem"
+    },
+    {
+      "question": 149,
+      "sourceQuestion": 149,
+      "sourcePage": 21,
+      "sourcePages": [
+        21
+      ],
+      "answerStatus": "gabarito_oficial",
+      "officialAnswer": "E",
+      "transcription": "enem-2025-dia-2-caderno-5-amarelo.transcricao.txt",
+      "visualAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-2-caderno-5-amarelo/pagina-21.png"
+      ],
+      "technicalValidation": "pagina_renderizada_presente",
+      "editorialReviewStatus": "pendente_revisao_independente",
+      "integrationStatus": "fonte_visual_preservada_em_pagina_renderizada; bloqueada_para_player_atual_sem_suporte_a_imagem"
+    },
+    {
+      "question": 150,
+      "sourceQuestion": 150,
+      "sourcePage": 21,
+      "sourcePages": [
+        21
+      ],
+      "answerStatus": "gabarito_oficial",
+      "officialAnswer": "C",
+      "transcription": "enem-2025-dia-2-caderno-5-amarelo.transcricao.txt",
+      "visualAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-2-caderno-5-amarelo/pagina-21.png"
+      ],
+      "technicalValidation": "pagina_renderizada_presente",
+      "editorialReviewStatus": "pendente_revisao_independente",
+      "integrationStatus": "fonte_visual_preservada_em_pagina_renderizada; bloqueada_para_player_atual_sem_suporte_a_imagem"
+    },
+    {
+      "question": 151,
+      "sourceQuestion": 151,
+      "sourcePage": 22,
+      "sourcePages": [
+        22
+      ],
+      "answerStatus": "gabarito_oficial",
+      "officialAnswer": "B",
+      "transcription": "enem-2025-dia-2-caderno-5-amarelo.transcricao.txt",
+      "visualAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-2-caderno-5-amarelo/pagina-22.png"
+      ],
+      "technicalValidation": "pagina_renderizada_presente",
+      "editorialReviewStatus": "pendente_revisao_independente",
+      "integrationStatus": "fonte_visual_preservada_em_pagina_renderizada; bloqueada_para_player_atual_sem_suporte_a_imagem"
+    },
+    {
+      "question": 152,
+      "sourceQuestion": 152,
+      "sourcePage": 22,
+      "sourcePages": [
+        22
+      ],
+      "answerStatus": "gabarito_oficial",
+      "officialAnswer": "D",
+      "transcription": "enem-2025-dia-2-caderno-5-amarelo.transcricao.txt",
+      "visualAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-2-caderno-5-amarelo/pagina-22.png"
+      ],
+      "technicalValidation": "pagina_renderizada_presente",
+      "editorialReviewStatus": "pendente_revisao_independente",
+      "integrationStatus": "fonte_visual_preservada_em_pagina_renderizada; bloqueada_para_player_atual_sem_suporte_a_imagem"
+    },
+    {
+      "question": 153,
+      "sourceQuestion": 153,
+      "sourcePage": 22,
+      "sourcePages": [
+        22
+      ],
+      "answerStatus": "gabarito_oficial",
+      "officialAnswer": "D",
+      "transcription": "enem-2025-dia-2-caderno-5-amarelo.transcricao.txt",
+      "visualAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-2-caderno-5-amarelo/pagina-22.png"
+      ],
+      "technicalValidation": "pagina_renderizada_presente",
+      "editorialReviewStatus": "pendente_revisao_independente",
+      "integrationStatus": "fonte_visual_preservada_em_pagina_renderizada; bloqueada_para_player_atual_sem_suporte_a_imagem"
+    },
+    {
+      "question": 154,
+      "sourceQuestion": 154,
+      "sourcePage": 22,
+      "sourcePages": [
+        22
+      ],
+      "answerStatus": "gabarito_oficial",
+      "officialAnswer": "D",
+      "transcription": "enem-2025-dia-2-caderno-5-amarelo.transcricao.txt",
+      "visualAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-2-caderno-5-amarelo/pagina-22.png"
+      ],
+      "technicalValidation": "pagina_renderizada_presente",
+      "editorialReviewStatus": "pendente_revisao_independente",
+      "integrationStatus": "fonte_visual_preservada_em_pagina_renderizada; bloqueada_para_player_atual_sem_suporte_a_imagem"
+    },
+    {
+      "question": 155,
+      "sourceQuestion": 155,
+      "sourcePage": 23,
+      "sourcePages": [
+        23
+      ],
+      "answerStatus": "gabarito_oficial",
+      "officialAnswer": "B",
+      "transcription": "enem-2025-dia-2-caderno-5-amarelo.transcricao.txt",
+      "visualAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-2-caderno-5-amarelo/pagina-23.png"
+      ],
+      "technicalValidation": "pagina_renderizada_presente",
+      "editorialReviewStatus": "pendente_revisao_independente",
+      "integrationStatus": "fonte_visual_preservada_em_pagina_renderizada; bloqueada_para_player_atual_sem_suporte_a_imagem"
+    },
+    {
+      "question": 156,
+      "sourceQuestion": 156,
+      "sourcePage": 23,
+      "sourcePages": [
+        23
+      ],
+      "answerStatus": "gabarito_oficial",
+      "officialAnswer": "A",
+      "transcription": "enem-2025-dia-2-caderno-5-amarelo.transcricao.txt",
+      "visualAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-2-caderno-5-amarelo/pagina-23.png"
+      ],
+      "technicalValidation": "pagina_renderizada_presente",
+      "editorialReviewStatus": "pendente_revisao_independente",
+      "integrationStatus": "fonte_visual_preservada_em_pagina_renderizada; bloqueada_para_player_atual_sem_suporte_a_imagem"
+    },
+    {
+      "question": 157,
+      "sourceQuestion": 157,
+      "sourcePage": 24,
+      "sourcePages": [
+        24
+      ],
+      "answerStatus": "gabarito_oficial",
+      "officialAnswer": "D",
+      "transcription": "enem-2025-dia-2-caderno-5-amarelo.transcricao.txt",
+      "visualAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-2-caderno-5-amarelo/pagina-24.png"
+      ],
+      "technicalValidation": "pagina_renderizada_presente",
+      "editorialReviewStatus": "pendente_revisao_independente",
+      "integrationStatus": "fonte_visual_preservada_em_pagina_renderizada; bloqueada_para_player_atual_sem_suporte_a_imagem"
+    },
+    {
+      "question": 158,
+      "sourceQuestion": 158,
+      "sourcePage": 24,
+      "sourcePages": [
+        24
+      ],
+      "answerStatus": "gabarito_oficial",
+      "officialAnswer": "E",
+      "transcription": "enem-2025-dia-2-caderno-5-amarelo.transcricao.txt",
+      "visualAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-2-caderno-5-amarelo/pagina-24.png"
+      ],
+      "technicalValidation": "pagina_renderizada_presente",
+      "editorialReviewStatus": "pendente_revisao_independente",
+      "integrationStatus": "fonte_visual_preservada_em_pagina_renderizada; bloqueada_para_player_atual_sem_suporte_a_imagem"
+    },
+    {
+      "question": 159,
+      "sourceQuestion": 159,
+      "sourcePage": 25,
+      "sourcePages": [
+        25
+      ],
+      "answerStatus": "gabarito_oficial",
+      "officialAnswer": "E",
+      "transcription": "enem-2025-dia-2-caderno-5-amarelo.transcricao.txt",
+      "visualAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-2-caderno-5-amarelo/pagina-25.png"
+      ],
+      "technicalValidation": "pagina_renderizada_presente",
+      "editorialReviewStatus": "pendente_revisao_independente",
+      "integrationStatus": "fonte_visual_preservada_em_pagina_renderizada; bloqueada_para_player_atual_sem_suporte_a_imagem"
+    },
+    {
+      "question": 160,
+      "sourceQuestion": 160,
+      "sourcePage": 25,
+      "sourcePages": [
+        25
+      ],
+      "answerStatus": "gabarito_oficial",
+      "officialAnswer": "A",
+      "transcription": "enem-2025-dia-2-caderno-5-amarelo.transcricao.txt",
+      "visualAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-2-caderno-5-amarelo/pagina-25.png"
+      ],
+      "technicalValidation": "pagina_renderizada_presente",
+      "editorialReviewStatus": "pendente_revisao_independente",
+      "integrationStatus": "fonte_visual_preservada_em_pagina_renderizada; bloqueada_para_player_atual_sem_suporte_a_imagem"
+    },
+    {
+      "question": 161,
+      "sourceQuestion": 161,
+      "sourcePage": 25,
+      "sourcePages": [
+        25
+      ],
+      "answerStatus": "gabarito_oficial",
+      "officialAnswer": "B",
+      "transcription": "enem-2025-dia-2-caderno-5-amarelo.transcricao.txt",
+      "visualAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-2-caderno-5-amarelo/pagina-25.png"
+      ],
+      "technicalValidation": "pagina_renderizada_presente",
+      "editorialReviewStatus": "pendente_revisao_independente",
+      "integrationStatus": "fonte_visual_preservada_em_pagina_renderizada; bloqueada_para_player_atual_sem_suporte_a_imagem"
+    },
+    {
+      "question": 162,
+      "sourceQuestion": 162,
+      "sourcePage": 26,
+      "sourcePages": [
+        26
+      ],
+      "answerStatus": "gabarito_oficial",
+      "officialAnswer": "B",
+      "transcription": "enem-2025-dia-2-caderno-5-amarelo.transcricao.txt",
+      "visualAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-2-caderno-5-amarelo/pagina-26.png"
+      ],
+      "technicalValidation": "pagina_renderizada_presente",
+      "editorialReviewStatus": "pendente_revisao_independente",
+      "integrationStatus": "fonte_visual_preservada_em_pagina_renderizada; bloqueada_para_player_atual_sem_suporte_a_imagem"
+    },
+    {
+      "question": 163,
+      "sourceQuestion": 163,
+      "sourcePage": 26,
+      "sourcePages": [
+        26
+      ],
+      "answerStatus": "gabarito_oficial",
+      "officialAnswer": "E",
+      "transcription": "enem-2025-dia-2-caderno-5-amarelo.transcricao.txt",
+      "visualAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-2-caderno-5-amarelo/pagina-26.png"
+      ],
+      "technicalValidation": "pagina_renderizada_presente",
+      "editorialReviewStatus": "pendente_revisao_independente",
+      "integrationStatus": "fonte_visual_preservada_em_pagina_renderizada; bloqueada_para_player_atual_sem_suporte_a_imagem"
+    },
+    {
+      "question": 164,
+      "sourceQuestion": 164,
+      "sourcePage": 26,
+      "sourcePages": [
+        26
+      ],
+      "answerStatus": "gabarito_oficial",
+      "officialAnswer": "C",
+      "transcription": "enem-2025-dia-2-caderno-5-amarelo.transcricao.txt",
+      "visualAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-2-caderno-5-amarelo/pagina-26.png"
+      ],
+      "technicalValidation": "pagina_renderizada_presente",
+      "editorialReviewStatus": "pendente_revisao_independente",
+      "integrationStatus": "fonte_visual_preservada_em_pagina_renderizada; bloqueada_para_player_atual_sem_suporte_a_imagem"
+    },
+    {
+      "question": 165,
+      "sourceQuestion": 165,
+      "sourcePage": 26,
+      "sourcePages": [
+        26
+      ],
+      "answerStatus": "gabarito_oficial",
+      "officialAnswer": "C",
+      "transcription": "enem-2025-dia-2-caderno-5-amarelo.transcricao.txt",
+      "visualAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-2-caderno-5-amarelo/pagina-26.png"
+      ],
+      "technicalValidation": "pagina_renderizada_presente",
+      "editorialReviewStatus": "pendente_revisao_independente",
+      "integrationStatus": "fonte_visual_preservada_em_pagina_renderizada; bloqueada_para_player_atual_sem_suporte_a_imagem"
+    },
+    {
+      "question": 166,
+      "sourceQuestion": 166,
+      "sourcePage": 26,
+      "sourcePages": [
+        26
+      ],
+      "answerStatus": "gabarito_oficial",
+      "officialAnswer": "D",
+      "transcription": "enem-2025-dia-2-caderno-5-amarelo.transcricao.txt",
+      "visualAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-2-caderno-5-amarelo/pagina-26.png"
+      ],
+      "technicalValidation": "pagina_renderizada_presente",
+      "editorialReviewStatus": "pendente_revisao_independente",
+      "integrationStatus": "fonte_visual_preservada_em_pagina_renderizada; bloqueada_para_player_atual_sem_suporte_a_imagem"
+    },
+    {
+      "question": 167,
+      "sourceQuestion": 167,
+      "sourcePage": 27,
+      "sourcePages": [
+        27
+      ],
+      "answerStatus": "gabarito_oficial",
+      "officialAnswer": "A",
+      "transcription": "enem-2025-dia-2-caderno-5-amarelo.transcricao.txt",
+      "visualAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-2-caderno-5-amarelo/pagina-27.png"
+      ],
+      "technicalValidation": "pagina_renderizada_presente",
+      "editorialReviewStatus": "pendente_revisao_independente",
+      "integrationStatus": "fonte_visual_preservada_em_pagina_renderizada; bloqueada_para_player_atual_sem_suporte_a_imagem"
+    },
+    {
+      "question": 168,
+      "sourceQuestion": 168,
+      "sourcePage": 28,
+      "sourcePages": [
+        28
+      ],
+      "answerStatus": "gabarito_oficial",
+      "officialAnswer": "B",
+      "transcription": "enem-2025-dia-2-caderno-5-amarelo.transcricao.txt",
+      "visualAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-2-caderno-5-amarelo/pagina-28.png"
+      ],
+      "technicalValidation": "pagina_renderizada_presente",
+      "editorialReviewStatus": "pendente_revisao_independente",
+      "integrationStatus": "fonte_visual_preservada_em_pagina_renderizada; bloqueada_para_player_atual_sem_suporte_a_imagem"
+    },
+    {
+      "question": 169,
+      "sourceQuestion": 169,
+      "sourcePage": 28,
+      "sourcePages": [
+        28
+      ],
+      "answerStatus": "gabarito_oficial",
+      "officialAnswer": "E",
+      "transcription": "enem-2025-dia-2-caderno-5-amarelo.transcricao.txt",
+      "visualAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-2-caderno-5-amarelo/pagina-28.png"
+      ],
+      "technicalValidation": "pagina_renderizada_presente",
+      "editorialReviewStatus": "pendente_revisao_independente",
+      "integrationStatus": "fonte_visual_preservada_em_pagina_renderizada; bloqueada_para_player_atual_sem_suporte_a_imagem"
+    },
+    {
+      "question": 170,
+      "sourceQuestion": 170,
+      "sourcePage": 28,
+      "sourcePages": [
+        28
+      ],
+      "answerStatus": "gabarito_oficial",
+      "officialAnswer": "A",
+      "transcription": "enem-2025-dia-2-caderno-5-amarelo.transcricao.txt",
+      "visualAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-2-caderno-5-amarelo/pagina-28.png"
+      ],
+      "technicalValidation": "pagina_renderizada_presente",
+      "editorialReviewStatus": "pendente_revisao_independente",
+      "integrationStatus": "fonte_visual_preservada_em_pagina_renderizada; bloqueada_para_player_atual_sem_suporte_a_imagem"
+    },
+    {
+      "question": 171,
+      "sourceQuestion": 171,
+      "sourcePage": 28,
+      "sourcePages": [
+        28
+      ],
+      "answerStatus": "gabarito_oficial",
+      "officialAnswer": "D",
+      "transcription": "enem-2025-dia-2-caderno-5-amarelo.transcricao.txt",
+      "visualAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-2-caderno-5-amarelo/pagina-28.png"
+      ],
+      "technicalValidation": "pagina_renderizada_presente",
+      "editorialReviewStatus": "pendente_revisao_independente",
+      "integrationStatus": "fonte_visual_preservada_em_pagina_renderizada; bloqueada_para_player_atual_sem_suporte_a_imagem"
+    },
+    {
+      "question": 172,
+      "sourceQuestion": 172,
+      "sourcePage": 29,
+      "sourcePages": [
+        29
+      ],
+      "answerStatus": "gabarito_oficial",
+      "officialAnswer": "D",
+      "transcription": "enem-2025-dia-2-caderno-5-amarelo.transcricao.txt",
+      "visualAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-2-caderno-5-amarelo/pagina-29.png"
+      ],
+      "technicalValidation": "pagina_renderizada_presente",
+      "editorialReviewStatus": "pendente_revisao_independente",
+      "integrationStatus": "fonte_visual_preservada_em_pagina_renderizada; bloqueada_para_player_atual_sem_suporte_a_imagem"
+    },
+    {
+      "question": 173,
+      "sourceQuestion": 173,
+      "sourcePage": 29,
+      "sourcePages": [
+        29
+      ],
+      "answerStatus": "gabarito_oficial",
+      "officialAnswer": "E",
+      "transcription": "enem-2025-dia-2-caderno-5-amarelo.transcricao.txt",
+      "visualAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-2-caderno-5-amarelo/pagina-29.png"
+      ],
+      "technicalValidation": "pagina_renderizada_presente",
+      "editorialReviewStatus": "pendente_revisao_independente",
+      "integrationStatus": "fonte_visual_preservada_em_pagina_renderizada; bloqueada_para_player_atual_sem_suporte_a_imagem"
+    },
+    {
+      "question": 174,
+      "sourceQuestion": 174,
+      "sourcePage": 30,
+      "sourcePages": [
+        30
+      ],
+      "answerStatus": "gabarito_oficial",
+      "officialAnswer": "B",
+      "transcription": "enem-2025-dia-2-caderno-5-amarelo.transcricao.txt",
+      "visualAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-2-caderno-5-amarelo/pagina-30.png"
+      ],
+      "technicalValidation": "pagina_renderizada_presente",
+      "editorialReviewStatus": "pendente_revisao_independente",
+      "integrationStatus": "fonte_visual_preservada_em_pagina_renderizada; bloqueada_para_player_atual_sem_suporte_a_imagem"
+    },
+    {
+      "question": 175,
+      "sourceQuestion": 175,
+      "sourcePage": 30,
+      "sourcePages": [
+        30
+      ],
+      "answerStatus": "gabarito_oficial",
+      "officialAnswer": "E",
+      "transcription": "enem-2025-dia-2-caderno-5-amarelo.transcricao.txt",
+      "visualAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-2-caderno-5-amarelo/pagina-30.png"
+      ],
+      "technicalValidation": "pagina_renderizada_presente",
+      "editorialReviewStatus": "pendente_revisao_independente",
+      "integrationStatus": "fonte_visual_preservada_em_pagina_renderizada; bloqueada_para_player_atual_sem_suporte_a_imagem"
+    },
+    {
+      "question": 176,
+      "sourceQuestion": 176,
+      "sourcePage": 30,
+      "sourcePages": [
+        30
+      ],
+      "answerStatus": "gabarito_oficial",
+      "officialAnswer": "A",
+      "transcription": "enem-2025-dia-2-caderno-5-amarelo.transcricao.txt",
+      "visualAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-2-caderno-5-amarelo/pagina-30.png"
+      ],
+      "technicalValidation": "pagina_renderizada_presente",
+      "editorialReviewStatus": "pendente_revisao_independente",
+      "integrationStatus": "fonte_visual_preservada_em_pagina_renderizada; bloqueada_para_player_atual_sem_suporte_a_imagem"
+    },
+    {
+      "question": 177,
+      "sourceQuestion": 177,
+      "sourcePage": 31,
+      "sourcePages": [
+        31
+      ],
+      "answerStatus": "gabarito_oficial",
+      "officialAnswer": "A",
+      "transcription": "enem-2025-dia-2-caderno-5-amarelo.transcricao.txt",
+      "visualAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-2-caderno-5-amarelo/pagina-31.png"
+      ],
+      "technicalValidation": "pagina_renderizada_presente",
+      "editorialReviewStatus": "pendente_revisao_independente",
+      "integrationStatus": "fonte_visual_preservada_em_pagina_renderizada; bloqueada_para_player_atual_sem_suporte_a_imagem"
+    },
+    {
+      "question": 178,
+      "sourceQuestion": 178,
+      "sourcePage": 31,
+      "sourcePages": [
+        31
+      ],
+      "answerStatus": "anulada_sem_resposta_pontuada",
+      "officialAnswer": "Anulado",
+      "transcription": "enem-2025-dia-2-caderno-5-amarelo.transcricao.txt",
+      "visualAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-2-caderno-5-amarelo/pagina-31.png"
+      ],
+      "technicalValidation": "pagina_renderizada_presente",
+      "editorialReviewStatus": "pendente_revisao_independente",
+      "integrationStatus": "fonte_visual_preservada_em_pagina_renderizada; bloqueada_para_player_atual_sem_suporte_a_imagem"
+    },
+    {
+      "question": 179,
+      "sourceQuestion": 179,
+      "sourcePage": 31,
+      "sourcePages": [
+        31
+      ],
+      "answerStatus": "gabarito_oficial",
+      "officialAnswer": "C",
+      "transcription": "enem-2025-dia-2-caderno-5-amarelo.transcricao.txt",
+      "visualAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-2-caderno-5-amarelo/pagina-31.png"
+      ],
+      "technicalValidation": "pagina_renderizada_presente",
+      "editorialReviewStatus": "pendente_revisao_independente",
+      "integrationStatus": "fonte_visual_preservada_em_pagina_renderizada; bloqueada_para_player_atual_sem_suporte_a_imagem"
+    },
+    {
+      "question": 180,
+      "sourceQuestion": 180,
+      "sourcePage": 31,
+      "sourcePages": [
+        31
+      ],
+      "answerStatus": "gabarito_oficial",
+      "officialAnswer": "C",
+      "transcription": "enem-2025-dia-2-caderno-5-amarelo.transcricao.txt",
+      "visualAssets": [
+        "docs/sources/enem/2025/aplicacao-regular/rendered/dia-2-caderno-5-amarelo/pagina-31.png"
+      ],
+      "technicalValidation": "pagina_renderizada_presente",
+      "editorialReviewStatus": "pendente_revisao_independente",
+      "integrationStatus": "fonte_visual_preservada_em_pagina_renderizada; bloqueada_para_player_atual_sem_suporte_a_imagem"
+    }
+  ],
+  "coverage": {
+    "sourceQuestions": 90,
+    "transcribedQuestions": 90,
+    "anuladas": [
+      115,
+      121,
+      178
+    ],
+    "scoredQuestions": 87
+  },
+  "validation": {
+    "technical": {
+      "status": "passou",
+      "evidence": "90 questões únicas, 32 PNGs oficiais de página localizados, paginação confirmada contra page-index.json e gabarito estruturado."
+    },
+    "continuityReview": {
+      "status": "passou_por_extracao",
+      "evidence": "Os cabeçalhos das questões 91-180 ocorrem em uma única página PDF cada; a transcrição preserva ambas as colunas da página e o acervo contém todas as 32 páginas para qualquer contexto visual adjacente."
+    },
+    "editorial": {
+      "status": "amostral_concluida",
+      "scope": "Amostra visual conferida: página 4/Q101; revisão independente integral ainda é necessária para atestar fidelidade de cada texto, alternativa, tabela e fórmula. Testes de schema não são prova de fidelidade."
+    }
+  },
+  "integrationBlocker": "O contrato bsestudos.exam.v1 atual não possui campos para imagens, gráficos, tabelas ou esquemas. Os originais e os assets locais são preservados para integração futura; nenhum item visual é adaptado ou completado por texto inventado."
+}

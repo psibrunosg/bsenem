@@ -1,0 +1,1139 @@
+{
+  "schema": "bsestudos.exam.v1",
+  "id": "enem-2025-dia-2-adaptado",
+  "title": "ENEM 2025 - Dia 2 - Caderno 5 Amarelo (adaptado)",
+  "durationMinutes": 300,
+  "questions": [
+    {
+      "id": "enem-2025-d2-q91",
+      "statement": "[Questão adaptada a partir do ENEM 2025 — dia 2, questão 91, caderno 5 amarelo]\n\nUma mariposa permanece próxima a uma lâmpada incandescente e recebe energia térmica mesmo sem tocar nela e sem haver corrente de ar. Qual mecanismo explica esse aquecimento?",
+      "options": [
+        "uma conclusão incompatível com física - calor",
+        "um resultado que desconsidera os dados de física - calor",
+        "irradiação",
+        "uma grandeza de outra etapa de física - calor",
+        "uma interpretação que troca causa e consequência em física - calor"
+      ],
+      "correctOption": 2,
+      "explanation": "A lâmpada emite radiação eletromagnética, que pode transportar energia no vácuo e no ar; convecção exige fluido em movimento."
+    },
+    {
+      "id": "enem-2025-d2-q92",
+      "statement": "[Questão adaptada a partir do ENEM 2025 — dia 2, questão 92, caderno 5 amarelo]\n\nSapinhos criados em cativeiro deixam de apresentar a toxina encontrada em indivíduos silvestres porque, na natureza, ela é obtida de presas específicas. Qual mudança explica o resultado?",
+      "options": [
+        "uma conclusão incompatível com biologia - cadeias alimentares",
+        "a ausência da dieta natural que fornece o composto",
+        "um resultado que desconsidera os dados de biologia - cadeias alimentares",
+        "uma grandeza de outra etapa de biologia - cadeias alimentares",
+        "uma interpretação que troca causa e consequência em biologia - cadeias alimentares"
+      ],
+      "correctOption": 1,
+      "explanation": "A toxina é sequestrada da alimentação; sem as presas que a contêm, o animal não a acumula."
+    },
+    {
+      "id": "enem-2025-d2-q93",
+      "statement": "[Questão adaptada a partir do ENEM 2025 — dia 2, questão 93, caderno 5 amarelo]\n\nUma vacina contém um antígeno inativado. Após a aplicação, qual resposta produz proteção posterior contra o agente infeccioso?",
+      "options": [
+        "uma conclusão incompatível com biologia - imunologia",
+        "um resultado que desconsidera os dados de biologia - imunologia",
+        "uma grandeza de outra etapa de biologia - imunologia",
+        "a indução da produção de anticorpos neutralizadores",
+        "uma interpretação que troca causa e consequência em biologia - imunologia"
+      ],
+      "correctOption": 3,
+      "explanation": "O antígeno estimula linfócitos; os anticorpos produzidos reconhecem e neutralizam o agente em contato futuro."
+    },
+    {
+      "id": "enem-2025-d2-q94",
+      "statement": "[Questão adaptada a partir do ENEM 2025 — dia 2, questão 94, caderno 5 amarelo]\n\nUma gramínea exótica se espalha rapidamente em área de Cerrado e compete por recursos com plantas locais. Qual consequência de longo prazo é esperada?",
+      "options": [
+        "uma conclusão incompatível com ecologia - espécies invasoras",
+        "um resultado que desconsidera os dados de ecologia - espécies invasoras",
+        "uma grandeza de outra etapa de ecologia - espécies invasoras",
+        "redução da diversidade de espécies nativas",
+        "uma interpretação que troca causa e consequência em ecologia - espécies invasoras"
+      ],
+      "correctOption": 3,
+      "explanation": "A espécie invasora ocupa espaço e recursos, reduzindo populações nativas e a diversidade local."
+    },
+    {
+      "id": "enem-2025-d2-q95",
+      "statement": "[Questão adaptada a partir do ENEM 2025 — dia 2, questão 95, caderno 5 amarelo]\n\nUm lagarto adaptado ao clima seco, com escassez periódica de água e alimento, tem maior probabilidade de encontrar ambiente semelhante em qual bioma brasileiro?",
+      "options": [
+        "uma conclusão incompatível com biologia - biomas",
+        "um resultado que desconsidera os dados de biologia - biomas",
+        "Caatinga",
+        "uma grandeza de outra etapa de biologia - biomas",
+        "uma interpretação que troca causa e consequência em biologia - biomas"
+      ],
+      "correctOption": 2,
+      "explanation": "A Caatinga apresenta clima semiárido e longos períodos secos, condições semelhantes às descritas."
+    },
+    {
+      "id": "enem-2025-d2-q96",
+      "statement": "[Questão adaptada a partir do ENEM 2025 — dia 2, questão 96, caderno 5 amarelo]\n\nUma água usada em laboratório passou por processo que removeu os sais dissolvidos e não deve ser usada para hidratação. Como essa água é classificada?",
+      "options": [
+        "uma conclusão incompatível com química - separação de misturas",
+        "um resultado que desconsidera os dados de química - separação de misturas",
+        "uma grandeza de outra etapa de química - separação de misturas",
+        "destilada",
+        "uma interpretação que troca causa e consequência em química - separação de misturas"
+      ],
+      "correctOption": 3,
+      "explanation": "A destilação separa a água dos sais por vaporização e condensação, produzindo água com poucos íons."
+    },
+    {
+      "id": "enem-2025-d2-q97",
+      "statement": "[Questão adaptada a partir do ENEM 2025 — dia 2, questão 97, caderno 5 amarelo]\n\nO efeito de olhos vermelhos em fotografias é mais comum em pouca luz. Qual alteração ocular aumenta esse efeito?",
+      "options": [
+        "dilatação da pupila, permitindo mais luz atingir a retina",
+        "uma conclusão incompatível com biologia - visão",
+        "um resultado que desconsidera os dados de biologia - visão",
+        "uma grandeza de outra etapa de biologia - visão",
+        "uma interpretação que troca causa e consequência em biologia - visão"
+      ],
+      "correctOption": 0,
+      "explanation": "No escuro a pupila dilata. Mais luz do flash alcança a retina vascularizada e retorna avermelhada."
+    },
+    {
+      "id": "enem-2025-d2-q98",
+      "statement": "[Questão adaptada a partir do ENEM 2025 — dia 2, questão 98, caderno 5 amarelo]\n\nA toxina do baiacu é termoestável e fica concentrada em vísceras e gônadas. Qual medida reduz diretamente o risco ao preparar o peixe?",
+      "options": [
+        "uma conclusão incompatível com biologia - toxicologia",
+        "um resultado que desconsidera os dados de biologia - toxicologia",
+        "uma grandeza de outra etapa de biologia - toxicologia",
+        "uma interpretação que troca causa e consequência em biologia - toxicologia",
+        "evitar romper e contaminar a carne com esses órgãos"
+      ],
+      "correctOption": 4,
+      "explanation": "Como o calor não destrói a toxina, o controle é impedir que o conteúdo dos órgãos alcance a parte comestível."
+    },
+    {
+      "id": "enem-2025-d2-q99",
+      "statement": "[Questão adaptada a partir do ENEM 2025 — dia 2, questão 99, caderno 5 amarelo]\n\nUma célula não degrada lipídios complexos porque lhe falta uma enzima digestiva ácida. Qual organela está funcionalmente comprometida?",
+      "options": [
+        "lisossomo",
+        "uma conclusão incompatível com biologia - organelas",
+        "um resultado que desconsidera os dados de biologia - organelas",
+        "uma grandeza de outra etapa de biologia - organelas",
+        "uma interpretação que troca causa e consequência em biologia - organelas"
+      ],
+      "correctOption": 0,
+      "explanation": "Lisossomos contêm enzimas hidrolíticas ácidas responsáveis pela digestão intracelular de macromoléculas."
+    },
+    {
+      "id": "enem-2025-d2-q100",
+      "statement": "[Questão adaptada a partir do ENEM 2025 — dia 2, questão 100, caderno 5 amarelo]\n\nPara remover dióxido de carbono já presente na atmosfera, uma cidade planeja uma ação de mitigação. Qual medida atua diretamente nessa remoção?",
+      "options": [
+        "ampliar o plantio e a manutenção de árvores",
+        "uma conclusão incompatível com ecologia - clima",
+        "um resultado que desconsidera os dados de ecologia - clima",
+        "uma grandeza de outra etapa de ecologia - clima",
+        "uma interpretação que troca causa e consequência em ecologia - clima"
+      ],
+      "correctOption": 0,
+      "explanation": "A fotossíntese fixa CO2 em matéria orgânica; fontes renováveis evitam emissões, mas não removem diretamente o gás já emitido."
+    },
+    {
+      "id": "enem-2025-d2-q101",
+      "statement": "[Questão adaptada a partir do ENEM 2025 — dia 2, questão 101, caderno 5 amarelo]\n\nUm sensor luminoso muda sua emissão de 600 nm para 500 nm durante um tratamento. Como fica sua frequência?",
+      "options": [
+        "aumenta",
+        "uma conclusão incompatível com física - ondas eletromagnéticas",
+        "um resultado que desconsidera os dados de física - ondas eletromagnéticas",
+        "uma grandeza de outra etapa de física - ondas eletromagnéticas",
+        "uma interpretação que troca causa e consequência em física - ondas eletromagnéticas"
+      ],
+      "correctOption": 0,
+      "explanation": "Como c = λf, com a velocidade da luz aproximadamente constante, diminuir o comprimento de onda aumenta a frequência."
+    },
+    {
+      "id": "enem-2025-d2-q102",
+      "statement": "[Questão adaptada a partir do ENEM 2025 — dia 2, questão 102, caderno 5 amarelo]\n\nEm um cruzamento Aa × Aa, em que A determina fenótipo dominante, qual proporção fenotípica é esperada?",
+      "options": [
+        "uma conclusão incompatível com genética - cruzamentos",
+        "um resultado que desconsidera os dados de genética - cruzamentos",
+        "uma grandeza de outra etapa de genética - cruzamentos",
+        "uma interpretação que troca causa e consequência em genética - cruzamentos",
+        "3 dominantes para 1 recessivo"
+      ],
+      "correctOption": 4,
+      "explanation": "O quadro de Punnett produz AA, Aa, Aa e aa: três genótipos manifestam o fenótipo dominante."
+    },
+    {
+      "id": "enem-2025-d2-q103",
+      "statement": "[Questão adaptada a partir do ENEM 2025 — dia 2, questão 103, caderno 5 amarelo]\n\nUma caixa sobe lentamente por um plano inclinado de ângulo constante, mantendo contato e rugosidade constantes. Como varia o módulo do atrito cinético ao longo do plano?",
+      "options": [
+        "uma conclusão incompatível com física - atrito",
+        "um resultado que desconsidera os dados de física - atrito",
+        "permanece constante no trecho inclinado",
+        "uma grandeza de outra etapa de física - atrito",
+        "uma interpretação que troca causa e consequência em física - atrito"
+      ],
+      "correctOption": 2,
+      "explanation": "No plano de ângulo constante, N = mg cos θ é constante; logo f = μN também é constante."
+    },
+    {
+      "id": "enem-2025-d2-q104",
+      "statement": "[Questão adaptada a partir do ENEM 2025 — dia 2, questão 104, caderno 5 amarelo]\n\nUm feixe de elétrons entra em uma região onde o campo elétrico aponta para cima. Para que lado ocorre sua aceleração?",
+      "options": [
+        "uma conclusão incompatível com física - campo elétrico",
+        "para baixo",
+        "um resultado que desconsidera os dados de física - campo elétrico",
+        "uma grandeza de outra etapa de física - campo elétrico",
+        "uma interpretação que troca causa e consequência em física - campo elétrico"
+      ],
+      "correctOption": 1,
+      "explanation": "A força elétrica é F = qE. Como a carga do elétron é negativa, sua força tem sentido oposto ao campo."
+    },
+    {
+      "id": "enem-2025-d2-q105",
+      "statement": "[Questão adaptada a partir do ENEM 2025 — dia 2, questão 105, caderno 5 amarelo]\n\nUma taça quebra quando uma cantora sustenta uma nota de mesma frequência natural da taça. Qual fenômeno ocorreu?",
+      "options": [
+        "uma conclusão incompatível com física - ondas sonoras",
+        "ressonância",
+        "um resultado que desconsidera os dados de física - ondas sonoras",
+        "uma grandeza de outra etapa de física - ondas sonoras",
+        "uma interpretação que troca causa e consequência em física - ondas sonoras"
+      ],
+      "correctOption": 1,
+      "explanation": "A frequência da fonte coincide com a frequência natural, aumentando a amplitude da vibração da taça."
+    },
+    {
+      "id": "enem-2025-d2-q106",
+      "statement": "[Questão adaptada a partir do ENEM 2025 — dia 2, questão 106, caderno 5 amarelo]\n\nUm álcool secundário é oxidado sem quebra de cadeia carbônica. Qual função orgânica é formada?",
+      "options": [
+        "uma conclusão incompatível com química orgânica",
+        "um resultado que desconsidera os dados de química orgânica",
+        "cetona",
+        "uma grandeza de outra etapa de química orgânica",
+        "uma interpretação que troca causa e consequência em química orgânica"
+      ],
+      "correctOption": 2,
+      "explanation": "A oxidação de álcool secundário remove hidrogênios do carbono ligado à hidroxila e forma um grupo carbonila interno."
+    },
+    {
+      "id": "enem-2025-d2-q107",
+      "statement": "[Questão adaptada a partir do ENEM 2025 — dia 2, questão 107, caderno 5 amarelo]\n\nÁgua devolvida mais quente por uma usina chega a um rio. Qual alteração prejudica diretamente peixes e outros organismos?",
+      "options": [
+        "uma conclusão incompatível com ecologia - poluição térmica",
+        "um resultado que desconsidera os dados de ecologia - poluição térmica",
+        "uma grandeza de outra etapa de ecologia - poluição térmica",
+        "uma interpretação que troca causa e consequência em ecologia - poluição térmica",
+        "diminuição da solubilidade do oxigênio na água"
+      ],
+      "correctOption": 4,
+      "explanation": "A solubilidade de gases diminui quando a temperatura da água aumenta, reduzindo o oxigênio disponível."
+    },
+    {
+      "id": "enem-2025-d2-q108",
+      "statement": "[Questão adaptada a partir do ENEM 2025 — dia 2, questão 108, caderno 5 amarelo]\n\nEm uma notação antiga, Az representa nitrogênio. Qual é a fórmula moderna do nitrato de sódio escrito como NaAzO3?",
+      "options": [
+        "NaNO3",
+        "uma conclusão incompatível com química - fórmulas",
+        "um resultado que desconsidera os dados de química - fórmulas",
+        "uma grandeza de outra etapa de química - fórmulas",
+        "uma interpretação que troca causa e consequência em química - fórmulas"
+      ],
+      "correctOption": 0,
+      "explanation": "Basta substituir Az por N, mantendo uma unidade de sódio, nitrogênio e três oxigênios."
+    },
+    {
+      "id": "enem-2025-d2-q109",
+      "statement": "[Questão adaptada a partir do ENEM 2025 — dia 2, questão 109, caderno 5 amarelo]\n\nUm produto obtido da casca da castanha de caju possui anel aromático ligado a um grupo -OH. Qual função orgânica o caracteriza?",
+      "options": [
+        "uma conclusão incompatível com química orgânica",
+        "um resultado que desconsidera os dados de química orgânica",
+        "uma grandeza de outra etapa de química orgânica",
+        "uma interpretação que troca causa e consequência em química orgânica",
+        "fenol"
+      ],
+      "correctOption": 4,
+      "explanation": "Fenóis têm hidroxila ligada diretamente a um carbono de anel aromático."
+    },
+    {
+      "id": "enem-2025-d2-q110",
+      "statement": "[Questão adaptada a partir do ENEM 2025 — dia 2, questão 110, caderno 5 amarelo]\n\nUma amostra de 2,00 mg de cobalto-60 tem meia-vida de 5,3 anos. Qual massa resta após 26,5 anos?",
+      "options": [
+        "uma conclusão incompatível com física nuclear",
+        "um resultado que desconsidera os dados de física nuclear",
+        "uma grandeza de outra etapa de física nuclear",
+        "uma interpretação que troca causa e consequência em física nuclear",
+        "0,0625 mg"
+      ],
+      "correctOption": 4,
+      "explanation": "26,5 anos correspondem a cinco meias-vidas: 2,00 × (1/2)^5 = 0,0625 mg."
+    },
+    {
+      "id": "enem-2025-d2-q111",
+      "statement": "[Questão adaptada a partir do ENEM 2025 — dia 2, questão 111, caderno 5 amarelo]\n\nResíduos orgânicos de criação animal são tratados em biodigestor antes de chegar a corpos d’água. Que impacto esse tratamento ajuda a prevenir?",
+      "options": [
+        "uma conclusão incompatível com ecologia - saneamento",
+        "eutrofização",
+        "um resultado que desconsidera os dados de ecologia - saneamento",
+        "uma grandeza de outra etapa de ecologia - saneamento",
+        "uma interpretação que troca causa e consequência em ecologia - saneamento"
+      ],
+      "correctOption": 1,
+      "explanation": "A redução de matéria orgânica e nutrientes diminui a proliferação excessiva de algas e a queda de oxigênio na água."
+    },
+    {
+      "id": "enem-2025-d2-q112",
+      "statement": "[Questão adaptada a partir do ENEM 2025 — dia 2, questão 112, caderno 5 amarelo]\n\nO arroz dourado contém betacaroteno, precursor da vitamina A. Qual deficiência ele procura reduzir?",
+      "options": [
+        "uma conclusão incompatível com biologia - vitaminas",
+        "um resultado que desconsidera os dados de biologia - vitaminas",
+        "uma grandeza de outra etapa de biologia - vitaminas",
+        "xeroftalmia",
+        "uma interpretação que troca causa e consequência em biologia - vitaminas"
+      ],
+      "correctOption": 3,
+      "explanation": "A vitamina A é necessária para a visão e para a manutenção de tecidos epiteliais; sua falta pode causar xeroftalmia."
+    },
+    {
+      "id": "enem-2025-d2-q113",
+      "statement": "[Questão adaptada a partir do ENEM 2025 — dia 2, questão 113, caderno 5 amarelo]\n\nUm carregador converte corrente alternada em corrente contínua de baixa tensão. Antes de substituí-lo, qual característica deve ser compatível com o aparelho?",
+      "options": [
+        "uma conclusão incompatível com física - eletricidade",
+        "um resultado que desconsidera os dados de física - eletricidade",
+        "uma grandeza de outra etapa de física - eletricidade",
+        "uma interpretação que troca causa e consequência em física - eletricidade",
+        "a tensão de saída especificada pelo aparelho"
+      ],
+      "correctOption": 4,
+      "explanation": "Uma tensão inadequada pode impedir o funcionamento ou danificar o circuito; o carregador deve fornecer a tensão prevista."
+    },
+    {
+      "id": "enem-2025-d2-q114",
+      "statement": "[Questão adaptada a partir do ENEM 2025 — dia 2, questão 114, caderno 5 amarelo]\n\nNa reação Nb2O5 + 10 Al → 2 Nb + 5 Al2O3, qual substância é o agente redutor?",
+      "options": [
+        "uma conclusão incompatível com química - estequiometria",
+        "um resultado que desconsidera os dados de química - estequiometria",
+        "uma grandeza de outra etapa de química - estequiometria",
+        "uma interpretação que troca causa e consequência em química - estequiometria",
+        "alumínio"
+      ],
+      "correctOption": 4,
+      "explanation": "O alumínio perde elétrons ao formar Al2O3; quem se oxida promove a redução do nióbio e é o agente redutor."
+    },
+    {
+      "id": "enem-2025-d2-q116",
+      "statement": "[Questão adaptada a partir do ENEM 2025 — dia 2, questão 116, caderno 5 amarelo]\n\nDez mil fontes sonoras idênticas e independentes atuam ao mesmo tempo. Em comparação com uma fonte, a intensidade total é quantas vezes maior?",
+      "options": [
+        "10 000 vezes maior",
+        "uma conclusão incompatível com física - acústica",
+        "um resultado que desconsidera os dados de física - acústica",
+        "uma grandeza de outra etapa de física - acústica",
+        "uma interpretação que troca causa e consequência em física - acústica"
+      ],
+      "correctOption": 0,
+      "explanation": "Intensidades de fontes independentes se somam: I_total = 10 000 I_uma."
+    },
+    {
+      "id": "enem-2025-d2-q117",
+      "statement": "[Questão adaptada a partir do ENEM 2025 — dia 2, questão 117, caderno 5 amarelo]\n\nUm filtro para derramamento de óleo deixa passar água e retém óleo por sua superfície especial. Qual propriedade é necessária?",
+      "options": [
+        "uma conclusão incompatível com química - separação",
+        "superfície hidrofílica e oleofóbica",
+        "um resultado que desconsidera os dados de química - separação",
+        "uma grandeza de outra etapa de química - separação",
+        "uma interpretação que troca causa e consequência em química - separação"
+      ],
+      "correctOption": 1,
+      "explanation": "Ela interage com água e repele óleo, permitindo separação seletiva das fases."
+    },
+    {
+      "id": "enem-2025-d2-q118",
+      "statement": "[Questão adaptada a partir do ENEM 2025 — dia 2, questão 118, caderno 5 amarelo]\n\nHormônios descartados em água podem alterar desenvolvimento e reprodução de organismos. Eles são classificados como que tipo de poluente?",
+      "options": [
+        "uma conclusão incompatível com biologia - hormônios",
+        "desreguladores endócrinos",
+        "um resultado que desconsidera os dados de biologia - hormônios",
+        "uma grandeza de outra etapa de biologia - hormônios",
+        "uma interpretação que troca causa e consequência em biologia - hormônios"
+      ],
+      "correctOption": 1,
+      "explanation": "Esses compostos interferem na sinalização hormonal mesmo em baixas concentrações."
+    },
+    {
+      "id": "enem-2025-d2-q119",
+      "statement": "[Questão adaptada a partir do ENEM 2025 — dia 2, questão 119, caderno 5 amarelo]\n\nUma substância com ponto de ebulição de 7 °C vazou à noite. Para reduzir a evaporação enquanto é recolhida, qual ação é adequada?",
+      "options": [
+        "uma conclusão incompatível com química - mudanças de estado",
+        "resfriar o material e mantê-lo abaixo de 7 °C",
+        "um resultado que desconsidera os dados de química - mudanças de estado",
+        "uma grandeza de outra etapa de química - mudanças de estado",
+        "uma interpretação que troca causa e consequência em química - mudanças de estado"
+      ],
+      "correctOption": 1,
+      "explanation": "Abaixo do ponto de ebulição, a pressão de vapor é menor e menos líquido passa para a fase gasosa."
+    },
+    {
+      "id": "enem-2025-d2-q120",
+      "statement": "[Questão adaptada a partir do ENEM 2025 — dia 2, questão 120, caderno 5 amarelo]\n\nUm alarme detecta a travessia completa de um feixe de 15 cm. Se um invasor o atravessa a 0,50 m/s, qual tempo de resposta é necessário?",
+      "options": [
+        "uma conclusão incompatível com física - cinemática",
+        "um resultado que desconsidera os dados de física - cinemática",
+        "uma grandeza de outra etapa de física - cinemática",
+        "0,30 s",
+        "uma interpretação que troca causa e consequência em física - cinemática"
+      ],
+      "correctOption": 3,
+      "explanation": "t = d/v = 0,15 m / 0,50 m/s = 0,30 s."
+    },
+    {
+      "id": "enem-2025-d2-q122",
+      "statement": "[Questão adaptada a partir do ENEM 2025 — dia 2, questão 122, caderno 5 amarelo]\n\nUma bactéria fotossintética usa pigmentos em membranas, mas não possui cloroplastos. Onde ocorrem suas reações de captura de luz?",
+      "options": [
+        "uma conclusão incompatível com biologia - fotossíntese",
+        "um resultado que desconsidera os dados de biologia - fotossíntese",
+        "na membrana plasmática e em suas dobras",
+        "uma grandeza de outra etapa de biologia - fotossíntese",
+        "uma interpretação que troca causa e consequência em biologia - fotossíntese"
+      ],
+      "correctOption": 2,
+      "explanation": "Bactérias não têm cloroplastos; seus pigmentos fotossintéticos ficam associados a membranas internas derivadas da membrana plasmática."
+    },
+    {
+      "id": "enem-2025-d2-q123",
+      "statement": "[Questão adaptada a partir do ENEM 2025 — dia 2, questão 123, caderno 5 amarelo]\n\nNa reação gasosa TiO2(s) + 2 Cl2(g) ⇌ TiCl4(g) + O2(g), qual alteração favorece os produtos?",
+      "options": [
+        "uma conclusão incompatível com química - equilíbrio",
+        "um resultado que desconsidera os dados de química - equilíbrio",
+        "uma grandeza de outra etapa de química - equilíbrio",
+        "aumentar a temperatura",
+        "uma interpretação que troca causa e consequência em química - equilíbrio"
+      ],
+      "correctOption": 3,
+      "explanation": "A reação direta é endotérmica; pelo princípio de Le Chatelier, o aumento de temperatura favorece o sentido que absorve calor."
+    },
+    {
+      "id": "enem-2025-d2-q124",
+      "statement": "[Questão adaptada a partir do ENEM 2025 — dia 2, questão 124, caderno 5 amarelo]\n\nUma laje suporta 10 000 Pa. Um líquido de densidade 1 250 kg/m³ é empilhado sobre ela; use g = 10 m/s². Qual altura máxima?",
+      "options": [
+        "uma conclusão incompatível com física - pressão",
+        "um resultado que desconsidera os dados de física - pressão",
+        "0,80 m",
+        "uma grandeza de outra etapa de física - pressão",
+        "uma interpretação que troca causa e consequência em física - pressão"
+      ],
+      "correctOption": 2,
+      "explanation": "P = ρgh; h = 10 000/(1 250 × 10) = 0,80 m."
+    },
+    {
+      "id": "enem-2025-d2-q125",
+      "statement": "[Questão adaptada a partir do ENEM 2025 — dia 2, questão 125, caderno 5 amarelo]\n\nUma bomba opera entre 95 V e 105 V. Placas de 34 V são associadas em série. Quantas placas atendem à faixa?",
+      "options": [
+        "uma conclusão incompatível com física - circuitos",
+        "3 placas",
+        "um resultado que desconsidera os dados de física - circuitos",
+        "uma grandeza de outra etapa de física - circuitos",
+        "uma interpretação que troca causa e consequência em física - circuitos"
+      ],
+      "correctOption": 1,
+      "explanation": "Em série, as tensões somam: 3 × 34 V = 102 V, valor dentro da faixa."
+    },
+    {
+      "id": "enem-2025-d2-q126",
+      "statement": "[Questão adaptada a partir do ENEM 2025 — dia 2, questão 126, caderno 5 amarelo]\n\nA 1 atm e 453 K, um bolo precisa liberar 4,00 L de CO2. Use R = 0,082 L atm mol−1 K−1. Quantos mols de gás são necessários?",
+      "options": [
+        "uma conclusão incompatível com química - gases",
+        "aproximadamente 0,108 mol",
+        "um resultado que desconsidera os dados de química - gases",
+        "uma grandeza de outra etapa de química - gases",
+        "uma interpretação que troca causa e consequência em química - gases"
+      ],
+      "correctOption": 1,
+      "explanation": "n = PV/RT = 4,00/(0,082 × 453) ≈ 0,108 mol."
+    },
+    {
+      "id": "enem-2025-d2-q127",
+      "statement": "[Questão adaptada a partir do ENEM 2025 — dia 2, questão 127, caderno 5 amarelo]\n\nUm avião deve compensar vento para chegar ao destino. Qual grandeza vetorial deve ser determinada para o piloto?",
+      "options": [
+        "uma conclusão incompatível com física - vetores",
+        "a velocidade do avião em relação ao ar",
+        "um resultado que desconsidera os dados de física - vetores",
+        "uma grandeza de outra etapa de física - vetores",
+        "uma interpretação que troca causa e consequência em física - vetores"
+      ],
+      "correctOption": 1,
+      "explanation": "A soma vetorial da velocidade do avião em relação ao ar com a do vento fornece a velocidade em relação ao solo."
+    },
+    {
+      "id": "enem-2025-d2-q128",
+      "statement": "[Questão adaptada a partir do ENEM 2025 — dia 2, questão 128, caderno 5 amarelo]\n\nUma peça de prata escurecida é colocada em solução salina com alumínio. Qual transformação remove o sulfeto de prata?",
+      "options": [
+        "uma conclusão incompatível com química - eletroquímica",
+        "um resultado que desconsidera os dados de química - eletroquímica",
+        "uma grandeza de outra etapa de química - eletroquímica",
+        "redução do sulfeto de prata e oxidação do alumínio",
+        "uma interpretação que troca causa e consequência em química - eletroquímica"
+      ],
+      "correctOption": 3,
+      "explanation": "O alumínio cede elétrons; a prata no composto recebe elétrons e retorna à forma metálica."
+    },
+    {
+      "id": "enem-2025-d2-q129",
+      "statement": "[Questão adaptada a partir do ENEM 2025 — dia 2, questão 129, caderno 5 amarelo]\n\nNo lançamento de uma bola, despreze o ar. Qual componente da velocidade permanece constante?",
+      "options": [
+        "uma conclusão incompatível com física - lançamento oblíquo",
+        "um resultado que desconsidera os dados de física - lançamento oblíquo",
+        "a componente horizontal",
+        "uma grandeza de outra etapa de física - lançamento oblíquo",
+        "uma interpretação que troca causa e consequência em física - lançamento oblíquo"
+      ],
+      "correctOption": 2,
+      "explanation": "A única aceleração é a gravidade, vertical; assim a velocidade horizontal não se altera."
+    },
+    {
+      "id": "enem-2025-d2-q130",
+      "statement": "[Questão adaptada a partir do ENEM 2025 — dia 2, questão 130, caderno 5 amarelo]\n\nUma enzima acelera uma reação sem alterar reagentes nem produtos finais. O que ela reduz?",
+      "options": [
+        "uma conclusão incompatível com química - cinética",
+        "um resultado que desconsidera os dados de química - cinética",
+        "uma grandeza de outra etapa de química - cinética",
+        "uma interpretação que troca causa e consequência em química - cinética",
+        "a energia de ativação"
+      ],
+      "correctOption": 4,
+      "explanation": "A enzima oferece caminho reacional alternativo com barreira energética menor."
+    },
+    {
+      "id": "enem-2025-d2-q131",
+      "statement": "[Questão adaptada a partir do ENEM 2025 — dia 2, questão 131, caderno 5 amarelo]\n\nUma substância é eficiente contra moluscos aquáticos adultos. Qual doença pode ter sua transmissão reduzida?",
+      "options": [
+        "esquistossomose",
+        "uma conclusão incompatível com biologia - parasitologia",
+        "um resultado que desconsidera os dados de biologia - parasitologia",
+        "uma grandeza de outra etapa de biologia - parasitologia",
+        "uma interpretação que troca causa e consequência em biologia - parasitologia"
+      ],
+      "correctOption": 0,
+      "explanation": "Caramujos de água doce atuam como hospedeiros intermediários do Schistosoma."
+    },
+    {
+      "id": "enem-2025-d2-q132",
+      "statement": "[Questão adaptada a partir do ENEM 2025 — dia 2, questão 132, caderno 5 amarelo]\n\nPor que carvão ativado remove contaminantes melhor que carvão comum?",
+      "options": [
+        "uma conclusão incompatível com química - adsorção",
+        "um resultado que desconsidera os dados de química - adsorção",
+        "uma grandeza de outra etapa de química - adsorção",
+        "porque possui grande área superficial porosa",
+        "uma interpretação que troca causa e consequência em química - adsorção"
+      ],
+      "correctOption": 3,
+      "explanation": "Os poros ampliam a superfície de contato, aumentando a adsorção de moléculas."
+    },
+    {
+      "id": "enem-2025-d2-q133",
+      "statement": "[Questão adaptada a partir do ENEM 2025 — dia 2, questão 133, caderno 5 amarelo]\n\nUm organismo mantém ciclos próximos de 24 horas mesmo sob iluminação constante. Que sistema explica o padrão?",
+      "options": [
+        "uma conclusão incompatível com biologia - ritmos",
+        "um resultado que desconsidera os dados de biologia - ritmos",
+        "uma grandeza de outra etapa de biologia - ritmos",
+        "relógio biológico circadiano",
+        "uma interpretação que troca causa e consequência em biologia - ritmos"
+      ],
+      "correctOption": 3,
+      "explanation": "Ritmos circadianos são mecanismos endógenos sincronizados, em condições naturais, por ciclos ambientais."
+    },
+    {
+      "id": "enem-2025-d2-q134",
+      "statement": "[Questão adaptada a partir do ENEM 2025 — dia 2, questão 134, caderno 5 amarelo]\n\nAves aquáticas perderam a flutuação após as penas ficarem encharcadas. Qual propriedade foi mais diretamente comprometida?",
+      "options": [
+        "uma conclusão incompatível com biologia - aves",
+        "um resultado que desconsidera os dados de biologia - aves",
+        "a impermeabilização das penas",
+        "uma grandeza de outra etapa de biologia - aves",
+        "uma interpretação que troca causa e consequência em biologia - aves"
+      ],
+      "correctOption": 2,
+      "explanation": "A camada hidrofóbica mantém ar entre as penas; ao perder essa proteção, a ave absorve água e perde flutuação."
+    },
+    {
+      "id": "enem-2025-d2-q135",
+      "statement": "[Questão adaptada a partir do ENEM 2025 — dia 2, questão 135, caderno 5 amarelo]\n\nUma régua ligada a 220 V suporta 20 A. Qual potência total máxima pode alimentar sem romper o fusível?",
+      "options": [
+        "uma conclusão incompatível com física - potência",
+        "um resultado que desconsidera os dados de física - potência",
+        "uma grandeza de outra etapa de física - potência",
+        "4 400 W",
+        "uma interpretação que troca causa e consequência em física - potência"
+      ],
+      "correctOption": 3,
+      "explanation": "P = UI = 220 V × 20 A = 4 400 W."
+    },
+    {
+      "id": "enem-2025-d2-q136",
+      "statement": "[Questão adaptada a partir do ENEM 2025 — dia 2, questão 136, caderno 5 amarelo]\n\nUma receita usa 3 copos de água para 2 copos de concentrado. Mantendo a proporção, quantos copos de água são usados com 10 copos de concentrado?",
+      "options": [
+        "uma conclusão incompatível com matemática - razão",
+        "um resultado que desconsidera os dados de matemática - razão",
+        "15 copos",
+        "uma grandeza de outra etapa de matemática - razão",
+        "uma interpretação que troca causa e consequência em matemática - razão"
+      ],
+      "correctOption": 2,
+      "explanation": "3/2 = x/10, portanto x = 15."
+    },
+    {
+      "id": "enem-2025-d2-q137",
+      "statement": "[Questão adaptada a partir do ENEM 2025 — dia 2, questão 137, caderno 5 amarelo]\n\nUm produto de R$ 200 recebe desconto de 15%. Qual é o preço final?",
+      "options": [
+        "uma conclusão incompatível com matemática - porcentagem",
+        "um resultado que desconsidera os dados de matemática - porcentagem",
+        "uma grandeza de outra etapa de matemática - porcentagem",
+        "uma interpretação que troca causa e consequência em matemática - porcentagem",
+        "R$ 170"
+      ],
+      "correctOption": 4,
+      "explanation": "15% de 200 é 30; 200 − 30 = 170."
+    },
+    {
+      "id": "enem-2025-d2-q138",
+      "statement": "[Questão adaptada a partir do ENEM 2025 — dia 2, questão 138, caderno 5 amarelo]\n\nAs notas 6, 7, 8 e 9 têm o mesmo peso. Qual é a média?",
+      "options": [
+        "uma conclusão incompatível com matemática - média",
+        "um resultado que desconsidera os dados de matemática - média",
+        "7,5",
+        "uma grandeza de outra etapa de matemática - média",
+        "uma interpretação que troca causa e consequência em matemática - média"
+      ],
+      "correctOption": 2,
+      "explanation": "(6 + 7 + 8 + 9)/4 = 30/4 = 7,5."
+    },
+    {
+      "id": "enem-2025-d2-q139",
+      "statement": "[Questão adaptada a partir do ENEM 2025 — dia 2, questão 139, caderno 5 amarelo]\n\nUm triângulo tem base 12 cm e altura 5 cm. Qual é sua área?",
+      "options": [
+        "uma conclusão incompatível com matemática - geometria plana",
+        "um resultado que desconsidera os dados de matemática - geometria plana",
+        "30 cm²",
+        "uma grandeza de outra etapa de matemática - geometria plana",
+        "uma interpretação que troca causa e consequência em matemática - geometria plana"
+      ],
+      "correctOption": 2,
+      "explanation": "A = base × altura / 2 = 12 × 5 / 2 = 30."
+    },
+    {
+      "id": "enem-2025-d2-q140",
+      "statement": "[Questão adaptada a partir do ENEM 2025 — dia 2, questão 140, caderno 5 amarelo]\n\nUm pacote tem 8 porções de 25 g. Qual é a massa total do pacote?",
+      "options": [
+        "200 g",
+        "uma conclusão incompatível com matemática - leitura de rótulos",
+        "um resultado que desconsidera os dados de matemática - leitura de rótulos",
+        "uma grandeza de outra etapa de matemática - leitura de rótulos",
+        "uma interpretação que troca causa e consequência em matemática - leitura de rótulos"
+      ],
+      "correctOption": 0,
+      "explanation": "8 × 25 g = 200 g."
+    },
+    {
+      "id": "enem-2025-d2-q141",
+      "statement": "[Questão adaptada a partir do ENEM 2025 — dia 2, questão 141, caderno 5 amarelo]\n\nUm poliedro convexo tem 12 faces e 20 vértices. Quantas arestas possui?",
+      "options": [
+        "uma conclusão incompatível com matemática - poliedros",
+        "um resultado que desconsidera os dados de matemática - poliedros",
+        "uma grandeza de outra etapa de matemática - poliedros",
+        "30 arestas",
+        "uma interpretação que troca causa e consequência em matemática - poliedros"
+      ],
+      "correctOption": 3,
+      "explanation": "Pela relação de Euler V − A + F = 2: 20 − A + 12 = 2, então A = 30."
+    },
+    {
+      "id": "enem-2025-d2-q142",
+      "statement": "[Questão adaptada a partir do ENEM 2025 — dia 2, questão 142, caderno 5 amarelo]\n\nUm gráfico de frequência respiratória cai até o minuto 8 e depois fica horizontal. Como a grandeza se comporta após o minuto 8?",
+      "options": [
+        "uma conclusão incompatível com matemática - gráficos",
+        "um resultado que desconsidera os dados de matemática - gráficos",
+        "uma grandeza de outra etapa de matemática - gráficos",
+        "permanece constante",
+        "uma interpretação que troca causa e consequência em matemática - gráficos"
+      ],
+      "correctOption": 3,
+      "explanation": "Trecho horizontal representa valor constante ao longo do tempo."
+    },
+    {
+      "id": "enem-2025-d2-q143",
+      "statement": "[Questão adaptada a partir do ENEM 2025 — dia 2, questão 143, caderno 5 amarelo]\n\nUm atleta percorre 100 m em 10 s. Qual é sua velocidade média?",
+      "options": [
+        "uma conclusão incompatível com matemática - velocidade média",
+        "10 m/s",
+        "um resultado que desconsidera os dados de matemática - velocidade média",
+        "uma grandeza de outra etapa de matemática - velocidade média",
+        "uma interpretação que troca causa e consequência em matemática - velocidade média"
+      ],
+      "correctOption": 1,
+      "explanation": "v = d/t = 100/10 = 10 m/s."
+    },
+    {
+      "id": "enem-2025-d2-q144",
+      "statement": "[Questão adaptada a partir do ENEM 2025 — dia 2, questão 144, caderno 5 amarelo]\n\nUm ponto P(3, −2, 5) é projetado no plano yz. Qual coordenada é eliminada?",
+      "options": [
+        "uma conclusão incompatível com matemática - coordenadas",
+        "um resultado que desconsidera os dados de matemática - coordenadas",
+        "uma grandeza de outra etapa de matemática - coordenadas",
+        "uma interpretação que troca causa e consequência em matemática - coordenadas",
+        "a coordenada x"
+      ],
+      "correctOption": 4,
+      "explanation": "O plano yz é definido por x = 0; a projeção preserva y e z."
+    },
+    {
+      "id": "enem-2025-d2-q145",
+      "statement": "[Questão adaptada a partir do ENEM 2025 — dia 2, questão 145, caderno 5 amarelo]\n\nEm um grupo com 40 homens e 60 mulheres, 30 homens usam uma rede social. Escolhendo alguém ao acaso, qual é a probabilidade de ser homem que usa a rede?",
+      "options": [
+        "uma conclusão incompatível com matemática - probabilidade",
+        "30%",
+        "um resultado que desconsidera os dados de matemática - probabilidade",
+        "uma grandeza de outra etapa de matemática - probabilidade",
+        "uma interpretação que troca causa e consequência em matemática - probabilidade"
+      ],
+      "correctOption": 1,
+      "explanation": "Há 30 casos favoráveis entre 100 pessoas: 30/100 = 30%."
+    },
+    {
+      "id": "enem-2025-d2-q146",
+      "statement": "[Questão adaptada a partir do ENEM 2025 — dia 2, questão 146, caderno 5 amarelo]\n\nUm carro percorre 30 km por dia, durante 7 dias, e consome 1 m³ de GNV a cada 13 km. Qual capacidade mínima inteira cobre a semana?",
+      "options": [
+        "uma conclusão incompatível com matemática - consumo",
+        "um resultado que desconsidera os dados de matemática - consumo",
+        "17 m³",
+        "uma grandeza de outra etapa de matemática - consumo",
+        "uma interpretação que troca causa e consequência em matemática - consumo"
+      ],
+      "correctOption": 2,
+      "explanation": "Distância semanal: 210 km. Consumo: 210/13 ≈ 16,15 m³; a menor capacidade inteira suficiente é 17."
+    },
+    {
+      "id": "enem-2025-d2-q147",
+      "statement": "[Questão adaptada a partir do ENEM 2025 — dia 2, questão 147, caderno 5 amarelo]\n\nQuais pontos de um plano estão à mesma distância de dois pontos distintos A e B?",
+      "options": [
+        "os pontos da mediatriz de AB",
+        "uma conclusão incompatível com matemática - lugares geométricos",
+        "um resultado que desconsidera os dados de matemática - lugares geométricos",
+        "uma grandeza de outra etapa de matemática - lugares geométricos",
+        "uma interpretação que troca causa e consequência em matemática - lugares geométricos"
+      ],
+      "correctOption": 0,
+      "explanation": "A mediatriz é o conjunto dos pontos equidistantes das extremidades de um segmento."
+    },
+    {
+      "id": "enem-2025-d2-q148",
+      "statement": "[Questão adaptada a partir do ENEM 2025 — dia 2, questão 148, caderno 5 amarelo]\n\nUma livraria tem 50 romances em estoque e a demanda prevista é de 65. Qual decisão atende exatamente ao déficit?",
+      "options": [
+        "uma conclusão incompatível com matemática - comparação de dados",
+        "um resultado que desconsidera os dados de matemática - comparação de dados",
+        "adquirir 15 romances",
+        "uma grandeza de outra etapa de matemática - comparação de dados",
+        "uma interpretação que troca causa e consequência em matemática - comparação de dados"
+      ],
+      "correctOption": 2,
+      "explanation": "Déficit = demanda − estoque = 65 − 50 = 15."
+    },
+    {
+      "id": "enem-2025-d2-q149",
+      "statement": "[Questão adaptada a partir do ENEM 2025 — dia 2, questão 149, caderno 5 amarelo]\n\nUma escola terá 200 matrículas e estima 15% no curso de francês. Quantas matrículas francesas espera?",
+      "options": [
+        "uma conclusão incompatível com matemática - porcentagens",
+        "um resultado que desconsidera os dados de matemática - porcentagens",
+        "uma grandeza de outra etapa de matemática - porcentagens",
+        "uma interpretação que troca causa e consequência em matemática - porcentagens",
+        "30"
+      ],
+      "correctOption": 4,
+      "explanation": "15% de 200 = 0,15 × 200 = 30."
+    },
+    {
+      "id": "enem-2025-d2-q150",
+      "statement": "[Questão adaptada a partir do ENEM 2025 — dia 2, questão 150, caderno 5 amarelo]\n\nEm uma planta na escala 1:50, um segmento mede 4 cm. Qual é o comprimento real?",
+      "options": [
+        "uma conclusão incompatível com matemática - escala",
+        "um resultado que desconsidera os dados de matemática - escala",
+        "2 m",
+        "uma grandeza de outra etapa de matemática - escala",
+        "uma interpretação que troca causa e consequência em matemática - escala"
+      ],
+      "correctOption": 2,
+      "explanation": "4 cm × 50 = 200 cm = 2 m."
+    },
+    {
+      "id": "enem-2025-d2-q151",
+      "statement": "[Questão adaptada a partir do ENEM 2025 — dia 2, questão 151, caderno 5 amarelo]\n\nUm código possui 1 algarismo de 1 a 4 seguido de 6 algarismos de 0 a 9, com repetição permitida. Quantos códigos são possíveis?",
+      "options": [
+        "uma conclusão incompatível com matemática - contagem",
+        "4 000 000",
+        "um resultado que desconsidera os dados de matemática - contagem",
+        "uma grandeza de outra etapa de matemática - contagem",
+        "uma interpretação que troca causa e consequência em matemática - contagem"
+      ],
+      "correctOption": 1,
+      "explanation": "Há 4 escolhas para o primeiro algarismo e 10 escolhas para cada um dos seis seguintes: 4 × 10^6."
+    },
+    {
+      "id": "enem-2025-d2-q152",
+      "statement": "[Questão adaptada a partir do ENEM 2025 — dia 2, questão 152, caderno 5 amarelo]\n\nTrês funcionários trabalham 6 h e produzem 720 tijolos. Com cinco funcionários trabalhando 9 h, quantos tijolos produzem?",
+      "options": [
+        "uma conclusão incompatível com matemática - proporcionalidade",
+        "um resultado que desconsidera os dados de matemática - proporcionalidade",
+        "uma grandeza de outra etapa de matemática - proporcionalidade",
+        "1 800",
+        "uma interpretação que troca causa e consequência em matemática - proporcionalidade"
+      ],
+      "correctOption": 3,
+      "explanation": "A produção é proporcional a funcionários × horas: 720 × (5×9)/(3×6) = 1 800."
+    },
+    {
+      "id": "enem-2025-d2-q153",
+      "statement": "[Questão adaptada a partir do ENEM 2025 — dia 2, questão 153, caderno 5 amarelo]\n\nUm poliedro tem 12 faces pentagonais e 20 faces triangulares. Quantos vértices ele tem?",
+      "options": [
+        "uma conclusão incompatível com matemática - poliedros",
+        "um resultado que desconsidera os dados de matemática - poliedros",
+        "uma grandeza de outra etapa de matemática - poliedros",
+        "30 vértices",
+        "uma interpretação que troca causa e consequência em matemática - poliedros"
+      ],
+      "correctOption": 3,
+      "explanation": "Arestas: (12×5 + 20×3)/2 = 60. Euler: V − 60 + 32 = 2, então V = 30."
+    },
+    {
+      "id": "enem-2025-d2-q154",
+      "statement": "[Questão adaptada a partir do ENEM 2025 — dia 2, questão 154, caderno 5 amarelo]\n\nQuatro envelopes distintos são distribuídos aleatoriamente a quatro pessoas, um para cada. Qual é a probabilidade de todos receberem o próprio envelope?",
+      "options": [
+        "uma conclusão incompatível com matemática - permutações",
+        "um resultado que desconsidera os dados de matemática - permutações",
+        "uma grandeza de outra etapa de matemática - permutações",
+        "1/24",
+        "uma interpretação que troca causa e consequência em matemática - permutações"
+      ],
+      "correctOption": 3,
+      "explanation": "Há 4! = 24 distribuições equiprováveis e apenas uma é completamente correta."
+    },
+    {
+      "id": "enem-2025-d2-q155",
+      "statement": "[Questão adaptada a partir do ENEM 2025 — dia 2, questão 155, caderno 5 amarelo]\n\nEm uma escola, 40% de 250 estudantes praticam futsal. Quantos estudantes praticam futsal?",
+      "options": [
+        "uma conclusão incompatível com matemática - leitura de gráficos",
+        "100",
+        "um resultado que desconsidera os dados de matemática - leitura de gráficos",
+        "uma grandeza de outra etapa de matemática - leitura de gráficos",
+        "uma interpretação que troca causa e consequência em matemática - leitura de gráficos"
+      ],
+      "correctOption": 1,
+      "explanation": "0,40 × 250 = 100."
+    },
+    {
+      "id": "enem-2025-d2-q156",
+      "statement": "[Questão adaptada a partir do ENEM 2025 — dia 2, questão 156, caderno 5 amarelo]\n\nUm barco navega 3 km para leste e depois 4 km para norte. Qual é o módulo do deslocamento resultante?",
+      "options": [
+        "5 km",
+        "uma conclusão incompatível com matemática - vetores",
+        "um resultado que desconsidera os dados de matemática - vetores",
+        "uma grandeza de outra etapa de matemática - vetores",
+        "uma interpretação que troca causa e consequência em matemática - vetores"
+      ],
+      "correctOption": 0,
+      "explanation": "Os deslocamentos são perpendiculares: √(3² + 4²) = 5."
+    },
+    {
+      "id": "enem-2025-d2-q157",
+      "statement": "[Questão adaptada a partir do ENEM 2025 — dia 2, questão 157, caderno 5 amarelo]\n\nEm um grupo, a mediana das idades é 25 anos. O que isso garante?",
+      "options": [
+        "uma conclusão incompatível com matemática - estatística",
+        "um resultado que desconsidera os dados de matemática - estatística",
+        "uma grandeza de outra etapa de matemática - estatística",
+        "metade das idades é menor ou igual a 25 e metade é maior ou igual a 25",
+        "uma interpretação que troca causa e consequência em matemática - estatística"
+      ],
+      "correctOption": 3,
+      "explanation": "A mediana é o valor central da lista ordenada e divide os dados em duas metades."
+    },
+    {
+      "id": "enem-2025-d2-q158",
+      "statement": "[Questão adaptada a partir do ENEM 2025 — dia 2, questão 158, caderno 5 amarelo]\n\nUm corredor quer fazer 5 km em pace de 300 s/km. Qual deve ser seu tempo total?",
+      "options": [
+        "uma conclusão incompatível com matemática - pace",
+        "um resultado que desconsidera os dados de matemática - pace",
+        "uma grandeza de outra etapa de matemática - pace",
+        "uma interpretação que troca causa e consequência em matemática - pace",
+        "1 500 s"
+      ],
+      "correctOption": 4,
+      "explanation": "Tempo total = 5 × 300 s = 1 500 s."
+    },
+    {
+      "id": "enem-2025-d2-q159",
+      "statement": "[Questão adaptada a partir do ENEM 2025 — dia 2, questão 159, caderno 5 amarelo]\n\nUma grandeza D é dada por D = 2 + 3t. Qual é seu valor quando t = 4?",
+      "options": [
+        "uma conclusão incompatível com matemática - funções",
+        "um resultado que desconsidera os dados de matemática - funções",
+        "uma grandeza de outra etapa de matemática - funções",
+        "uma interpretação que troca causa e consequência em matemática - funções",
+        "14"
+      ],
+      "correctOption": 4,
+      "explanation": "Substituindo: D = 2 + 3×4 = 14."
+    },
+    {
+      "id": "enem-2025-d2-q160",
+      "statement": "[Questão adaptada a partir do ENEM 2025 — dia 2, questão 160, caderno 5 amarelo]\n\nEm uma malha quadriculada, um trajeto exige 4 quarteirões para leste e 3 para sul. Qual é a menor distância percorrida pelas ruas?",
+      "options": [
+        "7 quarteirões",
+        "uma conclusão incompatível com matemática - trajetos",
+        "um resultado que desconsidera os dados de matemática - trajetos",
+        "uma grandeza de outra etapa de matemática - trajetos",
+        "uma interpretação que troca causa e consequência em matemática - trajetos"
+      ],
+      "correctOption": 0,
+      "explanation": "Em deslocamentos por ruas ortogonais, somam-se os trechos: 4 + 3 = 7."
+    },
+    {
+      "id": "enem-2025-d2-q161",
+      "statement": "[Questão adaptada a partir do ENEM 2025 — dia 2, questão 161, caderno 5 amarelo]\n\nReciclar 1 t de plástico custa R$ 500, equivalente a 5% do custo de produzir 1 t de plástico virgem. Qual é esse custo de produção virgem?",
+      "options": [
+        "uma conclusão incompatível com matemática - custos",
+        "R$ 10 000",
+        "um resultado que desconsidera os dados de matemática - custos",
+        "uma grandeza de outra etapa de matemática - custos",
+        "uma interpretação que troca causa e consequência em matemática - custos"
+      ],
+      "correctOption": 1,
+      "explanation": "Se 500 é 5%, o total é 500/0,05 = 10 000."
+    },
+    {
+      "id": "enem-2025-d2-q162",
+      "statement": "[Questão adaptada a partir do ENEM 2025 — dia 2, questão 162, caderno 5 amarelo]\n\nDez casais elegem presidente, secretário e tesoureiro, sem duas pessoas do mesmo casal. Quantas diretorias ordenadas podem formar?",
+      "options": [
+        "uma conclusão incompatível com matemática - princípio multiplicativo",
+        "20 × 18 × 16",
+        "um resultado que desconsidera os dados de matemática - princípio multiplicativo",
+        "uma grandeza de outra etapa de matemática - princípio multiplicativo",
+        "uma interpretação que troca causa e consequência em matemática - princípio multiplicativo"
+      ],
+      "correctOption": 1,
+      "explanation": "Escolhe-se a primeira pessoa entre 20, a segunda fora do casal dela entre 18 e a terceira fora dos dois casais entre 16."
+    },
+    {
+      "id": "enem-2025-d2-q163",
+      "statement": "[Questão adaptada a partir do ENEM 2025 — dia 2, questão 163, caderno 5 amarelo]\n\nUm desenho de 20 cm representa uma obra de 30 m. Qual é a escala?",
+      "options": [
+        "uma conclusão incompatível com matemática - escala",
+        "um resultado que desconsidera os dados de matemática - escala",
+        "uma grandeza de outra etapa de matemática - escala",
+        "uma interpretação que troca causa e consequência em matemática - escala",
+        "1:150"
+      ],
+      "correctOption": 4,
+      "explanation": "30 m = 3 000 cm; 20:3 000 simplifica para 1:150."
+    },
+    {
+      "id": "enem-2025-d2-q164",
+      "statement": "[Questão adaptada a partir do ENEM 2025 — dia 2, questão 164, caderno 5 amarelo]\n\nA concentração T de cortisol é 1,59 vezes a concentração F. Qual equação representa a relação?",
+      "options": [
+        "uma conclusão incompatível com matemática - razão",
+        "um resultado que desconsidera os dados de matemática - razão",
+        "T/F = 1,59",
+        "uma grandeza de outra etapa de matemática - razão",
+        "uma interpretação que troca causa e consequência em matemática - razão"
+      ],
+      "correctOption": 2,
+      "explanation": "“T é 1,59 vezes F” significa T = 1,59F; dividindo por F, T/F = 1,59."
+    },
+    {
+      "id": "enem-2025-d2-q165",
+      "statement": "[Questão adaptada a partir do ENEM 2025 — dia 2, questão 165, caderno 5 amarelo]\n\nUm estacionamento com 120 vagas tem manutenção de R$ 14 240, seguro reajustado para R$ 43,20 por vaga e deseja lucro de R$ 10 000. Qual mensalidade por vaga deve cobrar?",
+      "options": [
+        "uma conclusão incompatível com matemática - custos",
+        "um resultado que desconsidera os dados de matemática - custos",
+        "R$ 245,20",
+        "uma grandeza de outra etapa de matemática - custos",
+        "uma interpretação que troca causa e consequência em matemática - custos"
+      ],
+      "correctOption": 2,
+      "explanation": "Despesa = 14 240 + 120×43,20 = 19 424. Receita necessária = 29 424; por vaga: 29 424/120 = 245,20."
+    },
+    {
+      "id": "enem-2025-d2-q166",
+      "statement": "[Questão adaptada a partir do ENEM 2025 — dia 2, questão 166, caderno 5 amarelo]\n\nUm pote contém 20 000 cm³ de sorvete. Cada taça comporta 250 mL. Quantas taças completas podem ser servidas?",
+      "options": [
+        "uma conclusão incompatível com matemática - volume",
+        "um resultado que desconsidera os dados de matemática - volume",
+        "uma grandeza de outra etapa de matemática - volume",
+        "80",
+        "uma interpretação que troca causa e consequência em matemática - volume"
+      ],
+      "correctOption": 3,
+      "explanation": "1 cm³ = 1 mL; 20 000/250 = 80."
+    },
+    {
+      "id": "enem-2025-d2-q167",
+      "statement": "[Questão adaptada a partir do ENEM 2025 — dia 2, questão 167, caderno 5 amarelo]\n\nUma safra ocupa 200 ha e produz 40 sacas de 50 kg por hectare. Qual é a produção total, em toneladas?",
+      "options": [
+        "400 toneladas",
+        "uma conclusão incompatível com matemática - produção",
+        "um resultado que desconsidera os dados de matemática - produção",
+        "uma grandeza de outra etapa de matemática - produção",
+        "uma interpretação que troca causa e consequência em matemática - produção"
+      ],
+      "correctOption": 0,
+      "explanation": "200×40 = 8 000 sacas; 8 000×50 kg = 400 000 kg = 400 t."
+    },
+    {
+      "id": "enem-2025-d2-q168",
+      "statement": "[Questão adaptada a partir do ENEM 2025 — dia 2, questão 168, caderno 5 amarelo]\n\nUma medalha cilíndrica tem raio 3 cm e espessura 0,3 cm. Use π = 3,1. Qual é seu volume aproximado?",
+      "options": [
+        "uma conclusão incompatível com matemática - volume de cilindro",
+        "8,37 cm³",
+        "um resultado que desconsidera os dados de matemática - volume de cilindro",
+        "uma grandeza de outra etapa de matemática - volume de cilindro",
+        "uma interpretação que troca causa e consequência em matemática - volume de cilindro"
+      ],
+      "correctOption": 1,
+      "explanation": "V = πr²h = 3,1×3²×0,3 = 8,37 cm³."
+    },
+    {
+      "id": "enem-2025-d2-q169",
+      "statement": "[Questão adaptada a partir do ENEM 2025 — dia 2, questão 169, caderno 5 amarelo]\n\nArtur lança dois dados e vence João, que lança um dado, somente se o maior resultado de Artur for estritamente maior. Quem tem vantagem?",
+      "options": [
+        "uma conclusão incompatível com matemática - probabilidade",
+        "um resultado que desconsidera os dados de matemática - probabilidade",
+        "uma grandeza de outra etapa de matemática - probabilidade",
+        "uma interpretação que troca causa e consequência em matemática - probabilidade",
+        "Artur"
+      ],
+      "correctOption": 4,
+      "explanation": "Dois lançamentos dão a Artur mais chances de obter valor alto; a condição de empate favorece João, mas não elimina a vantagem do máximo de dois dados."
+    },
+    {
+      "id": "enem-2025-d2-q170",
+      "statement": "[Questão adaptada a partir do ENEM 2025 — dia 2, questão 170, caderno 5 amarelo]\n\nUma grandeza é definida por intensidade luminosa, em cd, dividida pelo quadrado da distância, em m. Qual unidade resulta?",
+      "options": [
+        "cd/m²",
+        "uma conclusão incompatível com matemática - análise dimensional",
+        "um resultado que desconsidera os dados de matemática - análise dimensional",
+        "uma grandeza de outra etapa de matemática - análise dimensional",
+        "uma interpretação que troca causa e consequência em matemática - análise dimensional"
+      ],
+      "correctOption": 0,
+      "explanation": "Dividir cd por m² produz cd/m²."
+    },
+    {
+      "id": "enem-2025-d2-q171",
+      "statement": "[Questão adaptada a partir do ENEM 2025 — dia 2, questão 171, caderno 5 amarelo]\n\nEm cada rodada, um jogador recebe 4 moedas e entrega 1. Começando com 100 moedas, qual expressão dá sua quantidade após n rodadas?",
+      "options": [
+        "uma conclusão incompatível com matemática - sequência",
+        "um resultado que desconsidera os dados de matemática - sequência",
+        "uma grandeza de outra etapa de matemática - sequência",
+        "100 + 3n",
+        "uma interpretação que troca causa e consequência em matemática - sequência"
+      ],
+      "correctOption": 3,
+      "explanation": "O saldo líquido por rodada é +4 − 1 = +3; após n rodadas, soma-se 3n."
+    },
+    {
+      "id": "enem-2025-d2-q172",
+      "statement": "[Questão adaptada a partir do ENEM 2025 — dia 2, questão 172, caderno 5 amarelo]\n\nEm uma viagem, combustível A custa R$ 2 por unidade e são usadas 20 unidades; combustível B custa R$ 3 por unidade e são usadas 18. Qual é a diferença entre os gastos B e A?",
+      "options": [
+        "uma conclusão incompatível com matemática - consumo",
+        "um resultado que desconsidera os dados de matemática - consumo",
+        "uma grandeza de outra etapa de matemática - consumo",
+        "R$ 14",
+        "uma interpretação que troca causa e consequência em matemática - consumo"
+      ],
+      "correctOption": 3,
+      "explanation": "A custa 2×20 = 40 e B custa 3×18 = 54; a diferença é 54 − 40 = 14."
+    },
+    {
+      "id": "enem-2025-d2-q173",
+      "statement": "[Questão adaptada a partir do ENEM 2025 — dia 2, questão 173, caderno 5 amarelo]\n\nUma autoescola cobra R$ 20 por 20 aulas teóricas, R$ 40 por 10 aulas práticas e R$ 400 de aluguel. Qual é o custo total?",
+      "options": [
+        "uma conclusão incompatível com matemática - orçamento",
+        "um resultado que desconsidera os dados de matemática - orçamento",
+        "uma grandeza de outra etapa de matemática - orçamento",
+        "uma interpretação que troca causa e consequência em matemática - orçamento",
+        "R$ 1 200"
+      ],
+      "correctOption": 4,
+      "explanation": "20×20 + 10×40 + 400 = 400 + 400 + 400 = 1 200."
+    },
+    {
+      "id": "enem-2025-d2-q174",
+      "statement": "[Questão adaptada a partir do ENEM 2025 — dia 2, questão 174, caderno 5 amarelo]\n\nUma caixa tem base de 2,5 dm por 1,5 dm e água até 2 dm. Qual é o volume de água?",
+      "options": [
+        "uma conclusão incompatível com matemática - volume",
+        "7,5 L",
+        "um resultado que desconsidera os dados de matemática - volume",
+        "uma grandeza de outra etapa de matemática - volume",
+        "uma interpretação que troca causa e consequência em matemática - volume"
+      ],
+      "correctOption": 1,
+      "explanation": "V = 2,5×1,5×2 = 7,5 dm³; 1 dm³ equivale a 1 L."
+    },
+    {
+      "id": "enem-2025-d2-q175",
+      "statement": "[Questão adaptada a partir do ENEM 2025 — dia 2, questão 175, caderno 5 amarelo]\n\nUma torta cilíndrica tem diâmetro 32 cm. Uma caixa quadrada precisa deixar 1 cm de folga em cada lado. Qual lado mínimo da base?",
+      "options": [
+        "uma conclusão incompatível com matemática - geometria espacial",
+        "um resultado que desconsidera os dados de matemática - geometria espacial",
+        "uma grandeza de outra etapa de matemática - geometria espacial",
+        "uma interpretação que troca causa e consequência em matemática - geometria espacial",
+        "34 cm"
+      ],
+      "correctOption": 4,
+      "explanation": "O lado deve acomodar o diâmetro mais 1 cm de cada lado: 32 + 2 = 34 cm."
+    },
+    {
+      "id": "enem-2025-d2-q176",
+      "statement": "[Questão adaptada a partir do ENEM 2025 — dia 2, questão 176, caderno 5 amarelo]\n\nPara P = 4 log10(100K), qual valor de K faz P = 12?",
+      "options": [
+        "10",
+        "uma conclusão incompatível com matemática - logaritmos",
+        "um resultado que desconsidera os dados de matemática - logaritmos",
+        "uma grandeza de outra etapa de matemática - logaritmos",
+        "uma interpretação que troca causa e consequência em matemática - logaritmos"
+      ],
+      "correctOption": 0,
+      "explanation": "12/4 = 3, então log10(100K) = 3; 100K = 1 000 e K = 10."
+    },
+    {
+      "id": "enem-2025-d2-q177",
+      "statement": "[Questão adaptada a partir do ENEM 2025 — dia 2, questão 177, caderno 5 amarelo]\n\nUm túnel semicircular tem raio 9 m. Use π = 3. Qual é sua área de seção transversal?",
+      "options": [
+        "121,5 m²",
+        "uma conclusão incompatível com matemática - áreas",
+        "um resultado que desconsidera os dados de matemática - áreas",
+        "uma grandeza de outra etapa de matemática - áreas",
+        "uma interpretação que troca causa e consequência em matemática - áreas"
+      ],
+      "correctOption": 0,
+      "explanation": "Área do semicírculo = πr²/2 = 3×81/2 = 121,5 m²."
+    },
+    {
+      "id": "enem-2025-d2-q179",
+      "statement": "[Questão adaptada a partir do ENEM 2025 — dia 2, questão 179, caderno 5 amarelo]\n\nOito presentes distintos incluem bicicleta e celular. O filho mais velho recebe 3 presentes e deve receber exatamente um desses dois itens. Quantas escolhas de conjunto ele tem?",
+      "options": [
+        "uma conclusão incompatível com matemática - combinatória",
+        "um resultado que desconsidera os dados de matemática - combinatória",
+        "30",
+        "uma grandeza de outra etapa de matemática - combinatória",
+        "uma interpretação que troca causa e consequência em matemática - combinatória"
+      ],
+      "correctOption": 2,
+      "explanation": "Escolhe-se qual item especial recebe (2 formas) e mais 2 entre os outros 6: 2×C(6,2) = 2×15 = 30."
+    },
+    {
+      "id": "enem-2025-d2-q180",
+      "statement": "[Questão adaptada a partir do ENEM 2025 — dia 2, questão 180, caderno 5 amarelo]\n\nUm jogador percorre 4,5 km em 45 min e mantém a velocidade por mais 30 min. Qual distância total percorre?",
+      "options": [
+        "uma conclusão incompatível com matemática - velocidade média",
+        "um resultado que desconsidera os dados de matemática - velocidade média",
+        "7,5 km",
+        "uma grandeza de outra etapa de matemática - velocidade média",
+        "uma interpretação que troca causa e consequência em matemática - velocidade média"
+      ],
+      "correctOption": 2,
+      "explanation": "A velocidade é 4,5/45 = 0,1 km/min. Em 75 min, percorre 0,1×75 = 7,5 km."
+    }
+  ]
+}

@@ -37,4 +37,27 @@ describe('local exam schema', () => {
       id: 'q-001', text: 'Enunciado', answers: ['A', 'B', 'C', 'D', 'E'], correctAnswer: 0
     });
   });
+
+  it('accepts a facsimile question with official local images and indexed A-E controls', () => {
+    const exam = validExam();
+    exam.questions = [{
+      id: 'q-001', renderMode: 'facsimile', questionNumber: 5,
+      images: ['assets/dia-1/q-005-1.png', 'assets/dia-1/q-005-2.png'], correctOption: 2
+    }];
+
+    expect(validateLocalExam(exam)).toEqual({ valid: true, errors: [] });
+    expect(toExamPlayerQuestion(exam.questions[0])).toEqual({
+      id: 'q-001', text: 'Questão 5', answers: ['', '', '', '', ''], correctAnswer: 2,
+      renderMode: 'facsimile', questionNumber: 5,
+      images: ['assets/dia-1/q-005-1.png', 'assets/dia-1/q-005-2.png']
+    });
+  });
+
+  it.each([
+    '../outside.png', '/absolute.png', 'assets\\backslash.png', 'https://example.com/image.png', 'assets/q.png?x=1', 'assets/q.png#fragment'
+  ])('rejects an unsafe local image path: %s', (image) => {
+    const exam = validExam();
+    exam.questions[0].images = [image];
+    expect(validateLocalExam(exam)).toMatchObject({ valid: false, errors: expect.arrayContaining(['question.images']) });
+  });
 });
