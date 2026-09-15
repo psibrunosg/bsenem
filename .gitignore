@@ -28,9 +28,7 @@ npm-debug.log*
 .cache/
 .vite/
 
-# Official ENEM source PDFs are locally recoverable through their manifest.
-content/enem/official-pdfs/
-*.pdf
+
 
 # Isolated agent worktrees
 .worktrees/
