@@ -30,3 +30,9 @@ npm-debug.log*
 
 # Isolated agent worktrees
 .worktrees/
+
+# Python & Data
+__pycache__/
+*.py[cod]
+.pytest_cache/
+data/enem/pdfs/

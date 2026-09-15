@@ -47,14 +47,16 @@ def select_year_pdfs(year: int, links: List[Tuple[str, str]]) -> Dict[str, Optio
     for txt, href in provas:
         fn = href.split("/")[-1].lower()
         t = txt.lower()
-        if ("cd1" in fn or "caderno1" in fn or "azul" in fn or "caderno_01" in fn) and ("d1" in fn or "dia1" in fn or "dia 1" in t or "primeiro dia" in t):
+        is_d1 = any(p in fn for p in ["d1", "dia1", "1_dia", "dia_1", "01_azul"]) or any(p in t for p in ["dia 1", "1 dia", "primeiro dia"])
+        is_cd1 = any(p in fn for p in ["cd1", "caderno1", "caderno_1", "azul", "caderno_01", "01_azul"])
+        if is_d1 and is_cd1:
             result["d1_prova"] = href
             break
     if not result["d1_prova"]:
         for txt, href in provas:
             fn = href.split("/")[-1].lower()
             t = txt.lower()
-            if "d1" in fn or "dia1" in fn or "dia 1" in t or "dia_1" in fn:
+            if any(p in fn for p in ["d1", "dia1", "1_dia", "dia_1", "01_azul"]) or any(p in t for p in ["dia 1", "1 dia", "primeiro dia"]):
                 result["d1_prova"] = href
                 break
 
@@ -62,14 +64,16 @@ def select_year_pdfs(year: int, links: List[Tuple[str, str]]) -> Dict[str, Optio
     for txt, href in gabaritos:
         fn = href.split("/")[-1].lower()
         t = txt.lower()
-        if ("cd1" in fn or "caderno1" in fn or "azul" in fn or "caderno_01" in fn) and ("d1" in fn or "dia1" in fn or "dia 1" in t or "primeiro dia" in t):
+        is_d1 = any(p in fn for p in ["d1", "dia1", "1_dia", "dia_1", "01_azul"]) or any(p in t for p in ["dia 1", "1 dia", "primeiro dia"])
+        is_cd1 = any(p in fn for p in ["cd1", "caderno1", "caderno_1", "azul", "caderno_01", "01_azul"])
+        if is_d1 and is_cd1:
             result["d1_gabarito"] = href
             break
     if not result["d1_gabarito"]:
         for txt, href in gabaritos:
             fn = href.split("/")[-1].lower()
             t = txt.lower()
-            if "d1" in fn or "dia1" in fn or "dia 1" in t or "dia_1" in fn:
+            if any(p in fn for p in ["d1", "dia1", "1_dia", "dia_1", "01_azul"]) or any(p in t for p in ["dia 1", "1 dia", "primeiro dia"]):
                 result["d1_gabarito"] = href
                 break
 
@@ -77,14 +81,16 @@ def select_year_pdfs(year: int, links: List[Tuple[str, str]]) -> Dict[str, Optio
     for txt, href in provas:
         fn = href.split("/")[-1].lower()
         t = txt.lower()
-        if ("cd5" in fn or "caderno5" in fn or "amarelo" in fn or "cinza" in fn or "caderno_05" in fn) and ("d2" in fn or "dia2" in fn or "dia 2" in t or "segundo dia" in t):
+        is_d2 = any(p in fn for p in ["d2", "dia2", "2_dia", "dia_2", "05_amarelo", "06_cinza"]) or any(p in t for p in ["dia 2", "2 dia", "segundo dia"])
+        is_cd5 = any(p in fn for p in ["cd5", "caderno5", "caderno_5", "amarelo", "cinza", "caderno_05", "05_amarelo", "06_cinza"])
+        if is_d2 and is_cd5:
             result["d2_prova"] = href
             break
     if not result["d2_prova"]:
         for txt, href in provas:
             fn = href.split("/")[-1].lower()
             t = txt.lower()
-            if "d2" in fn or "dia2" in fn or "dia 2" in t or "dia_2" in fn:
+            if any(p in fn for p in ["d2", "dia2", "2_dia", "dia_2", "05_amarelo", "06_cinza"]) or any(p in t for p in ["dia 2", "2 dia", "segundo dia"]):
                 result["d2_prova"] = href
                 break
 
@@ -92,14 +98,16 @@ def select_year_pdfs(year: int, links: List[Tuple[str, str]]) -> Dict[str, Optio
     for txt, href in gabaritos:
         fn = href.split("/")[-1].lower()
         t = txt.lower()
-        if ("cd5" in fn or "caderno5" in fn or "amarelo" in fn or "cinza" in fn or "caderno_05" in fn) and ("d2" in fn or "dia2" in fn or "dia 2" in t or "segundo dia" in t):
+        is_d2 = any(p in fn for p in ["d2", "dia2", "2_dia", "dia_2", "05_amarelo", "06_cinza"]) or any(p in t for p in ["dia 2", "2 dia", "segundo dia"])
+        is_cd5 = any(p in fn for p in ["cd5", "caderno5", "caderno_5", "amarelo", "cinza", "caderno_05", "05_amarelo", "06_cinza"])
+        if is_d2 and is_cd5:
             result["d2_gabarito"] = href
             break
     if not result["d2_gabarito"]:
         for txt, href in gabaritos:
             fn = href.split("/")[-1].lower()
             t = txt.lower()
-            if "d2" in fn or "dia2" in fn or "dia 2" in t or "dia_2" in fn:
+            if any(p in fn for p in ["d2", "dia2", "2_dia", "dia_2", "05_amarelo", "06_cinza"]) or any(p in t for p in ["dia 2", "2 dia", "segundo dia"]):
                 result["d2_gabarito"] = href
                 break
 

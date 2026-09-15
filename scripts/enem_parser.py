@@ -1,7 +1,10 @@
 import json
 import os
 import re
+import sys
 from typing import Any, Dict, List, Optional, Tuple
+
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 import pymupdf
 from scripts.db import insert_question
 
@@ -207,7 +210,7 @@ def extract_questions_from_pdf(
                 page_images.append((xref, rects[0]))
                 
         # Sort text blocks into Column 1 and Column 2
-        raw_blocks = [b for b in page.get_text("blocks") if b[6] == 0 and 45 <= b[1] <= 750]
+        raw_blocks = [b for b in page.get_text("blocks") if b[6] == 0 and 30 <= b[1] <= 760]
         col1 = sorted([b for b in raw_blocks if b[0] < col_mid], key=lambda b: b[1])
         col2 = sorted([b for b in raw_blocks if b[0] >= col_mid], key=lambda b: b[1])
         
@@ -220,14 +223,14 @@ def extract_questions_from_pdf(
             for b in col_blocks:
                 b_text = b[4].strip()
                 # Check for question header e.g. "QUESTÃO 04" or "QUESTÃO 125"
-                q_match = re.search(r"QUEST[AÃ]O\s+(\d{1,3})", b_text, re.IGNORECASE)
+                q_match = re.search(r"QUEST[AÃ]O\s*(\d{1,3})", b_text, re.IGNORECASE)
                 if q_match:
                     num = int(q_match.group(1))
                     if 1 <= num <= 180:
                         finalize_question()
                         current_q_num = num
                         # Strip header from block text
-                        clean_block = re.sub(r"QUEST[AÃ]O\s+\d{1,3}\s*", "", b_text, flags=re.IGNORECASE).strip()
+                        clean_block = re.sub(r"QUEST[AÃ]O\s*\d{1,3}\s*", "", b_text, flags=re.IGNORECASE).strip()
                         if clean_block:
                             current_blocks.append(clean_block)
                         continue
