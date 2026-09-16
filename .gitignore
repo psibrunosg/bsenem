@@ -27,8 +27,8 @@ npm-debug.log*
 # Cache
 .cache/
 .vite/
-
-
+__pycache__/
+*.pyc
 
 # Isolated agent worktrees
 .worktrees/
@@ -36,8 +36,8 @@ npm-debug.log*
 # Database
 backend/database/bsenem.db
 *.db
+
 # Temporary scratch
 .tmp/
 tmp/
 .superpowers/
-
