@@ -73,9 +73,9 @@
     "orgao": "Pref. Progresso/RS",
     "banca": "Legalle Concursos",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/psicologo-prefeitura-progresso-rs-legalle-concursos-2026",
-    "status_download": "pending",
-    "prova_pdf": null,
-    "gabarito_pdf": null
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\RS\\2026\\psicologo-prefeitura-progresso-rs-legalle-concursos-2026\\prova.pdf",
+    "gabarito_pdf": "content\\concursos\\raw-pdfs\\RS\\2026\\psicologo-prefeitura-progresso-rs-legalle-concursos-2026\\gabarito.pdf"
   },
   {
     "slug": "psicologo-ipam-de-caxias-do-sul-rs-fundatec-2026",
@@ -86,9 +86,9 @@
     "orgao": "IPAM de Caxias do Sul/RS",
     "banca": "FUNDATEC",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/psicologo-ipam-de-caxias-do-sul-rs-fundatec-2026",
-    "status_download": "pending",
-    "prova_pdf": null,
-    "gabarito_pdf": null
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\RS\\2026\\psicologo-ipam-de-caxias-do-sul-rs-fundatec-2026\\prova.pdf",
+    "gabarito_pdf": "content\\concursos\\raw-pdfs\\RS\\2026\\psicologo-ipam-de-caxias-do-sul-rs-fundatec-2026\\gabarito.pdf"
   },
   {
     "slug": "psicologo-prefeitura-estrela-velha-rs-fundatec-2026",
@@ -99,9 +99,9 @@
     "orgao": "Pref. Estrela Velha/RS",
     "banca": "FUNDATEC",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/psicologo-prefeitura-estrela-velha-rs-fundatec-2026",
-    "status_download": "pending",
-    "prova_pdf": null,
-    "gabarito_pdf": null
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\RS\\2026\\psicologo-prefeitura-estrela-velha-rs-fundatec-2026\\prova.pdf",
+    "gabarito_pdf": "content\\concursos\\raw-pdfs\\RS\\2026\\psicologo-prefeitura-estrela-velha-rs-fundatec-2026\\gabarito.pdf"
   },
   {
     "slug": "psicologo-prefeitura-sao-lourenco-do-sul-rs-legalle-concursos-2026",
@@ -112,9 +112,9 @@
     "orgao": "Pref. São Lourenço do Sul/RS",
     "banca": "Legalle Concursos",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/psicologo-prefeitura-sao-lourenco-do-sul-rs-legalle-concursos-2026",
-    "status_download": "pending",
-    "prova_pdf": null,
-    "gabarito_pdf": null
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\RS\\2026\\psicologo-prefeitura-sao-lourenco-do-sul-rs-legalle-concursos-2026\\prova.pdf",
+    "gabarito_pdf": "content\\concursos\\raw-pdfs\\RS\\2026\\psicologo-prefeitura-sao-lourenco-do-sul-rs-legalle-concursos-2026\\gabarito.pdf"
   },
   {
     "slug": "psicologo-prefeitura-ivora-rs-fundatec-2026",
@@ -125,9 +125,9 @@
     "orgao": "Pref. Ivorá/RS",
     "banca": "Fundatec",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/psicologo-prefeitura-ivora-rs-fundatec-2026",
-    "status_download": "pending",
-    "prova_pdf": null,
-    "gabarito_pdf": null
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\RS\\2026\\psicologo-prefeitura-ivora-rs-fundatec-2026\\prova.pdf",
+    "gabarito_pdf": "content\\concursos\\raw-pdfs\\RS\\2026\\psicologo-prefeitura-ivora-rs-fundatec-2026\\gabarito.pdf"
   },
   {
     "slug": "psicologo-prefeitura-palmitinho-rs-legalle-concursos-2026",
@@ -138,9 +138,9 @@
     "orgao": "Pref. Palmitinho/RS",
     "banca": "Legalle Concursos",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/psicologo-prefeitura-palmitinho-rs-legalle-concursos-2026",
-    "status_download": "pending",
-    "prova_pdf": null,
-    "gabarito_pdf": null
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\RS\\2026\\psicologo-prefeitura-palmitinho-rs-legalle-concursos-2026\\prova.pdf",
+    "gabarito_pdf": "content\\concursos\\raw-pdfs\\RS\\2026\\psicologo-prefeitura-palmitinho-rs-legalle-concursos-2026\\gabarito.pdf"
   },
   {
     "slug": "psicologo-prefeitura-bom-jesus-rs-fundatec-2026",
@@ -151,9 +151,9 @@
     "orgao": "Pref. Bom Jesus/RS",
     "banca": "Fundatec",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/psicologo-prefeitura-bom-jesus-rs-fundatec-2026",
-    "status_download": "pending",
-    "prova_pdf": null,
-    "gabarito_pdf": null
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\RS\\2026\\psicologo-prefeitura-bom-jesus-rs-fundatec-2026\\prova.pdf",
+    "gabarito_pdf": "content\\concursos\\raw-pdfs\\RS\\2026\\psicologo-prefeitura-bom-jesus-rs-fundatec-2026\\gabarito.pdf"
   },
   {
     "slug": "psicologo-prefeitura-pontao-rs-fundatec-2026",
@@ -164,9 +164,9 @@
     "orgao": "Pref. Pontão/RS",
     "banca": "Fundatec",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/psicologo-prefeitura-pontao-rs-fundatec-2026",
-    "status_download": "pending",
-    "prova_pdf": null,
-    "gabarito_pdf": null
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\RS\\2026\\psicologo-prefeitura-pontao-rs-fundatec-2026\\prova.pdf",
+    "gabarito_pdf": "content\\concursos\\raw-pdfs\\RS\\2026\\psicologo-prefeitura-pontao-rs-fundatec-2026\\gabarito.pdf"
   },
   {
     "slug": "psicologo-prefeitura-agudo-rs-fundatec-2025",
@@ -177,9 +177,9 @@
     "orgao": "Pref. Agudo/RS",
     "banca": "Fundatec",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/psicologo-prefeitura-agudo-rs-fundatec-2025",
-    "status_download": "pending",
-    "prova_pdf": null,
-    "gabarito_pdf": null
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\RS\\2025\\psicologo-prefeitura-agudo-rs-fundatec-2025\\prova.pdf",
+    "gabarito_pdf": "content\\concursos\\raw-pdfs\\RS\\2025\\psicologo-prefeitura-agudo-rs-fundatec-2025\\gabarito.pdf"
   },
   {
     "slug": "psicologo-prefeitura-de-agudos-rs-fundatec-2025",
@@ -190,9 +190,9 @@
     "orgao": "Prefeitura de Agudos - RS",
     "banca": "FUNDATEC",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/psicologo-prefeitura-de-agudos-rs-fundatec-2025",
-    "status_download": "pending",
-    "prova_pdf": null,
-    "gabarito_pdf": null
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\RS\\2025\\psicologo-prefeitura-de-agudos-rs-fundatec-2025\\prova.pdf",
+    "gabarito_pdf": "content\\concursos\\raw-pdfs\\RS\\2025\\psicologo-prefeitura-de-agudos-rs-fundatec-2025\\gabarito.pdf"
   },
   {
     "slug": "psicologo-prefeitura-xangri-la-rs-fundatec-2025",
@@ -229,9 +229,9 @@
     "orgao": "Pref. Soledade/RS",
     "banca": "FUNDATEC",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/psicologo-prefeitura-soledade-rs-fundatec-2025",
-    "status_download": "pending",
-    "prova_pdf": null,
-    "gabarito_pdf": null
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\RS\\2025\\psicologo-prefeitura-soledade-rs-fundatec-2025\\prova.pdf",
+    "gabarito_pdf": "content\\concursos\\raw-pdfs\\RS\\2025\\psicologo-prefeitura-soledade-rs-fundatec-2025\\gabarito.pdf"
   },
   {
     "slug": "psicologo-prefeitura-sao-jose-do-ouro-rs-objetiva-concursos-2025",
@@ -242,9 +242,9 @@
     "orgao": "Pref. São José do Ouro/RS",
     "banca": "OBJETIVA CONCURSOS",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/psicologo-prefeitura-sao-jose-do-ouro-rs-objetiva-concursos-2025",
-    "status_download": "pending",
-    "prova_pdf": null,
-    "gabarito_pdf": null
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\RS\\2025\\psicologo-prefeitura-sao-jose-do-ouro-rs-objetiva-concursos-2025\\prova.pdf",
+    "gabarito_pdf": "content\\concursos\\raw-pdfs\\RS\\2025\\psicologo-prefeitura-sao-jose-do-ouro-rs-objetiva-concursos-2025\\gabarito.pdf"
   },
   {
     "slug": "psicologo-prefeitura-ilopolis-rs-objetiva-concursos-2025",
@@ -255,9 +255,9 @@
     "orgao": "Pref. Ilópolis/RS",
     "banca": "OBJETIVA CONCURSOS",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/psicologo-prefeitura-ilopolis-rs-objetiva-concursos-2025",
-    "status_download": "pending",
-    "prova_pdf": null,
-    "gabarito_pdf": null
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\RS\\2025\\psicologo-prefeitura-ilopolis-rs-objetiva-concursos-2025\\prova.pdf",
+    "gabarito_pdf": "content\\concursos\\raw-pdfs\\RS\\2025\\psicologo-prefeitura-ilopolis-rs-objetiva-concursos-2025\\gabarito.pdf"
   },
   {
     "slug": "psicologo-prefeitura-nova-alvorada-rs-fundatec-2025",
@@ -281,9 +281,9 @@
     "orgao": "Pref. Estância Velha/RS",
     "banca": "FUNDATEC",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/psicologo-prefeitura-estancia-velha-rs-fundatec-2025-49",
-    "status_download": "pending",
-    "prova_pdf": null,
-    "gabarito_pdf": null
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\RS\\2025\\psicologo-prefeitura-estancia-velha-rs-fundatec-2025-49\\prova.pdf",
+    "gabarito_pdf": "content\\concursos\\raw-pdfs\\RS\\2025\\psicologo-prefeitura-estancia-velha-rs-fundatec-2025-49\\gabarito.pdf"
   },
   {
     "slug": "psicologo-prefeitura-lajeado-rs-fundatec-2025",
@@ -307,9 +307,9 @@
     "orgao": "Pref. e Câmara de Cerro Grande/RS",
     "banca": "FUNDATEC",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/psicologo-prefeitura-e-camara-de-cerro-grande-rs-fundatec-2025",
-    "status_download": "pending",
-    "prova_pdf": null,
-    "gabarito_pdf": null
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\RS\\2025\\psicologo-prefeitura-e-camara-de-cerro-grande-rs-fundatec-2025\\prova.pdf",
+    "gabarito_pdf": "content\\concursos\\raw-pdfs\\RS\\2025\\psicologo-prefeitura-e-camara-de-cerro-grande-rs-fundatec-2025\\gabarito.pdf"
   },
   {
     "slug": "psicologo-prefeitura-arvorezinha-rs-objetiva-concursos-2025",
@@ -671,9 +671,9 @@
     "orgao": "SIMAE/SC",
     "banca": "FUNDATEC",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/analista-em-recursos-humanos-psicologo-simae-sc-fundatec-2024",
-    "status_download": "pending",
-    "prova_pdf": null,
-    "gabarito_pdf": null
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\SC\\2024\\analista-em-recursos-humanos-psicologo-simae-sc-fundatec-2024\\prova.pdf",
+    "gabarito_pdf": "content\\concursos\\raw-pdfs\\SC\\2024\\analista-em-recursos-humanos-psicologo-simae-sc-fundatec-2024\\gabarito.pdf"
   },
   {
     "slug": "psicologo-prefeitura-sao-joao-do-oeste-sc-ameosc-2026",
@@ -684,9 +684,9 @@
     "orgao": "Pref. São João do Oeste/SC",
     "banca": "AMEOSC",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/psicologo-prefeitura-sao-joao-do-oeste-sc-ameosc-2026",
-    "status_download": "pending",
-    "prova_pdf": null,
-    "gabarito_pdf": null
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\SC\\2026\\psicologo-prefeitura-sao-joao-do-oeste-sc-ameosc-2026\\prova.pdf",
+    "gabarito_pdf": "content\\concursos\\raw-pdfs\\SC\\2026\\psicologo-prefeitura-sao-joao-do-oeste-sc-ameosc-2026\\gabarito.pdf"
   },
   {
     "slug": "psicologo-prefeitura-urubici-sc-fepese-2026",
@@ -697,9 +697,9 @@
     "orgao": "Pref. Urubici/SC",
     "banca": "Fepese",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/psicologo-prefeitura-urubici-sc-fepese-2026",
-    "status_download": "pending",
-    "prova_pdf": null,
-    "gabarito_pdf": null
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\SC\\2026\\psicologo-prefeitura-urubici-sc-fepese-2026\\prova.pdf",
+    "gabarito_pdf": "content\\concursos\\raw-pdfs\\SC\\2026\\psicologo-prefeitura-urubici-sc-fepese-2026\\gabarito.pdf"
   },
   {
     "slug": "psicologo-prefeitura-caxambu-do-sul-sc-fepese-2026",
@@ -710,9 +710,9 @@
     "orgao": "Pref. Caxambu do Sul/SC",
     "banca": "Fepese",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/psicologo-prefeitura-caxambu-do-sul-sc-fepese-2026",
-    "status_download": "pending",
-    "prova_pdf": null,
-    "gabarito_pdf": null
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\SC\\2026\\psicologo-prefeitura-caxambu-do-sul-sc-fepese-2026\\prova.pdf",
+    "gabarito_pdf": "content\\concursos\\raw-pdfs\\SC\\2026\\psicologo-prefeitura-caxambu-do-sul-sc-fepese-2026\\gabarito.pdf"
   },
   {
     "slug": "psicologo-amurc-sc-legalle-concursos-2026",
@@ -723,9 +723,9 @@
     "orgao": "AMURC/SC",
     "banca": "Legalle Concursos",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/psicologo-amurc-sc-legalle-concursos-2026",
-    "status_download": "pending",
-    "prova_pdf": null,
-    "gabarito_pdf": null
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\SC\\2026\\psicologo-amurc-sc-legalle-concursos-2026\\prova.pdf",
+    "gabarito_pdf": "content\\concursos\\raw-pdfs\\SC\\2026\\psicologo-amurc-sc-legalle-concursos-2026\\gabarito.pdf"
   },
   {
     "slug": "psicologo-prefeitura-criciuma-sc-legalle-concursos-2026",
@@ -736,9 +736,9 @@
     "orgao": "Pref. Criciúma/SC",
     "banca": "Legalle Concursos",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/psicologo-prefeitura-criciuma-sc-legalle-concursos-2026",
-    "status_download": "pending",
-    "prova_pdf": null,
-    "gabarito_pdf": null
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\SC\\2026\\psicologo-prefeitura-criciuma-sc-legalle-concursos-2026\\prova.pdf",
+    "gabarito_pdf": "content\\concursos\\raw-pdfs\\SC\\2026\\psicologo-prefeitura-criciuma-sc-legalle-concursos-2026\\gabarito.pdf"
   },
   {
     "slug": "psicologo-prefeitura-ipumirim-sc-amauc-2026-74",
@@ -749,9 +749,9 @@
     "orgao": "Pref. Ipumirim/SC",
     "banca": "AMAUC",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/psicologo-prefeitura-ipumirim-sc-amauc-2026-74",
-    "status_download": "pending",
-    "prova_pdf": null,
-    "gabarito_pdf": null
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\SC\\2026\\psicologo-prefeitura-ipumirim-sc-amauc-2026-74\\prova.pdf",
+    "gabarito_pdf": "content\\concursos\\raw-pdfs\\SC\\2026\\psicologo-prefeitura-ipumirim-sc-amauc-2026-74\\gabarito.pdf"
   },
   {
     "slug": "psicologo-tj-sc-fgv-2026",
@@ -762,9 +762,9 @@
     "orgao": "TJ/SC",
     "banca": "FGV",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/psicologo-tj-sc-fgv-2026",
-    "status_download": "pending",
-    "prova_pdf": null,
-    "gabarito_pdf": null
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\SC\\2026\\psicologo-tj-sc-fgv-2026\\prova.pdf",
+    "gabarito_pdf": "content\\concursos\\raw-pdfs\\SC\\2026\\psicologo-tj-sc-fgv-2026\\gabarito.pdf"
   },
   {
     "slug": "psicologo-prefeitura-araquari-sc-fundatec-2026",
@@ -775,9 +775,9 @@
     "orgao": "Pref. Araquari/SC",
     "banca": "Fundatec",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/psicologo-prefeitura-araquari-sc-fundatec-2026",
-    "status_download": "pending",
-    "prova_pdf": null,
-    "gabarito_pdf": null
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\SC\\2026\\psicologo-prefeitura-araquari-sc-fundatec-2026\\prova.pdf",
+    "gabarito_pdf": "content\\concursos\\raw-pdfs\\SC\\2026\\psicologo-prefeitura-araquari-sc-fundatec-2026\\gabarito.pdf"
   },
   {
     "slug": "psicologo-prefeitura-caxambu-do-sul-sc-fepese-2026-54",
@@ -788,9 +788,9 @@
     "orgao": "Pref. Caxambu do Sul/SC",
     "banca": "Fepese",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/psicologo-prefeitura-caxambu-do-sul-sc-fepese-2026-54",
-    "status_download": "pending",
-    "prova_pdf": null,
-    "gabarito_pdf": null
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\SC\\2026\\psicologo-prefeitura-caxambu-do-sul-sc-fepese-2026-54\\prova.pdf",
+    "gabarito_pdf": "content\\concursos\\raw-pdfs\\SC\\2026\\psicologo-prefeitura-caxambu-do-sul-sc-fepese-2026-54\\gabarito.pdf"
   },
   {
     "slug": "psicologo-prefeitura-barra-bonita-sc-ameosc-2025",
@@ -801,9 +801,9 @@
     "orgao": "Pref. Barra Bonita/SC",
     "banca": "AMEOSC",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/psicologo-prefeitura-barra-bonita-sc-ameosc-2025",
-    "status_download": "pending",
-    "prova_pdf": null,
-    "gabarito_pdf": null
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\SC\\2025\\psicologo-prefeitura-barra-bonita-sc-ameosc-2025\\prova.pdf",
+    "gabarito_pdf": "content\\concursos\\raw-pdfs\\SC\\2025\\psicologo-prefeitura-barra-bonita-sc-ameosc-2025\\gabarito.pdf"
   },
   {
     "slug": "psicologo-prefeitura-belmonte-sc-ameosc-2025",
@@ -814,9 +814,9 @@
     "orgao": "Pref. Belmonte/SC",
     "banca": "AMEOSC",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/psicologo-prefeitura-belmonte-sc-ameosc-2025",
-    "status_download": "pending",
-    "prova_pdf": null,
-    "gabarito_pdf": null
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\SC\\2025\\psicologo-prefeitura-belmonte-sc-ameosc-2025\\prova.pdf",
+    "gabarito_pdf": "content\\concursos\\raw-pdfs\\SC\\2025\\psicologo-prefeitura-belmonte-sc-ameosc-2025\\gabarito.pdf"
   },
   {
     "slug": "psicologo-prefeitura-pedras-grandes-sc-instituto-evo-2025",
@@ -827,9 +827,9 @@
     "orgao": "Pref. Pedras Grandes/SC",
     "banca": "Instituto EVO",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/psicologo-prefeitura-pedras-grandes-sc-instituto-evo-2025",
-    "status_download": "pending",
-    "prova_pdf": null,
-    "gabarito_pdf": null
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\SC\\2025\\psicologo-prefeitura-pedras-grandes-sc-instituto-evo-2025\\prova.pdf",
+    "gabarito_pdf": "content\\concursos\\raw-pdfs\\SC\\2025\\psicologo-prefeitura-pedras-grandes-sc-instituto-evo-2025\\gabarito.pdf"
   },
   {
     "slug": "psicologo-prefeitura-rio-do-oeste-sc-objetiva-concursos-2025",
@@ -840,9 +840,9 @@
     "orgao": "Pref. Rio do Oeste/SC",
     "banca": "OBJETIVA CONCURSOS",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/psicologo-prefeitura-rio-do-oeste-sc-objetiva-concursos-2025",
-    "status_download": "pending",
-    "prova_pdf": null,
-    "gabarito_pdf": null
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\SC\\2025\\psicologo-prefeitura-rio-do-oeste-sc-objetiva-concursos-2025\\prova.pdf",
+    "gabarito_pdf": "content\\concursos\\raw-pdfs\\SC\\2025\\psicologo-prefeitura-rio-do-oeste-sc-objetiva-concursos-2025\\gabarito.pdf"
   },
   {
     "slug": "psicologo-prefeitura-bocaina-do-sul-sc-inaz-do-para-2025",
@@ -866,9 +866,9 @@
     "orgao": "Pref. Jacinto Machado/SC",
     "banca": "PS CONCURSOS",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/psicologo-prefeitura-jacinto-machado-sc-ps-concursos-2025",
-    "status_download": "pending",
-    "prova_pdf": null,
-    "gabarito_pdf": null
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\SC\\2025\\psicologo-prefeitura-jacinto-machado-sc-ps-concursos-2025\\prova.pdf",
+    "gabarito_pdf": "content\\concursos\\raw-pdfs\\SC\\2025\\psicologo-prefeitura-jacinto-machado-sc-ps-concursos-2025\\gabarito.pdf"
   },
   {
     "slug": "psicologo-prefeitura-jupia-sc-fenix-2025",
@@ -879,9 +879,9 @@
     "orgao": "Pref. Jupiá/SC",
     "banca": "Fênix",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/psicologo-prefeitura-jupia-sc-fenix-2025",
-    "status_download": "pending",
-    "prova_pdf": null,
-    "gabarito_pdf": null
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\SC\\2025\\psicologo-prefeitura-jupia-sc-fenix-2025\\prova.pdf",
+    "gabarito_pdf": "content\\concursos\\raw-pdfs\\SC\\2025\\psicologo-prefeitura-jupia-sc-fenix-2025\\gabarito.pdf"
   },
   {
     "slug": "psicologo-prefeitura-marema-sc-fenix-2025",
@@ -892,9 +892,9 @@
     "orgao": "Pref. Marema/SC",
     "banca": "Fenix",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/psicologo-prefeitura-marema-sc-fenix-2025",
-    "status_download": "pending",
-    "prova_pdf": null,
-    "gabarito_pdf": null
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\SC\\2025\\psicologo-prefeitura-marema-sc-fenix-2025\\prova.pdf",
+    "gabarito_pdf": "content\\concursos\\raw-pdfs\\SC\\2025\\psicologo-prefeitura-marema-sc-fenix-2025\\gabarito.pdf"
   },
   {
     "slug": "psicologo-prefeitura-planalto-alegre-sc-fenix-2025",
@@ -918,9 +918,9 @@
     "orgao": "Pref. Turvo/SC",
     "banca": "PS CONCURSOS",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/psicologo-prefeitura-turvo-sc-ps-concursos-2025",
-    "status_download": "pending",
-    "prova_pdf": null,
-    "gabarito_pdf": null
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\SC\\2025\\psicologo-prefeitura-turvo-sc-ps-concursos-2025\\prova.pdf",
+    "gabarito_pdf": "content\\concursos\\raw-pdfs\\SC\\2025\\psicologo-prefeitura-turvo-sc-ps-concursos-2025\\gabarito.pdf"
   },
   {
     "slug": "psicologo-prefeitura-bombinhas-sc-prefeitura-bombinhas-sc-2025",
@@ -931,9 +931,9 @@
     "orgao": "Pref. Bombinhas/SC",
     "banca": "Pref. Bombinhas/SC",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/psicologo-prefeitura-bombinhas-sc-prefeitura-bombinhas-sc-2025",
-    "status_download": "pending",
-    "prova_pdf": null,
-    "gabarito_pdf": null
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\SC\\2025\\psicologo-prefeitura-bombinhas-sc-prefeitura-bombinhas-sc-2025\\prova.pdf",
+    "gabarito_pdf": "content\\concursos\\raw-pdfs\\SC\\2025\\psicologo-prefeitura-bombinhas-sc-prefeitura-bombinhas-sc-2025\\gabarito.pdf"
   },
   {
     "slug": "psicologo-prefeitura-palma-sola-sc-ameosc-2025",
@@ -1308,9 +1308,9 @@
     "orgao": "Pref. Santa Mariana/PR",
     "banca": "Instituto Unifil",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/psicologo-prefeitura-santa-mariana-pr-instituto-unifil-2025",
-    "status_download": "pending",
-    "prova_pdf": null,
-    "gabarito_pdf": null
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\PR\\2025\\psicologo-prefeitura-santa-mariana-pr-instituto-unifil-2025\\prova.pdf",
+    "gabarito_pdf": "content\\concursos\\raw-pdfs\\PR\\2025\\psicologo-prefeitura-santa-mariana-pr-instituto-unifil-2025\\gabarito.pdf"
   },
   {
     "slug": "psicologo-prefeitura-maua-da-serra-pr-gama-2025",
@@ -1321,9 +1321,9 @@
     "orgao": "Pref. Mauá da Serra/PR",
     "banca": "GAMA",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/psicologo-prefeitura-maua-da-serra-pr-gama-2025",
-    "status_download": "pending",
-    "prova_pdf": null,
-    "gabarito_pdf": null
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\PR\\2025\\psicologo-prefeitura-maua-da-serra-pr-gama-2025\\prova.pdf",
+    "gabarito_pdf": "content\\concursos\\raw-pdfs\\PR\\2025\\psicologo-prefeitura-maua-da-serra-pr-gama-2025\\gabarito.pdf"
   },
   {
     "slug": "psicologo-prefeitura-douradina-pr-fafipa-2025",
@@ -1334,8 +1334,8 @@
     "orgao": "Pref. Douradina/PR",
     "banca": "FAFIPA",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/psicologo-prefeitura-douradina-pr-fafipa-2025",
-    "status_download": "pending",
-    "prova_pdf": null,
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\PR\\2025\\psicologo-prefeitura-douradina-pr-fafipa-2025\\prova.pdf",
     "gabarito_pdf": null
   },
   {
@@ -1347,9 +1347,9 @@
     "orgao": "Pref. Planaltina do Paraná/PR",
     "banca": "OBJETIVA CONCURSOS",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/psicologo-prefeitura-planaltina-do-parana-pr-objetiva-concursos-2025",
-    "status_download": "pending",
-    "prova_pdf": null,
-    "gabarito_pdf": null
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\PR\\2025\\psicologo-prefeitura-planaltina-do-parana-pr-objetiva-concursos-2025\\prova.pdf",
+    "gabarito_pdf": "content\\concursos\\raw-pdfs\\PR\\2025\\psicologo-prefeitura-planaltina-do-parana-pr-objetiva-concursos-2025\\gabarito.pdf"
   },
   {
     "slug": "psicologo-prefeitura-pitangueiras-pr-objetiva-concursos-2025",
@@ -1360,9 +1360,9 @@
     "orgao": "Pref. Pitangueiras/PR",
     "banca": "OBJETIVA CONCURSOS",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/psicologo-prefeitura-pitangueiras-pr-objetiva-concursos-2025",
-    "status_download": "pending",
-    "prova_pdf": null,
-    "gabarito_pdf": null
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\PR\\2025\\psicologo-prefeitura-pitangueiras-pr-objetiva-concursos-2025\\prova.pdf",
+    "gabarito_pdf": "content\\concursos\\raw-pdfs\\PR\\2025\\psicologo-prefeitura-pitangueiras-pr-objetiva-concursos-2025\\gabarito.pdf"
   },
   {
     "slug": "psicologo-prefeitura-ceu-azul-pr-fau-unicentro-2025",
@@ -1373,9 +1373,9 @@
     "orgao": "Pref. Céu Azul/PR",
     "banca": "FAU - UNICENTRO",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/psicologo-prefeitura-ceu-azul-pr-fau-unicentro-2025",
-    "status_download": "pending",
-    "prova_pdf": null,
-    "gabarito_pdf": null
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\PR\\2025\\psicologo-prefeitura-ceu-azul-pr-fau-unicentro-2025\\prova.pdf",
+    "gabarito_pdf": "content\\concursos\\raw-pdfs\\PR\\2025\\psicologo-prefeitura-ceu-azul-pr-fau-unicentro-2025\\gabarito.pdf"
   },
   {
     "slug": "psicologo-prefeitura-pinhalao-pr-fau-unicentro-2025",
@@ -1386,9 +1386,9 @@
     "orgao": "Pref. Pinhalão/PR",
     "banca": "FAU - UNICENTRO",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/psicologo-prefeitura-pinhalao-pr-fau-unicentro-2025",
-    "status_download": "pending",
-    "prova_pdf": null,
-    "gabarito_pdf": null
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\PR\\2025\\psicologo-prefeitura-pinhalao-pr-fau-unicentro-2025\\prova.pdf",
+    "gabarito_pdf": "content\\concursos\\raw-pdfs\\PR\\2025\\psicologo-prefeitura-pinhalao-pr-fau-unicentro-2025\\gabarito.pdf"
   },
   {
     "slug": "psicologo-prefeitura-francisco-alves-pr-objetiva-concursos-2025",
@@ -1399,9 +1399,9 @@
     "orgao": "Pref. Francisco Alves/PR",
     "banca": "OBJETIVA CONCURSOS",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/psicologo-prefeitura-francisco-alves-pr-objetiva-concursos-2025",
-    "status_download": "pending",
-    "prova_pdf": null,
-    "gabarito_pdf": null
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\PR\\2025\\psicologo-prefeitura-francisco-alves-pr-objetiva-concursos-2025\\prova.pdf",
+    "gabarito_pdf": "content\\concursos\\raw-pdfs\\PR\\2025\\psicologo-prefeitura-francisco-alves-pr-objetiva-concursos-2025\\gabarito.pdf"
   },
   {
     "slug": "psicologo-prefeitura-maringa-pr-fauel-2024",
@@ -1412,9 +1412,9 @@
     "orgao": "Pref. Maringá/PR",
     "banca": "FAUEL",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/psicologo-prefeitura-maringa-pr-fauel-2024",
-    "status_download": "pending",
-    "prova_pdf": null,
-    "gabarito_pdf": null
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\PR\\2024\\psicologo-prefeitura-maringa-pr-fauel-2024\\prova.pdf",
+    "gabarito_pdf": "content\\concursos\\raw-pdfs\\PR\\2024\\psicologo-prefeitura-maringa-pr-fauel-2024\\gabarito.pdf"
   },
   {
     "slug": "psicologo-prefeitura-sao-jose-das-palmeiras-pr-objetiva-concursos-2024",
@@ -1425,9 +1425,9 @@
     "orgao": "Pref. São José das Palmeiras/PR",
     "banca": "OBJETIVA CONCURSOS",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/psicologo-prefeitura-sao-jose-das-palmeiras-pr-objetiva-concursos-2024",
-    "status_download": "pending",
-    "prova_pdf": null,
-    "gabarito_pdf": null
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\PR\\2024\\psicologo-prefeitura-sao-jose-das-palmeiras-pr-objetiva-concursos-2024\\prova.pdf",
+    "gabarito_pdf": "content\\concursos\\raw-pdfs\\PR\\2024\\psicologo-prefeitura-sao-jose-das-palmeiras-pr-objetiva-concursos-2024\\gabarito.pdf"
   },
   {
     "slug": "psicologo-prefeitura-candido-de-abreu-pr-fauel-2024",
@@ -1438,9 +1438,9 @@
     "orgao": "Pref. Cândido de Abreu/PR",
     "banca": "FAUEL",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/psicologo-prefeitura-candido-de-abreu-pr-fauel-2024",
-    "status_download": "pending",
-    "prova_pdf": null,
-    "gabarito_pdf": null
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\PR\\2024\\psicologo-prefeitura-candido-de-abreu-pr-fauel-2024\\prova.pdf",
+    "gabarito_pdf": "content\\concursos\\raw-pdfs\\PR\\2024\\psicologo-prefeitura-candido-de-abreu-pr-fauel-2024\\gabarito.pdf"
   },
   {
     "slug": "psicologo-prefeitura-florai-pr-instituto-univida-2024",
@@ -1451,9 +1451,9 @@
     "orgao": "Pref. Floraí/PR",
     "banca": "Instituto Univida",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/psicologo-prefeitura-florai-pr-instituto-univida-2024",
-    "status_download": "pending",
-    "prova_pdf": null,
-    "gabarito_pdf": null
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\PR\\2024\\psicologo-prefeitura-florai-pr-instituto-univida-2024\\prova.pdf",
+    "gabarito_pdf": "content\\concursos\\raw-pdfs\\PR\\2024\\psicologo-prefeitura-florai-pr-instituto-univida-2024\\gabarito.pdf"
   },
   {
     "slug": "psicologo-prefeitura-francisco-alves-pr-maranatha-2024",
@@ -1464,9 +1464,9 @@
     "orgao": "Pref. Francisco Alves/PR",
     "banca": "MARANATHA",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/psicologo-prefeitura-francisco-alves-pr-maranatha-2024",
-    "status_download": "pending",
-    "prova_pdf": null,
-    "gabarito_pdf": null
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\PR\\2024\\psicologo-prefeitura-francisco-alves-pr-maranatha-2024\\prova.pdf",
+    "gabarito_pdf": "content\\concursos\\raw-pdfs\\PR\\2024\\psicologo-prefeitura-francisco-alves-pr-maranatha-2024\\gabarito.pdf"
   },
   {
     "slug": "psicologo-prefeitura-nossa-senhora-das-gracas-pr-instituto-univida-2024",
@@ -1490,9 +1490,9 @@
     "orgao": "Pref. Vitorino/PR",
     "banca": "FUNTEF-PR",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/psicologo-prefeitura-vitorino-pr-funtef-pr-2024",
-    "status_download": "pending",
-    "prova_pdf": null,
-    "gabarito_pdf": null
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\PR\\2024\\psicologo-prefeitura-vitorino-pr-funtef-pr-2024\\prova.pdf",
+    "gabarito_pdf": "content\\concursos\\raw-pdfs\\PR\\2024\\psicologo-prefeitura-vitorino-pr-funtef-pr-2024\\gabarito.pdf"
   },
   {
     "slug": "psicologo-prefeitura-nova-laranjeiras-pr-fau-unicentro-2024",
@@ -1503,9 +1503,9 @@
     "orgao": "Pref. Nova Laranjeiras/PR",
     "banca": "FAU - UNICENTRO",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/psicologo-prefeitura-nova-laranjeiras-pr-fau-unicentro-2024",
-    "status_download": "pending",
-    "prova_pdf": null,
-    "gabarito_pdf": null
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\PR\\2024\\psicologo-prefeitura-nova-laranjeiras-pr-fau-unicentro-2024\\prova.pdf",
+    "gabarito_pdf": "content\\concursos\\raw-pdfs\\PR\\2024\\psicologo-prefeitura-nova-laranjeiras-pr-fau-unicentro-2024\\gabarito.pdf"
   },
   {
     "slug": "psicologo-prefeitura-ivai-pr-instituto-univida-2024",
@@ -1516,9 +1516,9 @@
     "orgao": "Pref. Ivaí/PR",
     "banca": "Instituto Univida",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/psicologo-prefeitura-ivai-pr-instituto-univida-2024",
-    "status_download": "pending",
-    "prova_pdf": null,
-    "gabarito_pdf": null
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\PR\\2024\\psicologo-prefeitura-ivai-pr-instituto-univida-2024\\prova.pdf",
+    "gabarito_pdf": "content\\concursos\\raw-pdfs\\PR\\2024\\psicologo-prefeitura-ivai-pr-instituto-univida-2024\\gabarito.pdf"
   },
   {
     "slug": "psicologo-prefeitura-campo-magro-pr-ufpr-2024",
@@ -1529,8 +1529,8 @@
     "orgao": "Pref. Campo Magro/PR",
     "banca": "UFPR",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/psicologo-prefeitura-campo-magro-pr-ufpr-2024",
-    "status_download": "pending",
-    "prova_pdf": null,
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\PR\\2024\\psicologo-prefeitura-campo-magro-pr-ufpr-2024\\prova.pdf",
     "gabarito_pdf": null
   },
   {
@@ -1568,9 +1568,9 @@
     "orgao": "Pref. Califórnia/PR",
     "banca": "MARANATHA",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/psicologo-prefeitura-california-pr-maranatha-2024",
-    "status_download": "pending",
-    "prova_pdf": null,
-    "gabarito_pdf": null
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\PR\\2024\\psicologo-prefeitura-california-pr-maranatha-2024\\prova.pdf",
+    "gabarito_pdf": "content\\concursos\\raw-pdfs\\PR\\2024\\psicologo-prefeitura-california-pr-maranatha-2024\\gabarito.pdf"
   },
   {
     "slug": "psicologo-prefeitura-jandaia-do-sul-pr-instituto-univida-2024",
@@ -1581,9 +1581,9 @@
     "orgao": "Pref. Jandaia do Sul/PR",
     "banca": "Instituto Univida",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/psicologo-prefeitura-jandaia-do-sul-pr-instituto-univida-2024",
-    "status_download": "pending",
-    "prova_pdf": null,
-    "gabarito_pdf": null
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\PR\\2024\\psicologo-prefeitura-jandaia-do-sul-pr-instituto-univida-2024\\prova.pdf",
+    "gabarito_pdf": "content\\concursos\\raw-pdfs\\PR\\2024\\psicologo-prefeitura-jandaia-do-sul-pr-instituto-univida-2024\\gabarito.pdf"
   },
   {
     "slug": "psicologo-prefeitura-santa-cruz-de-monte-castelo-pr-objetiva-concursos-2024",
@@ -1932,9 +1932,9 @@
     "orgao": "Pref. Progresso/RS",
     "banca": "Legalle Concursos",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/nutricionista-prefeitura-progresso-rs-legalle-concursos-2026",
-    "status_download": "pending",
-    "prova_pdf": null,
-    "gabarito_pdf": null
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\RS\\2026\\nutricionista-prefeitura-progresso-rs-legalle-concursos-2026\\prova.pdf",
+    "gabarito_pdf": "content\\concursos\\raw-pdfs\\RS\\2026\\nutricionista-prefeitura-progresso-rs-legalle-concursos-2026\\gabarito.pdf"
   },
   {
     "slug": "nutricionista-prefeitura-estrela-velha-rs-fundatec-2026",
@@ -1958,9 +1958,9 @@
     "orgao": "Pref. São Lourenço do Sul/RS",
     "banca": "Legalle Concursos",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/nutricionista-prefeitura-sao-lourenco-do-sul-rs-legalle-concursos-2026",
-    "status_download": "pending",
-    "prova_pdf": null,
-    "gabarito_pdf": null
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\RS\\2026\\nutricionista-prefeitura-sao-lourenco-do-sul-rs-legalle-concursos-2026\\prova.pdf",
+    "gabarito_pdf": "content\\concursos\\raw-pdfs\\RS\\2026\\nutricionista-prefeitura-sao-lourenco-do-sul-rs-legalle-concursos-2026\\gabarito.pdf"
   },
   {
     "slug": "nutricionista-prefeitura-unistalda-rs-legalle-concursos-2026",
@@ -1971,9 +1971,9 @@
     "orgao": "Pref. Unistalda/RS",
     "banca": "Legalle Concursos",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/nutricionista-prefeitura-unistalda-rs-legalle-concursos-2026",
-    "status_download": "pending",
-    "prova_pdf": null,
-    "gabarito_pdf": null
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\RS\\2026\\nutricionista-prefeitura-unistalda-rs-legalle-concursos-2026\\prova.pdf",
+    "gabarito_pdf": "content\\concursos\\raw-pdfs\\RS\\2026\\nutricionista-prefeitura-unistalda-rs-legalle-concursos-2026\\gabarito.pdf"
   },
   {
     "slug": "nutricionista-prefeitura-bom-jesus-rs-fundatec-2026",
@@ -1984,9 +1984,9 @@
     "orgao": "Pref. Bom Jesus/RS",
     "banca": "Fundatec",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/nutricionista-prefeitura-bom-jesus-rs-fundatec-2026",
-    "status_download": "pending",
-    "prova_pdf": null,
-    "gabarito_pdf": null
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\RS\\2026\\nutricionista-prefeitura-bom-jesus-rs-fundatec-2026\\prova.pdf",
+    "gabarito_pdf": "content\\concursos\\raw-pdfs\\RS\\2026\\nutricionista-prefeitura-bom-jesus-rs-fundatec-2026\\gabarito.pdf"
   },
   {
     "slug": "nutricionista-prefeitura-pontao-rs-fundatec-2026",
@@ -1997,9 +1997,9 @@
     "orgao": "Pref. Pontão/RS",
     "banca": "Fundatec",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/nutricionista-prefeitura-pontao-rs-fundatec-2026",
-    "status_download": "pending",
-    "prova_pdf": null,
-    "gabarito_pdf": null
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\RS\\2026\\nutricionista-prefeitura-pontao-rs-fundatec-2026\\prova.pdf",
+    "gabarito_pdf": "content\\concursos\\raw-pdfs\\RS\\2026\\nutricionista-prefeitura-pontao-rs-fundatec-2026\\gabarito.pdf"
   },
   {
     "slug": "nutricionista-prefeitura-agudo-rs-fundatec-2025",
@@ -2010,9 +2010,9 @@
     "orgao": "Pref. Agudo/RS",
     "banca": "Fundatec",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/nutricionista-prefeitura-agudo-rs-fundatec-2025",
-    "status_download": "pending",
-    "prova_pdf": null,
-    "gabarito_pdf": null
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\RS\\2025\\nutricionista-prefeitura-agudo-rs-fundatec-2025\\prova.pdf",
+    "gabarito_pdf": "content\\concursos\\raw-pdfs\\RS\\2025\\nutricionista-prefeitura-agudo-rs-fundatec-2025\\gabarito.pdf"
   },
   {
     "slug": "nutricionista-prefeitura-roca-sales-rs-objetiva-instituto-2025",
@@ -2023,9 +2023,9 @@
     "orgao": "Pref. Roca Sales/RS",
     "banca": "Objetiva Instituto",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/nutricionista-prefeitura-roca-sales-rs-objetiva-instituto-2025",
-    "status_download": "pending",
-    "prova_pdf": null,
-    "gabarito_pdf": null
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\RS\\2025\\nutricionista-prefeitura-roca-sales-rs-objetiva-instituto-2025\\prova.pdf",
+    "gabarito_pdf": "content\\concursos\\raw-pdfs\\RS\\2025\\nutricionista-prefeitura-roca-sales-rs-objetiva-instituto-2025\\gabarito.pdf"
   },
   {
     "slug": "nutricionista-tupanci-do-sul-rs-objetiva-instituto-2025",
@@ -2049,9 +2049,9 @@
     "orgao": "Prefeitura de Tupanci do Sul - RS",
     "banca": "OBJETIVA CONCURSOS",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/nutricionista-prefeitura-de-tupanci-do-sul-rs-objetiva-concursos-2025",
-    "status_download": "pending",
-    "prova_pdf": null,
-    "gabarito_pdf": null
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\RS\\2025\\nutricionista-prefeitura-de-tupanci-do-sul-rs-objetiva-concursos-2025\\prova.pdf",
+    "gabarito_pdf": "content\\concursos\\raw-pdfs\\RS\\2025\\nutricionista-prefeitura-de-tupanci-do-sul-rs-objetiva-concursos-2025\\gabarito.pdf"
   },
   {
     "slug": "nutricionista-prefeitura-de-roca-sales-rs-objetiva-instituto-2025",
@@ -2062,9 +2062,9 @@
     "orgao": "Prefeitura de Roca Sales - RS",
     "banca": "Objetiva Instituto",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/nutricionista-prefeitura-de-roca-sales-rs-objetiva-instituto-2025",
-    "status_download": "pending",
-    "prova_pdf": null,
-    "gabarito_pdf": null
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\RS\\2025\\nutricionista-prefeitura-de-roca-sales-rs-objetiva-instituto-2025\\prova.pdf",
+    "gabarito_pdf": "content\\concursos\\raw-pdfs\\RS\\2025\\nutricionista-prefeitura-de-roca-sales-rs-objetiva-instituto-2025\\gabarito.pdf"
   },
   {
     "slug": "nutricionista-prefeitura-de-agudos-rs-fundatec-2025",
@@ -2075,9 +2075,9 @@
     "orgao": "Prefeitura de Agudos - RS",
     "banca": "FUNDATEC",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/nutricionista-prefeitura-de-agudos-rs-fundatec-2025",
-    "status_download": "pending",
-    "prova_pdf": null,
-    "gabarito_pdf": null
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\RS\\2025\\nutricionista-prefeitura-de-agudos-rs-fundatec-2025\\prova.pdf",
+    "gabarito_pdf": "content\\concursos\\raw-pdfs\\RS\\2025\\nutricionista-prefeitura-de-agudos-rs-fundatec-2025\\gabarito.pdf"
   },
   {
     "slug": "nutricionista-prefeitura-estacao-rs-fundatec-2025",
@@ -2088,9 +2088,9 @@
     "orgao": "Pref. Estação/RS",
     "banca": "FUNDATEC",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/nutricionista-prefeitura-estacao-rs-fundatec-2025",
-    "status_download": "pending",
-    "prova_pdf": null,
-    "gabarito_pdf": null
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\RS\\2025\\nutricionista-prefeitura-estacao-rs-fundatec-2025\\prova.pdf",
+    "gabarito_pdf": "content\\concursos\\raw-pdfs\\RS\\2025\\nutricionista-prefeitura-estacao-rs-fundatec-2025\\gabarito.pdf"
   },
   {
     "slug": "nutricionista-prefeitura-soledade-rs-fundatec-2025",
@@ -2114,9 +2114,9 @@
     "orgao": "Pref. Venâncio Aires/RS",
     "banca": "FUNDATEC",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/nutricionista-prefeitura-venancio-aires-rs-fundatec-2025",
-    "status_download": "pending",
-    "prova_pdf": null,
-    "gabarito_pdf": null
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\RS\\2025\\nutricionista-prefeitura-venancio-aires-rs-fundatec-2025\\prova.pdf",
+    "gabarito_pdf": "content\\concursos\\raw-pdfs\\RS\\2025\\nutricionista-prefeitura-venancio-aires-rs-fundatec-2025\\gabarito.pdf"
   },
   {
     "slug": "nutricionista-prefeitura-sao-jose-do-ouro-rs-objetiva-concursos-2025",
@@ -2127,9 +2127,9 @@
     "orgao": "Pref. São José do Ouro/RS",
     "banca": "OBJETIVA CONCURSOS",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/nutricionista-prefeitura-sao-jose-do-ouro-rs-objetiva-concursos-2025",
-    "status_download": "pending",
-    "prova_pdf": null,
-    "gabarito_pdf": null
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\RS\\2025\\nutricionista-prefeitura-sao-jose-do-ouro-rs-objetiva-concursos-2025\\prova.pdf",
+    "gabarito_pdf": "content\\concursos\\raw-pdfs\\RS\\2025\\nutricionista-prefeitura-sao-jose-do-ouro-rs-objetiva-concursos-2025\\gabarito.pdf"
   },
   {
     "slug": "nutricionista-prefeitura-nova-alvorada-rs-fundatec-2025",
@@ -2140,9 +2140,9 @@
     "orgao": "Pref. Nova Alvorada/RS",
     "banca": "FUNDATEC",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/nutricionista-prefeitura-nova-alvorada-rs-fundatec-2025",
-    "status_download": "pending",
-    "prova_pdf": null,
-    "gabarito_pdf": null
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\RS\\2025\\nutricionista-prefeitura-nova-alvorada-rs-fundatec-2025\\prova.pdf",
+    "gabarito_pdf": "content\\concursos\\raw-pdfs\\RS\\2025\\nutricionista-prefeitura-nova-alvorada-rs-fundatec-2025\\gabarito.pdf"
   },
   {
     "slug": "nutricionista-prefeitura-lajeado-rs-fundatec-2025",
@@ -2153,9 +2153,9 @@
     "orgao": "Pref. Lajeado/RS",
     "banca": "FUNDATEC",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/nutricionista-prefeitura-lajeado-rs-fundatec-2025",
-    "status_download": "pending",
-    "prova_pdf": null,
-    "gabarito_pdf": null
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\RS\\2025\\nutricionista-prefeitura-lajeado-rs-fundatec-2025\\prova.pdf",
+    "gabarito_pdf": "content\\concursos\\raw-pdfs\\RS\\2025\\nutricionista-prefeitura-lajeado-rs-fundatec-2025\\gabarito.pdf"
   },
   {
     "slug": "nutricionista-prefeitura-nonai-rs-objetiva-concursos-2025",
@@ -2166,9 +2166,9 @@
     "orgao": "Pref. Nonai-RS",
     "banca": "OBJETIVA CONCURSOS",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/nutricionista-prefeitura-nonai-rs-objetiva-concursos-2025",
-    "status_download": "pending",
-    "prova_pdf": null,
-    "gabarito_pdf": null
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\RS\\2025\\nutricionista-prefeitura-nonai-rs-objetiva-concursos-2025\\prova.pdf",
+    "gabarito_pdf": "content\\concursos\\raw-pdfs\\RS\\2025\\nutricionista-prefeitura-nonai-rs-objetiva-concursos-2025\\gabarito.pdf"
   },
   {
     "slug": "nutricionista-prefeitura-vanini-rs-objetiva-concursos-2025",
@@ -2179,9 +2179,9 @@
     "orgao": "Pref. Vanini/RS",
     "banca": "OBJETIVA CONCURSOS",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/nutricionista-prefeitura-vanini-rs-objetiva-concursos-2025",
-    "status_download": "pending",
-    "prova_pdf": null,
-    "gabarito_pdf": null
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\RS\\2025\\nutricionista-prefeitura-vanini-rs-objetiva-concursos-2025\\prova.pdf",
+    "gabarito_pdf": "content\\concursos\\raw-pdfs\\RS\\2025\\nutricionista-prefeitura-vanini-rs-objetiva-concursos-2025\\gabarito.pdf"
   },
   {
     "slug": "nutricionista-prefeitura-e-camara-de-cerro-grande-rs-fundatec-2025",
@@ -2192,9 +2192,9 @@
     "orgao": "Pref. e Câmara de Cerro Grande/RS",
     "banca": "FUNDATEC",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/nutricionista-prefeitura-e-camara-de-cerro-grande-rs-fundatec-2025",
-    "status_download": "pending",
-    "prova_pdf": null,
-    "gabarito_pdf": null
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\RS\\2025\\nutricionista-prefeitura-e-camara-de-cerro-grande-rs-fundatec-2025\\prova.pdf",
+    "gabarito_pdf": "content\\concursos\\raw-pdfs\\RS\\2025\\nutricionista-prefeitura-e-camara-de-cerro-grande-rs-fundatec-2025\\gabarito.pdf"
   },
   {
     "slug": "nutricionista-prefeitura-arvorezinha-rs-objetiva-concursos-2025",
@@ -2582,9 +2582,9 @@
     "orgao": "Pref. Araquari/SC",
     "banca": "Fundatec",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/nutricionista-prefeitura-araquari-sc-fundatec-2026",
-    "status_download": "pending",
-    "prova_pdf": null,
-    "gabarito_pdf": null
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\SC\\2026\\nutricionista-prefeitura-araquari-sc-fundatec-2026\\prova.pdf",
+    "gabarito_pdf": "content\\concursos\\raw-pdfs\\SC\\2026\\nutricionista-prefeitura-araquari-sc-fundatec-2026\\gabarito.pdf"
   },
   {
     "slug": "nutricionista-prefeitura-criciuma-sc-legalle-concursos-2026",
@@ -2595,9 +2595,9 @@
     "orgao": "Pref. Criciúma/SC",
     "banca": "Legalle Concursos",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/nutricionista-prefeitura-criciuma-sc-legalle-concursos-2026",
-    "status_download": "pending",
-    "prova_pdf": null,
-    "gabarito_pdf": null
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\SC\\2026\\nutricionista-prefeitura-criciuma-sc-legalle-concursos-2026\\prova.pdf",
+    "gabarito_pdf": "content\\concursos\\raw-pdfs\\SC\\2026\\nutricionista-prefeitura-criciuma-sc-legalle-concursos-2026\\gabarito.pdf"
   },
   {
     "slug": "nutricionista-prefeitura-caxambu-do-sul-sc-fepese-2026-98",
@@ -2608,9 +2608,9 @@
     "orgao": "Pref. Caxambu do Sul/SC",
     "banca": "Fepese",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/nutricionista-prefeitura-caxambu-do-sul-sc-fepese-2026-98",
-    "status_download": "pending",
-    "prova_pdf": null,
-    "gabarito_pdf": null
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\SC\\2026\\nutricionista-prefeitura-caxambu-do-sul-sc-fepese-2026-98\\prova.pdf",
+    "gabarito_pdf": "content\\concursos\\raw-pdfs\\SC\\2026\\nutricionista-prefeitura-caxambu-do-sul-sc-fepese-2026-98\\gabarito.pdf"
   },
   {
     "slug": "nutricionista-prefeitura-caxambu-do-sul-sc-fepese-2026",
@@ -2621,9 +2621,9 @@
     "orgao": "Pref. Caxambu do Sul/SC",
     "banca": "Fepese",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/nutricionista-prefeitura-caxambu-do-sul-sc-fepese-2026",
-    "status_download": "pending",
-    "prova_pdf": null,
-    "gabarito_pdf": null
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\SC\\2026\\nutricionista-prefeitura-caxambu-do-sul-sc-fepese-2026\\prova.pdf",
+    "gabarito_pdf": "content\\concursos\\raw-pdfs\\SC\\2026\\nutricionista-prefeitura-caxambu-do-sul-sc-fepese-2026\\gabarito.pdf"
   },
   {
     "slug": "nutricionista-prefeitura-seara-sc-amauc-2025",
@@ -2634,9 +2634,9 @@
     "orgao": "Pref. Seara/SC",
     "banca": "AMAUC",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/nutricionista-prefeitura-seara-sc-amauc-2025",
-    "status_download": "pending",
-    "prova_pdf": null,
-    "gabarito_pdf": null
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\SC\\2025\\nutricionista-prefeitura-seara-sc-amauc-2025\\prova.pdf",
+    "gabarito_pdf": "content\\concursos\\raw-pdfs\\SC\\2025\\nutricionista-prefeitura-seara-sc-amauc-2025\\gabarito.pdf"
   },
   {
     "slug": "nutricionista-prefeitura-pedras-grandes-sc-instituto-evo-2025",
@@ -2647,9 +2647,9 @@
     "orgao": "Pref. Pedras Grandes/SC",
     "banca": "Instituto EVO",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/nutricionista-prefeitura-pedras-grandes-sc-instituto-evo-2025",
-    "status_download": "pending",
-    "prova_pdf": null,
-    "gabarito_pdf": null
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\SC\\2025\\nutricionista-prefeitura-pedras-grandes-sc-instituto-evo-2025\\prova.pdf",
+    "gabarito_pdf": "content\\concursos\\raw-pdfs\\SC\\2025\\nutricionista-prefeitura-pedras-grandes-sc-instituto-evo-2025\\gabarito.pdf"
   },
   {
     "slug": "nutricionista-prefeitura-sao-joao-do-sul-sc-ps-concursos-2025",
@@ -2660,9 +2660,9 @@
     "orgao": "Pref. São João do Sul/SC",
     "banca": "PS CONCURSOS",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/nutricionista-prefeitura-sao-joao-do-sul-sc-ps-concursos-2025",
-    "status_download": "pending",
-    "prova_pdf": null,
-    "gabarito_pdf": null
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\SC\\2025\\nutricionista-prefeitura-sao-joao-do-sul-sc-ps-concursos-2025\\prova.pdf",
+    "gabarito_pdf": "content\\concursos\\raw-pdfs\\SC\\2025\\nutricionista-prefeitura-sao-joao-do-sul-sc-ps-concursos-2025\\gabarito.pdf"
   },
   {
     "slug": "nutricionista-prefeitura-jacinto-machado-sc-ps-concursos-2025",
@@ -2673,9 +2673,9 @@
     "orgao": "Pref. Jacinto Machado/SC",
     "banca": "PS CONCURSOS",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/nutricionista-prefeitura-jacinto-machado-sc-ps-concursos-2025",
-    "status_download": "pending",
-    "prova_pdf": null,
-    "gabarito_pdf": null
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\SC\\2025\\nutricionista-prefeitura-jacinto-machado-sc-ps-concursos-2025\\prova.pdf",
+    "gabarito_pdf": "content\\concursos\\raw-pdfs\\SC\\2025\\nutricionista-prefeitura-jacinto-machado-sc-ps-concursos-2025\\gabarito.pdf"
   },
   {
     "slug": "nutricionista-prefeitura-jupia-sc-fenix-2025",
@@ -2686,9 +2686,9 @@
     "orgao": "Pref. Jupiá/SC",
     "banca": "Fênix",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/nutricionista-prefeitura-jupia-sc-fenix-2025",
-    "status_download": "pending",
-    "prova_pdf": null,
-    "gabarito_pdf": null
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\SC\\2025\\nutricionista-prefeitura-jupia-sc-fenix-2025\\prova.pdf",
+    "gabarito_pdf": "content\\concursos\\raw-pdfs\\SC\\2025\\nutricionista-prefeitura-jupia-sc-fenix-2025\\gabarito.pdf"
   },
   {
     "slug": "nutricionista-prefeitura-planalto-alegre-sc-fenix-2025",
@@ -2699,9 +2699,9 @@
     "orgao": "Pref. Planalto Alegre/SC",
     "banca": "Fenix",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/nutricionista-prefeitura-planalto-alegre-sc-fenix-2025",
-    "status_download": "pending",
-    "prova_pdf": null,
-    "gabarito_pdf": null
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\SC\\2025\\nutricionista-prefeitura-planalto-alegre-sc-fenix-2025\\prova.pdf",
+    "gabarito_pdf": "content\\concursos\\raw-pdfs\\SC\\2025\\nutricionista-prefeitura-planalto-alegre-sc-fenix-2025\\gabarito.pdf"
   },
   {
     "slug": "nutricionista-prefeitura-turvo-sc-ps-concursos-2025",
@@ -2712,9 +2712,9 @@
     "orgao": "Pref. Turvo/SC",
     "banca": "PS CONCURSOS",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/nutricionista-prefeitura-turvo-sc-ps-concursos-2025",
-    "status_download": "pending",
-    "prova_pdf": null,
-    "gabarito_pdf": null
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\SC\\2025\\nutricionista-prefeitura-turvo-sc-ps-concursos-2025\\prova.pdf",
+    "gabarito_pdf": "content\\concursos\\raw-pdfs\\SC\\2025\\nutricionista-prefeitura-turvo-sc-ps-concursos-2025\\gabarito.pdf"
   },
   {
     "slug": "nutricionista-prefeitura-passos-maia-sc-fenix-2025",
@@ -2725,9 +2725,9 @@
     "orgao": "Pref. Passos Maia/SC",
     "banca": "Fênix",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/nutricionista-prefeitura-passos-maia-sc-fenix-2025",
-    "status_download": "pending",
-    "prova_pdf": null,
-    "gabarito_pdf": null
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\SC\\2025\\nutricionista-prefeitura-passos-maia-sc-fenix-2025\\prova.pdf",
+    "gabarito_pdf": "content\\concursos\\raw-pdfs\\SC\\2025\\nutricionista-prefeitura-passos-maia-sc-fenix-2025\\gabarito.pdf"
   },
   {
     "slug": "nutricionista-prefeitura-piratuba-sc-amauc-2025",
@@ -2738,9 +2738,9 @@
     "orgao": "Pref. Piratuba/SC",
     "banca": "AMAUC",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/nutricionista-prefeitura-piratuba-sc-amauc-2025",
-    "status_download": "pending",
-    "prova_pdf": null,
-    "gabarito_pdf": null
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\SC\\2025\\nutricionista-prefeitura-piratuba-sc-amauc-2025\\prova.pdf",
+    "gabarito_pdf": "content\\concursos\\raw-pdfs\\SC\\2025\\nutricionista-prefeitura-piratuba-sc-amauc-2025\\gabarito.pdf"
   },
   {
     "slug": "nutricionista-prefeitura-guaruja-do-sul-sc-ameosc-2025",
@@ -2751,9 +2751,9 @@
     "orgao": "Pref. Guarujá do Sul/SC",
     "banca": "AMEOSC",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/nutricionista-prefeitura-guaruja-do-sul-sc-ameosc-2025",
-    "status_download": "pending",
-    "prova_pdf": null,
-    "gabarito_pdf": null
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\SC\\2025\\nutricionista-prefeitura-guaruja-do-sul-sc-ameosc-2025\\prova.pdf",
+    "gabarito_pdf": "content\\concursos\\raw-pdfs\\SC\\2025\\nutricionista-prefeitura-guaruja-do-sul-sc-ameosc-2025\\gabarito.pdf"
   },
   {
     "slug": "nutricionista-prefeitura-romelandia-sc-instituto-evo-2025",
@@ -2777,9 +2777,9 @@
     "orgao": "Pref. Bom Jardim da Serra/SC",
     "banca": "Fenix",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/nutricionista-prefeitura-bom-jardim-da-serra-sc-fenix-2025",
-    "status_download": "pending",
-    "prova_pdf": null,
-    "gabarito_pdf": null
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\SC\\2025\\nutricionista-prefeitura-bom-jardim-da-serra-sc-fenix-2025\\prova.pdf",
+    "gabarito_pdf": "content\\concursos\\raw-pdfs\\SC\\2025\\nutricionista-prefeitura-bom-jardim-da-serra-sc-fenix-2025\\gabarito.pdf"
   },
   {
     "slug": "nutricionista-prefeitura-guaruja-do-sul-sc-ameosc-2025-24",
@@ -2816,9 +2816,9 @@
     "orgao": "Pref. São João do Oeste/SC",
     "banca": "AMEOSC",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/nutricionista-prefeitura-sao-joao-do-oeste-sc-ameosc-2025",
-    "status_download": "pending",
-    "prova_pdf": null,
-    "gabarito_pdf": null
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\SC\\2025\\nutricionista-prefeitura-sao-joao-do-oeste-sc-ameosc-2025\\prova.pdf",
+    "gabarito_pdf": "content\\concursos\\raw-pdfs\\SC\\2025\\nutricionista-prefeitura-sao-joao-do-oeste-sc-ameosc-2025\\gabarito.pdf"
   },
   {
     "slug": "nutricionista-prefeitura-treviso-sc-fenix-2025",
@@ -2829,9 +2829,9 @@
     "orgao": "Pref. Treviso/SC",
     "banca": "Fênix",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/nutricionista-prefeitura-treviso-sc-fenix-2025",
-    "status_download": "pending",
-    "prova_pdf": null,
-    "gabarito_pdf": null
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\SC\\2025\\nutricionista-prefeitura-treviso-sc-fenix-2025\\prova.pdf",
+    "gabarito_pdf": "content\\concursos\\raw-pdfs\\SC\\2025\\nutricionista-prefeitura-treviso-sc-fenix-2025\\gabarito.pdf"
   },
   {
     "slug": "nutricionista-prefeitura-anchieta-sc-ameosc-2025",
@@ -3232,9 +3232,9 @@
     "orgao": "Pref. Francisco Alves/PR",
     "banca": "OBJETIVA CONCURSOS",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/nutricionista-prefeitura-francisco-alves-pr-objetiva-concursos-2025",
-    "status_download": "pending",
-    "prova_pdf": null,
-    "gabarito_pdf": null
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\PR\\2025\\nutricionista-prefeitura-francisco-alves-pr-objetiva-concursos-2025\\prova.pdf",
+    "gabarito_pdf": "content\\concursos\\raw-pdfs\\PR\\2025\\nutricionista-prefeitura-francisco-alves-pr-objetiva-concursos-2025\\gabarito.pdf"
   },
   {
     "slug": "nutricionista-prefeitura-ceu-azul-pr-fau-unicentro-2025",
@@ -3245,9 +3245,9 @@
     "orgao": "Pref. Céu Azul/PR",
     "banca": "FAU - UNICENTRO",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/nutricionista-prefeitura-ceu-azul-pr-fau-unicentro-2025",
-    "status_download": "pending",
-    "prova_pdf": null,
-    "gabarito_pdf": null
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\PR\\2025\\nutricionista-prefeitura-ceu-azul-pr-fau-unicentro-2025\\prova.pdf",
+    "gabarito_pdf": "content\\concursos\\raw-pdfs\\PR\\2025\\nutricionista-prefeitura-ceu-azul-pr-fau-unicentro-2025\\gabarito.pdf"
   },
   {
     "slug": "nutricionista-prefeitura-clevelandia-pr-prefeitura-clevelandia-pr-2025",
@@ -3258,9 +3258,9 @@
     "orgao": "Pref. Clevelândia/PR",
     "banca": "Pref. Clevelândia/PR",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/nutricionista-prefeitura-clevelandia-pr-prefeitura-clevelandia-pr-2025",
-    "status_download": "pending",
-    "prova_pdf": null,
-    "gabarito_pdf": null
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\PR\\2025\\nutricionista-prefeitura-clevelandia-pr-prefeitura-clevelandia-pr-2025\\prova.pdf",
+    "gabarito_pdf": "content\\concursos\\raw-pdfs\\PR\\2025\\nutricionista-prefeitura-clevelandia-pr-prefeitura-clevelandia-pr-2025\\gabarito.pdf"
   },
   {
     "slug": "nutricionista-prefeitura-porto-amazonas-pr-fau-unicentro-2025",
@@ -3271,9 +3271,9 @@
     "orgao": "Pref. Porto Amazonas/PR",
     "banca": "FAU - UNICENTRO",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/nutricionista-prefeitura-porto-amazonas-pr-fau-unicentro-2025",
-    "status_download": "pending",
-    "prova_pdf": null,
-    "gabarito_pdf": null
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\PR\\2025\\nutricionista-prefeitura-porto-amazonas-pr-fau-unicentro-2025\\prova.pdf",
+    "gabarito_pdf": "content\\concursos\\raw-pdfs\\PR\\2025\\nutricionista-prefeitura-porto-amazonas-pr-fau-unicentro-2025\\gabarito.pdf"
   },
   {
     "slug": "nutricionista-prefeitura-pitangueiras-pr-objetiva-concursos-2025",
@@ -3284,9 +3284,9 @@
     "orgao": "Pref. Pitangueiras/PR",
     "banca": "OBJETIVA CONCURSOS",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/nutricionista-prefeitura-pitangueiras-pr-objetiva-concursos-2025",
-    "status_download": "pending",
-    "prova_pdf": null,
-    "gabarito_pdf": null
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\PR\\2025\\nutricionista-prefeitura-pitangueiras-pr-objetiva-concursos-2025\\prova.pdf",
+    "gabarito_pdf": "content\\concursos\\raw-pdfs\\PR\\2025\\nutricionista-prefeitura-pitangueiras-pr-objetiva-concursos-2025\\gabarito.pdf"
   },
   {
     "slug": "nutricionista-prefeitura-porto-barreiro-pr-fau-unicentro-2025",
@@ -3297,9 +3297,9 @@
     "orgao": "Pref. Porto Barreiro/PR",
     "banca": "FAU - UNICENTRO",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/nutricionista-prefeitura-porto-barreiro-pr-fau-unicentro-2025",
-    "status_download": "pending",
-    "prova_pdf": null,
-    "gabarito_pdf": null
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\PR\\2025\\nutricionista-prefeitura-porto-barreiro-pr-fau-unicentro-2025\\prova.pdf",
+    "gabarito_pdf": "content\\concursos\\raw-pdfs\\PR\\2025\\nutricionista-prefeitura-porto-barreiro-pr-fau-unicentro-2025\\gabarito.pdf"
   },
   {
     "slug": "nutricionista-prefeitura-quarto-centenario-pr-fau-unicentro-2025",
@@ -3310,9 +3310,9 @@
     "orgao": "Pref. Quarto Centenário/PR",
     "banca": "FAU - UNICENTRO",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/nutricionista-prefeitura-quarto-centenario-pr-fau-unicentro-2025",
-    "status_download": "pending",
-    "prova_pdf": null,
-    "gabarito_pdf": null
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\PR\\2025\\nutricionista-prefeitura-quarto-centenario-pr-fau-unicentro-2025\\prova.pdf",
+    "gabarito_pdf": "content\\concursos\\raw-pdfs\\PR\\2025\\nutricionista-prefeitura-quarto-centenario-pr-fau-unicentro-2025\\gabarito.pdf"
   },
   {
     "slug": "nutricionista-prefeitura-jaguapita-pr-fauel-2024",
@@ -3323,9 +3323,9 @@
     "orgao": "Pref. Jaguapitã/PR",
     "banca": "FAUEL",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/nutricionista-prefeitura-jaguapita-pr-fauel-2024",
-    "status_download": "pending",
-    "prova_pdf": null,
-    "gabarito_pdf": null
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\PR\\2024\\nutricionista-prefeitura-jaguapita-pr-fauel-2024\\prova.pdf",
+    "gabarito_pdf": "content\\concursos\\raw-pdfs\\PR\\2024\\nutricionista-prefeitura-jaguapita-pr-fauel-2024\\gabarito.pdf"
   },
   {
     "slug": "nutricionista-prefeitura-piraquara-pr-instituto-univida-2024",
@@ -3336,9 +3336,9 @@
     "orgao": "Pref. Piraquara/PR",
     "banca": "Instituto Univida",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/nutricionista-prefeitura-piraquara-pr-instituto-univida-2024",
-    "status_download": "pending",
-    "prova_pdf": null,
-    "gabarito_pdf": null
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\PR\\2024\\nutricionista-prefeitura-piraquara-pr-instituto-univida-2024\\prova.pdf",
+    "gabarito_pdf": "content\\concursos\\raw-pdfs\\PR\\2024\\nutricionista-prefeitura-piraquara-pr-instituto-univida-2024\\gabarito.pdf"
   },
   {
     "slug": "nutricionista-prefeitura-campo-magro-pr-ufpr-2024",
@@ -3349,8 +3349,8 @@
     "orgao": "Pref. Campo Magro/PR",
     "banca": "UFPR",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/nutricionista-prefeitura-campo-magro-pr-ufpr-2024",
-    "status_download": "pending",
-    "prova_pdf": null,
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\PR\\2024\\nutricionista-prefeitura-campo-magro-pr-ufpr-2024\\prova.pdf",
     "gabarito_pdf": null
   },
   {
@@ -3362,9 +3362,9 @@
     "orgao": "Pref. Barbosa Ferraz/PR",
     "banca": "Instituto Univida",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/nutricionista-prefeitura-barbosa-ferraz-pr-instituto-univida-2024",
-    "status_download": "pending",
-    "prova_pdf": null,
-    "gabarito_pdf": null
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\PR\\2024\\nutricionista-prefeitura-barbosa-ferraz-pr-instituto-univida-2024\\prova.pdf",
+    "gabarito_pdf": "content\\concursos\\raw-pdfs\\PR\\2024\\nutricionista-prefeitura-barbosa-ferraz-pr-instituto-univida-2024\\gabarito.pdf"
   },
   {
     "slug": "nutricionista-prefeitura-iguaracu-pr-instituto-univida-2024",
@@ -3388,9 +3388,9 @@
     "orgao": "Pref. Maripá/PR",
     "banca": "OBJETIVA CONCURSOS",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/nutricionista-prefeitura-maripa-pr-objetiva-concursos-2024",
-    "status_download": "pending",
-    "prova_pdf": null,
-    "gabarito_pdf": null
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\PR\\2024\\nutricionista-prefeitura-maripa-pr-objetiva-concursos-2024\\prova.pdf",
+    "gabarito_pdf": "content\\concursos\\raw-pdfs\\PR\\2024\\nutricionista-prefeitura-maripa-pr-objetiva-concursos-2024\\gabarito.pdf"
   },
   {
     "slug": "nutricionista-prefeitura-ivai-pr-instituto-univida-2024",
@@ -3401,9 +3401,9 @@
     "orgao": "Pref. Ivaí/PR",
     "banca": "Instituto Univida",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/nutricionista-prefeitura-ivai-pr-instituto-univida-2024",
-    "status_download": "pending",
-    "prova_pdf": null,
-    "gabarito_pdf": null
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\PR\\2024\\nutricionista-prefeitura-ivai-pr-instituto-univida-2024\\prova.pdf",
+    "gabarito_pdf": "content\\concursos\\raw-pdfs\\PR\\2024\\nutricionista-prefeitura-ivai-pr-instituto-univida-2024\\gabarito.pdf"
   },
   {
     "slug": "nutricionista-prefeitura-guaraniacu-pr-objetiva-concursos-2024",
@@ -3427,9 +3427,9 @@
     "orgao": "Pref. Salto do Lontra/PR",
     "banca": "FAU - UNICENTRO",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/nutricionista-prefeitura-salto-do-lontra-pr-fau-unicentro-2024",
-    "status_download": "pending",
-    "prova_pdf": null,
-    "gabarito_pdf": null
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\PR\\2024\\nutricionista-prefeitura-salto-do-lontra-pr-fau-unicentro-2024\\prova.pdf",
+    "gabarito_pdf": "content\\concursos\\raw-pdfs\\PR\\2024\\nutricionista-prefeitura-salto-do-lontra-pr-fau-unicentro-2024\\gabarito.pdf"
   },
   {
     "slug": "nutricionista-prefeitura-nova-laranjeiras-pr-fau-unicentro-2024",
@@ -3440,9 +3440,9 @@
     "orgao": "Pref. Nova Laranjeiras/PR",
     "banca": "FAU - UNICENTRO",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/nutricionista-prefeitura-nova-laranjeiras-pr-fau-unicentro-2024",
-    "status_download": "pending",
-    "prova_pdf": null,
-    "gabarito_pdf": null
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\PR\\2024\\nutricionista-prefeitura-nova-laranjeiras-pr-fau-unicentro-2024\\prova.pdf",
+    "gabarito_pdf": "content\\concursos\\raw-pdfs\\PR\\2024\\nutricionista-prefeitura-nova-laranjeiras-pr-fau-unicentro-2024\\gabarito.pdf"
   },
   {
     "slug": "nutricionista-prefeitura-vitorino-pr-funtef-pr-2024",
@@ -3453,9 +3453,9 @@
     "orgao": "Pref. Vitorino/PR",
     "banca": "FUNTEF-PR",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/nutricionista-prefeitura-vitorino-pr-funtef-pr-2024",
-    "status_download": "pending",
-    "prova_pdf": null,
-    "gabarito_pdf": null
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\PR\\2024\\nutricionista-prefeitura-vitorino-pr-funtef-pr-2024\\prova.pdf",
+    "gabarito_pdf": "content\\concursos\\raw-pdfs\\PR\\2024\\nutricionista-prefeitura-vitorino-pr-funtef-pr-2024\\gabarito.pdf"
   },
   {
     "slug": "nutricionista-prefeitura-wenceslau-braz-pr-fau-unicentro-2024",
@@ -3479,9 +3479,9 @@
     "orgao": "Pref.Prudentópolis/PR",
     "banca": "FAU - UNICENTRO",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/nutricionista-prefeitura-prudentopolis-pr-fau-unicentro-2024",
-    "status_download": "pending",
-    "prova_pdf": null,
-    "gabarito_pdf": null
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\PR\\2024\\nutricionista-prefeitura-prudentopolis-pr-fau-unicentro-2024\\prova.pdf",
+    "gabarito_pdf": "content\\concursos\\raw-pdfs\\PR\\2024\\nutricionista-prefeitura-prudentopolis-pr-fau-unicentro-2024\\gabarito.pdf"
   },
   {
     "slug": "nutricionista-prefeitura-nossa-senhora-das-gracas-pr-instituto-univida-2024",
@@ -3492,9 +3492,9 @@
     "orgao": "Pref. Nossa Senhora das Graças/PR",
     "banca": "Instituto Univida",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/nutricionista-prefeitura-nossa-senhora-das-gracas-pr-instituto-univida-2024",
-    "status_download": "pending",
-    "prova_pdf": null,
-    "gabarito_pdf": null
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\PR\\2024\\nutricionista-prefeitura-nossa-senhora-das-gracas-pr-instituto-univida-2024\\prova.pdf",
+    "gabarito_pdf": "content\\concursos\\raw-pdfs\\PR\\2024\\nutricionista-prefeitura-nossa-senhora-das-gracas-pr-instituto-univida-2024\\gabarito.pdf"
   },
   {
     "slug": "nutricionista-prefeitura-peabiru-pr-instituto-univida-2024",
@@ -3505,9 +3505,9 @@
     "orgao": "Pref. Peabiru/PR",
     "banca": "Instituto Univida",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/nutricionista-prefeitura-peabiru-pr-instituto-univida-2024",
-    "status_download": "pending",
-    "prova_pdf": null,
-    "gabarito_pdf": null
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\PR\\2024\\nutricionista-prefeitura-peabiru-pr-instituto-univida-2024\\prova.pdf",
+    "gabarito_pdf": "content\\concursos\\raw-pdfs\\PR\\2024\\nutricionista-prefeitura-peabiru-pr-instituto-univida-2024\\gabarito.pdf"
   },
   {
     "slug": "nutricionista-prefeitura-janiopolis-pr-fau-unicentro-2024",
@@ -3895,9 +3895,9 @@
     "orgao": "Pref. São Lourenço do Sul/RS",
     "banca": "Legalle Concursos",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/monitor-de-educacao-fisica-prefeitura-sao-lourenco-do-sul-rs-legalle-concursos-2026",
-    "status_download": "pending",
-    "prova_pdf": null,
-    "gabarito_pdf": null
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\RS\\2026\\monitor-de-educacao-fisica-prefeitura-sao-lourenco-do-sul-rs-legalle-concursos-2026\\prova.pdf",
+    "gabarito_pdf": "content\\concursos\\raw-pdfs\\RS\\2026\\monitor-de-educacao-fisica-prefeitura-sao-lourenco-do-sul-rs-legalle-concursos-2026\\gabarito.pdf"
   },
   {
     "slug": "prof-de-educacao-fisica-da-educacao-infantil-e-anos-iniciais-prefeitura-bage-rs-fundatec-2024",
@@ -3908,9 +3908,9 @@
     "orgao": "Pref. Bagé/RS",
     "banca": "FUNDATEC",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/prof-de-educacao-fisica-da-educacao-infantil-e-anos-iniciais-prefeitura-bage-rs-fundatec-2024",
-    "status_download": "pending",
-    "prova_pdf": null,
-    "gabarito_pdf": null
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\RS\\2024\\prof-de-educacao-fisica-da-educacao-infantil-e-anos-iniciais-prefeitura-bage-rs-fundatec-2024\\prova.pdf",
+    "gabarito_pdf": "content\\concursos\\raw-pdfs\\RS\\2024\\prof-de-educacao-fisica-da-educacao-infantil-e-anos-iniciais-prefeitura-bage-rs-fundatec-2024\\gabarito.pdf"
   },
   {
     "slug": "professor-anos-finais-do-ensino-fundamental-educacao-fisica-prefeitura-sao-francisco-de-paula-rs-fundatec-2024",
@@ -3921,9 +3921,9 @@
     "orgao": "Pref. São Francisco de Paula/RS",
     "banca": "FUNDATEC",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/professor-anos-finais-do-ensino-fundamental-educacao-fisica-prefeitura-sao-francisco-de-paula-rs-fundatec-2024",
-    "status_download": "pending",
-    "prova_pdf": null,
-    "gabarito_pdf": null
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\RS\\2024\\professor-anos-finais-do-ensino-fundamental-educacao-fisica-prefeitura-sao-francisco-de-paula-rs-fundatec-2024\\prova.pdf",
+    "gabarito_pdf": "content\\concursos\\raw-pdfs\\RS\\2024\\professor-anos-finais-do-ensino-fundamental-educacao-fisica-prefeitura-sao-francisco-de-paula-rs-fundatec-2024\\gabarito.pdf"
   },
   {
     "slug": "professor-anos-finais-do-ensino-fundamental-educacao-fisica-rincao-dos-kroeff-prefeitura-sao-francisco-de-paula-rs-fundatec-2024",
@@ -3934,9 +3934,9 @@
     "orgao": "Pref. São Francisco de Paula/RS",
     "banca": "FUNDATEC",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/professor-anos-finais-do-ensino-fundamental-educacao-fisica-rincao-dos-kroeff-prefeitura-sao-francisco-de-paula-rs-fundatec-2024",
-    "status_download": "pending",
-    "prova_pdf": null,
-    "gabarito_pdf": null
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\RS\\2024\\professor-anos-finais-do-ensino-fundamental-educacao-fisica-rincao-dos-kroeff-prefeitura-sao-francisco-de-paula-rs-fundatec-2024\\prova.pdf",
+    "gabarito_pdf": "content\\concursos\\raw-pdfs\\RS\\2024\\professor-anos-finais-do-ensino-fundamental-educacao-fisica-rincao-dos-kroeff-prefeitura-sao-francisco-de-paula-rs-fundatec-2024\\gabarito.pdf"
   },
   {
     "slug": "professor-area-ii-educacao-fisica-prefeitura-cruzaltense-rs-fundatec-2024",
@@ -3947,9 +3947,9 @@
     "orgao": "Pref. Cruzaltense/RS",
     "banca": "FUNDATEC",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/professor-area-ii-educacao-fisica-prefeitura-cruzaltense-rs-fundatec-2024",
-    "status_download": "pending",
-    "prova_pdf": null,
-    "gabarito_pdf": null
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\RS\\2024\\professor-area-ii-educacao-fisica-prefeitura-cruzaltense-rs-fundatec-2024\\prova.pdf",
+    "gabarito_pdf": "content\\concursos\\raw-pdfs\\RS\\2024\\professor-area-ii-educacao-fisica-prefeitura-cruzaltense-rs-fundatec-2024\\gabarito.pdf"
   },
   {
     "slug": "professor-area-ii-educacao-fisica-prefeitura-sagrada-familia-rs-objetiva-concursos-2022",
@@ -3960,9 +3960,9 @@
     "orgao": "Pref. Sagrada Família/RS",
     "banca": "OBJETIVA CONCURSOS",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/professor-area-ii-educacao-fisica-prefeitura-sagrada-familia-rs-objetiva-concursos-2022",
-    "status_download": "pending",
-    "prova_pdf": null,
-    "gabarito_pdf": null
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\RS\\2022\\professor-area-ii-educacao-fisica-prefeitura-sagrada-familia-rs-objetiva-concursos-2022\\prova.pdf",
+    "gabarito_pdf": "content\\concursos\\raw-pdfs\\RS\\2022\\professor-area-ii-educacao-fisica-prefeitura-sagrada-familia-rs-objetiva-concursos-2022\\gabarito.pdf"
   },
   {
     "slug": "professor-educacao-fisica-prefeitura-arvorezinha-rs-objetiva-concursos-2025",
@@ -3973,9 +3973,9 @@
     "orgao": "Pref. Arvorezinha/RS",
     "banca": "OBJETIVA CONCURSOS",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/professor-educacao-fisica-prefeitura-arvorezinha-rs-objetiva-concursos-2025",
-    "status_download": "pending",
-    "prova_pdf": null,
-    "gabarito_pdf": null
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\RS\\2025\\professor-educacao-fisica-prefeitura-arvorezinha-rs-objetiva-concursos-2025\\prova.pdf",
+    "gabarito_pdf": "content\\concursos\\raw-pdfs\\RS\\2025\\professor-educacao-fisica-prefeitura-arvorezinha-rs-objetiva-concursos-2025\\gabarito.pdf"
   },
   {
     "slug": "professor-educacao-fisica-prefeitura-porto-alegre-rs-fundatec-2025",
@@ -3986,9 +3986,9 @@
     "orgao": "Pref. Porto Alegre/RS",
     "banca": "FUNDATEC",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/professor-educacao-fisica-prefeitura-porto-alegre-rs-fundatec-2025",
-    "status_download": "pending",
-    "prova_pdf": null,
-    "gabarito_pdf": null
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\RS\\2025\\professor-educacao-fisica-prefeitura-porto-alegre-rs-fundatec-2025\\prova.pdf",
+    "gabarito_pdf": "content\\concursos\\raw-pdfs\\RS\\2025\\professor-educacao-fisica-prefeitura-porto-alegre-rs-fundatec-2025\\gabarito.pdf"
   },
   {
     "slug": "professor-educacao-fisica-prefeitura-nonoai-rs-objetiva-concursos-2025",
@@ -3999,9 +3999,9 @@
     "orgao": "Pref. Nonoai/RS",
     "banca": "OBJETIVA CONCURSOS",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/professor-educacao-fisica-prefeitura-nonoai-rs-objetiva-concursos-2025",
-    "status_download": "pending",
-    "prova_pdf": null,
-    "gabarito_pdf": null
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\RS\\2025\\professor-educacao-fisica-prefeitura-nonoai-rs-objetiva-concursos-2025\\prova.pdf",
+    "gabarito_pdf": "content\\concursos\\raw-pdfs\\RS\\2025\\professor-educacao-fisica-prefeitura-nonoai-rs-objetiva-concursos-2025\\gabarito.pdf"
   },
   {
     "slug": "professor-educacao-fisica-prefeitura-sao-jose-do-ouro-rs-objetiva-concursos-2025",
@@ -4012,9 +4012,9 @@
     "orgao": "Pref. São José do Ouro/RS",
     "banca": "OBJETIVA CONCURSOS",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/professor-educacao-fisica-prefeitura-sao-jose-do-ouro-rs-objetiva-concursos-2025",
-    "status_download": "pending",
-    "prova_pdf": null,
-    "gabarito_pdf": null
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\RS\\2025\\professor-educacao-fisica-prefeitura-sao-jose-do-ouro-rs-objetiva-concursos-2025\\prova.pdf",
+    "gabarito_pdf": "content\\concursos\\raw-pdfs\\RS\\2025\\professor-educacao-fisica-prefeitura-sao-jose-do-ouro-rs-objetiva-concursos-2025\\gabarito.pdf"
   },
   {
     "slug": "professor-educacao-fisica-prefeitura-turucu-rs-objetiva-concursos-2024",
@@ -4025,9 +4025,9 @@
     "orgao": "Pref. Turuçu/RS",
     "banca": "OBJETIVA CONCURSOS",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/professor-educacao-fisica-prefeitura-turucu-rs-objetiva-concursos-2024",
-    "status_download": "pending",
-    "prova_pdf": null,
-    "gabarito_pdf": null
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\RS\\2024\\professor-educacao-fisica-prefeitura-turucu-rs-objetiva-concursos-2024\\prova.pdf",
+    "gabarito_pdf": "content\\concursos\\raw-pdfs\\RS\\2024\\professor-educacao-fisica-prefeitura-turucu-rs-objetiva-concursos-2024\\gabarito.pdf"
   },
   {
     "slug": "professor-educacao-fisica-prefeitura-mato-leitao-rs-objetiva-concursos-2024",
@@ -4038,9 +4038,9 @@
     "orgao": "Pref. Mato Leitão/RS",
     "banca": "OBJETIVA CONCURSOS",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/professor-educacao-fisica-prefeitura-mato-leitao-rs-objetiva-concursos-2024",
-    "status_download": "pending",
-    "prova_pdf": null,
-    "gabarito_pdf": null
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\RS\\2024\\professor-educacao-fisica-prefeitura-mato-leitao-rs-objetiva-concursos-2024\\prova.pdf",
+    "gabarito_pdf": "content\\concursos\\raw-pdfs\\RS\\2024\\professor-educacao-fisica-prefeitura-mato-leitao-rs-objetiva-concursos-2024\\gabarito.pdf"
   },
   {
     "slug": "professor-educacao-fisica-prefeitura-marcelino-ramos-rs-objetiva-concursos-2024",
@@ -4051,9 +4051,9 @@
     "orgao": "Pref. Marcelino Ramos/RS",
     "banca": "OBJETIVA CONCURSOS",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/professor-educacao-fisica-prefeitura-marcelino-ramos-rs-objetiva-concursos-2024",
-    "status_download": "pending",
-    "prova_pdf": null,
-    "gabarito_pdf": null
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\RS\\2024\\professor-educacao-fisica-prefeitura-marcelino-ramos-rs-objetiva-concursos-2024\\prova.pdf",
+    "gabarito_pdf": "content\\concursos\\raw-pdfs\\RS\\2024\\professor-educacao-fisica-prefeitura-marcelino-ramos-rs-objetiva-concursos-2024\\gabarito.pdf"
   },
   {
     "slug": "professor-educacao-fisica-prefeitura-catuipe-rs-objetiva-concursos-2024",
@@ -4064,9 +4064,9 @@
     "orgao": "Pref. Catuípe/RS",
     "banca": "OBJETIVA CONCURSOS",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/professor-educacao-fisica-prefeitura-catuipe-rs-objetiva-concursos-2024",
-    "status_download": "pending",
-    "prova_pdf": null,
-    "gabarito_pdf": null
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\RS\\2024\\professor-educacao-fisica-prefeitura-catuipe-rs-objetiva-concursos-2024\\prova.pdf",
+    "gabarito_pdf": "content\\concursos\\raw-pdfs\\RS\\2024\\professor-educacao-fisica-prefeitura-catuipe-rs-objetiva-concursos-2024\\gabarito.pdf"
   },
   {
     "slug": "professor-educacao-fisica-prefeitura-candiota-rs-objetiva-concursos-2023",
@@ -4077,9 +4077,9 @@
     "orgao": "Pref. Candiota/RS",
     "banca": "OBJETIVA CONCURSOS",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/professor-educacao-fisica-prefeitura-candiota-rs-objetiva-concursos-2023",
-    "status_download": "pending",
-    "prova_pdf": null,
-    "gabarito_pdf": null
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\RS\\2023\\professor-educacao-fisica-prefeitura-candiota-rs-objetiva-concursos-2023\\prova.pdf",
+    "gabarito_pdf": "content\\concursos\\raw-pdfs\\RS\\2023\\professor-educacao-fisica-prefeitura-candiota-rs-objetiva-concursos-2023\\gabarito.pdf"
   },
   {
     "slug": "professor-educacao-fisica-prefeitura-sao-pedro-da-serra-rs-objetiva-concursos-2023",
@@ -4103,9 +4103,9 @@
     "orgao": "Pref. Porto Alegre/RS",
     "banca": "FUNDATEC",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/professor-educacao-fisica-prefeitura-porto-alegre-rs-fundatec-2023",
-    "status_download": "pending",
-    "prova_pdf": null,
-    "gabarito_pdf": null
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\RS\\2023\\professor-educacao-fisica-prefeitura-porto-alegre-rs-fundatec-2023\\prova.pdf",
+    "gabarito_pdf": "content\\concursos\\raw-pdfs\\RS\\2023\\professor-educacao-fisica-prefeitura-porto-alegre-rs-fundatec-2023\\gabarito.pdf"
   },
   {
     "slug": "professor-educacao-fisica-prefeitura-tupancireta-rs-objetiva-concursos-2023",
@@ -4129,9 +4129,9 @@
     "orgao": "Pref. Esperança do Sul/RS",
     "banca": "OBJETIVA CONCURSOS",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/professor-educacao-fisica-prefeitura-esperanca-do-sul-rs-objetiva-concursos-2023",
-    "status_download": "pending",
-    "prova_pdf": null,
-    "gabarito_pdf": null
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\RS\\2023\\professor-educacao-fisica-prefeitura-esperanca-do-sul-rs-objetiva-concursos-2023\\prova.pdf",
+    "gabarito_pdf": "content\\concursos\\raw-pdfs\\RS\\2023\\professor-educacao-fisica-prefeitura-esperanca-do-sul-rs-objetiva-concursos-2023\\gabarito.pdf"
   },
   {
     "slug": "professor-educacao-fisica-prefeitura-chiapetta-rs-objetiva-concursos-2023",
@@ -4142,9 +4142,9 @@
     "orgao": "Pref. Chiapetta/RS",
     "banca": "OBJETIVA CONCURSOS",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/professor-educacao-fisica-prefeitura-chiapetta-rs-objetiva-concursos-2023",
-    "status_download": "pending",
-    "prova_pdf": null,
-    "gabarito_pdf": null
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\RS\\2023\\professor-educacao-fisica-prefeitura-chiapetta-rs-objetiva-concursos-2023\\prova.pdf",
+    "gabarito_pdf": "content\\concursos\\raw-pdfs\\RS\\2023\\professor-educacao-fisica-prefeitura-chiapetta-rs-objetiva-concursos-2023\\gabarito.pdf"
   },
   {
     "slug": "professor-educacao-fisica-prefeitura-faxinal-do-soturno-rs-fundatec-2023",
@@ -4155,9 +4155,9 @@
     "orgao": "Pref. Faxinal do Soturno/RS",
     "banca": "FUNDATEC",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/professor-educacao-fisica-prefeitura-faxinal-do-soturno-rs-fundatec-2023",
-    "status_download": "pending",
-    "prova_pdf": null,
-    "gabarito_pdf": null
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\RS\\2023\\professor-educacao-fisica-prefeitura-faxinal-do-soturno-rs-fundatec-2023\\prova.pdf",
+    "gabarito_pdf": "content\\concursos\\raw-pdfs\\RS\\2023\\professor-educacao-fisica-prefeitura-faxinal-do-soturno-rs-fundatec-2023\\gabarito.pdf"
   },
   {
     "slug": "professor-educacao-fisica-prefeitura-lavras-do-sul-rs-objetiva-concursos-2023",
@@ -4168,9 +4168,9 @@
     "orgao": "Pref. Lavras do Sul/RS",
     "banca": "OBJETIVA CONCURSOS",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/professor-educacao-fisica-prefeitura-lavras-do-sul-rs-objetiva-concursos-2023",
-    "status_download": "pending",
-    "prova_pdf": null,
-    "gabarito_pdf": null
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\RS\\2023\\professor-educacao-fisica-prefeitura-lavras-do-sul-rs-objetiva-concursos-2023\\prova.pdf",
+    "gabarito_pdf": "content\\concursos\\raw-pdfs\\RS\\2023\\professor-educacao-fisica-prefeitura-lavras-do-sul-rs-objetiva-concursos-2023\\gabarito.pdf"
   },
   {
     "slug": "professor-educacao-fisica-prefeitura-sinimbu-rs-objetiva-concursos-2023",
@@ -4181,9 +4181,9 @@
     "orgao": "Pref. Sinimbu/RS",
     "banca": "OBJETIVA CONCURSOS",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/professor-educacao-fisica-prefeitura-sinimbu-rs-objetiva-concursos-2023",
-    "status_download": "pending",
-    "prova_pdf": null,
-    "gabarito_pdf": null
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\RS\\2023\\professor-educacao-fisica-prefeitura-sinimbu-rs-objetiva-concursos-2023\\prova.pdf",
+    "gabarito_pdf": "content\\concursos\\raw-pdfs\\RS\\2023\\professor-educacao-fisica-prefeitura-sinimbu-rs-objetiva-concursos-2023\\gabarito.pdf"
   },
   {
     "slug": "professor-educacao-fisica-prefeitura-tapes-rs-objetiva-concursos-2023",
@@ -4324,9 +4324,9 @@
     "orgao": "IFC/SC",
     "banca": "Fundatec",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/educacao-fisica-abelardo-luz-ifc-sc-fundatec-2026",
-    "status_download": "pending",
-    "prova_pdf": null,
-    "gabarito_pdf": null
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\SC\\2026\\educacao-fisica-abelardo-luz-ifc-sc-fundatec-2026\\prova.pdf",
+    "gabarito_pdf": "content\\concursos\\raw-pdfs\\SC\\2026\\educacao-fisica-abelardo-luz-ifc-sc-fundatec-2026\\gabarito.pdf"
   },
   {
     "slug": "educacao-fisica-concordia-ifc-sc-fundatec-2026",
@@ -4337,9 +4337,9 @@
     "orgao": "IFC/SC",
     "banca": "Fundatec",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/educacao-fisica-concordia-ifc-sc-fundatec-2026",
-    "status_download": "pending",
-    "prova_pdf": null,
-    "gabarito_pdf": null
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\SC\\2026\\educacao-fisica-concordia-ifc-sc-fundatec-2026\\prova.pdf",
+    "gabarito_pdf": "content\\concursos\\raw-pdfs\\SC\\2026\\educacao-fisica-concordia-ifc-sc-fundatec-2026\\gabarito.pdf"
   },
   {
     "slug": "educacao-fisica-ibirama-ifc-sc-fundatec-2026",
@@ -4350,9 +4350,9 @@
     "orgao": "IFC/SC",
     "banca": "Fundatec",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/educacao-fisica-ibirama-ifc-sc-fundatec-2026",
-    "status_download": "pending",
-    "prova_pdf": null,
-    "gabarito_pdf": null
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\SC\\2026\\educacao-fisica-ibirama-ifc-sc-fundatec-2026\\prova.pdf",
+    "gabarito_pdf": "content\\concursos\\raw-pdfs\\SC\\2026\\educacao-fisica-ibirama-ifc-sc-fundatec-2026\\gabarito.pdf"
   },
   {
     "slug": "educacao-fisica-videira-ifc-sc-fundatec-2026",
@@ -4363,9 +4363,9 @@
     "orgao": "IFC/SC",
     "banca": "Fundatec",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/educacao-fisica-videira-ifc-sc-fundatec-2026",
-    "status_download": "pending",
-    "prova_pdf": null,
-    "gabarito_pdf": null
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\SC\\2026\\educacao-fisica-videira-ifc-sc-fundatec-2026\\prova.pdf",
+    "gabarito_pdf": "content\\concursos\\raw-pdfs\\SC\\2026\\educacao-fisica-videira-ifc-sc-fundatec-2026\\gabarito.pdf"
   },
   {
     "slug": "educador-social-de-educacao-fisica-prefeitura-serra-alta-sc-instituto-evo-2025",
@@ -4376,9 +4376,9 @@
     "orgao": "Pref. Serra Alta/SC",
     "banca": "Instituto EVO",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/educador-social-de-educacao-fisica-prefeitura-serra-alta-sc-instituto-evo-2025",
-    "status_download": "pending",
-    "prova_pdf": null,
-    "gabarito_pdf": null
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\SC\\2025\\educador-social-de-educacao-fisica-prefeitura-serra-alta-sc-instituto-evo-2025\\prova.pdf",
+    "gabarito_pdf": "content\\concursos\\raw-pdfs\\SC\\2025\\educador-social-de-educacao-fisica-prefeitura-serra-alta-sc-instituto-evo-2025\\gabarito.pdf"
   },
   {
     "slug": "licenciatura-em-educacao-fisica-prefeitura-de-presidente-castello-branco-sc-fenix-instituto-2025",
@@ -4389,9 +4389,9 @@
     "orgao": "Prefeitura de Presidente Castello Branco - SC",
     "banca": "Fênix Instituto",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/licenciatura-em-educacao-fisica-prefeitura-de-presidente-castello-branco-sc-fenix-instituto-2025",
-    "status_download": "pending",
-    "prova_pdf": null,
-    "gabarito_pdf": null
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\SC\\2025\\licenciatura-em-educacao-fisica-prefeitura-de-presidente-castello-branco-sc-fenix-instituto-2025\\prova.pdf",
+    "gabarito_pdf": "content\\concursos\\raw-pdfs\\SC\\2025\\licenciatura-em-educacao-fisica-prefeitura-de-presidente-castello-branco-sc-fenix-instituto-2025\\gabarito.pdf"
   },
   {
     "slug": "professor-educacao-fisica-prefeitura-sao-miguel-do-oeste-sc-ameosc-2026",
@@ -4402,9 +4402,9 @@
     "orgao": "Pref. São Miguel do Oeste/SC",
     "banca": "AMEOSC",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/professor-educacao-fisica-prefeitura-sao-miguel-do-oeste-sc-ameosc-2026",
-    "status_download": "pending",
-    "prova_pdf": null,
-    "gabarito_pdf": null
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\SC\\2026\\professor-educacao-fisica-prefeitura-sao-miguel-do-oeste-sc-ameosc-2026\\prova.pdf",
+    "gabarito_pdf": "content\\concursos\\raw-pdfs\\SC\\2026\\professor-educacao-fisica-prefeitura-sao-miguel-do-oeste-sc-ameosc-2026\\gabarito.pdf"
   },
   {
     "slug": "professor-educacao-fisica-prefeitura-doutor-pedrinho-sc-furb-2023",
@@ -4415,9 +4415,9 @@
     "orgao": "Pref. Doutor Pedrinho/SC",
     "banca": "FURB",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/professor-educacao-fisica-prefeitura-doutor-pedrinho-sc-furb-2023",
-    "status_download": "pending",
-    "prova_pdf": null,
-    "gabarito_pdf": null
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\SC\\2023\\professor-educacao-fisica-prefeitura-doutor-pedrinho-sc-furb-2023\\prova.pdf",
+    "gabarito_pdf": "content\\concursos\\raw-pdfs\\SC\\2023\\professor-educacao-fisica-prefeitura-doutor-pedrinho-sc-furb-2023\\gabarito.pdf"
   },
   {
     "slug": "professor-area-educacao-fisica-prefeitura-seara-sc-amauc-2023",
@@ -4428,9 +4428,9 @@
     "orgao": "Pref. Seara/SC",
     "banca": "AMAUC",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/professor-area-educacao-fisica-prefeitura-seara-sc-amauc-2023",
-    "status_download": "pending",
-    "prova_pdf": null,
-    "gabarito_pdf": null
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\SC\\2023\\professor-area-educacao-fisica-prefeitura-seara-sc-amauc-2023\\prova.pdf",
+    "gabarito_pdf": "content\\concursos\\raw-pdfs\\SC\\2023\\professor-area-educacao-fisica-prefeitura-seara-sc-amauc-2023\\gabarito.pdf"
   },
   {
     "slug": "professor-do-6-ao-9-ano-ensino-fundamental-especialidade-educacao-fisica-prefeitura-joinville-sc-cebraspe-2022",
@@ -4454,8 +4454,8 @@
     "orgao": "SED-SC",
     "banca": "FURB Concursos",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/professor-educacao-basica-regular-educacao-fisica-sed-sc-furb-concursos-2025",
-    "status_download": "pending",
-    "prova_pdf": null,
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\SC\\2025\\professor-educacao-basica-regular-educacao-fisica-sed-sc-furb-concursos-2025\\prova.pdf",
     "gabarito_pdf": null
   },
   {
@@ -4467,8 +4467,8 @@
     "orgao": "SED-SC",
     "banca": "FURB Concursos",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/professor-educacao-basica-regular-fisica-sed-sc-furb-concursos-2025",
-    "status_download": "pending",
-    "prova_pdf": null,
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\SC\\2025\\professor-educacao-basica-regular-fisica-sed-sc-furb-concursos-2025\\prova.pdf",
     "gabarito_pdf": null
   },
   {
@@ -4480,8 +4480,8 @@
     "orgao": "SED-SC",
     "banca": "FURB Concursos",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/professor-educacao-escolar-indigena-educacao-fisica-sed-sc-furb-concursos-2025",
-    "status_download": "pending",
-    "prova_pdf": null,
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\SC\\2025\\professor-educacao-escolar-indigena-educacao-fisica-sed-sc-furb-concursos-2025\\prova.pdf",
     "gabarito_pdf": null
   },
   {
@@ -4493,8 +4493,8 @@
     "orgao": "SED-SC",
     "banca": "FURB Concursos",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/professor-educacao-escolar-indigena-fisica-sed-sc-furb-concursos-2025",
-    "status_download": "pending",
-    "prova_pdf": null,
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\SC\\2025\\professor-educacao-escolar-indigena-fisica-sed-sc-furb-concursos-2025\\prova.pdf",
     "gabarito_pdf": null
   },
   {
@@ -4506,8 +4506,8 @@
     "orgao": "SED/SC",
     "banca": "FURB",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/professor-educacao-fisica-sed-sc-furb-2026",
-    "status_download": "pending",
-    "prova_pdf": null,
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\SC\\2026\\professor-educacao-fisica-sed-sc-furb-2026\\prova.pdf",
     "gabarito_pdf": null
   },
   {
@@ -4532,9 +4532,9 @@
     "orgao": "Prefeitura de Concórdia - SC",
     "banca": "FEPESE",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/professor-educacao-fisica-prefeitura-de-concordia-sc-fepese-2025",
-    "status_download": "pending",
-    "prova_pdf": null,
-    "gabarito_pdf": null
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\SC\\2025\\professor-educacao-fisica-prefeitura-de-concordia-sc-fepese-2025\\prova.pdf",
+    "gabarito_pdf": "content\\concursos\\raw-pdfs\\SC\\2025\\professor-educacao-fisica-prefeitura-de-concordia-sc-fepese-2025\\gabarito.pdf"
   },
   {
     "slug": "professor-educacao-fisica-prefeitura-galvao-sc-objetiva-concursos-2024",
@@ -4571,9 +4571,9 @@
     "orgao": "SED/SC",
     "banca": "FURB",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/professor-educacao-fisica-sed-sc-furb-2024",
-    "status_download": "pending",
-    "prova_pdf": null,
-    "gabarito_pdf": null
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\SC\\2024\\professor-educacao-fisica-sed-sc-furb-2024\\prova.pdf",
+    "gabarito_pdf": "content\\concursos\\raw-pdfs\\SC\\2024\\professor-educacao-fisica-sed-sc-furb-2024\\gabarito.pdf"
   },
   {
     "slug": "professor-educacao-fisica-prefeitura-concordia-sc-fepese-2024",
@@ -4753,9 +4753,9 @@
     "orgao": "Pref. Porto Barreiro/PR",
     "banca": "FAU - UNICENTRO",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/bacharel-em-educacao-fisica-prefeitura-porto-barreiro-pr-fau-unicentro-2025",
-    "status_download": "pending",
-    "prova_pdf": null,
-    "gabarito_pdf": null
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\PR\\2025\\bacharel-em-educacao-fisica-prefeitura-porto-barreiro-pr-fau-unicentro-2025\\prova.pdf",
+    "gabarito_pdf": "content\\concursos\\raw-pdfs\\PR\\2025\\bacharel-em-educacao-fisica-prefeitura-porto-barreiro-pr-fau-unicentro-2025\\gabarito.pdf"
   },
   {
     "slug": "docencia-dos-componentes-curriculares-da-matriz-educacao-fisica-seed-pr-ibfc-2023",
@@ -4779,9 +4779,9 @@
     "orgao": "Pref.Prudentópolis/PR",
     "banca": "FAU - UNICENTRO",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/instrutor-de-educacao-fisica-prefeitura-prudentopolis-pr-fau-unicentro-2024",
-    "status_download": "pending",
-    "prova_pdf": null,
-    "gabarito_pdf": null
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\PR\\2024\\instrutor-de-educacao-fisica-prefeitura-prudentopolis-pr-fau-unicentro-2024\\prova.pdf",
+    "gabarito_pdf": "content\\concursos\\raw-pdfs\\PR\\2024\\instrutor-de-educacao-fisica-prefeitura-prudentopolis-pr-fau-unicentro-2024\\gabarito.pdf"
   },
   {
     "slug": "instrutor-de-educacao-fisica-prefeitura-jaguapita-pr-fauel-2024",
@@ -4792,9 +4792,9 @@
     "orgao": "Pref. Jaguapitã/PR",
     "banca": "FAUEL",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/instrutor-de-educacao-fisica-prefeitura-jaguapita-pr-fauel-2024",
-    "status_download": "pending",
-    "prova_pdf": null,
-    "gabarito_pdf": null
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\PR\\2024\\instrutor-de-educacao-fisica-prefeitura-jaguapita-pr-fauel-2024\\prova.pdf",
+    "gabarito_pdf": "content\\concursos\\raw-pdfs\\PR\\2024\\instrutor-de-educacao-fisica-prefeitura-jaguapita-pr-fauel-2024\\gabarito.pdf"
   },
   {
     "slug": "professor-educacao-fisica-seed-pr-instituto-consulplan-2024-93",
@@ -4805,9 +4805,9 @@
     "orgao": "SEED/PR",
     "banca": "INSTITUTO CONSULPLAN",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/professor-educacao-fisica-seed-pr-instituto-consulplan-2024-93",
-    "status_download": "pending",
-    "prova_pdf": null,
-    "gabarito_pdf": null
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\PR\\2024\\professor-educacao-fisica-seed-pr-instituto-consulplan-2024-93\\prova.pdf",
+    "gabarito_pdf": "content\\concursos\\raw-pdfs\\PR\\2024\\professor-educacao-fisica-seed-pr-instituto-consulplan-2024-93\\gabarito.pdf"
   },
   {
     "slug": "professor-educacao-fisica-seed-pr-instituto-consulplan-2024",
@@ -4818,9 +4818,9 @@
     "orgao": "SEED/PR",
     "banca": "INSTITUTO CONSULPLAN",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/professor-educacao-fisica-seed-pr-instituto-consulplan-2024",
-    "status_download": "pending",
-    "prova_pdf": null,
-    "gabarito_pdf": null
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\PR\\2024\\professor-educacao-fisica-seed-pr-instituto-consulplan-2024\\prova.pdf",
+    "gabarito_pdf": "content\\concursos\\raw-pdfs\\PR\\2024\\professor-educacao-fisica-seed-pr-instituto-consulplan-2024\\gabarito.pdf"
   },
   {
     "slug": "professor-educacao-fisica-prefeitura-maripa-pr-objetiva-concursos-2024",
@@ -4831,9 +4831,9 @@
     "orgao": "Pref. Maripá/PR",
     "banca": "OBJETIVA CONCURSOS",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/professor-educacao-fisica-prefeitura-maripa-pr-objetiva-concursos-2024",
-    "status_download": "pending",
-    "prova_pdf": null,
-    "gabarito_pdf": null
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\PR\\2024\\professor-educacao-fisica-prefeitura-maripa-pr-objetiva-concursos-2024\\prova.pdf",
+    "gabarito_pdf": "content\\concursos\\raw-pdfs\\PR\\2024\\professor-educacao-fisica-prefeitura-maripa-pr-objetiva-concursos-2024\\gabarito.pdf"
   },
   {
     "slug": "professor-educacao-fisica-prefeitura-castro-pr-objetiva-concursos-2024",
@@ -4844,9 +4844,9 @@
     "orgao": "Pref. Castro/PR",
     "banca": "OBJETIVA CONCURSOS",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/professor-educacao-fisica-prefeitura-castro-pr-objetiva-concursos-2024",
-    "status_download": "pending",
-    "prova_pdf": null,
-    "gabarito_pdf": null
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\PR\\2024\\professor-educacao-fisica-prefeitura-castro-pr-objetiva-concursos-2024\\prova.pdf",
+    "gabarito_pdf": "content\\concursos\\raw-pdfs\\PR\\2024\\professor-educacao-fisica-prefeitura-castro-pr-objetiva-concursos-2024\\gabarito.pdf"
   },
   {
     "slug": "professor-educacao-fisica-prefeitura-ipiranga-pr-instituto-univida-2024",
@@ -4857,9 +4857,9 @@
     "orgao": "Pref. Ipiranga/PR",
     "banca": "Instituto Univida",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/professor-educacao-fisica-prefeitura-ipiranga-pr-instituto-univida-2024",
-    "status_download": "pending",
-    "prova_pdf": null,
-    "gabarito_pdf": null
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\PR\\2024\\professor-educacao-fisica-prefeitura-ipiranga-pr-instituto-univida-2024\\prova.pdf",
+    "gabarito_pdf": "content\\concursos\\raw-pdfs\\PR\\2024\\professor-educacao-fisica-prefeitura-ipiranga-pr-instituto-univida-2024\\gabarito.pdf"
   },
   {
     "slug": "professor-20-horas-educacao-fisica-prefeitura-dr-camargo-pr-instituto-univida-2024",
@@ -4870,9 +4870,9 @@
     "orgao": "Pref. Dr. Camargo/PR",
     "banca": "INSTITUTO UNIVIDA",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/professor-20-horas-educacao-fisica-prefeitura-dr-camargo-pr-instituto-univida-2024",
-    "status_download": "pending",
-    "prova_pdf": null,
-    "gabarito_pdf": null
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\PR\\2024\\professor-20-horas-educacao-fisica-prefeitura-dr-camargo-pr-instituto-univida-2024\\prova.pdf",
+    "gabarito_pdf": "content\\concursos\\raw-pdfs\\PR\\2024\\professor-20-horas-educacao-fisica-prefeitura-dr-camargo-pr-instituto-univida-2024\\gabarito.pdf"
   },
   {
     "slug": "professor-de-educacao-fisica-prefeitura-rio-negro-pr-objetiva-concursos-2025",
@@ -4883,9 +4883,9 @@
     "orgao": "Pref. Rio Negro/PR",
     "banca": "OBJETIVA CONCURSOS",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/professor-de-educacao-fisica-prefeitura-rio-negro-pr-objetiva-concursos-2025",
-    "status_download": "pending",
-    "prova_pdf": null,
-    "gabarito_pdf": null
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\PR\\2025\\professor-de-educacao-fisica-prefeitura-rio-negro-pr-objetiva-concursos-2025\\prova.pdf",
+    "gabarito_pdf": "content\\concursos\\raw-pdfs\\PR\\2025\\professor-de-educacao-fisica-prefeitura-rio-negro-pr-objetiva-concursos-2025\\gabarito.pdf"
   },
   {
     "slug": "professor-de-educacao-fisica-prefeitura-toledo-pr-fau-unicentro-2025",
@@ -4896,9 +4896,9 @@
     "orgao": "Pref. Toledo/PR",
     "banca": "FAU - UNICENTRO",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/professor-de-educacao-fisica-prefeitura-toledo-pr-fau-unicentro-2025",
-    "status_download": "pending",
-    "prova_pdf": null,
-    "gabarito_pdf": null
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\PR\\2025\\professor-de-educacao-fisica-prefeitura-toledo-pr-fau-unicentro-2025\\prova.pdf",
+    "gabarito_pdf": "content\\concursos\\raw-pdfs\\PR\\2025\\professor-de-educacao-fisica-prefeitura-toledo-pr-fau-unicentro-2025\\gabarito.pdf"
   },
   {
     "slug": "professor-de-educacao-fisica-prefeitura-santa-mariana-pr-instituto-unifil-2025",
@@ -4909,9 +4909,9 @@
     "orgao": "Pref. Santa Mariana/PR",
     "banca": "Instituto Unifil",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/professor-de-educacao-fisica-prefeitura-santa-mariana-pr-instituto-unifil-2025",
-    "status_download": "pending",
-    "prova_pdf": null,
-    "gabarito_pdf": null
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\PR\\2025\\professor-de-educacao-fisica-prefeitura-santa-mariana-pr-instituto-unifil-2025\\prova.pdf",
+    "gabarito_pdf": "content\\concursos\\raw-pdfs\\PR\\2025\\professor-de-educacao-fisica-prefeitura-santa-mariana-pr-instituto-unifil-2025\\gabarito.pdf"
   },
   {
     "slug": "professor-de-educacao-fisica-prefeitura-ceu-azul-pr-fau-unicentro-2025",
@@ -4922,9 +4922,9 @@
     "orgao": "Pref. Céu Azul/PR",
     "banca": "FAU - UNICENTRO",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/professor-de-educacao-fisica-prefeitura-ceu-azul-pr-fau-unicentro-2025",
-    "status_download": "pending",
-    "prova_pdf": null,
-    "gabarito_pdf": null
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\PR\\2025\\professor-de-educacao-fisica-prefeitura-ceu-azul-pr-fau-unicentro-2025\\prova.pdf",
+    "gabarito_pdf": "content\\concursos\\raw-pdfs\\PR\\2025\\professor-de-educacao-fisica-prefeitura-ceu-azul-pr-fau-unicentro-2025\\gabarito.pdf"
   },
   {
     "slug": "professor-de-educacao-fisica-prefeitura-francisco-alves-pr-objetiva-concursos-2025",
@@ -4935,9 +4935,9 @@
     "orgao": "Pref. Francisco Alves/PR",
     "banca": "OBJETIVA CONCURSOS",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/professor-de-educacao-fisica-prefeitura-francisco-alves-pr-objetiva-concursos-2025",
-    "status_download": "pending",
-    "prova_pdf": null,
-    "gabarito_pdf": null
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\PR\\2025\\professor-de-educacao-fisica-prefeitura-francisco-alves-pr-objetiva-concursos-2025\\prova.pdf",
+    "gabarito_pdf": "content\\concursos\\raw-pdfs\\PR\\2025\\professor-de-educacao-fisica-prefeitura-francisco-alves-pr-objetiva-concursos-2025\\gabarito.pdf"
   },
   {
     "slug": "professor-de-educacao-fisica-prefeitura-maua-da-serra-pr-gama-2025",
@@ -4948,9 +4948,9 @@
     "orgao": "Pref. Mauá da Serra/PR",
     "banca": "GAMA",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/professor-de-educacao-fisica-prefeitura-maua-da-serra-pr-gama-2025",
-    "status_download": "pending",
-    "prova_pdf": null,
-    "gabarito_pdf": null
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\PR\\2025\\professor-de-educacao-fisica-prefeitura-maua-da-serra-pr-gama-2025\\prova.pdf",
+    "gabarito_pdf": "content\\concursos\\raw-pdfs\\PR\\2025\\professor-de-educacao-fisica-prefeitura-maua-da-serra-pr-gama-2025\\gabarito.pdf"
   },
   {
     "slug": "professor-de-educacao-fisica-prefeitura-jandaia-do-sul-pr-instituto-univida-2024",
@@ -4961,9 +4961,9 @@
     "orgao": "Pref. Jandaia do Sul/PR",
     "banca": "Instituto Univida",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/professor-de-educacao-fisica-prefeitura-jandaia-do-sul-pr-instituto-univida-2024",
-    "status_download": "pending",
-    "prova_pdf": null,
-    "gabarito_pdf": null
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\PR\\2024\\professor-de-educacao-fisica-prefeitura-jandaia-do-sul-pr-instituto-univida-2024\\prova.pdf",
+    "gabarito_pdf": "content\\concursos\\raw-pdfs\\PR\\2024\\professor-de-educacao-fisica-prefeitura-jandaia-do-sul-pr-instituto-univida-2024\\gabarito.pdf"
   },
   {
     "slug": "professor-de-educacao-fisica-prefeitura-bom-sucesso-do-sul-pr-instituto-univida-2024",
@@ -4974,9 +4974,9 @@
     "orgao": "Pref. Bom Sucesso do Sul/PR",
     "banca": "Instituto Univida",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/professor-de-educacao-fisica-prefeitura-bom-sucesso-do-sul-pr-instituto-univida-2024",
-    "status_download": "pending",
-    "prova_pdf": null,
-    "gabarito_pdf": null
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\PR\\2024\\professor-de-educacao-fisica-prefeitura-bom-sucesso-do-sul-pr-instituto-univida-2024\\prova.pdf",
+    "gabarito_pdf": "content\\concursos\\raw-pdfs\\PR\\2024\\professor-de-educacao-fisica-prefeitura-bom-sucesso-do-sul-pr-instituto-univida-2024\\gabarito.pdf"
   },
   {
     "slug": "professor-de-educacao-fisica-prefeitura-sao-joao-do-ivai-pr-access-2024",
@@ -4987,9 +4987,9 @@
     "orgao": "Pref. São João do Ivaí/PR",
     "banca": "ACCESS",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/professor-de-educacao-fisica-prefeitura-sao-joao-do-ivai-pr-access-2024",
-    "status_download": "pending",
-    "prova_pdf": null,
-    "gabarito_pdf": null
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\PR\\2024\\professor-de-educacao-fisica-prefeitura-sao-joao-do-ivai-pr-access-2024\\prova.pdf",
+    "gabarito_pdf": "content\\concursos\\raw-pdfs\\PR\\2024\\professor-de-educacao-fisica-prefeitura-sao-joao-do-ivai-pr-access-2024\\gabarito.pdf"
   },
   {
     "slug": "professor-de-educacao-fisica-prefeitura-florai-pr-instituto-univida-2024",
@@ -5000,9 +5000,9 @@
     "orgao": "Pref. Floraí/PR",
     "banca": "Instituto Univida",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/professor-de-educacao-fisica-prefeitura-florai-pr-instituto-univida-2024",
-    "status_download": "pending",
-    "prova_pdf": null,
-    "gabarito_pdf": null
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\PR\\2024\\professor-de-educacao-fisica-prefeitura-florai-pr-instituto-univida-2024\\prova.pdf",
+    "gabarito_pdf": "content\\concursos\\raw-pdfs\\PR\\2024\\professor-de-educacao-fisica-prefeitura-florai-pr-instituto-univida-2024\\gabarito.pdf"
   },
   {
     "slug": "professor-de-educacao-fisica-prefeitura-peabiru-pr-instituto-univida-2024",
@@ -5013,9 +5013,9 @@
     "orgao": "Pref. Peabiru/PR",
     "banca": "Instituto Univida",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/professor-de-educacao-fisica-prefeitura-peabiru-pr-instituto-univida-2024",
-    "status_download": "pending",
-    "prova_pdf": null,
-    "gabarito_pdf": null
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\PR\\2024\\professor-de-educacao-fisica-prefeitura-peabiru-pr-instituto-univida-2024\\prova.pdf",
+    "gabarito_pdf": "content\\concursos\\raw-pdfs\\PR\\2024\\professor-de-educacao-fisica-prefeitura-peabiru-pr-instituto-univida-2024\\gabarito.pdf"
   },
   {
     "slug": "professor-de-educacao-fisica-prefeitura-ourizona-pr-instituto-univida-2024",
@@ -5026,8 +5026,8 @@
     "orgao": "Pref. Ourizona/PR",
     "banca": "INSTITUTO UNIVIDA",
     "pci_url": "https://www.pciconcursos.com.br/provas/download/professor-de-educacao-fisica-prefeitura-ourizona-pr-instituto-univida-2024",
-    "status_download": "pending",
-    "prova_pdf": null,
-    "gabarito_pdf": null
+    "status_download": "downloaded",
+    "prova_pdf": "content\\concursos\\raw-pdfs\\PR\\2024\\professor-de-educacao-fisica-prefeitura-ourizona-pr-instituto-univida-2024\\prova.pdf",
+    "gabarito_pdf": "content\\concursos\\raw-pdfs\\PR\\2024\\professor-de-educacao-fisica-prefeitura-ourizona-pr-instituto-univida-2024\\gabarito.pdf"
   }
 ]

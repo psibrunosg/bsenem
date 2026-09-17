@@ -126,9 +126,20 @@ def download_batch(limit=10, uf_filter=None, cargo_filter=None, balanced=True):
             item["gabarito_pdf"] = os.path.relpath(gabarito_dest, ROOT_DIR) if gabarito_dest else None
             count += 1
 
-            # Salva progresso incremental
-            with open(MANIFEST_PATH, "w", encoding="utf-8") as f:
-                json.dump(manifest, f, ensure_ascii=False, indent=2)
+            # Salva progresso incremental recarregando o manifesto atual
+            try:
+                with open(MANIFEST_PATH, "r", encoding="utf-8") as f:
+                    latest_manifest = json.load(f)
+                for entry in latest_manifest:
+                    if entry["pci_url"] == item["pci_url"]:
+                        entry["status_download"] = "downloaded"
+                        entry["prova_pdf"] = item["prova_pdf"]
+                        entry["gabarito_pdf"] = item["gabarito_pdf"]
+                        break
+                with open(MANIFEST_PATH, "w", encoding="utf-8") as f:
+                    json.dump(latest_manifest, f, ensure_ascii=False, indent=2)
+            except Exception as save_err:
+                print(f"  Aviso ao salvar manifesto: {save_err}")
 
             time.sleep(2)  # Intervalo de segurança
 
