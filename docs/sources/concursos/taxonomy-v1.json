@@ -1,0 +1,46 @@
+{
+  "version": "concursos-taxonomy.v1",
+  "specialties": {
+    "psicologia": {
+      "label": "Psicologia",
+      "topics": [
+        ["fundamentos-teorias", "Fundamentos e teorias"],
+        ["desenvolvimento", "Desenvolvimento"],
+        ["processos-psicologicos", "Processos psicológicos"],
+        ["avaliacao-psicologica", "Avaliação psicológica"],
+        ["psicopatologia-saude-mental", "Psicopatologia e saúde mental"],
+        ["social-comunitaria", "Psicologia social e comunitária"],
+        ["trabalho-organizacoes", "Trabalho e organizações"],
+        ["etica-legislacao-politicas", "Ética, legislação e políticas públicas"],
+        ["intervencoes", "Intervenções psicológicas"]
+      ]
+    },
+    "nutricao": {
+      "label": "Nutrição",
+      "topics": [
+        ["fundamentos-avaliacao", "Fundamentos e avaliação nutricional"],
+        ["bioquimica-metabolismo", "Bioquímica e metabolismo"],
+        ["tecnica-dietetica", "Técnica dietética"],
+        ["ciclos-da-vida", "Nutrição nos ciclos da vida"],
+        ["clinica-dietoterapia", "Nutrição clínica e dietoterapia"],
+        ["alimentacao-coletiva", "Alimentação coletiva"],
+        ["ciencia-higiene-seguranca", "Ciência, higiene e segurança dos alimentos"],
+        ["saude-coletiva-politicas", "Saúde coletiva e políticas de alimentação"],
+        ["etica-legislacao", "Ética e legislação profissional"]
+      ]
+    },
+    "educacao-fisica": {
+      "label": "Educação Física",
+      "topics": [
+        ["fundamentos-historicos-sociais", "Fundamentos históricos, sociais e culturais"],
+        ["anatomia-fisiologia-biomecanica", "Anatomia, fisiologia e biomecânica"],
+        ["avaliacao-treinamento", "Avaliação e treinamento físico"],
+        ["desenvolvimento-aprendizagem-motora", "Desenvolvimento e aprendizagem motora"],
+        ["atividade-fisica-saude", "Atividade física e saúde"],
+        ["educacao-fisica-escolar", "Educação física escolar"],
+        ["praticas-corporais", "Esportes, jogos, lutas, danças e ginásticas"],
+        ["lazer-gestao-etica-legislacao", "Lazer, gestão, ética e legislação"]
+      ]
+    }
+  }
+}
