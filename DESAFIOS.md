@@ -36,3 +36,22 @@ Anotações de fricção que voltam a aparecer. Leia antes de começar uma sess�
 - Os simulados não são carregados por `fetch`: o app lê a biblioteca local via
   File System Access API, então o usuário precisa apontar a pasta que contém
   `data/enem/simulados/`.
+
+## Deploy / VPS
+
+- **O workflow `deploy.yml` publica no GitHub Pages, não na VPS.** A VPS
+  (`estudos.bssaude.com.br`) serve um build Vite de `/var/www/bsenem/current`
+  por um mecanismo que não está no repositório. Conferir "está na VPS?" é
+  comparar o bundle servido, não olhar o CI.
+- **`npm run test` roda antes do build no CI.** Um único teste vermelho trava a
+  publicação inteira e o site continua no ar com a versão antiga — sem nenhum
+  aviso. Se o site parece desatualizado, o primeiro lugar a olhar é
+  `gh run list`.
+- **GitHub Pages está quebrado**: o build é publicado sem `BASE_PATH=/bsenem/`,
+  então o HTML aponta para `/assets/...` e o bundle dá 404. A VPS não sofre
+  disso porque serve na raiz do domínio.
+- **Os simulados não chegam ao build.** O Vite só copia `public/`, e o app lê a
+  biblioteca local via File System Access API. `data/enem/simulados/` só é
+  acessível apontando a pasta local no app.
+- `pdo_sqlite` não está instalado no PHP local (só `pdo_pgsql`), então
+  `npm run test:backend` falha aqui e passa no CI. Não é bug do repositório.
