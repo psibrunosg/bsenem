@@ -5,12 +5,14 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "dev:api": "php -S localhost:8000 backend/router.php",
     "build": "vite build",
     "preview": "vite preview",
     "test": "vitest run",
     "test:watch": "vitest",
     "test:backend": "php backend/tests/auth_test.php",
-    "lint:php": "php backend/tests/lint_test.php"
+    "lint:php": "php backend/tests/lint_test.php",
+    "provision-user": "php backend/cli/provision-user.php"
   },
   "devDependencies": {
     "@playwright/test": "^1.55.0",

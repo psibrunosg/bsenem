@@ -7,7 +7,14 @@ export default defineConfig(() => {
   return {
     root: '.',
     base: basePath,
-    server: { port: 8765, open: true },
+    server: {
+      port: 8765,
+      open: true,
+      // O front chama /api na mesma origem (em produção quem resolve é o
+      // nginx). No dev server isso cairia no próprio Vite, então encaminha
+      // para o PHP embutido — `npm run dev:api`.
+      proxy: { '/api': { target: 'http://localhost:8000', changeOrigin: true } }
+    },
     build: {
       outDir: 'dist',
       assetsDir: 'assets',
