@@ -1,0 +1,697 @@
+{
+  "schema": "bsestudos.exam.v1",
+  "id": "simulado-linguagens-779a69f3",
+  "title": "Simulado — Linguagens e Códigos (45 Questões)",
+  "durationMinutes": 135,
+  "subject": "Linguagens e Códigos",
+  "questions": [
+    {
+      "id": "enem-2011-d2-q100",
+      "statement": "Texto I\nOnde está a honestidade?\n\nVocê tem palacete reluzente\nTem joias e criados à vontade\nSem ter nenhuma herança ou parente\nSó anda de automóvel na cidade...\n\nE o povo pergunta com maldade:\nOnde está a honestidade?\nOnde está a honestidade?\n\nO seu dinheiro nasce de repente\nE embora não se saiba se é verdade\nVocê acha nas ruas diariamente\nAnéis, dinheiro e felicidade...\n\nVassoura dos salões da sociedade\nQue varre o que encontrar em sua frente\nPromove festivais de caridade\nEm nome de qualquer defunto ausente...\n\nROSA, N. Disponível em: http://www.mpbnet.com.br. Acesso em: abr. 2010.\n\nTexto II\nUm vulto da história da música popular brasileira, \nreconhecido nacionalmente, é Noel Rosa. Ele nasceu \nem 1910, no Rio de Janeiro; portanto, se estivesse vivo, \nestaria completando 100 anos. Mas faleceu aos 26 anos \nde idade, vítima de tuberculose, deixando um acervo de \ngrande valor para o patrimônio cultural brasileiro. Muitas \nde suas letras representam a sociedade contemporânea, \ncomo se tivessem sido escritas no século XXI.\n\nDisponível em: http://www.mpbnet.com.br. Acesso em: abr. 2010.\nUm texto pertencente ao patrimônio literário-cultural \nbrasileiro é atualizável, na medida em que ele se \nrefere a valores e situações de um povo. A atualidade \nda canção Onde está a honestidade?, de Noel Rosa, \nevidencia-se por meio",
+      "options": [
+        "da ironia, ao se referir ao enriquecimento de origem \n\nduvidosa de alguns.",
+        "da crítica aos ricos que possuem joias, mas não têm \n\nherança.",
+        "da maldade do povo a perguntar sobre a honestidade.",
+        "do privilégio de alguns em clamar pela honestidade.",
+        "da insistência em promover eventos beneficentes."
+      ],
+      "correctOption": 0,
+      "explanation": "Origem: ENEM 2011 • Linguagens e Códigos • Questão #100",
+      "images": [
+        "assets/2011/dia-2/q100_fig1.png"
+      ]
+    },
+    {
+      "id": "enem-2016-d2-q099",
+      "statement": "Em casa, Hideo ainda podia seguir fiel ao imperador \njaponês e às tradições que trouxera no navio que \naportara em Santos. […] Por isso Hideo exigia que, aos \ndomingos, todos estivessem juntos durante o almoço. \nEle se sentava à cabeceira da mesa; à direita ficava \nHanashiro, que era o primeiro filho, e Hitoshi, o segundo, \ne à esquerda, Haruo, depois Hiroshi, que era o mais \nnovo. […] A esposa, que também era mãe, e as filhas, \nque também eram irmãs, aguardavam de pé ao redor da \nmesa […]. Haruo reclamava, não se cansava de reclamar: \nque se sentassem também as mulheres à mesa, que era \num absurdo aquele costume. Quando se casasse, se \nsentariam à mesa a esposa e o marido, um em frente \nao outro, porque não era o homem melhor que a mulher \npara ser o primeiro […]. Elas seguiam de pé, a mãe um \npouco cansada dos protestos do filho, pois o momento do \nalmoço era sagrado, não era hora de levantar bandeiras \ninúteis […].\n\no\n\n \n\n=\n\nNAKASATO, O. Nihonjin. São Paulo: Benvirá, 2011 (fragmento).\n\nReferindo-se a práticas culturais de origem nipônica, o \nnarrador registra as reações que elas provocam na família \ne mostra um contexto em que",
+      "options": [
+        "a obediência ao imperador leva ao prestígio pessoal.",
+        "as novas gerações abandonam seus antigos hábitos.",
+        "a refeição é o que determina a agregação familiar.",
+        "os conflitos de gênero tendem a ser neutralizados.",
+        "o lugar à mesa metaforiza uma estrutura de poder."
+      ],
+      "correctOption": 4,
+      "explanation": "Origem: ENEM 2016 • Linguagens e Códigos • Questão #99",
+      "images": [
+        "assets/2016/dia-2/q99_fig1.png"
+      ]
+    },
+    {
+      "id": "enem-2009-d2-q119",
+      "statement": "Texto I \n\nO professor deve ser um guia seguro, muito \n\nsenhor de sua língua; se outra for a orientação, vamos cair \n\nna “língua brasileira”, refúgio nefasto e confissão nojenta \n\nde ignorância do idioma pátrio, recurso vergonhoso de \n\nhomens de cultura falsa e de falso patriotismo. Como \n\nhavemos de querer que respeitem a nossa nacionalidade \n\nse somos os primeiros a descuidar daquilo que exprime e \n\nrepresenta o idioma pátrio? \n\nALMEIDA, N. M. Gramática metódica da língua portuguesa.  \n\nPrefácio. São Paulo: Saraiva, 1999 (adaptado). \n\nTexto II \n\nAlguns leitores poderão achar que a linguagem \n\ndesta Gramática se afasta do padrão estrito usual neste \n\ntipo de livro.  Assim, o autor escreve tenho que reformular, \n\ne não tenho de reformular; pode-se colocar dois \n\nconstituintes, e não podem-se colocar dois constituintes; e \n\nassim por diante. Isso foi feito de caso pensado, com a \n\npreocupação de aproximar a linguagem da gramática do \n\npadrão atual brasileiro presente nos textos técnicos e \n\njornalísticos de nossa época. \n\nREIS, N. Nota do editor. PERINI, M. A. Gramática descritiva  \n\ndo português. São Paulo: Ática, 1996. \n\nConfrontando-se as opiniões defendidas nos dois textos, \n\nconclui-se que",
+      "options": [
+        "ambos os textos tratam da questão do uso da língua \n\ncom o objetivo de criticar a linguagem do brasileiro.",
+        "os dois textos defendem a ideia de que o estudo da \n\ngramática deve ter o objetivo de ensinar as regras \n\nprescritivas da língua.",
+        "a questão do português falado no Brasil é abordada \n\nnos dois textos, que procuram justificar como é correto \n\ne aceitável o uso coloquial do idioma.",
+        "o primeiro texto enaltece o padrão estrito da língua, ao \n\npasso que o segundo defende que a linguagem \n\njornalística deve criar suas próprias regras gramaticais.",
+        "o primeiro texto prega a rigidez gramatical no uso da \n\nlíngua, enquanto o segundo defende uma adequação \n\nda língua escrita ao padrão atual brasileiro."
+      ],
+      "correctOption": 4,
+      "explanation": "Origem: ENEM 2009 • Linguagens e Códigos • Questão #119"
+    },
+    {
+      "id": "enem-2024-d1-q025",
+      "statement": "ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024\n\nA Língua da Tabatinga, falada na cidade de \nBom  Despacho, Minas Gerais, foi por muito tempo \nestigmatizada devido à sua origem e à própria classe social de \nseus falantes, pois, segundo uma pesquisadora, era falada por \n“meninos pobres vindos da Tabatinga ou de Cruz de Monte — \nruas da periferia da cidade cujos habitantes sempre \nforam tidos por marginais”. Conhecida por antigos como a \n“língua dos engraxates”, pois muitos trabalhadores desse \nofício conversavam nessa língua enquanto lustravam \nsapatos na praça da matriz, a Língua da Tabatinga era \nutilizada por negros escravizados como uma espécie de \n“língua secreta”, um código para trocarem informações de \ncomo conseguir alimentos, ou para planejar fugas de seus \nsenhores sem risco de serem descobertos por eles.\n\nDe acordo com um documento do Iphan (2011), \nos falantes da língua apresentam uma forte consciência de \nsua relação com a descendência africana e da importância \nde preservar a “fala que os identifica na região”. Essa \nmudança de compreensão tangencia aspectos de \npertencimento, pois, à medida que o falante da Língua \nda Tabatinga se identifica com a origem afro-brasileira, \nele passa a ver essa língua como um legado recebido \ne tem o cuidado de transmiti-la para outras gerações. \nA concentração de falantes dessa língua está na faixa \nentre 21 e 60 anos de idade.\n\nDisponível em: www.historiaeparcerias2019.rj.anpuh.org. \n\nAcesso em: 3 fev. 2024 (adaptado).\n\nA Língua da Tabatinga tem sido preservada porque o(a)",
+      "options": [
+        "seu registro passou da forma oral para a escrita.",
+        "classe social de seus usuários ganhou prestígio.",
+        "sua função inicial se manteve ao longo dos anos.",
+        "sentimento de identidade linguística tem se consolidado.",
+        "perfil etário de seus falantes tem se tornado homogêneo."
+      ],
+      "correctOption": 3,
+      "explanation": "Origem: ENEM 2024 • Linguagens e Códigos • Questão #25",
+      "images": [
+        "assets/2024/dia-1/q25_fig1.png"
+      ]
+    },
+    {
+      "id": "enem-2009-d2-q117",
+      "statement": "Na estruturação do texto, destaca-se",
+      "options": [
+        "a construção de oposições semânticas.",
+        "a apresentação de ideias de forma objetiva.",
+        "o emprego recorrente de figuras de linguagem, como o \n\neufemismo.",
+        "a repetição de sons e de construções sintáticas \n\nsemelhantes.",
+        "a inversão da ordem sintática das palavras."
+      ],
+      "correctOption": 3,
+      "explanation": "Origem: ENEM 2009 • Linguagens e Códigos • Questão #117"
+    },
+    {
+      "id": "enem-2022-d1-q009",
+      "statement": "A conquista da medalha de prata por Rayssa Leal, \nno skate street nos Jogos Olímpicos, é exemplo da \nrepresentatividade feminina no esporte, avalia a âncora do \njornal da rede de televisão da CNN. A apresentadora, que \ntambém anda de skate, celebrou a vitória da brasileira, \nque entrou para a história como a atleta mais nova a subir \nnum pódio defendendo o Brasil. “Essa representatividade \ndo esporte nos Jogos faz pensarmos que não temos que \nficar nos encaixando em nenhum lugar. Posso gostar de \npassar notícia e, mesmo assim, gostar de skate, subir \nmontanha, mergulhar, andar de bike, fazer yoga. Temos \nque parar de ficar enquadrando as pessoas dentro de \nregras. A gente vive num padrão no qual a menina ganha \nboneca, mas por que também não fazer um esporte de \naventura? Por que o homem pode se machucar, cair de \njoelhos, e a menina tem que estar sempre lindinha dentro \nde um padrão? Acabamos limitando os talentos das \npessoas”, afirmou a jornalista, sobre a prática do skate \npor mulheres.\n\nDisponível em: www.cnnbrasil.com.br. Acesso em: 31 out. 2021 (adaptado).\nO discurso da jornalista traz questionamentos sobre a \nrelação da conquista da skatista com a",
+      "options": [
+        "A\t conciliação do jornalismo com a prática do skate.",
+        "B\t inserção das mulheres na modalidade skate street.",
+        "C\t desconstrução da noção do skate como modalidade \n\nmasculina.",
+        "D\t vanguarda de ser a atleta mais jovem a subir no pódio \n\nolímpico.",
+        "E\t conquista de medalha nos Jogos Olímpicos \n\nde Tóquio."
+      ],
+      "correctOption": 2,
+      "explanation": "Origem: ENEM 2022 • Linguagens e Códigos • Questão #9"
+    },
+    {
+      "id": "enem-2014-d2-q109",
+      "statement": "Cordel resiste à tecnologia gráfica\n\nO Cariri mantém uma das mais ricas tradições da \ncultura popular. É a literatura de cordel, que atravessa os \nséculos sem ser destruída pela avalanche de modernidade \nque invade o sertão lírico e telúrico. Na contramão do \nprogresso, que informatizou a indústria gráfica, a Lira \nNordestina, de Juazeiro do Norte, e a Academia dos \nCordelistas do Crato conservam, em suas oficinas, velhas \nmáquinas para impressão dos seus cordéis.\n\nA chapa para impressão do cordel é feita à mão, \nletra por letra, um trabalho artesanal que dura cerca de \numa hora para confecção de uma página. Em seguida, \na chapa é levada para a impressora, também manual, \npara imprimir. A manutenção desse sistema antigo de \nimpressão faz parte da filosofia do trabalho. A outra etapa \né a confecção da xilogravura para a capa do cordel.\n\nAs xilogravuras são ilustrações populares obtidas por \ngravuras talhadas em madeira. A origem da xilogravura \nnordestina até hoje é ignorada. Acredita-se que os \nmissionários portugueses tenham ensinado sua técnica \naos índios, como uma atividade extra-catequese, \npartindo do princípio religioso que defende a necessidade \nde ocupar as mãos para que a mente não fique livre, \nsujeita aos maus pensamentos, ao pecado. A xilogravura \nantecedeu ao clichê, placa fotomecanicamente gravada \nem relevo sobre metal, usualmente zinco, que era utilizada \nnos jornais impressos em rotoplanas.\n\nVICELMO, A. Disponível em: www.onordeste.com. Acesso em: 24 fev. 2013 (adaptado).\n\nA estratégia gráfica constituída pela união entre as técnicas \nda impressão manual e da confecção da xilogravura na \nprodução de folhetos de cordel",
+      "options": [
+        "realça a importância da xilogravura sobre o clichê.",
+        "oportuniza a renovação dessa arte na modernidade.",
+        "demonstra a utilidade desses textos para a catequese.",
+        "revela a necessidade da busca das origens dessa \n\nliteratura.",
+        "auxilia na manutenção da essência identitária dessa \n\ntradição popular."
+      ],
+      "correctOption": 4,
+      "explanation": "Origem: ENEM 2014 • Linguagens e Códigos • Questão #109",
+      "images": [
+        "assets/2014/dia-2/q109_fig1.png"
+      ]
+    },
+    {
+      "id": "enem-2012-d2-q101",
+      "statement": "Das irmãs\nos meus irmãos sujando-se\nna lama\ne eis-me aqui cercada\nde alvura e enxovais\n\neles se provocando e provando\ndo fogo\ne eu aqui fechada\nprovendo a comida\n\neles se lambuzando e arrotando\nna mesa\ne eu a temperada\nservindo, contida\n\nos meus irmãos jogando-se\nna cama\ne eis-me afiançada\npor dote e marido\n\nQUEIROZ, S. O sacro ofício. Belo Horizonte: Comunicação, 1980.\n\nO poema de Sonia Queiroz apresenta uma voz lírica feminina \nque contrapõe o estilo de vida do homem ao modelo reservado \nà mulher. Nessa contraposição, ela conclui que",
+      "options": [
+        "a mulher deve conservar uma assepsia que a \n\ndistingue de homens, que podem se jogar na lama.",
+        "a palavra “fogo” é uma metáfora que remete ao ato de \n\ncozinhar, tarefa destinada às mulheres.",
+        "a luta pela igualdade entre os gêneros depende da \n\nascensão financeira e social das mulheres.",
+        "a cama, como sua “alvura e enxovais”, é um símbolo \n\nda fragilidade feminina no espaço doméstico.",
+        "os papéis sociais destinados aos gêneros produzem \n\nefeitos e graus de autorrealização desiguais."
+      ],
+      "correctOption": 4,
+      "explanation": "Origem: ENEM 2012 • Linguagens e Códigos • Questão #101",
+      "images": [
+        "assets/2012/dia-2/q101_fig1.png"
+      ]
+    },
+    {
+      "id": "enem-2020-d1-q016",
+      "statement": "Slam do Corpo é um encontro pensado para surdos \ne ouvintes, existente desde 2014, em São Paulo. Uma \niniciativa pioneira do grupo Corposinalizante, criado em \n2008. (Antes de seguirmos, vale a explicação: o termo \nslam vem do inglês e significa — numa nova acepção \npara o verbo geralmente utilizado para dizer “bater com \nforça” — a “poesia falada nos ritmos das palavras e da \ncidade”). Nos saraus, o primeiro objetivo foi o de botar \nos poemas em Libras na roda, colocar os surdos para \ncircular e entender esse encontro entre a poesia e a língua \nde sinais, compreender o encontro dessas duas línguas. \nPoemas de autoria própria, três minutos, um microfone. \nSem figurino, nem adereços, nem acompanhamento \nmusical. O que vale é modular a voz e o corpo, um \ntrabalho artesanal de tornar a palavra “visível”, numa \narena cujo objetivo maior é o de emocionar a plateia, tirar \no público da passividade, seja pelo humor, horror, caos, \ndoçura e outras tantas sensações.\n\nNOVELLI, G. Poesia incorporada. Revista Continente, n. 189, set. 2016 (adaptado).\nNa prática artística mencionada no texto, o corpo assume \npapel de destaque ao articular diferentes linguagens com \no intuito de",
+      "options": [
+        "imprimir ritmo e visibilidade à expressão poética.",
+        "redefinir o espaço de circulação da poesia urbana.",
+        "estimular produções autorais de usuários de Libras.",
+        "traduzir expressões verbais para a língua de sinais.",
+        "proporcionar performances estéticas de pessoas"
+      ],
+      "correctOption": 0,
+      "explanation": "Origem: ENEM 2020 • Linguagens e Códigos • Questão #16"
+    },
+    {
+      "id": "enem-2009-d2-q122",
+      "statement": "Na situação de comunicação da qual o texto foi retirado, a \nnorma padrão da língua portuguesa é empregada com a \nfinalidade de",
+      "options": [
+        "demonstrar a clareza e a complexidade da nossa \n\nlíngua materna.",
+        "situar os dois lados da interlocução em posições \n\nsimétricas.",
+        "comprovar a importância da correção gramatical nos \n\ndiálogos cotidianos.",
+        "mostrar como as línguas indígenas foram incorporadas \n\nà língua portuguesa.",
+        "ressaltar a importância do código linguístico que \n\nadotamos como língua nacional."
+      ],
+      "correctOption": 1,
+      "explanation": "Origem: ENEM 2009 • Linguagens e Códigos • Questão #122"
+    },
+    {
+      "id": "enem-2016-d2-q124",
+      "statement": "O humor e a língua\nHá algum tempo, venho estudando as piadas, com \nênfase em sua constituição linguística. Por isso, embora a \nafirmação a seguir possa parecer surpreendente, creio que \nposso garantir que se trata de uma verdade quase banal: \nas piadas fornecem simultaneamente um dos melhores \nretratos dos valores e problemas de uma sociedade, por \num lado, e uma coleção de fatos e dados impressionantes \npara quem quer saber o que é e como funciona uma \nlíngua, por outro. Se se quiser descobrir os problemas com \nos quais uma sociedade se debate, uma coleção de piadas \nfornecerá excelente pista: sexualidade, etnia/raça e outras \ndiferenças, instituições (igreja, escola, casamento, política), \nmorte, tudo isso está sempre presente nas piadas que \ncirculam anonimamente e que são ouvidas e contadas por \ntodo mundo em todo o mundo. Os antropólogos ainda não \nprestaram a devida atenção a esse material, que poderia \nsubstituir com vantagem muitas entrevistas e pesquisas \nparticipantes. Saberemos mais a quantas andam o \nmachismo e o racismo, por exemplo, se pesquisarmos \numa coleção de piadas do que qualquer outro corpus.\n\nPOSSENTI, S. Ciência Hoje, n. 176, out. 2001 (adaptado).\nA piada é um gênero textual que figura entre os mais \nrecorrentes na cultura brasileira, sobretudo na tradição \noral. Nessa reflexão, a piada é enfatizada por",
+      "options": [
+        "sua função humorística.",
+        "sua ocorrência universal.",
+        "sua diversidade temática.",
+        "seu papel como veículo de preconceitos.",
+        "seu potencial como objeto de investigação.\n\nLC - 2º dia | Caderno 5 - AMARELO - Página 13"
+      ],
+      "correctOption": 4,
+      "explanation": "Origem: ENEM 2016 • Linguagens e Códigos • Questão #124",
+      "images": [
+        "assets/2016/dia-2/q124_fig1.png"
+      ]
+    },
+    {
+      "id": "enem-2013-d2-q097",
+      "statement": "TEXTO I\n\nAndaram na praia, quando saímos, oito ou dez deles; \ne daí a pouco começaram a vir mais. E parece-me que \nviriam, este dia, à praia, quatrocentos ou quatrocentos \ne cinquenta. Alguns deles traziam arcos e flechas, que \ntodos trocaram por carapuças ou por qualquer coisa \nque lhes davam. [...] Andavam todos tão bem-dispostos, \ntão bem feitos e galantes com suas tinturas que muito \nagradavam.\n\nCASTRO, S. A carta de Pero Vaz de Caminha. Porto Alegre: L&PM, 1996 (fragmento).\n\nTEXTO II\n\n PORTINARI, C. O descobrimento do Brasil. 1956. Óleo sobre tela, 199 x 169 cm\n\nDisponível em: www.portinari.org.br. Acesso em: 12 jun. 2013.\n\nPertencentes ao patrimônio cultural brasileiro, a carta de \nPero Vaz de Caminha e a obra de Portinari retratam a \nchegada dos portugueses ao Brasil. Da leitura dos textos, \nconstata-se que",
+      "options": [
+        "a carta de Pero Vaz de Caminha representa uma das \n\nprimeiras manifestações artísticas dos portugueses \nem terras brasileiras e preocupa-se apenas com a \nestética literária.",
+        "a tela de Portinari retrata indígenas nus com corpos \n\npintados, cuja grande significação é a afirmação da \narte acadêmica brasileira e a contestação de uma \nlinguagem moderna.",
+        "a carta, como testemunho histórico-político, mostra \n\no olhar do colonizador sobre a gente da terra, e a \npintura destaca, em primeiro plano, a inquietação \ndos nativos.",
+        "as duas produções, embora usem linguagens \n\ndiferentes — verbal e não verbal —, cumprem a \nmesma função social e artística.",
+        "a pintura e a carta de Caminha são manifestações de \n\ngrupos étnicos diferentes, produzidas em um mesmo \nmomento histórico, retratando a colonização."
+      ],
+      "correctOption": 2,
+      "explanation": "Origem: ENEM 2013 • Linguagens e Códigos • Questão #97",
+      "images": [
+        "assets/2013/dia-2/q97_1.png"
+      ]
+    },
+    {
+      "id": "enem-2019-d1-q026",
+      "statement": "A ciência do Homem-Aranha\n\nMuitos dos superpoderes do querido Homem- \n-Aranha de fato se assemelham às habilidades \nbiológicas das aranhas e são objeto de estudo para \nprodução de novos materiais.\n\nO “sentido-aranha” adquirido por Peter Parker \nfunciona quase como um sexto sentido, uma \nespécie de habilidade premonitória e, por isso, soa \ncomo um mero elemento ficcional. No entanto, as \naranhas realmente têm um sentido mais aguçado. \nNa verdade, elas têm um dos sistemas sensoriais mais \nimpressionantes da natureza.\n\nOs pelos sensoriais das aranhas, que estão \nespalhados por todo o corpo, funcionam como uma \nforma muito boa de perceber o mundo e captar \ninformações do ambiente. Em muitas espécies, esse \ntato por meio dos pelos tem papel mais importante \nque a própria visão, uma vez que muitas aranhas \nconseguem prender e atacar suas presas na completa \nescuridão. E por que os pelos humanos não são \ntão eficientes como órgãos sensoriais como os das \naranhas? Primeiro, porque um ser humano tem em \nmédia 60 fios de pelo em cada cm² do corpo, enquanto \nalgumas espécies de aranha podem chegar a ter \n40 mil pelos por cm²; segundo, porque cada pelo das \naranhas possui até 3 nervos para fazer a comunicação \nentre a sensação percebida e o cérebro, enquanto \nnós, seres humanos, temos apenas 1 nervo por pelo.\n\nDisponível em: http://cienciahoje.org.br. \n\nAcesso em: 11 dez. 2018 (adaptado).\n\nComo estratégia de progressão do texto, o autor simula \numa interlocução com o público leitor ao recorrer à",
+      "options": [
+        "revelação do “sentido-aranha” adquirido pelo super-\n\n-herói como um sexto sentido.",
+        "caracterização do afeto do público pelo super-herói \n\nmarcado pela palavra “querido”.",
+        "comparação entre os poderes do super-herói e as \n\nhabilidades biológicas das aranhas.",
+        "pergunta retórica na introdução das causas da \n\neficiência do sistema sensorial das aranhas.",
+        "comprovação das diferenças entre a constituição \n\nfísica do homem e da aranha por meio de \ndados numéricos."
+      ],
+      "correctOption": 3,
+      "explanation": "Origem: ENEM 2019 • Linguagens e Códigos • Questão #26",
+      "images": [
+        "assets/2019/dia-1/q26_fig1.png"
+      ]
+    },
+    {
+      "id": "enem-2020-d1-q040",
+      "statement": "Atualmente os jovens estão imersos numa sociedade \npermeada pela tecnologia. Nesse contexto, os jogos \ndigitais são artefatos muito empregados. Videogames \nativos ou exergames foram introduzidos como forma \nde permitir que o corpo controlasse tais jogos. Como \nresultado, passaram a ser vistos como uma ferramenta \nauxiliar na adoção de um estilo de vida menos sedentário, \ncom efeitos positivos sobre a saúde. Tem-se defendido \nque os exergames podem contribuir para a prática regular \nde atividade física moderada, bem como promover a \ninteração entre jogadores, reduzindo o sentimento de \nisolamento social. Por outro lado, argumenta-se que os \nexergames não podem substituir a experiência real das \npráticas corporais, pois não motivam a longo prazo a \nprática permanente de atividades físicas.\n\nFINCO, M. D.; REATEGUI, E. B.; ZARO, M. A. Laboratório de exergames: um espaço \n\ncomplementar para as aulas de educação física. Movimento, n. 3, 2015 (adaptado).\nPela sua interatividade, os exergames apresentam-se \ncomo possibilidade para estimular o(a)",
+      "options": [
+        "exercitação física, promovendo a saúde.",
+        "vivência de exercícios físicos sistemáticos.",
+        "envolvimento com atividades físicas ao longo da vida.",
+        "jogo por meio de comandos fornecidos pelo videogame.",
+        "disputa entre jogadores, contribuindo para o \n\nindividualismo."
+      ],
+      "correctOption": 0,
+      "explanation": "Origem: ENEM 2020 • Linguagens e Códigos • Questão #40"
+    },
+    {
+      "id": "enem-2011-d2-q093",
+      "statement": "How’s your mood?\n\nFor an interesting attempt to measure cause and \neffect try Mappiness, a project run by the London School \nof Economics, which offers a phone app that prompts \nyou to record your mood and situation.\n\nThe Mappiness website says: “We’re particularly \ninterested in how people’s happiness is affected by their \nlocal environment ― air pollution, noise, green spaces, \nand so on ― which the data from Mappiness will be \nabsolutely great for investigating.”\n\nWill it work? With enough people, it might. But there \nare other problems. We’ve been using happiness and \nwell-being interchangeably. Is that ok? The difference \ncomes out in a sentiment like: “We were happier during \nthe war.” But was our well-being also greater then?\n\nDisponível em: http://www.bbc.co.uk. Acesso em: 27 jun. 2011 (adaptado).\n\nO projeto Mappiness, idealizado pela London School of \nEconomics, ocupa-se do tema relacionado",
+      "options": [
+        "ao nível de felicidade das pessoas em tempos de \n\nguerra.",
+        "à dificuldade de medir o nível de felicidade das \n\npessoas a partir de seu humor.",
+        "ao nível de felicidade das pessoas enquanto falam \n\nao celular com seus familiares.",
+        "à relação entre o nível de felicidade das pessoas e o \n\nambiente no qual se encontram.",
+        "à influência das imagens grafitadas pelas ruas no \n\naumento do nível de felicidade das pessoas.\n\nLC - 2º dia | Caderno 5 - AMARELO - Página 2"
+      ],
+      "correctOption": 3,
+      "explanation": "Origem: ENEM 2011 • Linguagens e Códigos • Questão #93 (Ingles)",
+      "images": [
+        "assets/2011/dia-2/q93_1.png"
+      ]
+    },
+    {
+      "id": "enem-2017-d1-q015",
+      "statement": "TEXTO I\n\nTerezinha de Jesus\nDe uma queda foi ao chão\nAcudiu três cavalheiros\nTodos os três de chapéu na mão\n\nO primeiro foi seu pai\nO segundo, seu irmão\nO terceiro foi aquele\nA quem Tereza deu a mão\n\nBATISTA, M. F. B. M.; SANTOS, I. M. F. (Org.). Cancioneiro da Paraíba.\n\n João Pessoa: Grafset, 1993 (adaptado).\nTEXTO II\n\nOutra interpretação é feita a partir das condições \nsociais daquele tempo. Para a ama e para a criança \npara quem cantava a cantiga, a música falava do \ncasamento como um destino natural na vida da mulher, \nna sociedade brasileira do século XIX, marcada pelo \npatriarcalismo. A música prepara a moça para o \nseu destino não apenas inexorável, mas desejável: \no casamento, estabelecendo uma hierarquia de \nobediência (pai, irmão mais velho, marido), de acordo \ncom a época e circunstâncias de sua vida.\n\nDisponível em: http://provsjose.blogspot.com.br. Acesso em: 5 dez. 2012.\nO comentário do Texto II sobre o Texto I evoca a \nmobilização da língua oral que, em determinados \ncontextos,",
+      "options": [
+        "assegura a existência de pensamentos contrários à \n\nordem vigente.",
+        "mantém a heterogeneidade das formas de relações \n\nsociais.",
+        "\u0003FRQVHUYD\u0003D\u0003LQÀXrQFLD\u0003UHOLJLRVD\u0003VREUH\u0003FHUWDV\u0003FXOWXUDV\u0011",
+        "preserva a diversidade cultural e comportamental.",
+        "reforça comportamentos e padrões culturais."
+      ],
+      "correctOption": 4,
+      "explanation": "Origem: ENEM 2017 • Linguagens e Códigos • Questão #15",
+      "images": [
+        "assets/2017/dia-1/q15_fig1.png"
+      ]
+    },
+    {
+      "id": "enem-2025-d1-q026",
+      "statement": "Muitos pensam que narrativa curta é sinônimo de conto, \nperdendo de vista gêneros que, por tradição ruim, continuam à \nmargem da nobreza. Acontece que o conto tem uma densidade \nespecífica, centrando-se na exemplaridade de um instante da \ncondição humana, sem que essa exemplaridade se refira à valoração \nmoral, já que uma grande mazela pode muito bem exemplificar uma \ndas nossas faces. A crônica não tem essa característica. Conservou a \nmarca do registro circunstancial feito por narrador-repórter que relata \num fato para muitos leitores que formam um público determinado.\n\nMas que público é esse? Sendo a crônica uma soma de jornalismo \ne literatura (daí a imagem do narrador-repórter), dirige-se a uma \nclasse que tem preferência pelo jornal em que ela é publicada, o \nque significa uma espécie de censura ou, pelo menos, de limitação: a \nideologia do veículo corresponde ao interesse dos seus consumidores, \ndirecionados pelos proprietários dos periódicos e/ou pelos editores-\n-chefes da redação. Ocorre ainda o limite de espaço, uma vez que \na página comporta várias matérias, o que impõe a cada uma delas \num número restrito de laudas, obrigando o redator a explorar, da \nmaneira mais econômica possível, o pequeno espaço de que dispõe. \nÉ dessa economia que nasce sua riqueza estrutural.\n\nSÁ, J. A crônica. São Paulo: Ática, 1987 (adaptado).\n\nDe acordo com esse texto, o aspecto tecnológico que influencia \na composição do gênero crônica advém da",
+      "options": [
+        "conexão ideológica.",
+        "densidade temática.",
+        "ênfase no público leitor.",
+        "apresentação de uma moral.",
+        "restrição espacial do suporte."
+      ],
+      "correctOption": 4,
+      "explanation": "Origem: ENEM 2025 • Linguagens e Códigos • Questão #26",
+      "images": [
+        "assets/2025/dia-1/q26_fig1.png"
+      ]
+    },
+    {
+      "id": "enem-2012-d2-q119",
+      "statement": "A marcha galopante das tecnologias teve por primeiro \nresultado multiplicar em enormes proporções tanto a \nmassa das notícias que circulam quanto as ocasiões de \nsermos solicitados por elas. Os profissionais têm tendência \na considerar esta inflação como automaticamente \nfavorável ao público, pois dela tiram proveito e tornam-\nse obcecados pela imagem liberal do grande mercado \nem que cada um, dotado de luzes por definição iguais, \npode fazer sua escolha em toda liberdade. Isso jamais \nfoi realizado e tende a nunca ser. Na verdade, os leitores, \nouvintes, telespectadores, mesmo se se abandonam a sua \nbulimia*, não são realmente nutridos por esta indigesta \nsopa de informações e sua busca finaliza em frustração. \nCada vez mais frequentemente, até, eles ressentem \nesse bombardeio de riquezas falsas como agressivo e se \nrefugiam na resistência a toda ou qualquer informação.\n\nO verdadeiro problema das sociedades pós-\nindustriais não é a penúria**, mas a abundância. As \nsociedades modernas têm a sua disposição muito mais \ndo que necessitam em objetos, informações e contatos. \nOu, mais exatamente, disso resulta uma desarmonia \nentre uma oferta, não excessiva, mas incoerente, e uma \ndemanda que, confusamente, exige uma escolha muito \nmais rápida a absorver. Por isso os órgãos de informação \ndevem escolher, uma vez que o homem contemporâneo \napressado, estressado, desorientado busca uma linha \ndiretriz, uma classificação mais clara, um condensado do \nque é realmente importante.\n\n(*) fome excessiva, desejo descontrolado.\n\n(**) miséria, pobreza.\n\nVOYENNE, B. Informação hoje. Lisboa: Armand Colin, 1975 (adaptado).\n\nCom o uso das novas tecnologias, os domínios \nmidiáticos obtiveram um avanço maior e uma presença \nmais atuante junto ao público, marcada ora pela quase \nsimultaneidade das informações, ora pelo uso abundante \nde imagens. A relação entre as necessidades da \nsociedade moderna e a oferta de informação, segundo \no texto, é desarmônica, porque",
+      "options": [
+        "o jornalista seleciona as informações mais importantes \n\nantes de publicá-las.",
+        "o ser humano precisa de muito mais conhecimento do \n\nque a tecnologia pode dar.",
+        "o problema da sociedade moderna é a abundância de \n\ninformações e de liberdade de escolha.",
+        "a oferta é incoerente com o tempo que as pessoas têm \n\npara digerir a quantidade de informação disponível.",
+        "a utilização dos meios de informação acontece de \n\nmaneira desorganizada e sem controle efetivo."
+      ],
+      "correctOption": 3,
+      "explanation": "Origem: ENEM 2012 • Linguagens e Códigos • Questão #119",
+      "images": [
+        "assets/2012/dia-2/q119_fig1.png"
+      ]
+    },
+    {
+      "id": "enem-2018-d1-q013",
+      "statement": "Disponível em: www.separeolixo.gov.br. Acesso em: 4 dez. 2017 (adaptado).\n\nNessa campanha, a principal estratégia para convencer \no leitor a fazer a reciclagem do lixo é a utilização da \nlinguagem não verbal como argumento para",
+      "options": [
+        "reaproveitamento de material.",
+        "facilidade na separação do lixo.",
+        "melhoria da condição do catador.",
+        "preservação de recursos naturais.",
+        "geração de renda para o trabalhador.\n\nLC - 1º dia | Caderno 2 - AMARELO - Página 7"
+      ],
+      "correctOption": 0,
+      "explanation": "Origem: ENEM 2018 • Linguagens e Códigos • Questão #13",
+      "images": [
+        "assets/2018/dia-1/q13_1.png"
+      ]
+    },
+    {
+      "id": "enem-2012-d2-q118",
+      "statement": "Desde dezoito anos que o tal patriotismo lhe \n\nabsorvia e por ele fizera a tolice de estudar inutilidades. \n\nQue lhe importavam os rios? Eram grandes? Pois que \n\nfossem... Em que lhe contribuiria para a felicidade saber \n\no nome dos heróis do Brasil? Em nada... O importante \n\né que ele tivesse sido feliz. Foi? Não. Lembrou-se \n\ndas coisas do tupi, do folk-lore, das suas tentativas \n\nagrícolas... Restava disso tudo em sua alma uma \n\nsatisfação? Nenhuma! Nenhuma!\n\nO tupi encontrou a incredulidade geral, o riso, a \n\nmofa, o escárnio; e levou-o à loucura. Uma decepção. \n\nE a agricultura? Nada. As terras não eram ferazes e ela \n\nnão era fácil como diziam os livros. Outra decepção. E, \n\nquando o seu patriotismo se fizera combatente, o que \n\nachara? Decepções. Onde estava a doçura de nossa \n\ngente? Pois ele não a viu combater como feras? Pois \n\nnão a via matar prisioneiros, inúmeros? Outra decepção. \n\nA sua vida era uma decepção, uma série, melhor, um \n\nencadeamento de decepções.\n\nA pátria que quisera ter era um mito; um fantasma \n\ncriado por ele no silêncio de seu gabinete.\n\nBARRETO, L. Triste fim de Policarpo Quaresma. Disponível em: www.dominiopublico.gov.br. \n\nAcesso em: 8 nov. 2011.\n\nO romance Triste fim de Policarpo Quaresma, de Lima \n\nBarreto, foi publicado em 1911. No fragmento destacado, \n\na reação do personagem aos desdobramentos de suas \n\niniciativas patrióticas evidencia que",
+      "options": [
+        "a dedicação de Policarpo Quaresma ao conhecimento \n\nda natureza brasileira levou-o a estudar inutilidades, \nmas possibilitou-lhe uma visão mais ampla do país.",
+        "a curiosidade em relação aos heróis da pátria \n\nlevou-o ao ideal de prosperidade e democracia que o \npersonagem encontra no contexto republicano.",
+        "a construção de uma pátria a partir de elementos \n\nmíticos, como a cordialidade do povo, a riqueza do solo \ne a pureza linguística, conduz à frustração ideológica.",
+        "a propensão do brasileiro ao riso, ao escárnio, \n\njustifica a reação de decepção e desistência de \nPolicarpo Quaresma, que prefere resguardar-se em \nseu gabinete.",
+        "a certeza da fertilidade da terra e da produção \n\nagrícola incondicional faz parte de um projeto \nideológico salvacionista, tal como foi difundido na \népoca do autor.\n\nLC - 2º dia | Caderno 5 - AMARELO - Página 13"
+      ],
+      "correctOption": 2,
+      "explanation": "Origem: ENEM 2012 • Linguagens e Códigos • Questão #118",
+      "images": [
+        "assets/2012/dia-2/q118_fig1.png"
+      ]
+    },
+    {
+      "id": "enem-2025-d1-q035",
+      "statement": "TEXTO I\n\nTEXTO I\n\nA Ilha do Ferro, situada a 18 km do município de Pão de \nAçúcar, não é uma ilha, como o nome indica. A história do \npovoado é semelhante à de inúmeros outros que encontramos \nàs margens do Rio São Francisco, entre Alagoas e Sergipe. O que \ntorna diferente o lugar é sua gente. Hoje, dezenas de artistas \npopulares povoam a Ilha do Ferro, trabalhando principalmente \ncom o entalhe em madeira. Onde pessoas comuns enxergariam \napenas troncos e galhos retorcidos, eles vislumbram bancos, \nbonecos, pássaros, cobras e bailarinas. “Às vezes, você passa \npor um pedaço de madeira uma vez e não vê nada, passa cinco \nvezes por ele e não vê nada”, conta um dos artistas, “mas, na \ndécima vez, você consegue enxergar alguma forma nesse pedaço \nde madeira e transformá-lo em arte”.\n\nTEXTO II\n\nDisponível em: www.imaterial.art.br. Acesso em: 5 fev. 2025 (adaptado).\n\nTEXTO II\n\nFARIAS, Y. Bailarino entalhado em gravetos de madeira. Artesanato \n\nem madeira, 20 × 13 × 51 cm. Ilha do Ferro (AL).\n\nDisponível em: www.nidelins.com.br. Acesso em: 5 fev. 2025.\n\nA originalidade do trabalho dos artistas da Ilha do Ferro se dá pela",
+      "options": [
+        "reutilização de materiais para redução do impacto ambiental.",
+        "ressignificação da matéria-prima atribuindo-lhe nova função.",
+        "reprodução em madeira de modelos artísticos canônicos.",
+        "representação de práticas corporais da comunidade.",
+        "replicação seriada para distribuição em larga escala."
+      ],
+      "correctOption": 1,
+      "explanation": "Origem: ENEM 2025 • Linguagens e Códigos • Questão #35",
+      "images": [
+        "assets/2025/dia-1/q35_1.png"
+      ]
+    },
+    {
+      "id": "enem-2013-d2-q111",
+      "statement": "Tudo no mundo começou com um sim. Uma molécula \ndisse sim a outra molécula e nasceu a vida. Mas antes da \npré-história havia a pré-história da pré-história e havia o \nnunca e havia o sim. Sempre houve. Não sei o quê, mas \nsei que o universo jamais começou.\n\n[...]\nEnquanto eu tiver perguntas e não houver resposta \ncontinuarei a escrever. Como começar pelo início, se as \ncoisas acontecem antes de acontecer? Se antes da pré-\npré-história já havia os monstros apocalípticos? Se esta \nhistória não existe, passará a existir. Pensar é um ato. \nSentir é um fato. Os dois juntos — sou eu que escrevo o \nque estou escrevendo. [...] Felicidade? Nunca vi palavra \nmais doida, inventada pelas nordestinas que andam por \naí aos montes.\n\nComo eu irei dizer agora, esta história será o resultado \nde uma visão gradual — há dois anos e meio venho aos \npoucos descobrindo os porquês. É visão da iminência de. \nDe quê? Quem sabe se mais tarde saberei. Como que \nestou escrevendo na hora mesma em que sou lido. Só não \ninicio pelo fim que justificaria o começo — como a morte \nparece dizer sobre a vida — porque preciso registrar os \nfatos antecedentes.\n\nLISPECTOR, C. A hora da estrela. Rio de Janeiro: Rocco, 1998 (fragmento).\n\nA elaboração de uma voz narrativa peculiar acompanha \na trajetória literária de Clarice Lispector, culminada com \na obra A hora da estrela, de 1977, ano da morte da \nescritora. Nesse fragmento, nota-se essa peculiaridade \nporque o narrador",
+      "options": [
+        "observa os acontecimentos que narra sob uma \n\nótica distante, sendo indiferente aos fatos e às \npersonagens.",
+        "relata a história sem ter tido a preocupação de \n\ninvestigar os motivos que levaram aos eventos que \na compõem.",
+        "revela-se um sujeito que reflete sobre questões \n\nexistenciais e sobre a construção do discurso.",
+        "admite a dificuldade de escrever uma história em razão \n\nda complexidade para escolher as palavras exatas.",
+        "propõe-se a discutir questões de natureza filosófica e \n\nmetafísica, incomuns na narrativa de ficção."
+      ],
+      "correctOption": 2,
+      "explanation": "Origem: ENEM 2013 • Linguagens e Códigos • Questão #111",
+      "images": [
+        "assets/2013/dia-2/q111_fig1.png"
+      ]
+    },
+    {
+      "id": "enem-2020-d1-q019",
+      "statement": "Na sua imaginação perturbada sentia a natureza \ntoda agitando-se para sufocá-la. Aumentavam as \nsombras. No céu, nuvens colossais e túmidas rolavam \npara o abismo do horizonte... Na várzea, ao clarão \nindeciso do crepúsculo, os seres tomavam ares de \nmonstros... As montanhas, subindo ameaçadoras \nda terra, perfilavam-se tenebrosas... Os caminhos, \nespreguiçando-se sobre os campos, animavam-se \nquais serpentes infinitas... As árvores soltas choravam \nao vento, como carpideiras fantásticas da natureza \nmorta... Os aflitivos pássaros noturnos gemiam \nagouros com pios fúnebres. Maria quis fugir, mas os \nmembros cansados não acudiam aos ímpetos do medo \ne deixavam-na prostrada em uma angústia desesperada.\n\nARANHA, J. P. G. Canaã. São Paulo: Ática, 1997.\nNo trecho, o narrador mobiliza recursos de linguagem que \ngeram uma expressividade centrada na percepção da",
+      "options": [
+        "relação entre a natureza opressiva e o desejo de \n\nlibertação da personagem.",
+        "confluência entre o estado emocional da personagem \n\ne a configuração da paisagem.",
+        "prevalência do mundo natural em relação à fragilidade \n\nhumana.",
+        "depreciação do sentido da vida diante da consciência \n\nda morte iminente.",
+        "instabilidade psicológica da personagem face à \n\nrealidade hostil.\n\nLC - 1° dia | Caderno 2 - AMARELO - Página 9"
+      ],
+      "correctOption": 1,
+      "explanation": "Origem: ENEM 2020 • Linguagens e Códigos • Questão #19"
+    },
+    {
+      "id": "enem-2016-d2-q091",
+      "statement": "Italian university switches to English\nBy Sean Coughlan, BBC News education correspondent \n\n16 May 2012 Last updated at 09:49 GMT\n\nMilan is crowded with Italian icons, which makes \nit even more of a cultural earthquake that one of Italy’s \nleading universities — the Politecnico di Milano — is \ngoing to switch to the English language. The university \nhas announced that from 2014 most of its degree courses \n— including all its graduate courses — will be taught and \nassessed entirely in English rather than Italian. \n\nThe waters of globalisation are rising around higher \neducation — and the university believes that if it remains \nItalian-speaking it risks isolation and will be unable to \ncompete as an international institution. “We strongly believe \nour classes should be international classes — and the only \nway to have international classes is to use the English \nlanguage”, says the university’s rector, Giovanni Azzone.\n\nCOUGHLAN, S. Disponível em: www.bbc.co.uk. Acesso em: 31 jul. 2012.\nAs línguas têm um papel importante na comunicação entre \npessoas de diferentes culturas. Diante do movimento de \ninternacionalização no ensino superior, a universidade \nPolitecnico di Milano decidiu",
+      "options": [
+        "elaborar exames em língua inglesa para o ingresso \n\nna universidade.",
+        "ampliar a oferta de vagas na graduação para alunos \n\nestrangeiros.",
+        "investir na divulgação da universidade no mercado \n\ninternacional.",
+        "substituir a língua nacional para se inserir no contexto \n\nda globalização.",
+        "estabelecer metas para melhorar a qualidade do \n\nensino de italiano."
+      ],
+      "correctOption": 3,
+      "explanation": "Origem: ENEM 2016 • Linguagens e Códigos • Questão #91 (Ingles)",
+      "images": [
+        "assets/2016/dia-2/q91_fig1.png"
+      ]
+    },
+    {
+      "id": "enem-2016-d2-q096",
+      "statement": "Ler não é decifrar, como num jogo de adivinhações, \no sentido de um texto. É, a partir do texto, ser capaz de \natribuir-lhe significado, conseguir relacioná-lo a todos os \noutros textos significativos para cada um, reconhecer \nnele o tipo de leitura que o seu autor pretendia e, dono da \nprópria vontade, entregar-se a essa leitura, ou rebelar-se \ncontra ela, propondo uma outra não prevista.\n\nLAJOLO, M. Do mundo da leitura para a leitura do mundo. São Paulo: Ática, 1993.\nNesse texto, a autora apresenta reflexões sobre o processo \nde produção de sentidos, valendo-se da metalinguagem. \nEssa função da linguagem torna-se evidente pelo fato de \no texto",
+      "options": [
+        "ressaltar a importância da intertextualidade.",
+        "propor leituras diferentes das previsíveis.",
+        "apresentar o ponto de vista da autora.",
+        "discorrer sobre o ato de leitura.",
+        "focar a participação do leitor."
+      ],
+      "correctOption": 3,
+      "explanation": "Origem: ENEM 2016 • Linguagens e Códigos • Questão #96",
+      "images": [
+        "assets/2016/dia-2/q96_fig1.png"
+      ]
+    },
+    {
+      "id": "enem-2017-d1-q031",
+      "statement": "ERNESTO NETO. Dengo. 2010. MAM-SP, 2010.\n\nDisponível em: http://espacohumus.com. Acesso em: 25 abr. 2017.\nA instalação Dengo transformou a sala do MAM-SP \nem um ambiente singular, explorando como principal \ncaracterística artística a",
+      "options": [
+        "participação do público na interação lúdica com a obra.",
+        "distribuição de obstáculos no espaço da exposição.",
+        "representação simbólica de objetos oníricos.",
+        "interpretação subjetiva da lei da gravidade.",
+        "valorização de técnicas de artesanato."
+      ],
+      "correctOption": 0,
+      "explanation": "Origem: ENEM 2017 • Linguagens e Códigos • Questão #31",
+      "images": [
+        "assets/2017/dia-1/q31_1.png"
+      ]
+    },
+    {
+      "id": "enem-2023-d1-q001",
+      "statement": "“Oh, you’ll love working here. Nobody treats you any \ndifferently just because of your age, race, or gender.”\n\nDisponível em: www.cartoonstock.com. Acesso em: 25 out. 2021.\n\nAo retratar o ambiente de trabalho em um escritório, esse \ncartum tem por objetivo",
+      "options": [
+        "A\t criticar um padrão de vestimenta.",
+        "B\t destacar a falta de diversidade.",
+        "C\t indicar um modo de interação.",
+        "D\t elogiar um modelo de organização.",
+        "E\t salientar o espírito de cooperação."
+      ],
+      "correctOption": 1,
+      "explanation": "Origem: ENEM 2023 • Linguagens e Códigos • Questão #1 (Ingles)",
+      "images": [
+        "assets/2023/dia-1/q1_1.png",
+        "assets/2023/dia-1/q1_2.png"
+      ]
+    },
+    {
+      "id": "enem-2012-d2-q123",
+      "statement": "Picasso, P. Les Demoiselles d’Avignon. Nova York, 1907.\n\nARGAN, G. C. Arte moderna: do Iluminismo aos movimentos contemporâneos. \n\nSão Paulo: Companhia das Letras, 1992.\n\nO quadro Les Demoiselles d’Avignon (1907), de Pablo \nPicasso, representa o rompimento com a estética clássica \ne a revolução da arte no início do século XX. Essa nova \ntendência se caracteriza pela",
+      "options": [
+        "pintura de modelos em planos irregulares.",
+        "mulher como temática central da obra.",
+        "cena representada por vários modelos.",
+        "oposição entre tons claros e escuros.",
+        "nudez explorada como objeto de arte."
+      ],
+      "correctOption": 0,
+      "explanation": "Origem: ENEM 2012 • Linguagens e Códigos • Questão #123",
+      "images": [
+        "assets/2012/dia-2/q123_1.png"
+      ]
+    },
+    {
+      "id": "enem-2019-d1-q036",
+      "statement": "Expostos na web desde a gravidez\n\nMais da metade das mães e um terço dos pais \nouvidos em uma pesquisa sobre compartilhamento \npaterno em mídias sociais discutem nas redes sociais \nsobre a educação dos filhos. Muitos são pais e mães de \nprimeira viagem, frutos da geração Y (que nasceu junto \ncom a internet) e usam esses canais para saberem \nque não estão sozinhos na empreitada de educar \numa criança. Há, contudo, um risco no modo como as \npessoas estão compartilhando essas experiências. \nÉ a chamada exposição parental exagerada, alertam \nos pesquisadores.\n\nDe acordo com os especialistas no assunto, \nse você compartilha uma foto ou vídeo do seu filho \npequeno fazendo algo ridículo, por achar engraçadinho, \nquando a criança tiver seus 11, 12 anos, pode se sentir \nconstrangida. A autoconsciência vem com a idade.\n\nA exibição da privacidade dos filhos começa a \nassumir uma característica de linha do tempo e eles \nnão participaram da aprovação ou recusa quanto à \nveiculação desses conteúdos. Assim, quando a criança \ncresce, sua privacidade pode já estar violada.\n\nOTONI, A. C. O Globo, 31 mar. 2015 (adaptado).\n\nSobre o compartilhamento parental excessivo em mídias \nsociais, o texto destaca como impacto o(a)",
+      "options": [
+        "interferência das novas tecnologias na comunicação \n\nentre pais e filhos.",
+        "desatenção dos pais em relação ao comportamento \n\ndos filhos na internet.",
+        "distanciamento na relação entre pais e filhos \n\nprovocado pelo uso das redes sociais.",
+        "fortalecimento das redes de relações decorrente da \n\ntroca de experiências entre as famílias.",
+        "desrespeito à intimidade das crianças cujas imagens \n\ntêm sido divulgadas nas redes sociais."
+      ],
+      "correctOption": 4,
+      "explanation": "Origem: ENEM 2019 • Linguagens e Códigos • Questão #36",
+      "images": [
+        "assets/2019/dia-1/q36_fig1.png"
+      ]
+    },
+    {
+      "id": "enem-2012-d2-q112",
+      "statement": "Cartaz afixado nas bibliotecas centrais e setoriais da Universidade Federal de Goiás (UFG), 2011.\n\nConsiderando-se a finalidade comunicativa comum do \ngênero e o contexto específico do Sistema de Biblioteca \nda UFG, esse cartaz tem função predominantemente",
+      "options": [
+        "socializadora, contribuindo para a popularização \n\nda arte.",
+        "sedutora, considerando a leitura como uma obra de arte.",
+        "estética, propiciando uma apreciação despretensiosa \n\nda obra.",
+        "educativa, orientando o comportamento de usuários \n\nde um serviço.",
+        "contemplativa, evidenciando a importância de"
+      ],
+      "correctOption": 3,
+      "explanation": "Origem: ENEM 2012 • Linguagens e Códigos • Questão #112",
+      "images": [
+        "assets/2012/dia-2/q112_1.png"
+      ]
+    },
+    {
+      "id": "enem-2017-d1-q037",
+      "statement": "Contranarciso\nem mim \neu vejo o outro\ne outro\ne outro\nHQ¿P\u0003GH]HQDV\ntrens passando\nvagões cheios de gente\ncentenas\n\no outro\nque há em mim\né você\nvocê\ne você\n\nassim como\neu estou em você\neu estou nele\nem nós\ne só quando\nestamos em nós\nestamos em paz\nmesmo que estejamos a sós\n\n/(0,16.,\u000f\u00033\u0011\u0003Toda poesia. São Paulo: Cia. das Letras, 2013.\n\nA busca pela identidade constitui uma faceta da tradição \nliterária, redimensionada pelo olhar contemporâneo. \nNo poema, essa nova dimensão revela a",
+      "options": [
+        "ausência de traços identitários.",
+        "angústia com a solidão em público.",
+        "valorização da descoberta do “eu” autêntico.",
+        "percepção \nda \nempatia \ncomo \nfator \nde \nautoconhecimento.",
+        "impossibilidade \nde \nvivenciar \nexperiências \nde \npertencimento.\n\nLC - 1º dia | Caderno 2 - AMARELO - Página 15"
+      ],
+      "correctOption": 3,
+      "explanation": "Origem: ENEM 2017 • Linguagens e Códigos • Questão #37",
+      "images": [
+        "assets/2017/dia-1/q37_fig1.png"
+      ]
+    },
+    {
+      "id": "enem-2016-d2-q094",
+      "statement": "Disponível em: www.ct.gov. Acesso em: 30 jul. 2012 (adaptado).\nOrientações à população são encontradas também em \nsites oficiais. Ao clicar no endereço eletrônico mencionado \nno cartaz disponível na internet, o leitor tem acesso aos(às)",
+      "options": [
+        "ações do governo local referentes a calamidades.",
+        "relatos de sobreviventes em tragédias marcantes.",
+        "tipos de desastres naturais possíveis de acontecer.",
+        "informações sobre acidentes ocorridos em Connecticut.",
+        "medidas de emergência a serem tomadas em catástrofes.\n\nLC - 2º dia | Caderno 5 - AMARELO - Página 3"
+      ],
+      "correctOption": 4,
+      "explanation": "Origem: ENEM 2016 • Linguagens e Códigos • Questão #94 (Ingles)",
+      "images": [
+        "assets/2016/dia-2/q94_1.png"
+      ]
+    },
+    {
+      "id": "enem-2009-d2-q097",
+      "statement": "O texto tem o objetivo de solucionar um problema social,",
+      "options": [
+        "descrevendo a situação do país em relação à gripe \n\nsuína.",
+        "alertando a população para o risco de morte pela \n\nInfluenza A.",
+        "informando a população sobre a iminência de uma \n\npandemia de Influenza A.",
+        "orientando a população sobre os  sintomas da gripe \n\nsuína e procedimentos para evitar a contaminação.",
+        "convocando toda a população para se submeter a \n\nexames de detecção da gripe suína."
+      ],
+      "correctOption": 3,
+      "explanation": "Origem: ENEM 2009 • Linguagens e Códigos • Questão #97"
+    },
+    {
+      "id": "enem-2023-d1-q015",
+      "statement": "Passado muito tempo, resolvi tentar falar, porque \nestava sozinha me embrenhando na mesma vereda que \nDonana costumava entrar. Ainda recordo da palavra que \nescolhi: arado. Me deleitava vendo meu pai conduzindo \no arado velho da fazenda carregado pelo boi, rasgando \na terra para depois lançar grãos de arroz em torrões \nmarrons e vermelhos revolvidos. Gostava do som redondo, \nfácil e ruidoso que tinha ao ser enunciado. “Vou trabalhar no \narado.” “Vou arar a terra.” “Seria bom ter um arado novo, \nesse arado tá troncho e velho.” O som que deixou minha \nboca era uma aberração, uma desordem, como se no \nlugar do pedaço perdido da língua tivesse um ovo quente. \nEra um arado torto, deformado, que penetrava a terra de \ntal forma a deixá-la infértil, destruída, dilacerada.\n\nVIEIRA JR., I. Torto arado. São Paulo: Todavia, 2019.\nCom a perda de parte da língua na infância, a narradora \ntenta voltar a falar. Essa tentativa revela uma experiência que",
+      "options": [
+        "A\t reflete o olhar do pai sobre as etapas do plantio.",
+        "B\t metaforiza a linguagem como ferramenta de lavoura.",
+        "C\t explicita, na busca pela palavra, o medo da solidão.",
+        "D\t confirma a frustração da narradora com relação à terra.",
+        "E\t sugere, na ausência da linguagem, a estagnação do \n\ntempo."
+      ],
+      "correctOption": 1,
+      "explanation": "Origem: ENEM 2023 • Linguagens e Códigos • Questão #15"
+    },
+    {
+      "id": "enem-2009-d2-q125",
+      "statement": "Veja, 7 maio 1997. \n\nNa parte superior do anúncio, há um comentário escrito à \nmão que aborda a questão das atividades linguísticas e \nsua relação com as modalidades oral e escrita da língua. \nEsse comentário deixa evidente uma posição crítica quanto \na usos que se fazem da linguagem, enfatizando ser \nnecessário",
+      "options": [
+        "implementar a fala, tendo em vista maior desenvoltura, \n\nnaturalidade e segurança no uso da língua .",
+        "conhecer gêneros mais formais da modalidade oral \n\npara a obtenção de clareza na comunicação oral e \nescrita.",
+        "dominar as diferentes variedades do registro oral da \n\nlíngua portuguesa para escrever com adequação, \neficiência e correção.",
+        "empregar vocabulário adequado e usar regras da \n\nnorma padrão da língua em se tratando da modalidade \nescrita.",
+        "utilizar \nrecursos \nmais \nexpressivos \ne \nmenos \ndesgastados da variedade padrão da língua para se \nexpressar com alguma segurança e sucesso."
+      ],
+      "correctOption": 3,
+      "explanation": "Origem: ENEM 2009 • Linguagens e Códigos • Questão #125",
+      "images": [
+        "assets/2009/dia-2/q125_1.png"
+      ]
+    },
+    {
+      "id": "enem-2014-d2-q114",
+      "statement": "A História, mais ou menos\n\nNegócio seguinte. Três reis magrinhos ouviram um \nplá de que tinha nascido um Guri. Viram o cometa no \nOriente e tal e se flagraram que o Guri tinha pintado \npor lá. Os profetas, que não eram de dar cascata, já \ntinham dicado o troço: em Belém, da Judeia, vai nascer \no Salvador, e tá falado. Os três magrinhos se mandaram. \nMas deram o maior fora. Em vez de irem direto para \nBelém, como mandava o catálogo, resolveram dar \numa incerta no velho Herodes, em Jerusalém. Pra quê! \nChegaram lá de boca aberta e entregaram toda a trama. \nPerguntaram: Onde está o rei que acaba de nascer? \nVimos sua estrela no Oriente e viemos adorá-lo. Quer \ndizer, pegou mal. Muito mal. O velho Herodes, que era \num oligão, ficou grilado. Que rei era aquele? Ele é que \nera o dono da praça. Mas comeu em boca e disse: Joia. \nOnde é que esse guri vai se apresentar? Em que canal? \nQuem é o empresário? Tem baixo elétrico? Quero saber \ntudo. Os magrinhos disseram que iam flagrar o Guri e na \nvolta dicavam tudo para o coroa.\n\n VERISSIMO, L. F. O nariz e outras crônicas. São Paulo: Ática, 1994.\n\nNa crônica de Verissimo, a estratégia para gerar o efeito \nde humor decorre do(a)",
+      "options": [
+        "linguagem rebuscada utilizada pelo narrador no \n\ntratamento do assunto.",
+        "inserção de perguntas diretas acerca do acontecimento \n\nnarrado.",
+        "caracterização dos lugares onde se passa a história.",
+        "emprego \nde \ntermos \nbíblicos \nde \nforma \ndescontextualizada.",
+        "contraste entre o tema abordado e a linguagem \n\nutilizada."
+      ],
+      "correctOption": 4,
+      "explanation": "Origem: ENEM 2014 • Linguagens e Códigos • Questão #114",
+      "images": [
+        "assets/2014/dia-2/q114_fig1.png"
+      ]
+    },
+    {
+      "id": "enem-2020-d1-q043",
+      "statement": "Seu delegado\n\nEu sou viúvo e tenho um filho homem\n\nArrumei uma viúva e fui me casar\n\nA minha sogra era muito teimosa\n\nCom o meu filho foi se matrimoniar\n\nDesse matrimônio nasceu um garoto\n\nDesde esse dia que eu ando é louco\n\nEsse garoto é filho do meu filho\n\nE o filho da minha sogra é irmão da minha mulher\n\nEle é meu neto e eu sou cunhado dele\n\nA minha nora é minha sogra\n\nMeu filho meu sogro é\n\nNessa confusão já nem sei quem sou\n\nAcaba esse garoto sendo meu avô.\n\nTRIO FORROZÃO. Agitando a rapaziada. \n\nRio de Janeiro: Natasha Records, 2009.\n\nNessa letra da canção, a suposição do último verso \nsinaliza a intenção do autor de",
+      "options": [
+        "ironizar as relações familiares modernas.",
+        "reforçar o humor da situação representada.",
+        "expressar perplexidade em relação ao parente.",
+        "atribuir à criança a causa da dúvida existencial.",
+        "questionar os lugares predeterminados da família.\n\nLC - 1° dia | Caderno 2 - AMARELO - Página 17"
+      ],
+      "correctOption": 1,
+      "explanation": "Origem: ENEM 2020 • Linguagens e Códigos • Questão #43"
+    },
+    {
+      "id": "enem-2015-d2-q113",
+      "statement": "A pátria\nAma, com fé e orgulho, a terra em que nasceste!\nCriança! não verás nenhum país como este! \nOlha que céu! que mar! que rios! que floresta!\nA Natureza, aqui, perpetuamente em festa,\nÉ um seio de mãe a transbordar carinhos.\nVê que vida há no chão! vê que vida há nos ninhos,\nQue se balançam no ar, entre os ramos inquietos!\nVê que luz, que calor, que multidão de insetos!\nVê que grande extensão de matas, onde impera,\nFecunda e luminosa, a eterna primavera!\nBoa terra! jamais negou a quem trabalha \nO pão que mata a fome, o teto que agasalha...\n\nQuem com o seu suor a fecunda e umedece,\nVê pago o seu esforço, e é feliz, e enriquece!\n\nCriança! não verás país nenhum como este:\nImita na grandeza a terra em que nasceste!\n\nBILAC, O. Poesias infantis. Rio de Janeiro: Francisco Alves, 1929.\nPublicado em 1904, o poema A pátria harmoniza-se \ncom um projeto ideológico em construção na Primeira \nRepública. O discurso poético de Olavo Bilac ecoa esse \nprojeto, na medida em que",
+      "options": [
+        "a paisagem natural ganha contornos surreais, como o \n\nprojeto brasileiro de grandeza.",
+        "a prosperidade individual, como a exuberância da \n\nterra, independe de políticas de governo.",
+        "os valores afetivos atribuídos à família devem ser \n\naplicados também aos ícones nacionais.",
+        "a capacidade produtiva da terra garante ao país a \n\nriqueza que se verifica naquele momento.",
+        "a valorização do trabalhador passa a integrar o \n\nconceito de bem-estar social experimentado."
+      ],
+      "correctOption": 1,
+      "explanation": "Origem: ENEM 2015 • Linguagens e Códigos • Questão #113",
+      "images": [
+        "assets/2015/dia-2/q113_fig1.png"
+      ]
+    },
+    {
+      "id": "enem-2019-d1-q031",
+      "statement": "No Brasil, a disseminação de uma expectativa de \ncorpo com base na estética da magreza é bastante grande \ne apresenta uma enorme repercussão, especialmente, \nse considerada do ponto de vista da realização pessoal. \nEm pesquisa feita na cidade de São Paulo, aparecem os \npercentuais de 90% entre as mulheres pesquisadas que \nse dizem preocupadas com seu peso corporal, sendo \nque 95% se sentem insatisfeitas com “seu próprio corpo”.\n\nSILVA, A. M. Corpo, ciência e mercado: reflexões acerca da gestação \n\nde um novo arquétipo da felicidade. Campinas: Autores Associados; \n\nFlorianópolis: UFSC, 2001.\n\nA preocupação excessiva com o “peso” corporal pode \nprovocar o desenvolvimento de distúrbios associados \ndiretamente à imagem do corpo, tais como",
+      "options": [
+        "anorexia e bulimia.",
+        "ortorexia e vigorexia.",
+        "ansiedade e depressão.",
+        "sobrepeso e fobia social.",
+        "sedentarismo e obesidade.\n\nLC - 1º dia | Caderno 2 - AMARELO - Página 14"
+      ],
+      "correctOption": 0,
+      "explanation": "Origem: ENEM 2019 • Linguagens e Códigos • Questão #31",
+      "images": [
+        "assets/2019/dia-1/q31_fig1.png"
+      ]
+    },
+    {
+      "id": "enem-2012-d2-q128",
+      "statement": "Entrevista com Marcos Bagno\n\nPode \nparecer \ninacreditável, \nmas \nmuitas \ndas \nprescrições da pedagogia tradicional da língua até hoje \nse baseiam nos usos que os escritores portugueses do \nséculo XIX faziam da língua. Se tantas pessoas condenam, \npor exemplo, o uso do verbo “ter” no lugar de “haver”, \ncomo em “hoje tem feijoada”, é simplesmente porque os \nportugueses, em dado momento da história de sua língua, \ndeixaram de fazer esse uso existencial do verbo “ter”. \n\nNo entanto, temos registros escritos da época \nmedieval em que aparecem centenas desses usos. Se \nnós, brasileiros, assim como os falantes africanos de \nportuguês, usamos até hoje o verbo “ter” como existencial \né porque recebemos esses usos de nossos ex-\ncolonizadores. Não faz sentido imaginar que brasileiros, \nangolanos e moçambicanos decidiram se juntar para \n“errar” na mesma coisa. E assim acontece com muitas \noutras coisas: regências verbais, colocação pronominal, \nconcordâncias nominais e verbais etc. Temos uma \nlíngua própria, mas ainda somos obrigados a seguir uma \ngramática normativa de outra língua diferente. Às vésperas \nde comemorarmos nosso bicentenário de independência, \nnão faz sentido continuar rejeitando o que é nosso para só \naceitar o que vem de fora. \n\nNão faz sentido rejeitar a língua de 190 milhões de \nbrasileiros para só considerar certo o que é usado por menos \nde dez milhões de portugueses. Só na cidade de São Paulo \ntemos mais falantes de português que em toda a Europa!\n\nInformativo Parábola Editorial, s/d.\n\nNa entrevista, o autor defende o uso de formas linguísticas \ncoloquiais e faz uso da norma padrão em toda a extensão \ndo texto. Isso pode ser explicado pelo fato de que ele",
+      "options": [
+        "adapta o nível de linguagem à situação comunicativa, \n\numa vez que o gênero entrevista requer o uso da \nnorma padrão.",
+        "apresenta argumentos carentes de comprovação \n\ncientífica e, por isso, defende um ponto de vista difícil \nde ser verificado na materialidade do texto.",
+        "propõe que o padrão normativo deve ser usado por \n\nfalantes escolarizados como ele, enquanto a norma \ncoloquial deve ser usada por falantes não escolarizados.",
+        "acredita que a língua genuinamente brasileira está em \n\nconstrução, o que o obriga a incorporar em seu cotidiano \na gramática normativa do português europeu.",
+        "defende que a quantidade de falantes do português \n\nbrasileiro ainda é insuficiente para acabar com a \nhegemonia do antigo colonizador.\n\nLC - 2º dia | Caderno 5 - AMARELO - Página 16"
+      ],
+      "correctOption": 0,
+      "explanation": "Origem: ENEM 2012 • Linguagens e Códigos • Questão #128",
+      "images": [
+        "assets/2012/dia-2/q128_fig1.png"
+      ]
+    },
+    {
+      "id": "enem-2011-d2-q131",
+      "statement": "Motivadas ou não historicamente, normas prestigiadas \nou estigmatizadas pela comunidade sobrepõem-se ao \nlongo do território, seja numa relação de oposição, seja de \ncomplementaridade, sem, contudo, anular a interseção de \nusos que configuram uma norma nacional distinta da do \nportuguês europeu. Ao focalizar essa questão, que opõe \nnão só as normas do português de Portugal às normas do \nportuguês brasileiro, mas também as chamadas normas \ncultas locais às populares ou vernáculas, deve-se insistir \nna ideia de que essas normas se consolidaram em \ndiferentes momentos da nossa história e que só a partir do \nséculo XVIII se pode começar a pensar na bifurcação das \nvariantes continentais, ora em consequência de mudanças \nocorridas no Brasil, ora em Portugal, ora, ainda, em ambos \nos territórios.\n\nCALLOU, D. Gramática, variação e normas. In: VIEIRA, S. R.; BRANDÃO, S. (orgs). \n\nEnsino de gramática: descrição e uso. São Paulo: Contexto, 2007 (adaptado).\nO português do Brasil não é uma língua uniforme. A \nvariação linguística é um fenômeno natural, ao qual todas \nas línguas estão sujeitas. Ao considerar as variedades \nlinguísticas, o texto mostra que as normas podem ser \naprovadas ou condenadas socialmente, chamando a \natenção do leitor para a",
+      "options": [
+        "desconsideração \nda \nexistência \ndas \nnormas \npopulares pelos falantes da norma culta.",
+        "difusão do português de Portugal em todas as \n\nregiões do Brasil só a partir do século XVIII.",
+        "existência de usos da língua que caracterizam uma \n\nnorma nacional do Brasil, distinta da de Portugal.",
+        "inexistência de normas cultas locais e populares ou \n\nvernáculas em um determinado país.",
+        "necessidade de se rejeitar a ideia de que os usos \n\nfrequentes de uma língua devem ser aceitos."
+      ],
+      "correctOption": 2,
+      "explanation": "Origem: ENEM 2011 • Linguagens e Códigos • Questão #131",
+      "images": [
+        "assets/2011/dia-2/q131_fig1.png"
+      ]
+    },
+    {
+      "id": "enem-2013-d2-q130",
+      "statement": "O que a internet esconde de você\n\nSites de busca manipulam resultados. Redes sociais \ndecidem quem vai ser seu amigo — e descartam as \npessoas sem avisar. E, para cada site que você pode \n\nacessar, há 400 outros invisíveis. Prepare-se para \n\nconhecer o lado oculto da internet.\n\n GRAVATÁ, A. Superinteressante, São Paulo, ed. 297, nov. 2011 (adaptado).\n\nAnalisando-se as informações verbais e a imagem associada \na uma cabeça humana, compreende-se que a venda",
+      "options": [
+        "representa a amplitude de informações que compõem \n\na internet, às quais temos acesso em redes sociais e \nsites de busca.",
+        "faz uma denúncia quanto às informações que são \n\nomitidas dos usuários da rede, sendo empregada no \nsentido conotativo.",
+        "diz respeito a um buraco negro digital, onde estão \n\nescondidas as informações buscadas pelo usuário \nnos sites que acessa.",
+        "está associada a um conjunto de restrições sociais \n\npresentes na vida daqueles que estão sempre \nconectados à internet.",
+        "remete às bases de dados da web, protegidas por \n\nsenhas ou assinaturas e às quais o navegador não \ntem acesso."
+      ],
+      "correctOption": 1,
+      "explanation": "Origem: ENEM 2013 • Linguagens e Códigos • Questão #130",
+      "images": [
+        "assets/2013/dia-2/q130_1.png"
+      ]
+    },
+    {
+      "id": "enem-2022-d1-q004",
+      "statement": "As my official bio reads, I was made in Cuba, assembled \nin Spain, and imported to the United States — meaning my \nmother, seven months pregnant, and the rest of my family \narrived as exiles from Cuba to Madrid, where I was born. \nLess than two months later, we emigrated once more and \nsettled in New York City, then eventually in Miami, where \nI was raised and educated. Although technically we lived \nin the United States, the Cuban community was culturally \ninsular in Miami during the 1970s, bonded together by the \ntrauma of exile. What’s more, it seemed that practically \neveryone was Cuban: my teachers, my classmates, the \nmechanic, the bus driver. I didn’t grow up feeling different \nor treated as a minority. The few kids who got picked on \nin my grade school were the ones with freckles and funny \nlast names like Dawson and O’Neil.\n\nBLANCO, R. Disponível em: http://edition.cnn.com.  Acesso em: 9 dez. 2017 (adaptado).\n\nAo relatar suas vivências, o autor destaca o(a)",
+      "options": [
+        "A\t qualidade da educação formal em Miami.",
+        "B\t prestígio da cultura cubana nos Estados Unidos.",
+        "C\t oportunidade de qualificação profissional em Miami.",
+        "D\t cenário da integração de cubanos nos Estados Unidos.",
+        "E\t fortalecimento do elo familiar em comunidades \n\nestadunidenses."
+      ],
+      "correctOption": 3,
+      "explanation": "Origem: ENEM 2022 • Linguagens e Códigos • Questão #4 (Ingles)"
+    },
+    {
+      "id": "enem-2016-d2-q111",
+      "statement": "Mandinga — Era a denominação que, no período \ndas grandes navegações, os portugueses davam à costa \nocidental da África. A palavra se tornou sinônimo de \nfeitiçaria porque os exploradores lusitanos consideravam \nbruxos os africanos que ali habitavam — é que eles davam \nindicações sobre a existência de ouro na região. Em idioma \nnativo, manding designava terra de feiticeiros. A palavra \nacabou virando sinônimo de feitiço, sortilégio.\n\nCOTRIM, M. O pulo do gato 3. São Paulo: Geração Editorial, 2009 (fragmento).\n\nNo texto, evidencia-se que a construção do significado da \npalavra mandinga resulta de um(a)",
+      "options": [
+        "contexto sócio-histórico.",
+        "diversidade étnica.",
+        "descoberta geográfica.",
+        "apropriação religiosa.",
+        "contraste cultural.\n\nLC - 2º dia | Caderno 5 - AMARELO - Página 10"
+      ],
+      "correctOption": 0,
+      "explanation": "Origem: ENEM 2016 • Linguagens e Códigos • Questão #111",
+      "images": [
+        "assets/2016/dia-2/q111_fig1.png"
+      ]
+    },
+    {
+      "id": "enem-2015-d2-q105",
+      "statement": "Rede social pode prever desempenho profissional, \n\ndiz pesquisa\nPense duas vezes antes de postar qualquer item \nem seu perfil nas redes sociais. O conselho, repetido à \nexaustão por consultores de carreira por aí, acaba de \nganhar um status, digamos, mais científico. De acordo \ncom resultados da pesquisa, uma rápida análise do \nperfil nas redes sociais pode prever o desempenho \nprofissional do candidato a uma oportunidade de \nemprego. Para chegar a essa conclusão, uma equipe de \npesquisadores da Northern Illinois University, University \nof Evansville e Auburn University pediu a um professor \nuniversitário e dois alunos para analisarem perfis de um \ngrupo de universitários.\n\nApós checar fotos, postagens, número de amigos e \ninteresses por 10 minutos, o trio considerou itens como \nconsciência, \nafabilidade, \nextroversão, \nestabilidade \nemocional e receptividade. Seis meses depois, as \nimpressões do grupo foram comparadas com a análise \nde desempenho feita pelos chefes dos jovens que tiveram \nseus perfis analisados. Os pesquisadores encontraram \numa forte correlação entre as características descritas \na partir dos dados da rede e o comportamento dos \nuniversitários no ambiente de trabalho.\n\nDisponível em: http://exame.abril.com.br. Acesso em: 29 fev. 2012 (adaptado).\n\nAs redes sociais são espaços de comunicação e interação \non-line que possibilitam o conhecimento de aspectos da \nprivacidade de seus usuários. Segundo o texto, no mundo \ndo trabalho, esse conhecimento permite",
+      "options": [
+        "identificar a capacidade física atribuída ao candidato.",
+        "certificar a competência profissional do candidato.",
+        "controlar o comportamento virtual e real do candidato.",
+        "avaliar informações pessoais e comportamentais \n\nsobre o candidato.",
+        "aferir a capacidade intelectual do candidato na resolução \n\nde problemas."
+      ],
+      "correctOption": 3,
+      "explanation": "Origem: ENEM 2015 • Linguagens e Códigos • Questão #105",
+      "images": [
+        "assets/2015/dia-2/q105_fig1.png"
+      ]
+    }
+  ]
+}

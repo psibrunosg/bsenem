@@ -1,0 +1,714 @@
+{
+  "schema": "bsestudos.exam.v1",
+  "id": "simulado-ciencias-natureza-e486aeea",
+  "title": "Simulado — Ciências da Natureza (45 Questões)",
+  "durationMinutes": 135,
+  "subject": "Ciências da Natureza",
+  "questions": [
+    {
+      "id": "enem-2015-d1-q077",
+      "statement": "Um carro solar é um veículo que utiliza apenas a \nenergia solar para a sua locomoção. Tipicamente, o carro \ncontém um painel fotovoltaico que converte a energia \ndo Sol em energia elétrica que, por sua vez, alimenta \num motor elétrico. A imagem mostra o carro solar Tokai \nChallenger, desenvolvido na Universidade de Tokai, no \nJapão, e que venceu o World Solar Challenge de 2009, \numa corrida internacional de carros solares, tendo atingido \numa velocidade média acima de 100 km/h. \n\nDisponível em: www.physics.hku.hk. Acesso em: 3 jun. 2015.\n\nConsidere uma região plana onde a insolação \n(energia solar por unidade de tempo e de área que chega \nà superfície da Terra) seja de 1 000 W/m2, que o carro \nsolar possua massa de 200 kg e seja construído de forma \nque o painel fotovoltaico em seu topo tenha uma área de \n9,0 m2 e rendimento de 30%. \n\nDesprezando as forças de resistência do ar, o tempo que \nesse carro solar levaria, a partir do repouso, para atingir a \nvelocidade de 108 km/h é um valor mais próximo de",
+      "options": [
+        "1,0 s.",
+        "4,0 s.",
+        "10 s.",
+        "33 s.",
+        "300 s."
+      ],
+      "correctOption": 3,
+      "explanation": "Origem: ENEM 2015 • Ciências da Natureza • Questão #77",
+      "images": [
+        "assets/2015/dia-1/q77_1.png"
+      ]
+    },
+    {
+      "id": "enem-2022-d2-q096",
+      "statement": "Em 2002, um mecânico da cidade mineira de \nUberaba (MG) teve uma ideia para economizar o \nconsumo de energia elétrica e iluminar a própria casa \nnum dia de sol. Para isso, ele utilizou garrafas plásticas \nPET com água e cloro, conforme ilustram as figuras. \nCada garrafa foi fixada ao telhado de sua casa em um \nburaco com diâmetro igual ao da garrafa, muito maior \nque o comprimento de onda da luz. Nos últimos dois \nanos, sua ideia já alcançou diversas partes do mundo \ne deve atingir a marca de 1 milhão de casas utilizando \na “luz engarrafada”.\n\n e no ar \n\nZOBEL, G. Brasileiro inventor de “luz engarrafada” tem ideia espalhada pelo mundo.\n\nDisponível em: www.bbc.com. Acesso em: 23 jun. 2022 (adaptado).\nQue fenômeno óptico explica o funcionamento da “luz \nengarrafada”?",
+      "options": [
+        "A\t Difração.",
+        "B\t Absorção.",
+        "C\t Polarização.",
+        "D\t Reflexão.\n\nB\n\nE",
+        "Refração."
+      ],
+      "correctOption": 4,
+      "explanation": "Origem: ENEM 2022 • Ciências da Natureza • Questão #96",
+      "images": [
+        "assets/2022/dia-2/q96_1.png"
+      ]
+    },
+    {
+      "id": "enem-2009-d1-q028",
+      "statement": "Uma pesquisadora deseja reflorestar uma área de \nmata ciliar quase que totalmente desmatada. Essa \nformação vegetal é um tipo de floresta muito comum nas \nmargens de rios dos cerrados no Brasil central e, em seu \nclímax, possui vegetação arbórea perene e apresenta \ndossel fechado, com pouca incidência luminosa no solo e \nnas plântulas. Sabe-se que a incidência de luz, a \ndisponibilidade de nutrientes e a umidade do solo são os \nprincipais fatores do meio ambiente físico que influenciam \nno desenvolvimento da planta. Para testar unicamente os \nefeitos da variação de luz, a pesquisadora analisou, em \ncasas de vegetação com condições controladas, o \ndesenvolvimento de plantas de 10 espécies nativas da \nregião desmatada sob quatro condições de luminosidade: \numa sob sol pleno e as demais em diferentes níveis de \nsombreamento. Para cada tratamento experimental, a \npesquisadora relatou se o desenvolvimento da planta foi \nbom, razoável ou ruim, de acordo com critérios \nespecíficos. Os resultados obtidos foram os seguintes: \n \n\nCondição de luminosidade \n\nSombreamento \nEspécie \nSol pleno \n30% \n50% \n90% \n1 \nRazoável \nBom \nRazoável \nRuim \n2 \nBom \nRazoável \nRuim \nRuim \n3 \nBom \nBom \nRazoável \nRuim \n4 \nBom \nBom \nBom \nBom \n5 \nBom \nRazoável \nRuim \nRuim \n6 \nRuim \nRazoável \nBom \nBom \n7 \nRuim \nRuim \nRuim \nRazoável \n8 \nRuim \nRuim \nRazoável \nRuim \n9 \nRuim \nRazoável \nBom \nBom \n10 \nRazoável \nRazoável \nRazoável \nBom \n \nPara o reflorestamento da região desmatada,",
+      "options": [
+        "a espécie 8 é mais indicada que a 1, uma vez que  \n\naquela possui melhor adaptação a regiões com maior \nincidência de luz.",
+        "recomenda-se a utilização de espécies pioneiras, isto \n\né, aquelas que suportam alta incidência de luz, como \nas espécies 2, 3 e 5.",
+        "sugere-se o uso de espécies exóticas, pois somente \n\nessas podem suportar a alta incidência luminosa \ncaracterística de regiões desmatadas.",
+        "espécies de comunidade clímax, como as 4 e 7, são \n\nas mais indicadas, uma vez que possuem boa \ncapacidade de aclimatação a diferentes ambientes.",
+        "é recomendado o uso de espécies com melhor \n\ndesenvolvimento à sombra, como as plantas das \nespécies 4, 6, 7, 9 e 10, pois essa floresta, mesmo no \nestágio \nde \ndegradação \nreferido, \npossui \ndossel \nfechado, o que impede a entrada de luz."
+      ],
+      "correctOption": 1,
+      "explanation": "Origem: ENEM 2009 • Ciências da Natureza • Questão #28",
+      "images": [
+        "assets/2009/dia-1/q28_fig1.png"
+      ]
+    },
+    {
+      "id": "enem-2019-d2-q095",
+      "statement": "As redes de alta tensão para transmissão de energia \nelétrica geram campo magnético variável o suficiente \npara induzir corrente elétrica no arame das cercas. \nTanto \nos \nanimais \nquanto \nos \nfuncionários \ndas \npropriedades rurais ou das concessionárias de energia \ndevem ter muito cuidado ao se aproximarem de uma \ncerca quando esta estiver próxima a uma rede de alta \ntensão, pois, se tocarem no arame da cerca, poderão \nsofrer choque elétrico.\n\nPara minimizar este tipo de problema, deve-se:",
+      "options": [
+        "Fazer o aterramento dos arames da cerca.",
+        "Acrescentar fusível de segurança na cerca.",
+        "Realizar o aterramento da rede de alta tensão.",
+        "Instalar fusível de segurança na rede de alta tensão.",
+        "Utilizar fios encapados com isolante na rede \n\nde alta tensão."
+      ],
+      "correctOption": 0,
+      "explanation": "Origem: ENEM 2019 • Ciências da Natureza • Questão #95",
+      "images": [
+        "assets/2019/dia-2/q95_fig1.png"
+      ]
+    },
+    {
+      "id": "enem-2013-d1-q055",
+      "statement": "Em viagens de avião, é solicitado aos passageiros \no \ndesligamento \nde \ntodos \nos \naparelhos \ncujo \nfuncionamento envolva a emissão ou a recepção de \nondas eletromagnéticas. O procedimento é utilizado \npara eliminar fontes de radiação que possam interferir \nnas comunicações via rádio dos pilotos com a torre \nde controle.\n\nA propriedade das ondas emitidas que justifica o \nprocedimento adotado é o fato de",
+      "options": [
+        "terem fases opostas.",
+        "serem ambas audíveis.",
+        "terem intensidades inversas.",
+        "serem de mesma amplitude.",
+        "terem frequências próximas.\n\nCN - 1º dia | Caderno 2 - AMARELO - Página 18"
+      ],
+      "correctOption": 4,
+      "explanation": "Origem: ENEM 2013 • Ciências da Natureza • Questão #55",
+      "images": [
+        "assets/2013/dia-1/q55_fig1.png"
+      ]
+    },
+    {
+      "id": "enem-2009-d1-q030",
+      "statement": "Considere um equipamento capaz de emitir \nradiação eletromagnética com comprimento de onda bem \nmenor que a radiação ultravioleta. Suponha que a radiação \nemitida por esse equipamento foi apontada para um tipo \nespecífico de filme fotográfico e entre o equipamento e o \nfilme foi posicionado o pescoço de um indivíduo. Quanto \nmais exposto à radiação, mais escuro se torna o filme após \na revelação. Após acionar o equipamento e revelar o filme, \nevidenciou-se a imagem mostrada na figura abaixo.  \n \n\n \n\n \n \nDentre os fenômenos decorrentes da interação entre a \nradiação e os átomos do indivíduo que permitem a \nobtenção desta imagem inclui-se a",
+      "options": [
+        "absorção \nda \nradiação \neletromagnética \ne \na \nconsequente ionização dos átomos de cálcio, que se \ntransformam em átomos de fósforo.",
+        "maior absorção da radiação eletromagnética pelos \n\nátomos de cálcio que por outros tipos de átomos.",
+        "maior absorção da radiação eletromagnética pelos \n\nátomos de carbono que por átomos de cálcio.",
+        "maior refração ao atravessar os átomos de carbono \n\nque os átomos de cálcio.",
+        "maior ionização de moléculas de água que de átomos \n\nde carbono."
+      ],
+      "correctOption": 1,
+      "explanation": "Origem: ENEM 2009 • Ciências da Natureza • Questão #30",
+      "images": [
+        "assets/2009/dia-1/q30_1.png"
+      ]
+    },
+    {
+      "id": "enem-2012-d1-q069",
+      "statement": "Em certos locais, larvas de moscas, criadas em arroz \ncozido, são utilizadas como iscas para pesca. Alguns \ncriadores, no entanto, acreditam que essas larvas surgem \nespontaneamente do arroz cozido, tal como preconizado \npela teoria da geração espontânea.\n\nEssa teoria começou a ser refutada pelos cientistas ainda \nno século XVII, a partir dos estudos de Redi e Pasteur, \nque mostraram experimentalmente que",
+      "options": [
+        "seres vivos podem ser criados em laboratório.",
+        "a vida se originou no planeta a partir de microrganismos.",
+        "o ser vivo é oriundo da reprodução de outro ser vivo \n\npré-existente.",
+        "seres \nvermiformes \ne \nmicrorganismos \nsão \nevolutivamente aparentados.",
+        "vermes e microrganismos são gerados pela matéria \n\nexistente nos cadáveres e nos caldos nutritivos, \nrespectivamente."
+      ],
+      "correctOption": 2,
+      "explanation": "Origem: ENEM 2012 • Ciências da Natureza • Questão #69",
+      "images": [
+        "assets/2012/dia-1/q69_fig1.png"
+      ]
+    },
+    {
+      "id": "enem-2015-d1-q072",
+      "statement": "Alimentos \nem \nconserva \nsão \nfrequentemente \narmazenados em latas metálicas seladas, fabricadas com \num material chamado folha de flandres, que consiste de \numa chapa de aço revestida com uma fina camada de \nestanho, metal brilhante e de difícil oxidação. É comum \nque a superfície interna seja ainda revestida por uma \ncamada de verniz à base de epóxi, embora também \nexistam latas sem esse revestimento, apresentando uma \ncamada de estanho mais espessa.\n\nSANTANA, V. M. S. A leitura e a química das substâncias. Cadernos PDE. Ivaiporã: \n\nSecretaria de Estado da Educação do Paraná (SEED);  Universidade \n\nEstadual de Londrina, 2010 (adaptado).\n\nComprar \numa \nlata \nde \nconserva \namassada \nno \nsupermercado é desaconselhável porque o amassado \npode",
+      "options": [
+        "alterar a pressão no interior da lata, promovendo a \n\ndegradação acelerada do alimento.",
+        "romper a camada de estanho, permitindo a corrosão \n\ndo ferro e alterações do alimento.",
+        "prejudicar o apelo visual da embalagem, apesar de \n\nnão afetar as propriedades do alimento.",
+        "romper a camada de verniz, fazendo com que o metal \n\ntóxico estanho contamine o alimento.",
+        "desprender camadas de verniz, que se dissolverão no \n\nmeio aquoso, contaminando o alimento."
+      ],
+      "correctOption": 1,
+      "explanation": "Origem: ENEM 2015 • Ciências da Natureza • Questão #72",
+      "images": [
+        "assets/2015/dia-1/q72_fig1.png"
+      ]
+    },
+    {
+      "id": "enem-2012-d1-q084",
+      "statement": "O boato de que os lacres das latas de alumínio teriam \n\num alto valor comercial levou muitas pessoas a juntarem \n\nesse material na expectativa de ganhar dinheiro com sua \n\nvenda. As empresas fabricantes de alumínio esclarecem \n\nque isso não passa de uma “lenda urbana”, pois ao retirar \n\no anel da lata, dificulta-se a reciclagem do alumínio. Como \n\na liga do qual é feito o anel contém alto teor de magnésio, \n\nse ele não estiver junto com a lata, fica mais fácil ocorrer \n\na oxidação do alumínio no forno. A tabela apresenta as \n\nsemirreações e os valores de potencial padrão de redução \n\nde alguns metais:\n\nSemirreação\nPotencial Padrão de \n\nRedução (V)\n\nLi+ + e– → Li\n–3,05\n\nK+ + e– → K\n–2,93\n\nMg2+ + 2 e– → Mg\n–2,36\n\nAl3+ + 3 e– → Al\n–1,66\n\nZn2+ + 2 e– → Zn\n–0,76\n\nCu2+ + 2 e– → Cu\n+0,34\n\nDisponível em: www.sucatas.com. Acesso em: 28 fev. 2012 (adaptado).\n\nCom base no texto e na tabela, que metais poderiam \n\nentrar na composição do anel das latas com a mesma \n\nfunção do magnésio, ou seja, proteger o alumínio da \n\noxidação nos fornos e não deixar diminuir o rendimento \n\nda sua reciclagem?",
+      "options": [
+        "Somente o lítio, pois ele possui o menor potencial de \n\nredução.",
+        "Somente o cobre, pois ele possui o maior potencial \n\nde redução.",
+        "Somente o potássio, pois ele possui potencial de \n\nredução mais próximo do magnésio.",
+        "Somente o cobre e o zinco, pois eles sofrem oxidação \n\nmais facilmente que o alumínio.",
+        "Somente o lítio e o potássio, pois seus potenciais de \n\nredução são menores do que o do alumínio.\n\nCN - 1º dia | Caderno 2 - AMARELO - Página 28"
+      ],
+      "correctOption": 4,
+      "explanation": "Origem: ENEM 2012 • Ciências da Natureza • Questão #84",
+      "images": [
+        "assets/2012/dia-1/q84_fig1.png"
+      ]
+    },
+    {
+      "id": "enem-2017-d2-q121",
+      "statement": "Alguns tipos de dessalinizadores usam o processo de \nosmose reversa para obtenção de água potável a partir \nda água salgada. Nesse método, utiliza-se um recipiente \ncontendo dois compartimentos separados por uma \nmembrana semipermeável: em um deles coloca-se água \nsalgada e no outro recolhe-se a água potável. A aplicação \nde pressão mecânica no sistema faz a água fluir de um \ncompartimento para o outro. O movimento das moléculas \nde água através da membrana é controlado pela pressão \nosmótica e pela pressão mecânica aplicada.\n\nPara que ocorra esse processo é necessário que \nas resultantes das pressões osmótica e mecânica \napresentem",
+      "options": [
+        "mesmo sentido e mesma intensidade.",
+        "sentidos opostos e mesma intensidade.",
+        "sentidos opostos e maior intensidade da pressão osmótica.",
+        "mesmo sentido e maior intensidade da pressão osmótica.",
+        "sentidos opostos e maior intensidade da pressão mecânica.\n\nCN - 2º dia | Caderno 5 - AMARELO - Página 11"
+      ],
+      "correctOption": 4,
+      "explanation": "Origem: ENEM 2017 • Ciências da Natureza • Questão #121",
+      "images": [
+        "assets/2017/dia-2/q121_fig1.png"
+      ]
+    },
+    {
+      "id": "enem-2016-d1-q058",
+      "statement": "Em sua formulação, o spray de pimenta contém \nporcentagens variadas de oleorresina de Capsicum, \ncujo princípio ativo é a capsaicina, e um solvente\n(um álcool como etanol ou isopropanol). Em contato \ncom os olhos, pele ou vias respiratórias, a capsaicina \ncausa um efeito infl amatório que gera uma sensação de \ndor e ardor, levando à cegueira temporária. O processo \né desencadeado pela liberação de neuropeptídios das \nterminações nervosas.\n\nComo funciona o gás de pimenta. Disponível em: http://pessoas.hsw.uol.com.br.\n\n Acesso em: 1 mar. 2012 (adaptado).\n\nQuando uma pessoa é atingida com o spray de pimenta \nnos olhos ou na pele, a lavagem da região atingida com \nágua é ineﬁ caz porque a",
+      "options": [
+        "reação entre etanol e água libera calor, intensiﬁ cando \n\no ardor.",
+        "solubilidade do princípio ativo em água é muito baixa, \n\ndiﬁ cultando a sua remoção.",
+        "permeabilidade da água na pele é muito alta, não \n\npermitindo a remoção do princípio ativo.",
+        "solubilização do óleo em água causa um maior \n\nespalhamento além das áreas atingidas.",
+        "ardência faz evaporar rapidamente a água, não \n\npermitindo que haja contato entre o óleo e o solvente."
+      ],
+      "correctOption": 1,
+      "explanation": "Origem: ENEM 2016 • Ciências da Natureza • Questão #58",
+      "images": [
+        "assets/2016/dia-1/q58_fig1.png"
+      ]
+    },
+    {
+      "id": "enem-2024-d2-q118",
+      "statement": "ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024\n\nMirascópio 3D: produtor de ilusão instantânea\n\nO equipamento ilustrado na figura, de dimensões \napresentadas no esquema, é composto por dois espelhos \ncôncavos E1 e E2, apoiados um sobre o outro por suas \nbordas, de tal forma que o vértice de E1 coincide com \no foco de E2 e vice-versa. Na abertura circular de \nE2, é formada uma imagem tridimensional de um objeto \nposicionado sobre o vértice de E1. Essa imagem é \nformada a partir dos raios procedentes do objeto, refletidos \npor E2 e E1, respectivamente, conforme o esquema. \nOs observadores julgam visualizar o objeto quando estão, \nde fato, visualizando sua imagem. O efeito só é possível \nporque as superfícies de ambos os espelhos são de \nextrema qualidade.\n\nSALZMANN, W. Disponível em: https://wissenstexte.de. \n\nAcesso em: 27 jun. 2024 (adaptado).\n\nA natureza da imagem formada e a distância vertical entre \ncada ponto objeto e seu correspondente ponto imagem são",
+      "options": [
+        "real e 5 cm.",
+        "real e 3,8 cm.",
+        "real e 7,6 cm.",
+        "virtual e 7,6 cm.",
+        "virtual e 3,8 cm."
+      ],
+      "correctOption": 2,
+      "explanation": "Origem: ENEM 2024 • Ciências da Natureza • Questão #118",
+      "images": [
+        "assets/2024/dia-2/q118_1.png"
+      ]
+    },
+    {
+      "id": "enem-2009-d1-q035",
+      "statement": "O Sol representa uma fonte limpa e inesgotável de \nenergia para o nosso planeta. Essa energia pode ser \ncaptada \npor \naquecedores \nsolares, \narmazenada \ne \nconvertida posteriormente em trabalho útil. Considere \ndeterminada região cuja insolação — potência solar \nincidente na superfície da Terra — seja de 800 watts/m2. \nUma usina termossolar utiliza concentradores solares \nparabólicos que chegam a dezenas de quilômetros de \nextensão. Nesses coletores solares parabólicos, a luz \nrefletida pela superfície parabólica espelhada é focalizada \nem um receptor em forma de cano e aquece o óleo contido \nem seu interior a 400 °C. O calor desse óleo é transferido \npara a água, vaporizando-a em uma caldeira. O vapor em \nalta pressão movimenta uma turbina acoplada a um \ngerador de energia elétrica. \n\nA\n\nC\n\n \n\nD\n\nE\n\n \n \nConsiderando que a distância entre a borda inferior e a \nborda superior da superfície refletora tenha 6 m de largura \ne que focaliza no receptor os 800 watts/m2 de radiação \nprovenientes do Sol, e que o calor específico da água é  \n1 cal g-1 ºC-1 = 4.200 J kg-1 ºC-1, então o comprimento linear \ndo refletor parabólico necessário para elevar a temperatura \nde 1 m3 (equivalente a 1 t) de água de 20 °C para 100 °C, \nem uma hora, estará entre",
+      "options": [
+        "15 m e 21 m.",
+        "22 m e 30 m.",
+        "105 m e 125 m.",
+        "680 m e 710 m.",
+        "6.700 m e 7.150 m."
+      ],
+      "correctOption": 0,
+      "explanation": "Origem: ENEM 2009 • Ciências da Natureza • Questão #35",
+      "images": [
+        "assets/2009/dia-1/q35_1.png"
+      ]
+    },
+    {
+      "id": "enem-2016-d1-q080",
+      "statement": "A invenção e o acoplamento entre engrenagens \nrevolucionaram a ciência na época e propiciaram a \ninvenção de várias tecnologias, como os relógios. \nAo construir um pequeno cronômetro, um relojoeiro \nusa o sistema de engrenagens mostrado. De acordo \ncom a figura, um motor é ligado ao eixo e movimenta \nas engrenagens fazendo o ponteiro girar. A frequência \ndo motor é de 18 RPM, e o número de dentes das \nengrenagens está apresentado no quadro.\n\nEngrenagem\nDentes\n\nA\n24\n\nB\n72\n\nC\n36\n\nD\n108\n\nA frequência de giro do ponteiro, em RPM, é",
+      "options": [
+        "1.",
+        "2.",
+        "4.",
+        "81.",
+        "162.\n\nCN - 1º dia | Caderno 2 - AMARELO - Página 27"
+      ],
+      "correctOption": 1,
+      "explanation": "Origem: ENEM 2016 • Ciências da Natureza • Questão #80",
+      "images": [
+        "assets/2016/dia-1/q80_1.png"
+      ]
+    },
+    {
+      "id": "enem-2018-d2-q132",
+      "statement": "2\u0003PDQHMR\u0003DGHTXDGR\u0003GR\u0003VROR\u0003SRVVLELOLWD\u0003D\u0003PDQXWHQomR\u0003\nde sua fertilidade à medida que as trocas de nutrientes \nHQWUH\u0003PDWpULD\u0003RUJkQLFD\u000f\u0003iJXD\u000f\u0003VROR\u0003H\u0003R\u0003DU\u0003VmR\u0003PDQWLGDV\u0003\nSDUD\u0003 JDUDQWLU\u0003 D\u0003 SURGXomR\u0011\u0003$OJXPDV\u0003 HVSpFLHV\u0003 L{QLFDV\u0003 GH\u0003\nDOXPtQLR\u0003 VmR\u0003 Wy[LFDV\u000f\u0003 QmR\u0003 Vy\u0003 SDUD\u0003 D\u0003 SODQWD\u000f\u0003 PDV\u0003 SDUD\u0003\nmuitos organismos como as bactérias responsáveis \npelas transformações no ciclo do nitrogênio. O alumínio \nGDQL¿FD\u0003DV\u0003PHPEUDQDV\u0003GDV\u0003FpOXODV\u0003GDV\u0003UDt]HV\u0003H\u0003UHVWULQJH\u0003\nD\u0003 H[SDQVmR\u0003 GH\u0003 VXDV\u0003 SDUHGHV\u000f\u0003 FRP\u0003 LVVR\u000f\u0003 D\u0003 SODQWD\u0003 QmR\u0003\ncresce adequadamente. Para promover benefícios para a \nSURGXomR\u0003DJUtFROD\u000f\u0003p\u0003UHFRPHQGDGD\u0003D\u0003UHPHGLDomR\u0003GR\u0003VROR\u0003\nutilizando calcário (CaCO3).\n\n%5$'<\u000f\u00031\u0011\u0003&\u0011\u001e\u0003:(,/\u000f\u00035\u0011\u00035\u0011\u0003Elementos da natureza e propriedades dos solos.\n\n3RUWR\u0003$OHJUH\u001d\u0003%RRNPDQ\u000f\u0003\u0015\u0013\u0014\u0016\u0003\u000bDGDSWDGR\f\u0011\n\n(VVD\u0003UHPHGLDomR\u0003SURPRYH\u0003QR\u0003VROR\u0003R\u000bD",
+      "options": [
+        "GLPLQXLomR\u0003GR\u0003S+\u000f\u0003GHL[DQGR\u0010R\u0003IpUWLO\u0011",
+        "VROXELOL]DomR\u0003 GR\u0003 DOXPtQLR\u000f\u0003 RFRUUHQGR\u0003 VXD\u0003 OL[LYLDomR\u0003\n\npela chuva.",
+        "LQWHUDomR\u0003GR\u0003tRQ\u0003FiOFLR\u0003FRP\u0003R\u0003tRQ\u0003DOXPtQLR\u000f\u0003SURGX]LQGR\u0003\n\numa liga metálica.",
+        "UHDomR\u0003GR\u0003FDUERQDWR\u0003GH\u0003FiOFLR\u0003FRP\u0003RV\u0003tRQV\u0003DOXPtQLR\u000f\u0003\n\nformando alumínio metálico.",
+        "aumento da sua alcalinidade, tornando os íons \n\nalumínio menos disponíveis."
+      ],
+      "correctOption": 4,
+      "explanation": "Origem: ENEM 2018 • Ciências da Natureza • Questão #132",
+      "images": [
+        "assets/2018/dia-2/q132_fig1.png"
+      ]
+    },
+    {
+      "id": "enem-2012-d1-q062",
+      "statement": "Alguns povos indígenas ainda preservam suas \n\ntradições realizando a pesca com lanças, demonstrando \n\numa notável habilidade. Para fisgar um peixe em um \n\nlago com águas tranquilas o índio deve mirar abaixo da \n\nposição em que enxerga o peixe.\n\nEle deve proceder dessa forma porque os raios de luz",
+      "options": [
+        "refletidos pelo peixe não descrevem uma trajetória \n\nretilínea no interior da água.\n\nEnergia Livre",
+        "emitidos pelos olhos do índio desviam sua trajetória \n\nquando passam do ar para a água.",
+        "espalhados pelo peixe são refletidos pela superfície \n\nda água.",
+        "emitidos pelos olhos do índio são espalhados pela \n\nsuperfície da água.",
+        "refletidos pelo peixe desviam sua trajetória quando \n\npassam da água para o ar."
+      ],
+      "correctOption": 4,
+      "explanation": "Origem: ENEM 2012 • Ciências da Natureza • Questão #62",
+      "images": [
+        "assets/2012/dia-1/q62_fig1.png"
+      ]
+    },
+    {
+      "id": "enem-2012-d1-q063",
+      "statement": "Os \nvegetais \nbiossintetizam \ndeterminadas \n\nsubstâncias (por exemplo, alcaloides e flavonoides), cuja \n\nestrutura química e concentração variam num mesmo \n\norganismo em diferentes épocas do ano e estágios \n\nde desenvolvimento. Muitas dessas substâncias são \n\nproduzidas para a adaptação do organismo às variações \n\nambientais \n(radiação \nUV, \ntemperatura, \nparasitas, \n\nherbívoros, estímulo a polinizadores etc.) ou fisiológicas \n\n(crescimento, envelhecimento etc.).\n\nAs variações qualitativa e quantitativa na produção \n\nB \n\ndessas substâncias durante um ano são possíveis porque \n\no material genético do indivíduo",
+      "options": [
+        "sofre constantes recombinações para adaptar-se.",
+        "muda ao longo do ano e em diferentes fases da vida.",
+        "cria novos genes para biossíntese de substâncias \n\nespecíficas.",
+        "D\t altera a sequência de bases nitrogenadas para criar \n\nnovas substâncias.",
+        "E\t possui genes transcritos diferentemente de acordo \n\ncom cada necessidade."
+      ],
+      "correctOption": 4,
+      "explanation": "Origem: ENEM 2012 • Ciências da Natureza • Questão #63",
+      "images": [
+        "assets/2012/dia-1/q63_fig1.png"
+      ]
+    },
+    {
+      "id": "enem-2011-d1-q090",
+      "statement": "Certas espécies de algas são capazes de absorver \n\nrapidamente compostos inorgânicos presentes na \n\nágua, acumulando-os durante seu crescimento. Essa \n\ncapacidade fez com que se pensasse em usá-las \n\ncomo biofiltros para a limpeza de ambientes aquáticos \n\ncontaminados, removendo, por exemplo, nitrogênio \n\ne fósforo de resíduos orgânicos e metais pesados \n\nprovenientes de rejeitos industriais lançados nas \n\náguas. Na técnica do cultivo integrado, animais e algas \n\ncrescem de forma associada, promovendo um maior \n\nequilíbrio ecológico.  \n\nSORIANO, E. M. Filtros vivos para limpar a água. \n\nRevista Ciência Hoje. V. 37, n° 219, 2005 (adaptado).\n\nA utilização da técnica do cultivo integrado de animais \n\ne algas representa uma proposta favorável a um \n\necossistema mais equilibrado porque",
+      "options": [
+        "os animais eliminam metais pesados, que são \n\nusados pelas algas para a síntese de biomassa.",
+        "os \nanimais \nfornecem \nexcretas \norgânicos \n\nnitrogenados, que são transformados em gás \n\ncarbônico pelas algas.",
+        "as algas usam os resíduos nitrogenados liberados \n\npelos animais e eliminam gás carbônico na \n\nfotossíntese, usado na respiração aeróbica.",
+        "as \nalgas \nusam \nos \nresíduos \nnitrogenados \n\nprovenientes do metabolismo dos animais e, \n\ndurante a síntese de compostos orgânicos, liberam \n\noxigênio para o ambiente.",
+        "as algas aproveitam os resíduos do metabolismo dos \n\nanimais e, durante a quimiossíntese de compostos \n\norgânicos, liberam oxigênio para o ambiente."
+      ],
+      "correctOption": 3,
+      "explanation": "Origem: ENEM 2011 • Ciências da Natureza • Questão #90",
+      "images": [
+        "assets/2011/dia-1/q90_fig1.png"
+      ]
+    },
+    {
+      "id": "enem-2015-d1-q069",
+      "statement": "A hidroponia pode ser definida como uma técnica \nde produção de vegetais sem necessariamente a \npresença de solo. Uma das formas de implementação \né manter as plantas com suas raízes suspensas em \nmeio líquido, de onde retiram os nutrientes essenciais. \nSuponha que um produtor de rúcula hidropônica \nprecise ajustar a concentração do íon nitrato (NO3\n\n−) \npara 0,009 mol/L em um tanque de 5 000 litros e, para \ntanto, tem em mãos uma solução comercial nutritiva \nde nitrato de cálcio 90 g/L. As massas molares dos \nelementos N, O e Ca são iguais a 14 g/mol, 16 g/mol e \n40 g/mol, respectivamente.\n\nQual o valor mais próximo do volume da solução nutritiva, \nem litros, que o produtor deve adicionar ao tanque?",
+      "options": [
+        "26",
+        "41",
+        "45",
+        "51",
+        "82"
+      ],
+      "correctOption": 1,
+      "explanation": "Origem: ENEM 2015 • Ciências da Natureza • Questão #69",
+      "images": [
+        "assets/2015/dia-1/q69_fig1.png"
+      ]
+    },
+    {
+      "id": "enem-2025-d2-q123",
+      "statement": "Para a produção de titânio metálico ou dióxido de titânio \npuros, é necessário fazer a cloração do minério que contém \ndióxido de titânio, com o objetivo de separar esse óxido de \noutras substâncias presentes no minério. A principal reação \nquímica de cloração é representada por:",
+      "options": [
+        "TiO2 (s) + 2 Cl2 (g)  \n  TiCl4 (g) + O2 (g)    ΔH = +175 kJ/mol\n\nDepois da cloração, o tetracloreto de titânio é condensado \ne convertido, novamente, a dióxido de titânio.\n\nApós o sistema atingir o equilíbrio químico, como a formação \ndo TiCl4 pode ser favorecida?",
+        "A\tAumentando a pressão total do sistema.\nB\tDiminuindo a temperatura do sistema.",
+        "Aumentando a pressão parcial de O2.",
+        "Aumentando a pressão parcial de Cl2.",
+        "Variando a quantidade de TiO2.\n\nC"
+      ],
+      "correctOption": 3,
+      "explanation": "Origem: ENEM 2025 • Ciências da Natureza • Questão #123",
+      "images": [
+        "assets/2025/dia-2/q123_fig1.png"
+      ]
+    },
+    {
+      "id": "enem-2025-d2-q111",
+      "statement": "O esquema apresenta as etapas do processo de biodigestão, \numa forma de dar um destino sustentável a excrementos animais \ne restos de comida produzidos em áreas de criação de gado e \nporcos confinados.\n\nDisponível em: www.engquimicasantossp.com.br. \n\nAcesso em: 11 fev. 2015 (adaptado). \n\nDar destino sustentável às sobras, conforme apresentado na \netapa 4, ajuda a evitar a",
+      "options": [
+        "bioacumulação de toxinas em plantas.",
+        "eutrofização dos corpos de água.",
+        "destruição da camada de ozônio.",
+        "ocorrência de inversão térmica.",
+        "produção de chuva ácida."
+      ],
+      "correctOption": 1,
+      "explanation": "Origem: ENEM 2025 • Ciências da Natureza • Questão #111",
+      "images": [
+        "assets/2025/dia-2/q111_1.png"
+      ]
+    },
+    {
+      "id": "enem-2025-d2-q132",
+      "statement": "A filtração em carvão é uma das mais antigas formas de \npurificação de água. O carvão ativado, diferentemente do carvão \ncomum, é útil para ser empregado na remoção de material \norgânico, cloro e outros contaminantes. Essa capacidade decorre \nde suas propriedades de adsorção. A origem do material utilizado \npara produzir o carvão ativado pode influenciar sua porosidade \ne, consequentemente, interferir na capacidade do material de \nremover impurezas. Na figura, é ilustrada esquematicamente \na diferença entre as estruturas físicas do carvão comum e do \ncarvão ativado.\n\nCORRÊA, M. A. Cosmetologia: ciência e técnica. \n\nSão Paulo: Medfarma, 2012 (adaptado).\n\nQual característica do carvão ativado explica a sua maior \neficiência nesse processo?",
+      "options": [
+        "Massa.",
+        "Dureza.",
+        "Densidade.",
+        "Superfície.",
+        "Condutividade."
+      ],
+      "correctOption": 3,
+      "explanation": "Origem: ENEM 2025 • Ciências da Natureza • Questão #132",
+      "images": [
+        "assets/2025/dia-2/q132_1.png"
+      ]
+    },
+    {
+      "id": "enem-2014-d1-q047",
+      "statement": "Para \nimpedir \na \ncontaminação \nmicrobiana \ndo \n\nsuprimento de água, deve-se eliminar as emissões de \n\nefluentes e, quando necessário, tratá-lo com desinfetante. \n\nO ácido hipocloroso (HClO), produzido pela reação entre \n\ncloro e água, é um dos compostos mais empregados \n\ncomo desinfetante. Contudo, ele não atua somente como \n\noxidante, mas também como um ativo agente de cloração. \n\nA presença de matéria orgânica dissolvida no suprimento \n\nde água clorada pode levar à formação de clorofórmio \n\n(CHCl3) e outras espécies orgânicas cloradas tóxicas.\n\nSPIRO, T. G.; STIGLIANI, W. M. Química ambiental. \n\nSão Paulo: Pearson, 2009 (adaptado).\n\nVisando eliminar da água o clorofórmio e outras moléculas \n\norgânicas, o tratamento adequado é a",
+      "options": [
+        "filtração, com o uso de filtros de carvão ativo.",
+        "fluoretação, pela adição de fluoreto de sódio.",
+        "coagulação, pela adição de sulfato de alumínio.",
+        "correção do pH, pela adição de carbonato de sódio.",
+        "floculação, em tanques de concreto com a água em \n\nmovimento."
+      ],
+      "correctOption": 0,
+      "explanation": "Origem: ENEM 2014 • Ciências da Natureza • Questão #47",
+      "images": [
+        "assets/2014/dia-1/q47_fig1.png"
+      ]
+    },
+    {
+      "id": "enem-2015-d1-q074",
+      "statement": "O formato das células de organismos pluricelulares é \nextremamente variado. Existem células discoides, como \né o caso das hemácias, as que lembram uma estrela, \ncomo os neurônios, e ainda algumas alongadas, como as \nmusculares.\n\nEm um mesmo organismo, a diferenciação dessas células \nocorre por",
+      "options": [
+        "produzirem mutações específicas.",
+        "possuírem DNA mitocondrial diferentes.",
+        "apresentarem conjunto de genes distintos.",
+        "expressarem porções distintas do genoma.",
+        "terem um número distinto de cromossomos."
+      ],
+      "correctOption": 3,
+      "explanation": "Origem: ENEM 2015 • Ciências da Natureza • Questão #74",
+      "images": [
+        "assets/2015/dia-1/q74_fig1.png"
+      ]
+    },
+    {
+      "id": "enem-2011-d1-q079",
+      "statement": "Os refrigerantes têm-se tornado cada vez mais \no alvo de políticas públicas de saúde. Os de cola \napresentam ácido fosfórico, substância prejudicial à \nfixação de cálcio, o mineral que é o principal componente \nda matriz dos dentes. A cárie é um processo dinâmico \nde desequilíbrio do processo de desmineralização \ndentária, perda de minerais em razão da acidez. Sabe-\nse que o principal componente do esmalte do dente é \num sal denominado hidroxiapatita. O refrigerante, pela \npresença da sacarose, faz decrescer o pH do biofilme \n(placa bacteriana), provocando a desmineralização do \nesmalte dentário. Os mecanismos de defesa salivar \nlevam de 20 a 30 minutos para normalizar o nível do pH, \nremineralizando o dente. A equação química seguinte \nrepresenta esse processo:\n\nGROISMAN, S. Impacto do refrigerante nos dentes é avaliado sem tirá-lo da dieta. \n\nDisponível em: http://www.isaude.net. Acesso em: 1 maio 2010 (adaptado).\n\nConsiderando que uma pessoa consuma refrigerantes \ndiariamente, \npoderá \nocorrer \num \nprocesso \nde \ndesmineralização dentária, devido ao aumento da \nconcentração de",
+      "options": [
+        "OH-, que reage com os íons Ca2+, deslocando o \n\nequilíbrio para a direita.",
+        "H+, que reage com as hidroxilas OH-, deslocando o \n\nequilíbrio para a direita.",
+        "OH-, que reage com os íons Ca2+, deslocando o \n\nequilíbrio para a esquerda.",
+        "H+, que reage com as hidroxilas OH-, deslocando o \n\nequilíbrio para a esquerda.",
+        "Ca2+, que reage com as hidroxilas OH-, deslocando \n\no equilíbrio para a esquerda."
+      ],
+      "correctOption": 1,
+      "explanation": "Origem: ENEM 2011 • Ciências da Natureza • Questão #79",
+      "images": [
+        "assets/2011/dia-1/q79_1.png"
+      ]
+    },
+    {
+      "id": "enem-2022-d2-q129",
+      "statement": "A variação da incidência de radiação solar sobre \na superfície da Terra resulta em uma variação de \ntemperatura ao longo de um dia denominada amplitude \ntérmica. Edificações e pavimentações realizadas nas \náreas urbanas contribuem para alterar as amplitudes \ntérmicas dessas regiões, em comparação com regiões que \nmantêm suas características naturais, com presença de \nvegetação e água, já que o calor específico do concreto é \ninferior ao da água. Assim, parte da avaliação do impacto \nambiental que a presença de concreto proporciona às \náreas urbanas consiste em considerar a substituição \nda área concretada por um mesmo volume de água e \ncomparar as variações de temperatura devido à absorção \nda radiação solar nas duas situações (concretada e \nalagada). Desprezando os efeitos da evaporação e \nconsiderando que toda a radiação é absorvida, essa \navaliação pode ser realizada com os seguintes dados:\n\nDensidade kg\n\n\u001c\n\u001b\u001a\nCalor específi co\nJ\ng C\n\u001f\n\u001e\n\nm3\n\u001f\n\u001e\u001d\n\n\u001b\n\n\u001d\u001c\n\n\u001a\u0019\n\nÁgua\n1 000\n4,2\nConcreto\n2 500\n0,8\n\nROMERO, M. A. B. et al. Mudanças climáticas e ilhas de calor urbanas. \n\nBrasília: UnB; ETB, 2019 (adaptado).\n\nA razão entre as variações de temperatura nas áreas \nconcretada e alagada é mais próxima de",
+      "options": [
+        "A\t 1,0.",
+        "B\t 2,1.",
+        "C\t 2,5.",
+        "D\t 5,3.",
+        "E\t 13,1."
+      ],
+      "correctOption": 1,
+      "explanation": "Origem: ENEM 2022 • Ciências da Natureza • Questão #129",
+      "images": [
+        "assets/2022/dia-2/q129_fig1.png"
+      ]
+    },
+    {
+      "id": "enem-2023-d2-q105",
+      "statement": "A leishmaniose visceral é uma zoonose causada por \num protozoário do gênero Leishmania que é encontrado em \ndiversos tecidos. Ela é transmitida ao homem de forma \nindireta, por vetores do ambiente doméstico. O cão é \nconsiderado um importante hospedeiro desse protozoário, \npodendo ou não apresentar os sintomas da doença, como \nperda de peso, anemia, ferimentos na pele, diarreia, \nconjuntivite e insuficiência renal. Em uma região que \nsofre com alta incidência dessa doença, uma campanha \ndo centro de zoonoses buscou verificar a presença desse \nprotozoário nos cães para tentar controlar a doença.\n\nEm qual material biológico dos cães a presença desse \nprotozoário representa risco de transmissão dessa zoonose?",
+      "options": [
+        "A\t Urina.",
+        "B\t Saliva.",
+        "C\t Fezes.",
+        "D\t Sangue.",
+        "E\t Secreção ocular."
+      ],
+      "correctOption": 3,
+      "explanation": "Origem: ENEM 2023 • Ciências da Natureza • Questão #105"
+    },
+    {
+      "id": "enem-2019-d2-q116",
+      "statement": "Um teste de laboratório permite identificar alguns \ncátions metálicos ao introduzir uma pequena quantidade \ndo material de interesse em uma chama de bico de \nBunsen para, em seguida, observar a cor da luz emitida.\n\nA cor observada é proveniente da emissão de radiação \neletromagnética ao ocorrer a",
+      "options": [
+        "mudança da fase sólida para a fase líquida do \n\nelemento metálico.",
+        "combustão dos cátions metálicos provocada pelas \n\nmoléculas de oxigênio da atmosfera.",
+        "diminuição da energia cinética dos elétrons em uma \n\nmesma órbita na eletrosfera atômica.",
+        "transição eletrônica de um nível mais externo para \n\noutro mais interno na eletrosfera atômica.",
+        "promoção dos elétrons que se encontram no \n\nestado \nfundamental \nde \nenergia \npara \nníveis \nmais energéticos.\n\nCN - 2º dia | Caderno 5 - AMARELO - Página 10"
+      ],
+      "correctOption": 3,
+      "explanation": "Origem: ENEM 2019 • Ciências da Natureza • Questão #116",
+      "images": [
+        "assets/2019/dia-2/q116_fig1.png"
+      ]
+    },
+    {
+      "id": "enem-2012-d1-q057",
+      "statement": "O rótulo de um desodorante aerossol informa ao \nconsumidor que o produto possui em sua composição \nos gases isobutano, butano e propano, dentre outras \nsubstâncias. Além dessa informação, o rótulo traz, ainda, \na inscrição “Não contém CFC”. As reações a seguir, que \nocorrem na estratosfera, justificam a não utilização de \nCFC (clorofluorcarbono ou Freon) nesse desodorante:\n\n I) CF2Cℓ2\nCF2Cℓ  + Cℓ   \nUV\n\n •\n •\n\nII) Cℓ  + O3\nO2 + CℓO   \n •\n •\n\nA preocupação com as possíveis ameaças à camada \nde ozônio (O3) baseia-se na sua principal função: proteger \na matéria viva na Terra dos efeitos prejudiciais dos raios \nsolares ultravioleta. A absorção da radiação ultravioleta \npelo ozônio estratosférico é intensa o suficiente para \neliminar boa parte da fração de ultravioleta que é \nprejudicial à vida.\n\nA finalidade da utilização dos gases isobutano, butano e \npropano neste aerossol é",
+      "options": [
+        "substituir o CFC, pois não reagem com o ozônio, \n\nservindo como gases propelentes em aerossóis.",
+        "servir como propelentes, pois, como são muito \n\nreativos, capturam o Freon existente livre na \natmosfera, impedindo a destruição do ozônio.",
+        "reagir com o ar, pois se decompõem espontaneamente \n\nem dióxido de carbono (CO2) e água (H2O), que não \natacam o ozônio.",
+        "impedir a destruição do ozônio pelo CFC, pois os \n\nhidrocarbonetos gasosos reagem com a radiação UV, \nliberando hidrogênio (H2), que reage com o oxigênio \ndo ar (O2), formando água (H2O).",
+        "destruir o CFC, pois reagem com a radiação UV, \n\nliberando carbono (C), que reage com o oxigênio do \nar (O2), formando dióxido de carbono (CO2), que é \ninofensivo para a camada de ozônio.\n\nCN - 1º dia | Caderno 2 - AMARELO - Página 20"
+      ],
+      "correctOption": 0,
+      "explanation": "Origem: ENEM 2012 • Ciências da Natureza • Questão #57",
+      "images": [
+        "assets/2012/dia-1/q57_fig1.png"
+      ]
+    },
+    {
+      "id": "enem-2017-d2-q099",
+      "statement": "A figura mostra como é a emissão de radiação \n\neletromagnética para cinco tipos de lâmpada: haleto \n\nmetálico, tungstênio, mercúrio, xênon e LED (diodo \n\nemissor de luz). As áreas marcadas em cinza são \n\nproporcionais à intensidade da energia liberada pela \n\nlâmpada. As linhas pontilhadas mostram a sensibilidade \n\ndo olho humano aos diferentes comprimentos de onda. \n\nUV e IV são as regiões do ultravioleta e do infravermelho, \n\nrespectivamente.\n\nUm arquiteto deseja iluminar uma sala usando uma \n\nlâmpada que produza boa iluminação, mas que não \n\naqueça o ambiente.\n\nHaleto metálico\n\nTungstênio\n\nIntensidade emitida\n\nMercúrio\n\nXênon\n\n6\n\nPerda óptica (dB/km)\n\n5\n\n4\n\nLED\n\n3\n\n2\n\n300\n200\n900\n800\n700\n600\n500\n400\n\n1\n\nUV\nIV\nVisível\n\nComprimento de onda (nm)\n \n\nDisponível em: http://zeiss-campus.magnet.fsu.edu. Acesso em: 8 maio 2017 (adaptado).\n\nQual tipo de lâmpada melhor atende ao desejo do arquiteto?\n\nA\t Haleto metálico.",
+      "options": [
+        "6",
+        "18",
+        "60",
+        "90",
+        "100\n\nB\t Tungstênio.\n\nC\t Mercúrio.\n\nD\t Xênon.\n\nE\t LED.\n\nCN - 2º dia | Caderno 5 - AMARELO - Página 4"
+      ],
+      "correctOption": 4,
+      "explanation": "Origem: ENEM 2017 • Ciências da Natureza • Questão #99",
+      "images": [
+        "assets/2017/dia-2/q99_fig1.png"
+      ]
+    },
+    {
+      "id": "enem-2020-d2-q096",
+      "statement": "Um estudante tem uma fonte de tensão com corrente \ncontínua que opera em tensão fixa de 12 V. Como \nprecisa alimentar equipamentos que operam em tensões \nmenores, ele emprega quatro resistores de 100 Ω para \nconstruir um divisor de tensão. Obtém-se este divisor \nassociando os resistores, como exibido na figura. Os \naparelhos podem ser ligados entre os pontos A, B, C, D e \nE, dependendo da tensão especificada.\n\nFonte CC\n\n+\n−\n\n12 V\n\n100 Ω\n100 Ω\n100 Ω\n100 Ω\n\nA\nB\nC\nD\nE\n \n\nEle tem um equipamento que opera em 9,0 V com \numa resistência interna de 10 kΩ.\n\nEntre quais pontos do divisor de tensão esse equipamento \ndeve ser ligado para funcionar corretamente e qual será o \nvalor da intensidade da corrente nele estabelecida?",
+      "options": [
+        "Entre A e C; 30 mA.",
+        "Entre B e E; 30 mA.",
+        "Entre A e D; 1,2 mA.",
+        "Entre B e E; 0,9 mA.",
+        "Entre A e E; 0,9 mA."
+      ],
+      "correctOption": 3,
+      "explanation": "Origem: ENEM 2020 • Ciências da Natureza • Questão #96",
+      "images": [
+        "assets/2020/dia-2/q96_fig1.png"
+      ]
+    },
+    {
+      "id": "enem-2009-d1-q007",
+      "statement": "O ciclo biogeoquímico do carbono compreende \ndiversos compartimentos, entre os quais a Terra, a \natmosfera e os oceanos, e diversos processos que \npermitem a transferência de compostos entre esses \nreservatórios. Os estoques de carbono armazenados na \nforma de recursos não renováveis, por exemplo, o \npetróleo, são limitados, sendo de grande relevância que se \nperceba a importância da substituição de combustíveis \nfósseis por combustíveis de fontes renováveis. \n \nA utilização de combustíveis fósseis interfere no ciclo do \ncarbono, pois provoca",
+      "options": [
+        "aumento da porcentagem de carbono contido na \n\nTerra.",
+        "redução na taxa de fotossíntese dos vegetais \n\nsuperiores.",
+        "aumento da produção de carboidratos de origem \n\nvegetal.",
+        "aumento na quantidade de carbono presente na \n\natmosfera.",
+        "redução da quantidade global de carbono armazenado \n\nnos oceanos."
+      ],
+      "correctOption": 3,
+      "explanation": "Origem: ENEM 2009 • Ciências da Natureza • Questão #7"
+    },
+    {
+      "id": "enem-2011-d1-q050",
+      "statement": "Um dos problemas dos combustíveis que contêm \ncarbono é que sua queima produz dióxido de carbono. \nPortanto, uma característica importante, ao se escolher \num combustível, é analisar seu calor de combustão \n(∆Hcº), definido como a energia liberada na queima \ncompleta de um mol de combustível no estado padrão. \nO quadro seguinte relaciona algumas substâncias que \ncontêm carbono e seu ∆Hcº.\n\nSubstância\nFórmula\n∆Hcº (kJ/mol)\n\nbenzeno\nC6H6 (l)\n-3 268\n\netanol\nC2H5OH (l)\n-1 368\n\nglicose\nC6H12O6 (s)\n-2 808\n\nmetano\nCH4 (g)\n-890\n\noctano\nC8H18 (l)\n-5 471\n\nATKINS, P. Princípios de Química. Bookman, 2007 (adaptado).\nNeste contexto, qual dos combustíveis, quando queimado \ncompletamente, libera mais dióxido de carbono no \nambiente pela mesma quantidade de energia produzida?",
+      "options": [
+        "Benzeno.",
+        "Metano.",
+        "Glicose.",
+        "Octano.",
+        "Etanol."
+      ],
+      "correctOption": 2,
+      "explanation": "Origem: ENEM 2011 • Ciências da Natureza • Questão #50",
+      "images": [
+        "assets/2011/dia-1/q50_fig1.png"
+      ]
+    },
+    {
+      "id": "enem-2009-d1-q038",
+      "statement": "Durante uma ação de fiscalização em postos de \ncombustíveis, foi encontrado um mecanismo inusitado para \nenganar o consumidor. Durante o inverno, o responsável \npor um posto de combustível compra álcool por \nR$ 0,50/litro, a uma temperatura de 5 °C. Para revender o \nlíquido aos motoristas, instalou um mecanismo na bomba \nde combustível para aquecê-lo, para que atinja a \ntemperatura de 35 °C, sendo o litro de álcool revendido a \nR$ 1,60. Diariamente o posto compra 20 mil litros de álcool \na 5 ºC e os revende.  \n \nCom relação à situação hipotética descrita no texto e dado \nque o coeficiente de dilatação volumétrica do álcool é de \n1×10-3 ºC-1, desprezando-se o custo da energia gasta no \naquecimento do combustível, o ganho financeiro que o \ndono do posto teria obtido devido ao aquecimento do \nálcool após uma semana de vendas estaria entre",
+      "options": [
+        "R$ 500,00 e R$ 1.000,00.",
+        "R$ 1.050,00 e R$ 1.250,00.",
+        "R$ 4.000,00 e R$ 5.000,00.",
+        "R$ 6.000,00 e R$ 6.900,00.",
+        "R$ 7.000,00 e R$ 7.950,00."
+      ],
+      "correctOption": 3,
+      "explanation": "Origem: ENEM 2009 • Ciências da Natureza • Questão #38"
+    },
+    {
+      "id": "enem-2014-d1-q051",
+      "statement": "Na década de 1990, células do cordão umbilical de \nrecém-nascidos humanos começaram a ser guardadas \npor criopreservação, uma vez que apresentam alto \npotencial \nterapêutico \nem \nconsequência \nde \nsuas \ncaracterísticas peculiares.\n\nO poder terapêutico dessas células baseia-se em sua \ncapacidade de",
+      "options": [
+        "multiplicação lenta.",
+        "comunicação entre células.",
+        "adesão a diferentes tecidos.",
+        "diferenciação em células especializadas.",
+        "reconhecimento de células semelhantes."
+      ],
+      "correctOption": 3,
+      "explanation": "Origem: ENEM 2014 • Ciências da Natureza • Questão #51",
+      "images": [
+        "assets/2014/dia-1/q51_fig1.png"
+      ]
+    },
+    {
+      "id": "enem-2020-d2-q098",
+      "statement": "Aranhas, escorpiões, carrapatos e ácaros são \nrepresentantes da classe dos Aracnídeos. Esses animais \nsão terrestres em sua grande maioria e ocupam os mais \nvariados hábitats, tais como montanhas altas, pântanos, \ndesertos e solos arenosos. Podem ter sido os primeiros \nrepresentantes do filo Arthropoda a habitar a terra seca.\n\nA característica que justifica o sucesso adaptativo desse \ngrupo na ocupação do ambiente terrestre é a presença de",
+      "options": [
+        "quelíceras e pedipalpos que coordenam o movimento \n\ncorporal.",
+        "excreção de ácido úrico que confere estabilidade ao \n\npH corporal.",
+        "exoesqueleto constituído de quitina que auxilia no \n\ncontrole hídrico corporal.",
+        "circulação sanguínea aberta que impede a desidratação \n\ndos tecidos corporais.",
+        "sistema nervoso ganglionar que promove a coordenação \n\ncentral do movimento corporal.\n\nCN - 2° dia | Caderno 5 - AMARELO - Página 3"
+      ],
+      "correctOption": 2,
+      "explanation": "Origem: ENEM 2020 • Ciências da Natureza • Questão #98"
+    },
+    {
+      "id": "enem-2015-d1-q052",
+      "statement": "Uma análise criteriosa do desempenho de Usain \nBolt na quebra do recorde mundial dos 100 metros rasos \nmostrou que, apesar de ser o último dos corredores \na reagir ao tiro e iniciar a corrida, seus primeiros \n30 metros foram os mais velozes já feitos em um recorde \nmundial, cruzando essa marca em 3,78 segundos. Até se \ncolocar com o corpo reto, foram 13 passadas, mostrando \nsua potência durante a aceleração, o momento mais \nimportante da corrida. Ao final desse percurso, Bolt havia \natingido a velocidade máxima de 12 m/s.\n\nDisponível em: http://esporte.uol.com.br. Acesso em: 5 ago. 2012 (adaptado).\n\nSupondo que a massa desse corredor seja igual a 90 kg, \no trabalho total realizado nas 13 primeiras passadas é \nmais próximo de:",
+      "options": [
+        "5,4×102 J.",
+        "6,5×103 J.",
+        "8,6×103 J.",
+        "1,3×104 J.",
+        "3,2×104 J."
+      ],
+      "correctOption": 1,
+      "explanation": "Origem: ENEM 2015 • Ciências da Natureza • Questão #52",
+      "images": [
+        "assets/2015/dia-1/q52_fig1.png"
+      ]
+    },
+    {
+      "id": "enem-2019-d2-q091",
+      "statement": "Uma casa tem um cabo elétrico mal dimensionado, \nde resistência igual a 10 Ω, que a conecta à rede elétrica \nde 120 V. Nessa casa, cinco lâmpadas, de resistência \nigual a 200 Ω, estão conectadas ao mesmo circuito que \numa televisão de resistência igual a 50 Ω, conforme \nilustrado no esquema. A televisão funciona apenas com \ntensão entre 90 V e 130 V.\n\n10 Ω\n\n120 V\n\n50 Ω\n\n200 Ω\n\n200 Ω\n\n200 Ω\n\n200 Ω\n\n200 Ω\n\nO número máximo de lâmpadas que podem ser ligadas \nsem que a televisão pare de funcionar é:",
+      "options": [
+        "1.",
+        "2.",
+        "3.",
+        "4.",
+        "5."
+      ],
+      "correctOption": 1,
+      "explanation": "Origem: ENEM 2019 • Ciências da Natureza • Questão #91",
+      "images": [
+        "assets/2019/dia-2/q91_fig1.png"
+      ]
+    },
+    {
+      "id": "enem-2012-d1-q074",
+      "statement": "No Japão, um movimento nacional para a promoção da \nluta contra o aquecimento global leva o slogan: 1 pessoa, \n1 dia, 1 kg de CO2 a menos! A ideia é cada pessoa reduzir \nem 1 kg a quantidade de CO2 emitida todo dia, por meio de \npequenos gestos ecológicos, como diminuir a queima de \ngás de cozinha.\n\nUm hamburguer ecológico? É pra já! Disponível em: http://lqes.iqm.unicamp.br. \n\nAcesso em: 24 fev. 2012 (adaptado).\n\nConsiderando um processo de combustão completa de \num gás de cozinha composto exclusivamente por butano \n(C4H10), a mínima quantidade desse gás que um japonês \ndeve deixar de queimar para atender à meta diária, \napenas com esse gesto, é de\n\nDados: CO2 (44 g/mol); C4H10 (58 g/mol)",
+      "options": [
+        "0,25 kg.",
+        "0,33 kg.",
+        "1,0 kg.",
+        "1,3 kg.",
+        "3,0 kg."
+      ],
+      "correctOption": 1,
+      "explanation": "Origem: ENEM 2012 • Ciências da Natureza • Questão #74",
+      "images": [
+        "assets/2012/dia-1/q74_fig1.png"
+      ]
+    },
+    {
+      "id": "enem-2014-d1-q090",
+      "statement": "Quando adolescente, as nossas tardes, após \nas aulas, consistiam em tomar às mãos o violão e o \ndicionário de acordes de Almir Chediak e desafi ar nosso \namigo Hamilton a descobrir, apenas ouvindo o acorde, \nquais notas eram escolhidas. Sempre perdíamos a \naposta, ele possui o ouvido absoluto.\n\nO ouvido absoluto é uma característica perceptual de \npoucos indivíduos capazes de identifi car notas isoladas \nsem outras referências, isto é, sem precisar relacioná-las \ncom outras notas de uma melodia.\n\nLENT, R. O cérebro do meu professor de acordeão. Disponível em: http://cienciahoje.uol.com.br. \n\nAcesso em: 15 ago. 2012 (adaptado).\n\nNo contexto apresentado, a propriedade física das \nondas que permite essa distinção entre as notas é a",
+      "options": [
+        "frequência.",
+        "intensidade.",
+        "forma da onda.",
+        "amplitude da onda.",
+        "velocidade de propagação.\n\nCN - 1º dia | Caderno 2 - AMARELO - Página 31"
+      ],
+      "correctOption": 0,
+      "explanation": "Origem: ENEM 2014 • Ciências da Natureza • Questão #90",
+      "images": [
+        "assets/2014/dia-1/q90_fig1.png"
+      ]
+    },
+    {
+      "id": "enem-2013-d1-q074",
+      "statement": "A varfarina é um fármaco que diminui a agregação \nplaquetária, e por isso é utilizada como anticoagulante, \ndesde que esteja presente no plasma, com uma \nconcentração \nsuperior \na \n1,0 \nmg/L. \nEntretanto, \nconcentrações plasmáticas superiores a 4,0 mg/L \npodem \ndesencadear \nhemorragias. \nAs \nmoléculas \ndesse fármaco ficam retidas no espaço intravascular e \ndissolvidas exclusivamente no plasma, que representa \naproximadamente 60% do sangue em volume. \nEm um medicamento, a varfarina é administrada por \nvia intravenosa na forma de solução aquosa, com \nconcentração de 3,0 mg/mL. Um indivíduo adulto, com \nvolume sanguíneo total de 5,0 L, será submetido a um \ntratamento com solução injetável desse medicamento.\n\nQual é o máximo volume da solução do medicamento \nque pode ser administrado a esse indivíduo, pela via \nintravenosa, de maneira que não ocorram hemorragias \ncausadas pelo anticoagulante?",
+      "options": [
+        "1,0 mL",
+        "1,7 mL",
+        "2,7 mL",
+        "4,0 mL",
+        "6,7 mL\n\n5\n\nCN - 1º dia | Caderno 2 - AMARELO - Página 25"
+      ],
+      "correctOption": 3,
+      "explanation": "Origem: ENEM 2013 • Ciências da Natureza • Questão #74",
+      "images": [
+        "assets/2013/dia-1/q74_fig1.png"
+      ]
+    },
+    {
+      "id": "enem-2022-d2-q092",
+      "statement": "Em um autódromo, os carros podem derrapar em \numa curva e bater na parede de proteção. Para diminuir \no impacto de uma batida, pode-se colocar na parede \numa barreira de pneus, isso faz com que a colisão \nseja mais demorada e o carro retorne com velocidade \nreduzida. Outra opção é colocar uma barreira de blocos \nde um material que se deforma, tornando-a tão demorada \nquanto a colisão com os pneus, mas que não permite a \nvolta do carro após a colisão.\nComparando as duas situações, como ficam a força média \nexercida sobre o carro e a energia mecânica dissipada?",
+      "options": [
+        "A\t A força é maior na colisão com a barreira de pneus, e \n\na energia dissipada é maior na colisão com a barreira \nde blocos.",
+        "B\t A força é maior na colisão com a barreira de blocos, e \n\na energia dissipada é maior na colisão com a barreira \nde pneus.",
+        "C\t A força é maior na colisão com a barreira de blocos, e \n\na energia dissipada é a mesma nas duas situações.",
+        "D\t A força é maior na colisão com a barreira de pneus, e \n\na energia dissipada é maior na colisão com a barreira \nde pneus.",
+        "E\t A força é maior na colisão com a barreira de blocos, e \n\na energia dissipada é maior na colisão com a barreira \nde blocos."
+      ],
+      "correctOption": 0,
+      "explanation": "Origem: ENEM 2022 • Ciências da Natureza • Questão #92"
+    },
+    {
+      "id": "enem-2015-d1-q088",
+      "statement": "A radiação ultravioleta (UV) é dividida, de acordo \ncom três faixas de frequência, em UV-A, UV-B e UV-C, \nconforme a figura.\n\nFrequência (s−1)\n\n7,47×1014\n9,34×1014\n1,03×1015\n2,99×1015\n\nUV-A\nUV-B\nUV-C\n\nPara selecionar um filtro solar que apresente absorção \nmáxima na faixa UV-B, uma pessoa analisou os espectros \nde absorção da radiação UV de cinco filtros solares:\n\n0,5\n\n0,4\n\n(unidades arbitrárias)\n\nFiltro solar I\n\nAbsorbância \n\n0,3\n\nFiltro solar II\n\n0,2\n\nFiltro solar III\nFiltro solar IV\nFiltro solar V\n\n0,1\n\n0,0\n\n240\n290\n340\n390\n440\n\nComprimento de onda (nm)\n\nConsidere: \nvelocidade da luz = 3,0×108 m/s e 1 nm = 1,0×10-9 m.\n\nO filtro solar que a pessoa deve selecionar é o",
+      "options": [
+        "V.",
+        "IV.",
+        "III.",
+        "II.",
+        "I."
+      ],
+      "correctOption": 1,
+      "explanation": "Origem: ENEM 2015 • Ciências da Natureza • Questão #88",
+      "images": [
+        "assets/2015/dia-1/q88_fig1.png"
+      ]
+    },
+    {
+      "id": "enem-2019-d2-q119",
+      "statement": "Por \nterem \ncamada \nde \nvalência \ncompleta, \nalta energia de ionização e afinidade eletrônica \npraticamente nula, considerou-se por muito tempo que \nos gases nobres não formariam compostos químicos. \nPorém, em 1962, foi realizada com sucesso a reação \nentre o xenônio (camada de valência 5s25p6) e o \nhexafluoreto de platina e, desde então, mais compostos \nnovos de gases nobres vêm sendo sintetizados. \nTais compostos demonstram que não se pode aceitar \nacriticamente a regra do octeto, na qual se considera \nque, numa ligação química, os átomos tendem a adquirir \nestabilidade assumindo a configuração eletrônica de \ngás nobre. Dentre os compostos conhecidos, um dos \nmais estáveis é o difluoreto de xenônio, no qual dois \nátomos do halogênio flúor (camada de valência 2s22p5) \nse ligam covalentemente ao átomo de gás nobre para \nficarem com oito elétrons de valência.\n\nAo se escrever a fórmula de Lewis do composto de \nxenônio citado, quantos elétrons na camada de valência \nhaverá no átomo do gás nobre?",
+      "options": [
+        "6",
+        "8",
+        "10",
+        "12",
+        "14"
+      ],
+      "correctOption": 2,
+      "explanation": "Origem: ENEM 2019 • Ciências da Natureza • Questão #119",
+      "images": [
+        "assets/2019/dia-2/q119_fig1.png"
+      ]
+    },
+    {
+      "id": "enem-2017-d2-q096",
+      "statement": "O biodiesel é um biocombustível obtido a partir de \nfontes renováveis, que surgiu como alternativa ao uso do \ndiesel de petróleo para motores de combustão interna. \nEle pode ser obtido pela reação entre triglicerídeos, \npresentes em óleos vegetais e gorduras animais, entre \noutros, e álcoois de baixa massa molar, como o metanol \nou etanol, na presença de um catalisador, de acordo com \na equação química:\n\nCH\n\nCH\n\nR1\nR1\n\n2\n\n3\n\nCH\n\nOH\n\n2\n\n+\n+\ncatalisador\n\nCH\n\nOH\n\n3 CH3OH\n\nR2\nR2\n\nCH\nCH\n\n3\n\nCH\n\nOH\n\n2\n\nCH\nCH\n\nR3\nR3\n\n2\n3\n\nA função química presente no produto que representa o \nbiodiesel é",
+      "options": [
+        "éter.",
+        "éster.",
+        "álcool.",
+        "cetona.",
+        "ácido carboxílico."
+      ],
+      "correctOption": 1,
+      "explanation": "Origem: ENEM 2017 • Ciências da Natureza • Questão #96",
+      "images": [
+        "assets/2017/dia-2/q96_fig1.png"
+      ]
+    }
+  ]
+}

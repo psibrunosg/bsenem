@@ -1,0 +1,708 @@
+{
+  "schema": "bsestudos.exam.v1",
+  "id": "simulado-geral-f356fc54",
+  "title": "Simulado — Geral (Todas as Áreas) (45 Questões)",
+  "durationMinutes": 135,
+  "subject": "Geral (Todas as Áreas)",
+  "questions": [
+    {
+      "id": "enem-2015-d1-q069",
+      "statement": "A hidroponia pode ser definida como uma técnica \nde produção de vegetais sem necessariamente a \npresença de solo. Uma das formas de implementação \né manter as plantas com suas raízes suspensas em \nmeio líquido, de onde retiram os nutrientes essenciais. \nSuponha que um produtor de rúcula hidropônica \nprecise ajustar a concentração do íon nitrato (NO3\n\n−) \npara 0,009 mol/L em um tanque de 5 000 litros e, para \ntanto, tem em mãos uma solução comercial nutritiva \nde nitrato de cálcio 90 g/L. As massas molares dos \nelementos N, O e Ca são iguais a 14 g/mol, 16 g/mol e \n40 g/mol, respectivamente.\n\nQual o valor mais próximo do volume da solução nutritiva, \nem litros, que o produtor deve adicionar ao tanque?",
+      "options": [
+        "26",
+        "41",
+        "45",
+        "51",
+        "82"
+      ],
+      "correctOption": 1,
+      "explanation": "Origem: ENEM 2015 • Ciências da Natureza • Questão #69",
+      "images": [
+        "assets/2015/dia-1/q69_fig1.png"
+      ]
+    },
+    {
+      "id": "enem-2015-d1-q074",
+      "statement": "O formato das células de organismos pluricelulares é \nextremamente variado. Existem células discoides, como \né o caso das hemácias, as que lembram uma estrela, \ncomo os neurônios, e ainda algumas alongadas, como as \nmusculares.\n\nEm um mesmo organismo, a diferenciação dessas células \nocorre por",
+      "options": [
+        "produzirem mutações específicas.",
+        "possuírem DNA mitocondrial diferentes.",
+        "apresentarem conjunto de genes distintos.",
+        "expressarem porções distintas do genoma.",
+        "terem um número distinto de cromossomos."
+      ],
+      "correctOption": 3,
+      "explanation": "Origem: ENEM 2015 • Ciências da Natureza • Questão #74",
+      "images": [
+        "assets/2015/dia-1/q74_fig1.png"
+      ]
+    },
+    {
+      "id": "enem-2015-d1-q026",
+      "statement": "SUERTEGARAY, D. M. A. (Org.).Terra: feições ilustradas. \n\nPorto Alegre: EdUFRGS, 2003 (adaptado).\n\nA imagem representa o resultado da erosão que ocorre \nem rochas nos leitos dos rios, que decorre do processo \nnatural de",
+      "options": [
+        "fraturamento geológico, derivado da força dos \n\nagentes internos.",
+        "solapamento de camadas de argilas, transportadas \n\npela correnteza.",
+        "movimento circular de seixos e areias, arrastados por \n\náguas turbilhonares.",
+        "decomposição das camadas sedimentares, resultante \n\nda alteração química.",
+        "assoreamento no fundo do rio, proporcionado pela \n\nchegada de material sedimentar.\n\nCH - 1º dia | Caderno 2 - AMARELO - Página 9"
+      ],
+      "correctOption": 2,
+      "explanation": "Origem: ENEM 2015 • Ciências Humanas • Questão #26",
+      "images": [
+        "assets/2015/dia-1/q26_1.png"
+      ]
+    },
+    {
+      "id": "enem-2022-d1-q009",
+      "statement": "A conquista da medalha de prata por Rayssa Leal, \nno skate street nos Jogos Olímpicos, é exemplo da \nrepresentatividade feminina no esporte, avalia a âncora do \njornal da rede de televisão da CNN. A apresentadora, que \ntambém anda de skate, celebrou a vitória da brasileira, \nque entrou para a história como a atleta mais nova a subir \nnum pódio defendendo o Brasil. “Essa representatividade \ndo esporte nos Jogos faz pensarmos que não temos que \nficar nos encaixando em nenhum lugar. Posso gostar de \npassar notícia e, mesmo assim, gostar de skate, subir \nmontanha, mergulhar, andar de bike, fazer yoga. Temos \nque parar de ficar enquadrando as pessoas dentro de \nregras. A gente vive num padrão no qual a menina ganha \nboneca, mas por que também não fazer um esporte de \naventura? Por que o homem pode se machucar, cair de \njoelhos, e a menina tem que estar sempre lindinha dentro \nde um padrão? Acabamos limitando os talentos das \npessoas”, afirmou a jornalista, sobre a prática do skate \npor mulheres.\n\nDisponível em: www.cnnbrasil.com.br. Acesso em: 31 out. 2021 (adaptado).\nO discurso da jornalista traz questionamentos sobre a \nrelação da conquista da skatista com a",
+      "options": [
+        "A\t conciliação do jornalismo com a prática do skate.",
+        "B\t inserção das mulheres na modalidade skate street.",
+        "C\t desconstrução da noção do skate como modalidade \n\nmasculina.",
+        "D\t vanguarda de ser a atleta mais jovem a subir no pódio \n\nolímpico.",
+        "E\t conquista de medalha nos Jogos Olímpicos \n\nde Tóquio."
+      ],
+      "correctOption": 2,
+      "explanation": "Origem: ENEM 2022 • Linguagens e Códigos • Questão #9"
+    },
+    {
+      "id": "enem-2015-d1-q004",
+      "statement": "Diante de ameaças surgidas com a engenharia \ngenética de alimentos, vários grupos da sociedade \ncivil conceberam o chamado “princípio da precaução”. \nO fundamento desse princípio é: quando uma tecnologia \nou produto comporta alguma ameaça à saúde ou ao \nambiente, ainda que não se possa avaliar a natureza \nprecisa ou a magnitude do dano que venha a ser causado \npor eles, deve-se evitá-los ou deixá-los de quarentena \npara maiores estudos e avaliações antes de sua liberação. \n\nSEVCENKO, N. A corrida para o século XXI: no loop da montanha-russa. \n\nSão Paulo: Cia. das Letras, 2001 (adaptado).\n\nO texto expõe uma tendência representativa do \npensamento \nsocial \ncontemporâneo, \nna \nqual \no \ndesenvolvimento de mecanismos de acautelamento ou \nadministração de riscos tem como objetivo",
+      "options": [
+        "priorizar os interesses econômicos em relação aos \n\nseres humanos e à natureza.",
+        "negar a perspectiva científica e suas conquistas por \n\ncausa de riscos ecológicos.",
+        "instituir \no \ndiálogo \npúblico \nsobre \nmudanças \ntecnológicas e suas consequências.",
+        "combater a introdução de tecnologias para travar o \n\ncurso das mudanças sociais.",
+        "romper o equilíbrio entre benefícios e riscos do \n\navanço tecnológico e científico."
+      ],
+      "correctOption": 2,
+      "explanation": "Origem: ENEM 2015 • Ciências Humanas • Questão #4",
+      "images": [
+        "assets/2015/dia-1/q4_fig1.png"
+      ]
+    },
+    {
+      "id": "enem-2019-d2-q091",
+      "statement": "Uma casa tem um cabo elétrico mal dimensionado, \nde resistência igual a 10 Ω, que a conecta à rede elétrica \nde 120 V. Nessa casa, cinco lâmpadas, de resistência \nigual a 200 Ω, estão conectadas ao mesmo circuito que \numa televisão de resistência igual a 50 Ω, conforme \nilustrado no esquema. A televisão funciona apenas com \ntensão entre 90 V e 130 V.\n\n10 Ω\n\n120 V\n\n50 Ω\n\n200 Ω\n\n200 Ω\n\n200 Ω\n\n200 Ω\n\n200 Ω\n\nO número máximo de lâmpadas que podem ser ligadas \nsem que a televisão pare de funcionar é:",
+      "options": [
+        "1.",
+        "2.",
+        "3.",
+        "4.",
+        "5."
+      ],
+      "correctOption": 1,
+      "explanation": "Origem: ENEM 2019 • Ciências da Natureza • Questão #91",
+      "images": [
+        "assets/2019/dia-2/q91_fig1.png"
+      ]
+    },
+    {
+      "id": "enem-2009-d2-q117",
+      "statement": "Na estruturação do texto, destaca-se",
+      "options": [
+        "a construção de oposições semânticas.",
+        "a apresentação de ideias de forma objetiva.",
+        "o emprego recorrente de figuras de linguagem, como o \n\neufemismo.",
+        "a repetição de sons e de construções sintáticas \n\nsemelhantes.",
+        "a inversão da ordem sintática das palavras."
+      ],
+      "correctOption": 3,
+      "explanation": "Origem: ENEM 2009 • Linguagens e Códigos • Questão #117"
+    },
+    {
+      "id": "enem-2013-d2-q097",
+      "statement": "TEXTO I\n\nAndaram na praia, quando saímos, oito ou dez deles; \ne daí a pouco começaram a vir mais. E parece-me que \nviriam, este dia, à praia, quatrocentos ou quatrocentos \ne cinquenta. Alguns deles traziam arcos e flechas, que \ntodos trocaram por carapuças ou por qualquer coisa \nque lhes davam. [...] Andavam todos tão bem-dispostos, \ntão bem feitos e galantes com suas tinturas que muito \nagradavam.\n\nCASTRO, S. A carta de Pero Vaz de Caminha. Porto Alegre: L&PM, 1996 (fragmento).\n\nTEXTO II\n\n PORTINARI, C. O descobrimento do Brasil. 1956. Óleo sobre tela, 199 x 169 cm\n\nDisponível em: www.portinari.org.br. Acesso em: 12 jun. 2013.\n\nPertencentes ao patrimônio cultural brasileiro, a carta de \nPero Vaz de Caminha e a obra de Portinari retratam a \nchegada dos portugueses ao Brasil. Da leitura dos textos, \nconstata-se que",
+      "options": [
+        "a carta de Pero Vaz de Caminha representa uma das \n\nprimeiras manifestações artísticas dos portugueses \nem terras brasileiras e preocupa-se apenas com a \nestética literária.",
+        "a tela de Portinari retrata indígenas nus com corpos \n\npintados, cuja grande significação é a afirmação da \narte acadêmica brasileira e a contestação de uma \nlinguagem moderna.",
+        "a carta, como testemunho histórico-político, mostra \n\no olhar do colonizador sobre a gente da terra, e a \npintura destaca, em primeiro plano, a inquietação \ndos nativos.",
+        "as duas produções, embora usem linguagens \n\ndiferentes — verbal e não verbal —, cumprem a \nmesma função social e artística.",
+        "a pintura e a carta de Caminha são manifestações de \n\ngrupos étnicos diferentes, produzidas em um mesmo \nmomento histórico, retratando a colonização."
+      ],
+      "correctOption": 2,
+      "explanation": "Origem: ENEM 2013 • Linguagens e Códigos • Questão #97",
+      "images": [
+        "assets/2013/dia-2/q97_1.png"
+      ]
+    },
+    {
+      "id": "enem-2023-d1-q057",
+      "statement": "Alternativas logísticas estão servindo de instrumentos \nque ativam os mercados especuladores de terras \nnas diferentes regiões da Amazônia e constituem em \nindicadores utilizados por diferentes atores para defender \nou denunciar o avanço da cultura da soja na região e, \ncom ela, a retomada do desmatamento. É evidente que \no crescimento do desmatamento tem a ver também com \na expansão da soja, porém atribuir a ela o fator principal \nparece não totalmente correto. Parto da compreensão \ncentral de que a lógica que gera o desmatamento está \narticulada pelo tripé grileiros, madeireiros e pecuaristas.\n\n \n\nOLIVEIRA, A. U. A Amazônia e a nova geografia da produção da soja. \n\nTerra Livre, n. 26, jan.-jun. 2006 (adaptado).\n\nNa visão do autor, o problema central da situação descrita \né desencadeado pela",
+      "options": [
+        "A\t apropriação de áreas devolutas.",
+        "B\t sonegação de impostos federais.",
+        "C\t incorporação de exportação ilegal.",
+        "D\t desoneração de setores produtivos.",
+        "E\t flexibilização de legislação ambiental."
+      ],
+      "correctOption": 0,
+      "explanation": "Origem: ENEM 2023 • Ciências Humanas • Questão #57"
+    },
+    {
+      "id": "enem-2016-d2-q124",
+      "statement": "O humor e a língua\nHá algum tempo, venho estudando as piadas, com \nênfase em sua constituição linguística. Por isso, embora a \nafirmação a seguir possa parecer surpreendente, creio que \nposso garantir que se trata de uma verdade quase banal: \nas piadas fornecem simultaneamente um dos melhores \nretratos dos valores e problemas de uma sociedade, por \num lado, e uma coleção de fatos e dados impressionantes \npara quem quer saber o que é e como funciona uma \nlíngua, por outro. Se se quiser descobrir os problemas com \nos quais uma sociedade se debate, uma coleção de piadas \nfornecerá excelente pista: sexualidade, etnia/raça e outras \ndiferenças, instituições (igreja, escola, casamento, política), \nmorte, tudo isso está sempre presente nas piadas que \ncirculam anonimamente e que são ouvidas e contadas por \ntodo mundo em todo o mundo. Os antropólogos ainda não \nprestaram a devida atenção a esse material, que poderia \nsubstituir com vantagem muitas entrevistas e pesquisas \nparticipantes. Saberemos mais a quantas andam o \nmachismo e o racismo, por exemplo, se pesquisarmos \numa coleção de piadas do que qualquer outro corpus.\n\nPOSSENTI, S. Ciência Hoje, n. 176, out. 2001 (adaptado).\nA piada é um gênero textual que figura entre os mais \nrecorrentes na cultura brasileira, sobretudo na tradição \noral. Nessa reflexão, a piada é enfatizada por",
+      "options": [
+        "sua função humorística.",
+        "sua ocorrência universal.",
+        "sua diversidade temática.",
+        "seu papel como veículo de preconceitos.",
+        "seu potencial como objeto de investigação.\n\nLC - 2º dia | Caderno 5 - AMARELO - Página 13"
+      ],
+      "correctOption": 4,
+      "explanation": "Origem: ENEM 2016 • Linguagens e Códigos • Questão #124",
+      "images": [
+        "assets/2016/dia-2/q124_fig1.png"
+      ]
+    },
+    {
+      "id": "enem-2022-d2-q096",
+      "statement": "Em 2002, um mecânico da cidade mineira de \nUberaba (MG) teve uma ideia para economizar o \nconsumo de energia elétrica e iluminar a própria casa \nnum dia de sol. Para isso, ele utilizou garrafas plásticas \nPET com água e cloro, conforme ilustram as figuras. \nCada garrafa foi fixada ao telhado de sua casa em um \nburaco com diâmetro igual ao da garrafa, muito maior \nque o comprimento de onda da luz. Nos últimos dois \nanos, sua ideia já alcançou diversas partes do mundo \ne deve atingir a marca de 1 milhão de casas utilizando \na “luz engarrafada”.\n\n e no ar \n\nZOBEL, G. Brasileiro inventor de “luz engarrafada” tem ideia espalhada pelo mundo.\n\nDisponível em: www.bbc.com. Acesso em: 23 jun. 2022 (adaptado).\nQue fenômeno óptico explica o funcionamento da “luz \nengarrafada”?",
+      "options": [
+        "A\t Difração.",
+        "B\t Absorção.",
+        "C\t Polarização.",
+        "D\t Reflexão.\n\nB\n\nE",
+        "Refração."
+      ],
+      "correctOption": 4,
+      "explanation": "Origem: ENEM 2022 • Ciências da Natureza • Questão #96",
+      "images": [
+        "assets/2022/dia-2/q96_1.png"
+      ]
+    },
+    {
+      "id": "enem-2009-d2-q125",
+      "statement": "Veja, 7 maio 1997. \n\nNa parte superior do anúncio, há um comentário escrito à \nmão que aborda a questão das atividades linguísticas e \nsua relação com as modalidades oral e escrita da língua. \nEsse comentário deixa evidente uma posição crítica quanto \na usos que se fazem da linguagem, enfatizando ser \nnecessário",
+      "options": [
+        "implementar a fala, tendo em vista maior desenvoltura, \n\nnaturalidade e segurança no uso da língua .",
+        "conhecer gêneros mais formais da modalidade oral \n\npara a obtenção de clareza na comunicação oral e \nescrita.",
+        "dominar as diferentes variedades do registro oral da \n\nlíngua portuguesa para escrever com adequação, \neficiência e correção.",
+        "empregar vocabulário adequado e usar regras da \n\nnorma padrão da língua em se tratando da modalidade \nescrita.",
+        "utilizar \nrecursos \nmais \nexpressivos \ne \nmenos \ndesgastados da variedade padrão da língua para se \nexpressar com alguma segurança e sucesso."
+      ],
+      "correctOption": 3,
+      "explanation": "Origem: ENEM 2009 • Linguagens e Códigos • Questão #125",
+      "images": [
+        "assets/2009/dia-2/q125_1.png"
+      ]
+    },
+    {
+      "id": "enem-2019-d2-q138",
+      "statement": "O gráfico a seguir mostra a evolução mensal das \nvendas de certo produto de julho a novembro de 2011.\n\nUnidades\n\nvendidas\n\n2 800\n\n2 700\n\n2 500\n\n700\n\nJul\nAgo\nSet\nOut\nNov\nMês\n\nSabe-se que o mês de julho foi o pior momento da \nempresa em 2011 e que o número de unidades vendidas \ndesse produto em dezembro de 2011 foi igual à média \naritmética do número de unidades vendidas nos meses \nde julho a novembro do mesmo ano.\n\nO gerente de vendas disse, em uma reunião da \ndiretoria, que, se essa redução no número de unidades \nvendidas de novembro para dezembro de 2011 se \nmantivesse constante nos meses subsequentes, as \nvendas só voltariam a ficar piores que julho de 2011 \napenas no final de 2012.\n\nO diretor financeiro rebateu imediatamente esse \nargumento mostrando que, mantida a tendência, \nisso aconteceria já em",
+      "options": [
+        "janeiro.",
+        "fevereiro.",
+        "março.",
+        "abril.",
+        "maio.\n\nMT - 2º dia | Caderno 5 - AMARELO - Página 17"
+      ],
+      "correctOption": 3,
+      "explanation": "Origem: ENEM 2019 • Matemática • Questão #138",
+      "images": [
+        "assets/2019/dia-2/q138_fig1.png"
+      ]
+    },
+    {
+      "id": "enem-2020-d1-q085",
+      "statement": "A colisão entre uma placa continental e uma oceânica \nprovocará a subducção desta última sob a placa \ncontinental, que, a exemplo dos arcos e ilhas, produzirá \num arco magmático na borda do continente, composto \npor rochas vulcânicas acompanhado de deformações e \nmetamorfismo tanto de rochas preexistentes como de \nparte das rochas formadas no processo.\n\nTEIXEIRA, W. et al. (Org.). Decifrando a Terra. São Paulo: Oficina de Textos, 2000. \n\nQual feição fisiográfica é gerada pelo processo tectônico \napresentado?",
+      "options": [
+        "Planícies abissais.",
+        "Planaltos cristalinos.",
+        "Depressões absolutas.",
+        "Bacias sedimentares.",
+        "Dobramentos modernos."
+      ],
+      "correctOption": 4,
+      "explanation": "Origem: ENEM 2020 • Ciências Humanas • Questão #85"
+    },
+    {
+      "id": "enem-2025-d1-q080",
+      "statement": "Em decorrência da naturalização da inferioridade social \nda mulher e da concepção de justiça do Estado, baseada na \nigualdade abstratamente concebida, torna-se possível convencer \no Estado burguês a conceber e implementar políticas públicas \ncujo conteúdo se define pela discriminação positiva de mulheres, \nembora isso aparentemente seja paradoxal.\n\nSAFFIOTI, H.; ALMEIDA, S. S. Violência de gênero, poder e impotência. \n\nRio de Janeiro: Revinter, 1995 (adaptado).\n\nNo contexto atual, qual medida atende ao tipo de política pública \nabordada no texto?",
+      "options": [
+        "Ampliação do sufrágio universal.",
+        "Diminuição da jornada de trabalho.",
+        "Extinção do crime de feminicídio.",
+        "Redução da licença-maternidade.",
+        "Criação de delegacia especializada."
+      ],
+      "correctOption": 4,
+      "explanation": "Origem: ENEM 2025 • Ciências Humanas • Questão #80",
+      "images": [
+        "assets/2025/dia-1/q80_fig1.png"
+      ]
+    },
+    {
+      "id": "enem-2020-d2-q139",
+      "statement": "A miniatura desse troféu deverá ser instalada \nno interior de uma caixa de vidro, em formato de \nparalelepípedo reto-retângulo, cujas dimensões internas \nde sua base estão indicadas na Figura 2, de modo que \na base do troféu seja colada na base da caixa e distante \ndas paredes laterais da caixa de vidro em pelo menos 1 cm. \nDeve ainda haver uma distância de exatos 2 cm entre o \ntopo da esfera e a tampa dessa caixa de vidro. Nessas \ncondições deseja-se fazer a maior miniatura possível.\nA medida da altura, em centímetro, dessa caixa de vidro \ndeverá ser igual a",
+      "options": [
+        "12.",
+        "14.",
+        "16.",
+        "18.",
+        "20."
+      ],
+      "correctOption": 2,
+      "explanation": "Origem: ENEM 2020 • Matemática • Questão #139",
+      "images": [
+        "assets/2020/dia-2/q139_fig1.png"
+      ]
+    },
+    {
+      "id": "enem-2025-d1-q035",
+      "statement": "TEXTO I\n\nTEXTO I\n\nA Ilha do Ferro, situada a 18 km do município de Pão de \nAçúcar, não é uma ilha, como o nome indica. A história do \npovoado é semelhante à de inúmeros outros que encontramos \nàs margens do Rio São Francisco, entre Alagoas e Sergipe. O que \ntorna diferente o lugar é sua gente. Hoje, dezenas de artistas \npopulares povoam a Ilha do Ferro, trabalhando principalmente \ncom o entalhe em madeira. Onde pessoas comuns enxergariam \napenas troncos e galhos retorcidos, eles vislumbram bancos, \nbonecos, pássaros, cobras e bailarinas. “Às vezes, você passa \npor um pedaço de madeira uma vez e não vê nada, passa cinco \nvezes por ele e não vê nada”, conta um dos artistas, “mas, na \ndécima vez, você consegue enxergar alguma forma nesse pedaço \nde madeira e transformá-lo em arte”.\n\nTEXTO II\n\nDisponível em: www.imaterial.art.br. Acesso em: 5 fev. 2025 (adaptado).\n\nTEXTO II\n\nFARIAS, Y. Bailarino entalhado em gravetos de madeira. Artesanato \n\nem madeira, 20 × 13 × 51 cm. Ilha do Ferro (AL).\n\nDisponível em: www.nidelins.com.br. Acesso em: 5 fev. 2025.\n\nA originalidade do trabalho dos artistas da Ilha do Ferro se dá pela",
+      "options": [
+        "reutilização de materiais para redução do impacto ambiental.",
+        "ressignificação da matéria-prima atribuindo-lhe nova função.",
+        "reprodução em madeira de modelos artísticos canônicos.",
+        "representação de práticas corporais da comunidade.",
+        "replicação seriada para distribuição em larga escala."
+      ],
+      "correctOption": 1,
+      "explanation": "Origem: ENEM 2025 • Linguagens e Códigos • Questão #35",
+      "images": [
+        "assets/2025/dia-1/q35_1.png"
+      ]
+    },
+    {
+      "id": "enem-2009-d1-q073",
+      "statement": "CIATTONI, A. Géographie. L’espace mondial.  \n\nParis: Hatier, 2008 (adaptado). \n\nA partir do mapa apresentado, é possível inferir que nas \n\núltimas décadas do século XX, registraram-se processos \n\nque resultaram em transformações na distribuição das \n\natividades econômicas e da população sobre o território \n\nbrasileiro, com reflexos no PIB por habitante. Assim,",
+      "options": [
+        "as desigualdades econômicas existentes entre \n\nregiões brasileiras desapareceram, tendo em vista a \n\nmodernização tecnológica e o crescimento vivido \n\npelo país.",
+        "os novos fluxos migratórios instaurados em direção \n\nao Norte e ao Centro-Oeste do país prejudicaram o \n\ndesenvolvimento socioeconômico dessas regiões, \n\nincapazes de atender ao crescimento da demanda \n\npor postos de trabalho.",
+        "o Sudeste brasileiro deixou de ser a região com o \n\nmaior PIB industrial a partir do processo de \n\ndesconcentração espacial do setor, em direção a \n\noutras regiões do país.",
+        "o avanço da fronteira econômica sobre os estados \n\nda região Norte e do Centro-Oeste resultou no \n\ndesenvolvimento \ne \nna \nintrodução \nde \nnovas \n\natividades econômicas, tanto nos setores primário e \n\nsecundário, como no terciário.",
+        "o Nordeste tem vivido, ao contrário do restante do \n\npaís, um período de retração econômica, como \n\nconsequência da falta de investimentos no setor \n\nindustrial com base na moderna tecnologia."
+      ],
+      "correctOption": 3,
+      "explanation": "Origem: ENEM 2009 • Ciências Humanas • Questão #73",
+      "images": [
+        "assets/2009/dia-1/q73_1.png"
+      ]
+    },
+    {
+      "id": "enem-2017-d2-q099",
+      "statement": "A figura mostra como é a emissão de radiação \n\neletromagnética para cinco tipos de lâmpada: haleto \n\nmetálico, tungstênio, mercúrio, xênon e LED (diodo \n\nemissor de luz). As áreas marcadas em cinza são \n\nproporcionais à intensidade da energia liberada pela \n\nlâmpada. As linhas pontilhadas mostram a sensibilidade \n\ndo olho humano aos diferentes comprimentos de onda. \n\nUV e IV são as regiões do ultravioleta e do infravermelho, \n\nrespectivamente.\n\nUm arquiteto deseja iluminar uma sala usando uma \n\nlâmpada que produza boa iluminação, mas que não \n\naqueça o ambiente.\n\nHaleto metálico\n\nTungstênio\n\nIntensidade emitida\n\nMercúrio\n\nXênon\n\n6\n\nPerda óptica (dB/km)\n\n5\n\n4\n\nLED\n\n3\n\n2\n\n300\n200\n900\n800\n700\n600\n500\n400\n\n1\n\nUV\nIV\nVisível\n\nComprimento de onda (nm)\n \n\nDisponível em: http://zeiss-campus.magnet.fsu.edu. Acesso em: 8 maio 2017 (adaptado).\n\nQual tipo de lâmpada melhor atende ao desejo do arquiteto?\n\nA\t Haleto metálico.",
+      "options": [
+        "6",
+        "18",
+        "60",
+        "90",
+        "100\n\nB\t Tungstênio.\n\nC\t Mercúrio.\n\nD\t Xênon.\n\nE\t LED.\n\nCN - 2º dia | Caderno 5 - AMARELO - Página 4"
+      ],
+      "correctOption": 4,
+      "explanation": "Origem: ENEM 2017 • Ciências da Natureza • Questão #99",
+      "images": [
+        "assets/2017/dia-2/q99_fig1.png"
+      ]
+    },
+    {
+      "id": "enem-2025-d2-q143",
+      "statement": "No atletismo, um grande desafio da prova de 100 metros \nrasos é a sua conclusão num tempo abaixo da marca de \nreferência dos 10,00 segundos. Vários atletas já alcançaram \nesse feito. Em 2009, o jamaicano Usain Bolt estabeleceu o \nrecorde mundial masculino dessa prova, com o tempo de \n9,58 segundos.\n\nQual é a diferença, em segundo, entre a marca de referência e \na marca estabelecida por Usain Bolt em 2009?",
+      "options": [
+        "0,02",
+        "0,42",
+        "0,52",
+        "1,02",
+        "1,42"
+      ],
+      "correctOption": 1,
+      "explanation": "Origem: ENEM 2025 • Matemática • Questão #143",
+      "images": [
+        "assets/2025/dia-2/q143_fig1.png"
+      ]
+    },
+    {
+      "id": "enem-2014-d1-q047",
+      "statement": "Para \nimpedir \na \ncontaminação \nmicrobiana \ndo \n\nsuprimento de água, deve-se eliminar as emissões de \n\nefluentes e, quando necessário, tratá-lo com desinfetante. \n\nO ácido hipocloroso (HClO), produzido pela reação entre \n\ncloro e água, é um dos compostos mais empregados \n\ncomo desinfetante. Contudo, ele não atua somente como \n\noxidante, mas também como um ativo agente de cloração. \n\nA presença de matéria orgânica dissolvida no suprimento \n\nde água clorada pode levar à formação de clorofórmio \n\n(CHCl3) e outras espécies orgânicas cloradas tóxicas.\n\nSPIRO, T. G.; STIGLIANI, W. M. Química ambiental. \n\nSão Paulo: Pearson, 2009 (adaptado).\n\nVisando eliminar da água o clorofórmio e outras moléculas \n\norgânicas, o tratamento adequado é a",
+      "options": [
+        "filtração, com o uso de filtros de carvão ativo.",
+        "fluoretação, pela adição de fluoreto de sódio.",
+        "coagulação, pela adição de sulfato de alumínio.",
+        "correção do pH, pela adição de carbonato de sódio.",
+        "floculação, em tanques de concreto com a água em \n\nmovimento."
+      ],
+      "correctOption": 0,
+      "explanation": "Origem: ENEM 2014 • Ciências da Natureza • Questão #47",
+      "images": [
+        "assets/2014/dia-1/q47_fig1.png"
+      ]
+    },
+    {
+      "id": "enem-2018-d2-q132",
+      "statement": "2\u0003PDQHMR\u0003DGHTXDGR\u0003GR\u0003VROR\u0003SRVVLELOLWD\u0003D\u0003PDQXWHQomR\u0003\nde sua fertilidade à medida que as trocas de nutrientes \nHQWUH\u0003PDWpULD\u0003RUJkQLFD\u000f\u0003iJXD\u000f\u0003VROR\u0003H\u0003R\u0003DU\u0003VmR\u0003PDQWLGDV\u0003\nSDUD\u0003 JDUDQWLU\u0003 D\u0003 SURGXomR\u0011\u0003$OJXPDV\u0003 HVSpFLHV\u0003 L{QLFDV\u0003 GH\u0003\nDOXPtQLR\u0003 VmR\u0003 Wy[LFDV\u000f\u0003 QmR\u0003 Vy\u0003 SDUD\u0003 D\u0003 SODQWD\u000f\u0003 PDV\u0003 SDUD\u0003\nmuitos organismos como as bactérias responsáveis \npelas transformações no ciclo do nitrogênio. O alumínio \nGDQL¿FD\u0003DV\u0003PHPEUDQDV\u0003GDV\u0003FpOXODV\u0003GDV\u0003UDt]HV\u0003H\u0003UHVWULQJH\u0003\nD\u0003 H[SDQVmR\u0003 GH\u0003 VXDV\u0003 SDUHGHV\u000f\u0003 FRP\u0003 LVVR\u000f\u0003 D\u0003 SODQWD\u0003 QmR\u0003\ncresce adequadamente. Para promover benefícios para a \nSURGXomR\u0003DJUtFROD\u000f\u0003p\u0003UHFRPHQGDGD\u0003D\u0003UHPHGLDomR\u0003GR\u0003VROR\u0003\nutilizando calcário (CaCO3).\n\n%5$'<\u000f\u00031\u0011\u0003&\u0011\u001e\u0003:(,/\u000f\u00035\u0011\u00035\u0011\u0003Elementos da natureza e propriedades dos solos.\n\n3RUWR\u0003$OHJUH\u001d\u0003%RRNPDQ\u000f\u0003\u0015\u0013\u0014\u0016\u0003\u000bDGDSWDGR\f\u0011\n\n(VVD\u0003UHPHGLDomR\u0003SURPRYH\u0003QR\u0003VROR\u0003R\u000bD",
+      "options": [
+        "GLPLQXLomR\u0003GR\u0003S+\u000f\u0003GHL[DQGR\u0010R\u0003IpUWLO\u0011",
+        "VROXELOL]DomR\u0003 GR\u0003 DOXPtQLR\u000f\u0003 RFRUUHQGR\u0003 VXD\u0003 OL[LYLDomR\u0003\n\npela chuva.",
+        "LQWHUDomR\u0003GR\u0003tRQ\u0003FiOFLR\u0003FRP\u0003R\u0003tRQ\u0003DOXPtQLR\u000f\u0003SURGX]LQGR\u0003\n\numa liga metálica.",
+        "UHDomR\u0003GR\u0003FDUERQDWR\u0003GH\u0003FiOFLR\u0003FRP\u0003RV\u0003tRQV\u0003DOXPtQLR\u000f\u0003\n\nformando alumínio metálico.",
+        "aumento da sua alcalinidade, tornando os íons \n\nalumínio menos disponíveis."
+      ],
+      "correctOption": 4,
+      "explanation": "Origem: ENEM 2018 • Ciências da Natureza • Questão #132",
+      "images": [
+        "assets/2018/dia-2/q132_fig1.png"
+      ]
+    },
+    {
+      "id": "enem-2013-d2-q159",
+      "statement": "Uma torneira não foi fechada corretamente e ficou \npingando, da meia-noite às seis horas da manhã, com a \nfrequência de uma gota a cada três segundos. Sabe-se \nque cada gota d’agua tem volume de 0,2 mL.\nQual foi o valor mais aproximado do total de água \ndesperdiçada nesse período, em litros?",
+      "options": [
+        "0,2",
+        "1,2",
+        "1,4",
+        "12,9",
+        "64,8\n\nMT - 2º dia | Caderno 5 - AMARELO - Página 25"
+      ],
+      "correctOption": 2,
+      "explanation": "Origem: ENEM 2013 • Matemática • Questão #159",
+      "images": [
+        "assets/2013/dia-2/q159_fig1.png"
+      ]
+    },
+    {
+      "id": "enem-2009-d1-q007",
+      "statement": "O ciclo biogeoquímico do carbono compreende \ndiversos compartimentos, entre os quais a Terra, a \natmosfera e os oceanos, e diversos processos que \npermitem a transferência de compostos entre esses \nreservatórios. Os estoques de carbono armazenados na \nforma de recursos não renováveis, por exemplo, o \npetróleo, são limitados, sendo de grande relevância que se \nperceba a importância da substituição de combustíveis \nfósseis por combustíveis de fontes renováveis. \n \nA utilização de combustíveis fósseis interfere no ciclo do \ncarbono, pois provoca",
+      "options": [
+        "aumento da porcentagem de carbono contido na \n\nTerra.",
+        "redução na taxa de fotossíntese dos vegetais \n\nsuperiores.",
+        "aumento da produção de carboidratos de origem \n\nvegetal.",
+        "aumento na quantidade de carbono presente na \n\natmosfera.",
+        "redução da quantidade global de carbono armazenado \n\nnos oceanos."
+      ],
+      "correctOption": 3,
+      "explanation": "Origem: ENEM 2009 • Ciências da Natureza • Questão #7"
+    },
+    {
+      "id": "enem-2012-d2-q163",
+      "statement": "José, Carlos e Paulo devem transportar em suas \nbicicletas uma certa quantidade de laranjas. Decidiram \ndividir o trajeto a ser percorrido em duas partes, sendo que \nao final da primeira parte eles redistribuiriam a quantidade \nde laranjas que cada um carregava dependendo do \ncansaço de cada um. Na primeira parte do trajeto \nJosé, Carlos e Paulo dividiram as laranjas na \nproporção 6 : 5 : 4, respectivamente. Na segunda \nparte do trajeto José, Carlos e Paulo dividiram as \nlaranjas na proporção 4 : 4 : 2, respectivamente.\n\nSabendo-se que um deles levou 50 laranjas a mais no \nsegundo trajeto, qual a quantidade de laranjas que José, \nCarlos e Paulo, nessa ordem, transportaram na segunda \nparte do trajeto?",
+      "options": [
+        "600, 550, 350",
+        "300, 300, 150",
+        "300, 250, 200",
+        "200, 200, 100",
+        "100, 100, 50"
+      ],
+      "correctOption": 1,
+      "explanation": "Origem: ENEM 2012 • Matemática • Questão #163",
+      "images": [
+        "assets/2012/dia-2/q163_fig1.png"
+      ]
+    },
+    {
+      "id": "enem-2009-d1-q076",
+      "statement": "Apesar do aumento da produção no campo e da \nintegração entre a indústria e a agricultura, parte da \npopulação da América do Sul ainda sofre com a \nsubalimentação, o que gera conflitos pela posse de terra \nque podem ser verificados em várias áreas e que \nfrequentemente chegam a provocar mortes.  \n\nUm dos fatores que explica a subalimentação na América \ndo Sul é",
+      "options": [
+        "a baixa inserção de sua agricultura no comércio \n\nmundial.",
+        "a quantidade insuficiente de mão-de-obra para o \n\ntrabalho agrícola.",
+        "a presença de estruturas agrárias arcaicas formadas \n\npor latifúndios improdutivos.",
+        "a situação conflituosa vivida no campo, que impede o \n\ncrescimento da produção agrícola.",
+        "os sistemas de cultivo mecanizado voltados para o \n\n \n\nabastecimento do mercado interno."
+      ],
+      "correctOption": 2,
+      "explanation": "Origem: ENEM 2009 • Ciências Humanas • Questão #76"
+    },
+    {
+      "id": "enem-2014-d1-q051",
+      "statement": "Na década de 1990, células do cordão umbilical de \nrecém-nascidos humanos começaram a ser guardadas \npor criopreservação, uma vez que apresentam alto \npotencial \nterapêutico \nem \nconsequência \nde \nsuas \ncaracterísticas peculiares.\n\nO poder terapêutico dessas células baseia-se em sua \ncapacidade de",
+      "options": [
+        "multiplicação lenta.",
+        "comunicação entre células.",
+        "adesão a diferentes tecidos.",
+        "diferenciação em células especializadas.",
+        "reconhecimento de células semelhantes."
+      ],
+      "correctOption": 3,
+      "explanation": "Origem: ENEM 2014 • Ciências da Natureza • Questão #51",
+      "images": [
+        "assets/2014/dia-1/q51_fig1.png"
+      ]
+    },
+    {
+      "id": "enem-2024-d1-q057",
+      "statement": "ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024\n\nTEXTO I\n\nAristóteles entendia que a felicidade era diretamente \nligada ao respeito pela própria natureza e, de certa maneira, \na uma vida que tivesse na natureza de si mesma uma \nreferência inabalável. Isso lhe permitiu formular o conceito \nde excelência. O que seria excelência? Seria, justamente, \nao longo da vida, tirar de si mesmo, em forma de performance, \nde conduta, de comportamento, de disposição, o que a natureza \npermitiria de melhor.\n\nCOEN, M.; BARROS FILHO, C. A monja e o professor: reflexões \n\nsobre ética, preceitos e valores. Rio de Janeiro: Best Seller, 2018.\n\nTEXTO II\n\nA noção de eudaimonia é central para a ética aristotélica. \nA eudaimonia é uma atividade e não um estado psicológico, \npois é definida na Ética a Nicômaco como uma atividade \nda alma com base na virtude moral. A virtude moral é \ndefinida em termos de uma disposição diretamente ligada \nà deliberação, o que o leva a estudar a virtude intelectual \nque opera em seu interior, isto é, a prudência. A estrutura \nconceitual da ética aristotélica responde a uma tentativa de \nelucidar conceitualmente em que consiste isto, agir bem, ou, \nna linguagem aristotélica, o que significa ser feliz.\n\nZINGANO, M. Eudaimonia, razão e contemplação na ética aristotélica. \n\nAnalytica, n. 1, 2017 (adaptado).\n\nOs textos indicam que a prática de ações virtuosas, \nsempre efetivada na pólis, ocorre por meio do(a)",
+      "options": [
+        "teoria das formas essenciais.",
+        "identificação dos princípios racionais.",
+        "desenvolvimento das técnicas retóricas.",
+        "aperfeiçoamento das condutas humanas.",
+        "conhecimento das epistemes verdadeiras."
+      ],
+      "correctOption": 3,
+      "explanation": "Origem: ENEM 2024 • Ciências Humanas • Questão #57",
+      "images": [
+        "assets/2024/dia-1/q57_fig1.png"
+      ]
+    },
+    {
+      "id": "enem-2012-d1-q074",
+      "statement": "No Japão, um movimento nacional para a promoção da \nluta contra o aquecimento global leva o slogan: 1 pessoa, \n1 dia, 1 kg de CO2 a menos! A ideia é cada pessoa reduzir \nem 1 kg a quantidade de CO2 emitida todo dia, por meio de \npequenos gestos ecológicos, como diminuir a queima de \ngás de cozinha.\n\nUm hamburguer ecológico? É pra já! Disponível em: http://lqes.iqm.unicamp.br. \n\nAcesso em: 24 fev. 2012 (adaptado).\n\nConsiderando um processo de combustão completa de \num gás de cozinha composto exclusivamente por butano \n(C4H10), a mínima quantidade desse gás que um japonês \ndeve deixar de queimar para atender à meta diária, \napenas com esse gesto, é de\n\nDados: CO2 (44 g/mol); C4H10 (58 g/mol)",
+      "options": [
+        "0,25 kg.",
+        "0,33 kg.",
+        "1,0 kg.",
+        "1,3 kg.",
+        "3,0 kg."
+      ],
+      "correctOption": 1,
+      "explanation": "Origem: ENEM 2012 • Ciências da Natureza • Questão #74",
+      "images": [
+        "assets/2012/dia-1/q74_fig1.png"
+      ]
+    },
+    {
+      "id": "enem-2012-d2-q112",
+      "statement": "Cartaz afixado nas bibliotecas centrais e setoriais da Universidade Federal de Goiás (UFG), 2011.\n\nConsiderando-se a finalidade comunicativa comum do \ngênero e o contexto específico do Sistema de Biblioteca \nda UFG, esse cartaz tem função predominantemente",
+      "options": [
+        "socializadora, contribuindo para a popularização \n\nda arte.",
+        "sedutora, considerando a leitura como uma obra de arte.",
+        "estética, propiciando uma apreciação despretensiosa \n\nda obra.",
+        "educativa, orientando o comportamento de usuários \n\nde um serviço.",
+        "contemplativa, evidenciando a importância de"
+      ],
+      "correctOption": 3,
+      "explanation": "Origem: ENEM 2012 • Linguagens e Códigos • Questão #112",
+      "images": [
+        "assets/2012/dia-2/q112_1.png"
+      ]
+    },
+    {
+      "id": "enem-2016-d2-q179",
+      "statement": "Para garantir a segurança de um grande evento \npúblico que terá início às 4 h da tarde, um organizador \nprecisa monitorar a quantidade de pessoas presentes em \ncada instante. Para cada 2 000 pessoas se faz necessária \na presença de um policial. Além disso, estima-se uma \ndensidade de quatro pessoas por metro quadrado de área \nde terreno ocupado. Às 10 h da manhã, o organizador \nverifica que a área de terreno já ocupada equivale a um \nquadrado com lados medindo 500 m. Porém, nas horas \nseguintes, espera-se que o público aumente a uma taxa \nde 120 000 pessoas por hora até o início do evento, \nquando não será mais permitida a entrada de público.\nQuantos policiais serão necessários no início do evento \npara garantir a segurança?",
+      "options": [
+        "360",
+        "485",
+        "560",
+        "740",
+        "860"
+      ],
+      "correctOption": 4,
+      "explanation": "Origem: ENEM 2016 • Matemática • Questão #179",
+      "images": [
+        "assets/2016/dia-2/q179_fig1.png"
+      ]
+    },
+    {
+      "id": "enem-2012-d2-q128",
+      "statement": "Entrevista com Marcos Bagno\n\nPode \nparecer \ninacreditável, \nmas \nmuitas \ndas \nprescrições da pedagogia tradicional da língua até hoje \nse baseiam nos usos que os escritores portugueses do \nséculo XIX faziam da língua. Se tantas pessoas condenam, \npor exemplo, o uso do verbo “ter” no lugar de “haver”, \ncomo em “hoje tem feijoada”, é simplesmente porque os \nportugueses, em dado momento da história de sua língua, \ndeixaram de fazer esse uso existencial do verbo “ter”. \n\nNo entanto, temos registros escritos da época \nmedieval em que aparecem centenas desses usos. Se \nnós, brasileiros, assim como os falantes africanos de \nportuguês, usamos até hoje o verbo “ter” como existencial \né porque recebemos esses usos de nossos ex-\ncolonizadores. Não faz sentido imaginar que brasileiros, \nangolanos e moçambicanos decidiram se juntar para \n“errar” na mesma coisa. E assim acontece com muitas \noutras coisas: regências verbais, colocação pronominal, \nconcordâncias nominais e verbais etc. Temos uma \nlíngua própria, mas ainda somos obrigados a seguir uma \ngramática normativa de outra língua diferente. Às vésperas \nde comemorarmos nosso bicentenário de independência, \nnão faz sentido continuar rejeitando o que é nosso para só \naceitar o que vem de fora. \n\nNão faz sentido rejeitar a língua de 190 milhões de \nbrasileiros para só considerar certo o que é usado por menos \nde dez milhões de portugueses. Só na cidade de São Paulo \ntemos mais falantes de português que em toda a Europa!\n\nInformativo Parábola Editorial, s/d.\n\nNa entrevista, o autor defende o uso de formas linguísticas \ncoloquiais e faz uso da norma padrão em toda a extensão \ndo texto. Isso pode ser explicado pelo fato de que ele",
+      "options": [
+        "adapta o nível de linguagem à situação comunicativa, \n\numa vez que o gênero entrevista requer o uso da \nnorma padrão.",
+        "apresenta argumentos carentes de comprovação \n\ncientífica e, por isso, defende um ponto de vista difícil \nde ser verificado na materialidade do texto.",
+        "propõe que o padrão normativo deve ser usado por \n\nfalantes escolarizados como ele, enquanto a norma \ncoloquial deve ser usada por falantes não escolarizados.",
+        "acredita que a língua genuinamente brasileira está em \n\nconstrução, o que o obriga a incorporar em seu cotidiano \na gramática normativa do português europeu.",
+        "defende que a quantidade de falantes do português \n\nbrasileiro ainda é insuficiente para acabar com a \nhegemonia do antigo colonizador.\n\nLC - 2º dia | Caderno 5 - AMARELO - Página 16"
+      ],
+      "correctOption": 0,
+      "explanation": "Origem: ENEM 2012 • Linguagens e Códigos • Questão #128",
+      "images": [
+        "assets/2012/dia-2/q128_fig1.png"
+      ]
+    },
+    {
+      "id": "enem-2012-d2-q143",
+      "statement": "O gráfico mostra a variação da extensão média de \ngelo marítimo, em milhões de quilômetros quadrados, \ncomparando dados dos anos 1995, 1998, 2000, 2005 e 2007. \nOs dados correspondem aos meses de junho a setembro. \nO Ártico começa a recobrar o gelo quando termina o \nverão, em meados de setembro. O gelo do mar atua \ncomo o sistema de resfriamento da Terra, refletindo quase \ntoda a luz solar de volta ao espaço. Águas de oceanos \nescuros, por sua vez, absorvem a luz solar e reforçam \no aquecimento do Ártico, ocasionando derretimento \ncrescente do gelo.\n\n15\n\nExtensão de gelo marítimo\n\n12\n\n1995\n\n9\n\n1998\n\n2000\n\n2005\n\n6\n\n2007\n\n3\n\nJunho                             Julho\nAgosto                       Setembro\n\nDisponível em: http://sustentabilidade.allianz.com.br. Acesso em: fev. 2012 (adaptado).\n\nCom base no gráfico e nas informações do texto, é \npossível inferir que houve maior aquecimento global em",
+      "options": [
+        "1995.",
+        "1998.",
+        "2000.",
+        "2005.",
+        "2007.\n\nMT - 2º dia | Caderno 5 - AMARELO - Página 20"
+      ],
+      "correctOption": 4,
+      "explanation": "Origem: ENEM 2012 • Matemática • Questão #143",
+      "images": [
+        "assets/2012/dia-2/q143_fig1.png"
+      ]
+    },
+    {
+      "id": "enem-2013-d2-q130",
+      "statement": "O que a internet esconde de você\n\nSites de busca manipulam resultados. Redes sociais \ndecidem quem vai ser seu amigo — e descartam as \npessoas sem avisar. E, para cada site que você pode \n\nacessar, há 400 outros invisíveis. Prepare-se para \n\nconhecer o lado oculto da internet.\n\n GRAVATÁ, A. Superinteressante, São Paulo, ed. 297, nov. 2011 (adaptado).\n\nAnalisando-se as informações verbais e a imagem associada \na uma cabeça humana, compreende-se que a venda",
+      "options": [
+        "representa a amplitude de informações que compõem \n\na internet, às quais temos acesso em redes sociais e \nsites de busca.",
+        "faz uma denúncia quanto às informações que são \n\nomitidas dos usuários da rede, sendo empregada no \nsentido conotativo.",
+        "diz respeito a um buraco negro digital, onde estão \n\nescondidas as informações buscadas pelo usuário \nnos sites que acessa.",
+        "está associada a um conjunto de restrições sociais \n\npresentes na vida daqueles que estão sempre \nconectados à internet.",
+        "remete às bases de dados da web, protegidas por \n\nsenhas ou assinaturas e às quais o navegador não \ntem acesso."
+      ],
+      "correctOption": 1,
+      "explanation": "Origem: ENEM 2013 • Linguagens e Códigos • Questão #130",
+      "images": [
+        "assets/2013/dia-2/q130_1.png"
+      ]
+    },
+    {
+      "id": "enem-2019-d2-q179",
+      "statement": "Para construir uma piscina, cuja área total da \nsuperfície interna é igual a 40 m2, uma construtora \napresentou o seguinte orçamento:\n\n•\t R$ 10 000,00 pela elaboração do projeto;\n•\t R$ 40 000,00 pelos custos fixos;\n•\t R$ 2 500,00 por metro quadrado para construção \nda área interna da piscina.\nApós a apresentação do orçamento, essa empresa \ndecidiu reduzir o valor de elaboração do projeto em \n50%, mas recalculou o valor do metro quadrado para a \nconstrução da área interna da piscina, concluindo haver \na necessidade de aumentá-lo em 25%. Além disso, a \nconstrutora pretende dar um desconto nos custos fixos, \nde maneira que o novo valor do orçamento seja reduzido \nem 10% em relação ao total inicial.",
+      "options": [
+        "1.",
+        "2.",
+        "4.",
+        "5.",
+        "8."
+      ],
+      "correctOption": 3,
+      "explanation": "Origem: ENEM 2019 • Matemática • Questão #179",
+      "images": [
+        "assets/2019/dia-2/q179_fig1.png"
+      ]
+    },
+    {
+      "id": "enem-2015-d1-q043",
+      "statement": "A língua de que usam, por toda a costa, carece \nde três letras; convém a saber, não se acha nela F, \nnem L, nem R, coisa digna de espanto, porque assim \nnão têm Fé, nem Lei, nem Rei, e dessa maneira vivem \ndesordenadamente, sem terem além disto conta, nem \npeso, nem medida.\n\nGÂNDAVO, P. M. A primeira história do Brasil: história da província de Santa Cruz a que \n\nvulgarmente chamamos Brasil. Rio de Janeiro: Zahar, 2004 (adaptado).\n\nA observação do cronista português Pero de Magalhães \nde Gândavo, em 1576, sobre a ausência das letras F, L e \nR na língua mencionada, demonstra a",
+      "options": [
+        "simplicidade da organização social das tribos \n\nbrasileiras.",
+        "dominação portuguesa imposta aos índios no início \n\nda colonização.",
+        "superioridade da sociedade europeia em relação à \n\nsociedade indígena.",
+        "incompreensão dos valores socioculturais indígenas \n\npelos portugueses.",
+        "dificuldade experimentada pelos portugueses no \n\naprendizado da língua nativa."
+      ],
+      "correctOption": 3,
+      "explanation": "Origem: ENEM 2015 • Ciências Humanas • Questão #43",
+      "images": [
+        "assets/2015/dia-1/q43_fig1.png"
+      ]
+    },
+    {
+      "id": "enem-2017-d1-q031",
+      "statement": "ERNESTO NETO. Dengo. 2010. MAM-SP, 2010.\n\nDisponível em: http://espacohumus.com. Acesso em: 25 abr. 2017.\nA instalação Dengo transformou a sala do MAM-SP \nem um ambiente singular, explorando como principal \ncaracterística artística a",
+      "options": [
+        "participação do público na interação lúdica com a obra.",
+        "distribuição de obstáculos no espaço da exposição.",
+        "representação simbólica de objetos oníricos.",
+        "interpretação subjetiva da lei da gravidade.",
+        "valorização de técnicas de artesanato."
+      ],
+      "correctOption": 0,
+      "explanation": "Origem: ENEM 2017 • Linguagens e Códigos • Questão #31",
+      "images": [
+        "assets/2017/dia-1/q31_1.png"
+      ]
+    },
+    {
+      "id": "enem-2016-d2-q099",
+      "statement": "Em casa, Hideo ainda podia seguir fiel ao imperador \njaponês e às tradições que trouxera no navio que \naportara em Santos. […] Por isso Hideo exigia que, aos \ndomingos, todos estivessem juntos durante o almoço. \nEle se sentava à cabeceira da mesa; à direita ficava \nHanashiro, que era o primeiro filho, e Hitoshi, o segundo, \ne à esquerda, Haruo, depois Hiroshi, que era o mais \nnovo. […] A esposa, que também era mãe, e as filhas, \nque também eram irmãs, aguardavam de pé ao redor da \nmesa […]. Haruo reclamava, não se cansava de reclamar: \nque se sentassem também as mulheres à mesa, que era \num absurdo aquele costume. Quando se casasse, se \nsentariam à mesa a esposa e o marido, um em frente \nao outro, porque não era o homem melhor que a mulher \npara ser o primeiro […]. Elas seguiam de pé, a mãe um \npouco cansada dos protestos do filho, pois o momento do \nalmoço era sagrado, não era hora de levantar bandeiras \ninúteis […].\n\no\n\n \n\n=\n\nNAKASATO, O. Nihonjin. São Paulo: Benvirá, 2011 (fragmento).\n\nReferindo-se a práticas culturais de origem nipônica, o \nnarrador registra as reações que elas provocam na família \ne mostra um contexto em que",
+      "options": [
+        "a obediência ao imperador leva ao prestígio pessoal.",
+        "as novas gerações abandonam seus antigos hábitos.",
+        "a refeição é o que determina a agregação familiar.",
+        "os conflitos de gênero tendem a ser neutralizados.",
+        "o lugar à mesa metaforiza uma estrutura de poder."
+      ],
+      "correctOption": 4,
+      "explanation": "Origem: ENEM 2016 • Linguagens e Códigos • Questão #99",
+      "images": [
+        "assets/2016/dia-2/q99_fig1.png"
+      ]
+    },
+    {
+      "id": "enem-2012-d1-q021",
+      "statement": "Após o retorno de uma viagem a Minas Gerais, \nonde Pedro I fora recebido com grande frieza, seus \npartidários prepararam uma série de manifestações a \nfavor do imperador no Rio de Janeiro, armando fogueiras \ne luminárias na cidade. Contudo, na noite de 11 de março, \ntiveram início os conflitos que ficaram conhecidos como \na Noite das Garrafadas, durante os quais os “brasileiros”  \napagavam as fogueiras “portuguesas” e atacavam as \ncasas iluminadas, sendo respondidos com cacos de \ngarrafas jogadas das janelas.\n\nVAINFAS, R. (Org.). Dicionário do Brasil Imperial. Rio de Janeiro: Objetiva, 2008 (adaptado).\n\nOs anos finais do I Reinado (1822-1831) se caracterizaram \npelo aumento da tensão política. Nesse sentido, a análise \ndos episódios descritos em Minas Gerais e no Rio de \nJaneiro revela",
+      "options": [
+        "estímulos ao racismo.",
+        "apoio ao xenofobismo.",
+        "críticas ao federalismo.",
+        "repúdio ao republicanismo.",
+        "questionamentos ao autoritarismo."
+      ],
+      "correctOption": 4,
+      "explanation": "Origem: ENEM 2012 • Ciências Humanas • Questão #21",
+      "images": [
+        "assets/2012/dia-1/q21_fig1.png"
+      ]
+    },
+    {
+      "id": "enem-2019-d2-q155",
+      "statement": "Três sócios resolveram fundar uma fábrica. \nO investimento inicial foi de R$ 1 000 000,00. \nE, independentemente do valor que cada um investiu \nnesse primeiro momento, resolveram considerar que cada \num deles contribuiu com um terço do investimento inicial.\n\nAlgum tempo depois, um quarto sócio entrou para \na sociedade, e os quatro, juntos, investiram mais \nR$ 800 000,00 na fábrica. Cada um deles contribuiu \ncom um quarto desse valor. Quando venderam a fábrica, \nnenhum outro investimento havia sido feito. Os sócios \ndecidiram então dividir o montante de R$ 1 800 000,00 \nobtido com a venda, de modo proporcional à quantia \ntotal investida por cada sócio.\n\nQuais os valores mais próximos, em porcentagens, \ncorrespondentes às parcelas financeiras que cada um \ndos três sócios iniciais e o quarto sócio, respectivamente, \nreceberam?",
+      "options": [
+        "29,60 e 11,11.",
+        "28,70 e 13,89.",
+        "25,00 e 25,00.",
+        "18,52 e 11,11.",
+        "12,96 e 13,89."
+      ],
+      "correctOption": 0,
+      "explanation": "Origem: ENEM 2019 • Matemática • Questão #155",
+      "images": [
+        "assets/2019/dia-2/q155_fig1.png"
+      ]
+    },
+    {
+      "id": "enem-2022-d2-q129",
+      "statement": "A variação da incidência de radiação solar sobre \na superfície da Terra resulta em uma variação de \ntemperatura ao longo de um dia denominada amplitude \ntérmica. Edificações e pavimentações realizadas nas \náreas urbanas contribuem para alterar as amplitudes \ntérmicas dessas regiões, em comparação com regiões que \nmantêm suas características naturais, com presença de \nvegetação e água, já que o calor específico do concreto é \ninferior ao da água. Assim, parte da avaliação do impacto \nambiental que a presença de concreto proporciona às \náreas urbanas consiste em considerar a substituição \nda área concretada por um mesmo volume de água e \ncomparar as variações de temperatura devido à absorção \nda radiação solar nas duas situações (concretada e \nalagada). Desprezando os efeitos da evaporação e \nconsiderando que toda a radiação é absorvida, essa \navaliação pode ser realizada com os seguintes dados:\n\nDensidade kg\n\n\u001c\n\u001b\u001a\nCalor específi co\nJ\ng C\n\u001f\n\u001e\n\nm3\n\u001f\n\u001e\u001d\n\n\u001b\n\n\u001d\u001c\n\n\u001a\u0019\n\nÁgua\n1 000\n4,2\nConcreto\n2 500\n0,8\n\nROMERO, M. A. B. et al. Mudanças climáticas e ilhas de calor urbanas. \n\nBrasília: UnB; ETB, 2019 (adaptado).\n\nA razão entre as variações de temperatura nas áreas \nconcretada e alagada é mais próxima de",
+      "options": [
+        "A\t 1,0.",
+        "B\t 2,1.",
+        "C\t 2,5.",
+        "D\t 5,3.",
+        "E\t 13,1."
+      ],
+      "correctOption": 1,
+      "explanation": "Origem: ENEM 2022 • Ciências da Natureza • Questão #129",
+      "images": [
+        "assets/2022/dia-2/q129_fig1.png"
+      ]
+    },
+    {
+      "id": "enem-2011-d2-q146",
+      "statement": "Você pode adaptar as atividades do seu dia a dia de \numa forma que possa queimar mais calorias do que as \ngastas normalmente, conforme a relação seguinte: \n\n- Enquanto você fala ao telefone, faça agachamentos: \n\n100 calorias gastas em 20 minutos.\n- Meia hora de supermercado: 100 calorias. \n- Cuidar do jardim por 30 minutos: 200 calorias. \n- Passear com o cachorro: 200 calorias em 30 minutos. \n- Tirar o pó dos móveis: 150 calorias em 30 minutos.\n- Lavar roupas por 30 minutos: 200 calorias.\n\nDisponível em: http://cyberdiet.terra.com.br. Acesso em: 27 abr. 2010 (adaptado). \n\nUma pessoa deseja executar essas atividades, porém, \najustando o tempo para que, em cada uma, gaste \nigualmente 200 calorias.\n\nA partir dos ajustes, quanto tempo a mais será necessário \npara realizar todas as atividades?",
+      "options": [
+        "50 minutos.",
+        "60 minutos.",
+        "80 minutos.",
+        "120 minutos.",
+        "170 minutos."
+      ],
+      "correctOption": 1,
+      "explanation": "Origem: ENEM 2011 • Matemática • Questão #146",
+      "images": [
+        "assets/2011/dia-2/q146_fig1.png"
+      ]
+    },
+    {
+      "id": "enem-2023-d2-q136",
+      "statement": "Alguns estudos comprovam que os carboidratos \nfornecem energia ao corpo, preservam as proteínas \nestruturais dos músculos durante a prática de atividade \nfísica e ainda dão força para o cérebro coordenar os \nmovimentos, o que de fato tem impacto positivo no \ndesenvolvimento do praticante. O ideal é consumir 1 grama \nde carboidrato para cada minuto de caminhada.\n\n3\n\nCIRINO, C. Boa pergunta: consumir carboidratos antes dos exercícios melhora o \n\ndesempenho do atleta? Revista Saúde! É Vital, n. 330, nov. 2010 (adaptado).\nUm casal realizará diariamente 30 minutos de caminhada, \ningerindo, antes dessa atividade, a quantidade ideal de \ncarboidratos recomendada. Para ter o consumo ideal apenas \npor meio do consumo de pão de fôrma integral, o casal planeja \ngarantir o suprimento de pães para um período de 30 dias \nininterruptos. Sabe-se que cada pacote desse pão vem com 18 \nfatias, e que cada uma delas tem 15 gramas de carboidratos.\n\nE\t\nE\t 22\n\nA quantidade mínima de pacotes de pão de fôrma \nnecessários para prover o suprimento a esse casal é",
+      "options": [
+        "A\t 1.",
+        "B\t 4.",
+        "C\t 6.",
+        "D\t 7.",
+        "E\t 8."
+      ],
+      "correctOption": 3,
+      "explanation": "Origem: ENEM 2023 • Matemática • Questão #136"
+    },
+    {
+      "id": "enem-2024-d1-q073",
+      "statement": "ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024\n\nTEXTO I\n\n“As novelas brasileiras foram as primeiras a aparecer na \nTV russa ainda na época de Gorbachov, nos anos 1980. Elas \ncausaram sensação. Houve casos anedóticos, como quando \no Parlamento da Federação Russa terminou a sessão mais \ncedo para ver o último capítulo de Escrava Isaura”, conta o \nrusso Anatoli Sostanov, consultor na área de TV internacional \ne ex-diretor da emissora estatal russa Canal.\n\nDisponível em: www.bbc.com. Acesso em: 16 out. 2021.\nTEXTO II\n\nAs novelas de maior impacto em Angola foram as produções \nbrasileiras. Fizeram tanto sucesso que um mercado popular, \nna época era o maior a céu aberto na África, chegou a receber \no nome de Roque Santeiro, novela brasileira exibida naquele \npaís na década de 1980. A influência das produções brasileiras \nfez com que os angolanos conhecessem o Brasil por meio das \nnovelas. Além de entreter, os folhetins brasileiros até hoje ditam \na moda em Angola. Figurinos e acessórios de personagens \nse transformam em uma verdadeira febre e influenciam \no comportamento.\n\nDisponível em: https://tvbrasil.ebc.com.br. \n\nAcesso em: 16 out. 2021 (adaptado).\n\nEmbora situados em continentes diferentes com práticas \nsociais distintas, Rússia e Angola se aproximam, conforme \nos textos I e II, no aspecto",
+      "options": [
+        "cultural, ao subjetivarem costumes da teledramaturgia \n\nestrangeira.",
+        "econômico, ao importarem confecções de estilistas famosos.",
+        "geográfico, ao encurtarem distâncias de caráter ideológico.",
+        "antropológico, ao adaptarem valores de povos tradicionais.",
+        "político, ao adotarem sistemas de governos democráticos."
+      ],
+      "correctOption": 0,
+      "explanation": "Origem: ENEM 2024 • Ciências Humanas • Questão #73",
+      "images": [
+        "assets/2024/dia-1/q73_fig1.png"
+      ]
+    },
+    {
+      "id": "enem-2012-d2-q169",
+      "statement": "Há, em virtude da demanda crescente de economia \nde água, equipamentos e utensílios como, por exemplo, \nas bacias sanitárias ecológicas, que utilizam 6 litros de \nágua por descarga em vez dos 15 litros utilizados por \nbacias sanitárias não ecológicas, conforme dados da \nAssociação Brasileira de Normas Técnicas (ABNT).\n\nQual será a economia diária de água obtida por meio da \nsubstituição de uma bacia sanitária não ecológica, que \ngasta cerca de 60 litros por dia com a descarga, por uma \nbacia sanitária ecológica?",
+      "options": [
+        "24 litros",
+        "36 litros",
+        "40 litros",
+        "42 litros",
+        "50 litros"
+      ],
+      "correctOption": 1,
+      "explanation": "Origem: ENEM 2012 • Matemática • Questão #169",
+      "images": [
+        "assets/2012/dia-2/q169_fig1.png"
+      ]
+    }
+  ]
+}
