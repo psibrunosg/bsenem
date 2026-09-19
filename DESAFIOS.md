@@ -55,3 +55,9 @@ Anotações de fricção que voltam a aparecer. Leia antes de começar uma sess�
   acessível apontando a pasta local no app.
 - `pdo_sqlite` não está instalado no PHP local (só `pdo_pgsql`), então
   `npm run test:backend` falha aqui e passa no CI. Não é bug do repositório.
+- **`BASE_PATH` no Git Bash vira caminho do Windows.** `BASE_PATH=/bsenem/ npm run build`
+  no MSYS é reescrito para `C:/Program Files/Git/bsenem/`. `MSYS_NO_PATHCONV=1`
+  não resolve nesse caso — use PowerShell (`$env:BASE_PATH = '/bsenem/'`).
+- **`%BASE_URL%` não serve para a entrada do módulo no `index.html`.** O Vite
+  expande antes do Rollup resolver o import, então o build quebra sempre que a
+  base não é `/`. Use `/src/main.js`.
