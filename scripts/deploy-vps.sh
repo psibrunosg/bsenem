@@ -6,6 +6,10 @@
 # nginx dentro do container deploy-frontend-1 — passa a apontar para ele.
 # Rollback é trocar o symlink de volta para o release anterior.
 #
+# O symlink tem que ser RELATIVO: o nginx enxerga a árvore montada em
+# /var/www/bsenem, então um alvo absoluto do host (/opt/projects/...) não
+# existe dentro do container e o try_files entra em loop, devolvendo 500.
+#
 #   bash scripts/deploy-vps.sh              # publica o HEAD atual
 #   bash scripts/deploy-vps.sh --rollback   # volta para o release anterior
 #
@@ -30,7 +34,7 @@ if [[ "${1:-}" == "--rollback" ]]; then
   previous="$(remote "cat $ROOT/releases/.previous" 2>/dev/null || true)"
   [[ -n "$previous" ]] || { echo "Sem release anterior registrado em releases/.previous"; exit 1; }
   echo "Voltando para $previous"
-  remote "sudo ln -sfn $ROOT/releases/$previous $ROOT/current"
+  remote "cd $ROOT && sudo ln -sfn releases/$previous current"
   reload_nginx
   echo "Rollback concluído: $(current_target)"
   exit 0
@@ -51,7 +55,7 @@ tar czf - -C dist . | remote "tar xzf - -C $ROOT/releases/$sha"
 
 echo ">>> Apontando current -> releases/$sha (anterior: $previous)"
 remote "echo $previous | sudo tee $ROOT/releases/.previous > /dev/null"
-remote "sudo ln -sfn $ROOT/releases/$sha $ROOT/current"
+remote "cd $ROOT && sudo ln -sfn releases/$sha current"
 reload_nginx
 
 echo ">>> Publicado: $(current_target)"
