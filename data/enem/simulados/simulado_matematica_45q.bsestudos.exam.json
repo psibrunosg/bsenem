@@ -1,0 +1,594 @@
+{
+  "schema": "bsestudos.exam.v1",
+  "id": "simulado-matematica-4d4d6687",
+  "title": "Simulado — Matemática (45 Questões)",
+  "durationMinutes": 135,
+  "subject": "Matemática",
+  "questions": [
+    {
+      "id": "enem-2018-d2-q148",
+      "statement": "existência em Jerusalém de um hospital voltado \npara o alojamento e o cuidado dos peregrinos, assim \ncomo daqueles entre eles que estavam cansados ou \ndoentes, fortaleceu o elo entre a obra de assistência \ne de caridade e a Terra Santa. Ao fazer, em 1113, do \nHospital de Jerusalém um estabelecimento central da \nordem, Pascoal II estimulava a filiação dos hospitalários \ndo Ocidente a ele, sobretudo daqueles que estavam \nligados à peregrinação na Terra Santa ou em outro lugar. \nA militarização do Hospital de Jerusalém não diminuiu a \nvocação caritativa primitiva, mas a fortaleceu.\n\nDEMURGER, A. Os Cavaleiros de Cristo. Rio de Janeiro:\n\nJorge Zahar, 2002 (adaptado).\n\nO acontecimento descrito vincula-se ao fenômeno \nocidental do(a)",
+      "options": [
+        "surgimento do monasticismo guerreiro, ocasionado\n\npelas cruzadas.",
+        "descentralização do poder eclesiástico, produzida\n\npelo feudalismo.",
+        "alastramento da peste bubônica, provocado pela\n\nexpansão comercial.",
+        "afirmação da fraternidade mendicante, estimulada\n\npela reforma espiritual.",
+        "criação das faculdades de medicina, promovida pelo\n\nrenascimento urbano."
+      ],
+      "correctOption": 1,
+      "explanation": "Origem: ENEM 2018 • Matemática • Questão #148"
+    },
+    {
+      "id": "enem-2016-d2-q136",
+      "statement": "Para uma feira de ciências, dois projéteis de \nfoguetes, A e B, estão sendo construídos para serem \nlançados. O planejamento é que eles sejam lançados \njuntos, com o objetivo de o projétil B interceptar o A \nquando esse alcançar sua altura máxima. Para que isso \naconteça, um dos projéteis descreverá uma trajetória \nparabólica, enquanto o outro irá descrever uma trajetória \nsupostamente retilínea. O gráfico mostra as alturas \nalcançadas por esses projéteis em função do tempo, nas \nsimulações realizadas.\n\n20\n\n16\n\n12\n\nAltura (m)",
+      "options": [
+        "A",
+        "8\n\n4\n\nTempo (s)\n\n0\n\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n\n− 4\n\n− 8\n\n−12\n\nCom base nessas simulações, observou-se que a \ntrajetória do projétil B deveria ser alterada para que o \nobjetivo fosse alcançado.\nPara alcançar o objetivo, o coeficiente angular da reta que \nrepresenta a trajetória de B deverá\nA diminuir em 2 unidades.\nB diminuir em 4 unidades.",
+        "aumentar em 2 unidades.",
+        "aumentar em 4 unidades.",
+        "aumentar em 8 unidades."
+      ],
+      "correctOption": 2,
+      "explanation": "Origem: ENEM 2016 • Matemática • Questão #136"
+    },
+    {
+      "id": "enem-2011-d2-q157",
+      "statement": "Um \njovem \ninvestidor \nprecisa \nescolher \nqual \ninvestimento lhe trará maior retorno financeiro em uma \naplicação de R$ 500,00. Para isso, pesquisa o rendimento \ne o imposto a ser pago em dois investimentos: poupança \ne CDB (certificado de depósito bancário). As informações \nobtidas estão resumidas no quadro:\n\nRendimento\n\nIR (imposto de\n\nmensal (%)\n\nrenda)\nPOUPANÇA\n0,560\nISENTO\n\nCDB\n0,876\n4% (sobre o ganho)\n\nPara o jovem investidor, ao final de um mês, a aplicação \nmais vantajosa é",
+      "options": [
+        "a poupança, pois totalizará um montante de R$ 502,80.",
+        "a poupança, pois totalizará um montante de R$ 500,56.",
+        "o CDB, pois totalizará um montante de R$ 504,38.",
+        "o CDB, pois totalizará um montante de R$ 504,21.",
+        "o CDB, pois totalizará um montante de R$ 500,87."
+      ],
+      "correctOption": 3,
+      "explanation": "Origem: ENEM 2011 • Matemática • Questão #157"
+    },
+    {
+      "id": "enem-2018-d2-q179",
+      "statement": "Os soviéticos tinham chegado a Cuba muito cedo \nna década de 1960, esgueirando-se pela fresta aberta \npela imediata hostilidade norte-americana em relação \nao processo social revolucionário. Durante três décadas \nos soviéticos mantiveram sua presença em Cuba com \nbases e ajuda militar, mas, sobretudo, com todo o apoio \neconômico que, como saberíamos anos mais tarde, \nmantinha o país à tona, embora nos deixasse em dívida \ncom os irmãos soviéticos – e depois com seus herdeiros \nrussos – por cifras que chegavam a US$ 32 bilhões. \nOu seja, o que era oferecido em nome da solidariedade \nsocialista tinha um preço definido.\n\nPADURA, L. Cuba e os russos. Folha de São Paulo,\n\n19 jul. 2014 (adaptado).\n\nO texto indica que durante a Guerra Fria as relações \ninternas em um mesmo bloco foram marcadas pelo(a)",
+      "options": [
+        "busca da neutralidade política.",
+        "estímulo à competição comercial.",
+        "subordinação à potência hegemônica.",
+        "elasticidade das fronteiras geográficas.",
+        "compartilhamento de pesquisas científicas."
+      ],
+      "correctOption": 3,
+      "explanation": "Origem: ENEM 2018 • Matemática • Questão #179"
+    },
+    {
+      "id": "enem-2018-d2-q147",
+      "statement": "No Segundo Congresso Internacional de Ciências \nGeográficas, em 1875, a que compareceram o \npresidente da República, o governador de Paris e \no presidente da Assembleia, o discurso inaugural \ndo almirante La Roucière-Le Noury expôs a atitude \npredominante no encontro: “Cavalheiros, a Providência \nnos ditou a obrigação de conhecer e conquistar a terra. \nEssa ordem suprema é um dos deveres imperiosos \ninscritos em nossas inteligências e nossas atividades.\n\ngeografia, essa ciência que inspira tão bela devoção \ne em cujo nome foram sacrificadas tantas vítimas, \ntornou-se a filosofia da terra”.\n\nSAID, E. Cultura e política. São Paulo: Cia. das Letras, 1995.\n\nNo contexto histórico apresentado, a exaltação da ciência \ngeográfica decorre do seu uso para o(a)",
+      "options": [
+        "preservação cultural dos territórios ocupados.",
+        "formação humanitária da sociedade europeia.",
+        "catalogação de dados úteis aos propósitos colonialistas.",
+        "desenvolvimento \nde \ntécnicas \nmatemáticas \nde \nconstrução de cartas.",
+        "consolidação do conhecimento topográfico como\n\ncampo acadêmico."
+      ],
+      "correctOption": 3,
+      "explanation": "Origem: ENEM 2018 • Matemática • Questão #147"
+    },
+    {
+      "id": "enem-2017-d2-q164",
+      "statement": "Uma pessoa ganhou uma pulseira formada por \npérolas esféricas, na qual faltava uma das pérolas. A figura \nindica a posição em que estaria faltando esta pérola.\n\nEla levou a joia a um joalheiro que verificou que a \nmedida do diâmetro dessas pérolas era 4 milímetros. \nEm seu estoque, as pérolas do mesmo tipo e formato, \ndisponíveis para reposição, tinham diâmetros iguais a: \n4,025 mm; 4,100 mm; 3,970 mm; 4,080 mm e 3,099 mm.\n\nO joalheiro então colocou na pulseira a pérola cujo \ndiâmetro era o mais próximo do diâmetro das pérolas \noriginais.\n\npérola colocada na pulseira pelo joalheiro tem diâmetro, \nem milímetro, igual a",
+      "options": [
+        "3,099.",
+        "3,970.",
+        "4,025.",
+        "4,080.",
+        "4,100."
+      ],
+      "correctOption": 3,
+      "explanation": "Origem: ENEM 2017 • Matemática • Questão #164"
+    },
+    {
+      "id": "enem-2019-d2-q141",
+      "statement": "Uma pessoa, que perdeu um objeto pessoal quando \nvisitou uma cidade, pretende divulgar nos meios de \ncomunicação informações a respeito da perda desse \nobjeto e de seu contato para eventual devolução. \nNo entanto, ela lembra que, de acordo com o Art. 1 234 \ndo Código Civil, poderá ter que pagar pelas despesas \ndo transporte desse objeto até sua cidade e poderá ter \nque recompensar a pessoa que lhe restituir o objeto \nem, pelo menos, 5% do valor do objeto.\n\nEla sabe que o custo com transporte será de \num quinto do valor atual do objeto e, como ela tem \nmuito interesse em reavê-lo, pretende ofertar o maior \npercentual possível de recompensa, desde que o \ngasto total com as despesas não ultrapasse o valor \natual do objeto.\n\nNessas condições, o percentual sobre o valor do objeto, \ndado como recompensa, que ela deverá ofertar é igual a",
+      "options": [
+        "20%",
+        "25%",
+        "40%",
+        "60%",
+        "80%"
+      ],
+      "correctOption": 4,
+      "explanation": "Origem: ENEM 2019 • Matemática • Questão #141"
+    },
+    {
+      "id": "enem-2020-d2-q146",
+      "statement": "Para chegar à universidade, um estudante utiliza\n\num metrô e, depois, tem duas opções:\n\n• seguir num ônibus, percorrendo 2,0 km;\n\n• alugar uma bicicleta, ao lado da estação do metrô,\n\nseguindo 3,0 km pela ciclovia.\n\nO quadro fornece as velocidades médias do ônibus\n\ne da bicicleta, em km/h, no trajeto metrô−universidade.\n\nMT - 2° dia | Caderno 5 - AMARELO - Página 20\n\nDia da semana\nVelocidade média\n\nÔnibus (km/h)\nBicicleta (km/h)\n\nSegunda-feira\n9\n15\n\nTerça-feira\n20\n22\n\nQuarta-feira\n15\n24\n\nQuinta-feira\n12\n15\n\nSexta-feira\n10\n18\n\nSábado\n30\n16",
+      "options": [
+        "fim de poupar tempo no deslocamento para a \nuniversidade, em quais dias o aluno deve seguir pela \nciclovia?",
+        "Às segundas, quintas e sextas-feiras.",
+        "Às terças e quintas-feiras e aos sábados.",
+        "Às segundas, quartas e sextas-feiras.",
+        "Às terças, quartas e sextas-feiras."
+      ],
+      "correctOption": 2,
+      "explanation": "Origem: ENEM 2020 • Matemática • Questão #146"
+    },
+    {
+      "id": "enem-2013-d2-q145",
+      "statement": "Num parque aquático existe uma piscina infantil na \nforma de um cilindro circular reto, de 1 m de profundidade \ne volume igual a 12 m3, cuja base tem raio R e centro O. \nDeseja-se construir uma ilha de lazer seca no interior \ndessa piscina, também na forma de um cilindro circular \nreto, cuja base estará no fundo da piscina e com centro \nda base coincidindo com o centro do fundo da piscina, \nconforme a figura. O raio da ilha de lazer será r. Deseja-se \nque após a construção dessa ilha, o espaço destinado à \nágua na piscina tenha um volume de, no mínimo, 4 m3.\n\nMT - 2º dia | Caderno 5 - AMARELO - Página 22\n\n2013\n\nIlha de lazer\n\nR\n\nO\n\nr\n\nPiscina\n\nConsidere 3 como valor aproximado para p.\n\nPara satisfazer as condições dadas, o raio máximo da ilha \nde lazer r, em metros, estará mais próximo de",
+      "options": [
+        "1,6.",
+        "1,7.",
+        "2,0.",
+        "3,0.",
+        "3,8."
+      ],
+      "correctOption": 0,
+      "explanation": "Origem: ENEM 2013 • Matemática • Questão #145"
+    },
+    {
+      "id": "enem-2013-d2-q156",
+      "statement": "As torres Puerta de Europa são duas torres inclinadas \numa contra a outra, construídas numa avenida de Madri, \nna Espanha. A inclinação das torres é de 15° com a vertical \ne elas têm, cada uma, uma altura de 114 m (a altura é \nindicada na figura como o segmento AB). Estas torres são \num bom exemplo de um prisma oblíquo de base quadrada \ne uma delas pode ser observada na imagem.\n\nDisponível em: www.flickr.com. Acesso em: 27 mar. 2012.\n\nUtilizando 0,26 como valor aproximado para a \ntangente de 15° e duas casas decimais nas operações, \ndescobre-se que a área da base desse prédio ocupa \nna avenida um espaço",
+      "options": [
+        "menor que 100 m2.",
+        "entre 100 m2 e 300 m2.",
+        "entre 300 m2 e 500 m2.",
+        "entre 500 m2 e 700 m2.",
+        "maior que 700 m2."
+      ],
+      "correctOption": 4,
+      "explanation": "Origem: ENEM 2013 • Matemática • Questão #156"
+    },
+    {
+      "id": "enem-2016-d2-q149",
+      "statement": "Cinco marcas de pão integral apresentam as \nseguintes concentrações de fibras (massa de fibra por \nmassa de pão):\n\n• Marca A: 2 g de fibras a cada 50 g de pão;\n• Marca B: 5 g de fibras a cada 40 g de pão;\n• Marca C: 5 g de fibras a cada 100 g de pão;\n• Marca D: 6 g de fibras a cada 90 g de pão;\n• Marca E: 7 g de fibras a cada 70 g de pão.\nRecomenda-se a ingestão do pão que possui a maior \nconcentração de fibras.\n\nDisponível em: www.blog.saude.gov.br. Acesso em: 25 fev. 2013.\n\nmarca a ser escolhida é",
+      "options": [
+        ".",
+        "B.",
+        "C.",
+        "D.",
+        "E.\n\n*AMAR25DOM22*"
+      ],
+      "correctOption": 1,
+      "explanation": "Origem: ENEM 2016 • Matemática • Questão #149"
+    },
+    {
+      "id": "enem-2019-d2-q155",
+      "statement": "Três sócios resolveram fundar uma fábrica. \nO investimento inicial foi de R$ 1 000 000,00. \nE, independentemente do valor que cada um investiu \nnesse primeiro momento, resolveram considerar que cada \num deles contribuiu com um terço do investimento inicial.\n\nAlgum tempo depois, um quarto sócio entrou para \na sociedade, e os quatro, juntos, investiram mais \nR$ 800 000,00 na fábrica. Cada um deles contribuiu \ncom um quarto desse valor. Quando venderam a fábrica, \nnenhum outro investimento havia sido feito. Os sócios \ndecidiram então dividir o montante de R$ 1 800 000,00 \nobtido com a venda, de modo proporcional à quantia \ntotal investida por cada sócio.\n\nQuais os valores mais próximos, em porcentagens, \ncorrespondentes às parcelas financeiras que cada um \ndos três sócios iniciais e o quarto sócio, respectivamente, \nreceberam?",
+      "options": [
+        "29,60 e 11,11.",
+        "28,70 e 13,89.",
+        "25,00 e 25,00.",
+        "18,52 e 11,11.",
+        "12,96 e 13,89."
+      ],
+      "correctOption": 0,
+      "explanation": "Origem: ENEM 2019 • Matemática • Questão #155"
+    },
+    {
+      "id": "enem-2020-d2-q166",
+      "statement": "O artista gráfico holandês Maurits Cornelius Escher \ncriou belíssimas obras nas quais as imagens se repetiam, \ncom diferentes tamanhos, induzindo ao raciocínio de \nrepetição infinita das imagens. Inspirado por ele, um artista \nfez um rascunho de uma obra na qual propunha a ideia \nde construção de uma sequência de infinitos quadrados, \ncada vez menores, uns sob os outros, conforme indicado \nna figura.\n\nP\n\nR\n\n1\n\nS\n\nT\n\n1/2\n\n1/4\n\nO quadrado PRST, com lado de medida 1, é o ponto \nde partida. O segundo quadrado é construído sob ele \ntomando-se o ponto médio da base do quadrado anterior \ne criando-se um novo quadrado, cujo lado corresponde \nà metade dessa base. Essa sequência de construção se \nrepete recursivamente.\nQual é a medida do lado do centésimo quadrado \nconstruído de acordo com esse padrão?\n\n100",
+      "options": [
+        "1\n\n\u001b\u001a\n\n2\n\n99",
+        "1\n\n\u001b\u001a\n\n2\n\n97",
+        "1\n\n\u001b\u001a\n\n2\n\n98\n\n\u0019",
+        "1\n\n\u001b\u001a\n\n2\n\n99\n\n\u0019",
+        "1\n\n\u001b\u001a\n\n2"
+      ],
+      "correctOption": 1,
+      "explanation": "Origem: ENEM 2020 • Matemática • Questão #166"
+    },
+    {
+      "id": "enem-2014-d2-q145",
+      "statement": "Conforme regulamento da Agência Nacional de \nAviação Civil (Anac), o passageiro que embarcar em voo \ndoméstico poderá transportar bagagem de mão, contudo \na soma das dimensões da bagagem (altura + comprimento \n+ largura) não pode ser superior a 115 cm.\n\nfigura mostra a planificação de uma caixa que tem a \nforma de um paralelepípedo retângulo.\n\n24 cm\n\n90 cm\n\nx\n\nO maior valor possível para x, em centímetros, para que \na caixa permaneça dentro dos padrões permitidos pela \nAnac é",
+      "options": [
+        "25.",
+        "33.",
+        "42.",
+        "45.",
+        "49."
+      ],
+      "correctOption": 1,
+      "explanation": "Origem: ENEM 2014 • Matemática • Questão #145"
+    },
+    {
+      "id": "enem-2009-d2-q161",
+      "statement": "Uma cooperativa de colheita propôs a um \nfazendeiro um contrato de trabalho nos seguintes termos: a \ncooperativa forneceria 12 trabalhadores e 4 máquinas, em \num regime de trabalho de 6 horas diárias, capazes de \ncolher 20 hectares de milho por dia, ao custo de R$ 10,00 \npor trabalhador por dia de trabalho, e R$ 1.000,00 pelo \naluguel diário de cada máquina. O fazendeiro argumentou \nque fecharia contrato se a cooperativa colhesse 180 \nhectares de milho em 6 dias, com gasto inferior a \nR$ 25.000,00. \n \nPara atender às exigências do fazendeiro e supondo que o \nritmo dos trabalhadores e das máquinas seja constante, a \ncooperativa deveria",
+      "options": [
+        "manter sua proposta.",
+        "oferecer 4 máquinas a mais.",
+        "oferecer 6 trabalhadores a mais.",
+        "aumentar a jornada de trabalho para 9 horas diárias.",
+        "reduzir em R$ 400,00 o valor do aluguel diário de uma\n\nmáquina."
+      ],
+      "correctOption": 0,
+      "explanation": "Origem: ENEM 2009 • Matemática • Questão #161"
+    },
+    {
+      "id": "enem-2020-d2-q150",
+      "statement": "caixa-d’água de um edifício terá a forma de um \nparalelepípedo retângulo reto com volume igual a \n28 080 litros. Em uma maquete que representa o edifício, \na caixa-d’água tem dimensões 2 cm × 3,51 cm × 4 cm.\nDado: 1 dm³ = 1 L.\n\nA escala usada pelo arquiteto foi",
+      "options": [
+        "1 : 10",
+        "1 : 100",
+        "1 : 1 000",
+        "1 : 10 000",
+        "1 : 100 000"
+      ],
+      "correctOption": 1,
+      "explanation": "Origem: ENEM 2020 • Matemática • Questão #150"
+    },
+    {
+      "id": "enem-2019-d2-q169",
+      "statement": "Um mestre de obras deseja fazer uma laje com \nespessura de 5 cm utilizando concreto usinado, \nconforme as dimensões do projeto dadas na figura. \nO concreto para fazer a laje será fornecido por uma \nusina que utiliza caminhões com capacidades máximas \nde 2 m3, 5 m3 e 10 m3 de concreto.\n\n8 m\n\n1 m\n\n3 m\n2 m\n\n3 m\n\n5 m\n\n14 m\nQual a menor quantidade de caminhões, utilizando suas \ncapacidades máximas, que o mestre de obras deverá \npedir à usina de concreto para fazer a laje?",
+      "options": [
+        "Dez caminhões com capacidade máxima de 10 m3.",
+        "Cinco caminhões com capacidade máxima de 10 m3.",
+        "Um caminhão com capacidade máxima de 5 m3.",
+        "Dez caminhões com capacidade máxima de 2 m3.",
+        "Um caminhão com capacidade máxima de 2 m3."
+      ],
+      "correctOption": 2,
+      "explanation": "Origem: ENEM 2019 • Matemática • Questão #169"
+    },
+    {
+      "id": "enem-2024-d2-q138",
+      "statement": "Uma empresa de engenharia foi contratada para \nrealizar um serviço no valor de R$ 71 250,00. Os sócios da \nempresa decidiram que 40% desse valor seria destinado ao \npagamento de três engenheiros que gerenciaram o serviço. \nO pagamento para cada um deles será feito de forma \ndiretamente proporcional ao total de horas trabalhadas. \nO número de dias e o número de horas diárias \ntrabalhadas pelos engenheiros foram, respectivamente:\n\n• engenheiro I: 4 dias, numa jornada de 5 horas e \nmeia por dia;\n• engenheiro II: 5 dias, numa jornada de 4 horas por dia;\n• engenheiro III: 6 dias, numa jornada de 2 horas e \nmeia por dia.\n\nQual a maior diferença, em real, entre os valores recebidos \npor esse serviço entre dois desses engenheiros?",
+      "options": [
+        "1 000",
+        "1 500",
+        "3 500",
+        "3 800",
+        "5 250"
+      ],
+      "correctOption": 2,
+      "explanation": "Origem: ENEM 2024 • Matemática • Questão #138"
+    },
+    {
+      "id": "enem-2022-d2-q171",
+      "statement": "Em uma sala de cinema, para garantir que os espectadores vejam toda a imagem projetada na tela, a disposição \ndas poltronas deve obedecer à norma técnica da Associação Brasileira de Normas Técnicas (ABNT), que faz as \nseguintes indicações:\n\n• Distância mínima (Dmín) entre a tela de projeção e o encosto da poltrona da primeira fileira deve ser de, pelo \nmenos, 60% da largura (L) da tela.\n• Distância máxima (Dmáx) entre a tela de projeção e o encosto da poltrona da última fileira deve ser o dobro da \nlargura (L) da tela, sendo aceitável uma distância de até 2,9 vezes a largura (L) da tela.\nPara o espaçamento entre as fileiras de poltronas, é considerada a distância de 1 metro entre os encostos de \npoltronas em duas fileiras consecutivas.\n\nUma sala de cinema, cuja largura da tela mede 12 m, está montada em conformidade com as normas da ABNT e \ntem suas dimensões especificadas na figura.\n\nÁrea de instalação\nde novas poltronas\n\nD\n2,9L\naceitável=\n\nD\n2L\n=\nmáx\n\nD\n0,6L\nmín=\n\nL\nTela\n\nPretende-se ampliar essa sala, mantendo-se na mesma posição a tela e todas as poltronas já instaladas, \nampliando-se ao máximo a sala para os fundos (área de instalação de novas poltronas), respeitando-se o limite \naceitável da norma da ABNT. A intenção é aumentar, ao máximo, a quantidade de poltronas da sala, instalando-se \nnovas unidades, iguais às já instaladas.\nQuantas fileiras de poltronas a sala comportará após essa ampliação?",
+      "options": [
+        "26",
+        "27",
+        "28",
+        "29",
+        "35\n\n28 \nMT - 2° dia | Caderno 5 - AMARELO - 1ª Aplicação\n\nDisponível em: www.ctav.gov.br. Acesso em: 14 nov. 2013.\n\nFileira\n\n1 m\n1 m\n\nFileira\n\nFileira"
+      ],
+      "correctOption": 2,
+      "explanation": "Origem: ENEM 2022 • Matemática • Questão #171"
+    },
+    {
+      "id": "enem-2014-d2-q147",
+      "statement": "Uma organização não governamental divulgou um \nlevantamento de dados realizado em algumas cidades \nbrasileiras sobre saneamento básico. Os resultados \nindicam que somente 36% do esgoto gerado nessas \ncidades é tratado, o que mostra que 8 bilhões de litros de \nesgoto sem nenhum tratamento são lançados todos os \ndias nas águas.\n\nUma campanha para melhorar o saneamento básico \nnessas cidades tem como meta a redução da quantidade \nde esgoto lançado nas águas diariamente, sem \ntratamento, para 4 bilhões de litros nos próximos meses.\n\nSe o volume de esgoto gerado permanecer o mesmo e \na meta dessa campanha se concretizar, o percentual de \nesgoto tratado passará a ser",
+      "options": [
+        "72%",
+        "68%",
+        "64%",
+        "54%",
+        "18%"
+      ],
+      "correctOption": 0,
+      "explanation": "Origem: ENEM 2014 • Matemática • Questão #147"
+    },
+    {
+      "id": "enem-2011-d2-q177",
+      "statement": "resistência das vigas de dado comprimento é \ndiretamente proporcional à largura (b) e ao quadrado \nda altura (d), conforme a figura. A constante de \nproporcionalidade k varia de acordo com o material \nutilizado na sua construção.\n\nConsiderando-se S como a resistência, a representação \nalgébrica que exprime essa relação é",
+      "options": [
+        "ܵ\nൌ݇\nǤܾǤ݀",
+        "ܵ\nൌܾ\nǤ݀\nଶ",
+        "ൌ݇\nǤܾǤ݀\nଶ\n\nܵ",
+        "ܵ\nൌ\n\n௞Ǥ௕\n\nௗమ",
+        "ܵ\nൌ\n\n௞Ǥௗమ\n\n௕"
+      ],
+      "correctOption": 2,
+      "explanation": "Origem: ENEM 2011 • Matemática • Questão #177"
+    },
+    {
+      "id": "enem-2009-d2-q142",
+      "statement": "suspeita de que haveria uma relação causal \nentre tabagismo e câncer de pulmão foi levantada pela \nprimeira vez a partir de observações clínicas. Para testar \nessa possível associação, foram conduzidos inúmeros \nestudos epidemiológicos. Dentre esses, houve o estudo do \nnúmero de casos de câncer em relação ao número de \ncigarros consumidos por dia, cujos resultados são \nmostrados no gráfico a seguir.\n\nCenters for Disease Control and Prevention CDC-EIS\n\nSummer Course – 1992 (adaptado).\n\nDe acordo com as informações do gráfico,",
+      "options": [
+        "o consumo diário de cigarros e o número de casos de\n\ncâncer de pulmão são grandezas inversamente \nproporcionais.",
+        "o consumo diário de cigarros e o número de casos de\n\ncâncer de pulmão são grandezas que não se \nrelacionam.",
+        "o consumo diário de cigarros e o número de casos de\n\ncâncer \nde \npulmão \nsão \ngrandezas \ndiretamente \nproporcionais.",
+        "uma pessoa não fumante certamente nunca será\n\ndiagnosticada com câncer de pulmão.",
+        "o consumo diário de cigarros e o número de casos de\n\ncâncer \nde \npulmão \nsão \ngrandezas \nque \nestão \nrelacionadas, mas sem proporcionalidade."
+      ],
+      "correctOption": 3,
+      "explanation": "Origem: ENEM 2009 • Matemática • Questão #142"
+    },
+    {
+      "id": "enem-2021-d2-q179",
+      "statement": "Um segmento de reta está dividido em duas partes \n\u0005\b\u0002%\u0007\u0004%\u0004\u0007'\n\u0004\u0002?\n\u0007\n\b\u0002\n\n\b\u0005\u000f\u0004\u0002\u0004\u0002\n\u0004\u000f\u0004\u0002\n \n?\u0002%\b\u0007\b\u0002\n\u0010\b\u0002\u000f\b \u0002\n%\b\u0007\n \u0002\u0005\b\u0002\u0010\n \u0010\b\u0002\u0007\b\n\u0004\u0002\n\u0010\u0002\n\n\u0002\n \b\u0002%\b\u0007\n\u0002\n \n?\u0002%\b\u0007\b\u0002\b\u0002\noutra. Essa constante de proporcionalidade é comumente \n\u0007\n%\u0007\n \n\u0005\n\b\u000f\b\u0002%\n2\b\u00022\n\n\u0007\b\u0002J\u0007\nJ\b\u0002Ì$\u0002\n\u0002 \n\n\u0002#\b2\u0004\u0007\u0002Z\u0002\u000f\b\u000f\u0004\u0002%\n2\b\u0002\n \u00042\n'\n\u0004\u0002%\u0004 \u000e\n\u000e#\b\u0002\u000f\b\u0002\n\n\b'\n\u0004\u0002Ì2\u0002¸\u0002Ì\u0002»\u0002{(\n\n\u0012 \u000e\u0010\u0002\n\u0004\u0010\u0004\u0002\b\u0002%\u0004\n>\u0005\n\u000e\b\u0002Ì2, as potências superiores \n\u000f\n\u0002Ì\u0002%\u0004\u000f\n\u0010\u0002 \n\u0007\u0002\n@%\u0007\n \b \u0002\u000f\b\u0002P\u0004\u0007\u0010\b\u0002\u0002aÌ\u0002»\u0002b, em que a e b\n\n\u0004\u0002\u000e\u0005\n\u000e\u0007\u0004 \u0002%\u0004 \u000e\n\u000e#\u0004 $\u0002\n\u0004\u0010\u0004\u0002\b%\u0007\n \n\u0005\n\bdo no quadro.\n\nÌ2\nÌ3\nÌ4\nÌ5\nÌ6\nÌ7\n\nÌ + 1\n2Ì + 1\n3Ì + 2\n5Ì + 3\n8Ì + 5\n…\n\n\u0012\u0002%\u0004\n>\u0005\n\u000e\b\u0002Ì7, escrita na forma aÌ\u0002»\u0002b (a e b\u0002\u0002 \n\u0004\u0002\u000e\u0005\n\u000e\u0007\u0004 \u0002\npositivos), é",
+      "options": [
+        "\u0002 &Ì\u0002»\u0002",
+        "\u0002 ¼Ì + 2",
+        "\u0002Ì + 6",
+        "11Ì\u0002»\u0002¼",
+        "13Ì\u0002»\u0002³"
+      ],
+      "correctOption": 4,
+      "explanation": "Origem: ENEM 2021 • Matemática • Questão #179"
+    },
+    {
+      "id": "enem-2019-d2-q167",
+      "statement": "O Sistema Métrico Decimal é o mais utilizado \natualmente para medir comprimentos e distâncias. \nEm algumas atividades, porém, é possível observar \na utilização de diferentes unidades de medida. \nUm exemplo disso pode ser observado no quadro.\n\nUnidade\nEquivalência\n\nPolegada\n2,54 centímetros\n\nJarda\n3 pés\n\nJarda\n0,9144 metro\n\nAssim, um pé, em polegada, equivale a",
+      "options": [
+        "0,1200.",
+        "0,3048.",
+        "1,0800.",
+        "12,0000.",
+        "36,0000."
+      ],
+      "correctOption": 3,
+      "explanation": "Origem: ENEM 2019 • Matemática • Questão #167"
+    },
+    {
+      "id": "enem-2011-d2-q162",
+      "statement": "Uma pessoa aplicou certa quantia em ações. No \nprimeiro mês, ela perdeu 30% do total do investimento e, \nno segundo mês, recuperou 20% do que havia perdido. \nDepois desses dois meses, resolveu tirar o montante de \nR$ 3 800,00 gerado pela aplicação.\n\nquantia inicial que essa pessoa aplicou em ações \ncorresponde ao valor de",
+      "options": [
+        "R$ 4 222,22.",
+        "R$ 4 523,80.",
+        "R$ 5 000,00.",
+        "R$ 13 300,00.",
+        "R$ 17 100,00."
+      ],
+      "correctOption": 2,
+      "explanation": "Origem: ENEM 2011 • Matemática • Questão #162"
+    },
+    {
+      "id": "enem-2023-d2-q141",
+      "statement": "O calendário maia apresenta duas contagens \nsimultâneas de anos, o chamado ano Tzolkim, composto \npor 260 dias e que determinava o calendário religioso, \ne o ano Haab, composto por 365 dias e que determinava o \ncalendário agrícola. Um historiador encontrou evidências \nde que gerações de uma mesma família governaram certa \ncomunidade maia pelo período de 20 ciclos, sendo cada \nciclo formado por 52 anos Haab.\n\nDisponível em: www.suapesquisa.com. Acesso em: 20 ago. 2014.\n\nDe acordo com as informações fornecidas, durante \nquantos anos Tzolkim aquela comunidade maia foi \ngovernada por tal família?",
+      "options": [
+        "741",
+        "1 040",
+        "1 460",
+        "2 100",
+        "5 200"
+      ],
+      "correctOption": 2,
+      "explanation": "Origem: ENEM 2023 • Matemática • Questão #141"
+    },
+    {
+      "id": "enem-2013-d2-q155",
+      "statement": "Numa escola com 1 200 alunos foi realizada uma \npesquisa sobre o conhecimento desses em duas línguas \nestrangeiras, inglês e espanhol.\n\nNessa pesquisa constatou-se que 600 alunos falam \ninglês, 500 falam espanhol e 300 não falam qualquer um \ndesses idiomas.\n\nEscolhendo-se um aluno dessa escola ao acaso e \nsabendo-se que ele não fala inglês, qual a probabilidade \nde que esse aluno fale espanhol?",
+      "options": [
+        "1\n\n2",
+        "5\n8",
+        "1\n4",
+        "5\n6",
+        "5\n14"
+      ],
+      "correctOption": 0,
+      "explanation": "Origem: ENEM 2013 • Matemática • Questão #155"
+    },
+    {
+      "id": "enem-2013-d2-q165",
+      "statement": "temperatura T de um forno (em graus centígrados) \né reduzida por um sistema a partir do instante de seu \ndesligamento (t = 0) e varia de acordo com a expressão\n\nT(t) = − t 2\n\n4\n + 400, com t em minutos. Por motivos\n\nde segurança, a trava do forno só é liberada para \nabertura quando o forno atinge a temperatura de 39 ºC.\n\nQual o tempo mínimo de espera, em minutos, após se \ndesligar o forno, para que a porta possa ser aberta?",
+      "options": [
+        "19,0",
+        "19,8",
+        "20,0",
+        "38,0",
+        "39,0\n\n2013"
+      ],
+      "correctOption": 3,
+      "explanation": "Origem: ENEM 2013 • Matemática • Questão #165"
+    },
+    {
+      "id": "enem-2019-d2-q176",
+      "statement": "Em um determinado ano, os computadores da receita federal de um país identificaram como inconsistentes \n20% das declarações de imposto de renda que lhe foram encaminhadas. Uma declaração é classificada como \ninconsistente quando apresenta algum tipo de erro ou conflito nas informações prestadas. Essas declarações \nconsideradas inconsistentes foram analisadas pelos auditores, que constataram que 25% delas eram fraudulentas. \nConstatou-se ainda que, dentre as declarações que não apresentaram inconsistências, 6,25% eram fraudulentas.\n\nQual é a probabilidade de, nesse ano, a declaração de um contribuinte ser considerada inconsistente, dado que \nela era fraudulenta?",
+      "options": [
+        "0,0500",
+        "0,1000",
+        "0,1125",
+        "0,3125",
+        "0,5000"
+      ],
+      "correctOption": 4,
+      "explanation": "Origem: ENEM 2019 • Matemática • Questão #176"
+    },
+    {
+      "id": "enem-2011-d2-q168",
+      "statement": "É possível usar água ou comida para atrair as aves \ne observá-las. Muitas pessoas costumam usar água \ncom açúcar, por exemplo, para atrair beija-flores. Mas \né importante saber que, na hora de fazer a mistura, \nvocê deve sempre usar uma parte de açúcar para cinco \npartes de água. Além disso, em dias quentes, precisa \ntrocar a água de duas a três vezes, pois com o calor ela \npode fermentar e, se for ingerida pela ave, pode deixá-\nla doente. O excesso de açúcar, ao cristalizar, também \npode manter o bico da ave fechado, impedindo-a de se \nalimentar. Isso pode até matá-la.\n\nCiência Hoje das Crianças. FNDE; Instituto Ciência Hoje, ano 19, n. 166, mar. 1996.\n\nPretende-se encher completamente um copo com \na mistura para atrair beija-flores. O copo tem formato \ncilíndrico, e suas medidas são 10 cm de altura e 4 cm de \ndiâmetro. A quantidade de água que deve ser utilizada \nna mistura é cerca de (utilize p = 3)",
+      "options": [
+        "20 mL.",
+        "24 mL.",
+        "100 mL.",
+        "120 mL.",
+        "600 mL."
+      ],
+      "correctOption": 2,
+      "explanation": "Origem: ENEM 2011 • Matemática • Questão #168"
+    },
+    {
+      "id": "enem-2009-d2-q163",
+      "statement": "Segundo as regras da Fórmula 1, o peso mínimo \ndo carro, de tanque vazio, com o piloto, é de 605 kg, e a \ngasolina deve ter densidade entre 725 e 780 gramas por \nlitro. Entre os circuitos nos quais ocorrem competições \ndessa categoria, o mais longo é Spa-Francorchamps, na \nBélgica, cujo traçado tem 7 km de extensão. O consumo \nmédio de um carro da Fórmula 1 é de 75 litros para cada \n100 km. \n \nSuponha que um piloto de uma equipe específica, que \nutiliza um tipo de gasolina com densidade de 750 g/L, \nesteja no circuito de Spa-Francorchamps, parado no box \npara reabastecimento. Caso ele pretenda dar mais 16 \nvoltas, ao ser liberado para retornar à pista, seu carro \ndeverá pesar, no mínimo,",
+      "options": [
+        "617 kg.",
+        "668 kg.",
+        "680 kg.",
+        "689 kg.",
+        "717 kg."
+      ],
+      "correctOption": 1,
+      "explanation": "Origem: ENEM 2009 • Matemática • Questão #163"
+    },
+    {
+      "id": "enem-2012-d2-q160",
+      "statement": "Uma mãe recorreu à bula para verificar a dosagem \nde um remédio que precisava dar a seu filho. Na bula, \nrecomendava-se a seguinte dosagem: 5 gotas para cada \n2 kg de massa corporal a cada 8 horas.\n\nSe a mãe ministrou corretamente 30 gotas do remédio a \nseu filho a cada 8 horas, então a massa corporal dele é de",
+      "options": [
+        "12 kg.",
+        "16 kg.",
+        "24 kg.",
+        "36 kg.",
+        "75 kg."
+      ],
+      "correctOption": 0,
+      "explanation": "Origem: ENEM 2012 • Matemática • Questão #160"
+    },
+    {
+      "id": "enem-2014-d2-q180",
+      "statement": "Os vidros para veículos produzidos por certo fabricante \ntêm transparências entre 70% e 90%, dependendo do lote \nfabricado. Isso significa que, quando um feixe luminoso \nincide no vidro, uma parte entre 70% e 90% da luz \nconsegue atravessá-lo. Os veículos equipados com vidros \ndesse fabricante terão instaladas, nos vidros das portas, \npelículas protetoras cuja transparência, dependendo do \nlote fabricado, estará entre 50% e 70%. Considere que \numa porcentagem P da intensidade da luz, proveniente \nde uma fonte externa, atravessa o vidro e a película.\n\nDe acordo com as informações, o intervalo das \nporcentagens que representam a variação total possível \nde P é",
+      "options": [
+        "[35 ; 63].",
+        "[40 ; 63].",
+        "[50 ; 70].",
+        "[50 ; 90].",
+        "[70 ; 90].\n\nMT - 2º dia | Caderno 5 - AMARELO - Página 31\n\n2014\n\nTranscreva a sua Redação para a Folha de Redação.\n\n1\n\n2\n\n3\n\n4\n\n5\n\n6\n\nRASCUNHO\n\n7\n\n8\n\n9\n\nDA REDAÇÃO"
+      ],
+      "correctOption": 2,
+      "explanation": "Origem: ENEM 2014 • Matemática • Questão #180"
+    },
+    {
+      "id": "enem-2012-d2-q149",
+      "statement": "Para decorar a fachada de um edifício, um arquiteto \nprojetou a colocação de vitrais compostos de quadrados \nde lado medindo 1 m, conforme a figura a seguir.\n\nB\n\nC\n\nP\nQ\n\nNesta figura, os pontos A, B, C e D são pontos médios \ndos lados do quadrado e os segmentos AP e QC medem \n1/4 da medida do lado do quadrado. Para confeccionar \num vitral, são usados dois tipos de materiais: um para a \nparte sombreada da figura, que custa R$ 30,00 o m2, e \noutro para a parte mais clara (regiões ABPDA e BCDQB), \nque custa R$ 50,00 o m2.\n\nDe acordo com esses dados, qual é o custo dos materiais \nusados na fabricação de um vitral?",
+      "options": [
+        "R$ 22,50",
+        "R$ 35,00",
+        "R$ 40,00",
+        "R$ 42,50",
+        "R$ 45,00"
+      ],
+      "correctOption": 1,
+      "explanation": "Origem: ENEM 2012 • Matemática • Questão #149"
+    },
+    {
+      "id": "enem-2022-d2-q140",
+      "statement": "Em uma loja, o preço promocional de uma geladeira \né de R$ 1 000,00 para pagamento somente em dinheiro. \nSeu preço normal, fora da promoção, é 10% maior. Para \npagamento feito com o cartão de crédito da loja, é dado \num desconto de 2% sobre o preço normal.\n\nUma cliente decidiu comprar essa geladeira, optando \npelo pagamento com o cartão de crédito da loja. Ela \ncalculou que o valor a ser pago seria o preço promocional \nacrescido de 8%. Ao ser informada pela loja do valor a \npagar, segundo sua opção, percebeu uma diferença entre \nseu cálculo e o valor que lhe foi apresentado.\nO valor apresentado pela loja, comparado ao valor \ncalculado pela cliente, foi",
+      "options": [
+        "R$ 2,00 menor.",
+        "R$ 100,00 menor.",
+        "R$ 200,00 menor.",
+        "R$ 42,00 maior.",
+        "R$ 80,00 maior."
+      ],
+      "correctOption": 0,
+      "explanation": "Origem: ENEM 2022 • Matemática • Questão #140"
+    },
+    {
+      "id": "enem-2015-d2-q179",
+      "statement": "Uma fábrica de sorvetes utiliza embalagens \nplásticas no formato de paralelepípedo retangular reto. \nInternamente, a embalagem tem 10 cm de altura e \nbase de 20 cm por 10 cm. No processo de confecção \ndo sorvete, uma mistura é colocada na embalagem \nno estado líquido e, quando levada ao congelador, \ntem seu volume aumentado em 25%, ficando com \nconsistência cremosa.\n\nInicialmente é colocada na embalagem uma mistura \nsabor chocolate com volume de 1 000 cm3 e, após essa \nmistura ficar cremosa, será adicionada uma mistura \nsabor morango, de modo que, ao final do processo de \ncongelamento, a embalagem fique completamente \npreenchida com sorvete, sem transbordar.\n\nO volume máximo, em cm³, da mistura sabor morango \nque deverá ser colocado na embalagem é",
+      "options": [
+        "450.",
+        "500.",
+        "600.",
+        "750.",
+        "1 000."
+      ],
+      "correctOption": 1,
+      "explanation": "Origem: ENEM 2015 • Matemática • Questão #179"
+    },
+    {
+      "id": "enem-2009-d2-q160",
+      "statement": "Suponha que a etapa final de uma gincana escolar \nconsista em um desafio de conhecimentos. Cada equipe \nescolheria 10 alunos para realizar uma prova objetiva, e a \npontuação da equipe seria dada pela mediana das notas \nobtidas pelos alunos. As provas valiam, no máximo, \n10 pontos cada. Ao final, a vencedora foi a equipe Ômega, \ncom 7,8 pontos, seguida pela equipe Delta, com \n7,6 pontos. Um dos alunos da equipe Gama, a qual ficou \nna terceira e última colocação, não pôde comparecer, \ntendo recebido nota zero na prova. As notas obtidas pelos \n10 alunos da equipe Gama foram 10; 6,5; 8; 10; 7; 6,5; 7; \n8; 6; 0. \n \nSe o aluno da equipe Gama que faltou tivesse \ncomparecido, essa equipe",
+      "options": [
+        "teria a pontuação igual a 6,5 se ele obtivesse nota 0.",
+        "seria a vencedora se ele obtivesse nota 10.",
+        "seria a segunda colocada se ele obtivesse nota 8.",
+        "permaneceria na terceira posição, independentemente\n\nda nota obtida pelo aluno.",
+        "empataria com a equipe Ômega na primeira colocação\n\nse o aluno obtivesse nota 9."
+      ],
+      "correctOption": 3,
+      "explanation": "Origem: ENEM 2009 • Matemática • Questão #160"
+    },
+    {
+      "id": "enem-2009-d2-q165",
+      "statement": "Rotas aéreas são como pontes que ligam cidades, \nestados ou países. O mapa a seguir mostra os estados \nbrasileiros e a localização de algumas capitais identificadas \npelos números. Considere que a direção seguida por um \navião AI que partiu de Brasília – DF, sem escalas, para \nBelém, no Pará, seja um segmento de reta com \nextremidades em DF e em 4.\n\nSIQUEIRA, S. Brasil Regiões. Disponível em: www.santiagosiqueira.pro.br.\n\nAcesso em: 28 jul. 2009 (adaptado).\n\nSuponha que um passageiro de nome Carlos pegou um \navião AII, que seguiu a direção que forma um ângulo de \n135o graus no sentido horário com a rota Brasília – Belém \ne pousou em alguma das capitais brasileiras. Ao \ndesembarcar, Carlos fez uma conexão e embarcou em um \navião AIII, que seguiu a direção que forma um ângulo reto, \nno sentido anti-horário, com a direção seguida pelo avião \nAII ao partir de Brasília-DF. Considerando que a direção \nseguida por um avião é sempre dada pela semirreta com \norigem na cidade de partida e que passa pela cidade \ndestino do avião, pela descrição dada, o passageiro Carlos \nfez uma conexão em",
+      "options": [
+        "Belo Horizonte, e em seguida embarcou para Curitiba.",
+        "Belo Horizonte, e em seguida embarcou para\n\nSalvador.",
+        "Boa Vista, e em seguida embarcou para Porto Velho.",
+        "Goiânia, e em seguida embarcou para o Rio de\n\nJaneiro.",
+        "Goiânia, e em seguida embarcou para Manaus."
+      ],
+      "correctOption": 0,
+      "explanation": "Origem: ENEM 2009 • Matemática • Questão #165"
+    },
+    {
+      "id": "enem-2012-d2-q162",
+      "statement": "O losango representado na Figura 1 foi formado pela \nunião dos centros das quatro circunferências tangentes, \nde raios de mesma medida.\n\nFigura 1\n\nDobrando-se o raio de duas das circunferências centradas \nem vértices opostos do losango e ainda mantendo-se \na configuração das tangências, obtém-se uma situação \nconforme ilustrada pela Figura 2.\n\nFigura 2\n\nO perímetro do losango da Figura 2, quando comparado \nao perímetro do losango da Figura 1, teve um aumento de",
+      "options": [
+        "300%.",
+        "200%.",
+        "150%.",
+        "100%.",
+        "50%."
+      ],
+      "correctOption": 4,
+      "explanation": "Origem: ENEM 2012 • Matemática • Questão #162"
+    },
+    {
+      "id": "enem-2018-d2-q155",
+      "statement": "Figura 1\n\nDisponível em: www.thehenryford.org. Acesso em: 3 maio 2018.\n\nFigura 2\n\nDisponível em: www.abc.net.au. Acesso em: 3 maio 2018.\n\nEsse ônibus relaciona-se ao ato praticado, em 1955, \npor Rosa Parks, apresentada em fotografia ao lado de \nMartin Luther King. O veículo alcançou o estatuto de obra \nmuseológica por simbolizar o(a)",
+      "options": [
+        "impacto do medo da corrida armamentista.",
+        "democratização do acesso à escola pública.",
+        "preconceito de gênero no transporte coletivo.",
+        "deflagração do movimento por igualdade civil.",
+        "eclosão da rebeldia no comportamento juvenil."
+      ],
+      "correctOption": 4,
+      "explanation": "Origem: ENEM 2018 • Matemática • Questão #155"
+    },
+    {
+      "id": "enem-2013-d2-q154",
+      "statement": "As projeções para a produção de arroz no período \nde 2012 - 2021, em uma determinada região produtora, \napontam para uma perspectiva de crescimento constante \nda produção anual. O quadro apresenta a quantidade de \narroz, em toneladas, que será produzida nos primeiros \nanos desse período, de acordo com essa projeção.\n\nAno\nProjeção da produção (t)\n\n2012\n50,25\n\n2013\n51,50\n\n2014\n52,75\n\n2015\n54,00\n\nquantidade total de arroz, em toneladas, que deverá ser \nproduzida no período de 2012 a 2021 será de",
+      "options": [
+        "497,25.",
+        "500,85.",
+        "502,87.",
+        "558,75.",
+        "563,25."
+      ],
+      "correctOption": 3,
+      "explanation": "Origem: ENEM 2013 • Matemática • Questão #154"
+    },
+    {
+      "id": "enem-2017-d2-q176",
+      "statement": "Igreja de São Francisco de Assis, obra arquitetônica modernista de Oscar Niemeyer, localizada na Lagoa da Pampulha, \nem Belo Horizonte, possui abóbadas parabólicas. A seta na Figura 1 ilustra uma das abóbadas na entrada principal \nda capela. A Figura 2 fornece uma vista frontal desta abóbada, com medidas hipotéticas para simplificar os cálculos.\n\nH metros\n\nFigura 1\nFigura 2\n\nQual a medida da altura H, em metro, indicada na Figura 2?",
+      "options": [
+        "16\n3",
+        "31\n5",
+        "25\n4",
+        "25\n3",
+        "75\n2"
+      ],
+      "correctOption": 3,
+      "explanation": "Origem: ENEM 2017 • Matemática • Questão #176"
+    },
+    {
+      "id": "enem-2013-d2-q172",
+      "statement": "O dono de um sítio pretende colocar uma haste \nde sustentação para melhor firmar dois postes de \ncomprimentos iguais a 6 m e 4 m. A figura representa \na situação real na qual os postes são descritos pelos \nsegmentos AC e BD e a haste é representada pelo \nsegmento EF, todos perpendiculares ao solo, que é \nindicado pelo segmento de reta AB. Os segmentos AD e \nBC representam cabos de aço que serão instalados.\n\nD\n\nC\n\n4\nE\n\n6",
+      "options": [
+        "F",
+        "2013\n\nQual deve ser o valor do comprimento da haste EF?\n\nA 1 m\n\nB 2 m",
+        "2,4 m",
+        "3 m",
+        "2 6 m"
+      ],
+      "correctOption": 2,
+      "explanation": "Origem: ENEM 2013 • Matemática • Questão #172"
+    },
+    {
+      "id": "enem-2013-d2-q159",
+      "statement": "Uma torneira não foi fechada corretamente e ficou \npingando, da meia-noite às seis horas da manhã, com a \nfrequência de uma gota a cada três segundos. Sabe-se \nque cada gota d’agua tem volume de 0,2 mL.\nQual foi o valor mais aproximado do total de água \ndesperdiçada nesse período, em litros?",
+      "options": [
+        "0,2",
+        "1,2",
+        "1,4",
+        "12,9",
+        "64,8"
+      ],
+      "correctOption": 2,
+      "explanation": "Origem: ENEM 2013 • Matemática • Questão #159"
+    },
+    {
+      "id": "enem-2017-d2-q136",
+      "statement": "Os congestionamentos de trânsito constituem um \nproblema que aflige, todos os dias, milhares de motoristas \nbrasileiros. O gráfico ilustra a situação, representando, ao \nlongo de um intervalo definido de tempo, a variação da \nvelocidade de um veículo durante um congestionamento.\n\nVelocidade\n\nTempo (min)\n0\n2\n4\n6\n8\n10\n\nQuantos minutos o veículo permaneceu imóvel ao longo \ndo intervalo de tempo total analisado?",
+      "options": [
+        "4",
+        "3",
+        "2",
+        "1",
+        "0"
+      ],
+      "correctOption": 2,
+      "explanation": "Origem: ENEM 2017 • Matemática • Questão #136"
+    }
+  ]
+}

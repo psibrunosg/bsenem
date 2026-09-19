@@ -153,10 +153,11 @@ def extract_questions_from_pdf(
         if not statement:
             statement = f"Questão {current_q_num:02d} — ENEM {year}"
             
-        # Get answer from gabarito
+        # Gabarito: sem resposta confirmada a questão fica marcada como inválida
+        # (correct_option = -1) em vez de "chutar" A e virar um erro silencioso.
         ans_key = f"{current_q_num}-{current_lang}" if current_lang and f"{current_q_num}-{current_lang}" in gabarito else current_q_num
-        ans_letter = gabarito.get(ans_key, "A")
-        correct_opt = LETTER_TO_INDEX.get(ans_letter, 0)
+        ans_letter = gabarito.get(ans_key)
+        correct_opt = LETTER_TO_INDEX.get(ans_letter, -1) if ans_letter else -1
         
         q_id = f"enem-{year}-d{day}-q{current_q_num:03d}"
         if current_lang:
@@ -264,7 +265,35 @@ def extract_questions_from_pdf(
                             current_images.append(rel_path)
 
     finalize_question()
-    return questions_data
+    return _renumber_day2(questions_data, gabarito, year, day)
+
+
+def _renumber_day2(
+    questions: List[Dict[str, Any]],
+    gabarito: Dict[Any, str],
+    year: int,
+    day: int
+) -> List[Dict[str, Any]]:
+    """Alguns cadernos do 2º dia (ex.: 2018) numeram as questões de 1 a 90.
+
+    O gabarito oficial usa 91 a 180, então sem o deslocamento a resposta e a
+    área da questão saem erradas.
+    """
+    if day != 2 or not questions:
+        return questions
+    if max(q["original_number"] for q in questions) > 90:
+        return questions
+
+    for q in questions:
+        number = q["original_number"] + 90
+        q["original_number"] = number
+        q["id"] = f"enem-{year}-d{day}-q{number:03d}"
+        if q.get("language"):
+            q["id"] += f"-{q['language']}"
+        q["area"] = get_question_area(year, day, number)
+        ans_letter = gabarito.get(number)
+        q["correct_option"] = LETTER_TO_INDEX.get(ans_letter, -1) if ans_letter else -1
+    return questions
 
 def process_year(year: int, base_pdf_dir: str = "data/enem/pdfs", images_dir: str = "data/enem/images", conn = None) -> int:
     year_dir = os.path.join(base_pdf_dir, str(year))

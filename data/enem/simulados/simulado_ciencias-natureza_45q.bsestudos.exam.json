@@ -1,0 +1,594 @@
+{
+  "schema": "bsestudos.exam.v1",
+  "id": "simulado-ciencias-natureza-0020d066",
+  "title": "Simulado — Ciências da Natureza (45 Questões)",
+  "durationMinutes": 135,
+  "subject": "Ciências da Natureza",
+  "questions": [
+    {
+      "id": "enem-2017-d2-q107",
+      "statement": "Os medicamentos são rotineiramente utilizados pelo \nser humano com o intuito de diminuir ou, por muitas vezes, \ncurar possíveis transtornos de saúde. Os antibióticos são \ngrupos de fármacos inseridos no tratamento de doenças \ncausadas por bactérias.\n\nNa terapêutica das doenças mencionadas, alguns desses \nfármacos atuam",
+      "options": [
+        "ativando o sistema imunológico do hospedeiro.",
+        "interferindo na cascata bioquímica da inflamação.",
+        "removendo as toxinas sintetizadas pelas bactérias.",
+        "combatendo as células hospedeiras das bactérias.",
+        "danificando estruturas específicas da célula bacteriana.\n\n*DO0525AM7*"
+      ],
+      "correctOption": 2,
+      "explanation": "Origem: ENEM 2017 • Ciências da Natureza • Questão #107"
+    },
+    {
+      "id": "enem-2013-d1-q054",
+      "statement": "O uso de embalagens plásticas descartáveis \nvem crescendo em todo o mundo, juntamente com \no problema ambiental gerado por seu descarte \ninapropriado. O politereftalato de etileno (PET), \ncuja estrutura é mostrada, tem sido muito utilizado \nna indústria de refrigerantes e pode ser reciclado \ne reutilizado. Uma das opções possíveis envolve a \nprodução de matérias-primas, como o etilenoglicol \n(1,2-etanodiol), a partir de objetos compostos de PET \npós-consumo.\n\nO\nO\n\nHO\nC\nC O CH2 CH2 O\nH\n\nn\n\nDisponível em: www.abipet.org.br. Acesso em: 27 fev. 2012 (adaptado).\n\nCom base nas informações do texto, uma alternativa para \na obtenção de etilenoglicol a partir do PET é a",
+      "options": [
+        "solubilização dos objetos.",
+        "combustão dos objetos.",
+        "trituração dos objetos.",
+        "hidrólise dos objetos.",
+        "fusão dos objetos."
+      ],
+      "correctOption": 3,
+      "explanation": "Origem: ENEM 2013 • Ciências da Natureza • Questão #54"
+    },
+    {
+      "id": "enem-2023-d2-q092",
+      "statement": "Informações digitais — dados — são gravadas em discos ópticos, como CD e DVD, na forma de cavidades \nmicroscópicas. A gravação e a leitura óptica dessas informações são realizadas por um laser (fonte de luz monocromática). \nQuanto menores as dimensões dessas cavidades, mais dados são armazenados na mesma área do disco. O fator limitante \npara a leitura de dados é o espalhamento da luz pelo efeito de difração, fenômeno que ocorre quando a luz atravessa um \nobstáculo com dimensões da ordem de seu comprimento de onda. Essa limitação motivou o desenvolvimento de lasers \ncom emissão em menores comprimentos de onda, possibilitando armazenar e ler dados em cavidades cada vez menores.\nEm qual região espectral se situa o comprimento de onda do laser que otimiza o armazenamento e a leitura de dados \nem discos de uma mesma área?",
+      "options": [
+        "Violeta.",
+        "Azul.",
+        "Verde.",
+        "Vermelho.",
+        "Infravermelho."
+      ],
+      "correctOption": 0,
+      "explanation": "Origem: ENEM 2023 • Ciências da Natureza • Questão #92"
+    },
+    {
+      "id": "enem-2015-d1-q082",
+      "statement": "Em um experimento, um professor levou para a \nsala de aula um saco de arroz, um pedaço de madeira \ntriangular e uma barra de ferro cilíndrica e homogênea. \nEle propôs que fizessem a medição da massa da barra \nutilizando esses objetos. Para isso, os alunos fizeram \nmarcações na barra, dividindo-a em oito partes iguais, e \nem seguida apoiaram-na sobre a base triangular, com o \nsaco de arroz pendurado em uma de suas extremidades, \naté atingir a situação de equilíbrio.\n\nArroz\n5,00 kg\n\nNessa situação, qual foi a massa da barra obtida pelos \nalunos?",
+      "options": [
+        "3,00 kg",
+        "3,75 kg",
+        "5,00 kg",
+        "6,00 kg",
+        "15,00 kg"
+      ],
+      "correctOption": 1,
+      "explanation": "Origem: ENEM 2015 • Ciências da Natureza • Questão #82"
+    },
+    {
+      "id": "enem-2019-d2-q095",
+      "statement": "As redes de alta tensão para transmissão de energia \nelétrica geram campo magnético variável o suficiente \npara induzir corrente elétrica no arame das cercas. \nTanto \nos \nanimais \nquanto \nos \nfuncionários \ndas \npropriedades rurais ou das concessionárias de energia \ndevem ter muito cuidado ao se aproximarem de uma \ncerca quando esta estiver próxima a uma rede de alta \ntensão, pois, se tocarem no arame da cerca, poderão \nsofrer choque elétrico.\n\nPara minimizar este tipo de problema, deve-se:",
+      "options": [
+        "Fazer o aterramento dos arames da cerca.",
+        "Acrescentar fusível de segurança na cerca.",
+        "Realizar o aterramento da rede de alta tensão.",
+        "Instalar fusível de segurança na rede de alta tensão.",
+        "Utilizar fios encapados com isolante na rede\n\nde alta tensão."
+      ],
+      "correctOption": 0,
+      "explanation": "Origem: ENEM 2019 • Ciências da Natureza • Questão #95"
+    },
+    {
+      "id": "enem-2009-d1-q075",
+      "statement": "O movimento migratório no Brasil é significativo, \nprincipalmente em função do volume de pessoas que saem \nde uma região com destino a outras regiões. Um desses \nmovimentos ficou famoso nos anos 80, quando muitos \nnordestinos deixaram a região Nordeste em direção ao \nSudeste do Brasil. Segundo os dados do IBGE de 2000, este \nprocesso continuou crescente no período seguinte, os anos \n90, com um acréscimo de 7,6% nas migrações deste mesmo \nfluxo. A Pesquisa de Padrão de Vida, feita pelo IBGE, em \n1996, aponta que, entre os nordestinos que chegam ao \nSudeste, 48,6% exercem trabalhos manuais não qualificados, \n18,5% são trabalhadores manuais qualificados, enquanto \n13,5%, embora não sejam trabalhadores manuais, se \nencontram em áreas que não exigem formação profissional. \nO mesmo estudo indica também que esses migrantes \npossuem, em média, condição de vida e nível educacional \nacima dos de seus conterrâneos e abaixo dos de cidadãos \nestáveis do Sudeste.\n\nDisponível em: http://www.ibge.gov.br. Acesso em: 30 jul. 2009 (adaptado).\n\nCom base nas informações contidas no texto, depreende-se \nque",
+      "options": [
+        "o processo migratório foi desencadeado por ações de\n\ngoverno para viabilizar a produção industrial no Sudeste.",
+        "os governos estaduais do Sudeste priorizaram a\n\nqualificação da mão-de-obra migrante.",
+        "o processo de migração para o Sudeste contribui para o\n\nfenômeno conhecido como inchaço urbano.",
+        "as migrações para o sudeste desencadearam a valorização\n\ndo trabalho manual, sobretudo na década de 80.",
+        "a falta de especialização dos migrantes é positiva para\n\nos empregadores, pois significa maior versatilidade \nprofissional."
+      ],
+      "correctOption": 2,
+      "explanation": "Origem: ENEM 2009 • Ciências da Natureza • Questão #75"
+    },
+    {
+      "id": "enem-2012-d1-q050",
+      "statement": "Os carrinhos de brinquedo podem ser de vários tipos. \nDentre eles, há os movidos a corda, em que uma mola \nem seu interior é comprimida quando a criança puxa o \ncarrinho para trás. Ao ser solto, o carrinho entra em \nmovimento enquanto a mola volta à sua forma inicial.\n\nO processo de conversão de energia que ocorre no \ncarrinho descrito também é verificado em",
+      "options": [
+        "um dínamo.",
+        "um freio de automóvel.",
+        "um motor a combustão.",
+        "uma usina hidroelétrica.",
+        "uma atiradeira (estilingue)."
+      ],
+      "correctOption": 4,
+      "explanation": "Origem: ENEM 2012 • Ciências da Natureza • Questão #50"
+    },
+    {
+      "id": "enem-2009-d1-q053",
+      "statement": "O ano de 1968 ficou conhecido pela efervescência \nsocial, tal como se pode comprovar pelo seguinte trecho, \nretirado de texto sobre propostas preliminares para uma \nrevolução cultural: “É preciso discutir em todos os lugares \ne com todos. O dever de ser responsável e pensar \npoliticamente diz respeito a todos, não é privilégio de uma \nminoria de iniciados. Não devemos nos surpreender com o \ncaos das ideias, pois essa é a condição para a emergência \nde novas ideias. Os pais do regime devem compreender \nque autonomia não é uma palavra vã; ela supõe a partilha \ndo poder, ou seja, a mudança de sua natureza. Que \nninguém tente rotular o movimento atual; ele não tem \netiquetas e não precisa delas”.\n\nJournal de la comune étudiante. Textes et\n\ndocuments. Paris: Seuil, 1969 (adaptado).\n\nOs movimentos sociais, que marcaram o ano de 1968,",
+      "options": [
+        "foram \nmanifestações \ndesprovidas \nde \nconotação \npolítica, que tinham o objetivo de questionar a rigidez \ndos padrões de comportamento social fundados em \nvalores tradicionais da moral religiosa.",
+        "restringiram-se \nàs \nsociedades \nde \npaíses \ndesenvolvidos, onde a industrialização avançada, a \npenetração dos meios de comunicação de massa e a \nalienação cultural que deles resultava eram mais \nevidentes.",
+        "resultaram no fortalecimento do conservadorismo\n\npolítico, social e religioso que prevaleceu nos países \nocidentais durante as décadas de 70 e 80.",
+        "tiveram baixa repercussão no plano político, apesar de\n\nseus fortes desdobramentos nos planos social e \ncultural, expressos na mudança de costumes e na \ncontracultura.",
+        "inspiraram futuras mobilizações, como o pacifismo, o\n\nambientalismo, a promoção da equidade de gêneros e \na defesa dos direitos das minorias."
+      ],
+      "correctOption": 2,
+      "explanation": "Origem: ENEM 2009 • Ciências da Natureza • Questão #53"
+    },
+    {
+      "id": "enem-2012-d1-q075",
+      "statement": "Em certos locais, larvas de moscas, criadas em arroz \ncozido, são utilizadas como iscas para pesca. Alguns \ncriadores, no entanto, acreditam que essas larvas surgem \nespontaneamente do arroz cozido, tal como preconizado \npela teoria da geração espontânea.\n\nEssa teoria começou a ser refutada pelos cientistas ainda \nno século XVII, a partir dos estudos de Redi e Pasteur, \nque mostraram experimentalmente que",
+      "options": [
+        "seres vivos podem ser criados em laboratório.",
+        "a vida se originou no planeta a partir de microrganismos.",
+        "o ser vivo é oriundo da reprodução de outro ser vivo\n\npré-existente.",
+        "seres \nvermiformes \ne \nmicrorganismos \nsão \nevolutivamente aparentados.",
+        "vermes e microrganismos são gerados pela matéria\n\nexistente nos cadáveres e nos caldos nutritivos, \nrespectivamente."
+      ],
+      "correctOption": 2,
+      "explanation": "Origem: ENEM 2012 • Ciências da Natureza • Questão #75"
+    },
+    {
+      "id": "enem-2012-d1-q074",
+      "statement": "característica que permite identificar um planeta \nno céu é o seu movimento relativo às estrelas fixas. \nSe observarmos a posição de um planeta por vários \ndias, verificaremos que sua posição em relação às \nestrelas fixas se modifica regularmente. A figura \ndestaca o movimento de Marte observado em \nintervalos de 10 dias, registrado da Terra.\n\n155º\n150º\n145º\n140º\n135º\n130º\n\n+20\n\nMARTE\n\n+10\n\nProjecto Física. Lisboa: Fundação Calouste Gulbenkian, 1980 (adaptado).\n\nQual a causa da forma da trajetória do planeta Marte \nregistrada na figura?",
+      "options": [
+        "maior velocidade orbital da Terra faz com que, em\n\ncertas épocas, ela ultrapasse Marte.",
+        "presença de outras estrelas faz com que\n\nsua trajetória seja desviada por meio da atração \ngravitacional.",
+        "órbita de Marte, em torno do Sol, possui uma forma\n\nelíptica mais acentuada que a dos demais planetas.",
+        "atração gravitacional entre a Terra e Marte faz com\n\nque este planeta apresente uma órbita irregular em \ntorno do Sol.",
+        "proximidade de Marte com Júpiter, em algumas\n\népocas do ano, faz com que a atração gravitacional \nde Júpiter interfira em seu movimento."
+      ],
+      "correctOption": 0,
+      "explanation": "Origem: ENEM 2012 • Ciências da Natureza • Questão #74"
+    },
+    {
+      "id": "enem-2009-d1-q082",
+      "statement": "Com a perspectiva do desaparecimento das \ngeleiras no Polo Norte, grandes reservas de petróleo e \nminérios, hoje inacessíveis, poderão ser exploradas. E já \natiçam a cobiça das potências.\n\nKOPP, D. Guerra Fria sobre o Ártico. Le monde diplomatique Brasil.\n\nSetembro, n. 2, 2007 (adaptado).\n\nNo cenário de que trata o texto, a exploração de jazidas de \npetróleo, bem como de minérios – diamante, ouro, prata, \ncobre, chumbo, zinco – torna-se atraente não só em \nfunção de seu formidável potencial, mas também por",
+      "options": [
+        "situar-se em uma zona geopolítica mais estável que o\n\nOriente Médio.",
+        "possibilitar o povoamento de uma região pouco\n\nhabitada, além de promover seu desenvolvimento \neconômico.",
+        "garantir, aos países em desenvolvimento, acesso a\n\nmatérias-primas \ne \nenergia, \nnecessárias \nao \ncrescimento econômico.",
+        "contribuir para a redução da poluição em áreas\n\nambientalmente já degradadas devido ao grande \nvolume da produção industrial, como ocorreu na \nEuropa.",
+        "promover a participação dos combustíveis fósseis na\n\nmatriz energética mundial, dominada, majoritariamente, \npelas fontes renováveis, de maior custo."
+      ],
+      "correctOption": 0,
+      "explanation": "Origem: ENEM 2009 • Ciências da Natureza • Questão #82"
+    },
+    {
+      "id": "enem-2016-d1-q073",
+      "statement": "Os ecossistemas degradados por intensa atividade \nagrícola apresentam, geralmente, diminuição de sua \ndiversidade e perda de sua estabilidade. Nesse contexto, \no uso integrado de árvores aos sistemas agrícolas \n(sistemas agroflorestais) pode cumprir um papel inovador \nao buscar a aceleração do processo sucessional e, ao \nmesmo tempo, uma produção escalonada e diversificada.\n\nDisponível em: saf.cnpgc.embrapa.br. Acesso em: 21 jan. 2012 (adaptado).\n\nEssa é uma estratégia de conciliação entre recuperação \nambiental e produção agrícola, pois",
+      "options": [
+        "substitui gradativamente as espécies cultiváveis por\n\nespécies arbóreas.",
+        "intensifica a fertilização do solo com o uso de técnicas\n\napropriadas e biocidas.",
+        "promove maior diversidade de vida no solo com o\n\naumento da matéria orgânica.",
+        "favorece a dispersão das sementes cultivadas pela\n\nfauna residente nas áreas florestais.",
+        "cria condições para o estabelecimento de espécies\n\npioneiras com a diminuição da insolação sobre o solo."
+      ],
+      "correctOption": 2,
+      "explanation": "Origem: ENEM 2016 • Ciências da Natureza • Questão #73"
+    },
+    {
+      "id": "enem-2015-d1-q064",
+      "statement": "Uma análise criteriosa do desempenho de Usain \nBolt na quebra do recorde mundial dos 100 metros rasos \nmostrou que, apesar de ser o último dos corredores \na reagir ao tiro e iniciar a corrida, seus primeiros \n30 metros foram os mais velozes já feitos em um recorde \nmundial, cruzando essa marca em 3,78 segundos. Até se \ncolocar com o corpo reto, foram 13 passadas, mostrando \nsua potência durante a aceleração, o momento mais \nimportante da corrida. Ao final desse percurso, Bolt havia \natingido a velocidade máxima de 12 m/s.\n\nDisponível em: http://esporte.uol.com.br. Acesso em: 5 ago. 2012 (adaptado).\n\nSupondo que a massa desse corredor seja igual a 90 kg, \no trabalho total realizado nas 13 primeiras passadas é \nmais próximo de:",
+      "options": [
+        "5,4×102 J.",
+        "6,5×103 J.",
+        "8,6×103 J.",
+        "1,3×104 J.",
+        "3,2×104 J."
+      ],
+      "correctOption": 1,
+      "explanation": "Origem: ENEM 2015 • Ciências da Natureza • Questão #64"
+    },
+    {
+      "id": "enem-2017-d2-q096",
+      "statement": "O biodiesel é um biocombustível obtido a partir de \nfontes renováveis, que surgiu como alternativa ao uso do \ndiesel de petróleo para motores de combustão interna. \nEle pode ser obtido pela reação entre triglicerídeos, \npresentes em óleos vegetais e gorduras animais, entre \noutros, e álcoois de baixa massa molar, como o metanol \nou etanol, na presença de um catalisador, de acordo com \na equação química:\n\nCH\n\nCH\n\nR1\nR1\n\n2\n\n3\n\nCH\n\nOH\n\n2\n\n+\n+\ncatalisador\n\nCH\n\nOH\n\n3 CH3OH\n\nR2\nR2\n\nCH\nCH\n\n3\n\nCH\n\nOH\n\n2\n\nCH\nCH\n\nR3\nR3\n\n2\n3\n\nfunção química presente no produto que representa o \nbiodiesel é",
+      "options": [
+        "éter.",
+        "éster.",
+        "álcool.",
+        "cetona.",
+        "ácido carboxílico.\n\n*DO0525AM3*"
+      ],
+      "correctOption": 3,
+      "explanation": "Origem: ENEM 2017 • Ciências da Natureza • Questão #96"
+    },
+    {
+      "id": "enem-2011-d1-q057",
+      "statement": "O controle biológico, técnica empregada no combate \na espécies que causam danos e prejuízos aos seres \nhumanos, é utilizado no combate à lagarta que se \nalimenta de folhas de algodoeiro. Algumas espécies \nde borboleta depositam seus ovos nessa cultura. A \nmicrovespa Trichogramma sp. introduz seus ovos nos \novos de outros insetos, incluindo os das borboletas \nem questão. Os embriões da vespa se alimentam do \nconteúdo desses ovos e impedem que as larvas de \nborboleta se desenvolvam. Assim, é possível reduzir a \ndensidade populacional das borboletas até níveis que \nnão prejudiquem a cultura.\n\ntécnica de controle biológico realizado pela microvespa \nTrichogramma sp. consiste na",
+      "options": [
+        "introdução de um parasita no ambiente da espécie\n\nque se deseja combater.",
+        "introdução de um gene letal nas borboletas, a fim de\n\ndiminuir o número de indivíduos.",
+        "competição entre a borboleta e a microvespa para a\n\nobtenção de recursos.",
+        "modificação do ambiente para selecionar indivíduos\n\nmelhor adaptados.",
+        "aplicação de inseticidas a fim de diminuir o número\n\nde indivíduos que se deseja combater."
+      ],
+      "correctOption": 0,
+      "explanation": "Origem: ENEM 2011 • Ciências da Natureza • Questão #57"
+    },
+    {
+      "id": "enem-2022-d2-q126",
+      "statement": "ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022\n\nUm pai faz um balanço utilizando dois segmentos \nparalelos e iguais da mesma corda para fixar uma tábua a \numa barra horizontal. Por segurança, opta por um tipo de \ncorda cuja tensão de ruptura seja 25% superior à tensão \nmáxima calculada nas seguintes condições:\n\n• O ângulo máximo atingido pelo balanço em relação \nà vertical é igual a 90°;\n• Os filhos utilizarão o balanço até que tenham uma \nmassa de 24 kg.\nAlém disso, ele aproxima o movimento do balanço \npara o movimento circular uniforme, considera que a \naceleração da gravidade é igual a 10\n2\nm\ns\n\ne despreza \nforças dissipativas.\n\nQual é a tensão de ruptura da corda escolhida?",
+      "options": [
+        "120 N",
+        "300 N",
+        "360 N",
+        "450 N",
+        "900 N"
+      ],
+      "correctOption": 3,
+      "explanation": "Origem: ENEM 2022 • Ciências da Natureza • Questão #126"
+    },
+    {
+      "id": "enem-2015-d1-q089",
+      "statement": "Euphorbia milii é uma planta ornamental amplamente disseminada no Brasil e conhecida como coroa-de-cristo. \nO estudo químico do látex dessa espécie forneceu o mais potente produto natural moluscicida, a miliamina L.\n\nMOREIRA, C. P. S.; ZANI, C. L.; ALVES, T. M. A. Atividade moluscicida do látex de Synadenium carinatum boiss. (Euphorbiaceae) sobre Biomphalaria glabrata\n\ne isolamento do constituinte majoritário. Revista Eletrônica de Farmácia, n. 3, 2010 (adaptado).\nO uso desse látex em água infestada por hospedeiros intermediários tem potencial para atuar no controle da",
+      "options": [
+        "dengue.",
+        "malária.",
+        "elefantíase.",
+        "ascaridíase.",
+        "esquistossomose."
+      ],
+      "correctOption": 3,
+      "explanation": "Origem: ENEM 2015 • Ciências da Natureza • Questão #89"
+    },
+    {
+      "id": "enem-2019-d2-q124",
+      "statement": "Em 1962, um jingle (vinheta musical) criado por Heitor Carillo fez tanto sucesso que extrapolou as fronteiras do \nrádio e chegou à televisão ilustrado por um desenho animado. Nele, uma pessoa respondia ao fantasma que batia \nem sua porta, personificando o “frio”, que não o deixaria entrar, pois não abriria a porta e compraria lãs e cobertores \npara aquecer sua casa. Apesar de memorável, tal comercial televisivo continha incorreções a respeito de conceitos \nfísicos relativos à calorimetria.\n\nDUARTE, M. Jingle é a alma do negócio: livro revela os bastidores das músicas de propagandas.\n\nDisponível em: https://guiadoscuriosos.uol.com.br. Acesso em: 24 abr. 2019 (adaptado).\nPara solucionar essas incorreções, deve-se associar à porta e aos cobertores, respectivamente, as funções de:",
+      "options": [
+        "Aquecer a casa e os corpos.",
+        "Evitar a entrada do frio na casa e nos corpos.",
+        "Minimizar a perda de calor pela casa e pelos corpos.",
+        "Diminuir a entrada do frio na casa e aquecer os corpos.",
+        "Aquecer a casa e reduzir a perda de calor pelos corpos."
+      ],
+      "correctOption": 2,
+      "explanation": "Origem: ENEM 2019 • Ciências da Natureza • Questão #124"
+    },
+    {
+      "id": "enem-2009-d1-q072",
+      "statement": "Populações inteiras, nas cidades e na zona rural,\n\ndispõem da parafernália digital global como fonte de\n\neducação e de formação cultural. Essa simultaneidade de\n\ncultura e informação eletrônica com as formas tradicionais\n\ne orais é um desafio que necessita ser discutido. A\n\nexposição, via mídia eletrônica, com estilos e valores\n\nculturais de outras sociedades, pode inspirar apreço, mas\n\ntambém distorções e ressentimentos. Tanto quanto há\n\nnecessidade de uma cultura tradicional de posse da\n\neducação letrada, também é necessário criar estratégias\n\nde alfabetização eletrônica, que passam a ser o grande\n\ncanal de informação das culturas segmentadas no interior\n\ndos grandes centros urbanos e das zonas rurais. Um novo\n\nmodelo de educação.\n\nBRIGAGÃO, C. E.; RODRIGUES, G. A globalização a olho nu: o\n\nmundo conectado. São Paulo: Moderna, 1998 (adaptado).\n\nCom base no texto e considerando os impactos culturais\n\nda difusão das tecnologias de informação no marco da\n\nglobalização, depreende-se que",
+      "options": [
+        "a ampla difusão das tecnologias de informação nos\n\ncentros urbanos e no meio rural suscita o contato entre\n\ndiferentes culturas e, ao mesmo tempo, traz a\n\nnecessidade de reformular as concepções tradicionais\n\nde educação.",
+        "a apropriação, por parte de um grupo social, de\n\nvalores e ideias de outras culturas para benefício\n\npróprio é fonte de conflitos e ressentimentos.",
+        "as mudanças sociais e culturais que acompanham o\n\nprocesso de globalização, ao mesmo tempo em que\n\nrefletem a preponderância da cultura urbana, tornam\n\nobsoletas as formas de educação tradicionais próprias\n\ndo meio rural.",
+        "as populações nos grandes centros urbanos e no meio\n\nrural recorrem aos instrumentos e tecnologias de\n\ninformação basicamente como meio de comunicação\n\nmútua, e não os veem como fontes de educação e\n\ncultura.",
+        "a intensificação do fluxo de comunicação por meios\n\neletrônicos, \ncaracterística \ndo \nprocesso \nde\n\nglobalização, está dissociada do desenvolvimento\n\nsocial e cultural que ocorre no meio rural."
+      ],
+      "correctOption": 0,
+      "explanation": "Origem: ENEM 2009 • Ciências da Natureza • Questão #72"
+    },
+    {
+      "id": "enem-2019-d2-q103",
+      "statement": "Os olhos humanos normalmente têm três tipos de \ncones responsáveis pela percepção das cores: um tipo \npara tons vermelhos, um para tons azuis e outro para tons \nverdes. As diversas cores que enxergamos são o resultado \nda percepção das cores básicas, como indica a figura.\n\nVermelho\nVermelho\nVerde\nAmarelo\n\nBranco\n\nMagenta\nMagenta\nCiano\n\nAzul\nAzul\n\nprotanopia é um tipo de daltonismo em que há \ndiminuição ou ausência de receptores da cor vermelha. \nConsidere um teste com dois voluntários: uma pessoa \ncom visão normal e outra com caso severo de protanopia. \nNesse teste, eles devem escrever a cor dos cartões que \nlhes são mostrados. São utilizadas as cores indicadas \nna figura.\n\nPara qual cartão os dois voluntários identificarão a \nmesma cor?",
+      "options": [
+        "Vermelho.",
+        "Magenta.",
+        "Amarelo.",
+        "Branco.",
+        "Azul."
+      ],
+      "correctOption": 4,
+      "explanation": "Origem: ENEM 2019 • Ciências da Natureza • Questão #103"
+    },
+    {
+      "id": "enem-2020-d2-q103",
+      "statement": "obtenção de óleos vegetais, de maneira geral, passa pelas etapas descritas no quadro.\n\nEtapa\nSubetapa\nO que ocorre\n\nSeleção dos grãos\nSeparação das sujidades mais grossas\n\nDescascamento\nSeparação de polpa e casca\n\nPreparação da\n\nmatéria-prima\n\nTrituração\nRompimento dos tecidos e das paredes das células\n\nCozimento\nAumento da permeabilidade das membranas celulares\n\nPrensagem\nRemoção parcial do óleo\n\nExtração do\n\nExtração\nObtenção do óleo bruto com hexano\n\nóleo bruto\n\nDestilação\nSeparação do óleo e do solvente\n\nQual das subetapas do processo é realizada em função apenas da polaridade das substâncias?",
+      "options": [
+        "Trituração.",
+        "Cozimento.",
+        "Prensagem.",
+        "Extração.",
+        "Destilação."
+      ],
+      "correctOption": 3,
+      "explanation": "Origem: ENEM 2020 • Ciências da Natureza • Questão #103"
+    },
+    {
+      "id": "enem-2019-d2-q121",
+      "statement": "eritropoetina (EPO) é um hormônio endógeno \nsecretado pelos rins que influencia a maturação dos \neritrócitos. Suas formas recombinantes, sintetizadas \nem laboratório, têm sido usadas por alguns atletas em \nesportes de resistência na busca por melhores resultados. \nNo entanto, a administração da EPO recombinante no \nesporte foi proibida pelo Comitê Olímpico Internacional \ne seu uso considerado doping.\n\nMARTELLI, A. Eritropoetina: síntese e liberação fisiológica e o uso de\n\nsua forma recombinante no esporte. Perspectivas Online:\n\nbiológicas & saúde, v. 10, n. 3, 2013 (adaptado).\n\nUma influência que esse doping poderá exercer na \nmelhoria da capacidade física desses atletas está \nrelacionada ao transporte de",
+      "options": [
+        "lipídios, para aumento do gasto calórico.",
+        "ATP, para aumento da síntese hormonal.",
+        "oxigênio, para aumento da produção de ATP.",
+        "proteínas, para aumento da massa muscular.",
+        "vitamina \nC, \npara \naumento \nda \nintegridade \ndos vasos sanguíneos."
+      ],
+      "correctOption": 2,
+      "explanation": "Origem: ENEM 2019 • Ciências da Natureza • Questão #121"
+    },
+    {
+      "id": "enem-2013-d1-q071",
+      "statement": "varfarina é um fármaco que diminui a agregação \nplaquetária, e por isso é utilizada como anticoagulante, \ndesde que esteja presente no plasma, com uma \nconcentração \nsuperior \na \n1,0 \nmg/L. \nEntretanto, \nconcentrações plasmáticas superiores a 4,0 mg/L \npodem \ndesencadear \nhemorragias. \nAs \nmoléculas \ndesse fármaco ficam retidas no espaço intravascular e \ndissolvidas exclusivamente no plasma, que representa \naproximadamente 60% do sangue em volume. \nEm um medicamento, a varfarina é administrada por \nvia intravenosa na forma de solução aquosa, com \nconcentração de 3,0 mg/mL. Um indivíduo adulto, com \nvolume sanguíneo total de 5,0 L, será submetido a um \ntratamento com solução injetável desse medicamento.\n\nQual é o máximo volume da solução do medicamento \nque pode ser administrado a esse indivíduo, pela via \nintravenosa, de maneira que não ocorram hemorragias \ncausadas pelo anticoagulante?",
+      "options": [
+        "1,0 mL",
+        "1,7 mL",
+        "2,7 mL",
+        "4,0 mL",
+        "6,7 mL"
+      ],
+      "correctOption": 3,
+      "explanation": "Origem: ENEM 2013 • Ciências da Natureza • Questão #71"
+    },
+    {
+      "id": "enem-2017-d2-q110",
+      "statement": "O fenômeno da piracema (subida do rio) é um \nimportante mecanismo que influencia a reprodução \nde algumas espécies de peixes, pois induz o processo \nque estimula a queima de gordura e ativa mecanismos \nhormonais complexos, preparando-os para a reprodução. \nIntervenções antrópicas nos ambientes aquáticos, como \na construção de barragens, interferem na reprodução \ndesses animais.\n\nMALTA, P. Impacto ambiental das barragens hidrelétricas.\n\nDisponível em: http://futurambiental.com.\n\nAcesso em: 10 maio 2013 (adaptado).\n\nEssa intervenção antrópica prejudica a piracema porque \nreduz o(a)",
+      "options": [
+        "percurso da migração.",
+        "longevidade dos indivíduos.",
+        "disponibilidade de alimentos.",
+        "período de migração da espécie.",
+        "número de espécies de peixes no local."
+      ],
+      "correctOption": 1,
+      "explanation": "Origem: ENEM 2017 • Ciências da Natureza • Questão #110"
+    },
+    {
+      "id": "enem-2022-d2-q094",
+      "statement": "ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022\n\nO protozoário Trypanosoma cruzi, causador da \ndoença de Chagas, pode ser a nova arma da medicina \ncontra o câncer. Pesquisadores brasileiros conseguiram \ncriar uma vacina contra a doença usando uma variação \ndo protozoário incapaz de desencadear a patologia (não \npatogênico). Para isso, realizaram uma modificação \ngenética criando um T. cruzi capaz de produzir também \nmoléculas fabricadas pelas células tumorais. Quando \no organismo inicia o combate ao protozoário, entra em \ncontato também com a molécula tumoral, que passa a ser \nvista também pelo sistema imune como um indicador de \ncélulas do protozoário. Depois de induzidas as defesas, \nestas passam a destruir todas as células com a molécula \ntumoral, como se lutassem apenas contra o protozoário.\n\nDisponível em: www.estadao.com.br. Acesso em: 1 mar. 2012 (adaptado).\n\nQual o mecanismo utilizado no experimento para enganar \nas células de defesa, fazendo com que ataquem o tumor?",
+      "options": [
+        "Autoimunidade.",
+        "Hipersensibilidade.",
+        "Ativação da resposta inata.",
+        "Apresentação de antígeno específico.",
+        "Desencadeamento de processo anti-inflamatório."
+      ],
+      "correctOption": 3,
+      "explanation": "Origem: ENEM 2022 • Ciências da Natureza • Questão #94"
+    },
+    {
+      "id": "enem-2015-d1-q087",
+      "statement": "O formato das células de organismos pluricelulares é \nextremamente variado. Existem células discoides, como \né o caso das hemácias, as que lembram uma estrela, \ncomo os neurônios, e ainda algumas alongadas, como as \nmusculares.\n\nEm um mesmo organismo, a diferenciação dessas células \nocorre por",
+      "options": [
+        "produzirem mutações específicas.",
+        "possuírem DNA mitocondrial diferentes.",
+        "apresentarem conjunto de genes distintos.",
+        "expressarem porções distintas do genoma.",
+        "terem um número distinto de cromossomos."
+      ],
+      "correctOption": 3,
+      "explanation": "Origem: ENEM 2015 • Ciências da Natureza • Questão #87"
+    },
+    {
+      "id": "enem-2016-d1-q054",
+      "statement": "Durante a primeira fase do projeto de uma usina de \ngeração de energia elétrica, os engenheiros da equipe \nde avaliação de impactos ambientais procuram saber se \nesse projeto está de acordo com as normas ambientais.\n\nnova planta estará localizada à beira de um rio, cuja \ntemperatura média da água é de 25 °C, e usará a sua \nágua somente para refrigeração. O projeto pretende que \na usina opere com 1,0 MW de potência elétrica e, em \nrazão de restrições técnicas, o dobro dessa potência será \ndissipada por seu sistema de arrefecimento, na forma de \ncalor. Para atender a resolução número 430, de 13 de \nmaio de 2011, do Conselho Nacional do Meio Ambiente, \ncom uma ampla margem de segurança, os engenheiros \ndeterminaram que a água só poderá ser devolvida ao rio \ncom um aumento de temperatura de, no máximo, 3 °C \nem relação à temperatura da água do rio captada pelo \nsistema de arrefecimento. Considere o calor específico da \nágua igual a 4 kJ/(kg °C).\n\nPara atender essa determinação, o valor mínimo do fluxo \nde água, em kg/s, para a refrigeração da usina deve ser \nmais próximo de",
+      "options": [
+        "42.",
+        "84.",
+        "167.",
+        "250.",
+        "500.\n\n*AZUL75SAB19*"
+      ],
+      "correctOption": 2,
+      "explanation": "Origem: ENEM 2016 • Ciências da Natureza • Questão #54"
+    },
+    {
+      "id": "enem-2017-d2-q123",
+      "statement": "epilação a laser (popularmente conhecida como \ndepilação a laser) consiste na aplicação de uma fonte de luz \npara aquecer e causar uma lesão localizada e controlada \nnos folículos capilares. Para evitar que outros tecidos sejam \ndanificados, selecionam-se comprimentos de onda que são \nabsorvidos pela melanina presente nos pelos, mas que não \nafetam a oxi-hemoglobina do sangue e a água dos tecidos \nda região em que o tratamento será aplicado. A figura \nmostra como é a absorção de diferentes comprimentos de \nonda pela melanina, oxi-hemoglobina e água.\n\n50,0\n\nMelanina\n\n37,5\n\nAbsorção (%)\n\n25,0\n\nOxi-hemoglobina\n\n12,5\n\nÁgua\n\n0\n400\n500\n600\n700\n800\n900\n1 000\n1 100\n\nComprimento de onda (nm)\n\nMACEDO, F. S.; MONTEIRO, E. O. Epilação com laser e luz intensa pulsada.\n\nRevista Brasileira de Medicina. Disponível em: www.moreirajr.com.br.\n\nAcesso em: 4 set. 2015 (adaptado).\n\nQual é o comprimento de onda, em nm, ideal para a \nepilação a laser?",
+      "options": [
+        "400",
+        "700",
+        "1 100",
+        "900",
+        "500"
+      ],
+      "correctOption": 2,
+      "explanation": "Origem: ENEM 2017 • Ciências da Natureza • Questão #123"
+    },
+    {
+      "id": "enem-2012-d1-q069",
+      "statement": "Uma dona de casa acidentalmente deixou cair na \ngeladeira a água proveniente do degelo de um peixe, \no que deixou um cheiro forte e desagradável dentro do \neletrodoméstico. Sabe-se que o odor característico de \npeixe se deve às aminas e que esses compostos se \ncomportam como bases.\n\nNa \ntabela \nsão \nlistadas \nas \nconcentrações \nhidrogeniônicas de alguns materiais encontrados na \ncozinha, que a dona de casa pensa em utilizar na limpeza \nda geladeira.\n\nMaterial\nConcentração de H3O+ (mol/L)\n\nSuco de limão\n10–2\n\nLeite\n 10–6\n\nVinagre\n10–3\n\nÁlcool\n10–8\n\nSabão\n 10–12\n\nCarbonato de sódio/\n\nbarrilha\n 10–12\n\nDentre os materiais listados, quais são apropriados para \namenizar esse odor?",
+      "options": [
+        "Álcool ou sabão.",
+        "Suco de limão ou álcool.",
+        "Suco de limão ou vinagre.",
+        "Suco de limão, leite ou sabão.",
+        "Sabão ou carbonato de sódio/barrilha."
+      ],
+      "correctOption": 2,
+      "explanation": "Origem: ENEM 2012 • Ciências da Natureza • Questão #69"
+    },
+    {
+      "id": "enem-2020-d2-q099",
+      "statement": "Embora a energia nuclear possa ser utilizada \npara fins pacíficos, recentes conflitos geopolíticos \ntêm trazido preocupações em várias partes do \nplaneta e estimulado discussões visando o combate \nao uso de armas de destruição em massa. Além do \npotencial destrutivo da bomba atômica, uma grande \npreocupação associada ao emprego desse artefato \nbélico é a poeira radioativa deixada após a bomba \nser detonada.\nQual é o processo envolvido na detonação dessa bomba?",
+      "options": [
+        "Fissão nuclear do urânio, provocada por nêutrons.",
+        "Fusão nuclear do hidrogênio, provocada por\n\nprótons.",
+        "Desintegração nuclear do plutônio, provocada por\n\nelétrons.",
+        "Associação em cadeia de chumbo, provocada por\n\npósitrons.",
+        "Decaimento radioativo do carbono, provocado por"
+      ],
+      "correctOption": 0,
+      "explanation": "Origem: ENEM 2020 • Ciências da Natureza • Questão #99"
+    },
+    {
+      "id": "enem-2011-d1-q055",
+      "statement": "No processo de industrialização da mamona, além \ndo óleo que contém vários ácidos graxos, é obtida uma \nmassa orgânica, conhecida como torta de mamona. \nEsta massa tem potencial para ser utilizada como \nfertilizante para o solo e como complemento em rações \nanimais devido a seu elevado valor proteico. No entanto, \na torta apresenta compostos tóxicos e alergênicos \ndiferentemente do óleo da mamona. Para que a torta \npossa ser utilizada na alimentação animal, é necessário \num processo de descontaminação.\n\nRevista Química Nova na Escola. V. 32, no 1, 2010 (adaptado).\n\ncaracterística presente nas substâncias tóxicas e \nalergênicas, que inviabiliza sua solubilização no óleo de \nmamona, é a",
+      "options": [
+        "lipofilia.",
+        "hidrofilia.",
+        "hipocromia.",
+        "cromatofilia.",
+        "hiperpolarização."
+      ],
+      "correctOption": 1,
+      "explanation": "Origem: ENEM 2011 • Ciências da Natureza • Questão #55"
+    },
+    {
+      "id": "enem-2012-d1-q059",
+      "statement": "No Japão, um movimento nacional para a promoção da \nluta contra o aquecimento global leva o slogan: 1 pessoa, \n1 dia, 1 kg de CO2 a menos! A ideia é cada pessoa reduzir \nem 1 kg a quantidade de CO2 emitida todo dia, por meio de \npequenos gestos ecológicos, como diminuir a queima de \ngás de cozinha.\n\nUm hamburguer ecológico? É pra já! Disponível em: http://lqes.iqm.unicamp.br.\n\nAcesso em: 24 fev. 2012 (adaptado).\n\nConsiderando um processo de combustão completa de \num gás de cozinha composto exclusivamente por butano \n(C4H10), a mínima quantidade desse gás que um japonês \ndeve deixar de queimar para atender à meta diária, \napenas com esse gesto, é de\n\nDados: CO2 (44 g/mol); C4H10 (58 g/mol)",
+      "options": [
+        "0,25 kg.",
+        "0,33 kg.",
+        "1,0 kg.",
+        "1,3 kg.",
+        "3,0 kg."
+      ],
+      "correctOption": 1,
+      "explanation": "Origem: ENEM 2012 • Ciências da Natureza • Questão #59"
+    },
+    {
+      "id": "enem-2016-d1-q047",
+      "statement": "usina de Itaipu é uma das maiores hidrelétricas \ndo mundo em geração de energia. Com 20 unidades \ngeradoras e 14 000 MW de potência total instalada, \napresenta uma queda de 118,4 m e vazão nominal de\n690 m3/s por unidade geradora. O cálculo da potência \nteórica leva em conta a altura da massa de água represada \npela barragem, a gravidade local (10 m/s2) e a densidade \nda água (1 000 kg/m3). A diferença entre a potência teórica \ne a instalada é a potência não aproveitada.\n\nDisponível em: www.itaipu.gov.br. Acesso em: 11 maio 2013 (adaptado).\n\nQual é a potência, em MW, não aproveitada em cada \nunidade geradora de Itaipu?",
+      "options": [
+        "0",
+        "1,18",
+        "116,96",
+        "816,96",
+        "13 183,04"
+      ],
+      "correctOption": 2,
+      "explanation": "Origem: ENEM 2016 • Ciências da Natureza • Questão #47"
+    },
+    {
+      "id": "enem-2015-d1-q057",
+      "statement": "O ar atmosférico pode ser utilizado para \narmazenar o excedente de energia gerada no \nsistema elétrico, diminuindo seu desperdício, por \nmeio do seguinte processo: água e gás carbônico \nsão inicialmente removidos do ar atmosférico e \na massa de ar restante é resfriada até −198 °C. \nPresente na proporção de 78% dessa massa de ar, o \nnitrogênio gasoso é liquefeito, ocupando um volume \n700 vezes menor. A energia excedente do sistema \nelétrico é utilizada nesse processo, sendo parcialmente \nrecuperada quando o nitrogênio líquido, exposto à \ntemperatura ambiente, entra em ebulição e se expande, \nfazendo girar turbinas que convertem energia mecânica \nem energia elétrica.\n\nMACHADO, R. Disponível em: www.correiobraziliense.com.br.\n\nAcesso em: 9 set. 2013 (adaptado).\n\nNo processo descrito, o excedente de energia elétrica é \narmazenado pela",
+      "options": [
+        "expansão do nitrogênio durante a ebulição.",
+        "absorção de calor pelo nitrogênio durante a ebulição.",
+        "realização de trabalho sobre o nitrogênio durante a\n\nliquefação.",
+        "retirada de água e gás carbônico da atmosfera antes\n\ndo resfriamento.",
+        "liberação de calor do nitrogênio para a vizinhança\n\ndurante a liquefação."
+      ],
+      "correctOption": 4,
+      "explanation": "Origem: ENEM 2015 • Ciências da Natureza • Questão #57"
+    },
+    {
+      "id": "enem-2016-d1-q059",
+      "statement": "Por apresentar significativa resistividade elétrica, o \ngrafite pode ser utilizado para simular resistores elétricos \nem circuitos desenhados no papel, com o uso de lápis e \nlapiseiras. Dependendo da espessura e do comprimento \ndas linhas desenhadas, é possível determinar a resistência \nelétrica de cada traçado produzido. No esquema foram \nutilizados três tipos de lápis diferentes (2H, HB e 6B) para \nefetuar três traçados distintos.\n\n2H\n\nHB\n\n6B\n\nMunido dessas informações, um estudante pegou \numa folha de papel e fez o desenho de um sorvete de \ncasquinha utilizando-se desses traçados. Os valores \nencontrados nesse experimento, para as resistências \nelétricas (R), medidas com o auxílio de um ohmímetro \nligado nas extremidades das resistências, são mostrados \nna figura. Verificou-se que os resistores obedeciam à \nLei de Ohm.\n\n5 kΩ",
+      "options": [
+        "A",
+        "20 kΩ\n\n10 kΩ\n10 kΩ",
+        "Na sequência, conectou o ohmímetro nos terminais \nA e B do desenho e, em seguida, conectou-o nos terminais \nB e C, anotando as leituras RAB e R­BC, respectivamente.\n\nR AB\nR BC\n\n, qual resultado o estudante\n\nAo estabelecer a razão\n\nobteve?\n\nA 1\n\n4\n\nB\n\n7\n\n10\n\nC\n\n27\n\n14",
+        "81\n\n4",
+        "81\n\n*AZUL75SAB21*"
+      ],
+      "correctOption": 1,
+      "explanation": "Origem: ENEM 2016 • Ciências da Natureza • Questão #59"
+    },
+    {
+      "id": "enem-2014-d1-q063",
+      "statement": "aplicação excessiva de fertilizantes nitrogenados na \nagricultura pode acarretar alterações no solo e na água \npelo acúmulo de compostos nitrogenados, principalmente \na forma mais oxidada, favorecendo a proliferação de \nalgas e plantas aquáticas e alterando o ciclo do nitrogênio, \nrepresentado no esquema. A espécie nitrogenada mais \noxidada tem sua quantidade controlada por ação de \nmicrorganismos que promovem a reação de redução \ndessa espécie, no processo denominado desnitrificação.\n\nN2\n\nI\n\nV\n\nNH3\n\n–\n\nNO3\n\nII\n\nIV\n\nIII\n\n–\n\nNH4\n\n+\nNO2\n\nO processo citado está representado na etapa",
+      "options": [
+        "I.",
+        "II.",
+        "III.",
+        "IV.",
+        "V."
+      ],
+      "correctOption": 1,
+      "explanation": "Origem: ENEM 2014 • Ciências da Natureza • Questão #63"
+    },
+    {
+      "id": "enem-2017-d2-q128",
+      "statement": "ozonólise, reação utilizada na indústria madeireira \npara a produção de papel, é também utilizada em \nescala de laboratório na síntese de aldeídos e cetonas. \nAs duplas ligações dos alcenos são clivadas pela oxidação \ncom o ozônio (O3), em presença de água e zinco metálico, \ne a reação produz aldeídos e/ou cetonas, dependendo do \ngrau de substituição da ligação dupla. Ligações duplas \ndissubstituídas geram cetonas, enquanto as ligações \nduplas terminais ou monossubstituídas dão origem a \naldeídos, como mostra o esquema.\n\nO\n\nO3 , H2O\n\nH\n\n+\n\nZn\n\nH\nH\n\nO\n\nBut-1-eno\nPropanal\nMetanal\n\nConsidere a ozonólise do composto 1-fenil-2-metilprop-1-eno:\n\n1-fenil-2-metilprop-1-eno\n\nMARTINO, A. Química, a ciência global. Goiânia: Editora W, 2014 (adaptado).\n\nQuais são os produtos formados nessa reação?",
+      "options": [
+        "Benzaldeído e propanona.",
+        "Propanal e benzaldeído.",
+        "2-fenil-etanal e metanal.",
+        "Benzeno e propanona.",
+        "Benzaldeído e etanal."
+      ],
+      "correctOption": 3,
+      "explanation": "Origem: ENEM 2017 • Ciências da Natureza • Questão #128"
+    },
+    {
+      "id": "enem-2009-d1-q080",
+      "statement": "O homem construiu sua história por meio do \nconstante processo de ocupação e transformação do \nespaço natural. Na verdade, o que variou, nos diversos \nmomentos da experiência humana, foi a intensidade dessa \nexploração.\n\nDisponível em: http://www.simposioreformaagraria.propp.ufu.br.\n\nAcesso em: 09 jul. 2009 (adaptado).\n\nUma das consequências que pode ser atribuída à \ncrescente intensificação da exploração de recursos \nnaturais, facilitada pelo desenvolvimento tecnológico ao \nlongo da história, é",
+      "options": [
+        "a diminuição do comércio entre países e regiões, que\n\nse tornaram autossuficientes na produção de bens e \nserviços.",
+        "a ocorrência de desastres ambientais de grandes\n\nproporções, como no caso de derramamento de óleo \npor navios petroleiros.",
+        "a melhora generalizada das condições de vida da\n\npopulação mundial, a partir da eliminação das \ndesigualdades econômicas na atualidade.",
+        "o desmatamento, que eliminou grandes extensões de\n\ndiversos biomas improdutivos, cujas áreas passaram a \nser ocupadas por centros industriais modernos.",
+        "o aumento demográfico mundial, sobretudo nos países\n\nmais desenvolvidos, que apresentam altas taxas de \ncrescimento vegetativo.\n\nCH – 1º dia \nCADERNO 1 – AZUL – PÁGINA 26 \nENEM 2009"
+      ],
+      "correctOption": 4,
+      "explanation": "Origem: ENEM 2009 • Ciências da Natureza • Questão #80"
+    },
+    {
+      "id": "enem-2019-d2-q099",
+      "statement": "poluição \nradioativa \ncompreende \nmais \nde \n200 nuclídeos, sendo que, do ponto de vista de impacto \nambiental, destacam-se o césio-137 e o estrôncio-90. \nA maior contribuição de radionuclídeos antropogênicos \nno meio marinho ocorreu durante as décadas de 1950 \ne 1960, como resultado dos testes nucleares realizados \nna atmosfera. O estrôncio-90 pode se acumular nos \norganismos vivos e em cadeias alimentares e, em \nrazão de sua semelhança química, pode participar no \nequilíbrio com carbonato e substituir o cálcio em diversos \nprocessos biológicos.\n\nFIGUEIRA, R. C. L.; CUNHA, I. I. L. A contaminação dos oceanos por\n\nradionuclídeos antropogênicos. Química Nova, n. 21, 1998 (adaptado).\n\nAo entrar numa cadeia alimentar da qual o homem \nfaz parte, em qual tecido do organismo humano o \nestrôncio-90 será acumulado predominantemente?",
+      "options": [
+        "Cartilaginoso.",
+        "Sanguíneo.",
+        "Muscular.",
+        "Nervoso.",
+        "Ósseo."
+      ],
+      "correctOption": 4,
+      "explanation": "Origem: ENEM 2019 • Ciências da Natureza • Questão #99"
+    },
+    {
+      "id": "enem-2012-d1-q081",
+      "statement": "Paleontólogos estudam fósseis e esqueletos de \ndinossauros para tentar explicar o desaparecimento \ndesses animais. Esses estudos permitem afirmar que \nesses animais foram extintos há cerca de 65 milhões \nde anos. Uma teoria aceita atualmente é a de que um \nasteroide colidiu com a Terra, formando uma densa \nnuvem de poeira na atmosfera.\n\nDe acordo com essa teoria, a extinção ocorreu em função \nde modificações no planeta que",
+      "options": [
+        "desestabilizaram o relógio biológico dos animais,\n\ncausando alterações no código genético.",
+        "reduziram a penetração da luz solar até a\n\nsuperfície \nda \nTerra, \ninterferindo \nno \nfluxo \nenergético das teias tróficas.",
+        "causaram uma série de intoxicações nos animais,\n\nprovocando a bioacumulação de partículas de poeira \nnos organismos.",
+        "resultaram na sedimentação das partículas de poeira\n\nlevantada com o impacto do meteoro, provocando o \ndesaparecimento de rios e lagos.",
+        "evitaram a precipitação de água até a superfície da\n\nTerra, causando uma grande seca que impediu a \nretroalimentação do ciclo hidrológico."
+      ],
+      "correctOption": 1,
+      "explanation": "Origem: ENEM 2012 • Ciências da Natureza • Questão #81"
+    },
+    {
+      "id": "enem-2022-d2-q091",
+      "statement": "Diversas substâncias são empregadas com a intenção \nde incrementar o desempenho esportivo de atletas de \nalto nível. O chamado doping sanguíneo, por exemplo, \npela utilização da eritropoietina, é proibido pelas principais \nfederações de esportes no mundo. A eritropoietina é um \nhormônio produzido pelos rins e fígado e sua principal ação \né regular o processo de eritropoiese. Seu uso administrado \nintravenosamente em quantidades superiores àquelas \npresentes naturalmente no organismo permite que o \nindivíduo aumente a sua capacidade de realização de \nexercícios físicos.\nEsse tipo de doping está diretamente relacionado ao \naumento da",
+      "options": [
+        "frequência cardíaca.",
+        "capacidade pulmonar.",
+        "massa muscular do indivíduo.",
+        "atividade anaeróbica da musculatura.",
+        "taxa de transporte de oxigênio pelo sangue."
+      ],
+      "correctOption": 4,
+      "explanation": "Origem: ENEM 2022 • Ciências da Natureza • Questão #91"
+    },
+    {
+      "id": "enem-2014-d1-q059",
+      "statement": "revelação das chapas de raios X gera uma solução \nque contém íons prata na forma de Ag(S2O3)2\n\n3−. Para evitar \na descarga desse metal no ambiente, a recuperação de \nprata metálica pode ser feita tratando eletroquimicamente \nessa solução com uma espécie adequada. O quadro \napresenta semirreações de redução de alguns íons \nmetálicos.\n\nSemirreação de redução\nE 0 (V)\n\n2− (aq) +0,02\n\nAg(S2O3)2\n\n3− (aq) + e− \n Ag (s) + 2 S2O3\n\nCu2+ (aq) + 2 e− \n Cu (s)\n+0,34\n\nPt2+ (aq) + 2 e− \n Pt (s)\n+1,20\n\nAl3+ (aq) + 3 e− \n Al (s)\n−1,66\n\nSn2+ (aq) + 2 e− \n Sn (s)\n−0,14\n\nZn2+ (aq) + 2 e− \n Zn (s)\n−0,76\n\nBENDASSOLLI, J. A. et al. Procedimentos para a recuperação de Ag de resíduos líquidos e\n\nsólidos. Química Nova, v. 26, n. 4, 2003 (adaptado).\n\nDas espécies apresentadas, a adequada para essa \nrecuperação é",
+      "options": [
+        "Cu (s).",
+        "Pt (s).",
+        "Al3+ (aq).",
+        "Sn (s).",
+        "Zn2+ (aq)."
+      ],
+      "correctOption": 4,
+      "explanation": "Origem: ENEM 2014 • Ciências da Natureza • Questão #59"
+    },
+    {
+      "id": "enem-2012-d1-q087",
+      "statement": "doença de Chagas afeta mais de oito milhões de \nbrasileiros, sendo comum em áreas rurais. É uma doença \ncausada pelo protozoário Trypanosoma cruzi e transmitida \npor insetos conhecidos como barbeiros ou chupanças.\n\nUma ação do homem sobre o meio ambiente que tem \ncontribuído para o aumento dessa doença é",
+      "options": [
+        "o consumo de carnes de animais silvestres que são\n\nhospedeiros do vetor da doença.",
+        "a utilização de adubos químicos na agricultura que\n\naceleram o ciclo reprodutivo do barbeiro.",
+        "a ausência de saneamento básico que favorece a\n\nproliferação do protozoário em regiões habitadas por \nhumanos.",
+        "a poluição dos rios e lagos com pesticidas que\n\nexterminam o predador das larvas do inseto \ntransmissor da doença.",
+        "o desmatamento que provoca a migração ou o\n\ndesaparecimento dos animais silvestres dos quais o \nbarbeiro se alimenta."
+      ],
+      "correctOption": 4,
+      "explanation": "Origem: ENEM 2012 • Ciências da Natureza • Questão #87"
+    },
+    {
+      "id": "enem-2024-d2-q112",
+      "statement": "ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024\n\nnimesulida é um fármaco pouco solúvel em água, \nutilizado como anti-inflamatório, analgésico e antitérmico. \nEssa substância pode ser convertida em uma espécie \neletricamente carregada, de maior solubilidade em água, \nmediante o tratamento com uma base de Brönsted-Lowry, \nisto é, uma espécie química capaz de capturar um próton \n(H+). Na figura são apresentados os grupamentos presentes \nna estrutura química da nimesulida.\n\nNimesulida\n\nGONÇALVES, A. A. et al. Contextualizando reações ácido-base\n\nde acordo com a teoria protônica de Brönsted-Lowry\n\nusando comprimidos de propranolol e nimesulida.\n\nQuímica Nova, n. 3, 2013 (adaptado).\n\nNa estrutura desse fármaco, o grupamento capaz de \nreagir com a base de Brönsted-Lowry é o grupo",
+      "options": [
+        "sulfonamida.",
+        "metila.",
+        "fenila.",
+        "nitro.",
+        "éter."
+      ],
+      "correctOption": 0,
+      "explanation": "Origem: ENEM 2024 • Ciências da Natureza • Questão #112"
+    },
+    {
+      "id": "enem-2013-d1-q086",
+      "statement": "As fraldas descartáveis que contêm o polímero poliacrilato de sódio (1) são mais eficientes na retenção de água \nque as fraldas de pano convencionais, constituídas de fibras de celulose (2).\n\nn\n\nO\n–\n+\n\nn\nO Na\n\nO\n\n(1)\n(2)\n\nmaior eficiência dessas fraldas descartáveis, em relação às de pano, deve-se às",
+      "options": [
+        "interações dipolo-dipolo mais fortes entre o poliacrilato e a água, em relação às ligações de hidrogênio entre a\n\ncelulose e as moléculas de água.",
+        "interações íon-íon mais fortes entre o poliacrilato e as moléculas de água, em relação às ligações de hidrogênio\n\nentre a celulose e as moléculas de água.",
+        "ligações de hidrogênio mais fortes entre o poliacrilato e a água, em relação às interações íon-dipolo entre a\n\ncelulose e as moléculas de água.",
+        "ligações de hidrogênio mais fortes entre o poliacrilato e as moléculas de água, em relação às interações dipolo\n\ninduzido-dipolo induzido entre a celulose e as moléculas de água.",
+        "interações íon-dipolo mais fortes entre o poliacrilato e as moléculas de água, em relação às ligações de hidrogênio\n\nentre a celulose e as moléculas de água.\n\n2013\n\nx B\n\nx\nx\nx\n\nk\n\nx\nx\nx\n\nmola\n\nx\nx\nx\n\nx\nx\nx\n\nisolante\n\nOH\n\nHO\n\nO\n\nOH\n\nCURI, D. Química Nova na Escola, São Paulo, n. 23, maio 2006 (adaptado)."
+      ],
+      "correctOption": 4,
+      "explanation": "Origem: ENEM 2013 • Ciências da Natureza • Questão #86"
+    }
+  ]
+}

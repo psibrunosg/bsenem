@@ -7,8 +7,7 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from scripts.db import init_db, get_question_stats
 from scripts.enem_downloader import download_year
 from scripts.enem_parser import process_year
-from scripts.generate_simulado import build_simulado
-import json
+from scripts.generate_simulado import PRESETS, build_simulado, write_simulado
 
 def run_pipeline(start_year: int = 2009, end_year: int = 2024):
     print("=" * 60)
@@ -64,17 +63,13 @@ def run_pipeline(start_year: int = 2009, end_year: int = 2024):
     print("\n" + "=" * 60)
     print("GERANDO SIMULADOS POR ÁREA TEMÁTICA")
     print("=" * 60)
-    areas = ["linguagens", "ciencias-humanas", "ciencias-natureza", "matematica", "geral"]
-    for area in areas:
+    for preset, config in PRESETS.items():
         try:
-            sim = build_simulado(conn, area=area, count=45)
-            fname = f"simulado_{area}_45q.bsestudos.exam.json"
-            fpath = os.path.join(simulados_dir, fname)
-            with open(fpath, "w", encoding="utf-8") as f:
-                json.dump(sim, f, ensure_ascii=False, indent=2)
-            print(f"Simulado gerado: {fname} ({len(sim['questions'])} questões sorteadas)")
+            sim = build_simulado(conn, area=preset, count=config["count"])
+            fpath = os.path.join(simulados_dir, f"simulado_{preset}_{len(sim['questions'])}q.bsestudos.exam.json")
+            write_simulado(sim, fpath)
         except Exception as e:
-            print(f"Aviso ao gerar simulado para {area}: {e}")
+            print(f"Aviso ao gerar simulado para {preset}: {e}")
             
     conn.close()
     print("\nPipeline finalizado com sucesso!")
