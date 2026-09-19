@@ -1,0 +1,711 @@
+{
+  "schema": "bsestudos.exam.v1",
+  "id": "simulado-matematica-424411db",
+  "title": "Simulado — Matemática (45 Questões)",
+  "durationMinutes": 135,
+  "subject": "Matemática",
+  "questions": [
+    {
+      "id": "enem-2009-d2-q171",
+      "statement": "A \npopulação \nbrasileira \nsabe, \npelo \nmenos \nintuitivamente, que a probabilidade de acertar as \nseis dezenas da mega sena não é zero, mas é quase. \nMesmo assim, milhões de pessoas são atraídas por essa \nloteria, especialmente quando o prêmio se acumula em \nvalores altos. Até junho de 2009, cada aposta de \nseis dezenas, pertencentes ao conjunto {01, 02, 03, ..., 59, \n60}, custava R$ 1,50.  \n\nDisponível em: www.caixa.gov.br. Acesso em: 7 jul. 2009. \n\nConsidere que uma pessoa decida apostar exatamente \nR$ 126,00 e que esteja mais interessada em acertar \napenas cinco das seis dezenas da mega sena, justamente \npela dificuldade desta última. Nesse caso, é melhor que \nessa pessoa faça 84 apostas de seis dezenas diferentes, \nque não tenham cinco números em comum, do que uma \núnica aposta com nove dezenas, porque a probabilidade \nde acertar a quina no segundo caso em relação ao \nprimeiro é, aproximadamente,",
+      "options": [
+        "2\n1\n1\nvez menor.",
+        "2\n1\n2\n vezes menor.",
+        "4 vezes menor.",
+        "9 vezes menor.",
+        "14 vezes menor."
+      ],
+      "correctOption": 2,
+      "explanation": "Origem: ENEM 2009 • Matemática • Questão #171"
+    },
+    {
+      "id": "enem-2021-d2-q173",
+      "statement": "Disponível em: www.oglobo.globo.com. Acesso em: 16 ago. 2013 (adaptado).\nOs valores de x e y\u0002\u000f\u0004\u0002\u000b\f\b\u000f\u0007\u0004\u0002\t\u001d\u0004$\u0002\u0007\n\t%\n\u001e\r\u000e#\b\u0010\n\u0005\r\n$\u0002\u000eJ\f\b\u000e\t\u0002\b",
+      "options": [
+        "10 e 80.",
+        "10 e 90.",
+        "20 e 60.",
+        "20 e 80.",
+        "25 e 50."
+      ],
+      "correctOption": 4,
+      "explanation": "Origem: ENEM 2021 • Matemática • Questão #173"
+    },
+    {
+      "id": "enem-2009-d2-q167",
+      "statement": "Na tabela, são apresentados dados da cotação \nmensal do ovo extra branco vendido no atacado, em \nBrasília, em reais, por caixa de 30 dúzias de ovos, em \nalguns meses dos anos 2007 e 2008. \n\n \n\n \n\nMês \nCotação \nAno \nOutubro \nR$ 83,00 \n2007 \nNovembro \nR$ 73,10 \n2007 \nDezembro \nR$ 81,60 \n2007 \nJaneiro \nR$ 82,00 \n2008 \nFevereiro \nR$ 85,30 \n2008 \nMarço \nR$ 84,00 \n2008 \nAbril \nR$ 84,60 \n2008 \n\n \n\n \nDe acordo com esses dados, o valor da mediana das \ncotações mensais do ovo extra branco nesse período era \nigual a",
+      "options": [
+        "R$ 73,10.",
+        "R$ 81,50.",
+        "R$ 82,00.",
+        "R$ 83,00.",
+        "R$ 85,30."
+      ],
+      "correctOption": 3,
+      "explanation": "Origem: ENEM 2009 • Matemática • Questão #167"
+    },
+    {
+      "id": "enem-2012-d2-q143",
+      "statement": "O gráfico mostra a variação da extensão média de \ngelo marítimo, em milhões de quilômetros quadrados, \ncomparando dados dos anos 1995, 1998, 2000, 2005 e 2007. \nOs dados correspondem aos meses de junho a setembro. \nO Ártico começa a recobrar o gelo quando termina o \nverão, em meados de setembro. O gelo do mar atua \ncomo o sistema de resfriamento da Terra, refletindo quase \ntoda a luz solar de volta ao espaço. Águas de oceanos \nescuros, por sua vez, absorvem a luz solar e reforçam \no aquecimento do Ártico, ocasionando derretimento \ncrescente do gelo.\n\n15\n\nExtensão de gelo marítimo\n\n12\n\n1995\n\n9\n\n1998\n\n2000\n\n2005\n\n6\n\n2007\n\n3\n\nJunho                             Julho\nAgosto                       Setembro\n\nDisponível em: http://sustentabilidade.allianz.com.br. Acesso em: fev. 2012 (adaptado).\n\nCom base no gráfico e nas informações do texto, é \npossível inferir que houve maior aquecimento global em",
+      "options": [
+        "1995.",
+        "1998.",
+        "2000.",
+        "2005.",
+        "2007.\n\nMT - 2º dia | Caderno 5 - AMARELO - Página 20"
+      ],
+      "correctOption": 4,
+      "explanation": "Origem: ENEM 2012 • Matemática • Questão #143",
+      "images": [
+        "assets/2012/dia-2/q143_fig1.png"
+      ]
+    },
+    {
+      "id": "enem-2012-d2-q169",
+      "statement": "Há, em virtude da demanda crescente de economia \nde água, equipamentos e utensílios como, por exemplo, \nas bacias sanitárias ecológicas, que utilizam 6 litros de \nágua por descarga em vez dos 15 litros utilizados por \nbacias sanitárias não ecológicas, conforme dados da \nAssociação Brasileira de Normas Técnicas (ABNT).\n\nQual será a economia diária de água obtida por meio da \nsubstituição de uma bacia sanitária não ecológica, que \ngasta cerca de 60 litros por dia com a descarga, por uma \nbacia sanitária ecológica?",
+      "options": [
+        "24 litros",
+        "36 litros",
+        "40 litros",
+        "42 litros",
+        "50 litros"
+      ],
+      "correctOption": 1,
+      "explanation": "Origem: ENEM 2012 • Matemática • Questão #169",
+      "images": [
+        "assets/2012/dia-2/q169_fig1.png"
+      ]
+    },
+    {
+      "id": "enem-2024-d2-q152",
+      "statement": "ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024ENEM2024\n\nAs receitas anuais obtidas por uma indústria no período \nde 2014 a 2021, em milhão de reais, foram registradas, por \npontos, em um gráfico. Nele, também está representada a \nreta que descreve a tendência de evolução das receitas. \nEssa reta pode ser utilizada para estimar as receitas dos \nanos seguintes.\n\nA estimativa da receita, em milhão de reais, dessa \nindústria, para o ano de 2026, obtida a partir dessa reta \nde tendência, é",
+      "options": [
+        "7.",
+        "8.",
+        "9.",
+        "10.",
+        "11."
+      ],
+      "correctOption": 1,
+      "explanation": "Origem: ENEM 2024 • Matemática • Questão #152",
+      "images": [
+        "assets/2024/dia-2/q152_1.png"
+      ]
+    },
+    {
+      "id": "enem-2016-d2-q179",
+      "statement": "Para garantir a segurança de um grande evento \npúblico que terá início às 4 h da tarde, um organizador \nprecisa monitorar a quantidade de pessoas presentes em \ncada instante. Para cada 2 000 pessoas se faz necessária \na presença de um policial. Além disso, estima-se uma \ndensidade de quatro pessoas por metro quadrado de área \nde terreno ocupado. Às 10 h da manhã, o organizador \nverifica que a área de terreno já ocupada equivale a um \nquadrado com lados medindo 500 m. Porém, nas horas \nseguintes, espera-se que o público aumente a uma taxa \nde 120 000 pessoas por hora até o início do evento, \nquando não será mais permitida a entrada de público.\nQuantos policiais serão necessários no início do evento \npara garantir a segurança?",
+      "options": [
+        "360",
+        "485",
+        "560",
+        "740",
+        "860"
+      ],
+      "correctOption": 4,
+      "explanation": "Origem: ENEM 2016 • Matemática • Questão #179",
+      "images": [
+        "assets/2016/dia-2/q179_fig1.png"
+      ]
+    },
+    {
+      "id": "enem-2015-d2-q171",
+      "statement": "O proprietário de um parque aquático deseja construir \numa piscina em suas dependências. A figura representa \na vista superior dessa piscina, que é formada por três \nsetores circulares idênticos, com ângulo central igual a \n60°. O raio R deve ser um número natural. \n\n60°\nR\n\nO parque aquático já conta com uma piscina em \nformato retangular com dimensões 50 m x 24 m.\n\nO proprietário quer que a área ocupada pela nova \npiscina seja menor que a ocupada pela piscina já existente.\n\nConsidere 3,0 como aproximação para π.\n\nO maior valor possível para R, em metros, deverá ser",
+      "options": [
+        "16.",
+        "28.",
+        "29.",
+        "31.",
+        "49."
+      ],
+      "correctOption": 1,
+      "explanation": "Origem: ENEM 2015 • Matemática • Questão #171",
+      "images": [
+        "assets/2015/dia-2/q171_fig1.png"
+      ]
+    },
+    {
+      "id": "enem-2013-d2-q144",
+      "statement": "Uma fábrica de fórmicas produz placas quadradas \nde lados de medida igual a y centímetros. Essas placas \nsão vendidas em caixas com N unidades e, na caixa, é \nespecificada a área máxima S que pode ser coberta pelas \nN placas.\n\nDevido a uma demanda do mercado por placas \nmaiores, a fábrica triplicou a medida dos lados de suas \nplacas e conseguiu reuni-las em uma nova caixa, de tal \nforma que a área coberta S não fosse alterada.\n\nA quantidade X, de placas do novo modelo, em cada nova \ncaixa será igual a:",
+      "options": [
+        "N\n\n9",
+        "N\n\n6",
+        "N\n\n3",
+        "3N",
+        "9N"
+      ],
+      "correctOption": 0,
+      "explanation": "Origem: ENEM 2013 • Matemática • Questão #144",
+      "images": [
+        "assets/2013/dia-2/q144_fig1.png"
+      ]
+    },
+    {
+      "id": "enem-2014-d2-q149",
+      "statement": "Boliche é um jogo em que se arremessa uma bola \nsobre uma pista para atingir dez pinos, dispostos em uma \nformação de base triangular, buscando derrubar o maior \nnúmero de pinos. A razão entre o total de vezes em que \no jogador derruba todos os pinos e o número de jogadas \ndetermina seu desempenho. \n\nEm uma disputa entre cinco jogadores, foram \nobtidos os seguintes resultados:\n\nJogador I – Derrubou todos os pinos 50 vezes em \n\n85 jogadas.\n\nJogador II – Derrubou todos os pinos 40 vezes em \n\n65 jogadas.\n\nJogador III – Derrubou todos os pinos 20 vezes em \n\n65 jogadas.\n\nJogador IV – Derrubou todos os pinos 30 vezes em \n\n40 jogadas.\n\nJogador V – Derrubou todos os pinos 48 vezes em \n\n90 jogadas.\n\nQual desses jogadores apresentou maior desempenho?",
+      "options": [
+        "I",
+        "II",
+        "III",
+        "IV",
+        "V"
+      ],
+      "correctOption": 3,
+      "explanation": "Origem: ENEM 2014 • Matemática • Questão #149",
+      "images": [
+        "assets/2014/dia-2/q149_fig1.png"
+      ]
+    },
+    {
+      "id": "enem-2016-d2-q156",
+      "statement": "Uma pessoa comercializa picolés. No segundo dia de \ncerto evento ela comprou 4 caixas de picolés, pagando \nR$ 16,00 a caixa com 20 picolés para revendê-los no \nevento. No dia anterior, ela havia comprado a mesma \nquantidade de picolés, pagando a mesma quantia, e \nobtendo um lucro de R$ 40,00 (obtido exclusivamente \npela diferença entre o valor de venda e o de compra dos \npicolés) com a venda de todos os picolés que possuía.\n\nPesquisando o perfil do público que estará presente \nno evento, a pessoa avalia que será possível obter um \nlucro 20% maior do que o obtido com a venda no primeiro \ndia do evento.\n\nPara atingir seu objetivo, e supondo que todos os picolés \ndisponíveis foram vendidos no segundo dia, o valor de \nvenda de cada picolé, no segundo dia, deve ser",
+      "options": [
+        "R$ 0,96.",
+        "R$ 1,00.",
+        "R$ 1,40.",
+        "R$ 1,50.",
+        "R$ 1,56.\n\nMT - 2º dia | Caderno 5 - AMARELO - Página 24"
+      ],
+      "correctOption": 2,
+      "explanation": "Origem: ENEM 2016 • Matemática • Questão #156",
+      "images": [
+        "assets/2016/dia-2/q156_fig1.png"
+      ]
+    },
+    {
+      "id": "enem-2015-d2-q168",
+      "statement": "Devido ao aumento do fluxo de passageiros, uma \nempresa de transporte coletivo urbano está fazendo \nestudos para a implantação de um novo ponto de parada \nem uma determinada rota. A figura mostra o percurso, \nindicado pelas setas, realizado por um ônibus nessa rota \ne a localização de dois de seus atuais pontos de parada, \nrepresentados por P e Q. \n\ny\n\nRua C\n\nQ\n\n320\n\nRua B\n\n20\n\nRua A\n\nP\n\n0\n30\n550\n\nx\n\nOs estudos indicam que o novo ponto T deverá \nser instalado, nesse percurso, entre as paradas \njá existentes P e Q, de modo que as distâncias \npercorridas pelo ônibus entre os pontos P e T e entre \nos pontos T e Q sejam iguais.\n\nDe acordo com os dados, as coordenadas do novo ponto \nde parada são",
+      "options": [
+        "(290 ; 20).",
+        "(410 ; 0).",
+        "(410 ; 20).",
+        "(440 ; 0).",
+        "(440 ; 20)."
+      ],
+      "correctOption": 4,
+      "explanation": "Origem: ENEM 2015 • Matemática • Questão #168",
+      "images": [
+        "assets/2015/dia-2/q168_fig1.png"
+      ]
+    },
+    {
+      "id": "enem-2020-d2-q139",
+      "statement": "A miniatura desse troféu deverá ser instalada \nno interior de uma caixa de vidro, em formato de \nparalelepípedo reto-retângulo, cujas dimensões internas \nde sua base estão indicadas na Figura 2, de modo que \na base do troféu seja colada na base da caixa e distante \ndas paredes laterais da caixa de vidro em pelo menos 1 cm. \nDeve ainda haver uma distância de exatos 2 cm entre o \ntopo da esfera e a tampa dessa caixa de vidro. Nessas \ncondições deseja-se fazer a maior miniatura possível.\nA medida da altura, em centímetro, dessa caixa de vidro \ndeverá ser igual a",
+      "options": [
+        "12.",
+        "14.",
+        "16.",
+        "18.",
+        "20."
+      ],
+      "correctOption": 2,
+      "explanation": "Origem: ENEM 2020 • Matemática • Questão #139",
+      "images": [
+        "assets/2020/dia-2/q139_fig1.png"
+      ]
+    },
+    {
+      "id": "enem-2019-d2-q155",
+      "statement": "Três sócios resolveram fundar uma fábrica. \nO investimento inicial foi de R$ 1 000 000,00. \nE, independentemente do valor que cada um investiu \nnesse primeiro momento, resolveram considerar que cada \num deles contribuiu com um terço do investimento inicial.\n\nAlgum tempo depois, um quarto sócio entrou para \na sociedade, e os quatro, juntos, investiram mais \nR$ 800 000,00 na fábrica. Cada um deles contribuiu \ncom um quarto desse valor. Quando venderam a fábrica, \nnenhum outro investimento havia sido feito. Os sócios \ndecidiram então dividir o montante de R$ 1 800 000,00 \nobtido com a venda, de modo proporcional à quantia \ntotal investida por cada sócio.\n\nQuais os valores mais próximos, em porcentagens, \ncorrespondentes às parcelas financeiras que cada um \ndos três sócios iniciais e o quarto sócio, respectivamente, \nreceberam?",
+      "options": [
+        "29,60 e 11,11.",
+        "28,70 e 13,89.",
+        "25,00 e 25,00.",
+        "18,52 e 11,11.",
+        "12,96 e 13,89."
+      ],
+      "correctOption": 0,
+      "explanation": "Origem: ENEM 2019 • Matemática • Questão #155",
+      "images": [
+        "assets/2019/dia-2/q155_fig1.png"
+      ]
+    },
+    {
+      "id": "enem-2015-d2-q142",
+      "statement": "Numa cidade, cinco escolas de samba (I, II, III, IV e V) \nparticiparam do desfile de Carnaval. Quatro quesitos são \njulgados, cada um por dois jurados, que podem atribuir \nsomente uma dentre as notas 6, 7, 8, 9 ou 10. A campeã \nserá a escola que obtiver maior pontuação na soma de \ntodas as notas emitidas. Em caso de empate, a campeã \nserá a que alcançar a maior soma das notas atribuídas \npelos jurados no quesito Enredo e Harmonia. A tabela \nmostra as notas do desfile desse ano no momento em \nque faltava somente a divulgação das notas do jurado B \nno quesito Bateria.\n\nQuesitos 1. Fantasia \n\n2. Evolução \ne Conjunto\n\n3. Enredo \ne Harmonia 4. Bateria\n\n2,5 m\n\ne Alegoria\n\nTotal\n\nJurado\nA\nB\nA\nB\nA\nB\nA\nB\n\nEscola \n\nI\n6\n7\n8\n8\n9\n9\n8\n55\n\nEscola \n\nII\n9\n8\n10\n9\n10\n10\n10\n66\n\nEscola \n\nIII\n8\n8\n7\n8\n6\n7\n6\n50\n\nEscola \n\nIV\n9\n10\n10\n10\n9\n10\n10\n68\n\nEscola \n\nV\n8\n7\n9\n8\n6\n8\n8\n54\n\nQuantas configurações distintas das notas a serem \natribuídas pelo jurado B no quesito Bateria tornariam \ncampeã a Escola II?",
+      "options": [
+        "21",
+        "90",
+        "750",
+        "1 250",
+        "3 125"
+      ],
+      "correctOption": 2,
+      "explanation": "Origem: ENEM 2015 • Matemática • Questão #142",
+      "images": [
+        "assets/2015/dia-2/q142_fig1.png"
+      ]
+    },
+    {
+      "id": "enem-2012-d2-q164",
+      "statement": "Em um blog de variedades, músicas, mantras \ne informações diversas, foram postados “Contos de \nHalloween”. Após a leitura, os visitantes poderiam opinar, \nassinalando suas reações em: “Divertido”, “Assustador” \nou “Chato”. Ao final de uma semana, o blog registrou que \n500 visitantes distintos acessaram esta postagem.\n\nO gráfico a seguir apresenta o resultado da enquete.\n\nCONTOS DE HALLOWEEN\n\nopinião dos visitantes\n\nDIVERTIDO\n\n52%\n\n15%\n\nASSUSTADOR\n\nCHATO\n\n12%\n\n21%\n\nNÃO OPINARAM\n\n0%\n10%\n20%\n30%\n40%\n50%\n60%\n\nO administrador do blog irá sortear um livro entre os visitantes \nque opinaram na postagem “Contos de Halloween”.\n\nSabendo que nenhum visitante votou mais de uma vez, \na probabilidade de uma pessoa escolhida ao acaso entre \nas que opinaram ter assinalado que o conto “Contos de \nHalloween” é “Chato” é mais aproximada por",
+      "options": [
+        "0,09.",
+        "0,12.",
+        "0,14.",
+        "0,15.",
+        "0,18.\n\nMT - 2º dia | Caderno 5 - AMARELO - Página 26"
+      ],
+      "correctOption": 3,
+      "explanation": "Origem: ENEM 2012 • Matemática • Questão #164",
+      "images": [
+        "assets/2012/dia-2/q164_fig1.png"
+      ]
+    },
+    {
+      "id": "enem-2013-d2-q159",
+      "statement": "Uma torneira não foi fechada corretamente e ficou \npingando, da meia-noite às seis horas da manhã, com a \nfrequência de uma gota a cada três segundos. Sabe-se \nque cada gota d’agua tem volume de 0,2 mL.\nQual foi o valor mais aproximado do total de água \ndesperdiçada nesse período, em litros?",
+      "options": [
+        "0,2",
+        "1,2",
+        "1,4",
+        "12,9",
+        "64,8\n\nMT - 2º dia | Caderno 5 - AMARELO - Página 25"
+      ],
+      "correctOption": 2,
+      "explanation": "Origem: ENEM 2013 • Matemática • Questão #159",
+      "images": [
+        "assets/2013/dia-2/q159_fig1.png"
+      ]
+    },
+    {
+      "id": "enem-2018-d2-q178",
+      "statement": "3DUD\u0003 FULDU\u0003 XP\u0003 ORJRWLSR\u000f\u0003 XP\u0003 SUR¿VVLRQDO\u0003 GD\u0003 iUHD\u0003 GH\u0003\ndesign\u0003JUi¿FR\u0003GHVHMD\u0003FRQVWUXt\u0010OR\u0003XWLOL]DQGR\u0003R\u0003FRQMXQWR\u0003GH\u0003\npontos do plano na forma de um triângulo, exatamente \ncomo mostra a imagem.\n\ny\n\n15\n\n10\n\n5\n\nx\n\n0\n\n\u001015\n\u001010\n\u00105\n\n5\n15\n10\n\n\u00105\n\n\u001010\n\n\u001015\n\nPara construir tal imagem utilizando uma ferramenta \nJUi¿FD\u000f\u0003 VHUi\u0003 QHFHVViULR\u0003 HVFUHYHU\u0003 DOJHEULFDPHQWH\u0003 R\u0003\nFRQMXQWR\u0003TXH\u0003UHSUHVHQWD\u0003RV\u0003SRQWRV\u0003GHVVH\u0003JUi¿FR\u0011\n\nEsse conjunto é dado pelos pares ordenados (x ; y) \u0003`\u0001u\u0003`,\ntais que",
+      "options": [
+        "0 d x d y d 10",
+        "0 d y d x d 10",
+        "0 d x d 10, 0 d\u0003y\u0003d\u0003\u0014\u0013",
+        "0 d x \u000e y d 10",
+        "0 d x \u000e y d\u0003\u0015\u0013"
+      ],
+      "correctOption": 1,
+      "explanation": "Origem: ENEM 2018 • Matemática • Questão #178",
+      "images": [
+        "assets/2018/dia-2/q178_fig1.png"
+      ]
+    },
+    {
+      "id": "enem-2025-d2-q157",
+      "statement": "5\n20\n35\n\nO grupo escolhido foi o",
+      "options": [
+        "1.",
+        "2.",
+        "3.",
+        "4.",
+        "5."
+      ],
+      "correctOption": 3,
+      "explanation": "Origem: ENEM 2025 • Matemática • Questão #157",
+      "images": [
+        "assets/2025/dia-2/q157_fig1.png"
+      ]
+    },
+    {
+      "id": "enem-2011-d2-q146",
+      "statement": "Você pode adaptar as atividades do seu dia a dia de \numa forma que possa queimar mais calorias do que as \ngastas normalmente, conforme a relação seguinte: \n\n- Enquanto você fala ao telefone, faça agachamentos: \n\n100 calorias gastas em 20 minutos.\n- Meia hora de supermercado: 100 calorias. \n- Cuidar do jardim por 30 minutos: 200 calorias. \n- Passear com o cachorro: 200 calorias em 30 minutos. \n- Tirar o pó dos móveis: 150 calorias em 30 minutos.\n- Lavar roupas por 30 minutos: 200 calorias.\n\nDisponível em: http://cyberdiet.terra.com.br. Acesso em: 27 abr. 2010 (adaptado). \n\nUma pessoa deseja executar essas atividades, porém, \najustando o tempo para que, em cada uma, gaste \nigualmente 200 calorias.\n\nA partir dos ajustes, quanto tempo a mais será necessário \npara realizar todas as atividades?",
+      "options": [
+        "50 minutos.",
+        "60 minutos.",
+        "80 minutos.",
+        "120 minutos.",
+        "170 minutos."
+      ],
+      "correctOption": 1,
+      "explanation": "Origem: ENEM 2011 • Matemática • Questão #146",
+      "images": [
+        "assets/2011/dia-2/q146_fig1.png"
+      ]
+    },
+    {
+      "id": "enem-2019-d2-q179",
+      "statement": "Para construir uma piscina, cuja área total da \nsuperfície interna é igual a 40 m2, uma construtora \napresentou o seguinte orçamento:\n\n•\t R$ 10 000,00 pela elaboração do projeto;\n•\t R$ 40 000,00 pelos custos fixos;\n•\t R$ 2 500,00 por metro quadrado para construção \nda área interna da piscina.\nApós a apresentação do orçamento, essa empresa \ndecidiu reduzir o valor de elaboração do projeto em \n50%, mas recalculou o valor do metro quadrado para a \nconstrução da área interna da piscina, concluindo haver \na necessidade de aumentá-lo em 25%. Além disso, a \nconstrutora pretende dar um desconto nos custos fixos, \nde maneira que o novo valor do orçamento seja reduzido \nem 10% em relação ao total inicial.",
+      "options": [
+        "1.",
+        "2.",
+        "4.",
+        "5.",
+        "8."
+      ],
+      "correctOption": 3,
+      "explanation": "Origem: ENEM 2019 • Matemática • Questão #179",
+      "images": [
+        "assets/2019/dia-2/q179_fig1.png"
+      ]
+    },
+    {
+      "id": "enem-2023-d2-q136",
+      "statement": "Alguns estudos comprovam que os carboidratos \nfornecem energia ao corpo, preservam as proteínas \nestruturais dos músculos durante a prática de atividade \nfísica e ainda dão força para o cérebro coordenar os \nmovimentos, o que de fato tem impacto positivo no \ndesenvolvimento do praticante. O ideal é consumir 1 grama \nde carboidrato para cada minuto de caminhada.\n\n3\n\nCIRINO, C. Boa pergunta: consumir carboidratos antes dos exercícios melhora o \n\ndesempenho do atleta? Revista Saúde! É Vital, n. 330, nov. 2010 (adaptado).\nUm casal realizará diariamente 30 minutos de caminhada, \ningerindo, antes dessa atividade, a quantidade ideal de \ncarboidratos recomendada. Para ter o consumo ideal apenas \npor meio do consumo de pão de fôrma integral, o casal planeja \ngarantir o suprimento de pães para um período de 30 dias \nininterruptos. Sabe-se que cada pacote desse pão vem com 18 \nfatias, e que cada uma delas tem 15 gramas de carboidratos.\n\nE\t\nE\t 22\n\nA quantidade mínima de pacotes de pão de fôrma \nnecessários para prover o suprimento a esse casal é",
+      "options": [
+        "A\t 1.",
+        "B\t 4.",
+        "C\t 6.",
+        "D\t 7.",
+        "E\t 8."
+      ],
+      "correctOption": 3,
+      "explanation": "Origem: ENEM 2023 • Matemática • Questão #136"
+    },
+    {
+      "id": "enem-2021-d2-q167",
+      "statement": "Um casal está planejando comprar um apartamento \nde dois quartos num bairro de uma cidade e consultou \na página de uma corretora de imóveis, encontrando \n105 apartamentos de dois quartos à venda no bairro \ndesejado. Eles usaram um aplicativo da corretora para \nJ\n\u0007\b\u0007\u0002\b\u0002\u000f\u000e\t\r\u0007\u000e!\f\u000e'\u001d\u0004\u0002\u000f\u0004\t\u0002%\u0007\n'\u0004\t\u0002\u000f\u0004\u0002\u001e\u0004\u0005\"\f\u0005\r\u0004\u0002\u000f\n\u0002\u000e\u0010B#\n\u000e\t\u0002\nselecionados.\n\n\u0017\u0002 J\u0007?\u0006\u001e\u0004\u0002 \u000e2\f\t\r\u0007\b\u0002 \b\u0002 \u000f\u000e\t\r\u0007\u000e!\f\u000e'\u001d\u0004\u0002 \u000f\n\u0002 P\u0007\n\u000b\f>\u0005\u001e\u000e\b\t\u0002 \u000f\u0004\t\u0002\npreços de venda dos apartamentos dessa lista (em \n\u0010\u000e2\u0002\u0007\n\b\u000e\tk$\u0002\u0005\u0004\u0002\u000b\f\b2\u0002\b\t\u0002P\b\u000e@\b\t\u0002\u000f\n\u0002%\u0007\n'\u0004\u0002\t\u001d\u0004\u0002\u000f\b\u000f\b\t\u0002%\u0004\u0007\u0002\n}}$\u0002}}$\u0002}}$\u0002&}}$\u0002&}}$\u0002¹}}$\u0002¹}}$\u0002¼}}$\u0002¼}}$\u0002³}}$\u0002\n³}}$\u0002}}$\u0002}}$\u0002{\u0002}}}$\u0002{\u0002}}}$\u0002{\u0002{}}$\u0002{\u0002{}}$\u0002{\u0002~}}\u0002\n\u0002\n{\u0002~}}$\u0002{\u0002}}(\n\nA mesma corretora anuncia que cerca de 50% dos \napartamentos de dois quartos nesse bairro, publicados \nem sua página, têm preço de venda inferior a 550 mil reais. \n\u0016\u0004\u0002\n\u0005\r\b\u0005\r\u0004$\u0002\u0004\u0002\u001e\b\t\b2\u0002\b\u001e+\u0004\f\u0002\u000b\f\n\u0002\n\t\t\b\u0002K2\r\u000e\u0010\b\u0002\u000e\u0005P\u0004\u0007\u0010\b'\u001d\u0004\u0002\n\u0005\u001d\u0004\u0002\n\u0007\b\u0002\u001e\u0004\u0010%\b\rG#\n2\u0002\u001e\u0004\u0010\u0002\u0004\u0002J\u0007?\u0006\u001e\u0004\u0002\u0004!\r\u000e\u000f\u0004(\n\nMês\n\nDistribuição dos preços\n\n0\n5\n10\n15\n20\n\nNúmero de imóveis\n\n300 400\n500 600\n700\n800 900 1 000 1 100 1 200 1 300\nPreço (em mil reais)\n\n\u0003\u0004\u0010\u0002!\b\t\n\u0002\u0005\u0004\u0002J\u0007?\u0006\u001e\u0004\u0002\u0004!\r\u000e\u000f\u0004$\u0002\u0004\u0002\u0010\n\u0005\u0004\u0007\u0002%\u0007\n'\u0004$\u0002p (em mil reais), \npara o qual pelo menos 50% dos apartamentos apresenta \npreço inferior a p é",
+      "options": [
+        "600.",
+        "700.",
+        "800.",
+        "900.",
+        "1 000."
+      ],
+      "correctOption": 2,
+      "explanation": "Origem: ENEM 2021 • Matemática • Questão #167",
+      "images": [
+        "assets/2021/dia-2/q167_fig1.png"
+      ]
+    },
+    {
+      "id": "enem-2019-d2-q158",
+      "statement": "Charles Richter e Beno Gutenberg desenvolveram a \nescala Richter, que mede a magnitude de um terremoto. \nEssa escala pode variar de 0 a 10, com possibilidades \nde valores maiores. O quadro mostra a escala de \nmagnitude local (Ms) de um terremoto que é utilizada \npara descrevê-lo.\n\nDescrição\nMagnitude local (Ms) \n\n(µm ⋅ Hz)\n\nPequeno\n0 ≤ Ms ≤ 3,9\n\nLigeiro\n4,0 ≤ Ms ≤ 4,9\n\nModerado\n5,0 ≤ Ms ≤ 5,9\n\nGrande\n6,0 ≤ Ms ≤ 9,9\n\nExtremo\nMs ≥ 10,0\n\n Para se calcular a magnitude local, usa-se a fórmula \nMs = 3,30 + log(A⋅f ), em que A representa a amplitude \nmáxima da onda registrada por um sismógrafo em \nmicrômetro (µm) e f representa a frequência da onda, \nem hertz (Hz). Ocorreu um terremoto com amplitude \nmáxima de 2 000 µm e frequência de 0,2 Hz. \n\nDisponível em: http://cejarj.cecierj.edu.br. Acesso em: 1 fev. 2015 (adaptado).\n\nUtilize 0,3 como aproximação para log 2.\n\nDe acordo com os dados fornecidos, o terremoto \nocorrido pode ser descrito como",
+      "options": [
+        "Pequeno.",
+        "Ligeiro.",
+        "Moderado.",
+        "Grande.",
+        "Extremo.\n\nMT - 2º dia | Caderno 5 - AMARELO - Página 23"
+      ],
+      "correctOption": 2,
+      "explanation": "Origem: ENEM 2019 • Matemática • Questão #158",
+      "images": [
+        "assets/2019/dia-2/q158_fig1.png"
+      ]
+    },
+    {
+      "id": "enem-2015-d2-q173",
+      "statement": "Alguns \nmedicamentos \npara \nfelinos \nsão \nadministrados com base na superfície corporal do \nanimal. Foi receitado a um felino pesando 3,0 kg um \nmedicamento na dosagem diária de 250 mg por metro \nquadrado de superfície corporal.\n\nO quadro apresenta a relação entre a massa do felino, \nem quilogramas, e a área de sua superfície corporal, em \nmetros quadrados.\n\nRelação entre a massa de um felino \n\ne a área de sua superfície corporal\n\nMassa (kg)\nÁrea (m²)\n\n1,0\n0,100\n\n2,0\n0,159\n\n3,0\n0,208\n\n4,0\n0,252\n\n5,0\n0,292\n\nNORSWORTHY, G. D. O paciente felino. São Paulo: Roca, 2009. \n\nA dose diária, em miligramas, que esse felino deverá \nreceber é de",
+      "options": [
+        "0,624.",
+        "52,0.",
+        "156,0.",
+        "750,0.",
+        "1 201,9."
+      ],
+      "correctOption": 1,
+      "explanation": "Origem: ENEM 2015 • Matemática • Questão #173",
+      "images": [
+        "assets/2015/dia-2/q173_fig1.png"
+      ]
+    },
+    {
+      "id": "enem-2018-d2-q172",
+      "statement": "de\nsalto\n\nUma loja vende automóveis em N parcelas iguais \nVHP\u0003 MXURV\u0011\u0003 1R\u0003 PRPHQWR\u0003 GH\u0003 FRQWUDWDU\u0003 R\u0003 ¿QDQFLDPHQWR\u000f\u0003\ncaso o cliente queira aumentar o prazo, acrescentando \nmais 5 parcelas, o valor de cada uma das parcelas \nGLPLQXL\u0003 5\u0007\u0003 \u0015\u0013\u0013\u000f\u0013\u0013\u000f\u0003 RX\u0003 VH\u0003 HOH\u0003 TXLVHU\u0003 GLPLQXLU\u0003 R\u0003 SUD]R\u000f\u0003\nFRP\u0003 \u0017\u0003 SDUFHODV\u0003 D\u0003 PHQRV\u000f\u0003 R\u0003 YDORU\u0003 GH\u0003 FDGD\u0003 XPD\u0003 GDV\u0003\nSDUFHODV\u0003VREH\u00035\u0007\u0003\u0015\u0016\u0015\u000f\u0013\u0013\u0011\u0003&RQVLGHUH\u0003DLQGD\u0003TXH\u000f\u0003QDV\u0003WUrV\u0003\npossibilidades de pagamento, o valor do automóvel é o \nPHVPR\u000f\u0003WRGDV\u0003VmR\u0003VHP\u0003MXURV\u0003H\u0003QmR\u0003p\u0003GDGR\u0003GHVFRQWR\u0003HP\u0003\nnenhuma das situações.\n\nNessas condições, qual é a quantidade N de parcelas a \nserem pagas de acordo com a proposta inicial da loja?\n\nA \u0015\u0013",
+      "options": [
+        "T1.",
+        "7\u0015\u0011",
+        "T3.",
+        "7\u0017\u0011",
+        "T5.\n\nB \u0015\u0017\n\nC \u0015\u001c\n\nD \u0017\u0013\n\nE 58"
+      ],
+      "correctOption": 1,
+      "explanation": "Origem: ENEM 2018 • Matemática • Questão #172",
+      "images": [
+        "assets/2018/dia-2/q172_fig1.png"
+      ]
+    },
+    {
+      "id": "enem-2017-d2-q148",
+      "statement": "A avaliação de rendimento de alunos de um curso \nuniversitário baseia-se na média ponderada das notas \nobtidas nas disciplinas pelos respectivos números de \ncréditos, como mostra o quadro:\n\nAvaliação\nMédia de notas (M )\n\nExcelente\n9 < M ≤ 10\n\nBom\n7 ≤ M ≤ 9\n\nRegular\n5 ≤ M < 7\n\nRuim\n3 ≤ M < 5\n\nPéssimo\nM < 3\n\nQuanto melhor a avaliação de um aluno em \ndeterminado período letivo, maior sua prioridade na \nescolha de disciplinas para o período seguinte.\n\nDeterminado aluno sabe que se obtiver avaliação \n“Bom” ou “Excelente” conseguirá matrícula nas disciplinas \nque deseja. Ele já realizou as provas de 4 das 5 disciplinas \nem que está matriculado, mas ainda não realizou a prova \nda disciplina I, conforme o quadro.\n\nDisciplinas\nNotas\nNúmero  \nde créditos\nI\n \n12\nII\n8,00\n4\nIII\n6,00\n8\nIV\n5,00\n8\nV\n7,50\n10\n\nPara que atinja seu objetivo, a nota mínima que ele deve \nconseguir na disciplina I é",
+      "options": [
+        "7,00.",
+        "7,38.",
+        "7,50.",
+        "8,25.",
+        "9,00.\n\nMT - 2º dia | Caderno 5 - AMARELO - Página 19"
+      ],
+      "correctOption": 3,
+      "explanation": "Origem: ENEM 2017 • Matemática • Questão #148",
+      "images": [
+        "assets/2017/dia-2/q148_fig1.png"
+      ]
+    },
+    {
+      "id": "enem-2012-d2-q158",
+      "statement": "10\n\nO gráfico fornece os valores das ações da empresa \nXPN, no período das 10 às 17 horas, num dia em que elas \noscilaram acentuadamente em curtos intervalos de tempo.\n\n0\n\nValor da Ação (em reais)\n\n460\n\n380\n\n330\n\n280\n\n200\n150\n\n100\n\nTempo (em horas)\n\n10      11     12     13      14     15      16     17\n\nNeste dia, cinco investidores compraram e venderam o \nmesmo volume de ações, porém em horários diferentes, \nde acordo com a seguinte tabela.\n\nInvestidor\nHora da Compra\nHora da Venda\n\n1\n10:00\n15:00\n\n2\n10:00\n17:00\n\n3\n13:00\n15:00\n\n4\n15:00\n16:00\n\n5\n16:00\n17:00\n\nCom relação ao capital adquirido na compra e venda das \nações, qual investidor fez o melhor negócio?",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5\n\nMT - 2º dia | Caderno 5 - AMARELO - Página 25"
+      ],
+      "correctOption": 0,
+      "explanation": "Origem: ENEM 2012 • Matemática • Questão #158",
+      "images": [
+        "assets/2012/dia-2/q158_fig1.png"
+      ]
+    },
+    {
+      "id": "enem-2022-d2-q164",
+      "statement": "ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022 ENEM 2022\n\nA esperança de vida ao nascer é o número médio \nde anos que um indivíduo tende a viver a partir de seu \nnascimento, considerando dados da população. No Brasil, \nesse número vem aumentando consideravelmente, como \nmostra o gráfico.\n\nEsperança de vida ao nascer\n75\n\n74,23\n\n74\n\n73,95\n\n73,67\n\n73,09\n73,4\n\n73\n\n72,78\n\n72\n2008\n\n2009\n2010\n2011\n2012\n2013\n\nDisponível em: http://cod.ibge.gov.br. Acesso em: 6 mar. 2014 (adaptado).\n\nPode-se observar que a esperança de vida ao nascer \nem 2012 foi exatamente a média das registradas nos \nanos de 2011 e 2013. Suponha que esse fato também \nocorreu com a esperança de vida ao nascer em 2013, em \nrelação às esperanças de vida de 2012 e de 2014.\nCaso a suposição feita tenha sido confirmada, a \nesperança de vida ao nascer no Brasil no ano de 2014 \nterá sido, em ano, igual a\n\nA\n\nB",
+      "options": [
+        "A\t 74,23.",
+        "B\t 74,51.",
+        "C\t 75,07.",
+        "D\t 75,23.",
+        "E\t 78,49.\n\nC\n\nD\n\nE"
+      ],
+      "correctOption": 1,
+      "explanation": "Origem: ENEM 2022 • Matemática • Questão #164",
+      "images": [
+        "assets/2022/dia-2/q164_fig1.png"
+      ]
+    },
+    {
+      "id": "enem-2025-d2-q143",
+      "statement": "No atletismo, um grande desafio da prova de 100 metros \nrasos é a sua conclusão num tempo abaixo da marca de \nreferência dos 10,00 segundos. Vários atletas já alcançaram \nesse feito. Em 2009, o jamaicano Usain Bolt estabeleceu o \nrecorde mundial masculino dessa prova, com o tempo de \n9,58 segundos.\n\nQual é a diferença, em segundo, entre a marca de referência e \na marca estabelecida por Usain Bolt em 2009?",
+      "options": [
+        "0,02",
+        "0,42",
+        "0,52",
+        "1,02",
+        "1,42"
+      ],
+      "correctOption": 1,
+      "explanation": "Origem: ENEM 2025 • Matemática • Questão #143",
+      "images": [
+        "assets/2025/dia-2/q143_fig1.png"
+      ]
+    },
+    {
+      "id": "enem-2009-d2-q176",
+      "statement": "O Indicador do CadÚnico (ICadÚnico), que \ncompõe o cálculo do Índice de Gestão Descentralizada do \nPrograma Bolsa Família (IGD), é obtido por meio da média \naritmética entre a taxa de cobertura qualificada de \ncadastros (TC) e a taxa de atualização de cadastros (TA), \n\nNA\nTA\nNF\nNV\nTC\n=\n=\n NV é o número de \n\nem que \n,\n,\nNV\n\ncadastros domiciliares válidos no perfil do CadÚnico, NF é \no número de famílias estimadas como público alvo do \nCadÚnico e NA é o número de cadastros domiciliares \natualizados no perfil do CadÚnico. \n\nPortaria n° 148 de 27 de abril de 2006 (adaptado). \n\nSuponha que o IcadÚnico de um município específico é \n0,6. Porém, dobrando NF o IcadÚnico cairá para 0,5. Se \nNA + NV = 3.600, então NF é igual a",
+      "options": [
+        "10.000.",
+        "7.500.",
+        "5.000.",
+        "4.500.",
+        "3.000."
+      ],
+      "correctOption": 2,
+      "explanation": "Origem: ENEM 2009 • Matemática • Questão #176"
+    },
+    {
+      "id": "enem-2019-d2-q138",
+      "statement": "O gráfico a seguir mostra a evolução mensal das \nvendas de certo produto de julho a novembro de 2011.\n\nUnidades\n\nvendidas\n\n2 800\n\n2 700\n\n2 500\n\n700\n\nJul\nAgo\nSet\nOut\nNov\nMês\n\nSabe-se que o mês de julho foi o pior momento da \nempresa em 2011 e que o número de unidades vendidas \ndesse produto em dezembro de 2011 foi igual à média \naritmética do número de unidades vendidas nos meses \nde julho a novembro do mesmo ano.\n\nO gerente de vendas disse, em uma reunião da \ndiretoria, que, se essa redução no número de unidades \nvendidas de novembro para dezembro de 2011 se \nmantivesse constante nos meses subsequentes, as \nvendas só voltariam a ficar piores que julho de 2011 \napenas no final de 2012.\n\nO diretor financeiro rebateu imediatamente esse \nargumento mostrando que, mantida a tendência, \nisso aconteceria já em",
+      "options": [
+        "janeiro.",
+        "fevereiro.",
+        "março.",
+        "abril.",
+        "maio.\n\nMT - 2º dia | Caderno 5 - AMARELO - Página 17"
+      ],
+      "correctOption": 3,
+      "explanation": "Origem: ENEM 2019 • Matemática • Questão #138",
+      "images": [
+        "assets/2019/dia-2/q138_fig1.png"
+      ]
+    },
+    {
+      "id": "enem-2009-d2-q178",
+      "statement": "Um artesão construiu peças de artesanato \ninterceptando uma pirâmide de base quadrada com um \nplano. Após fazer um estudo das diferentes peças que \npoderia obter, ele concluiu que uma delas poderia ter uma \ndas faces pentagonal. \n \nQual dos argumentos a seguir justifica a conclusão do \nartesão?",
+      "options": [
+        "Uma pirâmide de base quadrada tem 4 arestas laterais \n\ne a interseção de um plano com a pirâmide intercepta \nsuas arestas laterais. Assim, esses pontos formam um \npolígono de 4 lados.",
+        "Uma pirâmide de base quadrada tem 4 faces \n\ntriangulares e, quando um plano intercepta essa \npirâmide, divide cada face em um triângulo e um \ntrapézio. Logo, um dos polígonos tem 4 lados.",
+        "Uma pirâmide de base quadrada tem 5 faces e a \n\ninterseção de uma face com um plano é um segmento \nde reta. Assim, se o plano interceptar todas as faces, o \npolígono obtido nessa interseção tem 5 lados.",
+        "O número de lados de qualquer polígono obtido como \n\ninterseção de uma pirâmide com um plano é igual ao \nnúmero de faces da pirâmide. Como a pirâmide tem 5 \nfaces, o polígono tem 5 lados.",
+        "O número de lados de qualquer polígono obtido \n\ninterceptando-se uma pirâmide por um plano é igual \nao número de arestas laterais da pirâmide. Como a \npirâmide tem 4 arestas laterais, o polígono tem 4 \nlados."
+      ],
+      "correctOption": 2,
+      "explanation": "Origem: ENEM 2009 • Matemática • Questão #178"
+    },
+    {
+      "id": "enem-2009-d2-q143",
+      "statement": "O gráfico a seguir mostra a evolução, de abril de 2008 a \nmaio de 2009, da população economicamente ativa para \nseis Regiões Metropolitanas pesquisadas. \n \n\n \nDisponível em: www.ibge.gov.br. \n\nConsiderando que a taxa de crescimento da população \neconomicamente ativa, entre 05/09 e 06/09, seja de 4%, \nentão o número de pessoas economicamente ativas em \n06/09 será igual a",
+      "options": [
+        "23.940.",
+        "32.228.",
+        "920.800.",
+        "23.940.800.",
+        "32.228.000."
+      ],
+      "correctOption": 3,
+      "explanation": "Origem: ENEM 2009 • Matemática • Questão #143",
+      "images": [
+        "assets/2009/dia-2/q143_1.png"
+      ]
+    },
+    {
+      "id": "enem-2012-d2-q163",
+      "statement": "José, Carlos e Paulo devem transportar em suas \nbicicletas uma certa quantidade de laranjas. Decidiram \ndividir o trajeto a ser percorrido em duas partes, sendo que \nao final da primeira parte eles redistribuiriam a quantidade \nde laranjas que cada um carregava dependendo do \ncansaço de cada um. Na primeira parte do trajeto \nJosé, Carlos e Paulo dividiram as laranjas na \nproporção 6 : 5 : 4, respectivamente. Na segunda \nparte do trajeto José, Carlos e Paulo dividiram as \nlaranjas na proporção 4 : 4 : 2, respectivamente.\n\nSabendo-se que um deles levou 50 laranjas a mais no \nsegundo trajeto, qual a quantidade de laranjas que José, \nCarlos e Paulo, nessa ordem, transportaram na segunda \nparte do trajeto?",
+      "options": [
+        "600, 550, 350",
+        "300, 300, 150",
+        "300, 250, 200",
+        "200, 200, 100",
+        "100, 100, 50"
+      ],
+      "correctOption": 1,
+      "explanation": "Origem: ENEM 2012 • Matemática • Questão #163",
+      "images": [
+        "assets/2012/dia-2/q163_fig1.png"
+      ]
+    },
+    {
+      "id": "enem-2025-d2-q176",
+      "statement": "Um empresário utiliza máquinas cuja pressão interna P, \nem atmosfera, depende do tempo contínuo de utilização t, em \nhora, e de um parâmetro positivo K, que define o modelo da \nmáquina, segundo a expressão:\n\nP = 4 ⋅ log[−K ⋅ (t + 1) ⋅ (t − 19)]\n\nO fabricante dessas máquinas recomenda ao usuário \nque a pressão interna desse tipo de máquina não ultrapasse \n10 atmosferas durante seu funcionamento.\nO empresário pretende comprar novas máquinas desse \ntipo que deverão funcionar, diariamente, por um período \ncontínuo de 10 horas. Para isso, precisa definir o modelo de \nmáquina a ser adquirida escolhendo o maior valor possível \ndo parâmetro K, atendendo à recomendação do fabricante.\n\nO maior valor a ser escolhido para K é",
+      "options": [
+        "100,5",
+        "108\n\n2 5,",
+        "10\n\n84\n\n2 5,",
+        "10\n\n99",
+        "25 × 10−2"
+      ],
+      "correctOption": 0,
+      "explanation": "Origem: ENEM 2025 • Matemática • Questão #176",
+      "images": [
+        "assets/2025/dia-2/q176_fig1.png"
+      ]
+    },
+    {
+      "id": "enem-2014-d2-q153",
+      "statement": "A Companhia de Engenharia de Tráfego (CET) de \nSão Paulo testou em 2013 novos radares que permitem o \ncálculo da velocidade média desenvolvida por um veículo \nem um trecho da via.\n\nO sistema mede o tempo\ndecorrido entre um radar\ne outro e calcula a \nvelocidade média.\n\nNo teste feito pela CET,\nos dois radares ficavam\na uma distância de 2,1 km\num do outro.\nAs medições de velocidade deixariam de ocorrer de \nmaneira instantânea, ao se passar pelo radar, e seriam feitas \na partir da velocidade média no trecho, considerando o tempo \ngasto no percurso entre um radar e outro. Sabe-se que a \nvelocidade média é calculada como sendo a razão entre a \ndistância percorrida e o tempo gasto para percorrê-la. \n\nO teste realizado mostrou que o tempo que permite uma \ncondução segura de deslocamento no percurso entre os dois \nradares deveria ser de, no mínimo, 1 minuto e 24 segundos. \nCom isso, a CET precisa instalar uma placa antes do primeiro \nradar informando a velocidade média máxima permitida \nnesse trecho da via. O valor a ser exibido na placa deve ser \no maior possível, entre os que atendem às condições de \ncondução segura observadas.\n\nDisponível em: www1.folha.uol.com.br. Acesso em: 11 jan. 2014 (adaptado).\nA placa de sinalização que informa a velocidade que \natende a essas condições é",
+      "options": [
+        "25\n\nkm/h",
+        "69\n\nkm/h",
+        "90\n\nkm/h",
+        "102\n\nkm/h",
+        "110\n\nkm/h"
+      ],
+      "correctOption": 2,
+      "explanation": "Origem: ENEM 2014 • Matemática • Questão #153",
+      "images": [
+        "assets/2014/dia-2/q153_1.png"
+      ]
+    },
+    {
+      "id": "enem-2012-d2-q174",
+      "statement": "José, Paulo e Antônio estão jogando dados não viciados, \nnos quais, em cada uma das seis faces, há um número de 1 a 6. \nCada um deles jogará dois dados simultaneamente. José \nacredita que, após jogar seus dados, os números das faces \nvoltadas para cima lhe darão uma soma igual a 7. Já Paulo \nacredita que sua soma será igual a 4 e Antônio acredita \nque sua soma será igual a 8.\n\nCom essa escolha, quem tem a maior probabilidade de \nacertar sua respectiva soma é",
+      "options": [
+        "Antônio, já que sua soma é a maior de todas as \n\nescolhidas.",
+        "José e Antônio, já que há 6 possibilidades tanto para a \n\nescolha de José quanto para a escolha de Antônio, e \nhá apenas 4 possibilidades para a escolha de Paulo.",
+        "José e Antônio, já que há 3 possibilidades tanto para a \n\nescolha de José quanto para a escolha de Antônio, e \nhá apenas 2 possibilidades para a escolha de Paulo.",
+        "José, já que há 6 possibilidades para formar sua soma, \n\n5 possibilidades para formar a soma de Antônio e \napenas 3 possibilidades para formar a soma de Paulo.",
+        "Paulo, já que sua soma é a menor de todas.\n\nMT - 2º dia | Caderno 5 - AMARELO - Página 29"
+      ],
+      "correctOption": 3,
+      "explanation": "Origem: ENEM 2012 • Matemática • Questão #174",
+      "images": [
+        "assets/2012/dia-2/q174_fig1.png"
+      ]
+    },
+    {
+      "id": "enem-2025-d2-q165",
+      "statement": "Um estacionamento possui 120 vagas para veículos, \ne todas essas vagas estão ocupadas. Cada cliente paga uma \nmensalidade para utilizar uma vaga, que é calculada com base \nnas despesas mensais do estacionamento e no lucro pretendido. \nAs despesas mensais do estacionamento são: R$ 14 240,00 com \nmanutenção mais R$ 36,00 de seguro por veículo. O lucro do \nestacionamento é determinado pela diferença do valor arrecadado \ncom as mensalidades pelas despesas efetuadas. A partir do mês \nseguinte, o valor do seguro por veículo aumentará em 20%, \ne as despesas com manutenção permanecerão sem alterações. \nCom isso, o dono do estacionamento reajustará as mensalidades \npara obter um lucro mensal de R$ 10 000,00. Apesar desse \nreajuste, todas as vagas continuarão ocupadas.\n\nO valor, em real, da mensalidade reajustada será",
+      "options": [
+        "185,60.",
+        "226,09.",
+        "245,20.",
+        "268,93.",
+        "285,60."
+      ],
+      "correctOption": 2,
+      "explanation": "Origem: ENEM 2025 • Matemática • Questão #165",
+      "images": [
+        "assets/2025/dia-2/q165_fig1.png"
+      ]
+    },
+    {
+      "id": "enem-2013-d2-q176",
+      "statement": "Considere o seguinte jogo de apostas:\n\nNuma cartela com 60 números disponíveis, um \napostador escolhe de 6 a 10 números. Dentre os números \ndisponíveis, serão sorteados apenas 6. O apostador será \npremiado caso os 6 números sorteados estejam entre os \nnúmeros escolhidos por ele numa mesma cartela.\n\nO quadro apresenta o preço de cada cartela, de \nacordo com a quantidade de números escolhidos.\n\nQuantidade de números \nescolhidos em uma cartela\nPreço da cartela (R$)\n\n6\n2,00\n7\n12,00\n8\n40,00\n9\n125,00\n10\n250,00\n\nCinco apostadores, cada um com R$ 500,00 para \napostar, fizeram as seguintes opções:\n\nArthur: 250 cartelas com 6 números escolhidos;\n\nBruno: 41 cartelas com 7 números escolhidos e \n4 cartelas com 6 números escolhidos;\n\nCaio: 12 cartelas com 8 números escolhidos e \n10 cartelas com 6 números escolhidos;\nDouglas: 4 cartelas com 9 números escolhidos;\nEduardo: 2 cartelas com 10 números escolhidos.\n\nOs dois apostadores com maiores probabilidades de \nserem premiados são",
+      "options": [
+        "Caio e Eduardo.",
+        "Arthur e Eduardo.",
+        "Bruno e Caio.",
+        "Arthur e Bruno.",
+        "Douglas e Eduardo."
+      ],
+      "correctOption": 0,
+      "explanation": "Origem: ENEM 2013 • Matemática • Questão #176",
+      "images": [
+        "assets/2013/dia-2/q176_fig1.png"
+      ]
+    },
+    {
+      "id": "enem-2015-d2-q150",
+      "statement": "O polímero de PET (Politereftalato de Etileno) é um \ndos plásticos mais reciclados em todo o mundo devido \nà sua extensa gama de aplicações, entre elas, fibras \ntêxteis, tapetes, embalagens, filmes e cordas. Os gráficos \nmostram o destino do PET reciclado no Brasil, sendo que, \nno ano de 2010, o total de PET reciclado foi de 282 kton \n(quilotoneladas).\n\nPET RECICLADO - 2010\n\nUsos Finais Têxteis\nUsos Finais\n\nOutros\n\nTecidos e Malhas\n\nTêxteis\n37,8%\n\n30%\nCerdas / Cordas /\n\n7,6%\n\nTubos\n\nMonofilamentos\n\n3,8%\n\n27%\n\nFitas de Arquear\n\n6,8%\n\nLaminados \n\ne chapas\n\n7,9%\n\nEmb. Alimentos \ne não alimentos\n\n17,2%\n\nResinas Insaturadas \n\nNão tecidos\n\ne Alquídicas\n\n43%\n\n18,9%\n\nDisponível em: www.abipet.org.br. Acesso em: 12 jul. 2012 (adaptado).\n\nDe acordo com os gráficos, a quantidade de embalagens \nPET recicladas destinadas à produção de tecidos e \nmalhas, em kton, é mais aproximada de",
+      "options": [
+        "16,0.",
+        "22,9.",
+        "32,0.",
+        "84,6.",
+        "106,6.\n\nMT - 2º dia | Caderno 5 - AMARELO - Página 23"
+      ],
+      "correctOption": 2,
+      "explanation": "Origem: ENEM 2015 • Matemática • Questão #150",
+      "images": [
+        "assets/2015/dia-2/q150_fig1.png"
+      ]
+    },
+    {
+      "id": "enem-2016-d2-q143",
+      "statement": "Um dos grandes desafios do Brasil é o gerenciamento \ndos seus recursos naturais, sobretudo os recursos \nhídricos. Existe uma demanda crescente por água e o \nrisco de racionamento não pode ser descartado. O nível \nde água de um reservatório foi monitorado por um período, \nsendo o resultado mostrado no gráfico. Suponha que essa \ntendência linear observada no monitoramento se prolongue \npelos próximos meses.\n\nNível do reservatório\n\n35%\n\nPorcentagem com relação \n\nà capacidade máxima\n\n30%\n\n25%\n\n20%\n\n15%\n\n10%\n\n5%\n1\n2\n3\n\n4\n5\n6\n\nMês\n\nNas condições dadas, qual o tempo mínimo, após o sexto \nmês, para que o reservatório atinja o nível zero de sua \ncapacidade?",
+      "options": [
+        "2 meses e meio.",
+        "3 meses e meio.",
+        "1 mês e meio.",
+        "4 meses.",
+        "1 mês."
+      ],
+      "correctOption": 0,
+      "explanation": "Origem: ENEM 2016 • Matemática • Questão #143",
+      "images": [
+        "assets/2016/dia-2/q143_fig1.png"
+      ]
+    },
+    {
+      "id": "enem-2017-d2-q166",
+      "statement": "Uma bicicleta do tipo mountain bike tem uma coroa \ncom 3 engrenagens e uma catraca com 6 engrenagens, \nque, combinadas entre si, determinam 18 marchas \n(número de engrenagens da coroa vezes o número de \nengrenagens da catraca).\n\nOs números de dentes das engrenagens das coroas \ne das catracas dessa bicicleta estão listados no quadro.\n\nEngrenagens\n1ª\n2ª\n3ª\n4ª\n5ª\n6ª\n\nNº de dentes da \n\ncoroa\n46\n36\n26\n-\n-\n-",
+      "options": [
+        "15",
+        "30",
+        "108",
+        "360",
+        "972\n\nNº de dentes da \n\ncatraca\n24\n22\n20\n18\n16\n14\n\nSabe-se que o número de voltas efetuadas pela \nroda traseira a cada pedalada é calculado dividindo-se a \nquantidade de dentes da coroa pela quantidade de dentes \nda catraca.\n\nDurante um passeio em uma bicicleta desse tipo, \ndeseja-se fazer um percurso o mais devagar possível, \nescolhendo, para isso, uma das seguintes combinações \nde engrenagens (coroa x catraca):\n\nI\nII\nIII\nIV\nV\n\n1ª × 1ª\n1ª × 6ª\n2ª × 4ª\n3ª × 1ª\n3ª × 6ª\n\nA combinação escolhida para realizar esse passeio da \nforma desejada é\n\nA\t I.\nB\t II.\nC\t III.\nD\t IV.\nE\t V.\n\nMT - 2º dia | Caderno 5 - AMARELO - Página 26"
+      ],
+      "correctOption": 3,
+      "explanation": "Origem: ENEM 2017 • Matemática • Questão #166",
+      "images": [
+        "assets/2017/dia-2/q166_1.png"
+      ]
+    },
+    {
+      "id": "enem-2017-d2-q145",
+      "statement": "Para realizar a viagem dos sonhos, uma pessoa \nprecisava fazer um empréstimo no valor de R$ 5 000,00. \nPara pagar as prestações, dispõe de, no máximo, \nR$ 400,00 mensais. Para esse valor de empréstimo, \no valor da prestação (P) é calculado em função do \nnúmero de prestações (n) segundo a fórmula\n\nn\n\nP =\n×\n×\n−\n5 000 1013\n0 013\n1013\n1\n,\n,\n( ,\n)\n\nn\n\nSe necessário, utilize 0,005 como aproximação para \nlog 1,013; 2,602 como aproximação para log 400; 2,525 \ncomo aproximação para log 335. \n\nDe acordo com a fórmula dada, o menor número de \nparcelas cujos valores não comprometem o limite definido \npela pessoa é",
+      "options": [
+        "12.",
+        "14.",
+        "15.",
+        "16.",
+        "17."
+      ],
+      "correctOption": 3,
+      "explanation": "Origem: ENEM 2017 • Matemática • Questão #145",
+      "images": [
+        "assets/2017/dia-2/q145_fig1.png"
+      ]
+    },
+    {
+      "id": "enem-2015-d2-q176",
+      "statement": "Segundo o Instituto Brasileiro de Geografia e \nEstatística (IBGE), produtos sazonais são aqueles que \napresentam ciclos bem definidos de produção, consumo \ne preço. Resumidamente, existem épocas do ano em \nque a sua disponibilidade nos mercados varejistas ora \né escassa, com preços elevados, ora é abundante, com \npreços mais baixos, o que ocorre no mês de produção \nmáxima da safra.\n\nA partir de uma série histórica, observou-se que o preço \nP, em reais, do quilograma de um certo produto sazonal \n\npode ser descrito pela função P(x) = 8 + 5cos (\n\npx - p)\n6\n, \n\nonde x representa o mês do ano, sendo x = 1 associado \nao mês de janeiro, x = 2 ao mês de fevereiro, e assim \nsucessivamente, até x = 12 associado ao mês de \ndezembro.\n\nDisponível em: www.ibge.gov.br. Acesso em: 2 ago. 2012 (adaptado).\n\nNa safra, o mês de produção máxima desse produto é",
+      "options": [
+        "janeiro.",
+        "abril.",
+        "junho.",
+        "julho.",
+        "outubro."
+      ],
+      "correctOption": 3,
+      "explanation": "Origem: ENEM 2015 • Matemática • Questão #176",
+      "images": [
+        "assets/2015/dia-2/q176_fig1.png"
+      ]
+    }
+  ]
+}
