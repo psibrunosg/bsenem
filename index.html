@@ -24,6 +24,9 @@
 </head>
 <body>
   <div id="app"></div>
-  <script type="module" src="%BASE_URL%src/main.js"></script>
+  <!-- Caminho a partir da raiz do projeto: o Vite resolve o módulo e aplica a
+       base na saída. Com %BASE_URL% o Rollup procura /<base>/src/main.js no
+       disco e o build quebra sempre que BASE_PATH não é "/". -->
+  <script type="module" src="/src/main.js"></script>
 </body>
 </html>

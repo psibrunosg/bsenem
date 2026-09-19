@@ -37,7 +37,11 @@ jobs:
         run: npm run test:backend
 
       - name: Build
+        # O Pages serve em /<repo>/, então sem BASE_PATH o HTML aponta para
+        # /assets/... e o bundle dá 404.
         run: npm run build
+        env:
+          BASE_PATH: /${{ github.event.repository.name }}/
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
