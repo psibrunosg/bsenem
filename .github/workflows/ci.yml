@@ -1,0 +1,44 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run tests
+        run: npm run test
+
+      - name: Run backend authentication tests
+        run: npm run test:backend
+
+      # A VPS (estudos.bssaude.com.br) serve na raiz do dominio, entao o build
+      # vai sem BASE_PATH. A publicacao e feita fora do CI: dist/ vai para
+      # /opt/projects/bsenem/releases/<sha> e o symlink current aponta para la.
+      # Veja docs/DEPLOY_VPS.md.
+      - name: Build
+        run: npm run build
