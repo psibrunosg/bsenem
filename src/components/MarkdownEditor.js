@@ -1,4 +1,6 @@
 // src/components/MarkdownEditor.js
+import { escapeHtml } from '../utils/html.js';
+
 export class MarkdownEditor {
   constructor(options = {}) {
     this.content = options.content ?? '';
@@ -484,9 +486,7 @@ export class MarkdownEditor {
   }
 
   escapeHtml(text) {
-    const div = document.createElement('div');
-    div.textContent = text;
-    return div.innerHTML;
+    return escapeHtml(text);
   }
 
   destroy() {

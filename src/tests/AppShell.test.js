@@ -41,6 +41,37 @@ describe('AppShell', () => {
 
     expect(element.querySelector('.app-content').textContent).toContain('Dashboard carregado');
   });
+
+  it('keeps the authenticated shell mounted and reports an error when logout fails', async () => {
+    const onLogout = vi.fn();
+    const app = new AppShell({
+      user,
+      onLogout,
+      api: { post: vi.fn().mockResolvedValue({ success: false, status: 503 }) }
+    });
+    const element = app.render();
+
+    const result = await app.logout();
+
+    expect(result).toBe(false);
+    expect(onLogout).not.toHaveBeenCalled();
+    expect(element.querySelector('[role="alert"]').textContent).toContain('Não foi possível sair');
+  });
+
+  it('returns to authentication only after logout succeeds', async () => {
+    const onLogout = vi.fn();
+    const app = new AppShell({
+      user,
+      onLogout,
+      api: { post: vi.fn().mockResolvedValue({ success: true, status: 200 }) }
+    });
+    app.render();
+
+    const result = await app.logout();
+
+    expect(result).toBe(true);
+    expect(onLogout).toHaveBeenCalledOnce();
+  });
 });
 
 describe('Sidebar', () => {

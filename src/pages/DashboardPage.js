@@ -6,6 +6,7 @@ import { StatsDashboard } from '@components/StatsDashboard.js';
 import { LocalLearningAnalyticsService } from '@services/LocalLearningAnalyticsService.js';
 
 import { api } from '@utils/api.js';
+import { escapeHtml } from '@utils/html.js';
 
 export class DashboardPage {
   constructor(options = {}) {
@@ -121,7 +122,7 @@ export class DashboardPage {
     this.element.innerHTML = `
       <div class="page-header">
         <h1>Dashboard</h1>
-        <p>Bem-vindo de volta, ${this.user.name}!</p>
+        <p>Bem-vindo de volta, ${escapeHtml(this.user.name)}!</p>
       </div>
       
       <div class="dashboard-top-section">
@@ -157,7 +158,7 @@ export class DashboardPage {
     if (streakContainer) {
       this.streak = new StreakCounter({
         streak: this.user.streak,
-        bestStreak: this.user.streak,
+        bestStreak: this.user.bestStreak,
         hasStudiedToday: this.hasStudiedToday(),
         onFreeze: () => this.handleFreeze()
       });

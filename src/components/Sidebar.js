@@ -1,4 +1,7 @@
 // src/components/Sidebar.js
+import { normalizeUserProfile } from '../utils/user.js';
+import { escapeHtml } from '../utils/html.js';
+
 export class Sidebar {
   constructor(options = {}) {
     this.collapsed = options.collapsed ?? false;
@@ -7,7 +10,7 @@ export class Sidebar {
     this.onToggleCollapse = options.onToggleCollapse ?? (() => {});
     this.currentRoute = options.currentRoute ?? 'dashboard';
     if (!options.user?.id) throw new Error('Authenticated user is required.');
-    this.user = options.user;
+    this.user = normalizeUserProfile(options.user);
     this.subjects = options.subjects ?? [];
     this.element = null;
     this.overlay = null;
@@ -26,6 +29,7 @@ export class Sidebar {
         items: [
           { id: 'video', icon: 'play-circle', label: 'Videoaulas' },
           { id: 'audio', icon: 'music', label: 'Áudios' },
+          { id: 'study-library', icon: 'library-big', label: 'Biblioteca de estudos' },
           { id: 'library', icon: 'folder-open', label: 'Biblioteca local' },
           { id: 'flashcards', icon: 'layers', label: 'Flashcards' }
         ]
@@ -75,9 +79,9 @@ export class Sidebar {
 
       <div class="sidebar-footer">
         <div class="user-info">
-          <div class="user-avatar">${this.user.name.charAt(0).toUpperCase()}</div>
+          <div class="user-avatar">${escapeHtml(this.user.name.charAt(0).toUpperCase())}</div>
           <div class="user-details">
-            <div class="user-name">${this.user.name}</div>
+            <div class="user-name">${escapeHtml(this.user.name)}</div>
             <div class="user-level">Nível ${this.user.level} • ${this.user.xp}/${this.user.xpMax} XP</div>
           </div>
         </div>
@@ -167,16 +171,16 @@ export class Sidebar {
   }
 
   setUser(user) {
-    this.user = { ...this.user, ...user };
+    this.user = normalizeUserProfile({ ...this.user, ...user });
     if (this.element) {
       const footer = this.element.querySelector('.sidebar-footer');
       if (footer) {
         const xpPercent = Math.min(100, (this.user.xp / this.user.xpMax) * 100);
         footer.innerHTML = `
           <div class="user-info">
-            <div class="user-avatar">${this.user.name.charAt(0).toUpperCase()}</div>
+            <div class="user-avatar">${escapeHtml(this.user.name.charAt(0).toUpperCase())}</div>
             <div class="user-details">
-              <div class="user-name">${this.user.name}</div>
+              <div class="user-name">${escapeHtml(this.user.name)}</div>
               <div class="user-level">Nível ${this.user.level} • ${this.user.xp}/${this.user.xpMax} XP</div>
             </div>
           </div>

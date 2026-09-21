@@ -47,7 +47,7 @@ completo. Ele é untracked — cada máquina tem o seu.
 npm run provision-user -- voce@exemplo.com
 ```
 
-O comando pergunta nome e senha (mínimo 12 caracteres) e recusa e-mail que já
+O comando pergunta nome e senha (mínimo 8 caracteres) e recusa e-mail que já
 exista. Como ele usa o mesmo `APP_DB_PATH` do resto do backend, sem a variável
 definida ele escreve no banco local — nada encosta em produção.
 

@@ -33,6 +33,7 @@
 @import './components/dashboard.css';
 @import './components/library.css';
 @import './components/course-library.css';
+@import './components/study-library.css';
 @import './components/lesson-player.css';
 @import './components/login.css';
 

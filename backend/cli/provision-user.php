@@ -3,6 +3,7 @@
 declare(strict_types=1);
 
 require_once __DIR__ . '/../config/database.php';
+require_once __DIR__ . '/../utils/ConsoleInput.php';
 
 if ($argc !== 2 || filter_var($argv[1], FILTER_VALIDATE_EMAIL) === false) {
     fwrite(STDERR, "Usage: php backend/cli/provision-user.php user@example.com" . PHP_EOL);
@@ -11,27 +12,16 @@ if ($argc !== 2 || filter_var($argv[1], FILTER_VALIDATE_EMAIL) === false) {
 
 $email = strtolower($argv[1]);
 
-function prompt(string $label): string {
-    fwrite(STDOUT, $label);
-    $value = fgets(STDIN);
-
-    if ($value === false) {
-        throw new RuntimeException('Interactive input is required.');
-    }
-
-    return trim($value);
-}
-
 try {
-    $name = prompt('Name: ');
-    $password = prompt('Password: ');
+    $name = trim(ConsoleInput::readLine('Name: '));
+    $password = ConsoleInput::readPassword('Password: ');
 
     if ($name === '') {
         throw new RuntimeException('Name is required.');
     }
 
-    if (mb_strlen($password) < 12) {
-        throw new RuntimeException('Password must contain at least 12 characters.');
+    if (mb_strlen($password) < 8) {
+        throw new RuntimeException('Password must contain at least 8 characters.');
     }
 
     $db = Database::getInstance();

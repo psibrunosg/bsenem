@@ -1,4 +1,6 @@
 // src/components/Header.js
+import { escapeHtml, highlightText } from '../utils/html.js';
+
 export class Header {
   constructor(options = {}) {
     this.onSearch = options.onSearch ?? (() => {});
@@ -12,7 +14,7 @@ export class Header {
     this.searchResults = options.searchResults ?? [];
     this.showCommandPalette = false;
     this.showUserMenu = false;
-    this.showSearchResults = false;
+    this.searchResultsVisible = false;
     
     // Pomodoro State
     this.pomodoroTime = 25 * 60;
@@ -56,22 +58,18 @@ export class Header {
           <i data-lucide="sun" class="w-5 h-5 sun-icon"></i>
           <i data-lucide="moon" class="w-5 h-5 moon-icon"></i>
         </button>
-        <button class="header-action" aria-label="Notificações" data-action="notifications">
-          <i data-lucide="bell" class="w-5 h-5"></i>
-          <span class="badge badge-primary" style="display: none;">3</span>
-        </button>
         <button class="header-action" aria-label="Configurações" data-action="settings">
           <i data-lucide="settings" class="w-5 h-5"></i>
         </button>
         <div class="user-menu-trigger" data-action="user-menu-toggle" role="button" tabindex="0" aria-haspopup="true" aria-expanded="false">
-          <div class="user-avatar">${this.user.name.charAt(0).toUpperCase()}</div>
-          <span class="user-name">${this.user.name}</span>
+          <div class="user-avatar">${escapeHtml(this.user.name.charAt(0).toUpperCase())}</div>
+          <span class="user-name">${escapeHtml(this.user.name)}</span>
           <i data-lucide="chevron-down" class="w-4 h-4"></i>
         </div>
         <div class="user-menu-dropdown" role="menu">
           <div class="user-menu-header">
-            <div class="user-menu-name">${this.user.name}</div>
-            <div class="user-menu-email">${this.user.email}</div>
+            <div class="user-menu-name">${escapeHtml(this.user.name)}</div>
+            <div class="user-menu-email">${escapeHtml(this.user.email)}</div>
           </div>
           <button class="user-menu-item" data-action="profile" role="menuitem">
             <i data-lucide="user" class="w-4 h-4"></i>
@@ -177,6 +175,9 @@ export class Header {
       });
     }
 
+    const settings = this.element.querySelector('[data-action="settings"]');
+    settings?.addEventListener('click', () => this.onUserMenuAction('preferences'));
+
     // Pomodoro toggle
     const pomodoroToggle = this.element.querySelector('[data-action="toggle-pomodoro"]');
     if (pomodoroToggle) {
@@ -229,19 +230,19 @@ export class Header {
       searchResults.innerHTML = `
         <div class="search-results-empty">
           <i data-lucide="search-x" class="w-8 h-8 mx-auto mb-2 text-muted"></i>
-          <p>Nenhum resultado para "${this.element.querySelector('[data-action="search-input"]').value}"</p>
+          <p>Nenhum resultado para "${escapeHtml(this.element.querySelector('[data-action="search-input"]').value)}"</p>
         </div>
       `;
     } else {
       const grouped = this.groupResults(this.searchResults);
       searchResults.innerHTML = Object.entries(grouped).map(([category, items]) => `
-        <div class="search-results-header">${category}</div>
+        <div class="search-results-header">${escapeHtml(category)}</div>
         ${items.map(item => `
-          <a href="#" class="search-result-item" role="option" data-route="${item.route}" data-id="${item.id}">
-            <i data-lucide="${item.icon}" class="w-5 h-5"></i>
+          <a href="#" class="search-result-item" role="option" data-route="${escapeHtml(item.route)}" data-id="${escapeHtml(item.id)}">
+            <i data-lucide="${escapeHtml(item.icon)}" class="w-5 h-5"></i>
             <div class="search-result-content">
               <div class="search-result-title">${this.highlightMatch(item.title, this.element.querySelector('[data-action="search-input"]').value)}</div>
-              <div class="search-result-meta">${item.meta}</div>
+              <div class="search-result-meta">${escapeHtml(item.meta)}</div>
             </div>
           </a>
         `).join('')}
@@ -263,16 +264,14 @@ export class Header {
   }
 
   highlightMatch(text, query) {
-    if (!query) return text;
-    const regex = new RegExp(`(${query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi');
-    return text.replace(regex, '<mark style="background: var(--warning-bg); color: var(--warning); padding: 0 2px; border-radius: 2px;">$1</mark>');
+    return highlightText(text, query);
   }
 
   showSearchResults() {
     const searchResults = this.element.querySelector('.search-results');
     if (searchResults) {
       searchResults.classList.add('open');
-      this.showSearchResults = true;
+      this.searchResultsVisible = true;
     }
   }
 
@@ -280,7 +279,7 @@ export class Header {
     const searchResults = this.element.querySelector('.search-results');
     if (searchResults) {
       searchResults.classList.remove('open');
-      this.showSearchResults = false;
+      this.searchResultsVisible = false;
     }
   }
 

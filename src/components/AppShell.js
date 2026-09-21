@@ -2,6 +2,8 @@ import { Sidebar } from './Sidebar.js';
 import { Header } from './Header.js';
 import { triggerConfetti } from '../utils/confetti.js';
 import { api } from '../utils/api.js';
+import { normalizeUserProfile } from '../utils/user.js';
+import { escapeHtml } from '../utils/html.js';
 
 export class AppShell {
   constructor(options = {}) {
@@ -9,7 +11,8 @@ export class AppShell {
     this.sidebarMobileOpen = false;
     this.currentRoute = 'dashboard';
     if (!options.user?.id) throw new Error('Authenticated user is required.');
-    this.user = options.user;
+    this.user = normalizeUserProfile(options.user);
+    this.api = options.api ?? api;
     this.onLogout = options.onLogout ?? (() => {});
     this.subjects = options.subjects ?? [];
     this.libraryService = options.libraryService ?? null;
@@ -46,6 +49,7 @@ export class AppShell {
     this.element = document.createElement('div');
     this.element.className = 'app-shell';
     this.element.innerHTML = `
+      <div class="app-session-alert" role="alert" hidden></div>
       <div class="app-sidebar-container"></div>
       <div class="app-main">
         <div class="app-header-container"></div>
@@ -125,6 +129,7 @@ export class AppShell {
       try {
         component = new Component({
           app: this,
+          api: this.api,
           user: this.user,
           subjects: this.subjects,
           library: this.libraryService
@@ -147,7 +152,7 @@ export class AppShell {
           <div class="text-center py-12">
             <i data-lucide="alert-circle" class="w-12 h-12 mx-auto text-error mb-4"></i>
             <h2 class="text-xl font-semibold mb-2">Erro ao carregar</h2>
-            <p class="text-secondary">${error.message}</p>
+            <p class="text-secondary">${escapeHtml(error.message)}</p>
           </div>
         `;
       }
@@ -185,7 +190,10 @@ export class AppShell {
       notes: 'Anotações',
       exams: 'Simulados',
       stats: 'Estatísticas',
-      library: 'Arquivos Locais'
+      library: 'Arquivos Locais',
+      profile: 'Perfil',
+      settings: 'Preferências',
+      help: 'Ajuda'
     };
     return titles[route] || route.charAt(0).toUpperCase() + route.slice(1);
   }
@@ -241,10 +249,16 @@ export class AppShell {
   toggleTheme() {
     const html = document.documentElement;
     const isDark = html.getAttribute('data-theme') === 'dark';
-    const newTheme = isDark ? 'light' : 'dark';
-    html.setAttribute('data-theme', newTheme);
-    localStorage.setItem('theme', newTheme);
-    this.header.updateThemeIcons(!isDark);
+    this.setTheme(isDark ? 'light' : 'dark');
+  }
+
+  setTheme(theme) {
+    const preference = ['light', 'dark', 'system'].includes(theme) ? theme : 'system';
+    const systemDark = window.matchMedia?.('(prefers-color-scheme: dark)').matches ?? false;
+    const resolved = preference === 'system' ? (systemDark ? 'dark' : 'light') : preference;
+    document.documentElement.setAttribute('data-theme', resolved);
+    localStorage.setItem('theme', preference);
+    this.header.updateThemeIcons(resolved === 'dark');
   }
 
   // Search
@@ -274,9 +288,18 @@ export class AppShell {
   }
 
   async logout() {
-    await api.post('/auth/logout').catch(() => null);
+    const response = await this.api.post('/auth/logout').catch(() => null);
+    if (!response?.success) {
+      const alert = this.element?.querySelector('.app-session-alert');
+      if (alert) {
+        alert.textContent = 'Não foi possível sair agora. Sua sessão continua ativa; tente novamente.';
+        alert.hidden = false;
+      }
+      return false;
+    }
     this.destroy();
     this.onLogout();
+    return true;
   }
 
   showShortcutsHelp() {
@@ -349,7 +372,7 @@ export class AppShell {
 
   // User management
   setUser(user) {
-    this.user = { ...this.user, ...user };
+    this.user = normalizeUserProfile({ ...this.user, ...user });
     this.sidebar.setUser(this.user);
     this.header.setUser(this.user);
   }

@@ -10,16 +10,20 @@ export default defineConfig(() => {
     server: {
       port: 8765,
       open: true,
+      // Keep Vite's experimental agent console forwarding disabled. Explicit
+      // configuration also prevents an unresolved client placeholder in Vite 8.
+      forwardConsole: false,
       // O front chama /api na mesma origem (em produção quem resolve é o
       // nginx). No dev server isso cairia no próprio Vite, então encaminha
       // para o PHP embutido — `npm run dev:api`.
-      proxy: { '/api': { target: 'http://localhost:8000', changeOrigin: true } }
+      // Preserve the browser-facing Host header so the API's same-origin
+      // protection can validate requests exactly as they arrived at Vite.
+      proxy: { '/api': { target: 'http://localhost:8000', changeOrigin: false } }
     },
     build: {
       outDir: 'dist',
       assetsDir: 'assets',
-      sourcemap: false,
-      minify: 'esbuild'
+      sourcemap: false
     },
     resolve: {
       alias: {

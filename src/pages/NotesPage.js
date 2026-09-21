@@ -1,5 +1,6 @@
 // src/pages/NotesPage.js
 import { MarkdownEditor } from '@components/MarkdownEditor.js';
+import { escapeHtml } from '@utils/html.js';
 
 import { api } from '@utils/api.js';
 
@@ -407,9 +408,7 @@ export class NotesPage {
   }
 
   escapeHtml(value) {
-    const div = document.createElement('div');
-    div.textContent = String(value ?? '');
-    return div.innerHTML;
+    return escapeHtml(value);
   }
 
   destroy() {

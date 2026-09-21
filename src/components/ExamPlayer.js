@@ -1,5 +1,6 @@
 // src/components/ExamPlayer.js
 import { QuestionCard } from './QuestionCard.js';
+import { escapeHtml } from '../utils/html.js';
 
 export class ExamPlayer {
   constructor(options = {}) {
@@ -33,8 +34,8 @@ export class ExamPlayer {
     this.element.innerHTML = `
       <div class="exam-header">
         <div class="exam-info">
-          <h2 class="exam-title">${this.exam.title}</h2>
-          <p class="exam-subject">${this.exam.subject}</p>
+          <h2 class="exam-title">${escapeHtml(this.exam.title)}</h2>
+          <p class="exam-subject">${escapeHtml(this.exam.subject)}</p>
         </div>
         <div class="exam-timer">
           <i data-lucide="clock" class="w-5 h-5"></i>

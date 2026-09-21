@@ -7,6 +7,7 @@
 ```
 /opt/projects/bsenem/              # clone do repo, montado no container
 ├── deploy/nginx.conf              # -> /etc/nginx/conf.d/default.conf
+├── deploy/estudos.bssaude.com.br.conf # virtual host TLS do Nginx da VPS
 ├── releases/<sha>/                # um diretório por build publicado
 │   └── index.html, assets/, ...
 └── current -> releases/<sha>      # root do nginx
@@ -14,7 +15,18 @@
 
 O container `deploy-frontend-1` (nginx:alpine) monta `/opt/projects/bsenem` em
 `/var/www/bsenem` e serve `/var/www/bsenem/current`. O `deploy-api-1`
-(php:8.2-cli) atende `/api/`.
+(php:8.2-cli) atende `/api/`. O Nginx externo usa somente
+`deploy/estudos.bssaude.com.br.conf`, termina TLS, aplica os headers de segurança
+e encaminha para `127.0.0.1:8081`. O `deploy/nginx.conf` é exclusivamente a
+configuração interna do container frontend. Não instale os dois arquivos no
+mesmo diretório de virtual hosts.
+
+Antes de recarregar uma alteração de proxy, valide no host:
+
+```bash
+sudo nginx -t
+sudo systemctl reload nginx
+```
 
 **A VPS não tem Node instalado.** O build é feito na máquina de quem publica e
 o `dist/` é copiado para `releases/<sha>`.

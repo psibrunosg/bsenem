@@ -1,0 +1,63 @@
+.study-library-page { background: #080909; color: #f7f7f5; min-height: 100%; padding: clamp(1.5rem, 4vw, 4rem); margin: -1.5rem; }
+.study-library-page .page-header { margin-bottom: 2rem; }
+.study-library-page .page-header h1 { color: #fff; font-size: clamp(2rem, 3vw, 3.25rem); letter-spacing: -0.045em; }
+.study-library-page .page-header p { color: #aaa; }
+.institution-galleries { display: grid; gap: 3.75rem; margin-bottom: 3.5rem; }
+.institution-gallery > header { display: flex; justify-content: space-between; align-items: center; gap: 1rem; margin-bottom: 1rem; }
+.institution-gallery h2 { font-size: clamp(1.55rem, 2.2vw, 2.35rem); letter-spacing: -0.04em; margin: 0; color: #fff; }
+.institution-gallery-actions { display: flex; align-items: center; gap: 0.5rem; }
+.institution-gallery-all { border: 1px solid #e8e8e5; border-radius: 999px; background: transparent; color: #fff; padding: 0.7rem 1.55rem; font: inherit; font-weight: 700; white-space: nowrap; }
+.institution-gallery-scroll { width: 2.7rem; height: 2.7rem; border: 1px solid #565656; border-radius: 50%; background: #171717; color: #fff; font-size: 1.15rem; }
+.institution-gallery-scroll:hover, .institution-gallery-all:hover { border-color: #f28a3c; color: #f28a3c; }
+.institution-gallery-rail { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(15rem, 20rem); grid-template-rows: 1fr; overflow-x: auto; overscroll-behavior-inline: contain; scroll-snap-type: inline mandatory; gap: 1rem; padding: 0 0 0.8rem; scrollbar-color: #555 transparent; }
+.institution-gallery-card { border: 0; padding: 0; background: transparent; color: #fff; text-align: left; font: inherit; cursor: pointer; }
+.institution-gallery-card { scroll-snap-align: start; }
+.institution-gallery-cover { display: block; height: clamp(17rem, 30vw, 27rem); margin-bottom: 0.8rem; border-radius: 1rem; background: linear-gradient(145deg, #313d37, #151a18 58%, #6b4a2c); overflow: hidden; }
+.institution-gallery-cover[data-cover="1"] { background: linear-gradient(145deg, #294156, #151a20 58%, #9a633c); }
+.institution-gallery-cover[data-cover="2"] { background: linear-gradient(145deg, #5f4935, #191817 55%, #b38c56); }
+.institution-gallery-cover[data-cover="3"] { background: linear-gradient(145deg, #473943, #161316 54%, #a66a76); }
+.institution-gallery-cover[data-cover="4"] { background: linear-gradient(145deg, #343f52, #14171c 55%, #729b9b); }
+.institution-gallery-card:hover .institution-gallery-cover { transform: translateY(-3px); filter: brightness(1.12); }
+.institution-gallery-kind { display: block; color: #f28a3c; font-size: 0.9rem; font-weight: 700; margin-bottom: 0.25rem; }
+.institution-gallery-card strong { display: block; font-size: 1.15rem; line-height: 1.2; color: #fff; overflow-wrap: anywhere; }
+.study-library-controls,
+.study-library-breadcrumbs,
+.study-library-pagination {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.study-library-controls .input { min-width: min(100%, 22rem); flex: 1; }
+.study-library-type-shortcuts { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: -0.25rem 0 1rem; }
+.study-library-type-shortcuts [aria-pressed="true"] { border-color: var(--color-primary, #f97316); color: var(--color-primary, #f97316); }
+.study-library-children { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-bottom: 1.5rem; }
+.study-library-folder,
+.study-library-item { border: 1px solid #333; background: #121313; border-radius: 0.8rem; text-align: left; }
+.study-library-folder { padding: 1rem; min-width: 13rem; color: #fff; }
+.study-library-folder strong,
+.study-library-folder span { display: block; }
+.study-library-folder span,
+.study-library-item p,
+.study-library-item-type { color: #aaa; font-size: 0.875rem; }
+.study-library-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr)); gap: 1rem; }
+.study-library-item { display: block; padding: 0; color: #fff; text-decoration: none; overflow: hidden; min-height: 15rem; }
+.study-library-item:hover { border-color: var(--color-primary, #f97316); transform: translateY(-1px); }
+.study-library-item-cover { display: flex; align-items: end; height: 7.5rem; padding: 0.9rem; background: linear-gradient(145deg, #334d57, #142128 65%, #a3673d); }
+.study-library-item-cover[data-type="pdf"] { background: linear-gradient(145deg, #5b3535, #211616 65%, #a85b45); }
+.study-library-item-cover[data-type="document"] { background: linear-gradient(145deg, #49435b, #191722 65%, #776bb0); }
+.study-library-item-cover[data-type="audio"] { background: linear-gradient(145deg, #3d5241, #142017 65%, #6a9b61); }
+.study-library-item-cover[data-type="other"] { background: linear-gradient(145deg, #494949, #171717 65%, #777); }
+.study-library-item h2 { font-size: 1rem; margin: 0.9rem 1rem 0.45rem; overflow-wrap: anywhere; }
+.study-library-item p { margin: 0 1rem; min-height: 2.6em; }
+.study-library-item-type { color: #fff; font-weight: 800; text-transform: uppercase; letter-spacing: 0.06em; }
+.study-library-item-action { display: block; margin: 1rem; color: #f28a3c; font-size: 0.9rem; font-weight: 700; }
+.study-library-player { margin-bottom: 2.5rem; border: 1px solid #353535; border-radius: 1rem; overflow: hidden; background: #111; }
+.study-library-player > header { display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding: 1rem 1.25rem; }
+.study-library-player h2 { margin: 0; color: #fff; font-size: 1.1rem; overflow-wrap: anywhere; }
+.study-library-player iframe { display: block; width: 100%; min-height: min(68vh, 48rem); border: 0; background: #000; }
+.study-library-player-external { display: inline-block; margin: 1rem 1.25rem; color: #f28a3c; font-weight: 700; }
+.study-library-message { padding: 2rem; color: #aaa; text-align: center; }
+@media (max-width: 640px) { .study-library-page { padding: 1.25rem; margin: -1rem; } .study-library-controls .input { min-width: 100%; } .institution-gallery-actions .institution-gallery-scroll { display: none; } .institution-gallery-all { padding-inline: 1rem; } .institution-gallery-rail { grid-auto-columns: minmax(13.5rem, 78vw); } }

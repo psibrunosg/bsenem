@@ -7,4 +7,11 @@ describe('Sidebar', () => {
 
     expect(element.querySelector('[data-route="flashcards"] i')?.getAttribute('data-lucide')).toBe('layers');
   });
+
+  it('uses a finite XP target when the API profile omits the optional camel-case alias', () => {
+    const element = new Sidebar({ user: { id: 1, name: 'Teste', xp: 0, level: 1, streak: 0 } }).render();
+
+    expect(element.querySelector('.user-level').textContent).toContain('0/1000 XP');
+    expect(element.querySelector('.sidebar-xp').getAttribute('aria-valuenow')).toBe('0');
+  });
 });

@@ -7,6 +7,10 @@ import { NotesPage } from '@pages/NotesPage.js';
 import { ExamsPage } from '@pages/ExamsPage.js';
 import { DashboardPage } from '@pages/DashboardPage.js';
 import { LibraryPage } from '@pages/LibraryPage.js';
+import { ProfilePage } from '@pages/ProfilePage.js';
+import { SettingsPage } from '@pages/SettingsPage.js';
+import { HelpPage } from '@pages/HelpPage.js';
+import { StudyLibraryPage } from '@pages/StudyLibraryPage.js';
 import { LocalLibraryService } from '@services/LocalLibraryService.js';
 import { bootstrapAuth } from './bootstrapAuth.js';
 import { api } from '@utils/api.js';
@@ -19,7 +23,7 @@ function createShell({ user }) {
   const library = new LocalLibraryService();
   library.setUser?.(user.id);
   shell.setLibraryService(library);
-  [['dashboard', DashboardPage], ['video', VideoPage], ['audio', AudioPage], ['flashcards', FlashcardsPage], ['notes', NotesPage], ['exams', ExamsPage], ['library', LibraryPage]]
+  [['dashboard', DashboardPage], ['video', VideoPage], ['audio', AudioPage], ['flashcards', FlashcardsPage], ['notes', NotesPage], ['exams', ExamsPage], ['study-library', StudyLibraryPage], ['library', LibraryPage], ['profile', ProfilePage], ['settings', SettingsPage], ['help', HelpPage]]
     .forEach(([route, component]) => shell.registerRoute(route, component));
   return shell;
 }

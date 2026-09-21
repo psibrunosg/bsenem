@@ -1,4 +1,6 @@
 // src/components/FlashcardManager.js
+import { escapeHtml, safeCssColor } from '../utils/html.js';
+
 export class FlashcardManager {
   constructor(options = {}) {
     this.cards = options.cards ?? [];
@@ -60,7 +62,7 @@ export class FlashcardManager {
               <label for="card-subject">Matéria</label>
               <select id="card-subject" class="select">
                 <option value="">Selecione...</option>
-                ${this.subjects.map(s => `<option value="${s.id}">${s.name}</option>`).join('')}
+                ${this.subjects.map(s => `<option value="${escapeHtml(s.id)}">${escapeHtml(s.name)}</option>`).join('')}
               </select>
             </div>
             
@@ -82,7 +84,7 @@ export class FlashcardManager {
           <input type="text" class="input" placeholder="Buscar cards..." data-action="search">
           <select class="select" data-action="filter-subject">
             <option value="">Todas as matérias</option>
-            ${this.subjects.map(s => `<option value="${s.id}">${s.name}</option>`).join('')}
+            ${this.subjects.map(s => `<option value="${escapeHtml(s.id)}">${escapeHtml(s.name)}</option>`).join('')}
           </select>
         </div>
         
@@ -135,21 +137,21 @@ export class FlashcardManager {
     const subject = this.subjects.find(s => s.id === card.subject);
     
     return `
-      <div class="flashcard-item" data-card-id="${card.id}">
+      <div class="flashcard-item" data-card-id="${escapeHtml(card.id)}">
         <div class="flashcard-item-content">
-          <div class="flashcard-item-front">${card.front}</div>
-          <div class="flashcard-item-back">${card.back}</div>
+          <div class="flashcard-item-front">${escapeHtml(card.front)}</div>
+          <div class="flashcard-item-back">${escapeHtml(card.back)}</div>
         </div>
         <div class="flashcard-item-meta">
-          ${subject ? `<span class="flashcard-item-subject" style="color: ${subject.color}">${subject.name}</span>` : ''}
-          <span class="flashcard-item-interval">${card.interval}d</span>
-          <span class="flashcard-item-ease">EF: ${card.easeFactor.toFixed(1)}</span>
+          ${subject ? `<span class="flashcard-item-subject" style="color: ${safeCssColor(subject.color)}">${escapeHtml(subject.name)}</span>` : ''}
+          <span class="flashcard-item-interval">${Number(card.interval) || 0}d</span>
+          <span class="flashcard-item-ease">EF: ${Number(card.easeFactor ?? 0).toFixed(1)}</span>
         </div>
         <div class="flashcard-item-actions">
-          <button class="btn btn-ghost btn-sm" data-action="edit" data-card-id="${card.id}">
+          <button class="btn btn-ghost btn-sm" data-action="edit" data-card-id="${escapeHtml(card.id)}">
             <i data-lucide="edit" class="w-4 h-4"></i>
           </button>
-          <button class="btn btn-ghost btn-sm" data-action="delete" data-card-id="${card.id}">
+          <button class="btn btn-ghost btn-sm" data-action="delete" data-card-id="${escapeHtml(card.id)}">
             <i data-lucide="trash-2" class="w-4 h-4"></i>
           </button>
         </div>

@@ -8,6 +8,7 @@ describe('NotesPage', () => {
 
   it('renders saved note metadata as text instead of HTML', () => {
     const page = new NotesPage();
+    page.loadNotes = async () => {};
     page.notes = [{
       id: 'note_1',
       title: '<img src=x onerror=alert(1)>',

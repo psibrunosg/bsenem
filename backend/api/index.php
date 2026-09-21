@@ -1,19 +1,22 @@
 <?php
 // backend/api/index.php
 
-require_once __DIR__ . '/../config/cors.php';
 require_once __DIR__ . '/../utils/env.php';
 loadEnv();
+require_once __DIR__ . '/../config/cors.php';
 require_once __DIR__ . '/../config/database.php';
 require_once __DIR__ . '/../config/response.php';
 require_once __DIR__ . '/../middleware/auth.php';
+require_once __DIR__ . '/../middleware/csrf.php';
 require_once __DIR__ . '/../controllers/AuthController.php';
 require_once __DIR__ . '/../controllers/FlashcardController.php';
 require_once __DIR__ . '/../controllers/NoteController.php';
 require_once __DIR__ . '/../controllers/ProgressController.php';
 require_once __DIR__ . '/../controllers/ExamController.php';
+require_once __DIR__ . '/../controllers/StudyLibraryController.php';
 
 initializeDatabase();
+Csrf::enforce();
 
 $method = $_SERVER['REQUEST_METHOD'];
 $uri = $_SERVER['REQUEST_URI'];
@@ -63,6 +66,13 @@ match(true) {
 
     $resource === 'auth' && $id === 'me' && $method === 'GET'
         => AuthController::me(),
+
+    $resource === 'auth' && $id === 'profile' && $method === 'PUT'
+        => AuthController::updateProfile(),
+
+    // Imported study library routes
+    $resource === 'study-library' && !$id && $method === 'GET'
+        => StudyLibraryController::index(),
 
     // Flashcard routes
     $resource === 'flashcards' && $id === 'due' && $sub === 'count' && $method === 'GET'

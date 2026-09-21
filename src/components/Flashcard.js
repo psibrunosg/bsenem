@@ -1,4 +1,6 @@
 // src/components/Flashcard.js
+import { escapeHtml } from '../utils/html.js';
+
 export class Flashcard {
   constructor(options = {}) {
     this.card = options.card ?? null;
@@ -20,13 +22,13 @@ export class Flashcard {
       <div class="flashcard-inner">
         <div class="flashcard-front">
           <div class="flashcard-header">
-            <span class="flashcard-subject">${this.card?.subject || ''}</span>
+            <span class="flashcard-subject">${escapeHtml(this.card?.subject || '')}</span>
             <button class="flashcard-flip-btn" aria-label="Virar card" data-action="flip">
               <i data-lucide="rotate-cw" class="w-5 h-5"></i>
             </button>
           </div>
           <div class="flashcard-content">
-            <p class="flashcard-text">${this.card?.front || 'Frente do card'}</p>
+            <p class="flashcard-text">${escapeHtml(this.card?.front || 'Frente do card')}</p>
           </div>
           <div class="flashcard-footer">
             <span class="flashcard-hint">Toque para virar</span>
@@ -35,13 +37,13 @@ export class Flashcard {
         
         <div class="flashcard-back">
           <div class="flashcard-header">
-            <span class="flashcard-subject">${this.card?.subject || ''}</span>
+            <span class="flashcard-subject">${escapeHtml(this.card?.subject || '')}</span>
             <button class="flashcard-flip-btn" aria-label="Voltar" data-action="flip">
               <i data-lucide="rotate-ccw" class="w-5 h-5"></i>
             </button>
           </div>
           <div class="flashcard-content">
-            <p class="flashcard-text">${this.card?.back || 'Verso do card'}</p>
+            <p class="flashcard-text">${escapeHtml(this.card?.back || 'Verso do card')}</p>
           </div>
           <div class="flashcard-controls">
             <button class="flashcard-rating-btn again" data-rating="0" title="Novamente (1)">

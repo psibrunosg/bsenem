@@ -1,4 +1,6 @@
 // src/components/QuestionCard.js
+import { escapeHtml, safeResourceUrl } from '../utils/html.js';
+
 export class QuestionCard {
   constructor(options = {}) {
     this.question = options.question ?? null;
@@ -42,14 +44,14 @@ export class QuestionCard {
       </div>
       
       <div class="question-content">
-        <p class="question-text">${this.question.text}</p>
+        <p class="question-text">${escapeHtml(this.question.text)}</p>
         ${this.question.image ? `
           <div class="question-image">
-            <img src="${this.question.image}" alt="Imagem da questão">
+            <img src="${safeResourceUrl(this.question.image)}" alt="Imagem da questão">
           </div>
         ` : ''}
         ${this.question.code ? `
-          <pre class="question-code"><code>${this.question.code}</code></pre>
+          <pre class="question-code"><code>${escapeHtml(this.question.code)}</code></pre>
         ` : ''}
       </div>
       
@@ -61,7 +63,7 @@ export class QuestionCard {
                   data-answer="${i}"
                   ${this.isReviewing ? 'disabled' : ''}>
             <span class="question-answer-letter">${String.fromCharCode(65 + i)}</span>
-            <span class="question-answer-text">${answer}</span>
+            <span class="question-answer-text">${escapeHtml(answer)}</span>
             ${this.isReviewing && i === this.question.correctAnswer ? `
               <i data-lucide="check" class="w-4 h-4 answer-icon"></i>
             ` : ''}
@@ -78,9 +80,9 @@ export class QuestionCard {
             <i data-lucide="lightbulb" class="w-5 h-5"></i>
             <span>Explicação</span>
           </div>
-          <p class="question-explanation-text">${this.question.explanation || 'Nenhuma explicação disponível.'}</p>
+          <p class="question-explanation-text">${escapeHtml(this.question.explanation || 'Nenhuma explicação disponível.')}</p>
           ${this.question.source ? `
-            <p class="question-explanation-source">Fonte: ${this.question.source}</p>
+            <p class="question-explanation-source">Fonte: ${escapeHtml(this.question.source)}</p>
           ` : ''}
         </div>
       ` : ''}
@@ -190,9 +192,9 @@ export class QuestionCard {
           <i data-lucide="lightbulb" class="w-5 h-5"></i>
           <span>Explicação</span>
         </div>
-        <p class="question-explanation-text">${this.question.explanation || 'Nenhuma explicação disponível.'}</p>
+        <p class="question-explanation-text">${escapeHtml(this.question.explanation || 'Nenhuma explicação disponível.')}</p>
         ${this.question.source ? `
-          <p class="question-explanation-source">Fonte: ${this.question.source}</p>
+          <p class="question-explanation-source">Fonte: ${escapeHtml(this.question.source)}</p>
         ` : ''}
       `;
       this.element.appendChild(explanationEl);
