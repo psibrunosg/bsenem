@@ -5,12 +5,12 @@ declare(strict_types=1);
 require_once __DIR__ . '/../config/database.php';
 require_once __DIR__ . '/../services/StudyCatalogImporter.php';
 
-if ($argc !== 3 || filter_var($argv[1], FILTER_VALIDATE_EMAIL) === false || !is_file($argv[2])) {
-    fwrite(STDERR, "Usage: php backend/cli/import-study-library.php user@example.com manifest.json" . PHP_EOL);
+if ($argc !== 3 || filter_var($argv[1], FILTER_VALIDATE_EMAIL) === false || ($argv[2] !== '-' && !is_file($argv[2]))) {
+    fwrite(STDERR, "Usage: php backend/cli/import-study-library.php user@example.com manifest.json|-" . PHP_EOL);
     exit(2);
 }
 
-$manifestJson = file_get_contents($argv[2]);
+$manifestJson = $argv[2] === '-' ? stream_get_contents(STDIN) : file_get_contents($argv[2]);
 $manifest = is_string($manifestJson) ? json_decode($manifestJson, true) : null;
 if (!is_array($manifest)) {
     fwrite(STDERR, "Manifest must be valid JSON." . PHP_EOL);
