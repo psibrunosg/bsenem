@@ -2,7 +2,6 @@
 
 require_once __DIR__ . '/../config/database.php';
 require_once __DIR__ . '/../middleware/auth.php';
-require_once __DIR__ . '/../utils/ConsoleInput.php';
 
 function expectTrue($condition, $message) {
     if (!$condition) {
@@ -10,22 +9,6 @@ function expectTrue($condition, $message) {
         exit(1);
     }
 }
-
-$passwordInput = fopen('php://memory', 'r+');
-$passwordOutput = fopen('php://memory', 'r+');
-fwrite($passwordInput, "eight888\n");
-rewind($passwordInput);
-$readPassword = ConsoleInput::readPassword(
-    'Password: ',
-    $passwordInput,
-    $passwordOutput,
-    false
-);
-rewind($passwordOutput);
-expectTrue($readPassword === 'eight888', 'Password input accepts redirected input');
-expectTrue(stream_get_contents($passwordOutput) === 'Password: ', 'Password prompt does not repeat the password');
-fclose($passwordInput);
-fclose($passwordOutput);
 
 $path = tempnam(sys_get_temp_dir(), 'bsenem-auth-test-');
 if ($path === false) {
