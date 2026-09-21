@@ -1,11 +1,13 @@
 const TYPE_LABELS = { all: 'Todos', video: 'Vídeos', pdf: 'PDFs', audio: 'Áudios', document: 'Documentos', other: 'Outros' };
+const CONTENT_MODES = { all: ['Biblioteca de estudos', ''], video: ['Videoaulas', 'video'], audio: ['Áudios', 'audio'], document: ['Documentos', 'document'] };
 
 export class StudyLibraryPage {
   constructor(options = {}) {
     this.api = options.api;
+    this.contentMode = options.contentMode || 'all';
     this.path = '';
     this.query = '';
-    this.type = '';
+    this.type = CONTENT_MODES[this.contentMode]?.[1] || '';
     this.page = 1;
     this.activeItem = null;
     this.data = { items: [], children: [], types: {}, institution_sections: [] };
@@ -45,7 +47,7 @@ export class StudyLibraryPage {
     const header = document.createElement('header');
     header.className = 'page-header';
     const title = document.createElement('h1');
-    title.textContent = 'Biblioteca de estudos';
+    title.textContent = CONTENT_MODES[this.contentMode]?.[0] || 'Biblioteca de estudos';
     const description = document.createElement('p');
     description.textContent = `${this.pagination.total.toLocaleString('pt-BR')} materiais organizados por instituição e curso.`;
     header.append(title, description);
@@ -68,10 +70,6 @@ export class StudyLibraryPage {
       title.textContent = section.label;
       const actions = document.createElement('div');
       actions.className = 'institution-gallery-actions';
-      const all = document.createElement('button');
-      all.className = 'institution-gallery-all';
-      all.dataset.path = section.path;
-      all.textContent = 'Ver todos';
       for (const [direction, label] of [['previous', 'Anterior'], ['next', 'Próximo']]) {
         const button = document.createElement('button');
         button.type = 'button';
@@ -81,7 +79,6 @@ export class StudyLibraryPage {
         button.textContent = direction === 'previous' ? '←' : '→';
         actions.appendChild(button);
       }
-      actions.appendChild(all);
       header.append(title, actions);
       const rail = document.createElement('div');
       rail.className = 'institution-gallery-rail';
@@ -121,37 +118,12 @@ export class StudyLibraryPage {
     input.value = this.query;
     input.placeholder = 'Buscar aula, PDF ou tema';
     input.setAttribute('aria-label', 'Buscar na biblioteca');
-    const select = document.createElement('select');
-    select.className = 'select';
-    select.name = 'type';
-    for (const [type, label] of Object.entries(TYPE_LABELS)) {
-      const option = document.createElement('option');
-      option.value = type === 'all' ? '' : type;
-      option.selected = option.value === this.type;
-      const count = type === 'all' ? this.pagination.total : this.data.types[type] || 0;
-      option.textContent = `${label} (${count.toLocaleString('pt-BR')})`;
-      select.appendChild(option);
-    }
     const submit = document.createElement('button');
     submit.className = 'btn btn-primary';
     submit.type = 'submit';
     submit.textContent = 'Buscar';
-    form.append(input, select, submit);
-    const wrapper = document.createElement('div');
-    const shortcuts = document.createElement('div');
-    shortcuts.className = 'study-library-type-shortcuts';
-    shortcuts.setAttribute('aria-label', 'Acesso rápido por formato');
-    for (const [type, label] of [['', 'Todos os materiais'], ['video', 'Aulas em vídeo'], ['pdf', 'PDFs'], ['document', 'Documentos']]) {
-      const button = document.createElement('button');
-      button.type = 'button';
-      button.className = 'btn btn-secondary';
-      button.dataset.type = type;
-      button.setAttribute('aria-pressed', String(this.type === type));
-      button.textContent = label;
-      shortcuts.appendChild(button);
-    }
-    wrapper.append(form, shortcuts);
-    return wrapper;
+    form.append(input, submit);
+    return form;
   }
 
   breadcrumbs() {
@@ -197,7 +169,7 @@ export class StudyLibraryPage {
     const section = document.createElement('section');
     section.className = 'study-library-items';
     if (!this.data.items.length) {
-      section.appendChild(message('Nenhum material encontrado com estes filtros.'));
+      section.appendChild(message(`Nenhum ${this.contentMode === 'document' ? 'documento' : 'material'} encontrado neste caminho.`));
       return section;
     }
     const list = document.createElement('div');
@@ -293,7 +265,7 @@ export class StudyLibraryPage {
     if (event.target.dataset.action !== 'search') return;
     event.preventDefault();
     this.query = event.target.elements.q.value.trim();
-    this.type = event.target.elements.type.value;
+    this.type = CONTENT_MODES[this.contentMode]?.[1] || '';
     this.page = 1;
     await this.load();
   }
@@ -317,13 +289,6 @@ export class StudyLibraryPage {
       const rail = gallery?.querySelector('.institution-gallery-rail');
       const direction = scrollButton.dataset.galleryScroll === 'previous' ? -1 : 1;
       rail?.scrollBy({ left: direction * Math.max(280, rail.clientWidth * 0.8), behavior: 'smooth' });
-      return;
-    }
-    const typeButton = event.target.closest('[data-type]');
-    if (typeButton) {
-      this.type = typeButton.dataset.type;
-      this.page = 1;
-      await this.load();
       return;
     }
     const button = event.target.closest('[data-path], [data-page]');

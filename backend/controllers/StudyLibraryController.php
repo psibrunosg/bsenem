@@ -77,11 +77,13 @@ final class StudyLibraryController {
             );
         }
 
+        $children = self::children($paths, $path);
+
         Response::json([
             'success' => true,
             'data' => [
-                'items' => $items,
-                'children' => self::children($paths, $path),
+                'items' => $children === [] ? $items : [],
+                'children' => $children,
                 'types' => array_column($types, 'total', 'item_type'),
                 'institution_sections' => self::institutionSections($institutionPaths),
             ],

@@ -85,10 +85,11 @@ describe('Sidebar', () => {
     expect(routes).not.toContain('stats');
   });
 
-  it('registers Biblioteca local as an implemented route', () => {
+  it('uses Documentos instead of the local library route', () => {
     const routes = [...new Sidebar({ user }).render().querySelectorAll('[data-route]')].map((item) => item.dataset.route);
 
-    expect(routes).toContain('library');
+    expect(routes).toContain('documents');
+    expect(routes).not.toContain('library');
   });
 });
 

@@ -60,8 +60,8 @@ try {
 
     expectLibraryApi($status === 0, "Library endpoint failed: {$error}");
     expectLibraryApi(($response['success'] ?? false) === true, 'Library endpoint responds successfully for an authenticated user');
-    expectLibraryApi(($response['data']['items'][0]['direct_url'] ?? null) === 'https://drive.google.com/file/d/private-library-item/view', 'Library endpoint returns the direct item link');
     expectLibraryApi(($response['data']['children'][0]['label'] ?? null) === 'Instituições', 'Library endpoint exposes catalog navigation');
+    expectLibraryApi(($response['data']['items'] ?? null) === [], 'Library endpoint keeps terminal materials out of a path that has children');
 } finally {
     unset($pdo);
     Database::resetForTests();
