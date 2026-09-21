@@ -11,7 +11,9 @@ services:
     restart: unless-stopped
 
   api:
-    image: php:8.2-cli
+    build:
+      context: ..
+      dockerfile: deploy/api.Dockerfile
     volumes:
       - ../:/var/www/bsenem
     working_dir: /var/www/bsenem/backend/api
