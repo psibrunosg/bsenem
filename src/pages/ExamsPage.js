@@ -1,31 +1,45 @@
 import { ExamPlayer } from '@components/ExamPlayer.js';
 import { ResultsScreen } from '@components/ResultsScreen.js';
 import { toExamPlayerQuestion } from '@services/examSchema.js';
-import { LocalExamAttemptService } from '@services/LocalExamAttemptService.js';
 import { api as defaultApi } from '@utils/api.js';
 
 export class ExamsPage {
-  constructor({ subjects = [], user, library, attemptService = null, apiClient = defaultApi } = {}) {
-    this.subjects = subjects;
-    this.library = library;
-    this.user = user;
-    this.attemptService = attemptService;
+  constructor({ apiClient = defaultApi } = {}) {
     this.api = apiClient;
-    this.errors = [];
-    this.exams = this.collectExams();
+    this.catalogs = [];
+    this.subjects = [];
+    this.selectedSubjects = new Set();
     this.element = null;
     this.player = null;
     this.resultsScreen = null;
+    this.activeExam = null;
+    this.activeKind = null;
+    this.error = null;
   }
 
-  collectExams() { return (this.library?.items ?? []).filter((item) => item.resourceType === 'exam'); }
-
-  render() {
+  async render() {
     this.element = document.createElement('div');
     this.element.className = 'exams-page';
+    await this.loadCatalog();
     this.renderList();
-    void this.loadErrors();
     return this.element;
+  }
+
+  async loadCatalog() {
+    const response = await this.api.get('/simulators/catalog');
+    if (!response?.success) {
+      this.error = response?.message || 'Não foi possível carregar os simulados.';
+      return;
+    }
+    this.catalogs = response.data?.catalogs ?? [];
+    this.subjects = response.data?.subjects ?? [];
+  }
+
+  header() {
+    const header = document.createElement('div');
+    header.className = 'page-header';
+    header.innerHTML = '<h1>Simulados</h1><p>Escolha um simulado pronto ou monte o seu por matéria e quantidade de questões.</p>';
+    return header;
   }
 
   renderList() {
@@ -33,81 +47,136 @@ export class ExamsPage {
     this.player = null;
     this.resultsScreen?.destroy();
     this.resultsScreen = null;
-    this.exams = this.collectExams();
-    this.element.replaceChildren(this.header(), this.errorNotebookLink(), this.examList());
+    this.activeExam = null;
+    this.activeKind = null;
+    const content = document.createElement('div');
+    content.className = 'exams-content';
+    if (this.error) {
+      const message = document.createElement('p');
+      message.className = 'exams-list-empty';
+      message.textContent = this.error;
+      content.appendChild(message);
+    } else content.append(this.customBuilder(), this.catalogList());
+    this.element.replaceChildren(this.header(), content);
   }
 
-  header() {
-    const header = document.createElement('div');
-    header.className = 'page-header';
-    header.innerHTML = '<h1>Simulados</h1><p>Pratique com simulados da sua biblioteca local e revise cada resposta.</p>';
-    return header;
-  }
-
-  examList() {
-    const list = document.createElement('div');
-    list.className = this.exams.length ? 'exams-list' : 'exams-list-empty';
-    if (!this.exams.length) {
-      list.textContent = 'Nenhum simulado válido foi encontrado na biblioteca local.';
-      return list;
+  customBuilder() {
+    const section = document.createElement('section');
+    section.className = 'simulator-builder';
+    section.innerHTML = '<div><h2>Monte seu simulado</h2><p>Selecionamos somente questões validadas nas matérias escolhidas.</p></div>';
+    const fields = document.createElement('div');
+    fields.className = 'simulator-builder-fields';
+    for (const subject of this.subjects) {
+      const label = document.createElement('label');
+      label.className = 'simulator-subject-option';
+      const input = document.createElement('input');
+      input.type = 'checkbox';
+      input.value = subject.subject;
+      input.checked = this.selectedSubjects.has(subject.subject);
+      input.addEventListener('change', () => input.checked
+        ? this.selectedSubjects.add(subject.subject)
+        : this.selectedSubjects.delete(subject.subject));
+      const text = document.createElement('span');
+      text.textContent = `${subject.subject} (${subject.question_count})`;
+      label.append(input, text);
+      fields.appendChild(label);
     }
-    for (const item of this.exams) {
-      const card = document.createElement('article');
-      card.className = 'exam-list-item';
-      const title = document.createElement('h2');
-      title.className = 'exam-list-item-title';
-      title.textContent = item.title;
-      const detail = document.createElement('p');
-      detail.className = 'exam-list-item-meta';
-      detail.textContent = item.collection || 'Biblioteca local';
-      const start = document.createElement('button');
-      start.type = 'button';
-      start.className = 'btn btn-primary';
-      start.dataset.action = 'start-exam';
-      start.dataset.examId = item.id;
-      start.textContent = 'Iniciar simulado';
-      start.addEventListener('click', () => this.startExam(item.id));
-      card.append(title, detail, start);
-      list.appendChild(card);
-    }
-    return list;
-  }
-
-  errorNotebookLink() {
+    const amount = document.createElement('input');
+    amount.type = 'number';
+    amount.min = '1';
+    amount.max = '200';
+    amount.value = '20';
+    amount.className = 'simulator-question-count';
+    amount.setAttribute('aria-label', 'Quantidade de questões');
     const button = document.createElement('button');
     button.type = 'button';
-    button.className = 'btn btn-secondary';
-    button.dataset.action = 'show-errors';
-    button.textContent = `Caderno de erros (${this.errors.length})`;
-    button.disabled = this.errors.length === 0;
-    button.addEventListener('click', () => this.showErrors());
-    return button;
+    button.className = 'btn btn-primary';
+    button.dataset.action = 'generate-exam';
+    button.textContent = 'Gerar simulado';
+    button.addEventListener('click', () => this.generate(Number(amount.value), button));
+    section.append(fields, amount, button);
+    return section;
   }
 
-  async loadErrors() {
-    const service = await this.ensureAttemptService();
-    if (!service) return;
-    this.errors = await service.listErrors();
-    if (this.element && !this.player && !this.resultsScreen) this.renderList();
+  catalogList() {
+    const wrapper = document.createElement('section');
+    wrapper.className = 'exams-catalog';
+    wrapper.innerHTML = '<h2>Simulados prontos</h2>';
+    if (!this.catalogs.length) {
+      const empty = document.createElement('p');
+      empty.className = 'exams-list-empty';
+      empty.textContent = 'Ainda não há simulados publicados.';
+      wrapper.appendChild(empty);
+      return wrapper;
+    }
+    for (const category of ['enem', 'concursos']) {
+      const entries = this.catalogs.filter((catalog) => catalog.category === category);
+      if (!entries.length) continue;
+      const group = document.createElement('section');
+      group.className = 'exams-catalog-group';
+      const heading = document.createElement('h3');
+      heading.textContent = category === 'enem' ? 'ENEM' : 'Concursos';
+      const list = document.createElement('div');
+      list.className = 'exams-list';
+      for (const catalog of entries) list.appendChild(this.catalogCard(catalog));
+      group.append(heading, list);
+      wrapper.appendChild(group);
+    }
+    return wrapper;
   }
 
-  async ensureAttemptService() {
-    if (this.attemptService) return this.attemptService;
-    if (!this.user?.id || !this.library?.idb || typeof this.library.libraryId !== 'function') return null;
-    const libraryId = await this.library.libraryId();
-    this.attemptService = new LocalExamAttemptService({ idb: this.library.idb, userId: this.user.id, libraryId, apiClient: this.api });
-    return this.attemptService;
+  catalogCard(catalog) {
+    const card = document.createElement('article');
+    card.className = 'exam-list-item';
+    const info = document.createElement('div');
+    info.className = 'exam-list-item-info';
+    const title = document.createElement('h3');
+    title.className = 'exam-list-item-title';
+    title.textContent = catalog.title;
+    const detail = document.createElement('p');
+    detail.className = 'exam-list-item-meta';
+    detail.textContent = `${catalog.question_count} questões · ${catalog.subject}`;
+    info.append(title, detail);
+    const start = document.createElement('button');
+    start.type = 'button';
+    start.className = 'btn btn-secondary';
+    start.dataset.action = 'start-catalog-exam';
+    start.textContent = 'Iniciar';
+    start.addEventListener('click', () => this.startCatalog(catalog.id, start));
+    card.append(info, start);
+    return card;
   }
 
-  startExam(itemId) {
-    const source = this.library?.getExam?.(itemId);
-    const item = this.exams.find((exam) => exam.id === itemId);
-    if (!source || !item) return;
+  async startCatalog(id, button) {
+    button.disabled = true;
+    const response = await this.api.get(`/simulators/catalog/${encodeURIComponent(id)}`);
+    button.disabled = false;
+    if (!response?.success || !response.data?.exam) return this.fail(response?.message || 'Não foi possível abrir o simulado.');
+    this.startExam(response.data.exam, 'catalog');
+  }
+
+  async generate(questionCount, button) {
+    if (!this.selectedSubjects.size) return this.fail('Escolha pelo menos uma matéria para gerar o simulado.');
+    button.disabled = true;
+    const response = await this.api.post('/simulators/generate', { subjects: [...this.selectedSubjects], question_count: questionCount });
+    button.disabled = false;
+    if (!response?.success || !response.data?.exam) return this.fail(response?.message || 'Não foi possível gerar o simulado.');
+    this.startExam(response.data.exam, 'generated');
+  }
+
+  fail(message) {
+    this.error = message;
+    this.renderList();
+  }
+
+  startExam(exam, kind) {
     this.player?.destroy();
+    this.activeExam = exam;
+    this.activeKind = kind;
     this.player = new ExamPlayer({
-      exam: { id: source.id, title: source.title, subject: source.subject || item.collection || 'Biblioteca local' },
-      questions: source.questions.map(toExamPlayerQuestion),
-      timeLimit: source.durationMinutes,
+      exam: { id: exam.id, title: exam.title, subject: exam.subject },
+      questions: exam.questions.map(toExamPlayerQuestion),
+      timeLimit: exam.durationMinutes,
       onComplete: (results) => this.showResults(results)
     });
     this.element.replaceChildren(this.header(), this.player.render());
@@ -121,50 +190,27 @@ export class ExamsPage {
       results,
       persistAttempt: false,
       onBack: () => this.renderList(),
-      onRetry: () => this.startExam(this.exams.find((item) => item.title === results.exam.title)?.id),
+      onRetry: () => this.startExam(this.activeExam, this.activeKind),
       onReview: () => this.startReview(results)
     });
     this.element.replaceChildren(this.header(), this.resultsScreen.render());
-    void this.recordErrors(results);
+    void this.recordAttempt(results);
   }
 
-  async recordErrors(results) {
-    const service = await this.ensureAttemptService();
-    if (!service) return;
-    const errors = await service.record(results);
-    this.errors = [...errors, ...this.errors];
-  }
-
-  showErrors() {
-    const section = document.createElement('section');
-    section.className = 'exams-error-notebook';
-    const title = document.createElement('h2');
-    title.textContent = 'Caderno de erros';
-    section.appendChild(title);
-    for (const error of this.errors) {
-      const item = document.createElement('article');
-      item.className = 'exam-list-item';
-      const question = document.createElement('p');
-      question.textContent = error.questionText || 'Questão sem enunciado';
-      const source = document.createElement('small');
-      source.textContent = error.examTitle;
-      item.append(question, source);
-      section.appendChild(item);
-    }
-    const back = document.createElement('button');
-    back.type = 'button';
-    back.className = 'btn btn-secondary';
-    back.textContent = 'Voltar aos simulados';
-    back.addEventListener('click', () => this.renderList());
-    section.appendChild(back);
-    this.element.replaceChildren(this.header(), section);
+  async recordAttempt(results) {
+    if (!this.activeExam || !this.activeKind) return;
+    const root = this.activeKind === 'catalog' ? 'catalog' : 'generated';
+    await this.api.post(`/simulators/${root}/${encodeURIComponent(this.activeExam.id)}/attempt`, {
+      score: results.score,
+      total_questions: results.totalQuestions,
+      time_spent: results.totalTime,
+      answers: results.questionResults
+    });
   }
 
   startReview(results) {
-    const sourceItem = this.exams.find((item) => item.title === results.exam.title);
-    const source = sourceItem && this.library?.getExam?.(sourceItem.id);
-    if (!source) return;
-    this.player = new ExamPlayer({ exam: results.exam, questions: source.questions.map(toExamPlayerQuestion) });
+    if (!this.activeExam) return;
+    this.player = new ExamPlayer({ exam: results.exam, questions: this.activeExam.questions.map(toExamPlayerQuestion) });
     this.player.answers = Object.fromEntries(results.questionResults
       .filter((result) => result.selectedAnswer !== undefined)
       .map((result) => [result.questionId, result.selectedAnswer]));

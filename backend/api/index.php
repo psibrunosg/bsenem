@@ -13,6 +13,7 @@ require_once __DIR__ . '/../controllers/FlashcardController.php';
 require_once __DIR__ . '/../controllers/NoteController.php';
 require_once __DIR__ . '/../controllers/ProgressController.php';
 require_once __DIR__ . '/../controllers/ExamController.php';
+require_once __DIR__ . '/../controllers/SimulatorController.php';
 require_once __DIR__ . '/../controllers/StudyLibraryController.php';
 
 initializeDatabase();
@@ -126,6 +127,18 @@ match(true) {
         => ProgressController::recordStudy(),
 
     // Exam routes
+    $resource === 'simulators' && $id === 'catalog' && !$sub && $method === 'GET'
+        => SimulatorController::catalog(),
+    $resource === 'simulators' && $id === 'catalog' && $sub && $method === 'GET'
+        => SimulatorController::published($sub),
+    $resource === 'simulators' && $id === 'catalog' && $sub && getSegment(3) === 'attempt' && $method === 'POST'
+        => SimulatorController::catalogAttempt($sub),
+    $resource === 'simulators' && $id === 'generate' && $method === 'POST'
+        => SimulatorController::generate(),
+    $resource === 'simulators' && $id === 'generated' && $sub && $method === 'GET'
+        => SimulatorController::generated($sub),
+    $resource === 'simulators' && $id === 'generated' && $sub && getSegment(3) === 'attempt' && $method === 'POST'
+        => SimulatorController::attempt($sub),
     $resource === 'exams' && $id === 'attempt' && $method === 'POST'
         => ExamController::attempt(),
     $resource === 'exams' && $id === 'local-attempt' && $method === 'POST'

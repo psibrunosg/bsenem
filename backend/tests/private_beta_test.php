@@ -93,14 +93,15 @@ try {
     $pdo = Database::getInstance()->getConnection();
     expectSame(0, (int) $pdo->query('SELECT COUNT(*) FROM users')->fetchColumn(), 'New databases have no users');
     expectSame(0, (int) $pdo->query('SELECT COUNT(*) FROM flashcards')->fetchColumn(), 'New databases have no flashcards');
-    expectSame(5, (int) $pdo->query('SELECT COUNT(*) FROM schema_migrations')->fetchColumn(), 'All migrations run once');
+    $migrationCount = count(glob(__DIR__ . '/../database/migrations/*.sql') ?: []);
+    expectSame($migrationCount, (int) $pdo->query('SELECT COUNT(*) FROM schema_migrations')->fetchColumn(), 'All migrations run once');
     expectTrue(
         (bool) $pdo->query("SELECT name FROM sqlite_master WHERE type = 'table' AND name = 'auth_sessions'")->fetchColumn(),
         'Session table exists'
     );
 
     initializeDatabase();
-    expectSame(5, (int) $pdo->query('SELECT COUNT(*) FROM schema_migrations')->fetchColumn(), 'Migrations are idempotent');
+    expectSame($migrationCount, (int) $pdo->query('SELECT COUNT(*) FROM schema_migrations')->fetchColumn(), 'Migrations are idempotent');
 
     $firstUserId = (int) $pdo->prepare(
         'INSERT INTO users (name, email, password_hash) VALUES (?, ?, ?)'
@@ -152,6 +153,23 @@ try {
     }
 
     $cookie = "bsenem_session={$secondToken}";
+    $catalogResponse = request($projectRoot, $path, '/api/simulators/catalog', 'GET', $cookie);
+    expectStatus($catalogResponse, 200, 'Authenticated users can read permanent simulators');
+    $catalogPayload = json_decode($catalogResponse['body'], true);
+    expectTrue(count($catalogPayload['data']['catalogs'] ?? []) >= 10, 'Permanent catalog contains ENEM and concursos simulators');
+    $customResponse = request($projectRoot, $path, '/api/simulators/generate', 'POST', $cookie, [
+        'subjects' => ['Psicologia'],
+        'question_count' => 3,
+    ]);
+    expectStatus($customResponse, 200, 'Authenticated user can generate a subject-only simulator');
+    $customPayload = json_decode($customResponse['body'], true);
+    expectSame(3, count($customPayload['data']['exam']['questions'] ?? []), 'Custom simulator has the requested question count');
+    foreach ($customPayload['data']['exam']['questions'] ?? [] as $question) {
+        expectSame('Psicologia', $question['subject'] ?? null, 'Custom simulator never mixes unselected subjects');
+    }
+    $customId = $customPayload['data']['exam']['id'] ?? '';
+    $firstPrivateToken = Auth::createSession($firstUserId);
+    expectStatus(request($projectRoot, $path, "/api/simulators/generated/{$customId}", 'GET', "bsenem_session={$firstPrivateToken}"), 404, 'Generated simulators are isolated by user');
     expectStatus(request($projectRoot, $path, "/api/flashcards/{$cardId}", 'GET', $cookie), 404, 'Other users cannot view a flashcard');
     expectStatus(request($projectRoot, $path, "/api/flashcards/{$cardId}", 'PUT', $cookie), 404, 'Other users cannot update a flashcard');
     expectStatus(request($projectRoot, $path, "/api/flashcards/{$cardId}", 'DELETE', $cookie), 404, 'Other users cannot delete a flashcard');
