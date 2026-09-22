@@ -66,6 +66,7 @@ try {
 
     $session = $repo->create($pdo, $firstUserId, 'practice', 'Matemática', null, 1500, [$q1, $q2]);
     expectSessionSame('active', $session['status'], 'New sessions are active');
+    expectSessionSame(1500, $session['time_limit_seconds'], 'New session restores its configured time limit');
     expectSessionSame([$q1, $q2], array_column($session['questions'], 'question_id'), 'Composition preserves question order');
 
     $repo->saveProgress($pdo, $firstUserId, $session['id'], 1, 94, [

@@ -21,9 +21,9 @@ final class SimulatorSessionRepository {
         $pdo->beginTransaction();
         try {
             $pdo->prepare(
-                'INSERT INTO simulator_sessions (id, user_id, kind, status, subject, topic, question_limit)
-                 VALUES (?, ?, ?, ?, ?, ?, ?)'
-            )->execute([$id, $userId, $kind, 'active', $subject, $topic, count($questionIds)]);
+                'INSERT INTO simulator_sessions (id, user_id, kind, status, subject, topic, question_limit, time_limit_seconds)
+                 VALUES (?, ?, ?, ?, ?, ?, ?, ?)'
+            )->execute([$id, $userId, $kind, 'active', $subject, $topic, count($questionIds), $limitSeconds]);
 
             $composition = $pdo->prepare(
                 'INSERT INTO simulator_session_questions (session_id, question_id, position) VALUES (?, ?, ?)'
@@ -75,6 +75,7 @@ final class SimulatorSessionRepository {
         $session['id'] = (string) $session['id'];
         $session['user_id'] = (int) $session['user_id'];
         $session['question_limit'] = (int) $session['question_limit'];
+        $session['time_limit_seconds'] = (int) $session['time_limit_seconds'];
         $session['current_position'] = (int) $session['current_position'];
         $session['elapsed_seconds'] = (int) $session['elapsed_seconds'];
         $session['questions'] = array_map(static fn(array $row): array => [

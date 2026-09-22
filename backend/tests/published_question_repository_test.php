@@ -55,10 +55,41 @@ function insertPublishedQuestion(PDO $pdo, array $question): int {
     return (int) $pdo->lastInsertId();
 }
 
+function createLegacySimulatorSchema(PDO $pdo): void {
+    $pdo->exec(
+        "CREATE TABLE simulator_sessions (
+            id TEXT PRIMARY KEY,
+            user_id INTEGER NOT NULL,
+            kind TEXT NOT NULL,
+            status TEXT NOT NULL,
+            subject TEXT,
+            topic TEXT,
+            question_limit INTEGER NOT NULL,
+            current_position INTEGER NOT NULL DEFAULT 0,
+            elapsed_seconds INTEGER NOT NULL DEFAULT 0,
+            result_json TEXT,
+            started_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+            completed_at DATETIME,
+            created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+            updated_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
+        )"
+    );
+    $pdo->exec(
+        "CREATE TABLE simulator_session_answers (
+            session_id TEXT NOT NULL,
+            question_id INTEGER NOT NULL,
+            selected_option TEXT,
+            is_correct INTEGER NOT NULL DEFAULT 0,
+            PRIMARY KEY (session_id, question_id)
+        )"
+    );
+}
+
 $path = tempnam(sys_get_temp_dir(), 'bsenem-published-question-test-');
 if ($path === false) {
     throw new RuntimeException('Unable to create isolated test database.');
 }
+$legacyPath = null;
 
 putenv('APP_ENV=test');
 putenv("APP_DB_PATH={$path}");
@@ -133,12 +164,34 @@ try {
     Database::resetForTests();
     $pdo = Database::getInstance()->getConnection();
     expectPublishedSame(1, (int) $pdo->query("SELECT COUNT(*) FROM schema_migrations WHERE version = '007_simulator_sessions.sql'")->fetchColumn(), 'Migration 007 remains applied once after reinitialization');
+
+    $legacyPath = tempnam(sys_get_temp_dir(), 'bsenem-legacy-simulator-schema-test-');
+    if ($legacyPath === false) {
+        throw new RuntimeException('Unable to create legacy simulator test database.');
+    }
+    $legacyPdo = new PDO("sqlite:{$legacyPath}");
+    $legacyPdo->exec('CREATE TABLE schema_migrations (version TEXT PRIMARY KEY)');
+    $legacyPdo->exec("INSERT INTO schema_migrations (version) VALUES ('007_simulator_sessions.sql')");
+    createLegacySimulatorSchema($legacyPdo);
+    unset($legacyPdo);
+
+    putenv("APP_DB_PATH={$legacyPath}");
+    Database::resetForTests();
+    $legacyPdo = Database::getInstance()->getConnection();
+    $flaggedColumn = $legacyPdo->query("SELECT name FROM pragma_table_info('simulator_session_answers') WHERE name = 'flagged'")->fetchColumn();
+    expectPublishedSame('flagged', $flaggedColumn, 'Migration 008 adds flags to a schema that already recorded migration 007');
+    expectPublishedSame(1, (int) $legacyPdo->query("SELECT COUNT(*) FROM schema_migrations WHERE version = '008_simulator_session_draft_fields.sql'")->fetchColumn(), 'Migration 008 is recorded after updating a legacy schema');
 } finally {
     unset($pdo);
+    unset($legacyPdo);
     Database::resetForTests();
     gc_collect_cycles();
 
-    foreach ([$path, "{$path}-wal", "{$path}-shm"] as $databaseFile) {
+    $databaseFiles = [$path, "{$path}-wal", "{$path}-shm"];
+    if ($legacyPath !== null) {
+        $databaseFiles = [...$databaseFiles, $legacyPath, "{$legacyPath}-wal", "{$legacyPath}-shm"];
+    }
+    foreach ($databaseFiles as $databaseFile) {
         if (is_file($databaseFile)) {
             unlink($databaseFile);
         }
