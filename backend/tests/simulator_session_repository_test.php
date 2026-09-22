@@ -102,7 +102,38 @@ try {
     expectSessionSame(null, $repo->saveProgress($pdo, $firstUserId, $session['id'], 0, 1, []), 'Completed sessions cannot be mutated');
     expectSessionSame($first['result'], $repo->find($pdo, $firstUserId, $session['id'])['result'], 'Completion persists canonical result');
     expectSessionSame(null, $repo->complete($pdo, $secondUserId, $session['id']), 'Second user cannot complete another user session');
+
+    $insertHistory = $pdo->prepare(
+        'INSERT INTO simulator_sessions (
+            id, user_id, kind, status, subject, topic, question_limit, time_limit_seconds, completed_at
+         ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)'
+    );
+    $insertComposition = $pdo->prepare(
+        'INSERT INTO simulator_session_questions (session_id, question_id, position) VALUES (?, ?, ?)'
+    );
+    $insertAnswer = $pdo->prepare(
+        'INSERT INTO simulator_session_answers (session_id, question_id, selected_option, is_correct, flagged)
+         VALUES (?, ?, ?, ?, ?)'
+    );
+    for ($daysAgo = 1; $daysAgo <= 31; $daysAgo++) {
+        $id = sprintf('history-%02d', $daysAgo);
+        $completedAt = gmdate('Y-m-d H:i:s', time() - ($daysAgo * 86400));
+        $insertHistory->execute([$id, $firstUserId, 'practice', 'completed', 'Matemática', null, 1, 1500, $completedAt]);
+        $insertComposition->execute([$id, $q1, 0]);
+        $insertAnswer->execute([$id, $q1, 'B', $daysAgo === 31 ? 0 : 1, 0]);
+    }
+    $insertHistory->execute(['history-old', $firstUserId, 'practice', 'completed', 'Matemática', null, 1, 1500, gmdate('Y-m-d H:i:s', time() - (91 * 86400))]);
+    $insertComposition->execute(['history-old', $q1, 0]);
+    $insertAnswer->execute(['history-old', $q1, 'B', 0, 0]);
+    $insertHistory->execute(['history-active', $firstUserId, 'practice', 'active', 'Matemática', null, 1, 1500, null]);
+    $insertComposition->execute(['history-active', $q1, 0]);
+    $insertAnswer->execute(['history-active', $q1, 'B', 0, 0]);
+
+    $recentResponses = $repo->recentResponses($pdo, $firstUserId);
+    expectSessionSame(30, count($recentResponses), 'Recent history is capped before aggregation');
+    expectSessionSame([], array_values(array_filter($recentResponses, static fn(array $response): bool => !$response['is_correct'])), 'Old and active answers do not enter recent history');
 } finally {
+    unset($insertHistory, $insertComposition, $insertAnswer, $recentResponses, $repo);
     unset($pdo);
     Database::resetForTests();
     gc_collect_cycles();

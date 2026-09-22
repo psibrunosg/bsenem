@@ -213,6 +213,32 @@ final class SimulatorSessionRepository {
         return ['result' => $result];
     }
 
+    /**
+     * @return list<array{subject: string, topic: ?string, is_correct: bool, answered_at: string}>
+     */
+    public function recentResponses(PDO $pdo, int $userId): array {
+        $statement = $pdo->prepare(
+            "SELECT questions.area AS subject, questions.topic, answers.is_correct, sessions.completed_at AS answered_at
+             FROM simulator_session_answers AS answers
+             JOIN simulator_sessions AS sessions ON sessions.id = answers.session_id
+             JOIN enem_questions AS questions ON questions.id = answers.question_id
+             WHERE sessions.user_id = ?
+               AND sessions.status = 'completed'
+               AND sessions.completed_at >= datetime('now', '-90 days')
+               AND answers.selected_option IS NOT NULL
+             ORDER BY sessions.completed_at DESC, answers.updated_at DESC, answers.question_id ASC
+             LIMIT 30"
+        );
+        $statement->execute([$userId]);
+
+        return array_map(static fn(array $row): array => [
+            'subject' => (string) $row['subject'],
+            'topic' => $row['topic'] === null ? null : (string) $row['topic'],
+            'is_correct' => (bool) $row['is_correct'],
+            'answered_at' => (string) $row['answered_at'],
+        ], $statement->fetchAll());
+    }
+
     /** @return array<string, mixed>|null */
     private function ownedSession(PDO $pdo, int $userId, string $id): ?array {
         $statement = $pdo->prepare('SELECT * FROM simulator_sessions WHERE id = ? AND user_id = ?');
