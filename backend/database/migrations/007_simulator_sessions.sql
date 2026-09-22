@@ -36,6 +36,7 @@ CREATE TABLE IF NOT EXISTS simulator_session_answers (
     session_id TEXT NOT NULL,
     question_id INTEGER NOT NULL,
     selected_option TEXT CHECK(selected_option IN ('A', 'B', 'C', 'D', 'E') OR selected_option IS NULL),
+    flagged INTEGER NOT NULL DEFAULT 0 CHECK(flagged IN (0, 1)),
     is_correct INTEGER NOT NULL DEFAULT 0 CHECK(is_correct IN (0, 1)),
     created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
     updated_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,

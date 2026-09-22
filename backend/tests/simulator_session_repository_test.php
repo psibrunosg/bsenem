@@ -73,6 +73,7 @@ try {
     ]);
     $draft = $repo->find($pdo, $firstUserId, $session['id']);
     expectSessionSame('B', $draft['answers'][0]['selected_option'], 'Draft restores');
+    expectSessionSame(true, $draft['answers'][0]['flagged'], 'Draft flag restores');
     expectSessionSame(1, $draft['current_position'], 'Draft position restores');
     expectSessionSame(94, $draft['elapsed_seconds'], 'Draft elapsed time restores');
 

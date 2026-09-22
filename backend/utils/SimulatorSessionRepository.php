@@ -62,7 +62,7 @@ final class SimulatorSessionRepository {
         );
         $questionStatement->execute([$id]);
         $answerStatement = $pdo->prepare(
-            'SELECT answers.question_id, answers.selected_option, answers.is_correct
+            'SELECT answers.question_id, answers.selected_option, answers.flagged, answers.is_correct
              FROM simulator_session_answers AS answers
              JOIN simulator_session_questions AS composition
                ON composition.session_id = answers.session_id
@@ -84,6 +84,7 @@ final class SimulatorSessionRepository {
         $session['answers'] = array_map(static fn(array $row): array => [
             'question_id' => (int) $row['question_id'],
             'selected_option' => $row['selected_option'],
+            'flagged' => (bool) $row['flagged'],
             'is_correct' => (bool) $row['is_correct'],
         ], $answerStatement->fetchAll());
         $session['result'] = $session['result_json'] === null ? null : json_decode($session['result_json'], true, 512, JSON_THROW_ON_ERROR);
@@ -122,14 +123,15 @@ final class SimulatorSessionRepository {
             )->execute([$position, $elapsedSeconds, $id, $userId, 'active']);
 
             $upsert = $pdo->prepare(
-                'INSERT INTO simulator_session_answers (session_id, question_id, selected_option)
-                 VALUES (?, ?, ?)
+                'INSERT INTO simulator_session_answers (session_id, question_id, selected_option, flagged)
+                 VALUES (?, ?, ?, ?)
                  ON CONFLICT(session_id, question_id) DO UPDATE SET
                     selected_option = excluded.selected_option,
+                    flagged = excluded.flagged,
                     updated_at = CURRENT_TIMESTAMP'
             );
             foreach ($answers as $answer) {
-                $upsert->execute([$id, $answer['question_id'], $answer['selected_option']]);
+                $upsert->execute([$id, $answer['question_id'], $answer['selected_option'], (int) $answer['flagged']]);
             }
             $pdo->commit();
         } catch (Throwable $error) {
@@ -252,7 +254,7 @@ final class SimulatorSessionRepository {
     /**
      * @param list<array{question_id: int, selected_option: ?string, flagged?: bool}> $answers
      * @param list<int> $questionIds
-     * @return list<array{question_id: int, selected_option: ?string}>
+     * @return list<array{question_id: int, selected_option: ?string, flagged: bool}>
      */
     private function validatedAnswers(array $answers, array $questionIds): array {
         $allowedIds = array_fill_keys($questionIds, true);
@@ -263,15 +265,20 @@ final class SimulatorSessionRepository {
             }
             $questionId = $answer['question_id'];
             $selectedOption = $answer['selected_option'] ?? null;
+            $flagged = $answer['flagged'] ?? false;
             if (filter_var($questionId, FILTER_VALIDATE_INT) === false || !isset($allowedIds[(int) $questionId])) {
                 throw new InvalidArgumentException('Answers must belong to the session composition.');
             }
             if ($selectedOption !== null && (!is_string($selectedOption) || !in_array($selectedOption, ['A', 'B', 'C', 'D', 'E'], true))) {
                 throw new InvalidArgumentException('Selected options must be A through E or null.');
             }
+            if (!is_bool($flagged)) {
+                throw new InvalidArgumentException('Flagged values must be boolean.');
+            }
             $normalized[(int) $questionId] = [
                 'question_id' => (int) $questionId,
                 'selected_option' => $selectedOption,
+                'flagged' => $flagged,
             ];
         }
 
