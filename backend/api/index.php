@@ -14,6 +14,7 @@ require_once __DIR__ . '/../controllers/NoteController.php';
 require_once __DIR__ . '/../controllers/ProgressController.php';
 require_once __DIR__ . '/../controllers/ExamController.php';
 require_once __DIR__ . '/../controllers/StudyLibraryController.php';
+require_once __DIR__ . '/../controllers/SimulatorController.php';
 
 initializeDatabase();
 Csrf::enforce();
@@ -42,8 +43,25 @@ function getSegment($index) {
 $resource = getSegment(0);
 $id = getSegment(1);
 $sub = getSegment(2);
+$action = getSegment(3);
 
 match(true) {
+    // Simulator routes
+    $resource === 'simulators' && $id === 'catalog' && !$sub && $method === 'GET'
+        => SimulatorController::catalog(),
+    $resource === 'simulators' && $id === 'overview' && !$sub && $method === 'GET'
+        => SimulatorController::overview(),
+    $resource === 'simulators' && $id === 'sessions' && !$sub && $method === 'GET'
+        => SimulatorController::sessions(),
+    $resource === 'simulators' && $id === 'sessions' && !$sub && $method === 'POST'
+        => SimulatorController::create(),
+    $resource === 'simulators' && $id === 'sessions' && is_string($sub) && !$action && $method === 'GET'
+        => SimulatorController::show($sub),
+    $resource === 'simulators' && $id === 'sessions' && is_string($sub) && $action === 'progress' && $method === 'PATCH'
+        => SimulatorController::progress($sub),
+    $resource === 'simulators' && $id === 'sessions' && is_string($sub) && $action === 'complete' && $method === 'POST'
+        => SimulatorController::complete($sub),
+
     $resource === 'notes' && ctype_digit((string)$id) && $sub === 'flashcards' && $method === 'POST'
         => NoteController::generateFlashcards((int)$id),
 
