@@ -674,3 +674,206 @@
     justify-content: center;
   }
 }
+
+/* Simulators home */
+.simulators-hero {
+  padding: var(--space-6);
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  margin-bottom: var(--space-6);
+}
+
+.simulators-hero-unavailable {
+  border-style: dashed;
+}
+
+.simulators-hero h2 {
+  margin: 0 0 var(--space-2);
+  font-size: var(--text-xl);
+  color: var(--text-primary);
+}
+
+.simulators-hero p {
+  margin: 0 0 var(--space-4);
+  color: var(--text-secondary);
+}
+
+.simulators-subject-chooser {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  max-width: 320px;
+  margin-bottom: var(--space-4);
+}
+
+.simulators-subject-chooser label {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+}
+
+.simulators-hero-cta {
+  align-self: flex-start;
+}
+
+.simulators-mastery {
+  margin-bottom: var(--space-6);
+}
+
+.simulators-mastery h2 {
+  margin: 0 0 var(--space-2);
+  font-size: var(--text-lg);
+  color: var(--text-primary);
+}
+
+.simulators-mastery-note,
+.simulators-mastery-empty {
+  margin: 0 0 var(--space-3);
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+}
+
+.simulators-mastery-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.simulators-mastery-table th,
+.simulators-mastery-table td {
+  padding: var(--space-3) var(--space-4);
+  text-align: left;
+  font-size: var(--text-sm);
+  border-bottom: 1px solid var(--border-light);
+}
+
+.simulators-mastery-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.simulators-mastery-table th {
+  color: var(--text-secondary);
+  font-weight: var(--font-medium);
+}
+
+.simulators-mastery-row-attention td:last-child { color: var(--error); font-weight: var(--font-semibold); }
+.simulators-mastery-row-evolving td:last-child { color: var(--warning); font-weight: var(--font-semibold); }
+.simulators-mastery-row-strong td:last-child { color: var(--success); font-weight: var(--font-semibold); }
+.simulators-mastery-row-insufficient td:last-child { color: var(--text-muted); }
+
+.simulators-resume {
+  padding: var(--space-4) var(--space-6);
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  margin-bottom: var(--space-6);
+}
+
+.simulators-resume h2 {
+  margin: 0 0 var(--space-1);
+  font-size: var(--text-base);
+  color: var(--text-primary);
+}
+
+.simulators-resume p {
+  margin: 0 0 var(--space-3);
+  color: var(--text-secondary);
+  font-size: var(--text-sm);
+}
+
+.simulators-resume-other {
+  margin-top: var(--space-2);
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+}
+
+.simulators-catalog h2 {
+  margin: 0 0 var(--space-3);
+  font-size: var(--text-base);
+  color: var(--text-secondary);
+}
+
+.simulators-catalog-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.simulators-status,
+.simulators-error {
+  padding: var(--space-6);
+  text-align: center;
+  color: var(--text-secondary);
+}
+
+.simulators-error {
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+}
+
+.simulators-action-error {
+  padding: var(--space-3) var(--space-4);
+  margin-bottom: var(--space-4);
+  background: var(--error-bg);
+  border: 1px solid var(--error);
+  border-radius: var(--radius-md);
+  color: var(--text-primary);
+  font-size: var(--text-sm);
+}
+
+.simulators-retry-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+  margin-bottom: var(--space-4);
+  background: var(--warning-bg);
+  border: 1px solid var(--warning);
+  border-radius: var(--radius-md);
+  color: var(--text-primary);
+  font-size: var(--text-sm);
+}
+
+@media (max-width: 640px) {
+  .simulators-hero,
+  .simulators-resume {
+    padding: var(--space-4);
+  }
+
+  .simulators-mastery-table,
+  .simulators-mastery-table thead,
+  .simulators-mastery-table tbody,
+  .simulators-mastery-table tr {
+    display: block;
+    width: 100%;
+  }
+
+  .simulators-mastery-table thead {
+    display: none;
+  }
+
+  .simulators-mastery-row {
+    display: flex;
+    flex-direction: column;
+    padding: var(--space-3) var(--space-4);
+    border-bottom: 1px solid var(--border-light);
+  }
+
+  .simulators-mastery-row td {
+    border-bottom: none;
+    padding: var(--space-1) 0;
+  }
+
+  .simulators-mastery-row td:first-child {
+    font-weight: var(--font-semibold);
+  }
+
+  .simulators-retry-banner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
