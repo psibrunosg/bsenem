@@ -57,9 +57,9 @@ match(true) {
         => SimulatorController::create(),
     $resource === 'simulators' && $id === 'sessions' && is_string($sub) && !$action && $method === 'GET'
         => SimulatorController::show($sub),
-    $resource === 'simulators' && $id === 'sessions' && is_string($sub) && $action === 'progress' && $method === 'PATCH'
+    $resource === 'simulators' && $id === 'sessions' && is_string($sub) && $action === 'progress' && !getSegment(4) && $method === 'PATCH'
         => SimulatorController::progress($sub),
-    $resource === 'simulators' && $id === 'sessions' && is_string($sub) && $action === 'complete' && $method === 'POST'
+    $resource === 'simulators' && $id === 'sessions' && is_string($sub) && $action === 'complete' && !getSegment(4) && $method === 'POST'
         => SimulatorController::complete($sub),
 
     $resource === 'notes' && ctype_digit((string)$id) && $sub === 'flashcards' && $method === 'POST'

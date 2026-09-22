@@ -239,6 +239,76 @@ final class SimulatorSessionRepository {
         ], $statement->fetchAll());
     }
 
+    /**
+     * @param list<string> $subjects
+     * @return list<int>
+     */
+    public function wrongQuestionIds(PDO $pdo, int $userId, array $subjects, ?string $topic): array {
+        [$subjectCondition, $subjectParameters] = $this->subjectScope($subjects, $topic);
+
+        $statement = $pdo->prepare(
+            "SELECT answers.question_id AS question_id, MAX(answers.updated_at) AS last_wrong_at
+             FROM simulator_session_answers AS answers
+             JOIN simulator_sessions AS sessions ON sessions.id = answers.session_id
+             JOIN enem_questions AS questions ON questions.id = answers.question_id
+             WHERE sessions.user_id = ?
+               AND sessions.status = 'completed'
+               AND sessions.completed_at >= datetime('now', '-90 days')
+               AND answers.selected_option IS NOT NULL
+               AND answers.is_correct = 0
+               AND questions.status = 'valid'
+               AND questions.correct_option IN ('A', 'B', 'C', 'D', 'E')
+               AND {$subjectCondition}
+             GROUP BY answers.question_id
+             ORDER BY last_wrong_at DESC"
+        );
+        $statement->execute([$userId, ...$subjectParameters]);
+
+        return array_map(static fn(array $row): int => (int) $row['question_id'], $statement->fetchAll());
+    }
+
+    /**
+     * @param list<string> $subjects
+     * @return list<int>
+     */
+    public function recentlyUsedQuestionIds(PDO $pdo, int $userId, array $subjects, ?string $topic): array {
+        [$subjectCondition, $subjectParameters] = $this->subjectScope($subjects, $topic);
+
+        $statement = $pdo->prepare(
+            "SELECT composition.question_id AS question_id, MAX(sessions.updated_at) AS last_used_at
+             FROM simulator_session_questions AS composition
+             JOIN simulator_sessions AS sessions ON sessions.id = composition.session_id
+             JOIN enem_questions AS questions ON questions.id = composition.question_id
+             WHERE sessions.user_id = ?
+               AND sessions.updated_at >= datetime('now', '-90 days')
+               AND {$subjectCondition}
+             GROUP BY composition.question_id
+             ORDER BY last_used_at DESC"
+        );
+        $statement->execute([$userId, ...$subjectParameters]);
+
+        return array_map(static fn(array $row): int => (int) $row['question_id'], $statement->fetchAll());
+    }
+
+    /**
+     * @param list<string> $subjects
+     * @return array{0: string, 1: list<string>}
+     */
+    private function subjectScope(array $subjects, ?string $topic): array {
+        if ($subjects === []) {
+            throw new InvalidArgumentException('At least one subject is required.');
+        }
+
+        $condition = 'questions.area IN (' . implode(', ', array_fill(0, count($subjects), '?')) . ')';
+        $parameters = $subjects;
+        if ($topic !== null) {
+            $condition .= ' AND questions.topic = ?';
+            $parameters[] = $topic;
+        }
+
+        return [$condition, $parameters];
+    }
+
     /** @return array<string, mixed>|null */
     private function ownedSession(PDO $pdo, int $userId, string $id): ?array {
         $statement = $pdo->prepare('SELECT * FROM simulator_sessions WHERE id = ? AND user_id = ?');

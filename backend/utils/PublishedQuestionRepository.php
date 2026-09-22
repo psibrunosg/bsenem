@@ -28,10 +28,37 @@ final class PublishedQuestionRepository {
 
     /**
      * @param list<string> $subjects
+     */
+    public static function availableCount(PDO $pdo, array $subjects, ?string $topic): int {
+        $subjects = self::validatedSubjects($subjects);
+
+        $conditions = [
+            "status = 'valid'",
+            "correct_option IN ('A', 'B', 'C', 'D', 'E')",
+            'area IN (' . implode(', ', array_fill(0, count($subjects), '?')) . ')',
+        ];
+        $parameters = $subjects;
+
+        if ($topic !== null) {
+            $conditions[] = 'topic = ?';
+            $parameters[] = $topic;
+        }
+
+        $statement = $pdo->prepare(
+            'SELECT COUNT(*) FROM enem_questions WHERE ' . implode(' AND ', $conditions)
+        );
+        $statement->execute($parameters);
+
+        return (int) $statement->fetchColumn();
+    }
+
+    /**
+     * @param list<string> $subjects
      * @param list<int> $excludeIds
+     * @param list<int> $preferredIds Selected first, before the chronological order, when eligible.
      * @return list<array{id: int, subject: string, topic: ?string, statement: string, options: array<string, string>, images: array, explanation: ?string}>
      */
-    public static function select(PDO $pdo, array $subjects, ?string $topic, int $count, array $excludeIds = []): array {
+    public static function select(PDO $pdo, array $subjects, ?string $topic, int $count, array $excludeIds = [], array $preferredIds = []): array {
         $subjects = self::validatedSubjects($subjects);
 
         if ($count < 1 || $count > 90) {
@@ -50,21 +77,28 @@ final class PublishedQuestionRepository {
             $parameters[] = $topic;
         }
 
-        $excludeIds = self::validatedExcludeIds($excludeIds);
+        $excludeIds = self::validatedIdList($excludeIds);
         if ($excludeIds !== []) {
             $conditions[] = 'id NOT IN (' . implode(', ', array_fill(0, count($excludeIds), '?')) . ')';
             array_push($parameters, ...$excludeIds);
         }
 
-        $sql = 'SELECT id, area, topic, statement, option_a, option_b, option_c, option_d, option_e, images
+        $preferredIds = self::validatedIdList($preferredIds);
+        $priorityColumn = '1 AS priority';
+        $priorityParameters = [];
+        if ($preferredIds !== []) {
+            $priorityColumn = 'CASE WHEN id IN (' . implode(', ', array_fill(0, count($preferredIds), '?')) . ') THEN 0 ELSE 1 END AS priority';
+            $priorityParameters = $preferredIds;
+        }
+
+        $sql = "SELECT id, area, topic, statement, option_a, option_b, option_c, option_d, option_e, images, {$priorityColumn}
                 FROM enem_questions
-                WHERE ' . implode(' AND ', $conditions) . '
-                ORDER BY year ASC, day ASC, question_number ASC, id ASC
+                WHERE " . implode(' AND ', $conditions) . '
+                ORDER BY priority ASC, year ASC, day ASC, question_number ASC, id ASC
                 LIMIT ?';
-        $parameters[] = $count;
 
         $statement = $pdo->prepare($sql);
-        $statement->execute($parameters);
+        $statement->execute([...$priorityParameters, ...$parameters, $count]);
 
         return array_map(static function (array $row): array {
             $images = json_decode($row['images'], true);
@@ -106,14 +140,14 @@ final class PublishedQuestionRepository {
     }
 
     /** @return list<int> */
-    private static function validatedExcludeIds(array $excludeIds): array {
+    private static function validatedIdList(array $ids): array {
         $normalized = [];
-        foreach ($excludeIds as $excludeId) {
-            if (filter_var($excludeId, FILTER_VALIDATE_INT) === false || (int) $excludeId < 1) {
-                throw new InvalidArgumentException('Excluded question IDs must be positive integers.');
+        foreach ($ids as $id) {
+            if (filter_var($id, FILTER_VALIDATE_INT) === false || (int) $id < 1) {
+                throw new InvalidArgumentException('Question IDs must be positive integers.');
             }
 
-            $normalized[(int) $excludeId] = (int) $excludeId;
+            $normalized[(int) $id] = (int) $id;
         }
 
         return array_values($normalized);

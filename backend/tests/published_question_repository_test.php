@@ -144,8 +144,33 @@ try {
     $excluded = PublishedQuestionRepository::select($pdo, ['Matemática'], null, 10, [$validQuestionId]);
     expectPublishedSame([$topicQuestionId], array_column($excluded, 'id'), 'Excluded question IDs are not selected');
 
+    $preferredQuestionId = insertPublishedQuestion($pdo, [
+        'question_number' => 5,
+        'area' => 'Matemática',
+        'statement' => 'Questão preferida para revisão.',
+        'correct_option' => 'C',
+        'status' => 'valid',
+    ]);
+    $preferred = PublishedQuestionRepository::select($pdo, ['Matemática'], null, 2, [], [$preferredQuestionId]);
+    expectPublishedSame(
+        [$preferredQuestionId, $validQuestionId],
+        array_column($preferred, 'id'),
+        'Preferred IDs are selected before chronological order'
+    );
+
+    expectPublishedSame(
+        3,
+        PublishedQuestionRepository::availableCount($pdo, ['Matemática'], null),
+        'Available count reflects eligible supply regardless of the requested count'
+    );
+    expectPublishedSame(
+        1,
+        PublishedQuestionRepository::availableCount($pdo, ['Matemática'], 'Funções'),
+        'Available count narrows by topic'
+    );
+
     $subjects = PublishedQuestionRepository::subjects($pdo);
-    expectPublishedSame([['key' => 'Matemática', 'label' => 'Matemática', 'available' => 2]], $subjects, 'Subjects list only eligible public questions');
+    expectPublishedSame([['key' => 'Matemática', 'label' => 'Matemática', 'available' => 3]], $subjects, 'Subjects list only eligible public questions');
 
     expectPublishedThrows(
         fn() => PublishedQuestionRepository::select($pdo, [], null, 10),

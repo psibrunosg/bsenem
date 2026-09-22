@@ -117,9 +117,16 @@ try {
     expectSimulatorApiStatus(simulatorApiRequest($root, $path, '/api/simulators/sessions', 'POST', $firstCookie, [
         'kind' => 'custom', 'subjects' => ['Unknown'], 'count' => 1,
     ]), 400, 'Unknown subject is rejected');
-    expectSimulatorApiStatus(simulatorApiRequest($root, $path, '/api/simulators/sessions', 'POST', $firstCookie, [
+    $insufficientSupply = simulatorApiRequest($root, $path, '/api/simulators/sessions', 'POST', $firstCookie, [
         'kind' => 'custom', 'subjects' => ['Matemática'], 'count' => 11,
-    ]), 409, 'Count above available supply is rejected');
+    ]);
+    expectSimulatorApiStatus($insufficientSupply, 409, 'Count above available supply is rejected');
+    $insufficientSupplyPayload = json_decode($insufficientSupply['body'], true, flags: JSON_THROW_ON_ERROR);
+    expectSimulatorApiSame(
+        10,
+        $insufficientSupplyPayload['errors']['available'] ?? null,
+        'Insufficient supply reports the real available count for the requested subject/topic combination'
+    );
 
     $catalog = simulatorApiRequest($root, $path, '/api/simulators/catalog', 'GET', $firstCookie);
     expectSimulatorApiStatus($catalog, 200, 'Catalog is returned for its owner');
@@ -151,6 +158,13 @@ try {
     expectSimulatorApiStatus(simulatorApiRequest($root, $path, "/api/simulators/sessions/{$id}/progress", 'PATCH', $secondCookie, []), 404, 'Foreign session is hidden');
     expectSimulatorApiSame(0, (int) $pdo->query("SELECT current_position FROM simulator_sessions WHERE id = '{$id}'")->fetchColumn(), 'Foreign progress does not mutate the draft');
 
+    expectSimulatorApiStatus(simulatorApiRequest($root, $path, "/api/simulators/sessions/{$id}/progress/qualquer-coisa", 'PATCH', $firstCookie, [
+        'position' => 0, 'elapsed_seconds' => 999, 'answers' => [],
+    ]), 404, 'PATCH with a trailing segment after progress does not match any route');
+    expectSimulatorApiStatus(simulatorApiRequest($root, $path, "/api/simulators/sessions/{$id}/complete/qualquer-coisa", 'POST', $firstCookie), 404, 'POST with a trailing segment after complete does not match any route');
+    expectSimulatorApiSame(0, (int) $pdo->query("SELECT current_position FROM simulator_sessions WHERE id = '{$id}'")->fetchColumn(), 'Trailing segment on progress does not mutate the draft');
+    expectSimulatorApiSame('active', (string) $pdo->query("SELECT status FROM simulator_sessions WHERE id = '{$id}'")->fetchColumn(), 'Trailing segment on complete does not close the session');
+
     $progress = simulatorApiRequest($root, $path, "/api/simulators/sessions/{$id}/progress", 'PATCH', $firstCookie, [
         'position' => 0,
         'elapsed_seconds' => 42,
@@ -179,6 +193,50 @@ try {
     $insufficientPayload = json_decode($insufficientOverview['body'], true, flags: JSON_THROW_ON_ERROR);
     expectSimulatorApiSame('insufficient', $insufficientPayload['data']['mastery'][0]['status'] ?? null, 'One completed answer remains insufficient');
     expectSimulatorApiSame(null, $insufficientPayload['data']['mastery'][0]['accuracy'], 'Insufficient history has no fabricated percentage');
+
+    $practiceSubject = 'Ciências';
+    for ($number = 1; $number <= 6; $number++) {
+        insertSimulatorApiQuestion($pdo, 100 + $number, $practiceSubject, 'A');
+    }
+
+    $setupSession = simulatorApiRequest($root, $path, '/api/simulators/sessions', 'POST', $firstCookie, [
+        'kind' => 'custom', 'subjects' => [$practiceSubject], 'count' => 3,
+    ]);
+    expectSimulatorApiStatus($setupSession, 201, 'Setup session for practice composition history is created');
+    $setupPayload = json_decode($setupSession['body'], true, flags: JSON_THROW_ON_ERROR);
+    $setupSessionId = $setupPayload['data']['session']['id'];
+    $setupQuestionIds = array_column($setupPayload['data']['session']['questions'], 'id');
+
+    $setupProgress = simulatorApiRequest($root, $path, "/api/simulators/sessions/{$setupSessionId}/progress", 'PATCH', $firstCookie, [
+        'position' => 2,
+        'elapsed_seconds' => 10,
+        'answers' => [
+            ['question_id' => $setupQuestionIds[0], 'selected_option' => 'B', 'flagged' => false],
+            ['question_id' => $setupQuestionIds[1], 'selected_option' => 'A', 'flagged' => false],
+        ],
+    ]);
+    expectSimulatorApiStatus($setupProgress, 200, 'Setup answers are persisted');
+    expectSimulatorApiStatus(simulatorApiRequest($root, $path, "/api/simulators/sessions/{$setupSessionId}/complete", 'POST', $firstCookie), 200, 'Setup session is completed');
+
+    $practice = simulatorApiRequest($root, $path, '/api/simulators/sessions', 'POST', $firstCookie, [
+        'kind' => 'practice', 'subjects' => [$practiceSubject], 'count' => 3,
+    ]);
+    expectSimulatorApiStatus($practice, 201, 'Practice composition is created from available supply');
+    $practicePayload = json_decode($practice['body'], true, flags: JSON_THROW_ON_ERROR);
+    $practiceQuestionIds = array_column($practicePayload['data']['session']['questions'], 'id');
+
+    expectSimulatorApiTrue(
+        in_array($setupQuestionIds[0], $practiceQuestionIds, true),
+        'Practice composition prioritizes a recently missed, still-eligible question'
+    );
+    expectSimulatorApiTrue(
+        !in_array($setupQuestionIds[1], $practiceQuestionIds, true),
+        'Practice composition avoids a recently used, correctly answered question while enough alternate supply exists'
+    );
+    expectSimulatorApiTrue(
+        !in_array($setupQuestionIds[2], $practiceQuestionIds, true),
+        'Practice composition avoids a recently served but unanswered question while enough alternate supply exists'
+    );
 } finally {
     unset($pdo);
     Database::resetForTests();

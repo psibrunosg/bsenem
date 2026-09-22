@@ -132,6 +132,26 @@ try {
     $recentResponses = $repo->recentResponses($pdo, $firstUserId);
     expectSessionSame(30, count($recentResponses), 'Recent history is capped before aggregation');
     expectSessionSame([], array_values(array_filter($recentResponses, static fn(array $response): bool => !$response['is_correct'])), 'Old and active answers do not enter recent history');
+
+    $q3 = insertSessionQuestion($pdo, 3, 'A');
+    $q4 = insertSessionQuestion($pdo, 4, 'A');
+    $q5 = insertSessionQuestion($pdo, 5, 'A');
+    $insertHistory->execute(['wrong-recent', $firstUserId, 'practice', 'completed', 'Matemática', null, 1, 1500, gmdate('Y-m-d H:i:s', time() - 86400)]);
+    $insertComposition->execute(['wrong-recent', $q3, 0]);
+    $insertAnswer->execute(['wrong-recent', $q3, 'B', 0, 0]);
+    $insertHistory->execute(['correct-recent', $firstUserId, 'practice', 'completed', 'Matemática', null, 1, 1500, gmdate('Y-m-d H:i:s', time() - 86400)]);
+    $insertComposition->execute(['correct-recent', $q4, 0]);
+    $insertAnswer->execute(['correct-recent', $q4, 'A', 1, 0]);
+
+    $wrongIds = $repo->wrongQuestionIds($pdo, $firstUserId, ['Matemática'], null);
+    expectSessionSame(true, in_array($q3, $wrongIds, true), 'Wrong question ids include a recently missed question still eligible for review');
+    expectSessionSame(false, in_array($q4, $wrongIds, true), 'Wrong question ids exclude a correctly answered question');
+    expectSessionSame(false, in_array($q5, $wrongIds, true), 'Wrong question ids exclude a question the user never answered');
+
+    $recentlyUsedIds = $repo->recentlyUsedQuestionIds($pdo, $firstUserId, ['Matemática'], null);
+    expectSessionSame(true, in_array($q3, $recentlyUsedIds, true), 'Recently used ids include a question served in a recent session, even when missed');
+    expectSessionSame(true, in_array($q4, $recentlyUsedIds, true), 'Recently used ids include a question served in a recent session, even when answered correctly');
+    expectSessionSame(false, in_array($q5, $recentlyUsedIds, true), 'Recently used ids exclude a question never served to the user');
 } finally {
     unset($insertHistory, $insertComposition, $insertAnswer, $recentResponses, $repo);
     unset($pdo);

@@ -48,12 +48,10 @@ final class SimulatorController {
         $availableSubjects = array_column($catalog, 'key');
         $subjects = self::subjects($data['subjects'] ?? null, $availableSubjects, $kind === 'practice');
         $topic = self::topic($data['topic'] ?? null);
+        $sessionRepository = new SimulatorSessionRepository();
 
         if ($kind === 'practice') {
-            $overview = SimulatorRecommendation::overview(
-                (new SimulatorSessionRepository())->recentResponses($pdo, $userId),
-                []
-            );
+            $overview = SimulatorRecommendation::overview($sessionRepository->recentResponses($pdo, $userId), []);
             $recommendation = $overview['recommendation'];
             if ($recommendation === null) {
                 if (count($subjects) !== 1) {
@@ -66,13 +64,27 @@ final class SimulatorController {
             }
         }
 
-        $questions = PublishedQuestionRepository::select($pdo, $subjects, $topic, $count);
-        if (count($questions) !== $count) {
-            Response::error('Não há questões publicadas suficientes para esta seleção.', 409);
+        $available = PublishedQuestionRepository::availableCount($pdo, $subjects, $topic);
+        if ($available < $count) {
+            Response::error('Não há questões publicadas suficientes para esta seleção.', 409, ['available' => $available]);
+        }
+
+        if ($kind === 'practice') {
+            $wrongIds = $sessionRepository->wrongQuestionIds($pdo, $userId, $subjects, $topic);
+            $recentIds = array_values(array_diff(
+                $sessionRepository->recentlyUsedQuestionIds($pdo, $userId, $subjects, $topic),
+                $wrongIds
+            ));
+            $questions = PublishedQuestionRepository::select($pdo, $subjects, $topic, $count, $recentIds, $wrongIds);
+            if (count($questions) < $count) {
+                $questions = PublishedQuestionRepository::select($pdo, $subjects, $topic, $count, [], $wrongIds);
+            }
+        } else {
+            $questions = PublishedQuestionRepository::select($pdo, $subjects, $topic, $count);
         }
 
         try {
-            $session = (new SimulatorSessionRepository())->create(
+            $session = $sessionRepository->create(
                 $pdo,
                 $userId,
                 $kind,
