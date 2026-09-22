@@ -118,6 +118,60 @@ describe('ExamsPage', () => {
     expect(page.element.querySelector('.simulators-resume').textContent).toContain('4');
   });
 
+  it('pluralizes correctly when more than one other session is in progress', async () => {
+    const api = mockApi({
+      catalog: oneSubjectCatalog,
+      overview: {
+        recommendation: null,
+        mastery: [],
+        active_sessions: [
+          { id: 'a', subject: 'Matemática', topic: null, question_limit: 10, time_limit_seconds: 1500, elapsed_seconds: 0, answered_count: 0, updated_at: '2026-09-22 10:00:00' },
+          { id: 'b', subject: 'Matemática', topic: null, question_limit: 10, time_limit_seconds: 1500, elapsed_seconds: 0, answered_count: 0, updated_at: '2026-09-21 10:00:00' },
+          { id: 'c', subject: 'Matemática', topic: null, question_limit: 10, time_limit_seconds: 1500, elapsed_seconds: 0, answered_count: 0, updated_at: '2026-09-20 10:00:00' },
+        ],
+      },
+    });
+    const page = new ExamsPage({ apiClient: api, user: { id: 'u1' } });
+
+    await page.render();
+
+    expect(page.element.querySelector('.simulators-resume-other').textContent).toContain('2 outras sessões em andamento');
+    expect(page.element.textContent).not.toContain('sessãoões');
+  });
+
+  it('shows the specific server message when resuming a session fails, and clears it after the next success', async () => {
+    let sessionCallCount = 0;
+    const api = mockApi({
+      catalog: oneSubjectCatalog,
+      overview: {
+        recommendation: null,
+        mastery: [],
+        active_sessions: [{ id: 'stale-1', subject: 'Matemática', topic: null, question_limit: 10, time_limit_seconds: 1500, elapsed_seconds: 0, answered_count: 0, updated_at: '2026-09-22 10:00:00' }],
+      },
+    });
+    api.get.mockImplementation((url) => {
+      if (url === '/simulators/catalog') return Promise.resolve(ok(oneSubjectCatalog));
+      if (url === '/simulators/overview') return Promise.resolve(ok({ recommendation: null, mastery: [], active_sessions: [{ id: 'stale-1', subject: 'Matemática', topic: null, question_limit: 10, time_limit_seconds: 1500, elapsed_seconds: 0, answered_count: 0, updated_at: '2026-09-22 10:00:00' }] }));
+      if (url === '/simulators/sessions/stale-1') {
+        sessionCallCount += 1;
+        return Promise.resolve(fail('Sessão não encontrada.'));
+      }
+      return Promise.resolve(fail(`unexpected GET ${url}`));
+    });
+    const page = new ExamsPage({ apiClient: api, user: { id: 'u1' } });
+    await page.render();
+
+    page.element.querySelector('[data-action="resume"]').click();
+    await vi.waitFor(() => expect(sessionCallCount).toBe(1));
+    await vi.waitFor(() => expect(page.element.textContent).toContain('Sessão não encontrada.'));
+    expect(page.element.querySelector('[data-action="retry"]')).toBeNull();
+
+    page.element.querySelector('[data-action="browse-subject"]').click();
+
+    await vi.waitFor(() => expect(page.element.textContent).not.toContain('Sessão não encontrada.'));
+    expect(api.post).toHaveBeenCalled();
+  });
+
   it('creates a practice session from the hero CTA and refreshes the home', async () => {
     let created = false;
     const api = mockApi({

@@ -29,6 +29,7 @@ export class ExamsPage {
       const [catalog, overview] = await Promise.all([this.service.catalog(), this.service.overview()]);
       this.view = overviewViewModel({ subjects: catalog.subjects, ...overview });
       this.loadError = null;
+      this.actionError = null;
     } catch (error) {
       this.loadError = error;
       if (!this.view) {
@@ -213,7 +214,8 @@ export class ExamsPage {
     if (otherActiveCount > 0) {
       const other = document.createElement('p');
       other.className = 'simulators-resume-other';
-      other.textContent = `+${otherActiveCount} outra${otherActiveCount > 1 ? 's' : ''} sessão${otherActiveCount > 1 ? 'ões' : ''} em andamento.`;
+      const noun = otherActiveCount > 1 ? 'outras sessões' : 'outra sessão';
+      other.textContent = `+${otherActiveCount} ${noun} em andamento.`;
       section.appendChild(other);
     }
     return section;
@@ -264,7 +266,7 @@ export class ExamsPage {
         await this.createSession({ kind: 'custom', count: PRACTICE_QUESTION_COUNT, subjects: [button.dataset.subject] });
         return;
       case 'resume':
-        await this.service.session(button.dataset.sessionId).catch((error) => { this.loadError = error; this.update(); });
+        await this.resumeSession(button.dataset.sessionId);
         return;
       default:
     }
@@ -276,6 +278,20 @@ export class ExamsPage {
     try {
       await this.service.createSession(payload);
       await this.load({ isRefresh: true });
+    } catch (error) {
+      this.actionError = error.message;
+      this.update();
+    } finally {
+      this.pending = false;
+    }
+  }
+
+  async resumeSession(sessionId) {
+    this.pending = true;
+    this.actionError = null;
+    try {
+      await this.service.session(sessionId);
+      this.update();
     } catch (error) {
       this.actionError = error.message;
       this.update();
