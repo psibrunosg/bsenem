@@ -35,5 +35,6 @@
 - `php -S` com `APP_CONTENT_IMPORT` ausente importa ENEM (3060) e concursos (2795) no primeiro acesso a `/api/simulators/catalog` (cerca de 2 s). Nos testes com dados sintéticos, use `APP_CONTENT_IMPORT=off`.
 
 ## Permissões do modo automático
-- `gh pr merge` é bloqueado ("Merge Without Review") e ler o banco de produção via `ssh oraclevps2 ... docker exec` é bloqueado ("Production Reads"). O usuário precisa fazer o merge pela interface do GitHub ou liberar essas ações; não tente contornar.
+- `gh pr merge` só passa quando o usuário pede o merge explicitamente naquele momento (ex.: "faça o merge por mim"). Sem esse pedido, ele é bloqueado ("Merge Without Review"). Nesse caso, ofereça o merge no bloco de pendências. Não trate "fiz o merge" como fato: confirme com `gh pr view <n> --json state`.
+- Ler o banco de produção via `ssh oraclevps2 ... docker exec` é bloqueado ("Production Reads"). O usuário precisa liberar a ação; não tente contornar.
 - Antes de qualquer migração que remova ou recrie tabelas, confira o que já está publicado: `current -> releases/<sha>` na VPS indica a release no ar, e dados de produção podem depender das tabelas antigas. Veja `backend/tests/simulator_upgrade_test.php`.
