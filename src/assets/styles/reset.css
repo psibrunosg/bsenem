@@ -29,6 +29,8 @@ table { border-collapse: collapse; }
 
 :focus-visible { outline: none; box-shadow: var(--shadow-focus); border-radius: var(--radius-sm); }
 
+[hidden] { display: none !important; }
+
 .sr-only {
   position: absolute;
   width: 1px;

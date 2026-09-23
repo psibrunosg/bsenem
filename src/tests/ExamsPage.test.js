@@ -172,26 +172,21 @@ describe('ExamsPage', () => {
     expect(api.post).toHaveBeenCalled();
   });
 
-  it('creates a practice session from the hero CTA and refreshes the home', async () => {
-    let created = false;
+  it('creates a practice session from the hero CTA and opens it in the player', async () => {
     const api = mockApi({
       catalog: oneSubjectCatalog,
-      overview: {
-        get recommendation() {
-          return created ? { subject: 'Matemática', topic: null, answered_count: 8, accuracy: 42.5, status: 'attention', action: 'practice' } : null;
-        },
-        mastery: [],
-        active_sessions: [],
-      },
-      onCreateSession: (body) => { created = true; return { id: 'created-1', kind: body.kind, subject: 'Matemática' }; },
+      overview: emptyOverview,
+      onCreateSession: (body) => activeSession({ id: 'created-1', kind: body.kind }),
     });
     const page = new ExamsPage({ apiClient: api, user: { id: 'u1' } });
     await page.render();
 
     page.element.querySelector('[data-action="choose-subject"]').click();
-    await vi.waitFor(() => expect(api.post).toHaveBeenCalledWith('/simulators/sessions', expect.objectContaining({ kind: 'practice' })));
+    await vi.waitFor(() => expect(page.element.querySelector('.exam-player')).not.toBeNull());
 
-    expect(api.get).toHaveBeenCalledWith('/simulators/overview');
+    expect(api.post).toHaveBeenCalledWith('/simulators/sessions', expect.objectContaining({ kind: 'practice', subjects: ['Matemática'] }));
+    expect(page.element.querySelector('.question-text').textContent).toBe('Enunciado 5');
+    page.destroy();
   });
 
   it('shows the specific server message when creating a session fails, without a generic retry banner', async () => {
@@ -284,4 +279,90 @@ describe('ExamsPage', () => {
 
     expect(page.element.textContent.toLowerCase()).not.toContain('biblioteca local');
   });
+
+  it('resumes an active session at its saved position', async () => {
+    const session = activeSession({ current_position: 1, answers: [{ question_id: 7, selected_option: 'B', flagged: false }] });
+    const api = mockApi({ catalog: oneSubjectCatalog, overview: { ...emptyOverview, active_sessions: [summaryOf(session)] } });
+    const get = api.get.getMockImplementation();
+    api.get.mockImplementation((url) => (url === `/simulators/sessions/${session.id}` ? Promise.resolve(ok({ session })) : get(url)));
+    const page = new ExamsPage({ apiClient: api, user: { id: 'u1' } });
+    await page.render();
+
+    page.element.querySelector('[data-action="resume"]').click();
+    await vi.waitFor(() => expect(page.element.querySelector('.exam-player')).not.toBeNull());
+
+    expect(page.element.querySelector('.question-text').textContent).toBe('Enunciado 7');
+    expect(page.element.querySelector('.question-answer.selected .question-answer-letter').textContent).toBe('B');
+    page.destroy();
+  });
+
+  it('completes through the API, shows the confirmed result and reloads the overview', async () => {
+    const session = activeSession();
+    const completed = {
+      ...session,
+      status: 'completed',
+      questions: session.questions.map((question) => ({ ...question, correct_option: 'A' })),
+      answers: [{ question_id: 5, selected_option: 'A', flagged: false, is_correct: true }],
+    };
+    const result = { correct: 1, incorrect: 0, unanswered: 1, score: 50.0 };
+    const api = mockApi({ catalog: oneSubjectCatalog, overview: emptyOverview, onCreateSession: () => session });
+    api.patch.mockResolvedValue(ok({ session }));
+    const post = api.post.getMockImplementation();
+    api.post.mockImplementation((url, body) => (
+      url === `/simulators/sessions/${session.id}/complete` ? Promise.resolve(ok({ session: completed, result })) : post(url, body)
+    ));
+    const page = new ExamsPage({ apiClient: api, user: { id: 'u1' } });
+    await page.render();
+    page.element.querySelector('[data-action="choose-subject"]').click();
+    await vi.waitFor(() => expect(page.element.querySelector('.exam-player')).not.toBeNull());
+    const overviewCallsBefore = api.get.mock.calls.filter(([url]) => url === '/simulators/overview').length;
+
+    await page.player.finish();
+    await vi.waitFor(() => expect(page.element.querySelector('.results-screen')).not.toBeNull());
+
+    expect(api.patch).toHaveBeenCalledWith(`/simulators/sessions/${session.id}/progress`, expect.objectContaining({ position: 0 }));
+    expect(page.element.textContent).toContain('50%');
+    expect(api.post).not.toHaveBeenCalledWith('/exams/attempt', expect.anything());
+    await vi.waitFor(() => {
+      expect(api.get.mock.calls.filter(([url]) => url === '/simulators/overview').length).toBeGreaterThan(overviewCallsBefore);
+    });
+    expect(page.element.querySelector('.results-screen')).not.toBeNull();
+
+    page.element.querySelector('[data-action="review"]').click();
+    expect(page.element.querySelector('.question-answer.correct')).not.toBeNull();
+    page.element.querySelector('[data-action="exit"]').click();
+    page.element.querySelector('[data-action="back"]').click();
+    await vi.waitFor(() => expect(page.element.querySelector('.simulators-hero')).not.toBeNull());
+    page.destroy();
+  });
 });
+
+function activeSession(overrides = {}) {
+  return {
+    id: 'session-1',
+    kind: 'practice',
+    status: 'active',
+    subject: 'Matemática',
+    topic: null,
+    question_limit: 2,
+    time_limit_seconds: 1500,
+    current_position: 0,
+    elapsed_seconds: 0,
+    questions: [5, 7].map((id, position) => ({
+      id, position, subject: 'Matemática', topic: null, statement: `Enunciado ${id}`,
+      options: { A: 'a', B: 'b', C: 'c', D: 'd', E: 'e' }, images: [],
+    })),
+    answers: [],
+    result: null,
+    ...overrides,
+  };
+}
+
+function summaryOf(session) {
+  return {
+    id: session.id, kind: session.kind, status: session.status, subject: session.subject, topic: session.topic,
+    question_limit: session.question_limit, time_limit_seconds: session.time_limit_seconds,
+    current_position: session.current_position, elapsed_seconds: session.elapsed_seconds,
+    answered_count: session.answers.length, updated_at: '2026-09-23 10:00:00',
+  };
+}

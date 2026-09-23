@@ -93,14 +93,14 @@ try {
     $pdo = Database::getInstance()->getConnection();
     expectSame(0, (int) $pdo->query('SELECT COUNT(*) FROM users')->fetchColumn(), 'New databases have no users');
     expectSame(0, (int) $pdo->query('SELECT COUNT(*) FROM flashcards')->fetchColumn(), 'New databases have no flashcards');
-    expectSame(7, (int) $pdo->query('SELECT COUNT(*) FROM schema_migrations')->fetchColumn(), 'All migrations run once');
+    expectSame(8, (int) $pdo->query('SELECT COUNT(*) FROM schema_migrations')->fetchColumn(), 'All migrations run once');
     expectTrue(
         (bool) $pdo->query("SELECT name FROM sqlite_master WHERE type = 'table' AND name = 'auth_sessions'")->fetchColumn(),
         'Session table exists'
     );
 
     initializeDatabase();
-    expectSame(7, (int) $pdo->query('SELECT COUNT(*) FROM schema_migrations')->fetchColumn(), 'Migrations are idempotent');
+    expectSame(8, (int) $pdo->query('SELECT COUNT(*) FROM schema_migrations')->fetchColumn(), 'Migrations are idempotent');
 
     $firstUserId = (int) $pdo->prepare(
         'INSERT INTO users (name, email, password_hash) VALUES (?, ?, ?)'

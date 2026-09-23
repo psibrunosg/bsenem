@@ -1,6 +1,9 @@
+import { ExamPlayer } from '@components/ExamPlayer.js';
+import { ResultsScreen } from '@components/ResultsScreen.js';
 import { SimulatorApiService } from '@services/SimulatorApiService.js';
 import { overviewViewModel } from '@services/simulatorViewModel.js';
 import { api as defaultApi } from '@utils/api.js';
+import { renderIcons } from '@utils/icons.js';
 
 const PRACTICE_QUESTION_COUNT = 10;
 
@@ -12,6 +15,9 @@ export class ExamsPage {
     this.loadError = null;
     this.actionError = null;
     this.pending = false;
+    this.mode = 'home';
+    this.player = null;
+    this.results = null;
     this.element = null;
   }
 
@@ -24,7 +30,7 @@ export class ExamsPage {
   }
 
   async load({ isRefresh = false } = {}) {
-    if (!isRefresh) this.renderLoading();
+    if (!isRefresh && this.mode === 'home') this.renderLoading();
     try {
       const [catalog, overview] = await Promise.all([this.service.catalog(), this.service.overview()]);
       this.view = overviewViewModel({ subjects: catalog.subjects, ...overview });
@@ -33,7 +39,7 @@ export class ExamsPage {
     } catch (error) {
       this.loadError = error;
       if (!this.view) {
-        this.renderLoadFailure();
+        if (this.mode === 'home') this.renderLoadFailure();
         return;
       }
     }
@@ -60,6 +66,7 @@ export class ExamsPage {
   }
 
   update() {
+    if (this.mode !== 'home' || !this.view) return;
     const nodes = [this.header()];
     if (this.loadError) nodes.push(this.retryBanner());
     if (this.actionError) nodes.push(this.actionErrorBanner());
@@ -182,10 +189,13 @@ export class ExamsPage {
       const subject = document.createElement('td');
       subject.textContent = row.subject;
       const answered = document.createElement('td');
+      answered.dataset.label = 'Questões avaliadas';
       answered.textContent = String(row.answeredCount);
       const accuracy = document.createElement('td');
+      accuracy.dataset.label = 'Aproveitamento';
       accuracy.textContent = row.accuracyLabel;
       const status = document.createElement('td');
+      status.dataset.label = 'Estado';
       status.textContent = row.statusLabel;
       tr.append(subject, answered, accuracy, status);
       body.appendChild(tr);
@@ -276,8 +286,8 @@ export class ExamsPage {
     this.pending = true;
     this.actionError = null;
     try {
-      await this.service.createSession(payload);
-      await this.load({ isRefresh: true });
+      const { session } = await this.service.createSession(payload);
+      this.openPlayer(session);
     } catch (error) {
       this.actionError = error.message;
       this.update();
@@ -290,8 +300,8 @@ export class ExamsPage {
     this.pending = true;
     this.actionError = null;
     try {
-      await this.service.session(sessionId);
-      this.update();
+      const { session } = await this.service.session(sessionId);
+      this.openPlayer(session);
     } catch (error) {
       this.actionError = error.message;
       this.update();
@@ -300,7 +310,68 @@ export class ExamsPage {
     }
   }
 
+  openPlayer(session) {
+    this.showFlow('player', new ExamPlayer({
+      session,
+      onProgressSaved: (progress, requestOptions) => this.service.saveProgress(session.id, progress, requestOptions),
+      onComplete: () => this.completeSession(session.id),
+      onExit: () => this.returnHome(),
+    }));
+  }
+
+  async completeSession(sessionId) {
+    const { session, result } = await this.service.complete(sessionId);
+    this.showResult(session, result);
+    this.load({ isRefresh: true });
+  }
+
+  showResult(session, result) {
+    this.showFlow('result', new ResultsScreen({
+      session,
+      result,
+      onReview: () => this.showFlow('review', new ExamPlayer({ session, onExit: () => this.showResult(session, result) })),
+      onRetry: () => this.retry(session),
+      onBack: () => this.returnHome(),
+    }));
+  }
+
+  showFlow(mode, component) {
+    this.clearFlow();
+    this.mode = mode;
+    if (component instanceof ExamPlayer) this.player = component;
+    else this.results = component;
+    this.element.replaceChildren(component.render());
+    renderIcons(this.element);
+    this.player?.start();
+  }
+
+  retry(session) {
+    this.returnHome({ refresh: false });
+    const kind = session.kind === 'practice' ? 'practice' : 'custom';
+    if (!session.subject) return;
+    this.createSession({ kind, count: session.question_limit, subjects: [session.subject] });
+  }
+
+  returnHome({ refresh = true } = {}) {
+    this.clearFlow();
+    this.mode = 'home';
+    if (!this.view) {
+      this.load();
+      return;
+    }
+    this.update();
+    if (refresh) this.load({ isRefresh: true });
+  }
+
+  clearFlow() {
+    this.player?.destroy();
+    this.results?.destroy();
+    this.player = null;
+    this.results = null;
+  }
+
   destroy() {
+    this.clearFlow();
     this.element?.remove();
   }
 }

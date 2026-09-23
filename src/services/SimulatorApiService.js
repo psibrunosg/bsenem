@@ -26,8 +26,9 @@ export class SimulatorApiService {
     return this.unwrap(this.api.get(`/simulators/sessions/${id}`));
   }
 
-  saveProgress(id, payload) {
-    return this.unwrap(this.api.patch(`/simulators/sessions/${id}/progress`, payload));
+  saveProgress(id, payload, requestOptions) {
+    const url = `/simulators/sessions/${id}/progress`;
+    return this.unwrap(requestOptions ? this.api.patch(url, payload, requestOptions) : this.api.patch(url, payload));
   }
 
   complete(id) {
