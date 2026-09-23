@@ -255,23 +255,55 @@ export class ExamsPage {
       group.className = 'exams-catalog-group';
       const heading = document.createElement('h3');
       heading.textContent = label;
-      const list = document.createElement('div');
-      list.className = 'exams-list';
-      list.append(...entries.map((catalog) => this.catalogCard(catalog)));
-      group.append(heading, list);
+      group.appendChild(heading);
+      if (category === 'concursos') group.append(...this.catalogTracks(entries));
+      else group.appendChild(this.catalogCards(entries));
       section.appendChild(group);
     }
     return section;
   }
 
-  catalogCard(catalog) {
+  catalogCards(entries, titleOf = (catalog) => catalog.title) {
+    const list = document.createElement('div');
+    list.className = 'exams-list';
+    list.append(...entries.map((catalog) => this.catalogCard(catalog, titleOf(catalog))));
+    return list;
+  }
+
+  /** Concursos cadernos are grouped by track in collapsed sections, so the page stays short. */
+  catalogTracks(entries) {
+    const tracks = new Map();
+    for (const catalog of entries) {
+      if (!tracks.has(catalog.subject)) tracks.set(catalog.subject, []);
+      tracks.get(catalog.subject).push(catalog);
+    }
+    return [...tracks].map(([subject, cadernos]) => {
+      const track = document.createElement('details');
+      track.className = 'exams-catalog-track';
+      const summary = document.createElement('summary');
+      const name = document.createElement('span');
+      name.textContent = subject;
+      const count = document.createElement('span');
+      count.className = 'exams-catalog-track-count';
+      count.textContent = cadernos.length === 1 ? '1 caderno' : `${cadernos.length} cadernos`;
+      summary.append(name, count);
+      const prefix = `Concursos — ${subject} · `;
+      const shortTitle = (catalog) => (catalog.title.startsWith(prefix)
+        ? catalog.title.slice(prefix.length).replace(/\s*\(\d+ questões\)$/, '')
+        : catalog.title);
+      track.append(summary, this.catalogCards(cadernos, shortTitle));
+      return track;
+    });
+  }
+
+  catalogCard(catalog, displayTitle = catalog.title) {
     const card = document.createElement('article');
     card.className = 'exam-list-item';
     const info = document.createElement('div');
     info.className = 'exam-list-item-info';
     const title = document.createElement('h4');
     title.className = 'exam-list-item-title';
-    title.textContent = catalog.title;
+    title.textContent = displayTitle;
     const meta = document.createElement('p');
     meta.className = 'exam-list-item-meta';
     const duration = catalog.duration_minutes ? ` · ${catalog.duration_minutes} min` : '';

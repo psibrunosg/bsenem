@@ -34,7 +34,9 @@ const fullCatalog = {
   ],
   catalogs: [
     { id: 'enem:mat', title: 'Simulado — Matemática (45 Questões)', category: 'enem', subject: 'Matemática', question_count: 45, duration_minutes: 135 },
-    { id: 'concursos:psicologia', title: 'Concursos — Psicologia', category: 'concursos', subject: 'Psicologia', question_count: 40, duration_minutes: null },
+    { id: 'concursos:psicologia:caderno-01', title: 'Concursos — Psicologia · Caderno 1 (50 questões)', category: 'concursos', subject: 'Psicologia', question_count: 50, duration_minutes: 150 },
+    { id: 'concursos:psicologia:caderno-02', title: 'Concursos — Psicologia · Caderno 2 (49 questões)', category: 'concursos', subject: 'Psicologia', question_count: 49, duration_minutes: 147 },
+    { id: 'concursos:nutricao:caderno-01', title: 'Concursos — Nutrição · Caderno 1 (40 questões)', category: 'concursos', subject: 'Nutrição', question_count: 40, duration_minutes: 120 },
   ],
 };
 const emptyOverview = { recommendation: null, mastery: [], active_sessions: [] };
@@ -255,8 +257,13 @@ describe('ExamsPage', () => {
 
     const groups = [...page.element.querySelectorAll('.exams-catalog-group h3')].map((heading) => heading.textContent);
     expect(groups).toEqual(['ENEM', 'Concursos']);
-    expect(page.element.textContent).toContain('Concursos — Psicologia');
     expect(page.element.textContent).toContain('45 questões · 135 min');
+    const tracks = [...page.element.querySelectorAll('.exams-catalog-track')];
+    expect(tracks.map((track) => track.querySelector('summary').textContent)).toEqual(['Psicologia2 cadernos', 'Nutrição1 caderno']);
+    expect(tracks.every((track) => !track.open)).toBe(true);
+    expect([...tracks[0].querySelectorAll('.exam-list-item-title')].map((title) => title.textContent)).toEqual(['Caderno 1', 'Caderno 2']);
+    expect(tracks[0].querySelector('[data-catalog-id="concursos:psicologia:caderno-02"]').getAttribute('aria-label'))
+      .toBe('Iniciar Concursos — Psicologia · Caderno 2 (49 questões)');
 
     page.element.querySelector('[data-action="start-catalog"][data-catalog-id="enem:mat"]').click();
     await vi.waitFor(() => expect(page.element.querySelector('.exam-player')).not.toBeNull());

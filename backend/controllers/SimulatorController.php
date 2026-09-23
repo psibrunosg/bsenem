@@ -227,7 +227,8 @@ final class SimulatorController {
              WHERE catalogs.published = 1 {$filter}
              GROUP BY catalogs.id
              HAVING question_count > 0 AND question_count = composed_count
-             ORDER BY CASE catalogs.category WHEN 'enem' THEN 0 ELSE 1 END, catalogs.title"
+             ORDER BY CASE catalogs.category WHEN 'enem' THEN 0 ELSE 1 END,
+                      CASE catalogs.category WHEN 'enem' THEN catalogs.title ELSE catalogs.id END"
         );
         $statement->execute($onlyId === null ? [] : [$onlyId]);
 

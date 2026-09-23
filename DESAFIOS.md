@@ -16,6 +16,7 @@
 
 ## Worktree compartilhado
 - Outras sessões podem editar este worktree ao mesmo tempo. Antes de commitar, confira com `git diff` se os arquivos contêm só as suas mudanças.
+- Não troque de branch (`git checkout -b`) no checkout principal enquanto outra sessão tiver mudanças não commitadas: a troca leva as mudanças dela para a sua branch. Com mudanças alheias em `git status`, use `git worktree add ../bsenem-<tarefa> -b <branch> main` e avise a outra sessão via `SendMessage`.
 
 ## Percurso automatizado (Playwright)
 - O worktree não tem `playwright` em `node_modules`. Importe do checkout principal: `import { chromium } from 'file:///C:/Users/bruno/Documents/GitHub/bsenem/node_modules/playwright/index.mjs'`.
@@ -26,9 +27,11 @@
 
 ## Ícones lucide
 - `lucide.createIcons(element)` não restringe ao elemento e ignora nós fora do documento. Use `renderIcons(root)` de `src/utils/icons.js` (`createIcons({ root })`) depois de anexar o conteúdo, como em re-renderizações dentro de uma página.
+- Componentes cujo `render()` reatribui `this.element` precisam guardar o elemento antigo antes de chamá-lo: `const old = this.element; const next = this.render(); if (old?.isConnected) old.replaceWith(next); renderIcons(next);`. Chamar `this.element.replaceWith(this.render())` troca o elemento novo por ele mesmo, e a tela não muda.
 
 ## Servidores em segundo plano
 - `TaskStop` encerra o shell, mas o `node` (Vite) e o `php -S` filhos podem continuar vivos, segurando a porta. Confira com `netstat -ano | grep LISTEN` e, antes de encerrar, confirme o dono pelo `CommandLine` (`Get-CimInstance Win32_Process -Filter "ProcessId=<pid>"`). Encerre só pelo PID.
+- Com banco novo e importação real, a primeira abertura de `#exams` passa de 20 s (importa ENEM + concursos). No Playwright, use `waitForSelector` com timeout de 60 s ou rode o script duas vezes.
 - `php -S` com `APP_CONTENT_IMPORT` ausente importa ENEM (3060) e concursos (2795) no primeiro acesso a `/api/simulators/catalog` (cerca de 2 s). Nos testes com dados sintéticos, use `APP_CONTENT_IMPORT=off`.
 
 ## Permissões do modo automático

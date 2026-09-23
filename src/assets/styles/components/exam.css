@@ -632,6 +632,45 @@
   gap: 10px;
 }
 
+.exams-catalog-track {
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  background: var(--bg-card);
+}
+
+.exams-catalog-track > summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 48px;
+  padding: 12px 16px;
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.exams-catalog-track-count {
+  margin-left: auto;
+  font-size: var(--text-sm);
+  font-weight: 400;
+  color: var(--text-secondary);
+}
+
+.exams-catalog-track > .exams-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 8px;
+  padding: 0 12px 12px;
+}
+
+.exams-catalog-track .exam-list-item {
+  flex-direction: column;
+  gap: 10px;
+  padding: 14px 10px;
+  text-align: center;
+}
+
 .exams-list-header {
   margin-bottom: 16px;
 }

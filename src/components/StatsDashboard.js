@@ -1,4 +1,6 @@
 // src/components/StatsDashboard.js
+import { renderIcons } from '../utils/icons.js';
+
 export class StatsDashboard {
   constructor(options = {}) {
     const defaults = {
@@ -93,7 +95,7 @@ export class StatsDashboard {
       </div>
     `;
 
-    if (typeof lucide !== 'undefined') lucide.createIcons(this.element);
+    renderIcons(this.element);
     return this.element;
   }
 
@@ -140,7 +142,7 @@ export class StatsDashboard {
     return activities.map((activity) => `
       <div class="activity-item">
         <div class="activity-icon">
-          <i data-lucide="${activity.icon}" class="w-4 h-4"></i>
+          <i data-lucide="${activityIcon(activity)}" class="w-4 h-4"></i>
         </div>
         <div class="activity-content">
           <span class="activity-text">${this.escapeHtml(activityLabel(activity))}</span>
@@ -163,6 +165,7 @@ export class StatsDashboard {
     const oldElement = this.element;
     const newElement = this.render();
     if (oldElement?.isConnected) oldElement.replaceWith(newElement);
+    renderIcons(newElement);
   }
 
   destroy() {
@@ -179,6 +182,11 @@ export class StatsDashboard {
 function activityLabel(activity) {
   const labels = { video: 'Assistiu aula', audio: 'Ouviu áudio', flashcards: 'Revisou flashcards', notes: 'Editou anotação', exam: 'Concluiu simulado', pomodoro: 'Concluiu Pomodoro' };
   return `${labels[activity.type] ?? 'Registrou estudo'}${activity.subject ? `: ${activity.subject}` : ''}`;
+}
+
+function activityIcon(activity) {
+  const icons = { video: 'circle-play', audio: 'headphones', flashcards: 'layers', notes: 'notebook-pen', exam: 'clipboard-check', pomodoro: 'timer' };
+  return icons[activity.type] ?? 'book-open';
 }
 
 function activityTime(activity) {
