@@ -26,6 +26,7 @@
 
 ## Ícones lucide
 - `lucide.createIcons(element)` não restringe ao elemento e ignora nós fora do documento. Use `renderIcons(root)` de `src/utils/icons.js` (`createIcons({ root })`) depois de anexar o conteúdo, como em re-renderizações dentro de uma página.
+- Componentes cujo `render()` reatribui `this.element` precisam guardar o elemento antigo antes de chamá-lo: `const old = this.element; const next = this.render(); if (old?.isConnected) old.replaceWith(next); renderIcons(next);`. Chamar `this.element.replaceWith(this.render())` troca o elemento novo por ele mesmo, e a tela não muda.
 
 ## Servidores em segundo plano
 - `TaskStop` encerra o shell, mas o `node` (Vite) e o `php -S` filhos podem continuar vivos, segurando a porta. Confira com `netstat -ano | grep LISTEN` e, antes de encerrar, confirme o dono pelo `CommandLine` (`Get-CimInstance Win32_Process -Filter "ProcessId=<pid>"`). Encerre só pelo PID.

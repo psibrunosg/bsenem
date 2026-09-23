@@ -1,4 +1,6 @@
 // src/components/StreakCounter.js
+import { renderIcons } from '../utils/icons.js';
+
 export class StreakCounter {
   constructor(options = {}) {
     this.streak = options.streak ?? 0;
@@ -63,7 +65,7 @@ export class StreakCounter {
     `;
 
     this.bindEvents();
-    if (typeof lucide !== 'undefined') lucide.createIcons(this.element);
+    renderIcons(this.element);
 
     return this.element;
   }
@@ -108,9 +110,10 @@ export class StreakCounter {
   }
 
   updateUI() {
+    const oldElement = this.element;
     const newElement = this.render();
-    this.element.replaceWith(newElement);
-    this.element = newElement;
+    if (oldElement?.isConnected) oldElement.replaceWith(newElement);
+    renderIcons(newElement);
   }
 
   setStreak(streak, bestStreak, freezes, hasStudiedToday) {

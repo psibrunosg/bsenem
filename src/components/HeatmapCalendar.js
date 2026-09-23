@@ -170,9 +170,9 @@ export class HeatmapCalendar {
 
   updateData(data) {
     this.data = data;
+    const oldElement = this.element;
     const newElement = this.render();
-    this.element.replaceWith(newElement);
-    this.element = newElement;
+    if (oldElement?.isConnected) oldElement.replaceWith(newElement);
   }
 
   destroy() {
