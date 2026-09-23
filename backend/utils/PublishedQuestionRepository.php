@@ -2,24 +2,30 @@
 
 declare(strict_types=1);
 
+/**
+ * Published questions come from the simulator_questions view: valid ENEM items
+ * ('inep:<id>') and concursos from the permanent bank ('concursos:<id>').
+ */
 final class PublishedQuestionRepository {
+    public const MAX_QUESTIONS = 200;
+
     /**
      * @return list<array{key: string, label: string, available: int}>
      */
     public static function subjects(PDO $pdo): array {
         $statement = $pdo->prepare(
-            "SELECT area, COUNT(*) AS available
-             FROM enem_questions
-             WHERE status = 'valid' AND correct_option IN ('A', 'B', 'C', 'D', 'E')
-             GROUP BY area
-             ORDER BY area ASC"
+            'SELECT subject, COUNT(*) AS available
+             FROM simulator_questions
+             WHERE published = 1
+             GROUP BY subject
+             ORDER BY subject ASC'
         );
         $statement->execute();
 
         return array_map(
             static fn(array $row): array => [
-                'key' => $row['area'],
-                'label' => $row['area'],
+                'key' => $row['subject'],
+                'label' => $row['subject'],
                 'available' => (int) $row['available'],
             ],
             $statement->fetchAll()
@@ -30,22 +36,10 @@ final class PublishedQuestionRepository {
      * @param list<string> $subjects
      */
     public static function availableCount(PDO $pdo, array $subjects, ?string $topic): int {
-        $subjects = self::validatedSubjects($subjects);
-
-        $conditions = [
-            "status = 'valid'",
-            "correct_option IN ('A', 'B', 'C', 'D', 'E')",
-            'area IN (' . implode(', ', array_fill(0, count($subjects), '?')) . ')',
-        ];
-        $parameters = $subjects;
-
-        if ($topic !== null) {
-            $conditions[] = 'topic = ?';
-            $parameters[] = $topic;
-        }
+        [$conditions, $parameters] = self::scope($subjects, $topic);
 
         $statement = $pdo->prepare(
-            'SELECT COUNT(*) FROM enem_questions WHERE ' . implode(' AND ', $conditions)
+            'SELECT COUNT(*) FROM simulator_questions WHERE ' . implode(' AND ', $conditions)
         );
         $statement->execute($parameters);
 
@@ -54,28 +48,15 @@ final class PublishedQuestionRepository {
 
     /**
      * @param list<string> $subjects
-     * @param list<int> $excludeIds
-     * @param list<int> $preferredIds Selected first, before the chronological order, when eligible.
-     * @return list<array{id: int, subject: string, topic: ?string, statement: string, options: array<string, string>, images: array, explanation: ?string}>
+     * @param list<string> $excludeIds
+     * @param list<string> $preferredIds Selected first, before the source order, when eligible.
+     * @return list<array{id: string, subject: string, topic: ?string, statement: string, options: array<string, string>, images: array, explanation: ?string}>
      */
     public static function select(PDO $pdo, array $subjects, ?string $topic, int $count, array $excludeIds = [], array $preferredIds = []): array {
-        $subjects = self::validatedSubjects($subjects);
-
-        if ($count < 1 || $count > 90) {
-            throw new InvalidArgumentException('Question count must be between 1 and 90.');
+        if ($count < 1 || $count > self::MAX_QUESTIONS) {
+            throw new InvalidArgumentException('Question count must be between 1 and ' . self::MAX_QUESTIONS . '.');
         }
-
-        $conditions = [
-            "status = 'valid'",
-            "correct_option IN ('A', 'B', 'C', 'D', 'E')",
-            'area IN (' . implode(', ', array_fill(0, count($subjects), '?')) . ')',
-        ];
-        $parameters = $subjects;
-
-        if ($topic !== null) {
-            $conditions[] = 'topic = ?';
-            $parameters[] = $topic;
-        }
+        [$conditions, $parameters] = self::scope($subjects, $topic);
 
         $excludeIds = self::validatedIdList($excludeIds);
         if ($excludeIds !== []) {
@@ -91,21 +72,21 @@ final class PublishedQuestionRepository {
             $priorityParameters = $preferredIds;
         }
 
-        $sql = "SELECT id, area, topic, statement, option_a, option_b, option_c, option_d, option_e, images, {$priorityColumn}
-                FROM enem_questions
+        $sql = "SELECT id, subject, topic, statement, option_a, option_b, option_c, option_d, option_e, images, {$priorityColumn}
+                FROM simulator_questions
                 WHERE " . implode(' AND ', $conditions) . '
-                ORDER BY priority ASC, year ASC, day ASC, question_number ASC, id ASC
+                ORDER BY priority ASC, sort_key ASC, id ASC
                 LIMIT ?';
 
         $statement = $pdo->prepare($sql);
         $statement->execute([...$priorityParameters, ...$parameters, $count]);
 
         return array_map(static function (array $row): array {
-            $images = json_decode($row['images'], true);
+            $images = json_decode((string) $row['images'], true);
 
             return [
-                'id' => (int) $row['id'],
-                'subject' => $row['area'],
+                'id' => (string) $row['id'],
+                'subject' => $row['subject'],
                 'topic' => $row['topic'],
                 'statement' => $row['statement'],
                 'options' => [
@@ -119,6 +100,26 @@ final class PublishedQuestionRepository {
                 'explanation' => null,
             ];
         }, $statement->fetchAll());
+    }
+
+    /**
+     * @param list<string> $subjects
+     * @return array{0: list<string>, 1: list<string>}
+     */
+    private static function scope(array $subjects, ?string $topic): array {
+        $subjects = self::validatedSubjects($subjects);
+        $conditions = [
+            'published = 1',
+            'subject IN (' . implode(', ', array_fill(0, count($subjects), '?')) . ')',
+        ];
+        $parameters = $subjects;
+
+        if ($topic !== null) {
+            $conditions[] = 'topic = ?';
+            $parameters[] = $topic;
+        }
+
+        return [$conditions, $parameters];
     }
 
     /** @return list<string> */
@@ -139,17 +140,21 @@ final class PublishedQuestionRepository {
         return array_values($normalized);
     }
 
-    /** @return list<int> */
+    /** @return list<string> */
     private static function validatedIdList(array $ids): array {
         $normalized = [];
         foreach ($ids as $id) {
-            if (filter_var($id, FILTER_VALIDATE_INT) === false || (int) $id < 1) {
-                throw new InvalidArgumentException('Question IDs must be positive integers.');
+            if (!self::isQuestionId($id)) {
+                throw new InvalidArgumentException('Question IDs must be source-prefixed strings.');
             }
 
-            $normalized[(int) $id] = (int) $id;
+            $normalized[$id] = $id;
         }
 
         return array_values($normalized);
+    }
+
+    public static function isQuestionId(mixed $id): bool {
+        return is_string($id) && preg_match('/^(inep|concursos):\S{1,200}$/', $id) === 1;
     }
 }

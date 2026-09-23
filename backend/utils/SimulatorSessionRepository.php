@@ -2,9 +2,11 @@
 
 declare(strict_types=1);
 
+require_once __DIR__ . '/PublishedQuestionRepository.php';
+
 final class SimulatorSessionRepository {
     /**
-     * @param list<int> $questionIds
+     * @param list<string> $questionIds
      * @return array<string, mixed>
      */
     public function create(PDO $pdo, int $userId, string $kind, ?string $subject, ?string $topic, int $limitSeconds, array $questionIds): array {
@@ -79,11 +81,11 @@ final class SimulatorSessionRepository {
         $session['current_position'] = (int) $session['current_position'];
         $session['elapsed_seconds'] = (int) $session['elapsed_seconds'];
         $session['questions'] = array_map(static fn(array $row): array => [
-            'question_id' => (int) $row['question_id'],
+            'question_id' => (string) $row['question_id'],
             'position' => (int) $row['position'],
         ], $questionStatement->fetchAll());
         $session['answers'] = array_map(static fn(array $row): array => [
-            'question_id' => (int) $row['question_id'],
+            'question_id' => (string) $row['question_id'],
             'selected_option' => $row['selected_option'],
             'flagged' => (bool) $row['flagged'],
             'is_correct' => (bool) $row['is_correct'],
@@ -95,7 +97,7 @@ final class SimulatorSessionRepository {
     }
 
     /**
-     * @param list<array{question_id: int, selected_option: ?string, flagged?: bool}> $answers
+     * @param list<array{question_id: string, selected_option: ?string, flagged?: bool}> $answers
      * @return array<string, mixed>|null
      */
     public function saveProgress(PDO $pdo, int $userId, string $id, int $position, int $elapsedSeconds, array $answers): ?array {
@@ -163,7 +165,7 @@ final class SimulatorSessionRepository {
             $pdo->prepare(
                 'UPDATE simulator_session_answers
                  SET is_correct = CASE WHEN selected_option = (
-                    SELECT correct_option FROM enem_questions WHERE id = simulator_session_answers.question_id
+                    SELECT correct_option FROM simulator_questions WHERE id = simulator_session_answers.question_id
                  ) THEN 1 ELSE 0 END,
                  updated_at = CURRENT_TIMESTAMP
                  WHERE session_id = ?'
@@ -218,10 +220,10 @@ final class SimulatorSessionRepository {
      */
     public function recentResponses(PDO $pdo, int $userId): array {
         $statement = $pdo->prepare(
-            "SELECT questions.area AS subject, questions.topic, answers.is_correct, sessions.completed_at AS answered_at
+            "SELECT questions.subject, questions.topic, answers.is_correct, sessions.completed_at AS answered_at
              FROM simulator_session_answers AS answers
              JOIN simulator_sessions AS sessions ON sessions.id = answers.session_id
-             JOIN enem_questions AS questions ON questions.id = answers.question_id
+             JOIN simulator_questions AS questions ON questions.id = answers.question_id
              WHERE sessions.user_id = ?
                AND sessions.status = 'completed'
                AND sessions.completed_at >= datetime('now', '-90 days')
@@ -241,7 +243,7 @@ final class SimulatorSessionRepository {
 
     /**
      * @param list<string> $subjects
-     * @return list<int>
+     * @return list<string>
      */
     public function wrongQuestionIds(PDO $pdo, int $userId, array $subjects, ?string $topic): array {
         [$subjectCondition, $subjectParameters] = $this->subjectScope($subjects, $topic);
@@ -250,26 +252,25 @@ final class SimulatorSessionRepository {
             "SELECT answers.question_id AS question_id, MAX(answers.updated_at) AS last_wrong_at
              FROM simulator_session_answers AS answers
              JOIN simulator_sessions AS sessions ON sessions.id = answers.session_id
-             JOIN enem_questions AS questions ON questions.id = answers.question_id
+             JOIN simulator_questions AS questions ON questions.id = answers.question_id
              WHERE sessions.user_id = ?
                AND sessions.status = 'completed'
                AND sessions.completed_at >= datetime('now', '-90 days')
                AND answers.selected_option IS NOT NULL
                AND answers.is_correct = 0
-               AND questions.status = 'valid'
-               AND questions.correct_option IN ('A', 'B', 'C', 'D', 'E')
+               AND questions.published = 1
                AND {$subjectCondition}
              GROUP BY answers.question_id
              ORDER BY last_wrong_at DESC"
         );
         $statement->execute([$userId, ...$subjectParameters]);
 
-        return array_map(static fn(array $row): int => (int) $row['question_id'], $statement->fetchAll());
+        return array_map(static fn(array $row): string => (string) $row['question_id'], $statement->fetchAll());
     }
 
     /**
      * @param list<string> $subjects
-     * @return list<int>
+     * @return list<string>
      */
     public function recentlyUsedQuestionIds(PDO $pdo, int $userId, array $subjects, ?string $topic): array {
         [$subjectCondition, $subjectParameters] = $this->subjectScope($subjects, $topic);
@@ -278,7 +279,7 @@ final class SimulatorSessionRepository {
             "SELECT composition.question_id AS question_id, MAX(sessions.updated_at) AS last_used_at
              FROM simulator_session_questions AS composition
              JOIN simulator_sessions AS sessions ON sessions.id = composition.session_id
-             JOIN enem_questions AS questions ON questions.id = composition.question_id
+             JOIN simulator_questions AS questions ON questions.id = composition.question_id
              WHERE sessions.user_id = ?
                AND sessions.updated_at >= datetime('now', '-90 days')
                AND {$subjectCondition}
@@ -287,7 +288,7 @@ final class SimulatorSessionRepository {
         );
         $statement->execute([$userId, ...$subjectParameters]);
 
-        return array_map(static fn(array $row): int => (int) $row['question_id'], $statement->fetchAll());
+        return array_map(static fn(array $row): string => (string) $row['question_id'], $statement->fetchAll());
     }
 
     /**
@@ -299,7 +300,7 @@ final class SimulatorSessionRepository {
             throw new InvalidArgumentException('At least one subject is required.');
         }
 
-        $condition = 'questions.area IN (' . implode(', ', array_fill(0, count($subjects), '?')) . ')';
+        $condition = 'questions.subject IN (' . implode(', ', array_fill(0, count($subjects), '?')) . ')';
         $parameters = $subjects;
         if ($topic !== null) {
             $condition .= ' AND questions.topic = ?';
@@ -318,17 +319,17 @@ final class SimulatorSessionRepository {
         return $session === false ? null : $session;
     }
 
-    /** @return list<int> */
+    /** @return list<string> */
     private function sessionQuestionIds(PDO $pdo, string $id): array {
         $statement = $pdo->prepare(
             'SELECT question_id FROM simulator_session_questions WHERE session_id = ? ORDER BY position ASC'
         );
         $statement->execute([$id]);
 
-        return array_map(static fn(array $row): int => (int) $row['question_id'], $statement->fetchAll());
+        return array_map(static fn(array $row): string => (string) $row['question_id'], $statement->fetchAll());
     }
 
-    /** @param list<int> $questionIds @return list<int> */
+    /** @param list<string> $questionIds @return list<string> */
     private function validatedQuestionIds(array $questionIds): array {
         if ($questionIds === []) {
             throw new InvalidArgumentException('A session needs at least one question.');
@@ -336,22 +337,22 @@ final class SimulatorSessionRepository {
 
         $normalized = [];
         foreach ($questionIds as $questionId) {
-            if (filter_var($questionId, FILTER_VALIDATE_INT) === false || (int) $questionId < 1) {
-                throw new InvalidArgumentException('Question IDs must be positive integers.');
+            if (!PublishedQuestionRepository::isQuestionId($questionId)) {
+                throw new InvalidArgumentException('Question IDs must be source-prefixed strings.');
             }
-            if (isset($normalized[(int) $questionId])) {
+            if (isset($normalized[$questionId])) {
                 throw new InvalidArgumentException('Question IDs cannot be duplicated.');
             }
-            $normalized[(int) $questionId] = (int) $questionId;
+            $normalized[$questionId] = $questionId;
         }
 
         return array_values($normalized);
     }
 
     /**
-     * @param list<array{question_id: int, selected_option: ?string, flagged?: bool}> $answers
-     * @param list<int> $questionIds
-     * @return list<array{question_id: int, selected_option: ?string, flagged: bool}>
+     * @param list<array{question_id: string, selected_option: ?string, flagged?: bool}> $answers
+     * @param list<string> $questionIds
+     * @return list<array{question_id: string, selected_option: ?string, flagged: bool}>
      */
     private function validatedAnswers(array $answers, array $questionIds): array {
         $allowedIds = array_fill_keys($questionIds, true);
@@ -363,7 +364,7 @@ final class SimulatorSessionRepository {
             $questionId = $answer['question_id'];
             $selectedOption = $answer['selected_option'] ?? null;
             $flagged = $answer['flagged'] ?? false;
-            if (filter_var($questionId, FILTER_VALIDATE_INT) === false || !isset($allowedIds[(int) $questionId])) {
+            if (!is_string($questionId) || !isset($allowedIds[$questionId])) {
                 throw new InvalidArgumentException('Answers must belong to the session composition.');
             }
             if ($selectedOption !== null && (!is_string($selectedOption) || !in_array($selectedOption, ['A', 'B', 'C', 'D', 'E'], true))) {
@@ -372,8 +373,8 @@ final class SimulatorSessionRepository {
             if (!is_bool($flagged)) {
                 throw new InvalidArgumentException('Flagged values must be boolean.');
             }
-            $normalized[(int) $questionId] = [
-                'question_id' => (int) $questionId,
+            $normalized[$questionId] = [
+                'question_id' => $questionId,
                 'selected_option' => $selectedOption,
                 'flagged' => $flagged,
             ];

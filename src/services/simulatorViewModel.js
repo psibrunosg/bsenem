@@ -10,12 +10,12 @@ const STATUS_LABELS = {
  * Builds the home view state from the catalog subjects and the overview payload.
  * Returns exactly one hero: recommended practice, subject chooser or content-unavailable.
  */
-export function overviewViewModel({ subjects = [], recommendation = null, mastery = [], active_sessions: activeSessions = [] } = {}) {
+export function overviewViewModel({ subjects = [], catalogs = [], recommendation = null, mastery = [], active_sessions: activeSessions = [] } = {}) {
   const resume = resumeViewModel(activeSessions[0] ?? null);
   const otherActiveCount = Math.max(0, activeSessions.length - (resume ? 1 : 0));
 
   if (subjects.length === 0) {
-    return { hero: unavailableHero(), mastery: [], resume, otherActiveCount, subjects: [] };
+    return { hero: unavailableHero(), mastery: [], resume, otherActiveCount, subjects: [], catalogs: [] };
   }
 
   return {
@@ -24,6 +24,7 @@ export function overviewViewModel({ subjects = [], recommendation = null, master
     resume,
     otherActiveCount,
     subjects,
+    catalogs,
   };
 }
 

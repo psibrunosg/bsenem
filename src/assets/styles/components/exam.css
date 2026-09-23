@@ -560,6 +560,78 @@
   position: relative;
 }
 
+.simulator-builder {
+  display: grid;
+  gap: 16px;
+  margin: 0 0 32px;
+  padding: 20px;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  background: var(--bg-card);
+}
+
+.simulator-builder h2,
+.exams-catalog > h2,
+.exams-catalog-group h3 {
+  margin: 0;
+}
+
+.simulator-builder p {
+  margin: 6px 0 0;
+  color: var(--text-secondary);
+}
+
+.simulator-builder-fields {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.simulator-count-label {
+  display: grid;
+  gap: 6px;
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+}
+
+.simulator-subject-option {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 10px;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  font-size: var(--text-sm);
+}
+
+.simulator-question-count {
+  width: min(100%, 140px);
+  min-height: 42px;
+  padding: 8px 10px;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  background: var(--bg-card);
+  color: var(--text-primary);
+}
+
+.simulator-builder .btn {
+  width: fit-content;
+}
+
+.exams-catalog {
+  display: grid;
+  gap: 18px;
+}
+
+.exams-catalog-group {
+  display: grid;
+  gap: 10px;
+}
+
 .exams-list-header {
   margin-bottom: 16px;
 }

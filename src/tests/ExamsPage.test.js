@@ -26,7 +26,17 @@ function mockApi({ catalog, overview, onCreateSession } = {}) {
 }
 
 const emptyCatalog = { subjects: [] };
-const oneSubjectCatalog = { subjects: [{ key: 'Matemática', label: 'Matemática', available: 10 }] };
+const oneSubjectCatalog = { subjects: [{ key: 'Matemática', label: 'Matemática', available: 10 }], catalogs: [] };
+const fullCatalog = {
+  subjects: [
+    { key: 'Matemática', label: 'Matemática', available: 10 },
+    { key: 'Psicologia', label: 'Psicologia', available: 40 },
+  ],
+  catalogs: [
+    { id: 'enem:mat', title: 'Simulado — Matemática (45 Questões)', category: 'enem', subject: 'Matemática', question_count: 45, duration_minutes: 135 },
+    { id: 'concursos:psicologia', title: 'Concursos — Psicologia', category: 'concursos', subject: 'Psicologia', question_count: 40, duration_minutes: null },
+  ],
+};
 const emptyOverview = { recommendation: null, mastery: [], active_sessions: [] };
 
 describe('ExamsPage', () => {
@@ -166,7 +176,7 @@ describe('ExamsPage', () => {
     await vi.waitFor(() => expect(page.element.textContent).toContain('Sessão não encontrada.'));
     expect(page.element.querySelector('[data-action="retry"]')).toBeNull();
 
-    page.element.querySelector('[data-action="browse-subject"]').click();
+    page.element.querySelector('[data-action="choose-subject"]').click();
 
     await vi.waitFor(() => expect(page.element.textContent).not.toContain('Sessão não encontrada.'));
     expect(api.post).toHaveBeenCalled();
@@ -210,23 +220,48 @@ describe('ExamsPage', () => {
     expect(page.element.textContent).toContain('Matemática (10)');
   });
 
-  it('creates a custom session from the secondary catalog for a chosen subject', async () => {
+  it('builds a custom session from several chosen subjects and a question count', async () => {
+    const api = mockApi({ catalog: fullCatalog, overview: emptyOverview });
+    const page = new ExamsPage({ apiClient: api, user: { id: 'u1' } });
+    await page.render();
+
+    for (const box of page.element.querySelectorAll('[data-field="custom-subject"]')) box.checked = true;
+    page.element.querySelector('[data-field="custom-count"]').value = '15';
+    page.element.querySelector('[data-action="build-custom"]').click();
+
+    await vi.waitFor(() => expect(api.post).toHaveBeenCalledWith('/simulators/sessions', { kind: 'custom', subjects: ['Matemática', 'Psicologia'], count: 15 }));
+    page.destroy();
+  });
+
+  it('asks for a subject before building a custom session', async () => {
+    const api = mockApi({ catalog: fullCatalog, overview: emptyOverview });
+    const page = new ExamsPage({ apiClient: api, user: { id: 'u1' } });
+    await page.render();
+
+    page.element.querySelector('[data-action="build-custom"]').click();
+
+    await vi.waitFor(() => expect(page.element.textContent).toContain('Escolha ao menos uma matéria.'));
+    expect(api.post).not.toHaveBeenCalled();
+  });
+
+  it('lists ENEM and concursos exams and starts one as a catalog session', async () => {
     const api = mockApi({
-      catalog: oneSubjectCatalog,
-      overview: {
-        recommendation: { subject: 'Matemática', topic: null, answered_count: 8, accuracy: 42.5, status: 'attention', action: 'practice' },
-        mastery: [],
-        active_sessions: [],
-      },
+      catalog: fullCatalog,
+      overview: emptyOverview,
+      onCreateSession: (body) => activeSession({ id: 'catalog-1', kind: body.kind }),
     });
     const page = new ExamsPage({ apiClient: api, user: { id: 'u1' } });
     await page.render();
 
-    const subjectButton = page.element.querySelector('[data-action="browse-subject"][data-subject="Matemática"]');
-    expect(subjectButton).not.toBeNull();
-    subjectButton.click();
+    const groups = [...page.element.querySelectorAll('.exams-catalog-group h3')].map((heading) => heading.textContent);
+    expect(groups).toEqual(['ENEM', 'Concursos']);
+    expect(page.element.textContent).toContain('Concursos — Psicologia');
+    expect(page.element.textContent).toContain('45 questões · 135 min');
 
-    await vi.waitFor(() => expect(api.post).toHaveBeenCalledWith('/simulators/sessions', expect.objectContaining({ kind: 'custom', subjects: ['Matemática'] })));
+    page.element.querySelector('[data-action="start-catalog"][data-catalog-id="enem:mat"]').click();
+    await vi.waitFor(() => expect(page.element.querySelector('.exam-player')).not.toBeNull());
+    expect(api.post).toHaveBeenCalledWith('/simulators/sessions', { kind: 'catalog', catalog_id: 'enem:mat' });
+    page.destroy();
   });
 
   it('keeps the previously rendered content when a refresh fails', async () => {
@@ -269,6 +304,31 @@ describe('ExamsPage', () => {
     expect(cta.tagName).toBe('BUTTON');
     expect(cta.type).toBe('button');
     expect(cta.disabled).toBe(false);
+  });
+
+  it('reopens the same catalog when practicing a finished exam again', async () => {
+    const session = activeSession({ id: 'catalog-1', kind: 'catalog' });
+    const completed = { ...session, status: 'completed', questions: session.questions.map((question) => ({ ...question, correct_option: 'A' })) };
+    const api = mockApi({ catalog: fullCatalog, overview: emptyOverview, onCreateSession: () => session });
+    api.patch.mockResolvedValue(ok({ session }));
+    const post = api.post.getMockImplementation();
+    api.post.mockImplementation((url, body) => (
+      url === '/simulators/sessions/catalog-1/complete'
+        ? Promise.resolve(ok({ session: completed, result: { correct: 0, incorrect: 0, unanswered: 2, score: 0 } }))
+        : post(url, body)
+    ));
+    const page = new ExamsPage({ apiClient: api, user: { id: 'u1' } });
+    await page.render();
+    page.element.querySelector('[data-action="start-catalog"][data-catalog-id="enem:mat"]').click();
+    await vi.waitFor(() => expect(page.element.querySelector('.exam-player')).not.toBeNull());
+    await page.player.finish();
+    await vi.waitFor(() => expect(page.element.querySelector('.results-screen')).not.toBeNull());
+
+    page.element.querySelector('.results-screen [data-action="retry"]').click();
+
+    await vi.waitFor(() => expect(api.post.mock.calls.filter(([url]) => url === '/simulators/sessions')).toHaveLength(2));
+    expect(api.post).toHaveBeenLastCalledWith('/simulators/sessions', { kind: 'catalog', catalog_id: 'enem:mat' });
+    page.destroy();
   });
 
   it('does not mention the local library', async () => {

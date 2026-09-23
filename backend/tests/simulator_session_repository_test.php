@@ -29,7 +29,7 @@ function insertSessionUser(PDO $pdo, string $email): int {
     return (int) $pdo->lastInsertId();
 }
 
-function insertSessionQuestion(PDO $pdo, int $number, string $correctOption): int {
+function insertSessionQuestion(PDO $pdo, int $number, string $correctOption): string {
     $pdo->prepare(
         'INSERT INTO enem_questions (
             year, day, question_number, area, statement,
@@ -44,7 +44,7 @@ function insertSessionQuestion(PDO $pdo, int $number, string $correctOption): in
         'https://example.test/enem', '[]',
     ]);
 
-    return (int) $pdo->lastInsertId();
+    return 'inep:' . $pdo->lastInsertId();
 }
 
 $path = tempnam(sys_get_temp_dir(), 'bsenem-simulator-session-test-');

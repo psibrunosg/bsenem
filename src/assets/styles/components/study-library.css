@@ -9,10 +9,10 @@
 .institution-gallery-all { border: 1px solid #e8e8e5; border-radius: 999px; background: transparent; color: #fff; padding: 0.7rem 1.55rem; font: inherit; font-weight: 700; white-space: nowrap; }
 .institution-gallery-scroll { width: 2.7rem; height: 2.7rem; border: 1px solid #565656; border-radius: 50%; background: #171717; color: #fff; font-size: 1.15rem; }
 .institution-gallery-scroll:hover, .institution-gallery-all:hover { border-color: #f28a3c; color: #f28a3c; }
-.institution-gallery-rail { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(15rem, 20rem); grid-template-rows: 1fr; overflow-x: auto; overscroll-behavior-inline: contain; scroll-snap-type: inline mandatory; gap: 1rem; padding: 0 0 0.8rem; scrollbar-color: #555 transparent; }
+.institution-gallery-rail { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(12rem, 15.5rem); grid-template-rows: 1fr; overflow-x: auto; overscroll-behavior-inline: contain; scroll-snap-type: inline mandatory; gap: 1rem; padding: 0 0 0.8rem; scrollbar-color: #555 transparent; }
 .institution-gallery-card { border: 0; padding: 0; background: transparent; color: #fff; text-align: left; font: inherit; cursor: pointer; }
 .institution-gallery-card { scroll-snap-align: start; }
-.institution-gallery-cover { display: block; height: clamp(17rem, 30vw, 27rem); margin-bottom: 0.8rem; border-radius: 1rem; background: linear-gradient(145deg, #313d37, #151a18 58%, #6b4a2c); overflow: hidden; }
+.institution-gallery-cover { display: block; height: clamp(13rem, 22vw, 19rem); margin-bottom: 0.8rem; border-radius: 1rem; background: linear-gradient(145deg, #313d37, #151a18 58%, #6b4a2c); overflow: hidden; }
 .institution-gallery-cover[data-cover="1"] { background: linear-gradient(145deg, #294156, #151a20 58%, #9a633c); }
 .institution-gallery-cover[data-cover="2"] { background: linear-gradient(145deg, #5f4935, #191817 55%, #b38c56); }
 .institution-gallery-cover[data-cover="3"] { background: linear-gradient(145deg, #473943, #161316 54%, #a66a76); }
@@ -33,7 +33,7 @@
 .study-library-controls .input { min-width: min(100%, 22rem); flex: 1; }
 .study-library-type-shortcuts { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: -0.25rem 0 1rem; }
 .study-library-type-shortcuts [aria-pressed="true"] { border-color: var(--orange-500); color: var(--orange-500); }
-.study-library-children { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-bottom: 1.5rem; }
+.study-library-children { display: grid; grid-template-columns: repeat(auto-fill, minmax(13rem, 1fr)); gap: 0.75rem; margin-bottom: 1.5rem; }
 .study-library-folder,
 .study-library-item { border: 1px solid #333; background: #121313; border-radius: 0.8rem; text-align: left; }
 .study-library-folder { padding: 1rem; min-width: 13rem; color: #fff; }

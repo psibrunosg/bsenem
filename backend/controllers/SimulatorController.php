@@ -5,6 +5,7 @@ declare(strict_types=1);
 require_once __DIR__ . '/../config/database.php';
 require_once __DIR__ . '/../config/response.php';
 require_once __DIR__ . '/../middleware/auth.php';
+require_once __DIR__ . '/../services/SimulatorCatalogImporter.php';
 require_once __DIR__ . '/../utils/PublishedQuestionRepository.php';
 require_once __DIR__ . '/../utils/SimulatorRecommendation.php';
 require_once __DIR__ . '/../utils/SimulatorSessionRepository.php';
@@ -12,7 +13,12 @@ require_once __DIR__ . '/../utils/SimulatorSessionRepository.php';
 final class SimulatorController {
     public static function catalog(): void {
         Auth::requireAuth();
-        Response::success(['subjects' => PublishedQuestionRepository::subjects(self::pdo())]);
+        SimulatorCatalogImporter::ensureImported(Database::getInstance());
+        $pdo = self::pdo();
+        Response::success([
+            'subjects' => PublishedQuestionRepository::subjects($pdo),
+            'catalogs' => self::publishedCatalogs($pdo),
+        ]);
     }
 
     public static function overview(): void {
@@ -42,13 +48,18 @@ final class SimulatorController {
         if (!is_string($kind) || !in_array($kind, ['catalog', 'custom', 'practice'], true)) {
             Response::error('Tipo de simulado inválido.');
         }
-        $count = self::count($data['count'] ?? null);
+        SimulatorCatalogImporter::ensureImported(Database::getInstance());
         $pdo = self::pdo();
+        $sessionRepository = new SimulatorSessionRepository();
+        if ($kind === 'catalog') {
+            self::createFromCatalog($pdo, $sessionRepository, $userId, $data['catalog_id'] ?? null);
+        }
+
+        $count = self::count($data['count'] ?? null);
         $catalog = PublishedQuestionRepository::subjects($pdo);
         $availableSubjects = array_column($catalog, 'key');
         $subjects = self::subjects($data['subjects'] ?? null, $availableSubjects, $kind === 'practice');
         $topic = self::topic($data['topic'] ?? null);
-        $sessionRepository = new SimulatorSessionRepository();
 
         if ($kind === 'practice') {
             $overview = SimulatorRecommendation::overview($sessionRepository->recentResponses($pdo, $userId), []);
@@ -80,24 +91,11 @@ final class SimulatorController {
                 $questions = PublishedQuestionRepository::select($pdo, $subjects, $topic, $count, [], $wrongIds);
             }
         } else {
-            $questions = PublishedQuestionRepository::select($pdo, $subjects, $topic, $count);
+            $questions = self::interleavedSelection($pdo, $subjects, $topic, $count);
         }
 
-        try {
-            $session = $sessionRepository->create(
-                $pdo,
-                $userId,
-                $kind,
-                count($subjects) === 1 ? $subjects[0] : null,
-                $topic,
-                $kind === 'practice' ? 1500 : max(1, $count * 150),
-                array_column($questions, 'id')
-            );
-        } catch (InvalidArgumentException) {
-            Response::error('Dados da sessão inválidos.');
-        }
-
-        Response::json(['success' => true, 'data' => ['session' => self::sessionDto($pdo, $session)]], 201);
+        self::respondCreated($pdo, $sessionRepository, $userId, $kind, count($subjects) === 1 ? $subjects[0] : null, $topic,
+            $kind === 'practice' ? 1500 : max(1, $count * 150), array_column($questions, 'id'));
     }
 
     public static function show(string $id): void {
@@ -162,6 +160,84 @@ final class SimulatorController {
         Response::success(['session' => self::sessionDto($pdo, $session), 'result' => $completion['result']]);
     }
 
+    /**
+     * Takes questions from each chosen subject in turn, so a multi-subject simulator
+     * mixes them instead of exhausting the first subject in source order.
+     * @param list<string> $subjects
+     * @return list<array<string, mixed>>
+     */
+    private static function interleavedSelection(PDO $pdo, array $subjects, ?string $topic, int $count): array {
+        $pools = array_map(
+            static fn(string $subject): array => PublishedQuestionRepository::select($pdo, [$subject], $topic, $count),
+            $subjects
+        );
+        $questions = [];
+        for ($round = 0; $round < $count && count($questions) < $count; $round++) {
+            foreach ($pools as $pool) {
+                if (isset($pool[$round]) && count($questions) < $count) {
+                    $questions[] = $pool[$round];
+                }
+            }
+        }
+
+        return $questions;
+    }
+
+    /** A published catalog is played as an immutable session with its ordered questions. */
+    private static function createFromCatalog(PDO $pdo, SimulatorSessionRepository $repository, int $userId, mixed $catalogId): never {
+        if (!is_string($catalogId) || $catalogId === '' || strlen($catalogId) > 200) {
+            Response::error('Simulado inválido.');
+        }
+        $catalog = self::publishedCatalogs($pdo, $catalogId)[0] ?? null;
+        if ($catalog === null) {
+            Response::notFound('Simulado não encontrado.');
+        }
+        $statement = $pdo->prepare('SELECT question_id FROM simulator_catalog_questions WHERE catalog_id = ? ORDER BY position ASC');
+        $statement->execute([$catalogId]);
+        $questionIds = array_map('strval', array_column($statement->fetchAll(), 'question_id'));
+        $minutes = (int) ($catalog['duration_minutes'] ?? 0);
+
+        self::respondCreated($pdo, $repository, $userId, 'catalog', $catalog['subject'], null,
+            $minutes > 0 ? $minutes * 60 : count($questionIds) * 150, $questionIds);
+    }
+
+    /** @param list<string> $questionIds */
+    private static function respondCreated(PDO $pdo, SimulatorSessionRepository $repository, int $userId, string $kind, ?string $subject, ?string $topic, int $limitSeconds, array $questionIds): never {
+        try {
+            $session = $repository->create($pdo, $userId, $kind, $subject, $topic, $limitSeconds, $questionIds);
+        } catch (InvalidArgumentException) {
+            Response::error('Dados da sessão inválidos.');
+        }
+
+        Response::json(['success' => true, 'data' => ['session' => self::sessionDto($pdo, $session)]], 201);
+    }
+
+    /**
+     * Published catalogs whose questions are all currently published.
+     * @return list<array{id: string, title: string, category: string, subject: string, question_count: int, duration_minutes: ?int}>
+     */
+    private static function publishedCatalogs(PDO $pdo, ?string $onlyId = null): array {
+        $filter = $onlyId === null ? '' : 'AND catalogs.id = ?';
+        $statement = $pdo->prepare(
+            "SELECT catalogs.id, catalogs.title, catalogs.category, catalogs.subject, catalogs.duration_minutes,
+                    COUNT(questions.id) AS question_count, COUNT(composition.question_id) AS composed_count
+             FROM simulator_catalogs AS catalogs
+             JOIN simulator_catalog_questions AS composition ON composition.catalog_id = catalogs.id
+             LEFT JOIN simulator_questions AS questions ON questions.id = composition.question_id AND questions.published = 1
+             WHERE catalogs.published = 1 {$filter}
+             GROUP BY catalogs.id
+             HAVING question_count > 0 AND question_count = composed_count
+             ORDER BY CASE catalogs.category WHEN 'enem' THEN 0 ELSE 1 END, catalogs.title"
+        );
+        $statement->execute($onlyId === null ? [] : [$onlyId]);
+
+        return array_map(static fn(array $row): array => [
+            'id' => (string) $row['id'], 'title' => (string) $row['title'], 'category' => (string) $row['category'],
+            'subject' => (string) $row['subject'], 'question_count' => (int) $row['question_count'],
+            'duration_minutes' => $row['duration_minutes'] === null ? null : (int) $row['duration_minutes'],
+        ], $statement->fetchAll());
+    }
+
     private static function pdo(): PDO {
         return Database::getInstance()->getConnection();
     }
@@ -189,8 +265,8 @@ final class SimulatorController {
         if ($value === null && $allowEmpty) {
             return [];
         }
-        if (!is_array($value) || count($value) < 1 || count($value) > 4) {
-            Response::error('Escolha entre uma e quatro matérias.');
+        if (!is_array($value) || count($value) < 1 || count($value) > 8) {
+            Response::error('Escolha entre uma e oito matérias.');
         }
         $subjects = [];
         foreach ($value as $subject) {
@@ -211,7 +287,7 @@ final class SimulatorController {
     }
 
     private static function count(mixed $value): int {
-        if (!is_int($value) || $value < 1 || $value > 90) {
+        if (!is_int($value) || $value < 1 || $value > PublishedQuestionRepository::MAX_QUESTIONS) {
             Response::error('Quantidade de questões inválida.');
         }
 
@@ -280,11 +356,11 @@ final class SimulatorController {
     /** @return list<array<string, mixed>> */
     private static function questions(PDO $pdo, string $sessionId, bool $includeCorrectOption): array {
         $statement = $pdo->prepare(
-            'SELECT questions.id, questions.area, questions.topic, questions.statement,
+            'SELECT questions.id, questions.subject, questions.topic, questions.statement,
                     questions.option_a, questions.option_b, questions.option_c, questions.option_d, questions.option_e,
                     questions.images, questions.correct_option, composition.position
              FROM simulator_session_questions AS composition
-             JOIN enem_questions AS questions ON questions.id = composition.question_id
+             JOIN simulator_questions AS questions ON questions.id = composition.question_id
              WHERE composition.session_id = ?
              ORDER BY composition.position ASC'
         );
@@ -293,7 +369,7 @@ final class SimulatorController {
         return array_map(static function (array $row) use ($includeCorrectOption): array {
             $images = json_decode((string) $row['images'], true);
             $question = [
-                'id' => (int) $row['id'], 'position' => (int) $row['position'], 'subject' => (string) $row['area'],
+                'id' => (string) $row['id'], 'position' => (int) $row['position'], 'subject' => (string) $row['subject'],
                 'topic' => $row['topic'], 'statement' => (string) $row['statement'],
                 'options' => ['A' => $row['option_a'], 'B' => $row['option_b'], 'C' => $row['option_c'], 'D' => $row['option_d'], 'E' => $row['option_e']],
                 'images' => is_array($images) ? $images : [],

@@ -30,7 +30,7 @@ export class Sidebar {
           { id: 'video', icon: 'play-circle', label: 'Videoaulas' },
           { id: 'audio', icon: 'music', label: 'Áudios' },
           { id: 'study-library', icon: 'library-big', label: 'Biblioteca de estudos' },
-          { id: 'library', icon: 'folder-open', label: 'Biblioteca local' },
+          { id: 'documents', icon: 'file-text', label: 'Documentos' },
           { id: 'flashcards', icon: 'layers', label: 'Flashcards' }
         ]
       },

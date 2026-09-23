@@ -21,7 +21,7 @@ function expectPublishedThrows(callable $callback, string $message): void {
     throw new RuntimeException($message);
 }
 
-function insertPublishedQuestion(PDO $pdo, array $question): int {
+function insertPublishedQuestion(PDO $pdo, array $question): string {
     $pdo->prepare(
         'INSERT INTO enem_questions (
             year, day, question_number, area, topic, statement,
@@ -52,7 +52,7 @@ function insertPublishedQuestion(PDO $pdo, array $question): int {
         '["figura.png"]',
     ]);
 
-    return (int) $pdo->lastInsertId();
+    return 'inep:' . $pdo->lastInsertId();
 }
 
 function createLegacySimulatorSchema(PDO $pdo): void {
@@ -75,14 +75,28 @@ function createLegacySimulatorSchema(PDO $pdo): void {
         )"
     );
     $pdo->exec(
+        "CREATE TABLE simulator_session_questions (
+            session_id TEXT NOT NULL,
+            question_id INTEGER NOT NULL,
+            position INTEGER NOT NULL,
+            created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+            PRIMARY KEY (session_id, question_id)
+        )"
+    );
+    $pdo->exec(
         "CREATE TABLE simulator_session_answers (
             session_id TEXT NOT NULL,
             question_id INTEGER NOT NULL,
             selected_option TEXT,
             is_correct INTEGER NOT NULL DEFAULT 0,
+            created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+            updated_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
             PRIMARY KEY (session_id, question_id)
         )"
     );
+    $pdo->exec("INSERT INTO simulator_sessions (id, user_id, kind, status, question_limit) VALUES ('legacy-session', 1, 'practice', 'active', 1)");
+    $pdo->exec("INSERT INTO simulator_session_questions (session_id, question_id, position) VALUES ('legacy-session', 42, 0)");
+    $pdo->exec("INSERT INTO simulator_session_answers (session_id, question_id, selected_option) VALUES ('legacy-session', 42, 'B')");
 }
 
 $path = tempnam(sys_get_temp_dir(), 'bsenem-published-question-test-');
@@ -181,9 +195,22 @@ try {
         'Counts below one are rejected before selection'
     );
     expectPublishedThrows(
-        fn() => PublishedQuestionRepository::select($pdo, ['Matemática'], null, 91),
-        'Counts above ninety are rejected before selection'
+        fn() => PublishedQuestionRepository::select($pdo, ['Matemática'], null, 201),
+        'Counts above two hundred are rejected before selection'
     );
+    expectPublishedThrows(
+        fn() => PublishedQuestionRepository::select($pdo, ['Matemática'], null, 10, [1]),
+        'Unprefixed question IDs are rejected'
+    );
+
+    $pdo->prepare(
+        'INSERT INTO simulator_question_bank (id, provider, category, subject, statement, options_json, correct_option)
+         VALUES (?, ?, ?, ?, ?, ?, ?)'
+    )->execute(['concursos:q-1', 'Concursos Sul', 'concursos', 'Psicologia', 'Questão de concurso.', '["a","b","c","d","e"]', 3]);
+    $concursos = PublishedQuestionRepository::select($pdo, ['Psicologia'], null, 5);
+    expectPublishedSame(['concursos:q-1'], array_column($concursos, 'id'), 'Concursos questions are published through the unified view');
+    expectPublishedSame('d', $concursos[0]['options']['D'], 'Concursos options are mapped to A–E');
+    expectPublishedSame('D', $pdo->query("SELECT correct_option FROM simulator_questions WHERE id = 'concursos:q-1'")->fetchColumn(), 'Concursos answer index maps to its letter');
 
     expectPublishedSame(1, (int) $pdo->query("SELECT COUNT(*) FROM schema_migrations WHERE version = '007_simulator_sessions.sql'")->fetchColumn(), 'Migration 007 is applied once');
     Database::resetForTests();
@@ -206,6 +233,8 @@ try {
     $flaggedColumn = $legacyPdo->query("SELECT name FROM pragma_table_info('simulator_session_answers') WHERE name = 'flagged'")->fetchColumn();
     expectPublishedSame('flagged', $flaggedColumn, 'Migration 008 adds flags to a schema that already recorded migration 007');
     expectPublishedSame(1, (int) $legacyPdo->query("SELECT COUNT(*) FROM schema_migrations WHERE version = '008_simulator_session_draft_fields.sql'")->fetchColumn(), 'Migration 008 is recorded after updating a legacy schema');
+    expectPublishedSame('inep:42', $legacyPdo->query("SELECT question_id FROM simulator_session_questions WHERE session_id = 'legacy-session'")->fetchColumn(), 'Migration 009 prefixes legacy composition IDs');
+    expectPublishedSame('B', $legacyPdo->query("SELECT selected_option FROM simulator_session_answers WHERE question_id = 'inep:42'")->fetchColumn(), 'Migration 009 keeps legacy answers');
 } finally {
     unset($pdo);
     unset($legacyPdo);

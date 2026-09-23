@@ -6,6 +6,9 @@ import { api as defaultApi } from '@utils/api.js';
 import { renderIcons } from '@utils/icons.js';
 
 const PRACTICE_QUESTION_COUNT = 10;
+const CUSTOM_DEFAULT_COUNT = 20;
+const CUSTOM_MAX_COUNT = 200;
+const CATALOG_GROUPS = [['enem', 'ENEM'], ['concursos', 'Concursos']];
 
 export class ExamsPage {
   constructor({ apiClient = defaultApi, user } = {}) {
@@ -18,6 +21,7 @@ export class ExamsPage {
     this.mode = 'home';
     this.player = null;
     this.results = null;
+    this.sessionOrigins = new Map();
     this.element = null;
   }
 
@@ -33,7 +37,7 @@ export class ExamsPage {
     if (!isRefresh && this.mode === 'home') this.renderLoading();
     try {
       const [catalog, overview] = await Promise.all([this.service.catalog(), this.service.overview()]);
-      this.view = overviewViewModel({ subjects: catalog.subjects, ...overview });
+      this.view = overviewViewModel({ subjects: catalog.subjects, catalogs: catalog.catalogs, ...overview });
       this.loadError = null;
       this.actionError = null;
     } catch (error) {
@@ -72,7 +76,7 @@ export class ExamsPage {
     if (this.actionError) nodes.push(this.actionErrorBanner());
     nodes.push(this.hero(), this.masteryMap());
     if (this.view.resume) nodes.push(this.resumeRow());
-    nodes.push(this.catalogAccess());
+    nodes.push(this.catalogList(), this.customBuilder());
     this.element.replaceChildren(...nodes);
   }
 
@@ -231,33 +235,113 @@ export class ExamsPage {
     return section;
   }
 
-  catalogAccess() {
+  catalogList() {
     const section = document.createElement('section');
-    section.className = 'simulators-catalog';
+    section.className = 'exams-catalog';
     const title = document.createElement('h2');
-    title.textContent = 'Praticar outra matéria';
+    title.textContent = 'Simulados completos';
     section.appendChild(title);
-    if (this.view.subjects.length === 0) {
+    if (this.view.catalogs.length === 0) {
+      const empty = document.createElement('p');
+      empty.className = 'simulators-mastery-empty';
+      empty.textContent = 'Ainda não há simulados completos publicados.';
+      section.appendChild(empty);
       return section;
     }
-    const list = document.createElement('div');
-    list.className = 'simulators-catalog-list';
-    for (const subject of this.view.subjects) {
-      const button = document.createElement('button');
-      button.type = 'button';
-      button.className = 'btn btn-secondary';
-      button.dataset.action = 'browse-subject';
-      button.dataset.subject = subject.key;
-      button.textContent = `${subject.label} (${subject.available})`;
-      list.appendChild(button);
+    for (const [category, label] of CATALOG_GROUPS) {
+      const entries = this.view.catalogs.filter((catalog) => catalog.category === category);
+      if (entries.length === 0) continue;
+      const group = document.createElement('section');
+      group.className = 'exams-catalog-group';
+      const heading = document.createElement('h3');
+      heading.textContent = label;
+      const list = document.createElement('div');
+      list.className = 'exams-list';
+      list.append(...entries.map((catalog) => this.catalogCard(catalog)));
+      group.append(heading, list);
+      section.appendChild(group);
     }
-    section.appendChild(list);
+    return section;
+  }
+
+  catalogCard(catalog) {
+    const card = document.createElement('article');
+    card.className = 'exam-list-item';
+    const info = document.createElement('div');
+    info.className = 'exam-list-item-info';
+    const title = document.createElement('h4');
+    title.className = 'exam-list-item-title';
+    title.textContent = catalog.title;
+    const meta = document.createElement('p');
+    meta.className = 'exam-list-item-meta';
+    const duration = catalog.duration_minutes ? ` · ${catalog.duration_minutes} min` : '';
+    meta.textContent = `${catalog.question_count} questões${duration}`;
+    info.append(title, meta);
+    const start = document.createElement('button');
+    start.type = 'button';
+    start.className = 'btn btn-secondary';
+    start.dataset.action = 'start-catalog';
+    start.dataset.catalogId = catalog.id;
+    start.setAttribute('aria-label', `Iniciar ${catalog.title}`);
+    start.textContent = 'Iniciar';
+    card.append(info, start);
+    return card;
+  }
+
+  customBuilder() {
+    const section = document.createElement('section');
+    section.className = 'simulator-builder';
+    const title = document.createElement('h2');
+    title.textContent = 'Monte seu simulado';
+    const description = document.createElement('p');
+    description.textContent = 'Escolha uma ou mais matérias e a quantidade. Só entram questões validadas das matérias escolhidas.';
+    section.append(title, description);
+    if (this.view.subjects.length === 0) return section;
+
+    const fieldset = document.createElement('fieldset');
+    fieldset.className = 'simulator-builder-fields';
+    const legend = document.createElement('legend');
+    legend.className = 'sr-only';
+    legend.textContent = 'Matérias';
+    fieldset.appendChild(legend);
+    for (const subject of this.view.subjects) {
+      const label = document.createElement('label');
+      label.className = 'simulator-subject-option';
+      const input = document.createElement('input');
+      input.type = 'checkbox';
+      input.value = subject.key;
+      input.dataset.field = 'custom-subject';
+      const text = document.createElement('span');
+      text.textContent = `${subject.label} (${subject.available})`;
+      label.append(input, text);
+      fieldset.appendChild(label);
+    }
+
+    const countLabel = document.createElement('label');
+    countLabel.className = 'simulator-count-label';
+    const countText = document.createElement('span');
+    countText.textContent = 'Quantidade de questões';
+    const count = document.createElement('input');
+    count.type = 'number';
+    count.min = '1';
+    count.max = String(CUSTOM_MAX_COUNT);
+    count.value = String(CUSTOM_DEFAULT_COUNT);
+    count.className = 'input simulator-question-count';
+    count.dataset.field = 'custom-count';
+    countLabel.append(countText, count);
+
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.className = 'btn btn-primary';
+    button.dataset.action = 'build-custom';
+    button.textContent = 'Montar simulado';
+    section.append(fieldset, countLabel, button);
     return section;
   }
 
   async handleClick(event) {
     const button = event.target.closest('[data-action]');
-    if (!button || button.disabled || this.pending) return;
+    if (this.mode !== 'home' || !button || button.disabled || this.pending) return;
 
     switch (button.dataset.action) {
       case 'retry':
@@ -272,8 +356,11 @@ export class ExamsPage {
         await this.createSession({ kind: 'practice', count: PRACTICE_QUESTION_COUNT, subjects: [select.value] });
         return;
       }
-      case 'browse-subject':
-        await this.createSession({ kind: 'custom', count: PRACTICE_QUESTION_COUNT, subjects: [button.dataset.subject] });
+      case 'start-catalog':
+        await this.createSession({ kind: 'catalog', catalog_id: button.dataset.catalogId });
+        return;
+      case 'build-custom':
+        await this.buildCustomSession();
         return;
       case 'resume':
         await this.resumeSession(button.dataset.sessionId);
@@ -282,11 +369,31 @@ export class ExamsPage {
     }
   }
 
+  async buildCustomSession() {
+    const subjects = [...this.element.querySelectorAll('[data-field="custom-subject"]:checked')].map((input) => input.value);
+    const count = Number(this.element.querySelector('[data-field="custom-count"]')?.value);
+    if (subjects.length === 0) {
+      this.showActionError('Escolha ao menos uma matéria.');
+      return;
+    }
+    if (!Number.isInteger(count) || count < 1 || count > CUSTOM_MAX_COUNT) {
+      this.showActionError(`Escolha entre 1 e ${CUSTOM_MAX_COUNT} questões.`);
+      return;
+    }
+    await this.createSession({ kind: 'custom', subjects, count });
+  }
+
+  showActionError(message) {
+    this.actionError = message;
+    this.update();
+  }
+
   async createSession(payload) {
     this.pending = true;
     this.actionError = null;
     try {
       const { session } = await this.service.createSession(payload);
+      this.sessionOrigins.set(session.id, payload);
       this.openPlayer(session);
     } catch (error) {
       this.actionError = error.message;
@@ -345,11 +452,15 @@ export class ExamsPage {
     this.player?.start();
   }
 
+  /** Opens a new session like the finished one; the finished one stays immutable. */
   retry(session) {
     this.returnHome({ refresh: false });
-    const kind = session.kind === 'practice' ? 'practice' : 'custom';
-    if (!session.subject) return;
-    this.createSession({ kind, count: session.question_limit, subjects: [session.subject] });
+    const origin = this.sessionOrigins.get(session.id);
+    if (origin) {
+      this.createSession(origin);
+    } else if (session.kind !== 'catalog' && session.subject) {
+      this.createSession({ kind: session.kind, count: session.question_limit, subjects: [session.subject] });
+    }
   }
 
   returnHome({ refresh = true } = {}) {

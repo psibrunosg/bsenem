@@ -26,3 +26,7 @@
 
 ## Ícones lucide
 - `lucide.createIcons(element)` não restringe ao elemento e ignora nós fora do documento. Use `renderIcons(root)` de `src/utils/icons.js` (`createIcons({ root })`) depois de anexar o conteúdo, como em re-renderizações dentro de uma página.
+
+## Servidores em segundo plano
+- `TaskStop` encerra o shell, mas o `node` (Vite) e o `php -S` filhos podem continuar vivos, segurando a porta. Confira com `netstat -ano | grep LISTEN` e, antes de encerrar, confirme o dono pelo `CommandLine` (`Get-CimInstance Win32_Process -Filter "ProcessId=<pid>"`). Encerre só pelo PID.
+- `php -S` com `APP_CONTENT_IMPORT` ausente importa ENEM (3060) e concursos (2795) no primeiro acesso a `/api/simulators/catalog` (cerca de 2 s). Nos testes com dados sintéticos, use `APP_CONTENT_IMPORT=off`.

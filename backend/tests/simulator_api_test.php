@@ -33,6 +33,7 @@ function simulatorApiRequest(string $root, string $path, string $uri, string $me
         'TEST_METHOD' => $method,
         'TEST_URI' => $uri,
         'TEST_COOKIE' => $cookie ?? '',
+        'APP_CONTENT_IMPORT' => 'off',
     ]);
     $process = proc_open(
         [PHP_BINARY, 'backend/tests/route_request.php'],
@@ -94,16 +95,29 @@ if ($path === false) {
 
 putenv('APP_ENV=test');
 putenv("APP_DB_PATH={$path}");
+putenv('APP_CONTENT_IMPORT=off');
 
 try {
     Database::resetForTests();
     $pdo = Database::getInstance()->getConnection();
     $firstUserId = insertSimulatorApiUser($pdo, 'first-simulator-api@example.test');
     $secondUserId = insertSimulatorApiUser($pdo, 'second-simulator-api@example.test');
+    $mathQuestionIds = [];
     for ($number = 1; $number <= 10; $number++) {
-        insertSimulatorApiQuestion($pdo, $number, 'Matemática', $number === 1 ? 'B' : 'A');
+        $mathQuestionIds[] = 'inep:' . insertSimulatorApiQuestion($pdo, $number, 'Matemática', $number === 1 ? 'B' : 'A');
     }
     insertSimulatorApiQuestion($pdo, 11, 'História');
+    $insertCatalog = $pdo->prepare('INSERT INTO simulator_catalogs (id, title, category, subject, duration_minutes) VALUES (?, ?, ?, ?, ?)');
+    $insertCatalogQuestion = $pdo->prepare('INSERT INTO simulator_catalog_questions (catalog_id, question_id, position) VALUES (?, ?, ?)');
+    $insertCatalog->execute(['enem:prova-curta', 'Prova curta', 'enem', 'Matemática', 30]);
+    foreach ([$mathQuestionIds[2], $mathQuestionIds[0], $mathQuestionIds[1]] as $position => $questionId) {
+        $insertCatalogQuestion->execute(['enem:prova-curta', $questionId, $position + 1]);
+    }
+    $pendingId = insertSimulatorApiQuestion($pdo, 12, 'Matemática');
+    $pdo->prepare('UPDATE enem_questions SET status = ? WHERE id = ?')->execute(['pending', $pendingId]);
+    $insertCatalog->execute(['enem:incompleta', 'Prova incompleta', 'enem', 'Matemática', null]);
+    $insertCatalogQuestion->execute(['enem:incompleta', $mathQuestionIds[3], 1]);
+    $insertCatalogQuestion->execute(['enem:incompleta', 'inep:' . $pendingId, 2]);
 
     $firstCookie = 'bsenem_session=' . Auth::createSession($firstUserId);
     $secondCookie = 'bsenem_session=' . Auth::createSession($secondUserId);
@@ -134,6 +148,43 @@ try {
     expectSimulatorApiTrue(
         in_array('Matemática', array_column($catalogPayload['data']['subjects'] ?? [], 'key'), true),
         'Catalog exposes eligible subjects'
+    );
+
+    expectSimulatorApiSame(
+        [['id' => 'enem:prova-curta', 'title' => 'Prova curta', 'category' => 'enem', 'subject' => 'Matemática', 'question_count' => 3, 'duration_minutes' => 30]],
+        $catalogPayload['data']['catalogs'] ?? null,
+        'Catalog lists only exams whose questions are all published'
+    );
+
+    $catalogUserId = insertSimulatorApiUser($pdo, 'catalog-simulator-api@example.test');
+    $catalogCookie = 'bsenem_session=' . Auth::createSession($catalogUserId);
+    $catalogSession = simulatorApiRequest($root, $path, '/api/simulators/sessions', 'POST', $catalogCookie, [
+        'kind' => 'catalog', 'catalog_id' => 'enem:prova-curta',
+    ]);
+    expectSimulatorApiStatus($catalogSession, 201, 'A published catalog opens as a session');
+    $catalogSessionPayload = json_decode($catalogSession['body'], true, flags: JSON_THROW_ON_ERROR)['data']['session'];
+    expectSimulatorApiSame('catalog', $catalogSessionPayload['kind'], 'Catalog session keeps its kind');
+    expectSimulatorApiSame([$mathQuestionIds[2], $mathQuestionIds[0], $mathQuestionIds[1]], array_column($catalogSessionPayload['questions'], 'id'), 'Catalog session preserves the exam order');
+    expectSimulatorApiSame(1800, $catalogSessionPayload['time_limit_seconds'], 'Catalog session uses the exam duration');
+    expectSimulatorApiTrue(!array_key_exists('correct_option', $catalogSessionPayload['questions'][0]), 'Catalog session hides answers while active');
+    expectSimulatorApiStatus(simulatorApiRequest($root, $path, '/api/simulators/sessions', 'POST', $catalogCookie, [
+        'kind' => 'catalog', 'catalog_id' => 'enem:incompleta',
+    ]), 404, 'A catalog with an unpublished question cannot be started');
+    expectSimulatorApiStatus(simulatorApiRequest($root, $path, '/api/simulators/sessions', 'POST', $catalogCookie, [
+        'kind' => 'catalog', 'catalog_id' => 'enem:inexistente',
+    ]), 404, 'An unknown catalog cannot be started');
+    expectSimulatorApiStatus(simulatorApiRequest($root, $path, '/api/simulators/sessions', 'POST', $catalogCookie, [
+        'kind' => 'catalog',
+    ]), 400, 'A catalog session requires a catalog id');
+
+    $mixed = simulatorApiRequest($root, $path, '/api/simulators/sessions', 'POST', $catalogCookie, [
+        'kind' => 'custom', 'subjects' => ['Matemática', 'História'], 'count' => 2,
+    ]);
+    expectSimulatorApiStatus($mixed, 201, 'A multi-subject custom simulator is created');
+    expectSimulatorApiSame(
+        ['Matemática', 'História'],
+        array_column(json_decode($mixed['body'], true, flags: JSON_THROW_ON_ERROR)['data']['session']['questions'], 'subject'),
+        'A multi-subject custom simulator interleaves the chosen subjects'
     );
 
     $emptyOverview = simulatorApiRequest($root, $path, '/api/simulators/overview', 'GET', $firstCookie);
