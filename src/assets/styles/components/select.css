@@ -109,7 +109,7 @@
 }
 
 .select-search .input {
-  padding-left: var(--space-9);
+  padding-left: 2.25rem;
 }
 
 .select-options {

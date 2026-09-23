@@ -29,8 +29,8 @@
   backface-visibility: hidden;
   display: flex;
   flex-direction: column;
-  background: var(--color-surface);
-  border: 2px solid var(--color-border);
+  background: var(--bg-card);
+  border: 2px solid var(--border-light);
   border-radius: var(--radius-xl);
   overflow: hidden;
   box-shadow: var(--shadow-md);
@@ -45,14 +45,14 @@
   align-items: center;
   justify-content: space-between;
   padding: 12px 16px;
-  background: var(--color-surface-alt);
-  border-bottom: 1px solid var(--color-border);
+  background: var(--bg-secondary);
+  border-bottom: 1px solid var(--border-light);
 }
 
 .flashcard-subject {
-  font-size: var(--font-size-xs);
+  font-size: var(--text-xs);
   font-weight: 600;
-  color: var(--color-primary);
+  color: var(--orange-500);
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
@@ -66,14 +66,14 @@
   background: transparent;
   border: none;
   border-radius: var(--radius-md);
-  color: var(--color-text-secondary);
+  color: var(--text-secondary);
   cursor: pointer;
   transition: all 0.2s ease;
 }
 
 .flashcard-flip-btn:hover {
-  background: var(--color-surface);
-  color: var(--color-text);
+  background: var(--bg-card);
+  color: var(--text-primary);
 }
 
 .flashcard-content {
@@ -87,8 +87,8 @@
 
 .flashcard-text {
   margin: 0;
-  font-size: var(--font-size-lg);
-  color: var(--color-text);
+  font-size: var(--text-lg);
+  color: var(--text-primary);
   line-height: 1.5;
 }
 
@@ -98,8 +98,8 @@
 }
 
 .flashcard-hint {
-  font-size: var(--font-size-xs);
-  color: var(--color-text-tertiary);
+  font-size: var(--text-xs);
+  color: var(--text-muted);
 }
 
 /* Rating Controls */
@@ -107,8 +107,8 @@
   display: flex;
   gap: 8px;
   padding: 16px;
-  background: var(--color-surface-alt);
-  border-top: 1px solid var(--color-border);
+  background: var(--bg-secondary);
+  border-top: 1px solid var(--border-light);
 }
 
 .flashcard-rating-btn {
@@ -118,11 +118,11 @@
   align-items: center;
   gap: 4px;
   padding: 12px 8px;
-  background: var(--color-surface);
-  border: 2px solid var(--color-border);
+  background: var(--bg-card);
+  border: 2px solid var(--border-light);
   border-radius: var(--radius-md);
-  color: var(--color-text);
-  font-size: var(--font-size-xs);
+  color: var(--text-primary);
+  font-size: var(--text-xs);
   cursor: pointer;
   transition: all 0.2s ease;
 }
@@ -133,42 +133,42 @@
 }
 
 .flashcard-rating-btn.again {
-  border-color: var(--color-error);
-  color: var(--color-error);
+  border-color: var(--error);
+  color: var(--error);
 }
 
 .flashcard-rating-btn.again:hover {
-  background: var(--color-error);
+  background: var(--error);
   color: #fff;
 }
 
 .flashcard-rating-btn.hard {
-  border-color: var(--color-warning);
-  color: var(--color-warning);
+  border-color: var(--warning);
+  color: var(--warning);
 }
 
 .flashcard-rating-btn.hard:hover {
-  background: var(--color-warning);
+  background: var(--warning);
   color: #fff;
 }
 
 .flashcard-rating-btn.good {
-  border-color: var(--color-success);
-  color: var(--color-success);
+  border-color: var(--success);
+  color: var(--success);
 }
 
 .flashcard-rating-btn.good:hover {
-  background: var(--color-success);
+  background: var(--success);
   color: #fff;
 }
 
 .flashcard-rating-btn.easy {
-  border-color: var(--color-info);
-  color: var(--color-info);
+  border-color: var(--info);
+  color: var(--info);
 }
 
 .flashcard-rating-btn.easy:hover {
-  background: var(--color-info);
+  background: var(--info);
   color: #fff;
 }
 
@@ -190,29 +190,29 @@
   align-items: center;
   justify-content: center;
   gap: 8px;
-  font-size: var(--font-size-lg);
-  color: var(--color-text);
+  font-size: var(--text-lg);
+  color: var(--text-primary);
 }
 
 .review-current {
   font-weight: 700;
-  color: var(--color-primary);
+  color: var(--orange-500);
 }
 
 .review-separator {
-  color: var(--color-text-secondary);
+  color: var(--text-secondary);
 }
 
 .review-progress-bar {
   height: 8px;
-  background: var(--color-border);
+  background: var(--border-light);
   border-radius: 4px;
   overflow: hidden;
 }
 
 .review-progress-fill {
   height: 100%;
-  background: var(--color-primary);
+  background: var(--orange-500);
   border-radius: 4px;
   transition: width 0.3s ease;
 }
@@ -227,16 +227,16 @@
   display: flex;
   align-items: center;
   gap: 6px;
-  font-size: var(--font-size-sm);
-  color: var(--color-text-secondary);
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
 }
 
 .review-correct {
-  color: var(--color-success);
+  color: var(--success);
 }
 
 .review-incorrect {
-  color: var(--color-error);
+  color: var(--error);
 }
 
 .review-card-container {
@@ -254,30 +254,30 @@
 .review-skip-btn {
   padding: 8px 16px;
   background: transparent;
-  border: 1px solid var(--color-border);
+  border: 1px solid var(--border-light);
   border-radius: var(--radius-md);
-  color: var(--color-text-secondary);
-  font-size: var(--font-size-sm);
+  color: var(--text-secondary);
+  font-size: var(--text-sm);
   cursor: pointer;
   transition: all 0.2s ease;
 }
 
 .review-skip-btn:hover {
-  background: var(--color-surface-alt);
-  color: var(--color-text);
+  background: var(--bg-secondary);
+  color: var(--text-primary);
 }
 
 .review-keyboard-hints {
   display: flex;
   gap: 16px;
-  font-size: var(--font-size-xs);
-  color: var(--color-text-tertiary);
+  font-size: var(--text-xs);
+  color: var(--text-muted);
 }
 
 .review-keyboard-hints kbd {
   padding: 2px 6px;
-  background: var(--color-surface-alt);
-  border: 1px solid var(--color-border);
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-light);
   border-radius: 4px;
   font-family: var(--font-mono);
   font-size: 10px;
@@ -296,22 +296,22 @@
 
 .review-empty i,
 .review-complete-icon i {
-  color: var(--color-text-tertiary);
+  color: var(--text-muted);
   margin-bottom: 16px;
 }
 
 .review-empty h3,
 .review-complete h3 {
   margin: 0;
-  font-size: var(--font-size-lg);
-  color: var(--color-text);
+  font-size: var(--text-lg);
+  color: var(--text-primary);
 }
 
 .review-empty p,
 .review-complete p {
   margin: 8px 0 24px;
-  font-size: var(--font-size-sm);
-  color: var(--color-text-secondary);
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
 }
 
 /* Flashcard Manager */
@@ -329,8 +329,8 @@
 
 .flashcard-manager-header h2 {
   margin: 0;
-  font-size: var(--font-size-xl);
-  color: var(--color-text);
+  font-size: var(--text-xl);
+  color: var(--text-primary);
 }
 
 .flashcard-manager-actions {
@@ -340,8 +340,8 @@
 
 /* Form */
 .flashcard-manager-form {
-  background: var(--color-surface);
-  border: 1px solid var(--color-border);
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
   border-radius: var(--radius-lg);
   margin-bottom: 24px;
   overflow: hidden;
@@ -352,15 +352,15 @@
   align-items: center;
   justify-content: space-between;
   padding: 16px 20px;
-  background: var(--color-surface-alt);
-  border-bottom: 1px solid var(--color-border);
+  background: var(--bg-secondary);
+  border-bottom: 1px solid var(--border-light);
 }
 
 .flashcard-form-header h3 {
   margin: 0;
-  font-size: var(--font-size-base);
+  font-size: var(--text-base);
   font-weight: 600;
-  color: var(--color-text);
+  color: var(--text-primary);
 }
 
 .flashcard-form-body {
@@ -378,9 +378,9 @@
 .flashcard-form-group label {
   display: block;
   margin-bottom: 8px;
-  font-size: var(--font-size-sm);
+  font-size: var(--text-sm);
   font-weight: 500;
-  color: var(--color-text);
+  color: var(--text-primary);
 }
 
 .flashcard-form-group textarea,
@@ -400,8 +400,8 @@
   justify-content: flex-end;
   gap: 8px;
   padding: 16px 20px;
-  background: var(--color-surface-alt);
-  border-top: 1px solid var(--color-border);
+  background: var(--bg-secondary);
+  border-top: 1px solid var(--border-light);
 }
 
 /* List */
@@ -430,7 +430,7 @@
   flex-direction: column;
   align-items: center;
   padding: 48px 24px;
-  color: var(--color-text-secondary);
+  color: var(--text-secondary);
   text-align: center;
 }
 
@@ -444,14 +444,14 @@
   align-items: center;
   gap: 16px;
   padding: 16px;
-  background: var(--color-surface);
-  border: 1px solid var(--color-border);
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
   border-radius: var(--radius-lg);
   transition: all 0.2s ease;
 }
 
 .flashcard-item:hover {
-  border-color: var(--color-primary);
+  border-color: var(--orange-500);
   box-shadow: var(--shadow-sm);
 }
 
@@ -461,17 +461,17 @@
 }
 
 .flashcard-item-front {
-  font-size: var(--font-size-sm);
+  font-size: var(--text-sm);
   font-weight: 500;
-  color: var(--color-text);
+  color: var(--text-primary);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
 .flashcard-item-back {
-  font-size: var(--font-size-xs);
-  color: var(--color-text-secondary);
+  font-size: var(--text-xs);
+  color: var(--text-secondary);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -482,8 +482,8 @@
   display: flex;
   align-items: center;
   gap: 12px;
-  font-size: var(--font-size-xs);
-  color: var(--color-text-secondary);
+  font-size: var(--text-xs);
+  color: var(--text-secondary);
 }
 
 .flashcard-item-subject {

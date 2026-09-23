@@ -32,7 +32,7 @@
 
 .study-library-controls .input { min-width: min(100%, 22rem); flex: 1; }
 .study-library-type-shortcuts { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: -0.25rem 0 1rem; }
-.study-library-type-shortcuts [aria-pressed="true"] { border-color: var(--color-primary, #f97316); color: var(--color-primary, #f97316); }
+.study-library-type-shortcuts [aria-pressed="true"] { border-color: var(--orange-500); color: var(--orange-500); }
 .study-library-children { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-bottom: 1.5rem; }
 .study-library-folder,
 .study-library-item { border: 1px solid #333; background: #121313; border-radius: 0.8rem; text-align: left; }
@@ -44,7 +44,7 @@
 .study-library-item-type { color: #aaa; font-size: 0.875rem; }
 .study-library-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr)); gap: 1rem; }
 .study-library-item { display: block; padding: 0; color: #fff; text-decoration: none; overflow: hidden; min-height: 15rem; }
-.study-library-item:hover { border-color: var(--color-primary, #f97316); transform: translateY(-1px); }
+.study-library-item:hover { border-color: var(--orange-500); transform: translateY(-1px); }
 .study-library-item-cover { display: flex; align-items: end; height: 7.5rem; padding: 0.9rem; background: linear-gradient(145deg, #334d57, #142128 65%, #a3673d); }
 .study-library-item-cover[data-type="pdf"] { background: linear-gradient(145deg, #5b3535, #211616 65%, #a85b45); }
 .study-library-item-cover[data-type="document"] { background: linear-gradient(145deg, #49435b, #191722 65%, #776bb0); }

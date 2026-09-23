@@ -11,6 +11,8 @@
   --orange-700: #c4420d;
   --orange-800: #9d350d;
   --orange-900: #7a2d0c;
+  /* Fundo translúcido de destaque: funciona em light e dark sem override */
+  --accent-subtle: color-mix(in srgb, var(--orange-500) 14%, transparent);
 
   /* ===== NEUTROS QUENTES ===== */
   --neutral-50:  #fafaf9;

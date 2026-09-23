@@ -7,15 +7,15 @@
 
 .page-header h1 {
   margin: 0;
-  font-size: var(--font-size-2xl);
+  font-size: var(--text-2xl);
   font-weight: 700;
-  color: var(--color-text);
+  color: var(--text-primary);
 }
 
 .page-header p {
   margin: 8px 0 0;
-  font-size: var(--font-size-base);
-  color: var(--color-text-secondary);
+  font-size: var(--text-base);
+  color: var(--text-secondary);
 }
 
 /* Video page */
@@ -38,27 +38,27 @@
 
 .video-info-panel {
   padding: 16px;
-  background: var(--color-surface);
+  background: var(--bg-card);
   border-radius: var(--radius-lg);
 }
 
 .video-info-panel .video-title {
   margin: 0;
-  font-size: var(--font-size-lg);
+  font-size: var(--text-lg);
   font-weight: 600;
-  color: var(--color-text);
+  color: var(--text-primary);
 }
 
 .video-info-panel .video-artist {
   margin: 8px 0 0;
-  font-size: var(--font-size-sm);
-  color: var(--color-text-secondary);
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
 }
 
 .video-info-panel .video-subject {
   margin: 4px 0 0;
-  font-size: var(--font-size-xs);
-  color: var(--color-primary);
+  font-size: var(--text-xs);
+  color: var(--orange-500);
 }
 
 .video-sidebar {
@@ -111,9 +111,9 @@
 
 .account-card {
   padding: 24px;
-  border: 1px solid var(--border-color);
+  border: 1px solid var(--border-light);
   border-radius: 16px;
-  background: var(--surface-bg);
+  background: var(--bg-card);
 }
 
 .account-summary {
@@ -129,7 +129,7 @@
   height: 56px;
   place-items: center;
   border-radius: 50%;
-  background: var(--primary);
+  background: var(--orange-500);
   color: white;
   font-size: 1.5rem;
   font-weight: 700;
@@ -162,7 +162,7 @@
 .account-metrics span {
   padding: 12px;
   border-radius: 10px;
-  background: var(--surface-secondary);
+  background: var(--bg-secondary);
 }
 
 .account-feedback {
@@ -181,7 +181,7 @@
   justify-content: space-between;
   gap: 24px;
   padding: 8px 0;
-  border-bottom: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-light);
 }
 
 @media (max-width: 640px) {
