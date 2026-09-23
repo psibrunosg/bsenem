@@ -11,6 +11,9 @@ require_once __DIR__ . '/EnemQuestionImporter.php';
  * Set APP_CONTENT_IMPORT=off to keep a database with only synthetic content.
  */
 final class SimulatorCatalogImporter {
+    private const CADERNO_SIZE = 50;
+    private const CADERNO_MINUTES_PER_QUESTION = 3;
+
     public static function ensureImported(Database $db): void {
         if (getenv('APP_CONTENT_IMPORT') === 'off') {
             return;
@@ -83,12 +86,16 @@ final class SimulatorCatalogImporter {
         }
     }
 
+    /**
+     * Each concursos track is split into balanced cadernos of at most CADERNO_SIZE
+     * questions, in a stable order (source exam, then question number).
+     */
     private static function importConcursos(PDO $pdo): void {
         $questions = self::readJson(dirname(__DIR__, 2) . '/docs/sources/concursos/extracted-questions-sul.json');
         if (!is_array($questions)) {
             return;
         }
-        $catalogs = [];
+        $tracks = [];
         foreach ($questions as $position => $question) {
             if (!is_array($question) || !is_array($question['alternativas'] ?? null)) {
                 continue;
@@ -100,7 +107,8 @@ final class SimulatorCatalogImporter {
                 continue;
             }
             $track = self::concursoTrack((string) ($question['cargo_alvo'] ?? ''), (string) ($question['disciplina'] ?? ''));
-            $questionId = 'concursos:' . (string) ($question['id'] ?? $position);
+            $sourceId = (string) ($question['id'] ?? $position);
+            $questionId = 'concursos:' . $sourceId;
             self::insertQuestion($pdo, $questionId, 'Concursos Sul', 'concursos', $track, (string) $question['enunciado'], $options, $correct, '', [
                 'state' => $question['estado'] ?? null,
                 'year' => $question['ano'] ?? null,
@@ -109,14 +117,30 @@ final class SimulatorCatalogImporter {
                 'discipline' => $question['disciplina'] ?? null,
                 'target_role' => $question['cargo_alvo'] ?? null,
             ]);
-            $catalogId = 'concursos:' . self::slug($track);
-            if (!isset($catalogs[$catalogId])) {
-                self::upsertCatalog($pdo, [$catalogId, 'Concursos — ' . $track, 'concursos', $track, null]);
-                $catalogs[$catalogId] = 0;
+            $tracks[$track][$questionId] = [(string) preg_replace('/-Q\d+$/', '', $sourceId), (int) ($question['numero_questao'] ?? 0), $sourceId];
+        }
+
+        $join = $pdo->prepare('INSERT OR IGNORE INTO simulator_catalog_questions (catalog_id, question_id, position) VALUES (?, ?, ?)');
+        foreach ($tracks as $track => $sortKeys) {
+            uasort($sortKeys, static fn(array $a, array $b): int => $a <=> $b);
+            $questionIds = array_keys($sortKeys);
+            $cadernoCount = (int) ceil(count($questionIds) / self::CADERNO_SIZE);
+            $offset = 0;
+            for ($caderno = 1; $caderno <= $cadernoCount; $caderno++) {
+                $size = intdiv(count($questionIds) - $offset, $cadernoCount - $caderno + 1);
+                $catalogId = sprintf('concursos:%s:caderno-%02d', self::slug($track), $caderno);
+                self::upsertCatalog($pdo, [
+                    $catalogId,
+                    sprintf('Concursos — %s · Caderno %d (%d questões)', $track, $caderno, $size),
+                    'concursos',
+                    $track,
+                    $size * self::CADERNO_MINUTES_PER_QUESTION,
+                ]);
+                foreach (array_slice($questionIds, $offset, $size) as $index => $questionId) {
+                    $join->execute([$catalogId, $questionId, $index + 1]);
+                }
+                $offset += $size;
             }
-            $catalogs[$catalogId] = ($catalogs[$catalogId] ?? 0) + 1;
-            $pdo->prepare('INSERT OR IGNORE INTO simulator_catalog_questions (catalog_id, question_id, position) VALUES (?, ?, ?)')
-                ->execute([$catalogId, $questionId, $catalogs[$catalogId]]);
         }
     }
 

@@ -42,6 +42,8 @@ try {
     $legacy->exec("INSERT INTO simulator_catalogs (id, title, category, subject) VALUES ('enem:legado', 'Prova legada', 'enem', 'Ciências Humanas')");
     $legacy->exec("INSERT INTO simulator_catalog_questions (catalog_id, question_id, position) VALUES ('enem:legado', 'enem:enem-2015-d1-q023', 1)");
     $legacy->exec("INSERT INTO catalog_simulator_attempts (catalog_id, user_id, score, total_questions) VALUES ('enem:legado', 1, 80, 1)");
+    $legacy->exec("INSERT INTO simulator_catalogs (id, title, category, subject) VALUES ('concursos:psicologia', 'Concursos — Psicologia', 'concursos', 'Psicologia')");
+    $legacy->exec("INSERT INTO catalog_simulator_attempts (catalog_id, user_id, score, total_questions) VALUES ('concursos:psicologia', 1, 60, 847)");
     $legacy->exec("INSERT INTO generated_simulators (id, user_id, title, subjects_json, question_count) VALUES ('custom-1', 1, 'Personalizado', '[]', 1)");
     $legacy->exec("INSERT INTO generated_simulator_questions (simulator_id, question_id, position) VALUES ('custom-1', 'enem:enem-2015-d1-q023', 1)");
     $legacy->exec("INSERT INTO generated_simulator_attempts (simulator_id, user_id, score, total_questions) VALUES ('custom-1', 1, 50, 1)");
@@ -55,14 +57,16 @@ try {
 
     $applied = $pdo->query("SELECT COUNT(*) FROM schema_migrations WHERE version IN ('007_simulator_sessions.sql', '008_simulator_session_draft_fields.sql', '009_unified_simulator_questions.sql')")->fetchColumn();
     expectUpgrade((int) $applied === 3, 'Session migrations run on top of the permanent-simulators release.');
-    expectUpgrade((int) $pdo->query('SELECT COUNT(*) FROM catalog_simulator_attempts')->fetchColumn() === 1, 'Catalog attempts survive the upgrade.');
+    expectUpgrade((int) $pdo->query('SELECT COUNT(*) FROM catalog_simulator_attempts')->fetchColumn() === 2, 'Catalog attempts survive the upgrade.');
     expectUpgrade((int) $pdo->query('SELECT COUNT(*) FROM generated_simulator_attempts')->fetchColumn() === 1, 'Generated simulator attempts survive the upgrade.');
     expectUpgrade((int) $pdo->query('SELECT COUNT(*) FROM generated_simulator_questions')->fetchColumn() === 1, 'Generated simulator compositions survive the upgrade.');
 
     SimulatorCatalogImporter::ensureImported($db);
-    expectUpgrade((int) $pdo->query('SELECT COUNT(*) FROM catalog_simulator_attempts')->fetchColumn() === 1, 'Catalog attempts survive the content import.');
+    expectUpgrade((int) $pdo->query('SELECT COUNT(*) FROM catalog_simulator_attempts')->fetchColumn() === 2, 'Catalog attempts survive the content import.');
     expectUpgrade((int) $pdo->query("SELECT COUNT(*) FROM simulator_catalog_questions WHERE catalog_id LIKE 'enem:simulado-%' AND question_id LIKE 'inep:%'")->fetchColumn() >= 315, 'ENEM catalogs are rebuilt on the unified question IDs.');
     expectUpgrade((int) $pdo->query("SELECT COUNT(*) FROM simulator_catalog_questions WHERE catalog_id = 'enem:legado'")->fetchColumn() === 0, 'Catalogs that are no longer published stay hidden without losing their row.');
+    expectUpgrade((int) $pdo->query("SELECT published FROM simulator_catalogs WHERE id = 'concursos:psicologia'")->fetchColumn() === 0, 'The single-track concursos catalog is replaced by cadernos.');
+    expectUpgrade((int) $pdo->query("SELECT COUNT(*) FROM simulator_catalogs WHERE id LIKE 'concursos:psicologia:caderno-%' AND published = 1")->fetchColumn() > 1, 'Psychology is published as several cadernos.');
     expectUpgrade((int) $pdo->query("SELECT COUNT(*) FROM simulator_questions WHERE id LIKE 'enem:%'")->fetchColumn() === 0, 'Legacy ENEM bank copies are not served as questions.');
 } finally {
     unset($pdo, $db);
