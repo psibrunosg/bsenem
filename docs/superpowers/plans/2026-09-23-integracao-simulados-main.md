@@ -55,3 +55,4 @@
 - O CSS vindo do main usava tokens inexistentes (`--color-*`, `--font-size-sm`); foram trocados pelos tokens reais.
 - O handler de cliques da home passou a agir só no modo home. Antes, o "Praticar de novo" do resultado também disparava o recarregamento da home.
 - Pendência de produto, herdada do main: os catálogos de concursos reúnem de 825 a 1.123 questões cada (tempo total de até 46 h pela regra de 150 s por questão).
+- **Correção antes do deploy:** a release `707dd73` já está publicada na VPS (`current -> releases/707dd73`), e o banco de produção pode ter tentativas nas tabelas do main. A 009 foi revisada para não apagar dados: preserva `generated_simulators*` e `catalog_simulator_attempts`, não remove catálogos nem as cópias ENEM do banco (a FK `RESTRICT` faria a migração falhar), e reconstrói só a composição dos catálogos. `backend/tests/simulator_upgrade_test.php` simula esse upgrade.

@@ -18,7 +18,7 @@ final class SimulatorCatalogImporter {
 
         $pdo = $db->getConnection();
         $hasEnem = (int) $pdo->query('SELECT COUNT(*) FROM enem_questions')->fetchColumn() > 0;
-        $hasCatalogs = (int) $pdo->query('SELECT COUNT(*) FROM simulator_catalogs')->fetchColumn() > 0;
+        $hasCatalogs = (int) $pdo->query('SELECT COUNT(*) FROM simulator_catalog_questions')->fetchColumn() > 0;
         if ($hasEnem && $hasCatalogs) {
             return;
         }
@@ -69,14 +69,13 @@ final class SimulatorCatalogImporter {
             }
 
             $catalogId = 'enem:' . (string) ($exam['id'] ?? basename($file));
-            $pdo->prepare('INSERT INTO simulator_catalogs (id, title, category, subject, duration_minutes) VALUES (?, ?, ?, ?, ?)')
-                ->execute([
+            self::upsertCatalog($pdo, [
                     $catalogId,
                     trim((string) ($exam['title'] ?? 'Simulado ENEM')),
                     'enem',
                     trim((string) ($exam['subject'] ?? 'ENEM')),
                     max(0, (int) ($exam['durationMinutes'] ?? 0)) ?: null,
-                ]);
+            ]);
             $join = $pdo->prepare('INSERT OR IGNORE INTO simulator_catalog_questions (catalog_id, question_id, position) VALUES (?, ?, ?)');
             foreach (array_values(array_unique($questionIds)) as $position => $questionId) {
                 $join->execute([$catalogId, $questionId, $position + 1]);
@@ -112,14 +111,25 @@ final class SimulatorCatalogImporter {
             ]);
             $catalogId = 'concursos:' . self::slug($track);
             if (!isset($catalogs[$catalogId])) {
-                $pdo->prepare('INSERT INTO simulator_catalogs (id, title, category, subject, duration_minutes) VALUES (?, ?, ?, ?, ?)')
-                    ->execute([$catalogId, 'Concursos — ' . $track, 'concursos', $track, null]);
+                self::upsertCatalog($pdo, [$catalogId, 'Concursos — ' . $track, 'concursos', $track, null]);
                 $catalogs[$catalogId] = 0;
             }
             $catalogs[$catalogId] = ($catalogs[$catalogId] ?? 0) + 1;
             $pdo->prepare('INSERT OR IGNORE INTO simulator_catalog_questions (catalog_id, question_id, position) VALUES (?, ?, ?)')
                 ->execute([$catalogId, $questionId, $catalogs[$catalogId]]);
         }
+    }
+
+    /**
+     * Catalog rows are updated in place, never deleted: legacy attempts reference them.
+     * @param array{0: string, 1: string, 2: string, 3: string, 4: ?int} $catalog
+     */
+    private static function upsertCatalog(PDO $pdo, array $catalog): void {
+        $pdo->prepare(
+            'INSERT INTO simulator_catalogs (id, title, category, subject, duration_minutes, published) VALUES (?, ?, ?, ?, ?, 1)
+             ON CONFLICT(id) DO UPDATE SET title = excluded.title, category = excluded.category,
+                subject = excluded.subject, duration_minutes = excluded.duration_minutes, published = 1'
+        )->execute($catalog);
     }
 
     private static function insertQuestion(PDO $pdo, string $id, string $provider, string $category, string $subject, string $statement, array $options, int $correct, string $explanation, array $source): void {

@@ -37,15 +37,14 @@ INSERT INTO simulator_session_answers (session_id, question_id, selected_option,
     FROM simulator_session_answers_legacy;
 DROP TABLE simulator_session_answers_legacy;
 
--- Published catalogs are played as sessions; per-catalog/generated attempts
--- with client-side scores are replaced by simulator_sessions.
-DROP TABLE IF EXISTS generated_simulator_attempts;
-DROP TABLE IF EXISTS generated_simulator_questions;
-DROP TABLE IF EXISTS generated_simulators;
-DROP TABLE IF EXISTS catalog_simulator_attempts;
+-- Published catalogs are played as sessions. The previous generated
+-- simulators and client-scored attempts are kept untouched as history
+-- (generated_simulators*, catalog_simulator_attempts); nothing writes to them now.
 
--- Catalog entries reference the unified question IDs. ENEM exams now point
--- to enem_questions, so imported ENEM copies and catalogs are re-imported.
+-- Catalog entries reference the unified question IDs. ENEM exams now point to
+-- enem_questions, so the catalog composition is rebuilt by the importer.
+-- Catalog rows and bank ENEM copies stay: legacy attempts and generated
+-- simulators still reference them.
 DROP TABLE IF EXISTS simulator_catalog_questions;
 CREATE TABLE simulator_catalog_questions (
     catalog_id TEXT NOT NULL,
@@ -55,8 +54,6 @@ CREATE TABLE simulator_catalog_questions (
     UNIQUE (catalog_id, position),
     FOREIGN KEY (catalog_id) REFERENCES simulator_catalogs(id) ON DELETE CASCADE
 );
-DELETE FROM simulator_catalogs;
-DELETE FROM simulator_question_bank WHERE category = 'enem';
 
 CREATE VIEW IF NOT EXISTS simulator_questions AS
     SELECT 'inep:' || id AS id,
