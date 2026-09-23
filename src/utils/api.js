@@ -24,7 +24,11 @@ export const api = {
   put(endpoint, body, options = {}) {
     return this.request(endpoint, { ...options, method: 'PUT', body: JSON.stringify(body) });
   },
-  
+
+  patch(endpoint, body, options = {}) {
+    return this.request(endpoint, { ...options, method: 'PATCH', body: JSON.stringify(body) });
+  },
+
   delete(endpoint, options = {}) {
     return this.request(endpoint, { ...options, method: 'DELETE' });
   }

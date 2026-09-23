@@ -157,19 +157,25 @@ try {
     expectStatus($catalogResponse, 200, 'Authenticated users can read permanent simulators');
     $catalogPayload = json_decode($catalogResponse['body'], true);
     expectTrue(count($catalogPayload['data']['catalogs'] ?? []) >= 10, 'Permanent catalog contains ENEM and concursos simulators');
-    $customResponse = request($projectRoot, $path, '/api/simulators/generate', 'POST', $cookie, [
+    expectTrue(
+        in_array('enem', array_column($catalogPayload['data']['catalogs'] ?? [], 'category'), true)
+            && in_array('concursos', array_column($catalogPayload['data']['catalogs'] ?? [], 'category'), true),
+        'Permanent catalog lists both ENEM exams and concursos'
+    );
+    $customResponse = request($projectRoot, $path, '/api/simulators/sessions', 'POST', $cookie, [
+        'kind' => 'custom',
         'subjects' => ['Psicologia'],
-        'question_count' => 3,
+        'count' => 3,
     ]);
-    expectStatus($customResponse, 200, 'Authenticated user can generate a subject-only simulator');
+    expectStatus($customResponse, 201, 'Authenticated user can build a subject-only simulator');
     $customPayload = json_decode($customResponse['body'], true);
-    expectSame(3, count($customPayload['data']['exam']['questions'] ?? []), 'Custom simulator has the requested question count');
-    foreach ($customPayload['data']['exam']['questions'] ?? [] as $question) {
+    expectSame(3, count($customPayload['data']['session']['questions'] ?? []), 'Custom simulator has the requested question count');
+    foreach ($customPayload['data']['session']['questions'] ?? [] as $question) {
         expectSame('Psicologia', $question['subject'] ?? null, 'Custom simulator never mixes unselected subjects');
     }
-    $customId = $customPayload['data']['exam']['id'] ?? '';
+    $customId = $customPayload['data']['session']['id'] ?? '';
     $firstPrivateToken = Auth::createSession($firstUserId);
-    expectStatus(request($projectRoot, $path, "/api/simulators/generated/{$customId}", 'GET', "bsenem_session={$firstPrivateToken}"), 404, 'Generated simulators are isolated by user');
+    expectStatus(request($projectRoot, $path, "/api/simulators/sessions/{$customId}", 'GET', "bsenem_session={$firstPrivateToken}"), 404, 'Simulator sessions are isolated by user');
     expectStatus(request($projectRoot, $path, "/api/flashcards/{$cardId}", 'GET', $cookie), 404, 'Other users cannot view a flashcard');
     expectStatus(request($projectRoot, $path, "/api/flashcards/{$cardId}", 'PUT', $cookie), 404, 'Other users cannot update a flashcard');
     expectStatus(request($projectRoot, $path, "/api/flashcards/{$cardId}", 'DELETE', $cookie), 404, 'Other users cannot delete a flashcard');

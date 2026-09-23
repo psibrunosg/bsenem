@@ -50,7 +50,7 @@ export class Header {
         </div>
       </div>
       <div class="header-right" style="display: flex; align-items: center; gap: 8px;">
-        <div class="pomodoro-timer" style="display: flex; align-items: center; gap: 8px; margin-right: 8px; background: var(--surface-bg); padding: 4px 12px; border-radius: 20px; border: 1px solid var(--border-color); cursor: pointer;" data-action="toggle-pomodoro" title="Iniciar Pomodoro (25 min)">
+        <div class="pomodoro-timer" style="display: flex; align-items: center; gap: 8px; margin-right: 8px; background: var(--bg-card); padding: 4px 12px; border-radius: 20px; border: 1px solid var(--border-light); cursor: pointer;" data-action="toggle-pomodoro" title="Iniciar Pomodoro (25 min)">
           <i data-lucide="timer" class="w-4 h-4 text-primary"></i>
           <span class="pomodoro-time" style="font-family: var(--font-mono); font-weight: 600;">25:00</span>
         </div>
@@ -335,8 +335,8 @@ export class Header {
   startPomodoro() {
     this.pomodoroActive = true;
     const widget = this.element.querySelector('.pomodoro-timer');
-    widget.style.borderColor = 'var(--primary)';
-    widget.style.boxShadow = '0 0 0 2px var(--primary-light)';
+    widget.style.borderColor = 'var(--orange-500)';
+    widget.style.boxShadow = '0 0 0 2px var(--accent-subtle)';
     
     this.pomodoroInterval = setInterval(() => {
       this.pomodoroTime--;
@@ -353,7 +353,7 @@ export class Header {
     clearInterval(this.pomodoroInterval);
     this.pomodoroInterval = null;
     const widget = this.element.querySelector('.pomodoro-timer');
-    widget.style.borderColor = 'var(--border-color)';
+    widget.style.borderColor = 'var(--border-light)';
     widget.style.boxShadow = 'none';
   }
 
@@ -385,7 +385,7 @@ export class Header {
       this.pomodoroMode = 'focus';
       this.pomodoroTime = 25 * 60; // 25 min
       this.element.querySelector('.pomodoro-timer').title = "Iniciar Pomodoro (25 min)";
-      this.element.querySelector('.pomodoro-timer').style.background = "var(--surface-bg)";
+      this.element.querySelector('.pomodoro-timer').style.background = "var(--bg-card)";
     }
     this.updatePomodoroDisplay();
   }

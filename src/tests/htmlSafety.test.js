@@ -89,11 +89,16 @@ describe('dynamic HTML safety', () => {
       correctAnswer: 0, explanation: '<img src=x onerror=1>Explicação', source: '<iframe srcdoc=x>Fonte'
     };
     const card = new QuestionCard({ question, showExplanation: true }).render();
-    const exam = new ExamPlayer({ exam: { title: unsafeName, subject: '<svg onload=1>Área' }, questions: [question] }).render();
+    const exam = new ExamPlayer({ session: {
+      id: 's1', kind: 'custom', status: 'active', subject: unsafeName, topic: '<svg onload=1>Tópico',
+      time_limit_seconds: 60, current_position: 0, elapsed_seconds: 0, answers: [],
+      questions: [{ id: 1, statement: unsafeName, options: { A: '<svg onload=1>Alternativa', B: 'b', C: 'c', D: 'd', E: 'e' }, images: [] }],
+    } }).render();
 
     expect(card.querySelector('img, svg[onload], iframe, [onerror]')).toBeNull();
     expect(exam.querySelector('img, svg[onload], iframe, [onerror]')).toBeNull();
     expect(card.querySelector('.question-text').textContent).toBe(unsafeName);
-    expect(exam.querySelector('.exam-title').textContent).toBe(unsafeName);
+    expect(exam.querySelector('.exam-subject').textContent).toBe(`${unsafeName} · <svg onload=1>Tópico`);
+    expect(exam.querySelector('.question-text').textContent).toBe(unsafeName);
   });
 });

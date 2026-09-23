@@ -490,7 +490,7 @@ export class AudioPlayer {
       
       const isPlayed = index / this.waveformData.length <= progress;
       
-      ctx.fillStyle = isPlayed ? 'var(--color-primary)' : 'var(--color-border)';
+      ctx.fillStyle = isPlayed ? 'var(--orange-500)' : 'var(--border-light)';
       ctx.fillRect(x + gap / 2, y, barWidth - gap, barHeight);
     });
   }

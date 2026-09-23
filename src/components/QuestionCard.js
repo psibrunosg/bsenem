@@ -32,9 +32,11 @@ export class QuestionCard {
       <div class="question-header">
         <span class="question-number">Questão ${this.index + 1} de ${this.total}</span>
         <div class="question-actions">
-          <button class="question-flag-btn ${this.question.flagged ? 'flagged' : ''}" 
-                  data-action="flag" 
-                  title="${this.question.flagged ? 'Desmarcar' : 'Marcar para revisar'}">
+          <button type="button" class="question-flag-btn ${this.question.flagged ? 'flagged' : ''}"
+                  data-action="flag"
+                  aria-pressed="${this.question.flagged ? 'true' : 'false'}"
+                  aria-label="Marcar para revisar (F)"
+                  ${this.isReviewing ? 'disabled' : ''}>
             <i data-lucide="flag" class="w-4 h-4"></i>
           </button>
           <button class="question-explanation-btn" data-action="toggle-explanation">
@@ -57,7 +59,7 @@ export class QuestionCard {
       
       <div class="question-answers">
         ${this.question.answers.map((answer, i) => `
-          <button class="question-answer ${this.selectedAnswer === i ? 'selected' : ''} ${
+          <button type="button" class="question-answer ${this.selectedAnswer === i ? 'selected' : ''} ${
             this.isReviewing ? (i === this.question.correctAnswer ? 'correct' : (this.selectedAnswer === i ? 'wrong' : '')) : ''
           }" 
                   data-answer="${i}"
@@ -66,9 +68,11 @@ export class QuestionCard {
             <span class="question-answer-text">${escapeHtml(answer)}</span>
             ${this.isReviewing && i === this.question.correctAnswer ? `
               <i data-lucide="check" class="w-4 h-4 answer-icon"></i>
+              <span class="sr-only">Resposta correta</span>
             ` : ''}
             ${this.isReviewing && this.selectedAnswer === i && i !== this.question.correctAnswer ? `
               <i data-lucide="x" class="w-4 h-4 answer-icon"></i>
+              <span class="sr-only">Sua resposta, incorreta</span>
             ` : ''}
           </button>
         `).join('')}
@@ -153,6 +157,7 @@ export class QuestionCard {
           }
           break;
         case 'f':
+        case 'F':
           this.toggleFlag();
           break;
       }
@@ -171,10 +176,12 @@ export class QuestionCard {
   }
 
   toggleFlag() {
+    if (this.isReviewing) return;
     this.question.flagged = !this.question.flagged;
     const flagBtn = this.element.querySelector('.question-flag-btn');
     if (flagBtn) {
       flagBtn.classList.toggle('flagged', this.question.flagged);
+      flagBtn.setAttribute('aria-pressed', String(this.question.flagged));
     }
     this.onFlag(this.question.id, this.question.flagged);
   }
