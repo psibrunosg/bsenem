@@ -33,18 +33,51 @@ o `dist/` é copiado para `releases/<sha>`.
 
 ## Publicar
 
-```bash
-bash scripts/deploy-vps.sh
-```
+O `deploy-api-1` roda o PHP direto do clone em `/opt/projects/bsenem`, e as
+migrações rodam no primeiro request que abre o banco. Por isso, publicar o
+backend é um `git pull` no clone. O frontend vai pelo script. Com a `main` local
+em dia e limpa:
 
-O script se recusa a publicar com a árvore suja, builda sem `BASE_PATH` (a VPS
-serve na raiz do domínio), envia o `dist/`, troca o symlink `current`, recarrega
-o nginx e confere o HTTP da home.
+1. **Backup do banco** (antes de qualquer release com migração):
+
+   ```bash
+   ssh oraclevps2 'cd /opt/projects/bsenem && T=backups/bsenem.pre-<tarefa>-$(date +%Y%m%d-%H%M%S) && sudo mkdir -p $T && sudo cp -p backend/database/bsenem.db* $T/'
+   ```
+
+2. **Backend:**
+
+   ```bash
+   ssh oraclevps2 'cd /opt/projects/bsenem && git pull --ff-only origin main'
+   ```
+
+3. **Frontend:**
+
+   ```bash
+   bash scripts/deploy-vps.sh
+   ```
+
+   O script se recusa a publicar com a árvore suja, builda sem `BASE_PATH` (a VPS
+   serve na raiz do domínio), envia o `dist/`, troca o symlink `current`,
+   recarrega o nginx e confere o HTTP da home. Os avisos do `tar` sobre
+   "time stamp in the future" vêm da diferença de relógio e são inofensivos.
+
+4. **Conferir:** a home responde 200, e `/api/auth/me` sem login responde 401.
+   Veja `sudo docker logs --since 5m deploy-api-1` e, logado, a tela afetada.
+   Ler o banco de produção é bloqueado no modo automático do Claude Code.
 
 ## Rollback
 
+Frontend:
+
 ```bash
 bash scripts/deploy-vps.sh --rollback
+```
+
+Backend: volte o clone para o commit anterior e, se a release tinha migração,
+restaure o banco do backup do passo 1 com a API parada:
+
+```bash
+ssh oraclevps2 'cd /opt/projects/bsenem && git checkout <sha-anterior>'
 ```
 
 Volta o symlink para o release gravado em `releases/.previous`. Os releases
@@ -57,11 +90,6 @@ ssh oraclevps2 'sudo docker exec deploy-frontend-1 nginx -s reload'
 
 ## O que este fluxo NÃO faz
 
-- **Não atualiza o backend.** O clone em `/opt/projects/bsenem` está parado num
-  commit antigo (`b1ac23a`) e com a árvore de trabalho mexida por cópia direta
-  de arquivos, fora do git. Atualizar o PHP exige reconciliar isso à mão e rodar
-  as migrações contra o SQLite de produção (`backend/database/bsenem.db`, que é
-  untracked e tem backups em `backups/`). Não faça por cima sem backup.
 - **Não publica no GitHub Pages.** O deploy de Pages foi removido do workflow: o
   `public/manifest.json` e os ícones usam caminho absoluto (`/`), que é correto
   na raiz do domínio e quebrava sob `/bsenem/`. O site antigo do Pages continua
