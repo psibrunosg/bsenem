@@ -30,3 +30,7 @@
 ## Servidores em segundo plano
 - `TaskStop` encerra o shell, mas o `node` (Vite) e o `php -S` filhos podem continuar vivos, segurando a porta. Confira com `netstat -ano | grep LISTEN` e, antes de encerrar, confirme o dono pelo `CommandLine` (`Get-CimInstance Win32_Process -Filter "ProcessId=<pid>"`). Encerre só pelo PID.
 - `php -S` com `APP_CONTENT_IMPORT` ausente importa ENEM (3060) e concursos (2795) no primeiro acesso a `/api/simulators/catalog` (cerca de 2 s). Nos testes com dados sintéticos, use `APP_CONTENT_IMPORT=off`.
+
+## Permissões do modo automático
+- `gh pr merge` é bloqueado ("Merge Without Review") e ler o banco de produção via `ssh oraclevps2 ... docker exec` é bloqueado ("Production Reads"). O usuário precisa fazer o merge pela interface do GitHub ou liberar essas ações; não tente contornar.
+- Antes de qualquer migração que remova ou recrie tabelas, confira o que já está publicado: `current -> releases/<sha>` na VPS indica a release no ar, e dados de produção podem depender das tabelas antigas. Veja `backend/tests/simulator_upgrade_test.php`.
