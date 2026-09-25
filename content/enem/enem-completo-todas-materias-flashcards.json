@@ -1,0 +1,2141 @@
+[
+  {
+    "front": "Qual a diferença entre Ditongo, Tritongo e Hiato?",
+    "back": "Ditongo: 2 sons vocálicos na MESMA sílaba (pai, série). Tritongo: 3 sons vocálicos na MESMA sílaba (Uruguai). Hiato: 2 vogais juntas em sílabas SEPARADAS (sa-ú-de, po-e-ta). 💡 MACETE: Vogal + Vogal forte (A, E, O) NUNCA ficam na mesma sílaba — sempre se separam formando Hiato ('Vogais fortes brigam e moram em quartos separados').",
+    "tags": [
+      "portugues",
+      "fonologia",
+      "modulo-01",
+      "enem"
+    ]
+  },
+  {
+    "front": "Quando há Dígrafo Consonantal vs. Dígrafo Vocálico?",
+    "back": "Dígrafo = 2 letras com 1 único som (fonema). Consonantal: LH, NH, CH, RR, SS, QU/GU (sem som de U), SC, SÇ, XC. Vocálico: vogal + M ou N na mesma sílaba fechando som nasal (cAMpo = ã, tEMpo = ẽ). 💡 MACETE: Se o 'U' não for pronunciado em QU/GU (queijo, guitarra), é dígrafo (letras > fonemas).",
+    "tags": [
+      "portugues",
+      "fonologia",
+      "modulo-01",
+      "enem"
+    ]
+  },
+  {
+    "front": "Quais são as regras gerais de acentuação das Oxítonas, Paroxítonas e Proparoxítonas?",
+    "back": "1) Proparoxítonas: TODAS são acentuadas (lâmpada, médico). 2) Oxítonas: acentuam-se as terminadas em A(s), E(s), O(s), EM, ENS (café, cipó, parabéns). 3) Paroxítonas: acentuam-se TODAS, EXCETO as terminadas em A(s), E(s), O(s), EM, ENS. 💡 MACETE: 'A regra das Oxítonas é o espelho invertido das Paroxítonas!'",
+    "tags": [
+      "portugues",
+      "acentuacao",
+      "modulo-01",
+      "enem"
+    ]
+  },
+  {
+    "front": "Qual é a regra do Hiato para acentuação de 'I' e 'U'?",
+    "back": "Acentuam-se o 'I' e o 'U' tônicos quando formam hiato com a vogal anterior, estando sozinhos na sílaba (ou com S) e não seguidos de NH (sa-í-da, ba-ú, pa-ís; mas ra-i-nha e ju-iz não têm acento). 💡 MACETE DO NOVO ACORDO: Caiu o acento em 'I' e 'U' de hiatos nas PAROXÍTONAS após ditongo (feiura, baiuca).",
+    "tags": [
+      "portugues",
+      "acentuacao",
+      "modulo-01",
+      "enem"
+    ]
+  },
+  {
+    "front": "O que mudou no Novo Acordo Ortográfico sobre trema, ditongos abertos e hiatos OO/EE?",
+    "back": "1) Trema: abolido em palavras portuguesas (linguiça, frequente). 2) Hiatos OO e EE: perderam o circunflexo (voo, enjoo, leem, veem, creem, deem). 3) Ditongos abertos ÉI, ÓI, ÉU: perderam o acento nas PAROXÍTONAS (ideia, jiboia, heroico), mas MANTIVERAM nas OXÍTONAS e MONOSSÍLABOS (herói, papéis, céu). 💡 MACETE: 'Herói no fim tem troféu (acento); ideia no meio fica sem!'",
+    "tags": [
+      "portugues",
+      "ortografia",
+      "modulo-01",
+      "enem"
+    ]
+  },
+  {
+    "front": "Como funciona o acento diferencial de TER e VIR no presente?",
+    "back": "Ele tem / Eles têm; Ele vem / Eles vêm. Nos derivados (manter, conter, intervir, convir): singular leva acento agudo e plural leva circunflexo (ele mantém / eles mantêm; ele intervém / eles intervêm). 💡 MACETE: 'Singular é magrinho (sem chapéu ou agudo); Plural é gordinho (ganha chapéu circunflexo ^)'.",
+    "tags": [
+      "portugues",
+      "acentuacao",
+      "modulo-01",
+      "enem"
+    ]
+  },
+  {
+    "front": "Qual a regra definitiva para usar o Hífen com prefixos?",
+    "back": "1) Letras IGUAIS se separam com hífen (micro-ondas, anti-inflamatório). 2) Letras DIFERENTES se juntam (autoestrada, infraestrutura, antissocial, autorretrato — dobrando R e S). 3) Antes de H usa hífen (super-homem). 💡 MACETE: 'Os opostos se atraem (junta tudo) e os iguais se repelem (separa com hífen)!' Exceções fixas com hífen: além, aquém, recém, ex, vice, pós, pré, pró.",
+    "tags": [
+      "portugues",
+      "ortografia",
+      "modulo-01",
+      "enem"
+    ]
+  },
+  {
+    "front": "Como usar corretamente os 4 'Porquês' (Por que, Por quê, Porque, Porquê)?",
+    "back": "1) POR QUE (separado/sem acento): início/meio de perguntas ou = 'pelo qual / por qual razão'. 2) POR QUÊ (separado/com acento): fim de frase antes de ponto. 3) PORQUE (junto/sem acento): resposta/explicação (= pois, já que). 4) PORQUÊ (junto/com acento): substantivo, vem com artigo 'o/um' (= o motivo). 💡 MACETE: 'Pergunta no início (por que), pergunta no fim (por quê), resposta (porque) e substantivo com O (o porquê)'.",
+    "tags": [
+      "portugues",
+      "ortografia",
+      "modulo-01",
+      "enem"
+    ]
+  },
+  {
+    "front": "Qual a diferença entre MAL vs. MAU, ONDE vs. AONDE e HÁ vs. A?",
+    "back": "• MAL ↔ BEM (advérbio/substantivo/conjunção); MAU ↔ BOM (adjetivo). • ONDE = lugar fixo (quem está, está em); AONDE = movimento/destino (quem vai, vai a). • HÁ = tempo passado (= faz) ou existir; A = tempo futuro ou distância. 💡 MACETE: Desenhe: mAl ↔ bEm (vogais se cruzam) e mAu ↔ bOm (U parece O). Para HÁ/A: 'HÁ anos não te vejo (passado); daqui A dois dias volto (futuro)'.",
+    "tags": [
+      "portugues",
+      "ortografia",
+      "modulo-01",
+      "enem"
+    ]
+  },
+  {
+    "front": "Qual a diferença entre Radical, Vogal Temática, Tema, Desinências e Afixos?",
+    "back": "• Radical: base do sentido (PEDR-a, PEDR-eiro). • Vogal temática: liga radical às desinências (cant-A-r = 1ª conj, vend-E-r = 2ª, part-I-r = 3ª). • Tema = Radical + Vogal temática. • Desinências: indicam gênero/número (nominais) ou modo/tempo/número/pessoa (verbais: cantá-VA-MOS). • Afixos: Prefixos (antes) e Sufixos (depois). 💡 MACETE: 'Desinência flexiona; Afixo cria palavra nova'.",
+    "tags": [
+      "portugues",
+      "morfologia",
+      "modulo-02",
+      "enem"
+    ]
+  },
+  {
+    "front": "Como diferenciar Derivação Prefixal e Sufixal de Derivação Parassintética?",
+    "back": "Ambas têm prefixo + sufixo. Na Prefixal e Sufixal (ex: IN-feliz-MENTE), se você tirar o prefixo ('felizmente') ou o sufixo ('infeliz'), a palavra continua existindo. Na Parassintética (ex: A-noit-ECER, EM-pobr-ECER), se tirar um dos dois, a palavra NÃO existe ('noitecer' ou 'anoite' não existem). 💡 MACETE: 'Parassíntese é casamento inseparável: tirou um, a palavra morre!'",
+    "tags": [
+      "portugues",
+      "morfologia",
+      "modulo-02",
+      "enem"
+    ]
+  },
+  {
+    "front": "O que são Derivação Regressiva e Derivação Imprópria (Conversão)?",
+    "back": "• Regressiva: um verbo perde letras e vira um substantivo abstrato que indica AÇÃO (combater → o combate; chorar → o choro; pescar → a pesca). • Imprópria: a palavra muda de classe gramatical SEM mudar nenhuma letra (ex: 'O jantar estava ótimo' — verbo virou substantivo; 'Comício monstro' — substantivo virou adjetivo). 💡 MACETE: Se o substantivo indica AÇÃO, veio do verbo (regressiva); se indica OBJETO (ex: âncora → ancorar), o verbo veio do substantivo (sufixal).",
+    "tags": [
+      "portugues",
+      "morfologia",
+      "modulo-02",
+      "enem"
+    ]
+  },
+  {
+    "front": "Qual a diferença entre Composição por Justaposição e por Aglutinação?",
+    "back": "• Justaposição: palavras se unem SEM perder fonemas/letras (passatempo, girassol, guarda-chuva, pé-de-moleque). • Aglutinação: palavras se fundem PERDENDO letras/sons (planalto = plano + alto; aguardente = água + ardente; embora = em + boa + hora; fidalgo = filho + de + algo). 💡 MACETE: 'Justaposição ficam juntas lado a lado; Aglutinação bate no liquidificador e perde pedaço!'",
+    "tags": [
+      "portugues",
+      "morfologia",
+      "modulo-02",
+      "enem"
+    ]
+  },
+  {
+    "front": "Como funcionam os pronomes demonstrativos ESTE, ESSE e AQUELE no Espaço, Tempo e Texto?",
+    "back": "1) ESPAÇO: ESTE (perto de mim, 1ª p.), ESSE (perto de você, 2ª p.), AQUELE (longe dos dois, 3ª p.). 2) TEMPO: ESTE (presente/atual), ESSE (passado ou futuro próximos), AQUELE (passado distante). 3) TEXTO (coesão): ESTE = Catáfora (aponta para o que VAI ser dito: 'O problema é este: ...'); ESSE = Anáfora (retoma o que JÁ foi dito: 'Estudar é essencial. Esse hábito...'). 💡 MACETE: 'ESTE tem T de Trás pra frente (apresenta o novo); ESSE tem SS de Passado (retoma o que passou)!'",
+    "tags": [
+      "portugues",
+      "morfologia",
+      "pronomes",
+      "modulo-03",
+      "enem"
+    ]
+  },
+  {
+    "front": "Na retomada de dois termos anteriores (ex: 'Machado e Alencar foram grandes; este realista, aquele romântico'), quem é ESTE e quem é AQUELE?",
+    "back": "• ESTE retoma o ÚLTIMO termo mencionado (o mais próximo no texto: Alencar). • AQUELE retoma o PRIMEIRO termo mencionado (o mais distante no texto: Machado). 💡 MACETE: Olhe para a distância física até a palavra escrita: quem está colado no ponto final é ESTE; quem ficou lá no começo da frase é AQUELE.",
+    "tags": [
+      "portugues",
+      "morfologia",
+      "pronomes",
+      "modulo-03",
+      "enem"
+    ]
+  },
+  {
+    "front": "Como usar corretamente os pronomes relativos CUJO, ONDE e QUE/QUEM?",
+    "back": "• CUJO: indica POSSE entre dois substantivos, NUNCA aceita artigo depois ('cujo o' é erro grave!) e concorda com a coisa possuída ('O autor cuja obra li'). • ONDE: exclusivo para LUGAR físico/virtual fixo (= em que). Não use para tempo ou situação ('A época onde' → errado; use 'em que'). • QUEM: só para pessoas e sempre com preposição. 💡 MACETE: 'Depois de CUJO não vem O/A jamais!'",
+    "tags": [
+      "portugues",
+      "morfologia",
+      "pronomes",
+      "modulo-03",
+      "enem"
+    ]
+  },
+  {
+    "front": "Quais são os sentidos dos tempos verbais no ENEM (Presente, Pretérito Perfeito, Imperfeito, Mais-que-perfeito e Futuro do Pretérito)?",
+    "back": "• Presente do Indicativo: fato atual, verdade científica ou hábito. • Pretérito Perfeito (cantei): ação concluída/pontual no passado. • Pretérito Imperfeito (cantava): ação contínua, hábito antigo ou descrição de cenário no passado. • Mais-que-perfeito (cantara = tinha cantado): passado anterior a outro passado. • Futuro do Pretérito (cantaria): condição, hipótese, polidez ou incerteza jornalística. 💡 MACETE: 'Imperfeito (-VA/-IA) é o tempo da nostalgia e dos hábitos de infância'.",
+    "tags": [
+      "portugues",
+      "morfologia",
+      "verbos",
+      "modulo-03",
+      "enem"
+    ]
+  },
+  {
+    "front": "Como funcionam as Vozes Verbais (Ativa, Passiva Analítica, Passiva Sintética e Reflexiva)?",
+    "back": "• Ativa: sujeito pratica a ação ('O corretor alugou a casa'). • Passiva Analítica: verbo SER + Particípio ('A casa foi alugada pelo corretor'). • Passiva Sintética (Pronominal): VTD + partícula apassivadora SE ('Alugam-se casas' = Casas são alugadas — verbo concorda com o sujeito paciente!). • Reflexiva: faz e recebe ('O menino feriu-se'). 💡 MACETE: Na Passiva Sintética, vire a frase para 'X são Y': 'Alugam-se casas' → 'Casas são alugadas' (plural obrigatório!).",
+    "tags": [
+      "portugues",
+      "morfologia",
+      "verbos",
+      "modulo-03",
+      "enem"
+    ]
+  },
+  {
+    "front": "Quais são os 5 tipos de Sujeito e como identificá-los?",
+    "back": "1) Simples: 1 núcleo ('O aluno passou'). 2) Composto: 2+ núcleos ('Pai e filho vieram'). 3) Oculto/Desinencial/Elíptico: não aparece escrito, mas a desinência verbal entrega ('Estudamos muito' = nós). 4) Indeterminado: 3ª p. do plural sem referente ('Roubaram meu carro') OU VI/VTI/VL na 3ª p. singular + SE ('Precisa-se de vendedores'). 5) Inexistente (Oração sem sujeito): fenômenos da natureza, HAVER (= existir/tempo) e FAZER (tempo/clima). 💡 MACETE: 'Haver (existir) e Fazer (tempo) são solteirões convictos: não têm sujeito e ficam sempre no singular!'",
+    "tags": [
+      "portugues",
+      "sintaxe",
+      "modulo-04",
+      "enem"
+    ]
+  },
+  {
+    "front": "Como diferenciar VTD, VTI, VTDI, VI e Verbo de Ligação (VL)?",
+    "back": "• VI (Intransitivo): tem sentido completo sozinho (nascer, morrer, cair, chegar, ir). • VTD: pede complemento SEM preposição obrigatória (comprar algo). • VTI: pede complemento COM preposição obrigatória (gostar DE algo, obedecer A alguém). • VTDI: pede os dois (entregar algo A alguém). • VL: não indica ação, apenas liga o sujeito a uma característica/estado (ser, estar, permanecer, ficar, continuar, andar, parecer, tornar-se). 💡 MACETE: Decorar os VLs com a sigla **CAFE P2ST**: Continuar, Andar, Ficar, Estar, Permanecer, Parecer, Ser, Tornar-se.",
+    "tags": [
+      "portugues",
+      "sintaxe",
+      "modulo-04",
+      "enem"
+    ]
+  },
+  {
+    "front": "Qual o macete definitivo para diferenciar Adjunto Adnominal (AA) de Complemento Nominal (CN)?",
+    "back": "Dúvida surge em termos com preposição 'DE' ligados a um substantivo (ex: 'amor de mãe' vs 'amor à pátria'): 1) Se estiver ligado a ADJETIVO ou ADVÉRBIO → é 100% Complemento Nominal (CN). 2) Se estiver ligado a SUBSTANTIVO CONCRETO → é 100% Adjunto Adnominal (AA). 3) Se estiver ligado a SUBSTANTIVO ABSTRATO: se o termo PRATICA a ação ou indica posse = AA ('amor de mãe' → a mãe ama, agente); se o termo SOFRE a ação = CN ('construção do prédio' → o prédio é construído, paciente). 💡 MACETE: 'AA = Agente Ativo; CN = Coitado Nocauteado (paciente)!'",
+    "tags": [
+      "portugues",
+      "sintaxe",
+      "modulo-04",
+      "enem"
+    ]
+  },
+  {
+    "front": "Qual a diferença entre Aposto e Vocativo?",
+    "back": "• Aposto: termo que explica, resume, especifica ou enumera outro substantivo (ex: 'Machado de Assis, bruxo do Cosme Velho, escreveu Dom Casmurro'; 'A cidade de São Paulo' — aposto especificativo sem vírgula). • Vocativo: termo usado para CHAMAR ou interpelar o interlocutor, sempre isolado por vírgula (ex: 'Amigos, ouçam com atenção!'). 💡 MACETE: 'Vocativo tem VOZ (você chama alguém); Aposto está POSTO ao lado para explicar!'",
+    "tags": [
+      "portugues",
+      "sintaxe",
+      "modulo-04",
+      "enem"
+    ]
+  },
+  {
+    "front": "Quais são as 5 Orações Coordenadas Sindéticas e seus conectivos principais?",
+    "back": "1) Aditivas (soma): e, nem, não só... mas também, tampouco. 2) Adversativas (oposição/contraste): mas, porém, contudo, todavia, entretanto, no entanto. 3) Alternativas (escolha/alternância): ou... ou, ora... ora, quer... quer. 4) Conclusivas (conclusão lógica): logo, portanto, por isso, por conseguinte, pois (POSPOSTO ao verbo). 5) Explicativas (justificativa de ordem/hipótese): porque, que, porquanto, pois (ANTEPOSTO ao verbo). 💡 MACETE DO POIS: 'Antes do verbo = Explicativo; Depois do verbo (entre vírgulas) = Conclusivo (= portanto)!'",
+    "tags": [
+      "portugues",
+      "sintaxe",
+      "periodo-composto",
+      "modulo-05",
+      "enem"
+    ]
+  },
+  {
+    "front": "Qual o macete para classificar qualquer Oração Subordinada Substantiva?",
+    "back": "Substitua toda a oração introduzida por QUE ou SE pela palavra **ISSO**! A função sintática que 'ISSO' exercer na oração principal será o nome da oração: 1) Subjetiva ('É necessário ISSO' → ISSO é necessário = sujeito). 2) Objetiva Direta ('Desejo ISSO' = OD). 3) Objetiva Indireta ('Necessito DISSO' = OI). 4) Completiva Nominal ('Tenho necessidade DISSO' = CN de substantivo/adjetivo). 5) Predicativa ('O problema é ISSO' = após VL). 6) Apositiva ('Só quero uma coisa: ISSO' = após dois-pontos). 💡 MACETE: 'Trocou por ISSO, matou o serviço!'",
+    "tags": [
+      "portugues",
+      "sintaxe",
+      "periodo-composto",
+      "modulo-05",
+      "enem"
+    ]
+  },
+  {
+    "front": "Qual a diferença de sentido entre Oração Subordinada Adjetiva Restritiva e Explicativa (questão clássica do ENEM)?",
+    "back": "• Restritiva (SEM vírgulas): limita o sentido a apenas uma parte do grupo ('Os alunos que estudaram passaram' → só os que estudaram passaram; outros não). • Explicativa (COM vírgulas): generaliza uma característica para TODO o grupo ('Os alunos, que estudaram, passaram' → todos os alunos estudaram e todos passaram). 💡 MACETE: 'Sem vírgula RESTRINGE (só alguns); Com vírgula EXPLICA O TODO (100% do grupo)!'",
+    "tags": [
+      "portugues",
+      "sintaxe",
+      "periodo-composto",
+      "modulo-05",
+      "enem"
+    ]
+  },
+  {
+    "front": "Como memorizar as 9 Orações Subordinadas Adverbiais?",
+    "back": "Use o macete **6 C + FTP**: • Causal (porque, já que, visto que, como [no início]). • Consecutiva (tão/tanto... que — indica consequência). • Condicional (se, caso, desde que, contanto que, a menos que). • Concessiva (embora, ainda que, mesmo que, apesar de que, conquanto — quebra de expectativa). • Comparativa (como, mais/menos... do que). • Conformativa (conforme, segundo, consoante, como). • Final (para que, a fim de que). • Temporal (quando, enquanto, assim que, mal). • Proporcional (à medida que, à proporção que, quanto mais... mais). 💡 MACETE: 'CAUSA vem antes (motivo); CONSECUTIVA vem depois (efeito: chorou tanto QUE desidratou)'.",
+    "tags": [
+      "portugues",
+      "sintaxe",
+      "periodo-composto",
+      "modulo-05",
+      "enem"
+    ]
+  },
+  {
+    "front": "Qual a diferença entre Conjunção Adversativa (mas, porém) e Concessiva (embora, apesar de) na argumentação?",
+    "back": "Ambas indicam oposição! Porém: • A Adversativa (mas, porém, todavia) apresenta o argumento MAIS FORTE (o autor concorda com o que vem DEPOIS do 'mas'). • A Concessiva (embora, ainda que, apesar de) apresenta o argumento MAIS FRACO (admite um fato contrário, mas ele não impede a tese principal). 💡 MACETE DE REDAÇÃO: 'No EMBORA fica o argumento que você quer enfraquecer; no MAS fica a tese que você quer vencer!'",
+    "tags": [
+      "portugues",
+      "sintaxe",
+      "conectivos",
+      "modulo-05",
+      "enem"
+    ]
+  },
+  {
+    "front": "Quais são os casos especiais de Concordância Verbal que mais cobram regra?",
+    "back": "1) HAVER (existir/tempo) e FAZER (tempo/clima): sempre no singular ('Havia muitos problemas', 'Faz dez anos'). Mas EXISTIR varia normalmente ('Existiam problemas')! 2) 'A maioria de / Grande parte de + plural': aceita verbo no singular (concorda com o coletivo) OU no plural (concorda com o especificador). 3) Horas/distâncias (verbo DAR, BATER, SOAR): concorda com o número ('Deram duas horas no relógio', 'O relógio deu duas horas'). 4) Pronome QUE vs. QUEM: 'Fui eu QUE fiz' (concorda com o antecedente) vs. 'Fui eu QUEM fez / fiz' (3ª p. ou antecedente).",
+    "tags": [
+      "portugues",
+      "concordancia",
+      "modulo-06",
+      "enem"
+    ]
+  },
+  {
+    "front": "Quais são as regras especiais de Concordância Nominal (ANEXO, MEIO, BASTANTE, É PROIBIDO, MENOS)?",
+    "back": "• ANEXO / OBRIGADO / MESMO / PRÓPRIO: variam com o substantivo ('Seguem anexas as planilhas'; 'Em anexo' é invariável). • MEIO: se = 'um pouco' (advérbio) é invariável ('Ela está meio cansada'); se = 'metade' varia ('Tomou meia garrafa'). • BASTANTE: troque por MUITO — se 'muito' for para o plural, 'bastante' vai para o plural ('Bastantes pessoas' = muitas pessoas). • É BOM / É PROIBIDO / É NECESSÁRIO: sem artigo fica invariável ('Entrada é proibida' → 'É proibido entrada'); com artigo concorda ('É proibida A entrada'). • MENOS / ALERTA: SEMPRE invariáveis ('menas' não existe!).",
+    "tags": [
+      "portugues",
+      "concordancia",
+      "modulo-06",
+      "enem"
+    ]
+  },
+  {
+    "front": "Qual a regência dos verbos críticos: ASSISTIR, ASPIRAR, VISAR e IMPLICAR?",
+    "back": "• ASSISTIR: sentido de VER = VTI (pede 'A': 'Assisti AO filme'); sentido de AJUDAR = VTD ('O médico assistiu o paciente'). • ASPIRAR: sentido de CHEIRAR/RESPIRAR = VTD ('Aspirou o ar'); sentido de DESEJAR = VTI ('Aspira AO cargo'). • VISAR: sentido de MIRAR/ASSINAR = VTD ('Visou o cheque'); sentido de OBJETIVAR = VTI ('Visa AO sucesso'). • IMPLICAR: sentido de ACARRETAR/GERAR consequência = VTD, SEM preposição 'em'! ('O atraso implicará demissão', e não 'em demissão'). 💡 MACETE: 'Ver, desejar e objetivar pedem A; implicar (acarretar) tem alergia a EM!'",
+    "tags": [
+      "portugues",
+      "regencia",
+      "modulo-06",
+      "enem"
+    ]
+  },
+  {
+    "front": "Qual a regência de ESQUECER/LEMBRAR, PREFERIR, SIMPATIZAR e CHEGAR/IR?",
+    "back": "• ESQUECER / LEMBRAR: sem pronome = VTD ('Esqueci o livro'); com pronome (me, te, se, nos) = VTI, obriga preposição DE ('Esqueci-ME DO livro'). • PREFERIR: é VTDI ('Prefiro X A Y'). NUNCA use 'prefiro mais X do que Y'! • SIMPATIZAR / ANTIPATIZAR: NÃO são pronominais ('Simpatizei com você', nunca 'me simpatizei'). • CHEGAR / IR: pedem preposição A (e não EM) para destino ('Cheguei A casa / AO trabalho', não 'no trabalho'). 💡 MACETE: 'Com pronome tem DE (Lembrei-me DE); sem pronome é direto (Lembrei o fato)'.",
+    "tags": [
+      "portugues",
+      "regencia",
+      "modulo-06",
+      "enem"
+    ]
+  },
+  {
+    "front": "Quais são as regras definitivas da Crase (Casos Proibidos, Obrigatórios e Facultativos)?",
+    "back": "Crase = fusão de preposição A + artigo A (à). • PROIBIDA antes de: Masculino, Verbo, Pronomes em geral, Palavra no plural se o 'a' estiver no singular ('Falei a pessoas'), entre palavras repetidas ('cara a cara'). • FACULTATIVA: antes de nome próprio feminino, depois da preposição 'ATÉ' e antes de pronome possessivo feminino singular (minha, tua, sua, nossa, vossa). • OBRIGATÓRIA: locuções adverbiais/prepositivas/conjuntivas femininas (às vezes, à noite, à medida que, à espera de) e horas exatas ('às 14h'). 💡 MACETE: 'Vou A, volto DA → crase HÁ! Vou A, volto DE → crase PRA QUÊ?' e para substantivos comuns: troque a palavra feminina por uma masculina — se virar AO, na feminina tem CRASE!",
+    "tags": [
+      "portugues",
+      "crase",
+      "modulo-06",
+      "enem"
+    ]
+  },
+  {
+    "front": "Como funciona a Colocação Pronominal (Próclise, Mesóclise e Ênclise)?",
+    "back": "• PRÓCLISE (antes do verbo: 'Não me diga'): obrigatória quando há PALAVRA ATRATIVA antes do verbo — **Macete 4N + PRISC**: Palavras Negativas (não, nunca, jamais), Pronomes (relativos, indefinidos, demonstrativos, interrogativos), Advérbios (sem vírgula após), Conjunções Subordinativas (que, se, embora, quando) e frases em 'Em + gerúndio'. • MESÓCLISE (no meio do verbo: 'Dir-te-ei'): verbos no Futuro do Presente ou Futuro do Pretérito sem palavra atrativa. • ÊNCLISE (depois do verbo: 'Diga-me'): início de período (NUNCA comece frase com me/te/se/o/a/lhe!) ou após vírgula/gerúndio.",
+    "tags": [
+      "portugues",
+      "colocacao-pronominal",
+      "modulo-06",
+      "enem"
+    ]
+  },
+  {
+    "front": "Qual a Regra de Ouro da Vírgula no Período Simples e Composto?",
+    "back": "1) NUNCA separe com vírgula única a ordem direta **SVC** (Sujeito + Verbo + Complemento) nem o Nome de seu Adjunto/Complemento. 2) USE vírgula para: isolar Vocativo, Aposto explicativo, Adjunto Adverbial deslocado (especialmente se longo), Orações Adjetivas Explicativas, Orações Adverbiais deslocadas (antes da principal), enumerar termos de mesma função e marcar Zeugma/Elipse do verbo ('Eu gosto de café; ela, de chá'). 💡 MACETE: 'Sujeito e Verbo são casados: nenhuma vírgula sozinha entra no meio deles!'",
+    "tags": [
+      "portugues",
+      "pontuacao",
+      "modulo-07",
+      "enem"
+    ]
+  },
+  {
+    "front": "Qual a diferença entre Homônimos (Homógrafos, Homófonos, Perfeitos) e Parônimos?",
+    "back": "• Homônimos: mesmo som ou mesma escrita. Homógrafos = mesma escrita, som diferente (colher [verbo] / colher [talher]). Homófonos = mesmo som, escrita diferente (sessão / seção / cessão; conserto / concerto). Perfeitos = mesma escrita e mesmo som (caminho [subst.] / caminho [verbo]). • Parônimos: palavras PARECIDAS na escrita e no som, mas diferentes (RATIFICAR = confirmar vs. RETIFICAR = corrigir; IMINENTE = prestes a acontecer vs. EMINENTE = ilustre/elevado; FLAGRANTE = evidente vs. FRAGRANTE = perfumado; MANDADO = ordem judicial vs. MANDATO = tempo político).",
+    "tags": [
+      "portugues",
+      "semantica",
+      "modulo-07",
+      "enem"
+    ]
+  },
+  {
+    "front": "Qual a diferença entre Polissemia, Ambiguidade, Hiperonímia e Hiponímia?",
+    "back": "• Polissemia: UMA mesma palavra com vários sentidos dependendo do contexto ('cabeça' do corpo, 'cabeça' do alho, 'cabeça' da equipe). • Ambiguidade (Anfibologia): duplicidade de sentido na construção da frase ('O policial prendeu o ladrão em sua casa' — casa de quem?). Na publicidade/humor é recurso expressivo; na dissertação é vício. • Hiperônimo: termo GERAL/amplo (Fruta, Doença, Animal). • Hipônimo: termo ESPECÍFICO (Maçã, Dengue, Gato). 💡 MACETE DE REDAÇÃO: Use hiperônimos para retomar palavras sem repetir!",
+    "tags": [
+      "portugues",
+      "semantica",
+      "modulo-07",
+      "enem"
+    ]
+  },
+  {
+    "front": "Figuras de Palavras (Tropos): Como diferenciar Metáfora, Comparação, Metonímia, Catacrese, Sinestesia e Perífrase/Antonomásia?",
+    "back": "• Comparação (Símile): comparação explícita COM conectivo ('como', 'tal qual', 'feito'). • Metáfora: comparação implícita SEM conectivo ('Meu coração é um balde despejado'). • Metonímia: substituição por relação lógica/proximidade — autor pela obra ('Li Machado'), continente pelo conteúdo ('Comeu dois pratos'), marca pelo produto ('Comprou Gilette'), parte pelo todo ('Sem teto'). • Catacrese: metáfora desgastada por falta de nome próprio ('pé da mesa', 'dente de alho', 'embarcar no avião'). • Sinestesia: mistura de sentidos físicos (visão + audição + paladar: 'voz doce', 'olhar frio', 'perfume verde'). • Perífrase/Antonomásia: apelido consagrado ('Cidade Maravilhosa' = Rio; 'Poeta dos Escravos' = Castro Alves).",
+    "tags": [
+      "portugues",
+      "figuras-de-linguagem",
+      "modulo-08",
+      "enem"
+    ]
+  },
+  {
+    "front": "Figuras de Pensamento: Como diferenciar Antítese, Paradoxo (Oxímoro), Eufemismo, Ironia, Hipérbole, Prosopopeia, Gradação e Apóstrofe?",
+    "back": "• Antítese: oposição de ideias que COEXISTEM sem quebrar a lógica ('O dia e a noite', 'Tristeza e alegria'). • Paradoxo (Oxímoro): oposição que se ANULA/contradiz a lógica ('Ferida que dói e não se sente', 'Estou cego e vejo'). • Eufemismo: suavizar ideia chocante ('Ele partiu desta para melhor' = morreu). • Ironia: dizer o oposto do que se pensa com tom crítico/sarcástico. • Hipérbole: exagero intencional ('Morri de rir'). • Prosopopeia (Personificação): dar ações humanas a seres inanimados ('O vento beijou a flor'). • Gradação (Clímax/Anticlímax): sequência crescente ou decrescente ('Andou, correu, voou'). • Apóstrofe: invocação/chamamento dramático (= vocativo literário: 'Ó Deus!').",
+    "tags": [
+      "portugues",
+      "figuras-de-linguagem",
+      "modulo-08",
+      "enem"
+    ]
+  },
+  {
+    "front": "Figuras de Sintaxe (Construção): Como diferenciar Elipse, Zeugma, Pleonasmo, Polissíndeto, Assíndeto, Anáfora, Hipérbato, Silepse e Anacoluto?",
+    "back": "• Elipse: omissão de termo subentendido ('Na sala, apenas dois alunos' — omitiu 'havia'). • Zeugma: elipse de termo que JÁ APARECEU antes na frase ('Eu estudo Física; ela, Português'). • Pleonasmo: redundância estilística ('Mar salgado') ou viciosa ('Subir para cima'). • Polissíndeto: repetição de conjunção ('E trabalha, e cansa, e sofre'). • Assíndeto: ausência de conjunções ('Vim, vi, venci'). • Anáfora: repetição da mesma palavra no INÍCIO de versos/frases. • Hipérbato: inversão brusca da ordem direta (como o Hino Nacional). • Silepse: concordância ideológica (com a ideia, não com a palavra: 'São Paulo é poluída' [gênero = a cidade]; 'Os brasileiros somos fortes' [pessoa]). • Anacoluto: termo solto no início da frase sem função sintática.",
+    "tags": [
+      "portugues",
+      "figuras-de-linguagem",
+      "modulo-08",
+      "enem"
+    ]
+  },
+  {
+    "front": "Figuras de Som (Harmonia): Aliteração, Assonância, Onomatopeia e Paronomásia?",
+    "back": "• Aliteração: repetição de sons CONSONANTAIS ('O rato roeu a roupa do rei de Roma'). • Assonância: repetição de sons VOCÁLICOS ('Sou um mulato nato no sentido lato'). • Onomatopeia: palavra que imita ruído/som real ('tique-taque', 'bum', 'miau'). • Paronomásia: trocadilho sonoro com palavras parônimas/parecidas ('Quem casa quer casa', 'Conhecer as manhas e as manhãs'). 💡 MACETE: 'Aliteração = Consoante; Assonância = Vogal (começa com A de vogal)'.",
+    "tags": [
+      "portugues",
+      "figuras-de-linguagem",
+      "modulo-08",
+      "enem"
+    ]
+  },
+  {
+    "front": "Quais são as 6 Funções da Linguagem de Roman Jakobson e o gatilho de cada uma no ENEM?",
+    "back": "1) Referencial (Denotativa) → foco no CONTEXTO/Assunto: objetiva, 3ª pessoa, dados (notícias, artigos científicos). 2) Emotiva (Expressiva) → foco no EMISSOR (Eu): subjetiva, 1ª pessoa, sentimentos, exclamações (diários, memórias, lírica). 3) Conativa (Apelativa) → foco no RECEPTOR (Você): verbos no imperativo ('Compre', 'Use', 'Previna-se'), propaganda e campanhas de saúde. 4) Fática → foco no CANAL: testar a comunicação ('Alô?', 'Né?', 'Entende?', 'Bom dia!'). 5) Metalinguística → foco no CÓDIGO: o código explicando o próprio código (dicionário, poema sobre fazer poesia, cinema sobre cinema). 6) Poética → foco na MENSAGEM: elaboração estética, ritmo, figuras, sonoridade.",
+    "tags": [
+      "portugues",
+      "funcoes-da-linguagem",
+      "modulo-09",
+      "enem"
+    ]
+  },
+  {
+    "front": "Quais são os 4 tipos de Variação Linguística (Macete D-I-A) e o que é Preconceito Linguístico?",
+    "back": "Use o macete das raízes gregas **D-I-A**: • Diatópica (Topos = LUGAR): regionalismos e sotaques ('mandioca / aipim / macaxeira'). • Diastrática (Estrato = GRUPO SOCIAL): gírias de surfistas, jargão médico/jurídico, faixa etária. • Diafásica (Fase = SITUAÇÃO/CONTEXTO): grau de formalidade — como a mesma pessoa fala num tribunal vs. num churrasco. • Diacrônica (Cronos = TEMPO): evolução histórica ('Vossa Mercê → vosmecê → você → cê'). • Preconceito Linguístico: julgar uma variedade não-padrão como 'errada' ou 'inferior', ignorando que toda variedade que cumpre a comunicação é legítima linguisticamente.",
+    "tags": [
+      "portugues",
+      "variacao-linguistica",
+      "modulo-09",
+      "enem"
+    ]
+  },
+  {
+    "front": "Qual a diferença entre Norma-Padrão e Norma Culta?",
+    "back": "• Norma-Padrão: modelo idealizado, prescritivo e rígido codificado nas gramáticas tradicionais. • Norma Culta (Variedade Urbana de Prestígio): uso real que falantes escolarizados fazem em situações monitoradas (mais flexível que o padrão rígido). 💡 GATILHO ENEM: No ENEM, a língua nunca é 'certa' ou 'errada' — ela é ADEQUADA ou INADEQUADA à situação comunicativa (gênero, interlocutor e esfera social)!",
+    "tags": [
+      "portugues",
+      "variacao-linguistica",
+      "modulo-09",
+      "enem"
+    ]
+  },
+  {
+    "front": "Qual a diferença entre Tipologia Textual (os 5 Tipos) e Gênero Textual?",
+    "back": "• Tipologia Textual (sequências estruturais internas — são apenas 5): 1. Narração (fatos no tempo, enredo, personagens); 2. Descrição (retrato estático, adjetivos); 3. Dissertação Argumentativa (defesa de tese com argumentos); 4. Exposição (explicação neutra de um tema); 5. Injunção (instruções/ordens passo a passo). • Gênero Textual (práticas comunicativas reais — são infinitos): receita, bula, edital (predomina injunção); notícia, conto, crônica, fábula (predomina narração); editorial, artigo de opinião, carta aberta (predomina argumentação). 💡 MACETE: 'Tipo é o ingrediente estrutural (5); Gênero é o prato pronto que circula na sociedade!'",
+    "tags": [
+      "portugues",
+      "generos-textuais",
+      "modulo-10",
+      "enem"
+    ]
+  },
+  {
+    "front": "Qual a diferença entre Pressuposto e Subentendido na interpretação de texto?",
+    "back": "• Pressuposto: informação implícita que está PROVADA por uma marca linguística dentro da frase ('Pedro PAROU de fumar' → pressuposto comprovado pelo verbo 'parar': Pedro fumava antes). • Subentendido: insinuação deduzida pelo contexto, SEM marca formal, pela qual o ouvinte é responsável ('Está frio aqui, né?' → subentendido: feche a janela). 💡 MACETE: 'Pressuposto tem PISTA na palavra; Subentendido é indireta do contexto!'",
+    "tags": [
+      "portugues",
+      "interpretacao",
+      "modulo-10",
+      "enem"
+    ]
+  },
+  {
+    "front": "Como diferenciar Paráfrase, Paródia, Citação, Alusão e Epígrafe na Intertextualidade?",
+    "back": "• Paráfrase: reescreve um texto-fonte com outras palavras MANTENDO a ideia original. • Paródia: retoma o texto-fonte SUBVERTENDO/invertendo seu sentido (com ironia, crítica ou humor). • Citação: transcrição literal entre aspas. • Alusão: referência indireta a um fato, mito ou obra conhecida. • Epígrafe: frase curta posta no início de uma obra/capítulo para antecipar seu espírito. 💡 MACETE: 'Paráfrase faz a PAZ com o texto original (mantém o sentido); Paródia faz PIADA/PROTESTO (inverte o sentido)!'",
+    "tags": [
+      "portugues",
+      "intertextualidade",
+      "modulo-10",
+      "enem"
+    ]
+  },
+  {
+    "front": "Trovadorismo, Humanismo, Classicismo e Quinhentismo: o que caracteriza cada um?",
+    "back": "• Trovadorismo (Id. Média): Cantigas de Amor (eu-lírico masculino, vassalagem amorosa, 'coita'), de Amigo (eu-lírico feminino, ambiente rural) e Satíricas (Escárnio = indireta; Maldizer = direta). • Humanismo (transição): antropocentrismo, Teatro de Gil Vicente (crítica social e moralizante). • Classicismo (Renascimento): Camões ('Os Lusíadas'), medida nova (decassílabos), razão, equilíbrio e mitologia pagã + fé cristã. • Quinhentismo no Brasil (1500): Literatura de Informação (Carta de Pero Vaz de Caminha — olhar exótico/mercantil sobre a terra) e Literatura de Catequese (Padre José de Anchieta).",
+    "tags": [
+      "portugues",
+      "literatura",
+      "modulo-11",
+      "enem"
+    ]
+  },
+  {
+    "front": "Barroco vs. Arcadismo: quais são as características, lemas latinos e autores?",
+    "back": "• Barroco (séc. XVII): dualismo/conflito entre Carne (pecado) x Espírito (salvação), claro-escuro, efemeridade da vida. Cultismo = jogo de palavras/imagens (Gregório de Matos — lírico, sacro e satírico 'Boca do Inferno'); Conceptismo = jogo de ideias/raciocínio lógico (Padre Antônio Vieira — Sermões). • Arcadismo/Neoclassicismo (séc. XVIII): equilíbrio iluminista, bucolismo pastoril. Lemas: *Fugere urbem* (fugir da cidade), *Carpe diem* (aproveitar o presente), *Inutilia truncat* (cortar os excessos barrocos), *Aurea mediocritas* (vida simples e feliz). Autores: Cláudio Manuel da Costa, Tomás Antônio Gonzaga ('Marília de Dirceu').",
+    "tags": [
+      "portugues",
+      "literatura",
+      "modulo-11",
+      "enem"
+    ]
+  },
+  {
+    "front": "Como se dividem as 3 Gerações da Poesia Romântica e a Prosa Romântica no Brasil?",
+    "back": "• 1ª Geração (Nacionalista/Indianista): Gonçalves Dias ('Canção do Exílio', 'I-Juca-Pirama') — índio como herói nacional mítico. • 2ª Geração (Ultrarromântica/Mal do Século/Byroniana): Álvares de Azevedo — tédio, morte, noite, pessimismo, amor idealizado e inatingível. • 3ª Geração (Condoreira/Social): Castro Alves ('O Navio Negreiro') — abolicionismo, liberdade, hipérboles grandiosas. • Prosa Romântica: José de Alencar (Indianista: Iracema, O Guarani; Urbana: Senhora, Lucíola; Regionalista), Manuel Antônio de Almeida ('Memórias de um Sargento de Milícias' — precursor do realismo pelo anti-herói malandro).",
+    "tags": [
+      "portugues",
+      "literatura",
+      "modulo-11",
+      "enem"
+    ]
+  },
+  {
+    "front": "Realismo vs. Naturalismo vs. Parnasianismo vs. Simbolismo: qual a diferença?",
+    "back": "• Realismo (Machado de Assis — 'Memórias Póstumas de Brás Cubas', 'Dom Casmurro'): análise PSICOLÓGICA, ironia fina, crítica à hipocrisia burguesa, metalinguagem, pessimismo. • Naturalismo (Aluísio Azevedo — 'O Cortiço'): análise BIOLÓGICA/SOCIAL, determinismo (meio + raça + momento), zoomorfização (humanos agindo como animais coletivos), patologias sociais. • Parnasianismo (Olavo Bilac): 'Arte pela Arte', culto à forma perfeita, soneto, rima rica, objetividade descritiva. • Simbolismo (Cruz e Sousa, Alphonsus de Guimaraens): misticismo, sinestesia, musicalidade, subconsciente, cor branca, transcendentalismo.",
+    "tags": [
+      "portugues",
+      "literatura",
+      "modulo-11",
+      "enem"
+    ]
+  },
+  {
+    "front": "O que foi o Pré-Modernismo (1902–1922) e quem são os 4 grandes autores?",
+    "back": "Período de transição que desmascara o Brasil real (favelas, sertão, subúrbio) rompendo com o Brasil idealizado: 1) Euclides da Cunha ('Os Sertões' — A Terra, O Homem, A Luta; Guerra de Canudos). 2) Lima Barreto ('Triste Fim de Policarpo Quaresma' — crítica ao nacionalismo ufanista/cego e à burocracia; linguagem acessível). 3) Monteiro Lobato ('Urupês' — criação do Jeca Tatu e denúncia do abandono do caboclo). 4) Augusto dos Anjos ('Eu' — poesia cientificista, vocabulário médico/cadavérico e angústia cósmica).",
+    "tags": [
+      "portugues",
+      "literatura",
+      "modulo-11",
+      "enem"
+    ]
+  },
+  {
+    "front": "Quais são as 5 Vanguardas Europeias (Macete F-E-C-S-D) que influenciaram o Modernismo?",
+    "back": "• **F**uturismo (Marinetti): velocidade, máquina, tecnologia, destruição do passado/museus. • **E**xpressionismo (Munch): deformação da realidade para expressar dor, angústia e subjetividade dramática. • **C**ubismo (Picasso / Apollinaire): geometrização, fragmentação, múltiplos ângulos simultâneos, colagem. • **D**adaísmo (Tristan Tzara): 'antiarte', nonsense, acaso, ironia radical contra a lógica burguesa da 1ª Guerra (Marcel Duchamp — 'A Fonte'). • **S**urrealismo (Dalí / Breton): inconsciente, sonhos, psicanálise de Freud, escrita automática sem controle da razão.",
+    "tags": [
+      "portugues",
+      "literatura",
+      "vanguardas",
+      "modulo-11",
+      "enem"
+    ]
+  },
+  {
+    "front": "Quais são as 3 Gerações do Modernismo Brasileiro (1922, 1930 e 1945)?",
+    "back": "• 1ª Geração (1922–1930 — Heroica/Destrutiva): ruptura com o academicismo, verso livre, língua falada no Brasil, humor/paródia, Antropofagia ('deglutir o estrangeiro e criar o nacional'). Autores: Mário de Andrade ('Macunaíma'), Oswald de Andrade, Manuel Bandeira. • 2ª Geração (1930–1945 — Consolidação): Poesia reflexiva/filosófica/social (Carlos Drummond de Andrade, Cecília Meireles, Vinicius de Moraes) + Prosa Regionalista e Neorrealista de denúncia da seca/latifúndio (Graciliano Ramos — 'Vidas Secas', Jorge Amado, Rachel de Queiroz, José Lins do Rego). • 3ª Geração (Pós-1945): experimentação da linguagem e intimismo — Clarice Lispector (epifania/fluxo de consciência), Guimarães Rosa ('Grande Sertão: Veredas' — neologismos sertanejos/metafísicos) e João Cabral de Melo Neto ('Morte e Vida Severina' — poesia construtivista/seca).",
+    "tags": [
+      "portugues",
+      "literatura",
+      "modernismo",
+      "modulo-11",
+      "enem"
+    ]
+  },
+  {
+    "front": "Quais são as 5 Competências da Redação do ENEM e o Macete GOMIF da Proposta de Intervenção?",
+    "back": "• C1: Norma-padrão da língua. • C2: Compreender o tema + texto dissertativo-argumentativo + Repertório Sociocultural legitimado, pertinente e produtivo. • C3: Projeto de texto, seleção e defesa coerente de argumentos. • C4: Coesão (operadores argumentativos interparágrafos [no início de pelo menos 2 parágrafos] e intraparágrafos). • C5: Proposta de Intervenção com Direitos Humanos e 5 elementos obrigatórios (**Macete GOMIF**): 1. **G**ente (Agente: quem faz?), 2. **O** quê (Ação: o que fará?), 3. **M**eio/Modo (Por meio de quê?), 4. **I**ntuito/Efeito (Para quê / qual finalidade?), 5. **F**ofoca (Detalhamento explicativo de um dos 4 elementos anteriores).",
+    "tags": [
+      "portugues",
+      "redacao",
+      "modulo-12",
+      "enem"
+    ]
+  },
+  {
+    "front": "O que são Ordem de Grandeza e Algarismos Significativos na Física?",
+    "back": "Notação científica: N · 10^n (com 1 ≤ N < 10). Para achar a Ordem de Grandeza (OG), compare N com √10 ≈ 3,16: se N < 3,16 → OG = 10^n; se N ≥ 3,16 → OG = 10^(n+1). Algarismos significativos: todos os dígitos corretos + o 1º duvidoso (zeros à esquerda NUNCA contam!). 💡 MACETE: 'Passou de 3,16 (π), sobe o expoente! Zero à esquerda é zero à esquerda mesmo: não vale nada!'",
+    "tags": [
+      "fisica",
+      "fundamentos",
+      "modulo-01",
+      "enem"
+    ]
+  },
+  {
+    "front": "Qual a diferença entre Velocidade Média Comum e Velocidade Média quando o percurso é dividido em duas metades iguais de distância?",
+    "back": "• Fórmula geral: Vm = ΔS / Δt. • PEGADINHA CLÁSSICA: Se o móvel faz metade da DISTÂNCIA com velocidade V1 e a outra metade com V2, a velocidade média NÃO é (V1+V2)/2, mas sim a Média Harmônica: **Vm = (2 · V1 · V2) / (V1 + V2)**. 💡 MACETE: 'Metade do caminho com V1 e V2? Dois Vezes V1·V2 dividido pela soma! (Ex: foi a 60 km/h e voltou a 40 km/h → Vm = 2·60·40/100 = 48 km/h, nunca 50!)'.",
+    "tags": [
+      "fisica",
+      "cinematica",
+      "modulo-01",
+      "enem"
+    ]
+  },
+  {
+    "front": "Como converter rapidamente m/s para km/h (e vice-versa) sem confundir se multiplica ou divide por 3,6?",
+    "back": "• De m/s → km/h: **MULTIPLICA por 3,6**. • De km/h → m/s: **DIVIDE por 3,6**. 💡 MACETE: Olhe para o tamanho da unidade: 'km' é MAIOR que 'm', então para ir para km/h o número tem que CRESCER (× 3,6). Decorar a trinca mágica do ENEM: **10 m/s = 36 km/h | 20 m/s = 72 km/h | 30 m/s = 108 km/h**.",
+    "tags": [
+      "fisica",
+      "cinematica",
+      "modulo-01",
+      "enem"
+    ]
+  },
+  {
+    "front": "Quais são todas as equações do MU e do MUV e os macetes mnemônicos de cada uma?",
+    "back": "1) **MU** (v = constante, a = 0): **S = S₀ + v·t** → *Macete: 'Sorvete'*. 2) **MUV — Velocidade**: **V = V₀ + a·t** → *Macete: 'Vovó Atômica' ou 'Vi Vovó Atrás do Toco'*. 3) **MUV — Posição**: **S = S₀ + V₀·t + (a·t²)/2** → *Macete: 'Sorvetão'*. 4) **Equação de Torricelli** (quando o problema NÃO dá o tempo t!): **V² = V₀² + 2·a·ΔS** → *Macete: 'Vovô e Vovó mais Duas Amigas num Triângulo Sexual'*. 5) **Velocidade Média no MUV**: Vm = (V + V₀)/2.",
+    "tags": [
+      "fisica",
+      "cinematica",
+      "muv",
+      "modulo-01",
+      "enem"
+    ]
+  },
+  {
+    "front": "Quais são as propriedades gráficas fundamentais da Cinemática (Gráficos S×t, V×t e a×t)?",
+    "back": "1) No gráfico **S × t**: a inclinação (tangente) dá a **Velocidade**; parábola com concavidade para cima = a > 0 (carinha feliz 😊); concavidade para baixo = a < 0 (carinha triste ☹️). 2) No gráfico **V × t**: a **ÁREA** sob a curva é numericamente igual ao **Deslocamento (ΔS)**, e a inclinação dá a **Aceleração (a)**. 3) No gráfico **a × t**: a **ÁREA** dá a variação da velocidade (**ΔV**). 💡 MACETE: 'Área do V×t = ΔS; Área do a×t = ΔV!'",
+    "tags": [
+      "fisica",
+      "cinematica",
+      "graficos",
+      "modulo-01",
+      "enem"
+    ]
+  },
+  {
+    "front": "Como funciona a Queda Livre e a Regra de Galileu (proporção 1 : 3 : 5 : 7)?",
+    "back": "No vácuo, TODOS os corpos caem com a mesma aceleração (g ≈ 10 m/s²), independentemente da massa (uma pena e um martelo chegam juntos!). Partindo do repouso (V₀ = 0), em intervalos iguais de tempo (1 s em 1 s), as distâncias percorridas em cada segundo seguem os números ímpares: **d, 3d, 5d, 7d...** (com g=10 m/s²: no 1º s cai 5 m; no 2º s cai 15 m; no 3º s cai 25 m). 💡 MACETE: 'Caiu do repouso? 5m, 15m, 25m, 35m em cada segundo!'",
+    "tags": [
+      "fisica",
+      "cinematica",
+      "queda-livre",
+      "modulo-01",
+      "enem"
+    ]
+  },
+  {
+    "front": "Como resolver Lançamento Oblíquo e Decomposição Vetorial sem decorar seno vs. cosseno?",
+    "back": "O lançamento oblíquo é a soma de dois movimentos independentes: • Eixo X (Horizontal): **MU** (Vx = V₀ · cosθ = constante). • Eixo Y (Vertical): **MUV** com gravidade g (V₀y = V₀ · senθ; no ponto mais alto Vy = 0, mas Vx NÃO é zero!). 💡 MACETE DO ÂNGULO: '**CO**m o ângulo = **CO**sseno; **SE**m o ângulo = **SE**no!' E para alcance máximo no plano horizontal: o ângulo de tiro deve ser **45°** (ângulos complementares como 30° e 60° têm o MESMO alcance!).",
+    "tags": [
+      "fisica",
+      "cinematica",
+      "vetores",
+      "modulo-02",
+      "enem"
+    ]
+  },
+  {
+    "front": "Quais são as fórmulas do Movimento Circular Uniforme (MCU) e como funcionam Polias e Engrenagens acopladas?",
+    "back": "• Período (T) e Frequência (f): **f = 1/T**. • Velocidade Linear: **v = 2·π·R·f = ω·R**. • Velocidade Angular: **ω = 2·π·f**. • Aceleração Centrípeta: **acp = v²/R = ω²·R** (aponta para o centro e muda a DIREÇÃO da velocidade!). • **Transmissão por Correia/Contato** (ex: coroa e catraca da bicicleta): têm a MESMA velocidade linear (**vA = vB** → **fA·RA = fB·RB**, ou seja, a roda MENOR gira MAIS rápido!). • **Mesmo Eixo**: têm a MESMA frequência/velocidade angular (**fA = fB** e **ωA = ωB**).",
+    "tags": [
+      "fisica",
+      "cinematica",
+      "mcu",
+      "modulo-02",
+      "enem"
+    ]
+  },
+  {
+    "front": "Quais são as 3 Leis de Newton e a pegadinha clássica de Ação e Reação?",
+    "back": "1ª Lei (**Inércia**): todo corpo tende a manter seu estado (repouso ou MRU) se Fr = 0 (explica por que somos jogados para frente na freada — necessidade do cinto!). 2ª Lei (**Princípio Fundamental**): **Fr = m · a**. 3ª Lei (**Ação e Reação**): toda força de ação gera uma reação de mesmo módulo, mesma direção e sentido oposto. 💡 PEGADINHA ENEM: Ação e Reação **NUNCA se anulam** porque atuam em **CORPOS DIFERENTES**! E a força Peso (Terra atrai o bloco) NÃO é par ação-reação da Normal (o par do Peso está no centro da Terra!).",
+    "tags": [
+      "fisica",
+      "dinamica",
+      "leis-de-newton",
+      "modulo-03",
+      "enem"
+    ]
+  },
+  {
+    "front": "Como decompor o Peso no Plano Inclinado e calcular a Força de Atrito (Estático vs. Dinâmico)?",
+    "back": "• No Plano Inclinado de ângulo θ: **Px = P · senθ** (puxa o bloco rampa abaixo) e **Py = P · cosθ** (comprime o bloco contra a rampa, logo N = Py). 💡 MACETE: '**SEN**o = desce **SEN**tado (Px); **COS**seno = fica **CO**lado na rampa (Py)!' • Força de Atrito: **Fat = μ · N**. O atrito estático máximo (μe · N) é MAIOR que o atrito dinâmico (μd · N). Por isso o freio **ABS** impede a roda de travar: mantém o atrito estático, parando o carro em menor distância!",
+    "tags": [
+      "fisica",
+      "dinamica",
+      "atrito",
+      "modulo-03",
+      "enem"
+    ]
+  },
+  {
+    "front": "O que é Força Centrípeta em curvas, lombadas e depressões?",
+    "back": "A Força Centrípeta NÃO é uma força nova — é a **Resultante** das forças que apontam para o centro da curva (**Fcp = m·v²/R**). • No topo da lombada: **P - N = m·v²/R** (N diminui, sensação de ficar mais leve). • Na depressão (fundo do vale): **N - P = m·v²/R** (N aumenta, sensação de peso maior). • Na curva plana: quem faz o papel de Fcp é a **Força de Atrito** (**Fat = m·v²/R** → velocidade máxima sem derrapar: **v = √(μ·g·R)**, não depende da massa do carro!).",
+    "tags": [
+      "fisica",
+      "dinamica",
+      "modulo-03",
+      "enem"
+    ]
+  },
+  {
+    "front": "Como funcionam Torque (Momento de uma Força), Alavancas e Equilíbrio de Corpo Extenso?",
+    "back": "• **Torque (M = F · d · senθ)**: grandeza que produz rotação. Quanto maior o braço de alavanca (**d**), MENOR a força necessária (explica cabo longo de chave de roda e maçaneta longe da dobradiça). • Condições de Equilíbrio Estático: **1) Soma das Forças = 0** (não translada) e **2) Soma dos Torques = 0** (não gira). • Tipos de Alavanca (**Macete F-R-P no meio**): **Interfixa** (Ponto Fixo no meio: gangorra, tesoura), **Inter-resistente** (Resistência no meio: carrinho de mão, quebra-nozes), **Interpotente** (Força Potente no meio: pinça, vara de pesca, antebraço).",
+    "tags": [
+      "fisica",
+      "estatica",
+      "modulo-04",
+      "enem"
+    ]
+  },
+  {
+    "front": "Hidrostática Completa: Pressão, Teorema de Stevin, Princípio de Pascal e Empuxo de Arquimedes?",
+    "back": "1) **Pressão**: **P = F / A** (faca afiada corta mais porque diminui a área A, aumentando a pressão!). 2) **Stevin** (pressão no fundo de um líquido): **P = Patm + d · g · h** → pontos na mesma horizontal dentro do mesmo líquido têm a MESMA pressão! 3) **Pascal** (prensa hidráulica / freio a disco): **F₁ / A₁ = F₂ / A₂** (multiplica força, mas conserva energia/trabalho!). 4) **Arquimedes (Empuxo)**: **E = d_líquido · V_submerso · g**. Se o corpo flutua em equilíbrio: **Empuxo = Peso do corpo** (**d_corpo / d_líquido = fração do volume submerso**, ex: gelo com 90% submerso na água!).",
+    "tags": [
+      "fisica",
+      "hidrostatica",
+      "modulo-04",
+      "enem"
+    ]
+  },
+  {
+    "front": "Quais são as 3 Leis de Kepler e a Lei da Gravitação Universal de Newton?",
+    "back": "• **1ª Lei (Órbitas)**: planetas descrevem elipses com o Sol em um dos focos. • **2ª Lei (Áreas)**: a linha Sol-planeta varre áreas iguais em tempos iguais → **no Periélio (perto do Sol) o planeta é MAIS RÁPIDO; no Afélio (longe do Sol) é MAIS LENTO!** • **3ª Lei (Períodos)**: **T² / R³ = constante** (quanto mais distante a órbita, maior o ano do planeta). • **Gravitação Universal**: **F = G · M · m / d²** (se dobrar a distância d, a força cai por 4!). • Velocidade orbital de satélite: **v = √(G·M/R)** (independe da massa do satélite!).",
+    "tags": [
+      "fisica",
+      "gravitacao",
+      "modulo-05",
+      "enem"
+    ]
+  },
+  {
+    "front": "Trabalho, Potência, Rendimento e Energia Mecânica (Cinética, Potencial Gravitacional e Elástica)?",
+    "back": "• **Trabalho**: **τ = F · d · cosθ** (Força perpendicular ao deslocamento, como a Normal ou Centrípeta, realiza trabalho ZERO!). • **Potência**: **P = τ / Δt = F · v**. • **Energia Cinética**: **Ec = (m · v²)/2** (se dobrar a velocidade v, a energia cinética — e a distância de frenagem — **QUADRUPLICA**!). • **Potencial Gravitacional**: **Epg = m · g · h**. • **Potencial Elástica**: **Epe = (k · x²)/2**. • **Teorema da Energia Cinética**: **τ_resultante = ΔEc**. • Em sistemas conservativos (sem atrito): **Em_inicial = Em_final** (montanha-russa: altura vira velocidade!).",
+    "tags": [
+      "fisica",
+      "energia",
+      "modulo-06",
+      "enem"
+    ]
+  },
+  {
+    "front": "Impulso, Quantidade de Movimento e por que Airbags / Parachoques deformáveis salvam vidas?",
+    "back": "• **Impulso**: **I = F · Δt** (área do gráfico F × t). • **Quantidade de Movimento (Momento Linear)**: **Q = m · v**. • **Teorema do Impulso**: **F · Δt = ΔQ = m · Δv**. 💡 EXPLICAÇÃO ENEM (Airbag, capacete, dobrar o joelho ao pular): A variação de quantidade de movimento (ΔQ) para parar a pessoa é a mesma; o airbag **AUMENTA o tempo de colisão (Δt)**, o que **DIMINUI drasticamente a Força média (F)** sobre o corpo! • **Conservação de Q**: em colisões e explosões (sistema isolado), **Q_antes = Q_depois**.",
+    "tags": [
+      "fisica",
+      "dinamica-impulsiva",
+      "modulo-06",
+      "enem"
+    ]
+  },
+  {
+    "front": "Escalas Termométricas (°C, °F, K) e Dilatação Térmica (Linear, Superficial, Volumétrica e Anomalia da Água)?",
+    "back": "• Conversão de Escalas: **C / 5 = (F - 32) / 9 = (K - 273) / 5**. Para VARIAÇÃO de temperatura (ΔT): **ΔC / 5 = ΔF / 9 = ΔK / 5** (logo ΔC = ΔK!). • **Dilatação**: Linear **ΔL = L₀ · α · ΔT**; Superficial **ΔA = A₀ · β · ΔT** (com **β = 2α**); Volumétrica **ΔV = V₀ · γ · ΔT** (com **γ = 3α**). • **Lâmina Bimetálica** (disjuntor/ferro elétrico): ao aquecer, curva-se para o lado do metal de MENOR α. • **Comportamento Anômalo da Água (0 °C a 4 °C)**: ao aquecer de 0 °C a 4 °C, a água **CONTRAI** (densidade máxima a **4 °C**), permitindo que lagos congelem só no topo e a vida aquática sobreviva no fundo!",
+    "tags": [
+      "fisica",
+      "termologia",
+      "modulo-07",
+      "enem"
+    ]
+  },
+  {
+    "front": "Qual a diferença entre Calor Sensível (Q = m·c·ΔT) e Calor Latente (Q = m·L), e o que é Capacidade Térmica?",
+    "back": "• **Calor Sensível (Macete: 'Qui MaCeTe')**: **Q = m · c · ΔT** → muda a **TEMPERATURA** sem mudar o estado físico. • **Calor Latente (Macete: 'Qui MoLeza')**: **Q = m · L** → muda o **ESTADO FÍSICO** (fusão, vaporização) mantendo a **temperatura CONSTANTE** (patamar reto no gráfico!). • **Capacidade Térmica**: **C = m · c = Q / ΔT**. 💡 APLICAÇÃO ENEM: A água tem altíssimo calor específico (c = 1 cal/g°C), por isso o mar demora a esquentar de dia e demora a esfriar à noite (gerando as brisas marítima e terrestre e regulando o clima litorâneo!).",
+    "tags": [
+      "fisica",
+      "calorimetria",
+      "modulo-07",
+      "enem"
+    ]
+  },
+  {
+    "front": "Quais são os 3 processos de Propagação de Calor (Condução, Convecção e Irradiação) e como funciona a Garrafa Térmica?",
+    "back": "1) **Condução**: passa de partícula a partícula sem transporte de matéria (metais têm alta condutividade; ar, lã, isopor e madeira são isolantes térmicos — o casaco não esquenta, ele impede seu calor de sair!). 2) **Convecção**: movimento de massas de fluido por diferença de densidade (**ar quente sobe, ar frio desce** → ar-condicionado fica no ALTO; aquecedor fica emBAIXO!). 3) **Irradiação**: ondas eletromagnéticas (infravermelho), a ÚNICA que ocorre no **VÁCUO** (calor do Sol e efeito estufa). • **Garrafa Térmica**: vácuo evita condução/convecção; paredes espelhadas evitam irradiação; tampa evita convecção.",
+    "tags": [
+      "fisica",
+      "termologia",
+      "modulo-07",
+      "enem"
+    ]
+  },
+  {
+    "front": "Gases Ideais (Clapeyron e Lei Geral) e as Leis da Termodinâmica (Isotérmica, Isobárica, Isocórica e Adiabática)?",
+    "back": "• **Clapeyron**: **P · V = n · R · T** (*Macete: 'Por Você Nunca Chorei Tanto'*). • **Lei Geral**: **(P₁ · V₁)/T₁ = (P₂ · V₂)/T₂** (*Macete: 'Piviti Povotó'* — temperatura SEMPRE em Kelvin!). • **1ª Lei da Termodinâmica**: **ΔU = Q - τ** (conservação de energia). • Transformações: 1. **Isotérmica (T = cte)**: **ΔU = 0** → Q = τ; 2. **Isovolumétrica/Isocórica (V = cte)**: **τ = 0** → ΔU = Q (panela de pressão rígida!); 3. **Isobárica (P = cte)**: **τ = P · ΔV**; 4. **Adiabática (Q = 0, rápida ou isolada)**: **ΔU = -τ** (spray desodorante esfria ao expandir rápido!). • **2ª Lei / Máquinas Térmicas**: **η = τ / Q_quente = 1 - Q_fria / Q_quente** (jamais 100% de rendimento!).",
+    "tags": [
+      "fisica",
+      "termodinamica",
+      "modulo-07",
+      "enem"
+    ]
+  },
+  {
+    "front": "Óptica Geométrica I: Princípios da Luz, Cores dos Objetos, Espelhos Planos e Esféricos (Côncavo vs. Convexo)?",
+    "back": "• **Cor de um corpo**: um objeto AZUL iluminado por luz VERMELHA monocromática fica **PRETO** (absorve o vermelho e não tem azul para refletir). Branco reflete todas; preto absorve todas. • **Espelho Plano**: imagem virtual, direita, do mesmo tamanho e simétrica. • **Espelho Convexo** (retrovisor de carro e espelho de mercado/portaria): fornece **APENAS um tipo de imagem: Virtual, Direita e MENOR**, ampliando o **CAMPO VISUAL**! • **Espelho Côncavo** (espelho de maquiagem/dentista): quando o objeto está entre o Foco e o Vértice, gera imagem **Virtual, Direita e MAIOR**! • Equação de Gauss: **1/f = 1/p + 1/p'** (*Macete: 'Fimose = Pimba na Pimbinha'*).",
+    "tags": [
+      "fisica",
+      "optica",
+      "modulo-08",
+      "enem"
+    ]
+  },
+  {
+    "front": "Óptica Geométrica II: Refração (Lei de Snell), Reflexão Total (Fibra Óptica), Lentes e Defeitos da Visão?",
+    "back": "• **Lei de Snell**: **n₁ · senθ₁ = n₂ · senθ₂** (com **n = c / v**). Na refração, a **FREQUÊNCIA (e a cor) NUNCA muda**; mudam a velocidade (v) e o comprimento de onda (λ)! *Macete: 'Entrou no meio mais refringente (maior n, mais denso), o raio freia e fecha perto da Normal!'* • **Reflexão Total (Fibra Óptica e Miragem)**: exige 1) ir do meio MAIS para o MENOS refringente e 2) ângulo de incidência > ângulo limite (**sen L = n_menor / n_maior**). • **Visão**: **Miopia** (olho longo, imagem ANTES da retina → corrige com lente **DIVERGENTE** / negativa); **Hipermetropia** (olho curto, imagem DEPOIS da retina → corrige com lente **CONVERGENTE** / positiva). *Macete: 'Míope Não Vê Longe → Divergente; Hipermétrope → Convergente!'*",
+    "tags": [
+      "fisica",
+      "optica",
+      "modulo-08",
+      "enem"
+    ]
+  },
+  {
+    "front": "Ondulatória I: Equação Fundamental da Onda, Ondas Mecânicas vs. Eletromagnéticas e Longitudinal vs. Transversal?",
+    "back": "• **Equação Fundamental**: **v = λ · f** (*Macete: 'Vem Lamber Ferida' ou 'Vai Embora Logo Fera'*). • **ATENÇÃO ENEM**: A velocidade (**v**) de uma onda depende **EXCLUSIVAMENTE DO MEIO**; a frequência (**f**) depende **EXCLUSIVAMENTE DA FONTE** (não muda ao refratar!). • **Mecânicas** (precisam de meio material, NÃO viajam no vácuo): **SOM**, ondas em cordas, ondas do mar, ultrassom. • **Eletromagnéticas** (viajam no vácuo a c = 3·10⁸ m/s): Rádio, Micro-ondas, Infravermelho, Luz Visível, UV, Raios X, Raios Gama. • **Som no ar** é onda **Mecânica, Longitudinal e Tridimensional** (por isso o som NÃO pode ser polarizado!).",
+    "tags": [
+      "fisica",
+      "ondulatoria",
+      "modulo-09",
+      "enem"
+    ]
+  },
+  {
+    "front": "Ondulatória II: Como diferenciar Difração, Interferência, Ressonância, Polarização e Efeito Doppler?",
+    "back": "• **Difração**: capacidade da onda de **CONTORNAR obstáculos** ou espalhar-se ao passar por fendas (melhor quando λ ≈ tamanho da fenda — explica por que ouvimos alguém atrás do muro mas não vemos!). • **Interferência**: superposição de ondas (Construtiva = mesma fase, soma amplitudes; Destrutiva = fases opostas, anula — princípio dos **fones com cancelamento ativo de ruído**!). • **Ressonância**: transferência máxima de energia quando a frequência da fonte iguala a frequência natural do sistema (taça quebrando no grito, micro-ondas aquecendo moléculas de água, sintonizar rádio). • **Polarização**: filtra planos de vibração (SÓ ocorre em ondas **TRANSVERSAIS**, como a luz — óculos Polaroid e cinema 3D). • **Efeito Doppler**: som fica mais **AGUDO (maior f)** na aproximação da ambulância e mais **GRAVE (menor f)** no afastamento!",
+    "tags": [
+      "fisica",
+      "ondulatoria",
+      "fenomenos-ondulatorios",
+      "modulo-09",
+      "enem"
+    ]
+  },
+  {
+    "front": "Acústica: Qual a diferença entre Altura, Intensidade e Timbre do Som?",
+    "back": "1) **Altura** → ligada à **FREQUÊNCIA (f)**: som Alto = **AGUDO** (alta frequência); som Baixo = **GRAVE** (baixa frequência). *Pegadinha: 'Abaixar o volume da TV' na Física é diminuir a INTENSIDADE, não a altura!* 2) **Intensidade (Volume)** → ligada à **AMPLITUDE (A)** e energia da onda: som Forte vs. som Fraco (medido em decibéis, dB). 3) **Timbre** → ligado ao **FORMATO DA ONDA** (harmônicos): permite distinguir um violino de um piano tocando a MESMA nota (mesma altura) com o MESMO volume (mesma intensidade)!",
+    "tags": [
+      "fisica",
+      "acustica",
+      "modulo-09",
+      "enem"
+    ]
+  },
+  {
+    "front": "Eletrostática: Processos de Eletrização (Atrito, Contato, Indução), Lei de Coulomb, Campo, Potencial e Gaiola de Faraday?",
+    "back": "• **Carga Elementar**: **Q = n · e** (e = 1,6 · 10⁻¹⁹ C). • **Atrito**: corpos de materiais diferentes ficam com cargas de **SINAIS OPOSTOS** e mesmo módulo. • **Contato**: terminam com cargas de **MESMO SINAL** (esferas idênticas dividem a soma por 2). • **Indução**: aproxima o indutor sem tocar, aterra o induzido e afasta → termina com carga de **SINAL OPOSTO**. • **Lei de Coulomb**: **F = k · |Q₁·Q₂| / d²**. • **Campo Elétrico**: **E = F / q** (sai da carga + e entra na -). • **Gaiola de Faraday (Blindagem Eletrostática)**: o campo elétrico no interior de um condutor em equilíbrio é **ZERO** (por isso dentro do carro ou avião é o lugar mais seguro durante uma tempestade de raios!).",
+    "tags": [
+      "fisica",
+      "eletrostatica",
+      "modulo-10",
+      "enem"
+    ]
+  },
+  {
+    "front": "Eletrodinâmica I: Corrente, 1ª e 2ª Leis de Ohm, Potência Elétrica e Energia (Conta de Luz em kWh)?",
+    "back": "• **Corrente Elétrica**: **i = ΔQ / Δt** (*Macete: 'Quitute'*). • **1ª Lei de Ohm**: **U = R · i** (*Macete: 'Quem Vê RI'*). • **2ª Lei de Ohm** (resistência do fio/chuveiro): **R = ρ · L / A** (*Macete: 'RoLA'* — no inverno, a chave do chuveiro ENCURTA o comprimento L do resistor → diminui R → aumenta a corrente i e a potência P = U²/R, esquentando mais a água!). • **Potência Elétrica (todas as fórmulas)**: **P = i · U** (*'PIU'*), **P = R · i²** (*'PRI²'* — Efeito Joule/aquecimento em fios) e **P = U² / R** (*'PURI'* — use quando a tensão U da tomada é constante!). • **Conta de Luz (Energia)**: **E = P (em kW) · Δt (em horas)**.",
+    "tags": [
+      "fisica",
+      "eletrodinamica",
+      "modulo-11",
+      "enem"
+    ]
+  },
+  {
+    "front": "Eletrodinâmica II: Associação de Resistores (Série vs. Paralelo), Curto-Circuito, Fusível/Disjuntor, Amperímetro e Voltímetro?",
+    "back": "• **Série**: mesmo caminho → **mesma corrente (i)**, a tensão se divide (**U = U₁ + U₂**) e **Req = R₁ + R₂ + ...** (se uma lâmpada queima, TODAS apagam!). • **Paralelo** (instalação residencial!): mesma ddp (**mesmo U**), a corrente se divide e **1/Req = 1/R₁ + 1/R₂** (para 2 resistores: **Req = Produto / Soma**; para N iguais: **Req = R / N**). Se uma lâmpada queima, as outras continuam funcionando normal com o mesmo brilho! • **Disjuntor/Fusível**: ligado em **SÉRIE** com o circuito para cortar a corrente em sobrecarga. • **Amperímetro**: ligado em **SÉRIE** (resistência interna ideal = **0**). • **Voltímetro**: ligado em **PARALELO** (resistência interna ideal = **∞**).",
+    "tags": [
+      "fisica",
+      "eletrodinamica",
+      "circuitos",
+      "modulo-11",
+      "enem"
+    ]
+  },
+  {
+    "front": "Eletromagnetismo: Campo Magnético de Ímãs/Correntes, Força Magnética e Indução Eletromagnética (Lei de Faraday-Lenz)?",
+    "back": "• **Inseparabilidade dos Polos**: se quebrar um ímã ao meio, surgem **2 novos ímãs completos** (Norte e Sul nunca existem isolados!). A bússola aponta para o Norte Geográfico porque lá fica o **Sul Magnético** da Terra. • **Força Magnética**: **Fm = q · v · B · senθ** (carga perpendicular a B descreve **MCU** com **R = m·v / q·B**, pois Fm é centrípeta e NÃO realiza trabalho!) e no fio: **Fm = B · i · L · senθ** (*Macete: 'F = B·i·L'*). • **Indução de Faraday-Lenz** (usinas hidrelétricas, dínamo de bicicleta, carregador por indução, cartão aproximação): **VARIAÇÃO de fluxo magnético (ΔΦ/Δt) gera corrente elétrica induzida!** Se o ímã ficar PARADO dentro da bobina, a corrente é ZERO!",
+    "tags": [
+      "fisica",
+      "eletromagnetismo",
+      "modulo-12",
+      "enem"
+    ]
+  },
+  {
+    "front": "Física Moderna: Efeito Fotoelétrico de Einstein, Quantização de Planck, Dualidade Onda-Partícula e Radioatividade?",
+    "back": "• **Planck**: a energia do fóton depende APENAS da **frequência (f)**: **E = h · f**. • **Efeito Fotoelétrico (Einstein — placas solares e sensores de porta automática)**: a luz arranca elétrons de uma placa metálica se a **frequência da luz for maior que a frequência mínima (f > f₀)**. Aumentar a INTENSIDADE (brilho) de uma luz de baixa frequência NÃO arranca elétrons; aumentar a intensidade acima de f₀ arranca MAIS elétrons, mas só aumentar a **FREQUÊNCIA** aumenta a energia cinética de cada elétron! • **Radioatividade**: **Alfa (₂⁴α)** = pesada, baixo poder de penetração (papel barra); **Beta (₋₁⁰β)** = elétron rápido (folha de alumínio barra); **Gama (₀⁰γ)** = onda eletromagnética de altíssima frequência e penetração (exige chumbo/concreto espesso).",
+    "tags": [
+      "fisica",
+      "fisica-moderna",
+      "modulo-13",
+      "enem"
+    ]
+  },
+  {
+    "front": "Como diferenciar Substância Pura, Mistura Comum, Mistura Eutética e Mistura Azeotrópica nos gráficos de mudança de estado?",
+    "back": "• Substância Pura: Temperatura de Fusão (TF) e de Ebulição (TE) são CONSTANTES (2 patamares retos). • Mistura Comum: TF e TE variam (nenhum patamar reto). • Mistura Eutética (ex: solda estanho + chumbo): comporta-se como pura na FUSÃO (TF constante, TE varia). • Mistura Azeotrópica (ex: álcool 96% + água 4%): comporta-se como pura na EBULIÇÃO (TE constante, TF varia). 💡 MACETE: 'A-Z-E-otrópica = do A ao Z ferve junto → Ebulição constante! Eutética → Fusão constante!'",
+    "tags": [
+      "quimica",
+      "materia-e-misturas",
+      "modulo-01",
+      "enem"
+    ]
+  },
+  {
+    "front": "O que são Alotropia e as formas alotrópicas do Carbono, Oxigênio, Enxofre e Fósforo?",
+    "back": "Alotropia: mesmo elemento químico formando substâncias simples diferentes (mudando a quantidade de átomos ou o arranjo cristalino). 1) Carbono: Grafite (conduz corrente elétrica, sp²), Diamante (duro, isolante, sp³), Fulereno e Grafeno. 2) Oxigênio: O₂ (gás vital) e O₃ (Ozônio — filtra raios UV na estratosfera). 3) Fósforo: Branco (P₄, tóxico, inflamável) e Vermelho (Pₙ, mais estável, lixa da caixa de fósforos). 4) Enxofre: Rômbico (mais estável) e Monoclínico. 💡 MACETE: 'C, O, P, S → Café O Povo Saboreia (os 4 que fazem alotropia)!'",
+    "tags": [
+      "quimica",
+      "alotropia",
+      "modulo-01",
+      "enem"
+    ]
+  },
+  {
+    "front": "Como separar Misturas Heterogêneas (Filtração, Decantação, Centrifugação, Flotação, Levigação e Dissolução Fracionada)?",
+    "back": "• Filtração: sólido + líquido/gás (coador de café, filtro de ar/aspirador). • Decantação: líquidos imiscíveis (água + óleo no funil de bromo) ou sólido que sedimenta no fundo. • Centrifugação: decantação acelerada pela força centrífuga (separar plasma das hemácias). • Flotação: bolhas de ar ou líquido de densidade intermediária sem dissolver (serragem + areia). • Levigação: corrente de água arrasta o menos denso (areia) e deixa o mais denso (ouro no garimpo). • Dissolução Fracionada: adiciona líquido que dissolve apenas um dos sólidos (água dissolve o sal e deixa a areia).",
+    "tags": [
+      "quimica",
+      "separacao-de-misturas",
+      "modulo-01",
+      "enem"
+    ]
+  },
+  {
+    "front": "Como separar Misturas Homogêneas (Destilação Simples, Destilação Fracionada, Extração por Solvente e Cromatografia)?",
+    "back": "• Destilação Simples: sólido dissolvido em líquido (água + sal → dessalinização). • Destilação Fracionada: líquidos miscíveis com diferentes Pontos de Ebulição (**refino do petróleo** nas torres de fracionamento e separação do ar liquefeito N₂/O₂!). Quanto MENOR a cadeia de carbonos do hidrocarboneto, MENOR o PE e mais no TOPO da torre ele sai (Gás GLP no topo → Gasolina → Querosene → Diesel → Asfalto/Piche na base!). • Extração por Solvente: colocar água na gasolina para extrair o etanol anidro (o etanol faz ligação de H com a água e passa para a fase aquosa).",
+    "tags": [
+      "quimica",
+      "separacao-de-misturas",
+      "petroleo",
+      "modulo-01",
+      "enem"
+    ]
+  },
+  {
+    "front": "Como funciona o Tratamento de Água (ETA) passo a passo e o papel do Sulfato de Alumínio, Cal e Carvão Ativado?",
+    "back": "1) Coagulação/Floculação: adiciona-se Sulfato de Alumínio Al₂(SO₄)₃ + Cal Ca(OH)₂ → reagem formando flocos gelatinosos de Hidróxido de Alumínio Al(OH)₃ que agarram a sujeira em suspensão. 2) Decantação: flocos pesados afundam. 3) Filtração: areia, cascalho e **Carvão Ativado** (retira compostos orgânicos de mau cheiro/gosto e agrotóxicos por **ADSORÇÃO** superficial!). 4) Desinfecção/Cloração (hipoclorito mata bactérias/vírus). 5) Fluoretação (combate cárie).",
+    "tags": [
+      "quimica",
+      "tratamento-de-agua",
+      "modulo-01",
+      "enem"
+    ]
+  },
+  {
+    "front": "Quais são os 4 Modelos Atômicos (Macete B-P-M-E) e o experimento de cada um?",
+    "back": "1) Dalton (Bola de bilhar): esfera maciça, indivisível; explica as Leis Ponderais (Lavoisier/Proust). 2) Thomson (Pudim de passas): ampola de raios catódicos → descobriu o ELÉTRON (carga negativa); átomo divisível. 3) Rutherford (Sistema Planetário): bombardeou folha de ouro com partículas alfa (α) → a maioria atravessou direto (átomo tem imenso VAZIO) e poucas ricochetearam (NÚCLEO pequeno, denso e positivo). 4) Bohr (Camadas Quantizadas K..Q): elétron salta para camada externa ao absorver energia e, ao retornar, **emite fóton de luz** → explica **fogos de artifício, teste de chama e bioluminescência**!",
+    "tags": [
+      "quimica",
+      "atomistica",
+      "modulo-02",
+      "enem"
+    ]
+  },
+  {
+    "front": "Como diferenciar Isótopos, Isóbaros, Isótonos e Espécies Isoeletrônicas?",
+    "back": "Notação: ᶻXᴬ (Z = prótons/número atômico; A = massa = Z + N). • Isóto**P**os: mesmo nº de **P**rótons (Z) → mesmo elemento químico (ex: ¹H, ²H deutério, ³H trítio; ¹²C e ¹⁴C). • Isó**A**ros: mesma Massa (**A**). • Isóto**N**os: mesmo nº de **N**êutrons (N = A - Z). • Isoeletrônicos: mesmo nº de elétrons (ex: Na⁺, Mg²⁺, F⁻ e Ne têm todos 10 elétrons!). 💡 MACETE: 'A letra do meio entrega tudo: P = Prótons, A = Massa A, N = Nêutrons!'",
+    "tags": [
+      "quimica",
+      "atomistica",
+      "modulo-02",
+      "enem"
+    ]
+  },
+  {
+    "front": "Qual a pegadinha da Distribuição Eletrônica de Linus Pauling para Íons de Metais de Transição (ex: Fe²⁺ e Fe³⁺)?",
+    "back": "Ao retirar elétrons para formar um cátion (íon positivo), NUNCA retire do subnível mais energético (d) primeiro — retire SEMPRE da **CAMADA DE VALÊNCIA (maior número da frente, ex: 4s antes do 3d)**! Exemplo: Ferro (Z=26) termina em 4s² 3d⁶. Para formar Fe²⁺, saem os 2 elétrons do **4s²** (ficando 3d⁶)! Para formar Fe³⁺, saem os dois do 4s² e um do 3d⁶ (ficando 3d⁵).",
+    "tags": [
+      "quimica",
+      "atomistica",
+      "modulo-02",
+      "enem"
+    ]
+  },
+  {
+    "front": "Como variam o Raio Atômico, a Eletronegatividade e a Energia de Ionização na Tabela Periódica?",
+    "back": "• **Raio Atômico**: cresce **para BAIXO** (mais camadas) e **para a ESQUERDA** (menor carga nuclear puxando os elétrons). *Macete: 'O Raio cresce rumo ao Frâncio (canto inferior esquerdo)!'* • **Eletronegatividade, Energia de Ionização e Afinidade Eletrônica**: crescem ao contrário do raio → **para CIMA e para a DIREITA** (rumo ao Flúor, excluindo os gases nobres na eletronegatividade). • **Fila da Eletronegatividade**: **F O N Cl Br I S C P H** (*'Fui Ontem No Clube, Briguei E Saí Correndo Para o Hospital'*).",
+    "tags": [
+      "quimica",
+      "tabela-periodica",
+      "modulo-03",
+      "enem"
+    ]
+  },
+  {
+    "front": "Quais são as propriedades práticas dos compostos Iônicos, Covalentes (Moleculares) e Metálicos no ENEM?",
+    "back": "• **Iônicos** (Metal + Ametal/H, ex: NaCl, CaCO₃): sólidos cristalinos quebradiços em temperatura ambiente, altos PF e PE; **NÃO conduzem eletricidade no estado sólido**, mas **CONDUZEM quando fundidos (líquidos) ou dissolvidos em água** (íons livres!). • **Moleculares/Covalentes** (Ametal + Ametal/H, ex: H₂O, CO₂, açúcar): baixos PF/PE, não conduzem eletricidade puros (exceto ácidos ionizados em água e grafite). • **Metálicos** (Metal + Metal): 'mar de elétrons livres' → alta condutividade térmica e elétrica **no estado SÓLIDO** e maleabilidade/ductilidade.",
+    "tags": [
+      "quimica",
+      "ligacoes-quimicas",
+      "modulo-04",
+      "enem"
+    ]
+  },
+  {
+    "front": "Como descobrir a Geometria Molecular e a Polaridade de qualquer molécula em 5 segundos?",
+    "back": "Olhe para o Átomo Central: • **2 átomos no total** (HCl, O₂): sempre **Linear**. • **3 átomos**: SEM par de e⁻ livre no central (**CO₂**, CS₂) = **Linear e APOLAR**; COM par livre no central (**H₂O, SO₂, O₃**) = **Angular e POLAR**! • **4 átomos**: SEM par livre (BF₃, SO₃) = **Trigonal Plana e APOLAR**; COM par livre (**NH₃**, PH₃) = **Piramidal e POLAR**! • **5 átomos** (CH₄, CCl₄): **Tetraédrica** (se os 4 ligantes forem iguais, é **APOLAR**). 💡 MACETE: 'Sobrou par de elétrons no átomo central (ou ligantes diferentes)? Entorta a molécula e ela vira POLAR! Hidrocarbonetos (só C e H, como gasolina/óleo/metano) são SEMPRE APOLARES!'",
+    "tags": [
+      "quimica",
+      "geometria-e-polaridade",
+      "modulo-04",
+      "enem"
+    ]
+  },
+  {
+    "front": "Forças Intermoleculares: como relacionar Ligação de Hidrogênio, Dipolo Permanente e London com Ponto de Ebulição, Volatilidade e Solubilidade?",
+    "back": "Ordem de força: **Dipolo Induzido/London (apolares: hidrocarbonetos, O₂) < Dipolo Permanente (polares sem H-FON) < Ligação de Hidrogênio (H ligado a F, O ou N: água, álcoois, ácidos carboxílicos, aminas, amidas, DNA)**. • **Ponto de Ebulição (PE)**: quanto MAIS FORTE a força intermolecular e MAIOR a massa/superfície da cadeia (cadeia normal > cadeia ramificada!), **MAIOR o Ponto de Ebulição**! • **Volatilidade e Pressão de Vapor**: é o INVERSO do PE! Quem tem ligação mais fraca (ex: éter ou acetona vs. água) evapora mais rápido (maior pressão de vapor e maior volatilidade).",
+    "tags": [
+      "quimica",
+      "interacoes-intermoleculares",
+      "modulo-04",
+      "enem"
+    ]
+  },
+  {
+    "front": "Como funcionam Sabões, Detergentes, Micelas e Emulsificantes ('Semelhante dissolve Semelhante')?",
+    "back": "Água é **POLAR**; óleo, gordura e petróleo são **APOLARES**. Para limpar gordura com água, usa-se uma substância **ANFIFÍLICA (ou Anbipática / Tensoativa / Surfactante)** como o **sabão ou detergente**: • Possui uma **longa cadeia carbônica APOLAR (cauda hidrofóbica / lipofílica)** que mergulha na gota de gordura; • E uma **extremidade iônica/polar (cabeça hidrofílica)** que se liga à água por íon-dipolo. Isso forma estruturas esféricas chamadas **MICELAS**, diminuindo a tensão superficial da água e emulsificando a sujeira!",
+    "tags": [
+      "quimica",
+      "tensoativos-e-sabao",
+      "modulo-04",
+      "enem"
+    ]
+  },
+  {
+    "front": "Como classificar a força de Ácidos e Bases e prever o pH de Sais (Hidrólise Salina / Correção de Solo)?",
+    "back": "• **Ácidos Fortes**: Hidrácidos **HCl, HBr, HI**; Oxiácidos com **(nº de O - nº de H) ≥ 2** (ex: **H₂SO₄, HNO₃, HClO₄**). *Atenção: H₂CO₃ (ácido carbônico do refrigerante/chuva), HCN e ácidos orgânicos (-COOH) são FRACOS!* • **Bases Fortes**: Família **1A (LiOH, NaOH, KOH)** e **2A (Ca(OH)₂, Sr(OH)₂, Ba(OH)₂**, exceto Be e Mg). • **Hidrólise Salina ('O Sal puxa o pai mais forte!')**: 1) Base Forte + Ácido Fraco (**NaHCO₃ bicarbonato, Na₂CO₃ barrilha, CaCO₃ calcário, NaClO água sanitária**) → **Sal BÁSICO (pH > 7, usado para neutralizar acidez do solo e azia!)**; 2) Ácido Forte + Base Fraca (**NH₄Cl, Al₂(SO₄)₃, FeCl₃**) → **Sal ÁCIDO (pH < 7)**.",
+    "tags": [
+      "quimica",
+      "funcoes-inorganicas",
+      "hidrolise-salina",
+      "modulo-05",
+      "enem"
+    ]
+  },
+  {
+    "front": "Quais são os Óxidos Ambientais cobrados no ENEM (Efeito Estufa vs. Chuva Ácida vs. Calagem)?",
+    "back": "• **Óxidos Básicos (Metais 1A e 2A)**: **CaO (cal virgem)** reage com água formando Ca(OH)₂ (cal hidratada) e neutraliza solos ácidos (**Calagem**). • **Óxidos Ácidos (Ametais)**: reagem com a água da chuva formando ácidos! 1) **CO₂** (queima de combustíveis) → forma H₂CO₃ (ácido fraco, chuva naturalmente tem pH ~ 5,6; principal gás do **Efeito Estufa** junto com o metano CH₄!); 2) **SO₂ e SO₃** (queima de carvão mineral e diesel com enxofre) → formam **H₂SO₄ (ácido sulfúrico)**; 3) **NO e NO₂ (NOₓ)** (relâmpagos e motores de carros) → formam **HNO₃ (ácido nítrico)**. **SO₂/SO₃ e NOₓ são os grandes vilões da Chuva Ácida (pH < 5)!**",
+    "tags": [
+      "quimica",
+      "oxidos-e-meio-ambiente",
+      "modulo-05",
+      "enem"
+    ]
+  },
+  {
+    "front": "Como calcular o NOX (Número de Oxidação) e identificar quem Oxida (Agente Redutor) e quem Reduz (Agente Oxidante)?",
+    "back": "• **Regras de NOX Fixo**: Substância simples (O₂, Fe, Cl₂) = **0**; Metais 1A (+1), 2A (+2), Al (+3), Ag (+1), Zn (+2); Hidrogênio = **+1** (ou -1 em hidretos metálicos); Oxigênio = **-2** (ou -1 em peróxidos como H₂O₂). A soma dos NOX num composto neutro é **0**. • **Oxidação**: **PERDE elétrons** e o **NOX AUMENTA** → quem sofre oxidação é o **Agente Redutor**! • **Redução**: **GANHA elétrons** e o **NOX REDUZ/DIMINUI** → quem sofre redução é o **Agente Oxidante**! 💡 MACETE: 'Quem **O**xida **P**erde elétrons (OP); quem **R**eduz **G**anha (RG)!'",
+    "tags": [
+      "quimica",
+      "oxirreducao",
+      "modulo-06",
+      "enem"
+    ]
+  },
+  {
+    "front": "Qual o roteiro de 4 passos para acertar qualquer questão de Estequiometria (com Pureza, Rendimento e Excesso)?",
+    "back": "1) **Balanceie a equação** (regra MACHO: Metal, Ametal, Carbono, H, O). 2) **Monte a 1ª linha (Padrão Teórico)** usando os coeficientes da reação convertidos para o que a questão pede: **Massa → Massa Molar (g)** | **Mols → próprio coeficiente** | **Volume gasoso → 22,4 L (CNTP) ou 24,5 L (CATP)** | **Moléculas → 6·10²³**. 3) **Aplique a Pureza ANTES**: multiplique a massa da amostra impura pela % de pureza. 4) **Aplique o Rendimento DEPOIS**: multiplique o resultado final pela % de rendimento. *Se der a quantidade de DOIS reagentes: divida cada um pelo seu valor da 1ª linha — o MENOR resultado é o Reagente Limitante (use ele na conta!).*",
+    "tags": [
+      "quimica",
+      "estequiometria",
+      "modulo-07",
+      "enem"
+    ]
+  },
+  {
+    "front": "Soluções: Concentração Comum, Molaridade, ppm, Diluição e Titulação Ácido-Base?",
+    "back": "• **Concentração Comum**: **C = m / V** (g/L). • **Molaridade**: **M = n / V = m / (MM · V)** (mol/L). Atalho: **C = M · MM**. • **1 ppm (parte por milhão)**: **1 mg de soluto em 1 kg (ou 1 Litro) de solução aquosa**! • **Diluição (acrescentar água)**: a massa de soluto não muda → **C₁ · V₁ = C₂ · V₂** e **M₁ · V₁ = M₂ · V₂**. • **Titulação (Neutralização total)**: o nº de mols de H⁺ do ácido iguala o nº de mols de OH⁻ da base → **x · M_ácido · V_ácido = y · M_base · V_base** (onde x é o nº de H⁺ e y é o nº de OH⁻).",
+    "tags": [
+      "quimica",
+      "solucoes",
+      "modulo-08",
+      "enem"
+    ]
+  },
+  {
+    "front": "Propriedades Coligativas (Macete T-E-C-O): por que jogamos sal no gelo e salgamos o bacalhau?",
+    "back": "Ao adicionar um soluto não-volátil (sal, açúcar, etilenoglicol) a um solvente, quanto MAIOR o número de partículas dissolvidas (**Molaridade × fator i de Van't Hoff** — cuidado: NaCl libera 2 íons, CaCl₂ libera 3 íons!), mais intensos são os 4 efeitos (**T-E-C-O**): 1) **T**onoscopia: **diminui** a pressão máxima de vapor; 2) **E**bulioscopia: **aumenta** a temperatura de ebulição (água com sal ferve acima de 100 °C); 3) **C**rioscopia: **diminui** a temperatura de congelamento (jogar sal derrete o gelo nas estradas e a mistura água + sal + gelo no isopor gela a lata de cerveja abaixo de 0 °C!); 4) **O**smoscopia: puxa água por osmose (salgar a carne desidrata bactérias).",
+    "tags": [
+      "quimica",
+      "propriedades-coligativas",
+      "modulo-08",
+      "enem"
+    ]
+  },
+  {
+    "front": "Termoquímica: Como diferenciar Endotérmico de Exotérmico e calcular ΔH por Formação, Ligação e Lei de Hess?",
+    "back": "• **Exotérmico (ΔH < 0, negativo)**: libera calor, esquenta o ambiente (toda combustão/queima, condensação do vapor, solidificação da água). No gráfico: patamar dos Produtos está ABAIXO dos Reagentes. • **Endotérmico (ΔH > 0, positivo)**: absorve calor, resfria o ambiente (fusão do gelo, **evaporação do suor na pele ou do álcool na mão**, fotossíntese). • **3 Fórmulas de ΔH**: 1) **Entalpia de Formação**: **ΔH = H_produtos - H_reagentes** (substância simples padrão = 0); 2) **Energia de Ligação (cuidado!)**: **Quebrar (Reagentes) é SEMPRE + (Endo)** e **Formar (Produtos) é SEMPRE - (Exo)** → **ΔH = Σ Lig_quebradas(+) + Σ Lig_formadas(-)**; 3) **Lei de Hess**: some as etapas como um sistema algébrico.",
+    "tags": [
+      "quimica",
+      "termoquimica",
+      "modulo-09",
+      "enem"
+    ]
+  },
+  {
+    "front": "Cinética Química: Quais são os 4 fatores que aceleram uma reação e o que exatamente o Catalisador faz?",
+    "back": "Para ocorrer reação, as moléculas precisam de **Colisão Efetiva** (geometria favorável + energia ≥ Energia de Ativação Ea). Os 4 fatores que aumentam a velocidade são: 1) **Temperatura** (aumenta a energia cinética e a frequência de choques); 2) **Superfície de Contato** (comprimido triturado/pó reage muito mais rápido que inteiro!); 3) **Concentração / Pressão dos reagentes** (mais partículas por volume = mais colisões); 4) **Catalisador** (enzimas, conversor catalítico do escapamento): cria um novo mecanismo com **MENOR Energia de Ativação (abaixa o morro do gráfico!)**, acelerando tanto a reação direta quanto a inversa, **SEM alterar o ΔH e SEM deslocar o equilíbrio químico**!",
+    "tags": [
+      "quimica",
+      "cinetica-quimica",
+      "modulo-10",
+      "enem"
+    ]
+  },
+  {
+    "front": "Equilíbrio Químico (Constante Kc/Kp, Princípio de Le Chatelier, Escala de pH e Tampão Sanguíneo)?",
+    "back": "• **Expressão de Kc**: **Kc = [Produtos]^coef / [Reagentes]^coef** — **SÓ entram GASES (g) e AQUOSOS (aq)! Sólidos (s) e Líquidos puros (l) como H₂O(l) NUNCA entram na conta!** • **Le Chatelier**: 1) Adicionou algo → foge para o lado oposto; Retirou algo → vai para o mesmo lado repor; 2) Aumentou a Pressão → vai para o lado com **MENOR nº de mols gasosos**; 3) Aumentou a Temperatura → vai para o lado **ENDOTÉRMICO** (e vice-versa). • **Sangue Humano (Tampão H₂CO₃ / HCO₃⁻, pH ≈ 7,4)**: **Hiperventilação** (respirar muito rápido) joga fora muito CO₂ → desloca o equilíbrio para a esquerda, consumindo H⁺ e causando **Alcalose (pH sobe)**; prender a respiração acumula CO₂ → aumenta H⁺ e causa **Acidose (pH cai)**!",
+    "tags": [
+      "quimica",
+      "equilibrio-quimico",
+      "modulo-11",
+      "enem"
+    ]
+  },
+  {
+    "front": "Eletroquímica I: Pilhas de Daniell (Macetes CRAO e PI-CA+), cálculo da ddp (ΔE⁰) e Proteção Catódica (Metal de Sacrifício)?",
+    "back": "• **Macete CRAO**: **C**átodo sofre **R**edução (Consoante-Consoante); **Â**nodo sofre **O**xidação (Vogal-Vogal). • **Na Pilha (ΔE⁰ > 0)**: compare os potenciais de redução ($E^0_{\\text{red}}$): 1) O **MAIOR $E^0_{\\text{red}}$** vai para o **Cátodo (+)**, ganha elétrons e **aumenta a massa da barra**; 2) O **MENOR $E^0_{\\text{red}}$** vai para o **Ânodo (-)**, perde elétrons e **corrói/desgasta a barra**; 3) **ΔE⁰ = E⁰_maior - E⁰_menor** (NUNCA multiplique o E⁰ pelos coeficientes!). • **Metal de Sacrifício (Galvanização/Casco de navio)**: para proteger o Ferro/Aço da ferrugem, prende-se um bloco de **Zinco ou Magnésio** (que têm **menor $E^0_{\\text{red}}$** que o ferro) — ele funciona como ânodo e enferruja no lugar do ferro!",
+    "tags": [
+      "quimica",
+      "eletroquimica",
+      "pilhas",
+      "modulo-12",
+      "enem"
+    ]
+  },
+  {
+    "front": "Eletroquímica II: Eletrólise Ígnea vs. Aquosa e Cálculo Estequiométrico de Faraday (Q = i · t)?",
+    "back": "• **Eletrólise**: processo **NÃO-espontâneo** forçado por um gerador elétrico (aqui os polos se invertem em relação à pilha: o **Ânodo é +** e o **Cátodo é -**, mas **CRAO continua valendo sempre**!). • **Eletrólise Aquosa (prioridade de descarga)**: 1) No Cátodo (-), ganha do H⁺ da água quem NÃO for metal alcalino (1A), alcalino-terroso (2A) ou Alumínio (ex: em solução de NaCl aquoso, o Na⁺ não descarrega — quem reduz é o H⁺ da água liberando **gás H₂**, restando **NaOH soda cáustica** na cuba e liberando **gás Cl₂** no ânodo!). • **Lei de Faraday**: **Q = i (Ampère) · t (segundos)**, sendo que **1 mol de elétrons = 1 Faraday = 96.500 Coulombs**.",
+    "tags": [
+      "quimica",
+      "eletroquimica",
+      "eletrolise",
+      "modulo-12",
+      "enem"
+    ]
+  },
+  {
+    "front": "Química Orgânica I: Hibridização do Carbono (sp³, sp², sp), Ligações Sigma (σ) e Pi (π) e Classificação das Cadeias?",
+    "back": "• **Hibridização**: 4 ligações simples = **sp³** (tetraédrico, 109°28'); 1 ligação dupla = **sp²** (trigonal plano, 120°); 1 tripla ou 2 duplas = **sp** (linear, 180°). • **Ligações Sigma (σ) e Pi (π)**: toda ligação simples é **1 σ**; toda dupla tem **1 σ + 1 π**; toda tripla tem **1 σ + 2 π**. (Um anel benzênico tem **3 ligações π conjugadas em ressonância**!). • **Cadeia Homogênea vs. Heterogênea**: só é **Heterogênea** se houver um **Heteroátomo (O, N, S) ENTRE DOIS CARBONOS** (ex: C-O-C éter, C-NH-C amina secundária). Se o O ou N estiver na ponta (-OH, -CHO, -COOH, -NH₂), a cadeia continua **Homogênea**!",
+    "tags": [
+      "quimica",
+      "quimica-organica",
+      "cadeias-carbonicas",
+      "modulo-13",
+      "enem"
+    ]
+  },
+  {
+    "front": "Química Orgânica II: Como identificar sem errar as 10 Funções Orgânicas (Álcool, Fenol, Enol, Aldeído, Cetona, Ácido, Éster, Éter, Amina, Amida)?",
+    "back": "• Grupo **-OH (Hidroxila)**: em carbono saturado (sp³) = **Álcool**; ligado direto ao anel aromático (benzeno) = **Fenol**; ligado a carbono de dupla (C=C) = **Enol**. • Carbonila **(C=O)**: na ponta da cadeia (-CHO) = **Aldeído**; no meio entre carbonos = **Cetona**. • Carboxila **(-COOH na ponta)**: **Ácido Carboxílico**. • **-COO-C** (carboxila trocando o H por carbono): **Éster** (flavorizantes/aromas de frutas, óleos, gorduras e biodiesel!). • **C-O-C** (oxigênio sozinho entre carbonos): **Éter**. • Com Nitrogênio: **Amina** (C ligado a -NH₂, -NH- ou -N<, **sem C=O** — tem caráter **BÁSICO**!) vs. **Amida** (**N ligado diretamente a C=O**, ex: -CONH₂ — forma a ligação peptídica das proteínas!).",
+    "tags": [
+      "quimica",
+      "funcoes-organicas",
+      "modulo-13",
+      "enem"
+    ]
+  },
+  {
+    "front": "Química Orgânica III: Isomeria Plana, Isomeria Geométrica (Cis-Trans / E-Z) e Isomeria Óptica (Carbono Quiral)?",
+    "back": "• **Isomeria Plana** (mesma fórmula molecular, diferente fórmula estrutural plana): Função (ex: álcool e éter; aldeído e cetona; ácido e éster), Cadeia (aberta vs. fechada; normal vs. ramificada), Posição (muda número da dupla ou do grupo funcional), Metameria/Compensação (muda posição do heteroátomo entre carbonos) e Tautomeria (enol ⇄ aldeído/cetona). • **Isomeria Geométrica (Cis-Trans)**: exige **dupla C=C** (ou ciclo) com **ligantes diferentes em cada carbono da dupla** ($R_1 \\neq R_2$ e $R_3 \\neq R_4$). **Cis** = grupos iguais do MESMO lado do plano (mais polar, maior PE!); **Trans** = lados OPOSTOS (mais simétrico, maior PF!). • **Isomeria Óptica**: exige **Carbono Quiral/Assimétrico ($C^*$ com 4 grupos diferentes ligados a ele)** → desvia a luz polarizada (dextrogiro $d$ e levogiro $l$; mistura 50%/50% = mistura racêmica inativa).",
+    "tags": [
+      "quimica",
+      "isomeria",
+      "modulo-14",
+      "enem"
+    ]
+  },
+  {
+    "front": "Química Orgânica IV: Reações de Esterificação, Hidrólise, Saponificação, Transesterificação (Biodiesel) e Polímeros?",
+    "back": "• **Esterificação de Fischer**: **Ácido Carboxílico + Álcool ⇄ Éster + Água** (a reação inversa é a **Hidrólise Ácida**). • **Saponificação (Fabricação de Sabão)**: **Éster (Triglicerídeo: óleo vegetal ou sebo animal) + Base Forte (NaOH ou KOH) → Sal Orgânico de Ácido Graxo (SABÃO) + Glicerol (Glicerina)**. • **Transesterificação (Produção do BIODIESEL — cai todo ano!)**: **Triglicerídeo (óleo/gordura) + Álcool de cadeia curta (Etanol da cana ou Metanol) → Ésteres Metílicos/Etílicos (BIODIESEL) + Glicerina**. • **Polímeros**: **De Adição** (quebra a dupla C=C do monômero sem perder átomos: Polietileno PE, PVC, Polipropileno PP, Poliestireno/Isopor, Teflon) vs. **De Condensação** (une dois monômeros liberando molécula pequena como H₂O: **Poliéster PET**, **Poliamida Nylon e Kevlar**, Baquelite, Silicone).",
+    "tags": [
+      "quimica",
+      "reacoes-organicas",
+      "biodiesel",
+      "polimeros",
+      "modulo-14",
+      "enem"
+    ]
+  },
+  {
+    "front": "Propriedades da Água e Sais Minerais (Ferro, Cálcio, Iodo, Sódio/Potássio e Magnésio) na Biologia?",
+    "back": "• **Água**: alto calor específico (estabilidade térmica e resfriamento pelo suor), alta tensão superficial e coesão/adesão por pontes de hidrogênio (subida da seiva bruta por capilaridade/transpiração). • **Sais Minerais**: **Ferro (Fe²⁺)** = centro da Hemoglobina e Mioglobina (falta = **Anemia Ferropriva**); **Cálcio (Ca²⁺)** = ossos, dentes, coagulação sanguínea e **contração muscular (actina/miosina)**; **Iodo (I⁻)** = hormônios T3 e T4 da Tireoide (falta = **Bócio Endêmico**); **Magnésio (Mg²⁺)** = centro da molécula de **Clorofila**; **Sódio (Na⁺) e Potássio (K⁺)** = condução do impulso nervoso.",
+    "tags": [
+      "biologia",
+      "bioquimica",
+      "modulo-01",
+      "enem"
+    ]
+  },
+  {
+    "front": "Carboidratos e Lipídios: Como diferenciar Amido, Glicogênio, Celulose, Quitina, Triglicerídeos, Fosfolipídios e Colesterol?",
+    "back": "• **Polissacarídeos de Reserva Energética**: **Amido** (plantas e algas) vs. **Glicogênio** (animais — fígado e músculos — e **FUNGOS**!). • **Polissacarídeos Estruturais**: **Celulose** (parede celular vegetal — fibra insolúvel que estimula o peristaltismo intestinal) vs. **Quitina** (polissacarídeo nitrogenado do **exoesqueleto de Artrópodes** e da **parede celular de Fungos**!). • **Lipídios**: **Triglicerídeos** (reserva energética e isolante térmico); **Fosfolipídios** (anfifílicos: cabeça polar + cauda apolar → bicamada da membrana); **Colesterol** (exclusivo de animais: dá fluidez à membrana e é precursor da **Testosterona, Estrogênio, Progesterona, Cortisol, Sais Biliares e Vitamina D**!).",
+    "tags": [
+      "biologia",
+      "bioquimica",
+      "modulo-01",
+      "enem"
+    ]
+  },
+  {
+    "front": "Proteínas, Enzimas (Gráficos de Temperatura e pH) e Vitaminas (Macete KEDA)?",
+    "back": "• **Enzimas**: proteínas catalisadoras que aceleram reações diminuindo a Energia de Ativação (encaixe específico **Chave-Fechadura**). Acima da temperatura ótima (~40 °C em humanos) ou fora do pH ótimo (Pepsina pH 2; Ptialina pH 7; Tripsina pH 8), a enzima sofre **DESNATURAÇÃO** (perde a forma espacial 3D e perde a função!). • **Vitaminas Lipossolúveis (Macete KEDA)**: **K** (coagulação / anti-hemorrágica), **E** (antioxidante), **D** (absorção de cálcio / falta = **Raquitismo**), **A** (retinol / falta = **Cegueira Noturna**). • **Hidrossolúveis**: **C** (colágeno / falta = **Escorbuto**) e **Complexo B** (B1 = Beribéri; B9 ácido fólico = tubo neural do feto; B12 = Anemia Perniciosa).",
+    "tags": [
+      "biologia",
+      "bioquimica",
+      "enzimas-e-vitaminas",
+      "modulo-01",
+      "enem"
+    ]
+  },
+  {
+    "front": "Ácidos Nucleicos: Diferenças entre DNA e RNA, Regra de Chargaff (A=T, C≡G) e Dogma Central (Transcrição e Tradução)?",
+    "back": "• **DNA**: açúcar Desoxirribose, fita dupla helicoidal, bases **A = T** (2 pontes de H) e **C ≡ G** (3 pontes de H — quanto maior o % de C+G, maior a temperatura para desnaturar o DNA!). *Macete: 'Agnaldo Timóteo (A=T) e Chico Galo (C≡G)'*. • **RNA**: açúcar Ribose, fita simples, base **Uracila (U)** no lugar da Timina (**A = U**). • **Duplicação do DNA**: **Semiconservativa** (enzima DNA Polimerase; cada fita nova conserva 1 fita antiga). • **Transcrição**: DNA serve de molde para fabricar **RNAm** (no núcleo). • **Tradução (Síntese Proteica)**: **Ribossomo** lê cada **CÓDON** (trinca do RNAm) e o **RNAt** traz o **ANTICÓDON** com o aminoácido correspondente.",
+    "tags": [
+      "biologia",
+      "biologia-molecular",
+      "dna-rna",
+      "modulo-01",
+      "enem"
+    ]
+  },
+  {
+    "front": "Por que o Código Genético é Universal e Degenerado (Redundante), e o que é Splicing Alternativo?",
+    "back": "• **Código Genético Universal**: as mesmas trincas (códons) significam os mesmos aminoácidos em todos os seres vivos — é isso que permite que uma **bactéria transgênica leia o gene humano e produza insulina humana idêntica**! • **Código Genético Degenerado (Redundante)**: existem 64 códons para apenas 20 aminoácidos; logo, **códons diferentes podem codificar o MESMO aminoácido**! Consequência: uma **Mutação Silenciosa** troca uma base do DNA (ex: GAA → GAG), mas continua colocando o mesmo aminoácido e a proteína **NÃO muda**! • **Splicing Alternativo**: remoção de íntrons e combinação diferente de **éxons**, permitindo que **1 único gene produza várias proteínas diferentes**!",
+    "tags": [
+      "biologia",
+      "biologia-molecular",
+      "modulo-01",
+      "enem"
+    ]
+  },
+  {
+    "front": "Citologia I: Célula Procarionte vs. Eucarionte e Célula Animal vs. Vegetal?",
+    "back": "• **Procarionte (Bactérias e Cianobactérias)**: NÃO tem carioteca (DNA circular solto no nucleoide) e NÃO tem organelas membranosas (sem mitocôndria, sem cloroplasto, sem retículo, sem Golgi, sem lisossomo). Possui apenas **Membrana Plasmática, Citoplasma, Ribossomos 70S, Plasmídeos** e **Parede Celular de Peptidoglicano**. • **Eucarionte Vegetal vs. Animal**: a célula vegetal tem **Parede Celular de Celulose**, **Cloroplastos**, **Plasmodesmos** e **Grande Vacúolo de Suco Celular** (reserva de água/controle osmótico); a célula animal tem **Centríolos** e **Lisossomos** típicos.",
+    "tags": [
+      "biologia",
+      "citologia",
+      "modulo-02",
+      "enem"
+    ]
+  },
+  {
+    "front": "Citologia II: Transporte através da Membrana (Difusão Simples, Difusão Facilitada, Osmose e Bomba de Na⁺/K⁺)?",
+    "back": "• **Transporte Passivo (SEM gasto de ATP, a favor do gradiente)**: 1) **Difusão Simples**: passagem direta de gases ($O_2, CO_2$) e lipossolúveis do meio mais para o menos concentrado; 2) **Difusão Facilitada**: passagem de glicose/aminoácidos/íons com ajuda de proteínas **Permeases** (ex: a insulina abre canais GLUT para entrada de glicose!); 3) **Osmose**: passagem exclusiva de **ÁGUA (solvente)** do meio **HIPOTÔNICO (menos concentrado)** para o **HIPERTÔNICO (mais concentrado)**. • **Transporte Ativo (COM gasto de ATP, contra o gradiente)**: **Bomba de Sódio e Potássio** — expulsa **3 Na⁺** para fora e coloca **2 K⁺** para dentro da célula!",
+    "tags": [
+      "biologia",
+      "citologia",
+      "transporte-celular",
+      "modulo-02",
+      "enem"
+    ]
+  },
+  {
+    "front": "Citologia III: Funções de RER, REL, Complexo de Golgi, Lisossomos, Peroxissomos, Mitocôndrias e Cloroplastos?",
+    "back": "• **RER (Rugoso)**: síntese de proteínas de exportação (pâncreas, plasmócitos). • **REL (Liso)**: síntese de lipídios/hormônios esteroides e **DESINTOXICAÇÃO de álcool e medicamentos no fígado**! • **Complexo de Golgi**: secreção celular, glicosilação, lamela média vegetal e formação do **ACROSSOMO do espermatozoide**. • **Lisossomos**: digestão intracelular ácida (fagocitose, autofagia e **autólise na regressão da cauda do girino e na doença Silicose dos mineiros**!). • **Peroxissomos**: enzima **Catalase** decompõe água oxigenada ($2 H_2O_2 \\to 2 H_2O + O_2$). • **Mitocôndrias e Cloroplastos**: **Teoria Endossimbiótica** (DNA próprio circular, ribossomos próprios e autoduplicação; herança mitocondrial é **100% materna**!).",
+    "tags": [
+      "biologia",
+      "citologia",
+      "organelas",
+      "modulo-02",
+      "enem"
+    ]
+  },
+  {
+    "front": "Bioenergética I: Fermentação Alcoólica vs. Fermentação Lática vs. Respiração Aeróbica?",
+    "back": "• **Fermentação** (ocorre toda no **citosol**, sem $O_2$, gera só **2 ATP**): 1) **Alcoólica** (leveduras *Saccharomyces*): Glicose → 2 Etanol + **2 CO₂** (o gás $CO_2$ faz a massa do pão crescer e gaseifica bebidas; o etanol evapora no forno!); 2) **Lática** (bactérias *Lactobacillus* e músculos humanos em fadiga): Glicose → 2 Ácido Lático (**NÃO libera $CO_2$**; coagula o leite formando iogurte e queijos!). • **Respiração Aeróbica (~30 a 38 ATP)**: 1) **Glicólise** (citosol) → 2) **Ciclo de Krebs** (matriz mitocondrial, libera $CO_2$) → 3) **Cadeia Respiratória / Fosforilação Oxidativa** (cristas mitocondriais — onde o **$O_2$ é consumido** como aceptor final de elétrons formando $H_2O$!).",
+    "tags": [
+      "biologia",
+      "bioenergetica",
+      "respiracao",
+      "modulo-03",
+      "enem"
+    ]
+  },
+  {
+    "front": "Bioenergética II: Fotossíntese (Fase Clara nos Tilacoides vs. Fase Escura no Estroma) e Quimiossíntese?",
+    "back": "• **Fase Clara (Fotoquímica — nos Tilacoides)**: absorção de luz pela Clorofila (absorve muito o **Azul e o Vermelho** e reflete o **Verde**!) → ocorre a **Fotólise da Água ($H_2O$)** liberando **gás Oxigênio ($O_2$)**, prótons $H^+$, elétrons, ATP e NADPH. *Atenção ENEM: 100% do $O_2$ liberado na fotossíntese vem da ÁGUA ($H_2O$), nunca do $CO_2$!* • **Fase Escura (Ciclo de Calvin — no Estroma)**: usa o ATP e o NADPH para **fixar o $CO_2$** atmosférico e produzir **Glicose ($C_6H_{12}O_6$)**.",
+    "tags": [
+      "biologia",
+      "bioenergetica",
+      "fotossintese",
+      "modulo-03",
+      "enem"
+    ]
+  },
+  {
+    "front": "Divisão Celular: Mitose vs. Meiose, Crossing-Over, Cariótipo e Não-Disjunção Cromossômica (Aneuploidias)?",
+    "back": "• **Mitose ($2n \\to 2n$ — Equacional)**: mantém o nº de cromossomos; gera 2 clones idênticos (crescimento, regeneração, reprodução assexuada e produção de gametas nas PLANTAS!). • **Meiose ($2n \\to n$ — Reducional)**: reduz o nº de cromossomos à metade; gera 4 células haploides (gametas nos animais e esporos nas plantas). • **Prófase I da Meiose**: ocorre o **Crossing-over (Permutação)** entre cromossomos homólogos (principal fonte de recombinação gênica!). • **Metáfase**: cromossomos no grau máximo de espiralização no equador (fase ideal para **Cariótipo**). • **Não-Disjunção na Meiose**: falha na separação gera **Aneuploidias** como **Síndrome de Down (Trissomia do 21: 47, XX ou XY +21)**, **Klinefelter (47, XXY)** e **Turner (Monossomia 45, X0)**.",
+    "tags": [
+      "biologia",
+      "divisao-celular",
+      "modulo-04",
+      "enem"
+    ]
+  },
+  {
+    "front": "Fisiologia Humana I: Sistema Digestório (Enzimas, pH de cada órgão e Função da Bile)?",
+    "back": "1) **Boca (pH ≈ 7, neutro)**: **Ptialina (Amilase salivar)** quebra **Amido** em maltose. 2) **Estômago (pH ≈ 2, ácido pelo HCl)**: **Pepsina** quebra **Proteínas**. 3) **Duodeno / Intestino Delgado (pH ≈ 8, básico pelo Bicarbonato pancreático)**: Suco Pancreático (**Tripsina** p/ proteínas, **Lipase** p/ lipídios, **Amilase pancreática** p/ amido) + Suco Entérico (**Maltase, Sacarase, Lactase** — intolerância à lactose é a falta da enzima lactase!). • **BILE (produzida no Fígado e guardada na Vesícula Biliar)**: **NÃO TEM ENZIMAS**! Contém sais biliares anfifílicos que **emulsificam lipídios (como um detergente)** para a lipase atuar mais rápido!",
+    "tags": [
+      "biologia",
+      "fisiologia-humana",
+      "digestorio",
+      "modulo-05",
+      "enem"
+    ]
+  },
+  {
+    "front": "Fisiologia Humana II: Sistemas Respiratório (Controle pelo Bulbo e Transporte de CO₂) e Circulatório?",
+    "back": "• **Transporte de Gases**: O $O_2$ vai quase todo ligado ao ferro da **Hemoglobina (Oxiemoglobina)**; já o **$CO_2$ (70%) é transportado dissolvido no plasma na forma de íon BICARBONATO ($HCO_3^-$)** ($CO_2 + H_2O \\rightleftharpoons H_2CO_3 \\rightleftharpoons H^+ + HCO_3^-$). • **Controle pelo Bulbo**: quando fazemos exercício, sobe o $CO_2$ no sangue → aumenta a concentração de $H^+$ (**cai o pH do sangue = acidose**) → o **Bulbo** detecta a queda de pH e acelera a respiração! • **Coração Humano**: Lado **Esquerdo** bombeia apenas sangue **Arterial ($O_2$)** para o corpo (ventrículo esquerdo tem parede muscular muito mais grossa!); Lado **Direito** bombeia sangue **Venoso ($CO_2$)** para os pulmões (Pequena Circulação).",
+    "tags": [
+      "biologia",
+      "fisiologia-humana",
+      "respiratorio-circulatorio",
+      "modulo-05",
+      "enem"
+    ]
+  },
+  {
+    "front": "Fisiologia Humana III: Sistema Excretor (Néfron, ADH/Vasopressina e Aldosterona) e Sistema Endócrino (Insulina, Glucagon e Ciclo Menstrual)?",
+    "back": "• **Néfron**: Filtração glomerular (Cápsula de Bowman) → Reabsorção útil de 100% da glicose/aminoácidos, sais e água nos túbulos. • **Hormônio ADH (Antidiurético)**: liberado pela neuro-hipófise quando estamos desidratados → **aumenta a reabsorção de água** nos ductos coletores (urina sai amarela/concentrada). **O Álcool INIBE o ADH** → a pessoa urina em excesso e desidrata! • **Insulina vs. Glucagon (Pâncreas)**: **Insulina** (após comer) **reduz a glicose no sangue**; **Glucagon** (em jejum) **eleva a glicose no sangue** quebrando glicogênio hepático. • **Ciclo Menstrual**: **FSH** (amadurece folículo) + **Estrogênio** (recompõe endométrio) → pico de **LH** (provoca a **Ovulação** no 14º dia) → Corpo Lúteo secreta **Progesterona** (sustenta o endométrio).",
+    "tags": [
+      "biologia",
+      "fisiologia-humana",
+      "endocrino-excretor",
+      "modulo-05",
+      "enem"
+    ]
+  },
+  {
+    "front": "Imunologia no ENEM: Qual a diferença exata entre Vacina, Soro Terapêutico e Antibiótico?",
+    "back": "• **Vacina (Imunização ATIVA Artificial)**: contém **ANTÍGENOS** (vírus/bactérias mortos, atenuados, proteínas ou RNAm) → estimula o sistema imune a produzir seus próprios anticorpos e **CÉLULAS DE MEMÓRIA (Linfócitos B e T)** → demora alguns dias, tem efeito **PREVENTIVO e DURADOURO**. • **Soro (Imunização PASSIVA Artificial — ex: soro antiofídico contra veneno de cobra ou antitetânico)**: contém **ANTICORPOS PRONTOS** retirados de outro animal (cavalo) → ação **CURATIVA IMEDIATA de emergência**, mas **NÃO gera memória imunológica**! (Leite materno/colostro = Imunização Passiva Natural!). • **Antibiótico**: medicamento químico que mata apenas **BACTÉRIAS** (não funciona contra vírus!).",
+    "tags": [
+      "biologia",
+      "imunologia",
+      "vacina-e-soro",
+      "modulo-05",
+      "enem"
+    ]
+  },
+  {
+    "front": "Genética I: 1ª e 2ª Leis de Mendel, Heredogramas (Como descobrir se é Dominante ou Recessivo em 3 segundos)?",
+    "back": "• **Truque de Ouro do Heredograma**: Procure no gráfico **DOIS PAIS IGUAIS QUE TIVERAM UM FILHO DIFERente DELES** (*'Pais normais tiveram filho afetado'*): 1) A característica do **FILHO diferente é 100% RECESSIVA ($aa$)**! 2) A característica dos **PAIS iguais é 100% DOMINANTE ($Aa \\times Aa$)**! • **1ª Lei de Mendel ($Aa \\times Aa$)**: $1/4\\text{ }AA : 2/4\\text{ }Aa : 1/4\\text{ }aa$ (Fenótipo **3 : 1**). • **2ª Lei de Mendel ($AaBb \\times AaBb$)**: calcule cada par separado por probabilidade e **MULTIPLIQUE** (ex: chance de $aabb$ = $1/4 \\times 1/4 = 1/16$)!",
+    "tags": [
+      "biologia",
+      "genetica",
+      "heredograma",
+      "modulo-06",
+      "enem"
+    ]
+  },
+  {
+    "front": "Genética II: Sistema Sanguíneo ABO, Fator Rh (Eritroblastose Fetal) e Herança Ligada ao Cromossomo X?",
+    "back": "• **Sistema ABO**: Alelos $I^A = I^B > i$. **Tipo A** ($I^A I^A$ ou $I^A i$), **Tipo B** ($I^B I^B$ ou $I^B i$), **Tipo AB** ($I^A I^B$ — **Receptor Universal**, sem aglutininas no plasma), **Tipo O** ($ii$ — **Doador Universal**, sem aglutinogênios nas hemácias). • **Eritroblastose Fetal**: ocorre exclusivamente quando **Mãe é Rh⁻ ($rr$)** e gera **Filho Rh⁺ ($Rr$)** (pai Rh⁺). Na 1ª gestação Rh⁺ a mãe é sensibilizada no parto; na 2ª gestação Rh⁺ os anticorpos anti-Rh destroem as hemácias do feto. Prevenção: injeção de soro **anti-Rh (RhoGAM)** na mãe logo após o parto! • **Herança Ligada ao Sexo (Daltonismo $X^d$ e Hemofilia $X^h$)**: o pai transmite seu cromossomo $X$ para **100% das filhas mulheres**, e nunca para o filho homem!",
+    "tags": [
+      "biologia",
+      "genetica",
+      "abo-rh",
+      "modulo-06",
+      "enem"
+    ]
+  },
+  {
+    "front": "Biotecnologia no ENEM: Transgênicos (DNA Recombinante), Clonagem, Células-Tronco, PCR, Teste de DNA e Terapia Gênica?",
+    "back": "• **Transgênico (Tecnologia do DNA Recombinante)**: organismo que recebe um gene de **OUTRA espécie** cortado por **Enzimas de Restrição** e colado por **DNA Ligase** num vetor (**Plasmídeo bacteriano**) — ex: bactéria fabricando insulina humana ou hormônio GH; plantas Bt resistentes a insetos. • **Clonagem (Transferência Nuclear)**: núcleo $2n$ de célula somática inserido em óvulo sem núcleo → gera indivíduo **geneticamente idêntico ao doador do núcleo** (sem variabilidade genética!). • **Teste de Paternidade / Forense (Eletroforese em Gel)**: No crime/estupro, a amostra do culpado tem que bater **100% das bandas** com o vestígio; na **Paternidade**, toda banda do filho que NÃO está na mãe tem que estar obrigatoriamente no pai!",
+    "tags": [
+      "biologia",
+      "biotecnologia",
+      "modulo-07",
+      "enem"
+    ]
+  },
+  {
+    "front": "Evolução I: Lamarckismo vs. Darwinismo vs. Neodarwinismo (A Pegadinha das Superbactérias e Pragas Agrícolas)?",
+    "back": "• **Lamarck (Uso e Desuso + Transmissão dos Caracteres Adquiridos)**: dizia que o meio muda e força o ser vivo a se modificar para se adaptar. **Toda alternativa do ENEM que disser que 'a bactéria sofreu mutação PARA resistir ao antibiótico' ou 'o inseto se acostumou ao veneno' é LAMARCKISTA e está ERRADA!** • **Darwin / Neodarwinismo (Teoria Sintética)**: as **Mutações** e a **Recombinação Gênica (Crossing-over/Meiose)** ocorrem **AO ACASO** antes do antibiótico; o medicamento ou agrotóxico apenas mata os indivíduos sensíveis e **SELECIONA os resistentes pré-existentes**, que se reproduzem e dominam a população!",
+    "tags": [
+      "biologia",
+      "evolucao",
+      "selecao-natural",
+      "modulo-08",
+      "enem"
+    ]
+  },
+  {
+    "front": "Evolução II: Homologia (Irradiação Adaptativa) vs. Analogia (Convergência Evolutiva) e Especiação (Alopátrica vs. Simpátrica)?",
+    "back": "• **Órgãos Homólogos**: têm a **MESMA origem embrionária / ancestral comum**, podendo ter funções diferentes (ex: braço humano, pata do cavalo, asa do morcego e nadadeira da baleia) → fruto de **Irradiação Adaptativa (Divergência Evolutiva)**. • **Órgãos Análogos**: têm **origens embrionárias DIFERENTES**, mas exercem a **MESMA função** por viverem em ambientes semelhantes (ex: asa de ave e asa de inseto; formato hidrodinâmico de tubarão [peixe] e golfinho [mamífero]) → fruto de **Convergência Evolutiva**. • **Especiação Alopátrica**: começa com uma **Barreira Geográfica física** (rio, montanha, desmatamento) → acúmulo de mutações e seleção natural → **Isolamento Reprodutivo**.",
+    "tags": [
+      "biologia",
+      "evolucao",
+      "especiacao",
+      "modulo-08",
+      "enem"
+    ]
+  },
+  {
+    "front": "Ecologia I: Cadeias e Teias Alimentares, Pirâmides de Energia/Biomassa e Magnificação Trófica (Bioacumulação de Mercúrio/DDT)?",
+    "back": "• **Produtores** (1º nível trófico: plantas, algas, cianobactérias) → **Consumidores Primários** (2º nível: herbívoros) → **Secundários** (3º nível: carnívoros)... • **Fluxo de Energia**: é **UNIDIRECIONAL** e perde ~90% na forma de calor/metabolismo a cada nível (a **Pirâmide de Energia NUNCA pode ser invertida**!). • **Magnificação Trófica (Bioacumulação)**: poluentes não-biodegradáveis e acumulativos (**Mercúrio de garimpo, Chumbo, agrotóxico DDT**) fazem o caminho INVERSO da energia: **acumulam-se cada vez mais nos níveis superiores**, atingindo a **concentração MÁXIMA nos predadores de TOPO de cadeia (aves marinhas, peixes carnívoros grandes e seres humanos)**!",
+    "tags": [
+      "biologia",
+      "ecologia",
+      "cadeia-alimentar",
+      "modulo-09",
+      "enem"
+    ]
+  },
+  {
+    "front": "Ecologia II: Todas as Relações Ecológicas Harmônicas e Desarmônicas cobradas no ENEM?",
+    "back": "• **Harmônicas (+/+ ou +/0 — ninguém sai prejudicado)**: 1) **Mutualismo (+/+, obrigatório)**: líquens (alga+fungo), micorrizas (fungo+raiz), *Rhizobium*+leguminosa, cupim/boi + protozoários/bactérias digerindo celulose; 2) **Protocooperação (+/+, facultativo)**: anu/pássaro-palito e gado/jacaré, paguro e anêmona; 3) **Inquilinismo / Epifitismo (+/0)**: **orquídeas e bromélias** vivendo sobre troncos de árvores apenas para buscar luz solar (sem roubar seiva!); 4) **Comensalismo (+/0)**: rêmora e tubarão; 5) **Sociedade** (abelhas, formigas — divisão de trabalho sem união anatômica) vs. **Colônia** (corais, caravela-portuguesa — unidos fisicamente). • **Desarmônicas**: **Competição (-/-)**, **Predatismo (+/-)**, **Parasitismo (+/-)** e **Amensalismo/Antibiose (0/-)**: fungos liberando antibióticos ou algas da **Maré Vermelha** liberando toxinas! *Controle Biológico no ENEM: introduzir um predador ou parasitoide natural da praga para substituir agrotóxicos!*",
+    "tags": [
+      "biologia",
+      "ecologia",
+      "relacoes-ecologicas",
+      "modulo-09",
+      "enem"
+    ]
+  },
+  {
+    "front": "Ecologia III: Ciclo do Nitrogênio Completo, Rotação de Culturas e Eutrofização Artificial Passo a Passo?",
+    "back": "• **Ciclo do Nitrogênio**: 1) **Fixação**: bactérias **Rizóbios (*Rhizobium*)** associadas às raízes de **Leguminosas (soja, feijão, ervilha, alfafa)** convertem $N_2$ do ar em Amônia ($NH_3/NH_4^+$) — explica por que plantar leguminosas (**Adubação Verde / Rotação de Culturas**) enriquece o solo sem adubo químico! 2) **Nitrosação** (*Nitrosomonas*: $NH_3 \\to NO_2^-$ nitrito); 3) **Nitratação** (*Nitrobacter*: $NO_2^- \\to NO_3^-$ **Nitrato** — principal forma absorvida pelas raízes!); 4) **Desnitrificação** (*Pseudomonas*: devolve $N_2$ ao ar). • **Eutrofização**: Despejo de esgoto ou fertilizantes (ricos em **N e P**) → **Floração de algas** na superfície → Bloqueio da entrada de luz solar → Morte das algas → Explosão de **bactérias aeróbicas decompositoras** → **Consumo do $O_2$ da água (alta DBO)** → **Morte dos peixes por asfixia**!",
+    "tags": [
+      "biologia",
+      "ecologia",
+      "ciclo-do-nitrogenio",
+      "eutrofizacao",
+      "modulo-09",
+      "enem"
+    ]
+  },
+  {
+    "front": "Doenças e Parasitologia no ENEM: Vetores, Agentes e Prevenção de Dengue, Malária, Chagas, Leishmaniose, Esquistossomose e Teníase/Cisticercose?",
+    "back": "• **Aedes aegypti (Vírus)**: Dengue, Zika, Chikungunya e Febre Amarela. • **Malária (Protozoário *Plasmodium*)**: mosquito **Anopheles (mosquito-prego)**; destrói hemácias causando febres cíclicas. • **Doença de Chagas (Protozoário *Trypanosoma cruzi*)**: fezes do inseto **Barbeiro** (frestas de casas de barro) OU **via oral por ingestão de açaí/caldo de cana não-pasteurizados** contaminados com o inseto triturado! Afeta o coração (cardiomegalia) e esôfago/cólon. • **Leishmaniose (Protozoário *Leishmania*)**: mosquito-palha (birigui). • **Esquistossomose (Verme *Schistosoma mansoni*)**: hospedeiro intermediário = **Caramujo *Biomphalaria*** em lagoas; larva cercária penetra pela pele. • **Teníase vs. Cisticercose (*Taenia solium*)**: ingerir carne de porco crua/malpassada = **Teníase**; ingerir **OVOS** na água/verdura = **Cisticercose cerebral**!",
+    "tags": [
+      "biologia",
+      "parasitologia",
+      "doencas",
+      "modulo-10",
+      "enem"
+    ]
+  },
+  {
+    "front": "Botânica e Biomas no ENEM: Evolução das Plantas, Seiva Bruta vs. Elaborada, Hormônios (Auxina e Etileno) e Adaptações do Cerrado/Caatinga/Mangue?",
+    "back": "• **Evolução Vegetal**: **Briófitas** (avasculares) → **Pteridófitas** (1º vasos condutores: xilema e floema) → **Gimnospermas** (1ª Semente nua + **Tubo Polínico** = fim da dependência da água para fecundar!) → **Angiospermas** (1ª Flor e Fruto). • **Seivas**: **Xilema (Lenhoso)** leva **seiva bruta (água + sais)** da raiz às folhas puxada pela **transpiração foliar (Coesão-Tensão de Dixon)**; **Floema (Liberiano)** leva **seiva elaborada (glicose)** das folhas para a raiz (cortar um anel da casca — **Anel de Malpighi** — interrompe o floema e mata a raiz de fome!). • **Hormônios**: **Auxina** (fototropismo e dominância apical — podar a ponta faz crescer os ramos laterais!) e **Etileno** (gás que amadurece frutos!). • **Biomas**: **Caatinga** (xerófitas, folhas transformadas em espinhos, caules suculentos); **Cerrado** (raízes profundas p/ lençol freático, **casca grossa/cortiça contra queimadas naturais**, troncos retorcidos por solo ácido com alumínio); **Manguezal** (**raízes pneumatóforos** que saem do lodo sem $O_2$ para respirar!).",
+    "tags": [
+      "biologia",
+      "botanica",
+      "biomas",
+      "modulo-11",
+      "enem"
+    ]
+  },
+  {
+    "front": "Como converter rapidamente unidades de Comprimento, Área e Volume (Litros, m³ e cm³) no ENEM?",
+    "back": "• Comprimento (1D): 1 km = 1.000 m = 100.000 cm (10⁵ cm). • Área (2D — pula de 2 em 2 zeros): 1 m² = 10.000 cm² (10⁴ cm²); 1 hectare (ha) = 10.000 m² (um campo de futebol oficial); 1 km² = 100 ha = 1.000.000 m². • Volume e Capacidade (3D — pula de 3 em 3 zeros): **1 m³ = 1.000 Litros** | **1 dm³ = 1 Litro** | **1 cm³ = 1 mL**. 💡 MACETE: 'Caixa d'água em metros cúbicos? Multiplica por 1.000 que vira Litros na hora!'",
+    "tags": [
+      "matematica",
+      "unidades",
+      "modulo-01",
+      "enem"
+    ]
+  },
+  {
+    "front": "Qual a Pegadinha Mortal de Escala Linear (1:k), Escala de Área e Escala de Volume em maquetes e mapas?",
+    "back": "• Escala Linear: E = d / D (desenho / real, na MESMA unidade!). • Se a escala linear é 1 : k, então: 1) A razão entre as ÁREAS é **(1 : k)² = 1 : k²**; 2) A razão entre os VOLUMES (ou litros) é **(1 : k)³ = 1 : k³**! 💡 MACETE: 'Maquete na escala 1:100 tem estátua de volume V? O volume real NÃO é 100·V, é 100³·V = 1.000.000·V! Comprimento = k¹; Área = k²; Volume = k³!'",
+    "tags": [
+      "matematica",
+      "escalas",
+      "modulo-01",
+      "enem"
+    ]
+  },
+  {
+    "front": "Como diferenciar Grandezas Diretamente Proporcionais de Inversamente Proporcionais nas equações e gráficos?",
+    "back": "• Diretamente Proporcionais: quando X dobra, Y dobra → a DIVISÃO é constante (**Y / X = k**). O gráfico é uma RETA que passa pela origem (0,0). • Inversamente Proporcionais: quando X dobra, Y cai pela metade → a MULTIPLICAÇÃO é constante (**Y · X = k**). O gráfico é um ramo de HIPÉRBOLE (curva que desce sem tocar os eixos). 💡 MACETE: 'Direta = Divisão constante; Inversa = Multiplicação constante!'",
+    "tags": [
+      "matematica",
+      "proporcao",
+      "modulo-01",
+      "enem"
+    ]
+  },
+  {
+    "front": "Qual o Macete 'Processo / Produto' para resolver qualquer Regra de 3 Composta sem usar setinhas?",
+    "back": "Separe apenas o que é o PRODUTO FINAL (o que foi construído, produzido, consumido ou percorrido). Todo o resto (operários, máquinas, horas por dia, dias, velocidade, dureza) faz parte do PROCESSO. Monte uma fração única: **(Processo₁) / Produto₁ = (Processo₂) / Produto₂**. Exemplo: (Operários₁ × Horas₁ × Dias₁) / Muro₁ = (Operários₂ × Horas₂ × Dias₂) / Muro₂. Multiplique cruzado só o Produto!",
+    "tags": [
+      "matematica",
+      "regra-de-tres",
+      "modulo-01",
+      "enem"
+    ]
+  },
+  {
+    "front": "Como funcionam os Aumentos e Descontos Percentuais Sucessivos e o Fator Multiplicativo?",
+    "back": "• Aumento de i% → multiplique por **(1 + i/100)** (ex: +25% → × 1,25; +8% → × 1,08). • Desconto de i% → multiplique por **(1 - i/100)** (ex: -30% → × 0,70; -5% → × 0,95). • PEGADINHA: Subir 20% e depois dar desconto de 20% NÃO dá 0%: **1,20 × 0,80 = 0,96** (dá prejuízo/desconto de 4%!). 💡 MACETE: 'Subiu X% e caiu X%? Sempre dá queda de (X/10)² %!'",
+    "tags": [
+      "matematica",
+      "porcentagem",
+      "modulo-01",
+      "enem"
+    ]
+  },
+  {
+    "front": "Qual a diferença entre Margem de Lucro sobre o Custo e Margem de Lucro sobre o Preço de Venda?",
+    "back": "Venda = Custo + Lucro (V = C + L). • Se a questão diz 'lucro de 25% SOBRE O CUSTO': V = 1,25 · C. • Se a questão diz 'lucro de 25% SOBRE O PREÇO DE VENDA': L = 0,25 · V → logo C = V - 0,25·V = 0,75·V → **V = C / 0,75** (que equivale a aumentar 33,3% sobre o custo!). 💡 MACETE: 'Leia com lupa depois da palavra SOBRE: quem vem depois de SOBRE é o 100% (o denominador)!'",
+    "tags": [
+      "matematica",
+      "porcentagem",
+      "modulo-01",
+      "enem"
+    ]
+  },
+  {
+    "front": "Qual a diferença entre Juros Simples e Juros Compostos e como resolver questões de parcelas no ENEM?",
+    "back": "• Juros Simples (cresce em PA — o juro incide SEMPRE sobre o capital inicial C): **J = C · i · t** e **M = C · (1 + i·t)**. • Juros Compostos (cresce em PG — juros sobre juros): **M = C · (1 + i)ᵗ**. • Valor Presente de Parcela Futura: para trazer uma parcela P paga daqui a t meses para o valor à vista hoje, DIVIDA por (1 + i)ᵗ: **Valor Hoje = P / (1 + i)ᵗ**! 💡 MACETE: 'Ir para o futuro MULTIPLICA por (1+i); voltar para o presente DIVIDE por (1+i)!'",
+    "tags": [
+      "matematica",
+      "matematica-financeira",
+      "modulo-02",
+      "enem"
+    ]
+  },
+  {
+    "front": "Como identificar pelo texto se a questão do ENEM é de MMC ou de MDC?",
+    "back": "• **MMC (Mínimo Múltiplo Comum)**: ideia de **ENCONTRO FUTURO DE CICLOS** — palavras-chave: *'a cada X horas e a cada Y horas', 'quando voltarão a se encontrar juntos', 'piscam simultaneamente'*. • **MDC (Máximo Divisor Comum)**: ideia de **DIVIDIR EM PEDAÇOS IGUAIS DO MAIOR TAMANHO POSSÍVEL SEM SOBRA** — palavras-chave: *'cortar toras/fitas em partes iguais de maior comprimento', 'formar o menor número de equipes iguais com o maior nº de pessoas'*. 💡 MACETE: 'Encontro no futuro = MMC; Fatiar no maior pedaço igual = MDC!'",
+    "tags": [
+      "matematica",
+      "mmc-e-mdc",
+      "modulo-02",
+      "enem"
+    ]
+  },
+  {
+    "front": "Como montar Diagrama de Venn (2 e 3 Conjuntos) sem contar pessoas duas vezes?",
+    "back": "Regra de Ouro: **COMECE SEMPRE PELO MIOLO CENTRAL (a interseção de todos os conjuntos: A ∩ B ∩ C)** e vá SUBTRAINDO esse valor ao preencher as interseções de 2 a 2 e depois os conjuntos individuais! • Fórmula para 2 conjuntos: **Total = n(A) + n(B) - n(A ∩ B) + Nenhum**. 💡 MACETE: 'Quem começa de fora pra dentro erra; quem começa de dentro pra fora desconta e acerta!'",
+    "tags": [
+      "matematica",
+      "conjuntos",
+      "modulo-02",
+      "enem"
+    ]
+  },
+  {
+    "front": "Progressão Aritmética (PA): Termo Geral, Soma dos Termos e o Atalho do Termo Central?",
+    "back": "• Razão constante: r = a₂ - a₁. • Termo Geral: **aₙ = a₁ + (n - 1) · r** (ou aₙ = aₖ + (n - k) · r). • Soma dos n termos: **Sₙ = [(a₁ + aₙ) · n] / 2**. 💡 ATALHO MATADOR DO ENEM: Em toda PA com número ÍMPAR de termos (ex: 5 dias, 7 semanas, 9 fileiras), o **Termo do Meio é exatamente a Média Aritmética da PA inteira**! Logo: **Soma = nº de termos × Termo Central**!",
+    "tags": [
+      "matematica",
+      "pa",
+      "modulo-02",
+      "enem"
+    ]
+  },
+  {
+    "front": "Progressão Geométrica (PG): Termo Geral, Soma Finita e Soma dos Infinitos Termos?",
+    "back": "• Razão constante: q = a₂ / a₁ (dobra a cada etapa → q = 2; cai pela metade → q = 1/2). • Termo Geral: **aₙ = a₁ · qⁿ⁻¹**. • Soma Finita: **Sₙ = a₁ · (qⁿ - 1) / (q - 1)**. • Soma Infinita (quando -1 < q < 1, ex: 10 + 5 + 2,5 + ...): **S∞ = a₁ / (1 - q)**. 💡 MACETE: 'Soma infinita cabe num copo: Primeiro termo dividido por (1 menos a razão)!'",
+    "tags": [
+      "matematica",
+      "pg",
+      "modulo-02",
+      "enem"
+    ]
+  },
+  {
+    "front": "Função Afim (1º Grau: f(x) = ax + b): Como achar a lei da função a partir de um gráfico ou tabela em 10 segundos?",
+    "back": "Em **f(x) = a·x + b**: 1) **b (coeficiente linear)** = valor inicial fixo (quando x = 0, onde a reta corta o eixo vertical Y); 2) **a (coeficiente angular / taxa de variação)** = quanto Y varia para cada +1 unidade de X: **a = Δy / Δx = (y₂ - y₁) / (x₂ - x₁)**. 💡 MACETE: 'Não monte sistema! Olhe na tabela quanto Y subiu e divida por quanto X andou → esse já é o valor de a!'",
+    "tags": [
+      "matematica",
+      "funcao-afim",
+      "modulo-03",
+      "enem"
+    ]
+  },
+  {
+    "front": "Função Quadrática (2º Grau: f(x) = ax² + bx + c): Raízes, Soma e Produto e Forma Fatorada?",
+    "back": "• Se a > 0: concavidade p/ cima (carinha feliz 😊 → tem ponto MÍNIMO). Se a < 0: concavidade p/ baixo (carinha triste ☹️ → tem ponto MÁXIMO). • c = onde corta o eixo Y (x = 0). • Soma das raízes: **S = x₁ + x₂ = -b/a**. Produto das raízes: **P = x₁ · x₂ = c/a**. • **Forma Fatorada (salva quando o gráfico dá as 2 raízes x₁ e x₂!)**: **f(x) = a · (x - x₁) · (x - x₂)**.",
+    "tags": [
+      "matematica",
+      "funcao-quadratica",
+      "modulo-03",
+      "enem"
+    ]
+  },
+  {
+    "front": "Vértice da Parábola no ENEM: Quando calcular o X do Vértice (xᵥ) e quando calcular o Y do Vértice (yᵥ)?",
+    "back": "Olhe para a PERGUNTA FINAL da questão: 1) Se pede a variável de entrada (**QUAL o preço, QUAL a quantidade, QUAL o desconto ou EM QUE instante t** o lucro/altura é máximo) → calcule o **xᵥ = -b / (2a)** (ou mais rápido ainda: **xᵥ é a média das duas raízes = (x₁ + x₂) / 2**!). 2) Se pede o resultado final (**QUAL É o valor do lucro máximo, da receita máxima ou da altura máxima**) → calcule o **yᵥ = -Δ / (4a)** ou simplesmente substitua o xᵥ encontrado dentro da função **f(xᵥ)**!",
+    "tags": [
+      "matematica",
+      "vertice-da-parabola",
+      "modulo-03",
+      "enem"
+    ]
+  },
+  {
+    "front": "Função Exponencial e Meia-Vida Radioativa / Medicamentosa: Como resolver sem errar?",
+    "back": "• Crescimento/Decaimento Exponencial: **f(t) = V₀ · b^(k·t)** (onde V₀ é o valor inicial quando t = 0!). • **Meia-Vida (tempo para a quantidade cair pela metade)**: **M_final = M_inicial / 2ⁿ**, onde **n = Tempo Total / Tempo de 1 Meia-Vida**. 💡 MACETE: Faça no dedo dividindo por 2 a cada meia-vida: 100g → (1ª) 50g → (2ª) 25g → (3ª) 12,5g → (4ª) 6,25g!",
+    "tags": [
+      "matematica",
+      "funcao-exponencial",
+      "modulo-03",
+      "enem"
+    ]
+  },
+  {
+    "front": "Logaritmos no ENEM: Definição, as 3 Propriedades Operatórias e o Atalho do log 5?",
+    "back": "• Definição: **log_b(a) = x ⇔ bˣ = a** (*a base b dá uma chifradas no x e iguala ao a*). • As 3 Regras que resolvem tudo: 1) **log(A · B) = log A + log B** (produto vira soma); 2) **log(A / B) = log A - log B** (divisão vira subtração); 3) **log(Aⁿ) = n · log A** (Regra do Peteleco: expoente tomba multiplicando). • **Atalho Obrigatório do ENEM**: a prova dá log 2 ≈ 0,30 e pede log 5! Nunca faça 2+3; escreva **5 = 10 / 2** → **log 5 = log 10 - log 2 = 1 - 0,30 = 0,70**!",
+    "tags": [
+      "matematica",
+      "logaritmos",
+      "modulo-03",
+      "enem"
+    ]
+  },
+  {
+    "front": "Trigonometria no Triângulo Retângulo: SOH-CAH-TOA, Ângulos Notáveis (30°, 45°, 60°) e Triângulos Pitagóricos?",
+    "back": "• **SOH-CAH-TOA**: **S**eno = **O**posto / **H**ipotenusa; **C**osseno = **A**djacente / **H**ipotenusa; **T**angente = **O**posto / **A**djacente (*'Coca-Cola = CO / CA'*). • **Triângulos Pitagóricos (poupe tempo!)**: **3 - 4 - 5** (e múltiplos: **6-8-10**, **9-12-15**, **12-16-20**, **15-20-25**), **5 - 12 - 13** e **8 - 15 - 17**. • **Triângulo Egípcio (30°-60°-90°)**: o cateto oposto a 30° é SEMPRE a **METADE da hipotenusa (H/2)**, e o oposto a 60° é **(H·√3)/2**!",
+    "tags": [
+      "matematica",
+      "trigonometria",
+      "modulo-04",
+      "enem"
+    ]
+  },
+  {
+    "front": "Lei dos Senos vs. Lei dos Cossenos: Quando usar cada uma em triângulos quaisquer?",
+    "back": "• **Lei dos Senos**: **a / sen A = b / sen B = c / sen C = 2R**. Use quando você tem **2 ângulos e 1 lado** (ou quando falar do raio R da circunferência circunscrita). • **Lei dos Cossenos**: **a² = b² + c² - 2·b·c · cos A**. Use quando você tem **2 lados e o ângulo no meio deles** (como um compasso aberto!). *Cuidado: se o ângulo for obtuso (ex: 120°), cos(120°) = -cos(60°) = -1/2, então o sinal '-' vira '+'!*",
+    "tags": [
+      "matematica",
+      "trigonometria",
+      "modulo-04",
+      "enem"
+    ]
+  },
+  {
+    "front": "Função Trigonométrica Periódica f(t) = A + B · sen(c·t + d): Como achar A, B e c olhando só para o gráfico?",
+    "back": "Como o seno (ou cosseno) só oscila entre **-1 (mínimo)** e **+1 (máximo)**: 1) **A (Eixo Central / Média)**: **A = (Máximo + Mínimo) / 2**; 2) **|B| (Amplitude / Raio da roda-gigante)**: **|B| = (Máximo - Mínimo) / 2**; 3) **Valor Máximo** = **A + |B|** e **Valor Mínimo** = **A - |B|**; 4) **c (ligado ao Período T de repetição)**: **T = 2π / |c|**, logo **|c| = 2π / T** (ex: se o ciclo é de 24 horas → c = 2π/24 = π/12; se é de 12 meses → c = 2π/12 = π/6!).",
+    "tags": [
+      "matematica",
+      "funcao-trigonometrica",
+      "modulo-04",
+      "enem"
+    ]
+  },
+  {
+    "front": "Geometria Plana I: Soma dos Ângulos Internos e Externos de um Polígono, Semelhança de Triângulos e Teorema de Tales?",
+    "back": "• Soma dos ângulos internos de polígono de n lados: **Sᵢ = (n - 2) · 180°** (Triângulo = 180°; Quadrilátero = 360°; Pentágono = 540°; Hexágono regular = 720°, sendo **120° cada ângulo interno**!). • Soma dos ângulos externos: **Sₑ = 360° SEMPRE** (para qualquer polígono convexo!). • **Semelhança de Triângulos**: se os lados aumentam na razão **k**, a altura e o perímetro aumentam na razão **k**, mas a **ÁREA aumenta na razão k²**!",
+    "tags": [
+      "matematica",
+      "geometria-plana",
+      "modulo-05",
+      "enem"
+    ]
+  },
+  {
+    "front": "Geometria Plana II: Todas as Fórmulas de Área de Triângulos, Hexágono Regular, Trapézio e Losango?",
+    "back": "• Triângulo comum: **A = (base · altura) / 2**. • Triângulo com 2 lados e o ângulo entre eles: **A = (a · b · sen θ) / 2**. • **Triângulo Equilátero (3 lados iguais L)**: Altura **h = (L·√3) / 2** e Área **A = (L²·√3) / 4**. • **Hexágono Regular (lado L)**: divide-se em **6 Triângulos Equiláteros idênticos**! Logo: **A = 6 · (L²·√3) / 4**. • Trapézio: **A = [(B + b) · h] / 2**. • Losango: **A = (D · d) / 2**.",
+    "tags": [
+      "matematica",
+      "areas",
+      "geometria-plana",
+      "modulo-05",
+      "enem"
+    ]
+  },
+  {
+    "front": "Geometria Plana III: Círculo, Circunferência, Número de Voltas de um Pneu, Setor Circular e Coroa Circular?",
+    "back": "• **Comprimento da Circunferência (Perímetro / 1 volta do pneu)**: **C = 2 · π · R = π · D**. Para achar quantas voltas uma roda dá: **Nº de voltas = Distância Percorrida / (2·π·R)**! • **Área do Círculo**: **A = π · R²**. • **Área do Setor Circular ('fatia de pizza' de ângulo α)**: **A = (α / 360°) · π · R²**. • **Área da Coroa Circular (anel entre dois círculos)**: **A = π · (R² - r²)**.",
+    "tags": [
+      "matematica",
+      "circulo",
+      "geometria-plana",
+      "modulo-05",
+      "enem"
+    ]
+  },
+  {
+    "front": "Geometria Espacial I: Poliedros, Relação de Euler (V + F = A + 2), Cubo e Paralelepípedo?",
+    "back": "• **Relação de Euler**: **V + F = A + 2** (*Macete: 'Vamos Fazer Amor a Dois'*). Para achar o nº de Arestas (A) sabendo o tipo das faces: **2·A = (nº de triângulos × 3) + (nº de quadriláteros × 4) + (nº de pentágonos × 5)...** • **Paralelepípedo Retângulo (a, b, c)**: Volume **V = a · b · c**; Área Total = 2(ab + ac + bc); Diagonal = **√(a² + b² + c²)**. • **Cubo (aresta a)**: Volume **V = a³**; Área Total = **6·a²**; Diagonal da face = **a·√2**; Diagonal do cubo = **a·√3**.",
+    "tags": [
+      "matematica",
+      "geometria-espacial",
+      "poliedros",
+      "modulo-06",
+      "enem"
+    ]
+  },
+  {
+    "front": "Geometria Espacial II: Cilindro, Cone, Pirâmide, Esfera e Tronco — O Macete 'Tem Ponta, Divide por 3'?",
+    "back": "• **Sólidos SEM ponta (Prisma e Cilindro)**: **Volume = Área da Base × Altura**. No Cilindro: **V = π · R² · h** e a Área Lateral aberta é um retângulo de base **2·π·R** e altura **h** (**A_lat = 2·π·R·h**). • **Sólidos COM ponta (Pirâmide e Cone)**: **Volume = (Área da Base × Altura) / 3**. No Cone: **V = (π · R² · h) / 3**, relação pitagórica **g² = h² + R²**, Área Lateral = **π · R · g** e ângulo de planificação θ = (R / g) · 360°. • **Esfera**: Volume **V = (4/3) · π · R³** e Área da Superfície = **4 · π · R²**.",
+    "tags": [
+      "matematica",
+      "geometria-espacial",
+      "volumes",
+      "modulo-06",
+      "enem"
+    ]
+  },
+  {
+    "front": "Projeção Ortogonal e Visão Espacial no ENEM: Quais são os 3 truques para nunca errar a sombra?",
+    "back": "1) Imagine raios de luz **100% perpendiculares** ao plano de projeção (como o Sol do meio-dia projetando a sombra no chão). 2) Qualquer deslocamento **puramente VERTICAL** (subir ou descer um poste/elevador reto) projeta-se no chão como **APENAS UM PONTO**! 3) Deslocamentos inclinados (rampas, telhados, escadas) projetam-se no chão como segmentos de reta normais; curvas na superfície de um cilindro ou esfera vistas de cima acompanham o contorno da base (círculo ou quadrado)!",
+    "tags": [
+      "matematica",
+      "projecao-ortogonal",
+      "modulo-06",
+      "enem"
+    ]
+  },
+  {
+    "front": "Geometria Analítica: Distância entre Pontos, Ponto Médio, Equação da Reta e da Circunferência?",
+    "back": "• **Distância entre A(x₁, y₁) e B(x₂, y₂)**: **d = √[(x₂ - x₁)² + (y₂ - y₁)²]** (Teorema de Pitágoras no plano cartesiano!). • **Ponto Médio**: **M = ((x₁ + x₂)/2 , (y₁ + y₂)/2)**. • **Reta (y = m·x + n)**: m = inclinação; retas paralelas têm **m₁ = m₂**; retas perpendiculares têm **m₁ · m₂ = -1**. • **Circunferência de Centro C(x₀, y₀) e Raio R**: **(x - x₀)² + (y - y₀)² = R²** (Ex: (x - 3)² + (y + 2)² = 25 tem centro C(3, -2) e raio R = √25 = 5!).",
+    "tags": [
+      "matematica",
+      "geometria-analitica",
+      "modulo-07",
+      "enem"
+    ]
+  },
+  {
+    "front": "Estatística I: Média Aritmética Simples vs. Média Ponderada e a Pegadinha da Mediana?",
+    "back": "• **Média Simples**: soma tudo e divide pela quantidade de elementos. • **Média Ponderada** (notas com pesos ou tabelas de frequência): **MP = (x₁·p₁ + x₂·p₂ + ...) / (p₁ + p₂ + ...)** (divida sempre pela **SOMA DOS PESOS**, nunca pela quantidade de linhas!). • **MEDIANA (Regra de Ouro)**: **1º PASSO OBRIGATÓRIO: ORDENE OS NÚMEROS EM ORDEM CRESCENTE (ROL)!** Se a quantidade n for **ÍMPAR**, a mediana é o número exatamente no meio; se n for **PAR**, a mediana é a **média aritmética dos 2 números centrais**!",
+    "tags": [
+      "matematica",
+      "estatistica",
+      "mediana",
+      "modulo-08",
+      "enem"
+    ]
+  },
+  {
+    "front": "Estatística II: Moda, Amplitude, Variância e Desvio Padrão (Qual escolher quando o ENEM pede 'Mais Regular')?",
+    "back": "• **Moda**: valor que mais se repete (no gráfico de colunas/linha, é o ponto mais alto!). • **Amplitude**: Maior valor − Menor valor. • **Variância e Desvio Padrão (DP = √Variância)**: medem o grau de **ESPALHAMENTO / DISPERSÃO** dos dados em torno da média. 💡 GATILHO ENEM: Sempre que a questão pedir o atleta, aluno, máquina ou ação **MAIS REGULAR, MAIS CONSTANTE, MAIS HOMOGÊNEO, MAIS CONFIÁVEL ou MAIS ESTÁVEL**, escolha aquele que tem o **MENOR DESVIO PADRÃO** (ou os valores mais próximos entre si)!",
+    "tags": [
+      "matematica",
+      "estatistica",
+      "desvio-padrao",
+      "modulo-08",
+      "enem"
+    ]
+  },
+  {
+    "front": "Análise Combinatória: Princípio Multiplicativo, Permutação Simples/Com Repetição/Circular e Arranjo vs. Combinação?",
+    "back": "• **Permutação de n elementos**: **Pₙ = n!**; Com letras repetidas (ex: ARARA tem 5 letras, 3 A e 2 R): **P = 5! / (3! · 2!)**; **Permutação Circular** (sentar em mesa redonda ou roda): **P_c = (n - 1)!**. • **Arranjo vs. Combinação**: Pegue um grupo exemplo (Ana, Bruno) e inverta para (Bruno, Ana): **mudou o resultado?** 1) **SIM, a ordem importa** (senha, placa, pódio 1º/2º/3º, presidente/vice) → **ARRANJO (use os tracinhos multiplicando!)**: **A(n,p) = n! / (n-p)!**; 2) **NÃO, a ordem NÃO importa** (comissão, dupla de vôlei, salada de frutas, escolher questões da prova) → **COMBINAÇÃO (divide pelo fatorial para eliminar repetições!)**: **C(n,p) = n! / [p! · (n-p)!]**.",
+    "tags": [
+      "matematica",
+      "analise-combinatoria",
+      "modulo-08",
+      "enem"
+    ]
+  },
+  {
+    "front": "Probabilidade Completa no ENEM: Regra do 'E', Regra do 'OU', Probabilidade Condicional e 'Pelo Menos Um'?",
+    "back": "• **Definição**: **P(A) = Casos Favoráveis / Casos Possíveis (Total)**. • **Regra do 'E' (eventos sucessivos/independentes)**: **MULTIPLICA (×)** → P(A e B) = P(A) × P(B). • **Regra do 'OU' (eventos alternativos)**: **SOMA (+)** descontando a interseção → P(A ou B) = P(A) + P(B) - P(A ∩ B). • **Probabilidade Condicional ('Sabendo que...', 'Dado que...')**: restrinja o **Denominador (Total)** apenas ao subgrupo que a questão garantiu que já aconteceu! • **Atalho do 'Pelo Menos Um'**: **P(pelo menos 1) = 1 - P(NENHUM / errar todas)**!",
+    "tags": [
+      "matematica",
+      "probabilidade",
+      "modulo-08",
+      "enem"
+    ]
+  },
+  {
+    "front": "Grécia e Roma Antiga no ENEM: Qual a diferença entre a Democracia Ateniense, a Oligarquia Espartana e a República/Império Romano?",
+    "back": "• **Atenas (Democracia Direta e Excludente)**: os cidadãos votavam diretamente na Ágora (Eclésia), mas **APENAS homens livres, maiores, filhos de pai e mãe atenienses** eram cidadãos (~10% da população; **mulheres, estrangeiros [metecos] e escravos eram EXCLUÍDOS!**). • **Esparta**: oligarquia militarista, diarquia e educação rígida estatal (agogê). • **Roma**: na República, luta dos **Plebeus** contra os **Patrícios** gerou as conquistas políticas (Tribuno da Plebe, Lei das XII Tábuas, fim da escravidão por dívidas). No Império: **Política do Pão e Circo** (trigo e arenas de gladiadores para conter revoltas urbanas), Direito Romano e crise do escravismo após o fim das guerras de expansão.",
+    "tags": [
+      "historia",
+      "antiguidade-classica",
+      "modulo-01",
+      "enem"
+    ]
+  },
+  {
+    "front": "Idade Média: Como funcionavam o Feudalismo (Suserania e Vassalagem, Servidão), a Igreja Católica e o Renascimento Comercial/Urbano?",
+    "back": "• **Feudalismo**: poder político **DESCENTRALIZADO**, economia agrária de subsistência (feudo dividido em Manso Senhorial, Manso Servil e Terras Comunais). • **Suserania e Vassalagem**: pacto horizontal **entre NOBRES** (suserano doa o feudo/terra; vassalo jura auxílio militar). • **Servidão**: relação vertical entre Senhor e Servo (o servo **NÃO é escravo** — está preso à terra e paga impostos: **Corveia** [trabalho gratuito nas terras do senhor], **Talha** [metade da colheita] e **Banalidades** [uso do moinho/forno]). • **Baixa Idade Média**: **Cruzadas** reabrem o Mediterrâneo → surgimento dos **Burgos** e das **Corporações de Ofício** → Peste Negra e Guerra dos Cem Anos → transição para os Estados Nacionais.",
+    "tags": [
+      "historia",
+      "idade-media",
+      "feudalismo",
+      "modulo-01",
+      "enem"
+    ]
+  },
+  {
+    "front": "Idade Moderna: Renascimento Cultural, Reforma Protestante/Contrarreforma, Absolutismo e Mercantilismo?",
+    "back": "• **Renascimento**: Antropocentrismo, Humanismo, Racionalismo, Hedonismo e Mecenato (sem ser ateísta!). • **Reforma Protestante**: Lutero (95 teses contra venda de indulgências, salvação pela Fé, tradução da Bíblia) e Calvino (**Predestinação Absoluta** e valorização do trabalho/lucro → ética do capitalismo segundo Max Weber!). **Contrarreforma Católica**: Concílio de Trento, Companhia de Jesus (**Jesuítas** para catequizar indígenas na América!) e Inquisição. • **Mercantilismo (economia do Estado Absolutista)**: **Metalismo** (acumular ouro/prata), **Balança Comercial Favorável** (exportar > importar), Protecionismo Alfandegário e **Pacto Colonial (Exclusivo Metropolitano)**.",
+    "tags": [
+      "historia",
+      "idade-moderna",
+      "mercantilismo",
+      "modulo-02",
+      "enem"
+    ]
+  },
+  {
+    "front": "Iluminismo, Revolução Industrial (1ª, 2ª, 3ª e 4ª) e Revolução Francesa (Girondinos vs. Jacobinos e Era Napoleônica)?",
+    "back": "• **Iluminismo (Século das Luzes)**: Montesquieu (Tripartição dos 3 Poderes), Voltaire (liberdade de expressão), Rousseau (soberania popular) e **Adam Smith (Liberalismo Econômico: 'mão invisível' do mercado e livre concorrência contra o Mercantilismo)**. • **As 4 Revoluções Industriais**: **1ª (séc. XVIII, Inglaterra)**: **Carvão mineral**, máquina a vapor e indústria têxtil (cercamento dos campos / *Enclosures*); **2ª (séc. XIX)**: **Petróleo, Eletricidade, Aço** e motor a combustão (Fordismo/Taylorismo); **3ª (pós-1950)**: Informática, robótica, nuclear e biotecnologia (**Toyotismo**); **4ª (atual)**: IA, Internet das Coisas, Big Data e algoritmização/uberização. • **Revolução Francesa (1789)**: **Girondinos** = alta burguesia moderada (sentavam à direita); **Jacobinos** (Robespierre) = pequena burguesia radical apoiada pelos *sans-culottes* (sentavam à esquerda; aboliram a escravidão nas colônias!).",
+    "tags": [
+      "historia",
+      "revolucoes",
+      "industrial-e-francesa",
+      "modulo-03",
+      "enem"
+    ]
+  },
+  {
+    "front": "Imperialismo / Neocolonialismo (Século XIX), 1ª Guerra Mundial, Revolução Russa (1917) e Crise de 1929 (New Deal)?",
+    "back": "• **Imperialismo na África e Ásia (Conferência de Berlim, 1884-85)**: potências industriais partilham a África traçando **fronteiras artificiais** que separaram etnias aliadas e juntaram etnias rivais (raiz dos conflitos africanos atuais!), justificando a dominação com o **Darwinismo Social ('Fardo do Homem Branco')**. • **1ª Guerra (1914-1918)**: Guerra de Trincheiras; termina com o **Tratado de Versalhes**, que humilhou a Alemanha e alimentou o Nazismo. • **Crise de 1929 (Quebra da Bolsa de NY)**: crise de **Superprodução** e especulação devido ao excesso do *Laissez-faire* liberal; resolvida pelo **New Deal (Roosevelt)** baseado em **John Maynard Keynes (intervenção do Estado na economia, obras públicas e estado de bem-estar social)**.",
+    "tags": [
+      "historia",
+      "seculo-xx",
+      "imperialismo-e-crise-29",
+      "modulo-04",
+      "enem"
+    ]
+  },
+  {
+    "front": "Totalitarismos (Fascismo e Nazismo), 2ª Guerra Mundial, Guerra Fria e Descolonização Afro-Asiática?",
+    "back": "• **Nazifascismo (Mussolini na Itália e Hitler na Alemanha)**: Estado Totalitário, partido único, anticomunismo, antiliberalismo, nacionalismo extremo, militarismo, censura, propaganda de massas e, no Nazismo, antissemitismo/arianismo estatal (Holocausto). • **Guerra Fria (1947-1991 — Mundo Bipolar)**: **EUA (Capitalismo / Doutrina Truman / Plano Marshall / OTAN)** vs. **URSS (Socialismo / COMECON / Pacto de Varsóvia)** — corrida armamentista nuclear, corrida espacial e guerras por procuração (Coreia, Vietnã, Afeganistão), até a Queda do Muro de Berlim (1989) e dissolução da URSS (1991).",
+    "tags": [
+      "historia",
+      "guerra-fria",
+      "modulo-04",
+      "enem"
+    ]
+  },
+  {
+    "front": "Brasil Colônia I: Povos Indígenas, Sistema de Plantation (Açúcar), Escravidão Africana, Quilombos e Invasões Holandesas?",
+    "back": "• **Tríade da Plantation Colonial**: **Latifúndio + Monocultura de Exportação (Cana-de-açúcar no Nordeste) + Mão de Obra Escravizada**. • **Transição da escravidão indígena para a africana**: o **Tráfico Negreiro (Tumbeiros)** gerava lucros gigantescos para a Coroa e traficantes (acumulação primitiva de capital), enquanto os Jesuítas protegiam os indígenas para a catequese e os indígenas conheciam o território e sofriam alta mortalidade por epidemias europeias. • **Resistência Escrava**: **Quilombos** (Palmares — Zumbi e Dandara), fugas, abortos, capoeira e **Sincretismo Religioso** (associar Orixás a santos católicos para preservar a fé africana!). • **Brasil Holandês (Maurício de Nassau em Pernambuco, 1630-1654)**: empréstimos aos senhores de engenho, liberdade religiosa, urbanização de Recife e pintores **Frans Post e Albert Eckhout**; expulsos na **Insurreição Pernambucana**, levando o açúcar para as Antilhas (crise do açúcar brasileiro!).",
+    "tags": [
+      "historia",
+      "brasil-colonia",
+      "escravidao",
+      "modulo-05",
+      "enem"
+    ]
+  },
+  {
+    "front": "Brasil Colônia II: Ciclo do Ouro (Século XVIII), Sociedade Mineradora e Revoltas Nativistas vs. Separatistas (Inconfidência vs. Conjuração Baiana)?",
+    "back": "• **Sociedade do Ouro (Minas Gerais)**: muito mais **urbana, diversificada, com maior mobilidade social**, comércio interno (tropeiros), arte **Barroca Mineira (Aleijadinho e Mestre Ataíde)** e transferência da capital de Salvador para o **Rio de Janeiro (1763)**. Impostos da Coroa: **Quinto (20%)**, Capitação e **Derrama** (cobrança forçada de impostos atrasados). • **Revoltas Nativistas (NÃO queriam separar de Portugal — apenas contra abusos locais)**: Beckman (MA), Emboabas (MG), Mascates (PE: Olinda vs. Recife) e Vila Rica (Filipe dos Santos). • **Revoltas Separatistas / Emancipacionistas (Iluministas — queriam INDEPENDÊNCIA!)**: 1) **Inconfidência Mineira (1789 — Tiradentes)**: movimento de **ELITE** (mineradores, padres, intelectuais), inspirado nos EUA, **NÃO defendia o fim da escravidão**; 2) **Conjuração Baiana / Revolta dos Alfaiates (1798 — Salvador)**: movimento **POPULAR** (alfaiates, soldados, negros livres e escravizados), inspirado no Haiti e França, **defendia o FIM IMEDIATO DA ESCRAVIDÃO e igualdade racial**!",
+    "tags": [
+      "historia",
+      "ciclo-do-ouro",
+      "revoltas-coloniais",
+      "modulo-05",
+      "enem"
+    ]
+  },
+  {
+    "front": "Período Joanino (1808–1821), Primeiro Reinado (1822–1831) e Período Regencial (Macete Ca-Fa-Ma-Sa-Ba)?",
+    "back": "• **Vinda da Família Real (1808)**: **Abertura dos Portos às Nações Amigas (fim do Pacto Colonial!)**, Tratados de 1810 (privilégios ingleses), criação do Banco do Brasil, Imprensa Régia, Jardim Botânico e Missão Artística Francesa (Debret). • **1º Reinado (D. Pedro I)**: **Constituição Outorgada de 1824** — voto censitário (por renda) e criação do **4º Poder: o PODER MODERADOR** (exclusivo do Imperador, acima dos outros poderes!). Confederação do Equador (1824) e Abdicação em 1831. • **Período Regencial (1831–1840)**: única experiência quase 'republicana' do Império (Ato Adicional de 1834 deu autonomia às províncias) → explodem as **5 Grandes Revoltas Regenciais (Macete Ca-Fa-Ma-Sa-Ba)**: **Ca**banagem (Grão-Pará — populares chegaram ao poder!), **Fa**rroupilha (RS/SC — elite estancieira do charque, Giuseppe e Anita Garibaldi), **Ma**lês (Salvador, 1835 — escravizados muçulmanos alfabetizados em árabe!), **Sa**binada (BA) e **Ba**laiada (MA).",
+    "tags": [
+      "historia",
+      "brasil-imperio",
+      "regencias",
+      "modulo-06",
+      "enem"
+    ]
+  },
+  {
+    "front": "Segundo Reinado (D. Pedro II, 1840–1889): Café, Lei de Terras de 1850, Leis Abolicionistas e Guerra do Paraguai?",
+    "back": "• **Parlamentarismo às Avessas**: o Imperador usava o Poder Moderador para escolher o Primeiro-Ministro entre **Liberais ('Luzias') e Conservadores ('Saquaremas')**, que eram farinha do mesmo saco elitista! • **Economia Cafeeira**: Vale do Paraíba (fluminense, tradicional e escravista) → **Oeste Paulista** (terra roxa, ferrovias, mais moderno e transição para **imigrantes europeus assalariados** sob a ideologia racista do **Branqueamento da População**). • **Lei Eusébio de Queirós (1850)** (proíbe tráfico negreiro) + **LEI DE TERRAS DE 1850** (determinou que a terra pública só poderia ser adquirida por **COMPRA em dinheiro** — objetivo: **impedir que ex-escravizados e imigrantes pobres se tornassem proprietários, forçando-os a trabalhar nas fazendas de café!**). • **Guerra do Paraguai (1864–1870)**: fortaleceu o **Exército Brasileiro**, que passou a defender o Abolicionismo e a República!",
+    "tags": [
+      "historia",
+      "segundo-reinado",
+      "lei-de-terras",
+      "modulo-06",
+      "enem"
+    ]
+  },
+  {
+    "front": "Primeira República / República Velha (1889–1930): Coronelismo, Café com Leite e as Revoltas Urbanas e Rurais (Canudos, Contestado, Vacina e Chibata)?",
+    "back": "• **Constituição de 1891**: voto aberto (**NÃO secreto**), sem mulheres e **sem analfabetos** (~80% da população excluída!). • **Engrenagem Oligárquica**: **Coronelismo** (poder local do coronel) → **Voto de Cabresto** (curral eleitoral) → **Política dos Governadores** (Campos Sales: apoio mútuo entre Presidente e Governadores) → **Política do Café com Leite** (SP e MG) + **Convênio de Taubaté (1906)** (governo comprava e queimava sacas de café para manter o preço alto!). • **Revoltas Rurais Messiânicas**: **Canudos (BA — Antônio Conselheiro**, sertanejos contra fome e latifúndio, retratada em *Os Sertões*) e **Contestado (PR/SC** — ferrovia Brazil Railway expulsou posseiros). • **Revoltas Urbanas no Rio**: **Revolta da Vacina (1904)** (contra a campanha autoritária de Oswaldo Cruz e a reforma urbana higienista 'Bota-Abaixo' de Pereira Passos) e **Revolta da Chibata (1910 — João Cândido, o 'Almirante Negro'**, marinheiros negros contra castigos corporais na Marinha!).",
+    "tags": [
+      "historia",
+      "primeira-republica",
+      "revoltas-republicanas",
+      "modulo-07",
+      "enem"
+    ]
+  },
+  {
+    "front": "Era Vargas (1930–1945): Governo Provisório, Constitucional, Estado Novo, Trabalhismo (CLT) e DIP?",
+    "back": "Dividida em 3 fases (**Macete P-C-E**): 1) **Provisório (1930–34)**: centralização, queima de café, Revolução Constitucionalista de 1932 em SP; 2) **Constitucional (1934–37)**: **Constituição de 1934 garantiu o VOTO FEMININO**, voto secreto e direitos trabalhistas; polarização entre AIB (Integralistas fascistas de Plínio Salgado) e ANL (Comunistas de Luís Carlos Prestes); 3) **Estado Novo (1937–1945 — Ditadura)**: golpe com o falso **Plano Cohen**, Constituição 'Polaca' de 1937, fechamento do Congresso. • **Trabalhismo e Populismo**: criação da **CLT (1943)** e sindicatos atrelados ao Estado (**Peleguismo** — *'Pai dos Pobres e Mãe dos Ricos'*). • **DIP (Departamento de Imprensa e Propaganda)**: censura rígida + propaganda ufanista (*Hora do Brasil*, samba exaltação, Zé Carioca). • **Industrialização de Base**: CSN (Volta Redonda) e Vale do Rio Doce.",
+    "tags": [
+      "historia",
+      "era-vargas",
+      "modulo-08",
+      "enem"
+    ]
+  },
+  {
+    "front": "República Populista (1945–1964): Governo JK ('50 anos em 5') e João Goulart (Reformas de Base)?",
+    "back": "• **Dutra (1946–51)**: alinhamento aos EUA na Guerra Fria e Constituição democrática de 1946. • **Vargas (1951–54)**: nacionalismo econômico ('O Petróleo é Nosso' → criação da **Petrobras** e BNDES) e suicídio na Carta-Testamento. • **Juscelino Kubitschek — JK (1956–1961)**: **Plano de Metas ('50 anos em 5')** e **Desenvolvimentismo** baseado no **Tripé Econômico** (Capital Estatal em energia/estradas + Capital Privado Estrangeiro em bens duráveis/automóveis + Capital Nacional). Construção de **Brasília**, **rodoviarismo** (priorizou estradas e montadoras de carros em detrimento das ferrovias!), geração de **inflação e dívida externa**. • **João Goulart — Jango (1961–1964)**: propôs as **Reformas de Base** (agrária, urbana, bancária, educacional) → deposto pelo Golpe Civil-Militar de 1964.",
+    "tags": [
+      "historia",
+      "republica-populista",
+      "jk",
+      "modulo-09",
+      "enem"
+    ]
+  },
+  {
+    "front": "Ditadura Militar no Brasil (1964–1985): Presidentes (Macete Ca-Co-Me-Ge-Fi), AI-5, Milagre Econômico e Redemocratização?",
+    "back": "Os 5 generais (**Macete Ca-Co-Me-Ge-Fi**): 1) **Ca**stelo Branco (1964–67): AI-1, **AI-2 (extinguiu partidos e criou o Bipartidarismo: ARENA [governo] vs. MDB [oposição consentida])**, Constituição de 1967; 2) **Co**sta e Silva (1967–69): Passeata dos Cem Mil, Tropicália e decretação do **AI-5 (13/12/1968 — o ato mais duro: fechou o Congresso, suspendeu o *habeas corpus*, institucionalizou a tortura e a censura prévia!)**; 3) **Mé**dici (1969–74 — 'Anos de Chumbo'): auge da repressão (DOI-CODI) + propaganda ufanista da Copa de 70 (*'Brasil: ame-o ou deixe-o'*) + **Milagre Econômico** (grandes obras faraônicas como Transamazônica e Itaipu com empréstimos externos e **arrocho salarial / concentração de renda: 'fazer o bolo crescer para depois dividir'**); 4) **Ge**isel (1974–79): abertura 'lenta, gradual e segura' e **Revogação do AI-5**; 5) **Fi**gueiredo (1979–85): **Lei da Anistia (1979)**, volta do Pluripartidarismo e campanha das **Diretas Já (1984)**.",
+    "tags": [
+      "historia",
+      "ditadura-militar",
+      "modulo-10",
+      "enem"
+    ]
+  },
+  {
+    "front": "Nova República (1985–Hoje): Constituição Cidadã de 1988, Plano Real e Conquistas Sociais?",
+    "back": "• **Constituição de 1988 ('Constituição Cidadã' — Ulysses Guimarães)**: marco da redemocratização! Principais conquistas cobradas no ENEM: 1) **Voto facultativo para analfabetos** e jovens de 16 a 18 anos; 2) Criação do **SUS (Sistema Único de Saúde — universal e gratuito)**; 3) **Racismo tornou-se crime inafiançável e imprescritível**; 4) Reconhecimento do **direito originário dos Povos Indígenas à demarcação de suas terras** e proteção às comunidades **Quilombolas**; 5) *Habeas Data*, Mandado de Segurança Coletivo e Ação Popular. • **Plano Real (1994 — Itamar Franco / FHC)**: criação da **URV (Unidade Real de Valor)** que eliminou a hiperinflação inercial brasileira.",
+    "tags": [
+      "historia",
+      "nova-republica",
+      "constituicao-88",
+      "modulo-10",
+      "enem"
+    ]
+  },
+  {
+    "front": "Cartografia e Projeções Cartográficas (Mercator vs. Peters vs. Azimutal) e Fusos Horários?",
+    "back": "• **Projeção Cilíndrica de Mercator (Conforme)**: preserva a **FORMA (ângulos)** dos continentes (ótima para navegação), mas **distorce as ÁREAS** (aumenta a Europa/Groenlândia e diminui a África → visão **Eurocêntrica**!). • **Projeção Cilíndrica de Gall-Peters (Equivalente)**: preserva a **PROPORÇÃO REAL DAS ÁREAS** (destaca o tamanho real da África e América do Sul → visão **Terceiro-Mundista / Descolonizadora**!), mas alonga/deforma os formatos. • **Projeção Azimutal / Plana (Equidistante)**: centrada num ponto (usada no **símbolo da ONU** centrada no Polo Norte para mostrar neutralidade geopolítica!). • **Fusos Horários**: a Terra gira **360° em 24h → 15° = 1 hora** de oeste para leste. Para **Leste (direita): SOMA horas (+)**; para **Oeste (esquerda): SUBTRAI horas (-)**. O Brasil tem 4 fusos (todos atrasados em relação a Greenwich: GMT-2, GMT-3 [Brasília], GMT-4 [Manaus/MT/MS] e GMT-5 [Acre]).",
+    "tags": [
+      "geografia",
+      "cartografia",
+      "modulo-01",
+      "enem"
+    ]
+  },
+  {
+    "front": "Geologia e Relevo: Escudos Cristalinos vs. Bacias Sedimentares vs. Dobramentos Modernos (Onde tem Ferro e onde tem Petróleo)?",
+    "back": "• **Escudos Cristalinos (Crátons — 36% do Brasil)**: terrenos muito antigos (Pré-Cambriano), de rochas magmáticas e metamórficas resistentes → **ricos em MINERAIS METÁLICOS (Minério de Ferro, Manganês, Ouro, Bauxita — ex: Quadrilátero Ferrífero em MG e Serra dos Carajás no PA!)**. • **Bacias Sedimentares (64% do Brasil)**: depressões preenchidas por sedimentos orgânicos e minerais ao longo das eras → **único lugar onde existem COMBUSTÍVEIS FÓSSEIS (Petróleo, Gás Natural, Carvão Mineral e Xisto) e Grandes Aquíferos (Guarani e Alter do Chão)!** • **Dobramentos Modernos (Terciário)**: grandes cadeias montanhosas jovens com vulcanismo e terremotos (Cordilheira dos Andes, Himalaia, Alpes). **O Brasil NÃO possui Dobramentos Modernos** (está no centro da Placa Sul-Americana, por isso tem relevo de baixa/média altitude, muito desgastado pela erosão, com predomínio de Planaltos e Depressões!).",
+    "tags": [
+      "geografia",
+      "geologia-e-relevo",
+      "modulo-02",
+      "enem"
+    ]
+  },
+  {
+    "front": "Pedologia (Solos) e Conservação: Intemperismo Químico vs. Físico, Lixiviação, Laterização, Voçorocas e Técnicas Agrícolas?",
+    "back": "• **Intemperismo Químico**: ação da **ÁGUA** (predomina em climas quentes e úmidos como Amazônia e Zona da Mata → forma **solos PROFUNDOS**). • **Intemperismo Físico (Mecânico)**: ação da **variação de temperatura** (predomina no semiárido da **Caatinga** → forma **solos RASOS e pedregosos**, mas ricos em minerais!). • **Lixiviação**: 'lavagem' dos nutrientes pela água da chuva em solos desmatados. • **Laterização**: formação de uma crosta ferruginosa dura (**canga/laterita**) típica de climas tropicais (Cerrado), deixando o solo ácido (corrige-se com **Calagem = calcário**!). • **Voçoroca**: cratera gigante causada pela erosão pluvial + queda do lençol freático. • **Conservação de Encostas**: **Curvas de Nível** e **Terraceamento** (degraus no morro para frear a velocidade da enxurrada!), **Plantio Direto na Palha** e **Associação/Rotação de Culturas**.",
+    "tags": [
+      "geografia",
+      "solos-e-erosao",
+      "modulo-02",
+      "enem"
+    ]
+  },
+  {
+    "front": "Climatologia do Brasil: Fatores Climáticos, Massas de Ar (mEc, mPa) e como identificar qualquer Climograma do ENEM?",
+    "back": "• **Massas de Ar do Brasil**: **mEc (Equatorial Continental)**: nasce sobre a floresta Amazônica, por isso é **QUENTE E MUITO ÚMIDA** (os **'Rios Voadores'** que levam chuva para o Centro-Oeste, Sudeste e Sul no verão!); **mTc (Tropical Continental)**: única massa **Quente e SECA**; **mPa (Polar Atlântica)**: **Fria e Úmida** (causa frentes frias, geadas no Sul/Sudeste, **chuvas frontais no litoral nordestino no inverno** e o fenômeno da **Friagem** na Amazônia Ocidental!). • **Como ler o Climograma (Barras = Chuva; Linha = Temperatura)**: 1) Chuva alta o ano inteiro + linha reta no topo (~26 °C) = **Equatorial (Amazônia)**; 2) Muita chuva no verão (dez-fev) e **seca no inverno (jun-ago)** = **Tropical Típico (Cerrado / Centro-Oeste)**; 3) Chuva concentrada no **inverno (maio-jul)** = **Litoral Oriental do Nordeste (Zona da Mata)**; 4) Barras quase zeradas o ano todo = **Semiárido (Sertão)**; 5) Chuva bem distribuída + **grande queda da linha de temperatura no meio do ano** = **Subtropical (Sul do Brasil)**.",
+    "tags": [
+      "geografia",
+      "climatologia",
+      "climogramas",
+      "modulo-03",
+      "enem"
+    ]
+  },
+  {
+    "front": "Fenômenos Climáticos e Urbanos: El Niño vs. La Niña, Inversão Térmica e Ilha de Calor?",
+    "back": "• **El Niño** (aquecimento anormal das águas do Pacífico Equatorial): no Brasil, provoca **SECA severa na Amazônia e no Nordeste** e **CHUVAS extremas/enchentes na Região Sul**! (**La Niña** é o resfriamento do Pacífico e causa exatamente o efeito oposto!). • **Ilha de Calor**: o centro urbano asfaltado, verticalizado, com concreto e sem árvores fica vários graus mais quente que a periferia arborizada (solução: **telhados verdes, parques lineares e pavimentação permeável/clara**). • **Inversão Térmica** (comum no **inverno** em metrópoles como São Paulo): o ar frio (mais denso) fica retido próximo ao chão abaixo de uma camada de ar quente → **impede a convecção (subida) do ar e prende os poluentes sobre a cidade**, agravando doenças respiratórias!",
+    "tags": [
+      "geografia",
+      "fenomenos-climaticos",
+      "modulo-03",
+      "enem"
+    ]
+  },
+  {
+    "front": "Os 6 Domínios Morfoclimáticos de Aziz Ab'Sáber e os Hotspots de Biodiversidade do Brasil?",
+    "back": "Aziz Ab'Sáber dividiu o Brasil em **6 Domínios Morfoclimáticos + Faixas de Transição**: 1) **Amazônico**: terras baixas, clima equatorial, floresta latifoliada perene e solo pobre lixiviado (sustentado pela **serrapilheira / ciclagem rápida de húmus**!); 2) **Cerrado**: chapadões tropicais, árvores de raízes profundas e casca grossa (**Hotspot mundial** ameaçado pela soja/pecuária!); 3) **Mares de Morros**: relevo mamelonar ('meia-laranja') no litoral leste e **Mata Atlântica** (**Hotspot** mais devastado pela urbanização histórica!); 4) **Caatinga**: depressões interplanálticas semiáridas, rios intermitentes e vegetação xerófila; 5) **Araucárias**: planalto meridional subtropical com *Pinus* (Mata dos Pinhais); 6) **Pradarias (Pampas/Campanha Gaúcha)**: coxilhas subtropicais com gramíneas (sofre **arenização** no RS!). • **Faixas de Transição**: **Pantanal**, **Mata dos Cocais (Babaçu e Carnaúba no MA/PI)** e **Agreste**.",
+    "tags": [
+      "geografia",
+      "dominios-morfoclimaticos",
+      "biomas",
+      "modulo-04",
+      "enem"
+    ]
+  },
+  {
+    "front": "Demografia e Migrações no ENEM: Transição Demográfica, Bônus Demográfico, Pirâmides Etárias e Fluxos Migratórios?",
+    "back": "• **Transição Demográfica no Brasil**: queda primeiro da **Taxa de Mortalidade** (urbanização, vacinas, saneamento a partir de 1940) e depois queda acentuada da **Taxa de Fecundidade** (entrada da mulher no mercado de trabalho, métodos contraceptivos e alto custo de vida urbano a partir de 1970). • **Consequência Atual**: **Estreitamento da base** (menos crianças) e **alargamento do topo** (envelhecimento populacional → **pressão sobre a Previdência Social e o SUS**!). • **Bônus (Janela) Demográfico**: momento em que a **PEA (População Economicamente Ativa — adultos)** é proporcionalmente maior que a soma de crianças e idosos dependentes. • **Migrações**: **Êxodo Rural** (mecanização do campo), **Migração de Retorno** (volta para o Nordeste pelo crescimento de polos industriais/serviços regionais!), **Migração Pendular** (casa ↔ trabalho todo dia na Região Metropolitana) e **Transumância (Sazonal)** (sertanejo na colheita da cana).",
+    "tags": [
+      "geografia",
+      "demografia",
+      "migracoes",
+      "modulo-05",
+      "enem"
+    ]
+  },
+  {
+    "front": "Urbanização Brasileira: Macrocefalia Urbana, Conurbação, Rede Urbana, Gentrificação e Segregação Socioespacial?",
+    "back": "• **Urbanização Brasileira (a partir de 1950/JK)**: foi **rápida, desordenada e concentrada**, gerando **Macrocefalia Urbana** (inchaço das grandes metrópoles sem infraestrutura de moradia, saneamento e transporte → favelização e ocupação de áreas de risco/encostas/várzeas). • **Conurbação**: união física da malha urbana de dois ou mais municípios vizinhos, formando uma **Região Metropolitana**. • **Rede Urbana Atual**: antes era rígida (Esquema Clássico); hoje é **flexível/desconcentrada** graças às telecomunicações e ao crescimento das **Cidades Médias (Desmetropolização / Interiorização industrial)**. • **Gentrificação ('Enobrecimento Urbano')**: revitalização imobiliária de um bairro antigo/central que **encarece os aluguéis e o custo de vida, expulsando a população pobre original para a periferia**!",
+    "tags": [
+      "geografia",
+      "urbanizacao",
+      "gentrificacao",
+      "modulo-06",
+      "enem"
+    ]
+  },
+  {
+    "front": "Modelos Produtivos Industriais no ENEM: Como diferenciar Taylorismo, Fordismo e Toyotismo (Acumulação Flexível)?",
+    "back": "• **Taylorismo (Administração Científica)**: divisão extrema entre quem planeja (gerência) e quem executa, **cronometragem do tempo** de cada movimento repetitivo e pagamento por produtividade. • **Fordismo (Linha de Montagem em Série)**: esteira rolante, **produção em MASSA padronizada (todos os carros iguais)**, **GRANDES ESTOQUES** em galpões gigantes, operário hiperespecializado em 1 única tarefa (alienação — filme *Tempos Modernos*). • **Toyotismo (Pós-Fordismo / Acumulação Flexível — anos 1970 no Japão)**: produção **JUST-IN-TIME (sem estoques — produz apenas sob demanda!)**, produtos diversificados/customizados, **trabalhador polivalente/multifuncional**, controle de qualidade total, automação/robótica e **Terceirização / Flexibilização trabalhista**.",
+    "tags": [
+      "geografia",
+      "modelos-produtivos",
+      "fordismo-toyotismo",
+      "modulo-07",
+      "enem"
+    ]
+  },
+  {
+    "front": "Espaço Agrário Brasileiro: Revolução Verde, Agronegócio vs. Agricultura Familiar e Fronteira Agrícola MATOPIBA?",
+    "back": "• **Revolução Verde (pós-1960)**: pacote tecnológico no campo (**sementes selecionadas/transgênicas, mecanização pesada, fertilizantes químicos e agrotóxicos**) → aumentou a produtividade de *commodities*, mas gerou **desemprego no campo (êxodo rural), concentração fundiária, perda de biodiversidade e contaminação de solos/águas**. • **Agronegócio (Patronal)** vs. **Agricultura Familiar**: O **Agronegócio** ocupa a maior parte das terras e foca em **Commodities de exportação (Soja, Milho, Cana, Algodão, Carne)**; já a **Agricultura Familiar** representa a maioria dos estabelecimentos rurais, **emprega a maior parte dos trabalhadores do campo** e produz a maior parte dos **alimentos da mesa do brasileiro (feijão, mandioca, hortaliças, leite)**! • **Expansão da Fronteira Agrícola da Soja/Pecuária**: Sul → Centro-Oeste (Cerrado nos anos 70/80 com a EMBRAPA/calagem) → **Arco do Desmatamento (Sul da Amazônia)** e **MATOPIBA (Maranhão, Tocantins, Piauí e Bahia)**!",
+    "tags": [
+      "geografia",
+      "agronegocio",
+      "matopiba",
+      "modulo-08",
+      "enem"
+    ]
+  },
+  {
+    "front": "Filosofia Antiga I: Pré-Socráticos (Arché, Heráclito vs. Parmênides) e Sofistas vs. Sócrates (Ironia e Maiêutica)?",
+    "back": "• **Pré-Socráticos (Filósofos da Physis / Natureza)**: passagem do Mito para o Logos (razão) buscando o princípio primordial (**Arché**). Destaque para o embate: **Heráclito de Éfeso** (*'Tudo flui / Panta Rei'*, ninguém entra duas vezes no mesmo rio — a realidade é o **Devir/Mudança e a luta dos opostos, simbolizada pelo Fogo**) vs. **Parmênides de Eleia** (*'O Ser é e o Não-Ser não é'* — a mudança é ilusão dos sentidos; a realidade é **Imutável e Eterna**). • **Sofistas (Protágoras, Górgias)**: mestres da **Retórica/Oratória** para vencer debates na democracia ateniense → defendiam o **Relativismo da Verdade** (*'O homem é a medida de todas as coisas'*). • **Sócrates**: combatia o relativismo dos sofistas buscando a **Essência/Verdade Universal** através do diálogo em 2 passos: 1) **Ironia** (perguntas que desmontam as falsas certezas: *'Só sei que nada sei'*) e 2) **Maiêutica** ('parto das ideias' — ajudar o interlocutor a dar à luz o conhecimento verdadeiro).",
+    "tags": [
+      "filosofia",
+      "antiga",
+      "socrates",
+      "modulo-01",
+      "enem"
+    ]
+  },
+  {
+    "front": "Filosofia Antiga II: Platão (Mundo das Ideias e Alegoria da Caverna) vs. Aristóteles (Empirismo, Justo Meio e Zoon Politikon)?",
+    "back": "• **Platão (Dualismo / Idealismo)**: divide a realidade em **Mundo Sensível** (corpo, sentidos, aparências mutáveis, cópias imperfeitas = **Doxa/Opinião**) e **Mundo Inteligível / das Ideias** (alma racional, formas perfeitas, eternas e imutáveis = **Episteme/Ciência**). Na **Alegoria da Caverna**, sair das sombras para a luz do Sol é abandonar o senso comum através da **Razão Filosófica (Dialética)**! • **Aristóteles (Realismo / Empirismo)**: critica Platão dizendo que a essência está **DENTRO das próprias coisas deste mundo** (**Substância = Matéria + Forma**; a mudança é a passagem da **Potência ao Ato**, ex: semente em potência vira árvore em ato). Na **Ética (Eudaimonia = Felicidade)**: a virtude (**Aretê**) é o hábito racional do **JUSTO MEIO (Mediania)** entre a falta e o excesso (ex: Coragem é o justo meio entre a Covardia e a Temeridade). Na **Política**: o ser humano é um **Animal Político (*Zoon Politikon*)** que só se realiza plenamente na Pólis visando ao **Bem Comum**.",
+    "tags": [
+      "filosofia",
+      "platao-e-aristoteles",
+      "modulo-01",
+      "enem"
+    ]
+  },
+  {
+    "front": "Filosofia Helenística (Estoicismo, Epicurismo, Cinismo e Ceticismo) e Filosofia Medieval (Agostinho vs. Tomás de Aquino)?",
+    "back": "• **Helenística (busca da Paz Interior / Ataraxia = ausência de perturbação da alma)**: 1) **Estoicismo** (Sêneca, Epicteto, Marco Aurélio): aceitar racionalmente a ordem do cosmos (**Amor Fati**), dominar as paixões e focar apenas no que depende de nós; 2) **Epicurismo** (Epicuro): prazer moderado e racional (**Ausência de dor no corpo [Aponia] e na alma [Ataraxia]**), amizade e superação do medo dos deuses e da morte; 3) **Cinismo** (Diógenes no barril): desprezo radical pelas convenções sociais e bens materiais; 4) **Ceticismo** (Pirro): suspensão do juízo (**Epoché** — nada pode ser afirmado com certeza absoluta). • **Medieval (Fé e Razão)**: **Santo Agostinho (Patrística)**: cristianizou **Platão** (*'Crer para compreender'*, iluminação divina e Livre-Arbítrio como origem do mal); **São Tomás de Aquino (Escolástica)**: cristianizou **Aristóteles** (harmonia entre Fé e Razão + as 5 Vias para provar Deus).",
+    "tags": [
+      "filosofia",
+      "helenistica-e-medieval",
+      "modulo-02",
+      "enem"
+    ]
+  },
+  {
+    "front": "Teoria do Conhecimento Moderna: Racionalismo (Descartes) vs. Empirismo (Bacon, Locke e Hume) vs. Criticismo (Kant)?",
+    "back": "• **Racionalismo (René Descartes)**: os sentidos nos enganam! Usa a **Dúvida Metódica / Hiperbólica** (duvidar de tudo, até de um 'gênio maligno') para chegar à primeira verdade indubitável: **'Penso, logo existo' (*Cogito, ergo sum*)**, defendendo **Ideias Inatas** e o método dedutivo-matemático. • **Empirismo Britânico**: todo conhecimento nasce da **EXPERIÊNCIA SENSORIAL**: **Francis Bacon** (*'Saber é Poder'*, método indutivo experimental e crítica aos 4 Ídolos); **John Locke** (a mente nasce como uma **Tábula Rasa / folha em branco**, sem ideias inatas!); **David Hume** (o hábito/costume cria a crença na causalidade). • **Criticismo de Immanuel Kant ('Revolução Copernicana na Filosofia')**: sintetiza os dois! **'Todo conhecimento começa com a experiência (Empirismo), mas é organizado pelas estruturas a priori da nossa razão (Espaço, Tempo e Categorias — Racionalismo)'**!",
+    "tags": [
+      "filosofia",
+      "epistemologia",
+      "descartes-locke-kant",
+      "modulo-03",
+      "enem"
+    ]
+  },
+  {
+    "front": "Política Moderna: Nicolau Maquiavel (O Príncipe) e os 3 Contratualistas (Thomas Hobbes vs. John Locke vs. Jean-Jacques Rousseau)?",
+    "back": "• **Maquiavel**: separa a **Moral Política** da **Moral Cristã**! O governante precisa de **Virtù** (capacidade de ação, astúcia de raposa e força de leão) para dominar a **Fortuna** (acaso/circunstâncias) e **manter a ordem e a estabilidade do Estado**. • **Comparativo dos 3 Contratualistas (Cai TODO ano no ENEM!)**: 1) **Thomas Hobbes (*O Leviatã*)**: Estado de Natureza = **'O homem é o lobo do homem' (guerra de todos contra todos, medo da morte violenta)** → Contrato Social entrega toda a liberdade a um **Estado ABSOLUTISTA forte** em troca de **Segurança/Paz**; 2) **John Locke (*Pai do Liberalismo*)**: Estado de Natureza = relativo equilíbrio onde já existem **Direitos Naturais Inalienáveis (Vida, Liberdade e PROPRIEDADE PRIVADA fruto do trabalho!)** → Contrato cria um **Estado Liberal Parlamentar limitado** apenas para julgar conflitos e proteger a propriedade (se o governo virar tirano, o povo tem **Direito de Resistência/Revolução**!); 3) **Jean-Jacques Rousseau**: **'O bom selvagem' nasce livre e bom, mas a PROPRIEDADE PRIVADA e a sociedade o corrompem** → Contrato fundado na **Vontade Geral (Soberania Popular / Democracia Direta)**.",
+    "tags": [
+      "filosofia",
+      "contratualistas",
+      "hobbes-locke-rousseau",
+      "modulo-04",
+      "enem"
+    ]
+  },
+  {
+    "front": "Ética no ENEM: Ética do Dever de Kant (Imperativo Categórico) vs. Utilitarismo (Bentham/Mill) vs. Nietzsche?",
+    "back": "• **Immanuel Kant (Ética Deontológica / do Dever)**: uma ação só é moral se feita **POR DEVER** e por **Autonomia da Razão** (e não por interesse, medo de punição ou busca de recompensa!). Regra universal — **Imperativo Categórico**: *'Age apenas segundo uma máxima tal que possas ao mesmo tempo querer que ela se torne uma LEI UNIVERSAL'* e **trate a humanidade sempre como um FIM em si mesma, nunca apenas como um meio/instrumento**! • **Utilitarismo (Jeremy Bentham e John Stuart Mill)**: ética **Consequencialista** — a ação correta é aquela que produz **'a maior felicidade/bem-estar para o maior número possível de pessoas'** (cálculo de custos e benefícios). • **Friedrich Nietzsche**: crítica à tradição socrático-platônica e à moral judaico-cristã ('moral de escravos/rebanho' que nega a vida terrena); propõe a **Transvaloração de todos os valores**, a **Vontade de Potência**, o **Além-do-Homem (*Übermensch*)** e o **Amor Fati**.",
+    "tags": [
+      "filosofia",
+      "etica",
+      "kant-utilitarismo-nietzsche",
+      "modulo-05",
+      "enem"
+    ]
+  },
+  {
+    "front": "Filosofia Contemporânea no ENEM: Escola de Frankfurt (Indústria Cultural), Hannah Arendt, Michel Foucault, Habermas, Rawls e Hans Jonas?",
+    "back": "• **Escola de Frankfurt (Adorno e Horkheimer)**: **Razão Instrumental** (ciência usada para dominar a natureza e o homem) e **Indústria Cultural** (transforma arte e cultura em **mercadoria padronizada de entretenimento**, atrofiando o senso crítico do consumidor!). **Walter Benjamin**: a reprodução técnica (foto/cinema) causa a **Perda da Aura** da obra de arte. • **Hannah Arendt**: estudou os regimes totalitários e criou o conceito de **Banalidade do Mal** (julgamento do nazista Adolf Eichmann: o mal extremo praticado por burocratas 'normais' que apenas cumprem ordens **sem refletir/pensar criticamente**!). • **Michel Foucault**: **Microfísica do Poder** (o poder não está só no Estado; está espalhado em rede por toda a sociedade!), **Sociedade Disciplinar** (escolas, quartéis, hospitais, prisões e o **Panóptico** que dociliza os corpos pela vigilância constante) e **Biopolítica** (controle da vida biológica das populações). • **Jürgen Habermas**: **Razão Comunicativa** (democracia baseada no diálogo livre e no consenso racional na esfera pública). • **John Rawls**: **Justiça como Equidade** e **Véu da Ignorância** (dar mais a quem tem menos). • **Hans Jonas**: **Princípio Responsabilidade** (agir de modo que os efeitos da tecnologia não destruam a vida humana futura na Terra).",
+    "tags": [
+      "filosofia",
+      "contemporanea",
+      "frankfurt-arendt-foucault",
+      "modulo-06",
+      "enem"
+    ]
+  },
+  {
+    "front": "Sociologia Clássica: Émile Durkheim (Fato Social), Max Weber (Ação Social) e Karl Marx (Materialismo Histórico e Mais-Valia)?",
+    "back": "• **Émile Durkheim (Funcionalismo)**: a sociedade prevalece sobre o indivíduo! Objeto da Sociologia = **FATO SOCIAL** (regras, leis, idioma, moral), que tem **3 características obrigatórias**: **1) Coercitividade** (força/punição se descumprir), **2) Exterioridade** (já existia fora de mim antes de eu nascer) e **3) Generalidade** (coletivo). **Solidariedade Mecânica** (sociedades tradicionais por semelhança) vs. **Orgânica** (sociedades capitalistas modernas com alta divisão do trabalho/interdependência). • **Max Weber (Sociologia Compreensiva)**: o indivíduo dá sentido à sociedade! Objeto = **AÇÃO SOCIAL** (Tradicional, Afetiva, Racional referente a Valores e Racional referente a Fins). Em *A Ética Protestante e o Espírito do Capitalismo*, mostra como o calvinismo impulsionou a acumulação capitalista e o **Desencantamento do Mundo** (racionalização/burocratização). • **Karl Marx (Materialismo Histórico-Dialético)**: a história é movida pela **Luta de Classes** (Burguesia dona dos meios de produção vs. Proletariado que vende sua força de trabalho). **Mais-Valia**: tempo de trabalho **NÃO PAGO** ao trabalhador, que é a fonte do lucro capitalista! **Alienação** e **Fetichismo da Mercadoria**.",
+    "tags": [
+      "sociologia",
+      "classicos",
+      "durkheim-weber-marx",
+      "modulo-07",
+      "enem"
+    ]
+  },
+  {
+    "front": "Antropologia e Cultura no ENEM: Etnocentrismo vs. Relativismo Cultural e Patrimônio Material vs. Imaterial (IPHAN)?",
+    "back": "• **Etnocentrismo**: julgar a cultura do outro a partir dos padrões da sua própria cultura, considerando a sua como 'superior/civilizada' e a diferente como 'bárbara/atrasada/exótica' (base da xenofobia, racismo e colonialismo). • **Relativismo Cultural (Franz Boas)**: toda cultura possui sua própria lógica interna e história e só pode ser compreendida dentro de seus próprios valores (**não existe cultura superior nem inferior**!). • **Patrimônio Cultural Material (Tombamento)**: bens físicos tangíveis (centros históricos de Ouro Preto/Olinda, igrejas barrocas, sítios arqueológicos, quadros). • **Patrimônio Cultural Imaterial / Intangível (Registro pelo IPHAN — cai TODO ANO no ENEM!)**: saberes, celebrações, modos de fazer, danças e culinária passados entre gerações (ex: **Roda de Capoeira, Frevo, Samba de Roda, Círio de Nazaré, Ofício das Baianas de Acarajé, Modo de fazer o Queijo Minas Artesanal, Literatura de Cordel, Arte Kusiwa dos indígenas Wajãpi**).",
+    "tags": [
+      "sociologia",
+      "antropologia",
+      "patrimonio-imaterial",
+      "modulo-08",
+      "enem"
+    ]
+  },
+  {
+    "front": "Sociologia Contemporânea e Brasileira: Pierre Bourdieu, Zygmunt Bauman, Sérgio Buarque de Holanda, Gilberto Freyre e Cidadania?",
+    "back": "• **Pierre Bourdieu**: **Capital Cultural** (bagagem educacional/linguística herdada da família que explica a desigualdade escolar), **Habitus** e **Violência Simbólica** (imposição sutil dos padrões estéticos/culturais da classe dominante como se fossem 'naturais' e únicos legítimos, fazendo o dominado se sentir inferior sem usar força física!). • **Zygmunt Bauman**: **Modernidade Líquida** (relações afetivas, empregos e identidades tornaram-se frágeis, descartáveis e voltados ao consumo imediato — *Amor Líquido*, *Vida para Consumo*). • **Sociologia Brasileira**: **Gilberto Freyre (*Casa-Grande & Senzala*)**: miscigenação cultural, mas criticado por criar o **Mito da Democracia Racial**; **Sérgio Buarque de Holanda (*Raízes do Brasil*)**: conceito do **Homem Cordial** (*'cordial' vem de 'cor/coração'* — **NÃO significa bondoso/educado**, e sim aquele que age pela **emoção, intimidade e patrimonialismo**, **misturando o Público com o Privado**!); **Florestan Fernandes**: desmascarou o mito da democracia racial mostrando a marginalização estrutural do negro no pós-abolição.",
+    "tags": [
+      "sociologia",
+      "contemporanea-e-brasileira",
+      "bourdieu-bauman",
+      "modulo-09",
+      "enem"
+    ]
+  },
+  {
+    "front": "Inglês no ENEM: Quais são os Falsos Cognatos (False Friends) e Conectivos que mais caem nas 5 questões?",
+    "back": "• **Top Falsos Cognatos de Inglês**: **ACTUALLY** = na verdade / de fato (não é 'atualmente', que é *currently/nowadays*!); **PRETEND** = fingir (não é 'pretender', que é *intend*!); **REALIZE** = perceber / dar-se conta (não é 'realizar'!); **PREJUDICE** = preconceito (não é 'prejuízo'!); **PUSH** = empurrar vs. **PULL** = puxar; **PARENTS** = pais (pai e mãe; 'parentes' é *relatives*!); **FABRIC** = tecido; **APPLICATION** = inscrição/candidatura; **SCHOLAR** = estudioso/acadêmico; **SUPPORT** = apoiar/sustentar. • **Conectivos Decisivos (Contrast / Concession — onde mora o gabarito!)**: **HOWEVER, NEVERTHELESS, NONETHELESS, YET, STILL** (= porém, contudo); **ALTHOUGH, EVEN THOUGH, THOUGH** (= embora); **DESPITE, IN SPITE OF** (= apesar de); **WHEREAS, WHILE** (= enquanto / ao passo que).",
+    "tags": [
+      "ingles",
+      "falsos-cognatos",
+      "linguagens",
+      "enem"
+    ]
+  },
+  {
+    "front": "Espanhol no ENEM: Quais são os Heterossemânticos (Falsos Amigos) e a regra de MUY vs. MUCHO?",
+    "back": "• **Top Falsos Amigos de Espanhol**: **EMBARAZADA** = grávida (nunca 'embaraçada'!); **EXQUISITO** = delicioso, refinado, excelente; **APELLIDO** = sobrenome (apelido é *apodo*!); **OFICINA** = escritório (oficina mecânica é *taller*!); **CRIANZA** = criação/educação (criança é *niño*); **POLVO** = poeira/pó; **RATO** = momento/instante ('un rato' = um pouquinho de tempo!); **BORRACHO** = bêbado; **BASURA** = lixo; **TODAVÍA** = ainda (*ainda não = todavía no*); **SIN EMBARGO** = no entanto / porém! • **MUY vs. MUCHO**: **MUY** usa-se antes de Adjetivos e Advérbios (*muy bonito, muy bien*, exceto *mejor, peor, mayor, menor* que pedem *mucho*!); **MUCHO/A/OS/AS** usa-se antes de Substantivos ou depois de Verbos (*mucho trabalho, te quiero mucho*).",
+    "tags": [
+      "espanhol",
+      "falsos-amigos",
+      "linguagens",
+      "enem"
+    ]
+  },
+  {
+    "front": "Artes no ENEM: Arte Contemporânea (Instalação, Performance, Happening, Body Art, Land Art, Arte Conceitual e Grafite)?",
+    "back": "• **Arte Conceitual (Marcel Duchamp — *Ready-made* 'A Fonte')**: a **IDEIA e o questionamento** valem mais do que a beleza estética ou a técnica manual tradicional. • **Instalação**: obra tridimensional montada num espaço onde **o espectador entra, caminha e sente a obra com o corpo**. • **Performance vs. Happening**: na **Performance**, o artista executa uma ação corporal planejada usando o próprio corpo como suporte; no **Happening**, há **improvisação e participação ativa do público**, que muda o rumo da obra! • **Land Art**: intervenção artística na própria paisagem natural (desertos, praias, pedras — obra **efêmera/passageira**). • **Grafite / Street Art**: democratização da arte no espaço público urbano, ressignificando muros cinzentos com crítica social e identidade periférica.",
+    "tags": [
+      "artes",
+      "arte-contemporanea",
+      "linguagens",
+      "enem"
+    ]
+  },
+  {
+    "front": "Educação Física e Corpo no ENEM: Esporte de Rendimento vs. Lazer, Padrões Corporais da Mídia e Práticas Corporais de Aventura?",
+    "back": "• **Padrão Corporal Hegemônico e Saúde**: o ENEM critica a imposição midiática de um único 'corpo perfeito/magro/musculoso', que gera **vigorexia, anorexia, bulimia, uso abusivo de anabolizantes e exclusão**, defendendo a **saúde integral (física, mental e social)** e a diversidade corporal. • **Esporte de Alto Rendimento vs. Esporte Educacional/Lazer**: o Esporte de Rendimento tem regras universais rígidas das federações, busca de recordes e mercantilização; já no **Lazer e na Escola**, as regras **podem e devem ser flexibilizadas e adaptadas pelos próprios participantes** para garantir a **INCLUSÃO de todos (meninos, meninas, idosos e PcD)**!",
+    "tags": [
+      "educacao-fisica",
+      "corpo-e-saude",
+      "linguagens",
+      "enem"
+    ]
+  }
+]

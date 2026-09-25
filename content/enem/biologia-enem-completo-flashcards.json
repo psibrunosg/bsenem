@@ -1,0 +1,127 @@
+[
+  {
+    "front": "Propriedades da Água e Sais Minerais (Ferro, Cálcio, Iodo, Sódio/Potássio e Magnésio) na Biologia?",
+    "back": "• **Água**: alto calor específico (estabilidade térmica e resfriamento pelo suor), alta tensão superficial e coesão/adesão por pontes de hidrogênio (subida da seiva bruta por capilaridade/transpiração). • **Sais Minerais**: **Ferro (Fe²⁺)** = centro da Hemoglobina e Mioglobina (falta = **Anemia Ferropriva**); **Cálcio (Ca²⁺)** = ossos, dentes, coagulação sanguínea e **contração muscular (actina/miosina)**; **Iodo (I⁻)** = hormônios T3 e T4 da Tireoide (falta = **Bócio Endêmico**); **Magnésio (Mg²⁺)** = centro da molécula de **Clorofila**; **Sódio (Na⁺) e Potássio (K⁺)** = condução do impulso nervoso.",
+    "tags": ["biologia", "bioquimica", "modulo-01", "enem"]
+  },
+  {
+    "front": "Carboidratos e Lipídios: Como diferenciar Amido, Glicogênio, Celulose, Quitina, Triglicerídeos, Fosfolipídios e Colesterol?",
+    "back": "• **Polissacarídeos de Reserva Energética**: **Amido** (plantas e algas) vs. **Glicogênio** (animais — fígado e músculos — e **FUNGOS**!). • **Polissacarídeos Estruturais**: **Celulose** (parede celular vegetal — fibra insolúvel que estimula o peristaltismo intestinal) vs. **Quitina** (polissacarídeo nitrogenado do **exoesqueleto de Artrópodes** e da **parede celular de Fungos**!). • **Lipídios**: **Triglicerídeos** (reserva energética e isolante térmico); **Fosfolipídios** (anfifílicos: cabeça polar + cauda apolar → bicamada da membrana); **Colesterol** (exclusivo de animais: dá fluidez à membrana e é precursor da **Testosterona, Estrogênio, Progesterona, Cortisol, Sais Biliares e Vitamina D**!).",
+    "tags": ["biologia", "bioquimica", "modulo-01", "enem"]
+  },
+  {
+    "front": "Proteínas, Enzimas (Gráficos de Temperatura e pH) e Vitaminas (Macete KEDA)?",
+    "back": "• **Enzimas**: proteínas catalisadoras que aceleram reações diminuindo a Energia de Ativação (encaixe específico **Chave-Fechadura**). Acima da temperatura ótima (~40 °C em humanos) ou fora do pH ótimo (Pepsina pH 2; Ptialina pH 7; Tripsina pH 8), a enzima sofre **DESNATURAÇÃO** (perde a forma espacial 3D e perde a função!). • **Vitaminas Lipossolúveis (Macete KEDA)**: **K** (coagulação / anti-hemorrágica), **E** (antioxidante), **D** (absorção de cálcio / falta = **Raquitismo**), **A** (retinol / falta = **Cegueira Noturna**). • **Hidrossolúveis**: **C** (colágeno / falta = **Escorbuto**) e **Complexo B** (B1 = Beribéri; B9 ácido fólico = tubo neural do feto; B12 = Anemia Perniciosa).",
+    "tags": ["biologia", "bioquimica", "enzimas-e-vitaminas", "modulo-01", "enem"]
+  },
+  {
+    "front": "Ácidos Nucleicos: Diferenças entre DNA e RNA, Regra de Chargaff (A=T, C≡G) e Dogma Central (Transcrição e Tradução)?",
+    "back": "• **DNA**: açúcar Desoxirribose, fita dupla helicoidal, bases **A = T** (2 pontes de H) e **C ≡ G** (3 pontes de H — quanto maior o % de C+G, maior a temperatura para desnaturar o DNA!). *Macete: 'Agnaldo Timóteo (A=T) e Chico Galo (C≡G)'*. • **RNA**: açúcar Ribose, fita simples, base **Uracila (U)** no lugar da Timina (**A = U**). • **Duplicação do DNA**: **Semiconservativa** (enzima DNA Polimerase; cada fita nova conserva 1 fita antiga). • **Transcrição**: DNA serve de molde para fabricar **RNAm** (no núcleo). • **Tradução (Síntese Proteica)**: **Ribossomo** lê cada **CÓDON** (trinca do RNAm) e o **RNAt** traz o **ANTICÓDON** com o aminoácido correspondente.",
+    "tags": ["biologia", "biologia-molecular", "dna-rna", "modulo-01", "enem"]
+  },
+  {
+    "front": "Por que o Código Genético é Universal e Degenerado (Redundante), e o que é Splicing Alternativo?",
+    "back": "• **Código Genético Universal**: as mesmas trincas (códons) significam os mesmos aminoácidos em todos os seres vivos — é isso que permite que uma **bactéria transgênica leia o gene humano e produza insulina humana idêntica**! • **Código Genético Degenerado (Redundante)**: existem 64 códons para apenas 20 aminoácidos; logo, **códons diferentes podem codificar o MESMO aminoácido**! Consequência: uma **Mutação Silenciosa** troca uma base do DNA (ex: GAA → GAG), mas continua colocando o mesmo aminoácido e a proteína **NÃO muda**! • **Splicing Alternativo**: remoção de íntrons e combinação diferente de **éxons**, permitindo que **1 único gene produza várias proteínas diferentes**!",
+    "tags": ["biologia", "biologia-molecular", "modulo-01", "enem"]
+  },
+  {
+    "front": "Citologia I: Célula Procarionte vs. Eucarionte e Célula Animal vs. Vegetal?",
+    "back": "• **Procarionte (Bactérias e Cianobactérias)**: NÃO tem carioteca (DNA circular solto no nucleoide) e NÃO tem organelas membranosas (sem mitocôndria, sem cloroplasto, sem retículo, sem Golgi, sem lisossomo). Possui apenas **Membrana Plasmática, Citoplasma, Ribossomos 70S, Plasmídeos** e **Parede Celular de Peptidoglicano**. • **Eucarionte Vegetal vs. Animal**: a célula vegetal tem **Parede Celular de Celulose**, **Cloroplastos**, **Plasmodesmos** e **Grande Vacúolo de Suco Celular** (reserva de água/controle osmótico); a célula animal tem **Centríolos** e **Lisossomos** típicos.",
+    "tags": ["biologia", "citologia", "modulo-02", "enem"]
+  },
+  {
+    "front": "Citologia II: Transporte através da Membrana (Difusão Simples, Difusão Facilitada, Osmose e Bomba de Na⁺/K⁺)?",
+    "back": "• **Transporte Passivo (SEM gasto de ATP, a favor do gradiente)**: 1) **Difusão Simples**: passagem direta de gases ($O_2, CO_2$) e lipossolúveis do meio mais para o menos concentrado; 2) **Difusão Facilitada**: passagem de glicose/aminoácidos/íons com ajuda de proteínas **Permeases** (ex: a insulina abre canais GLUT para entrada de glicose!); 3) **Osmose**: passagem exclusiva de **ÁGUA (solvente)** do meio **HIPOTÔNICO (menos concentrado)** para o **HIPERTÔNICO (mais concentrado)**. • **Transporte Ativo (COM gasto de ATP, contra o gradiente)**: **Bomba de Sódio e Potássio** — expulsa **3 Na⁺** para fora e coloca **2 K⁺** para dentro da célula!",
+    "tags": ["biologia", "citologia", "transporte-celular", "modulo-02", "enem"]
+  },
+  {
+    "front": "Citologia III: Funções de RER, REL, Complexo de Golgi, Lisossomos, Peroxissomos, Mitocôndrias e Cloroplastos?",
+    "back": "• **RER (Rugoso)**: síntese de proteínas de exportação (pâncreas, plasmócitos). • **REL (Liso)**: síntese de lipídios/hormônios esteroides e **DESINTOXICAÇÃO de álcool e medicamentos no fígado**! • **Complexo de Golgi**: secreção celular, glicosilação, lamela média vegetal e formação do **ACROSSOMO do espermatozoide**. • **Lisossomos**: digestão intracelular ácida (fagocitose, autofagia e **autólise na regressão da cauda do girino e na doença Silicose dos mineiros**!). • **Peroxissomos**: enzima **Catalase** decompõe água oxigenada ($2 H_2O_2 \\to 2 H_2O + O_2$). • **Mitocôndrias e Cloroplastos**: **Teoria Endossimbiótica** (DNA próprio circular, ribossomos próprios e autoduplicação; herança mitocondrial é **100% materna**!).",
+    "tags": ["biologia", "citologia", "organelas", "modulo-02", "enem"]
+  },
+  {
+    "front": "Bioenergética I: Fermentação Alcoólica vs. Fermentação Lática vs. Respiração Aeróbica?",
+    "back": "• **Fermentação** (ocorre toda no **citosol**, sem $O_2$, gera só **2 ATP**): 1) **Alcoólica** (leveduras *Saccharomyces*): Glicose → 2 Etanol + **2 CO₂** (o gás $CO_2$ faz a massa do pão crescer e gaseifica bebidas; o etanol evapora no forno!); 2) **Lática** (bactérias *Lactobacillus* e músculos humanos em fadiga): Glicose → 2 Ácido Lático (**NÃO libera $CO_2$**; coagula o leite formando iogurte e queijos!). • **Respiração Aeróbica (~30 a 38 ATP)**: 1) **Glicólise** (citosol) → 2) **Ciclo de Krebs** (matriz mitocondrial, libera $CO_2$) → 3) **Cadeia Respiratória / Fosforilação Oxidativa** (cristas mitocondriais — onde o **$O_2$ é consumido** como aceptor final de elétrons formando $H_2O$!).",
+    "tags": ["biologia", "bioenergetica", "respiracao", "modulo-03", "enem"]
+  },
+  {
+    "front": "Bioenergética II: Fotossíntese (Fase Clara nos Tilacoides vs. Fase Escura no Estroma) e Quimiossíntese?",
+    "back": "• **Fase Clara (Fotoquímica — nos Tilacoides)**: absorção de luz pela Clorofila (absorve muito o **Azul e o Vermelho** e reflete o **Verde**!) → ocorre a **Fotólise da Água ($H_2O$)** liberando **gás Oxigênio ($O_2$)**, prótons $H^+$, elétrons, ATP e NADPH. *Atenção ENEM: 100% do $O_2$ liberado na fotossíntese vem da ÁGUA ($H_2O$), nunca do $CO_2$!* • **Fase Escura (Ciclo de Calvin — no Estroma)**: usa o ATP e o NADPH para **fixar o $CO_2$** atmosférico e produzir **Glicose ($C_6H_{12}O_6$)**.",
+    "tags": ["biologia", "bioenergetica", "fotossintese", "modulo-03", "enem"]
+  },
+  {
+    "front": "Divisão Celular: Mitose vs. Meiose, Crossing-Over, Cariótipo e Não-Disjunção Cromossômica (Aneuploidias)?",
+    "back": "• **Mitose ($2n \\to 2n$ — Equacional)**: mantém o nº de cromossomos; gera 2 clones idênticos (crescimento, regeneração, reprodução assexuada e produção de gametas nas PLANTAS!). • **Meiose ($2n \\to n$ — Reducional)**: reduz o nº de cromossomos à metade; gera 4 células haploides (gametas nos animais e esporos nas plantas). • **Prófase I da Meiose**: ocorre o **Crossing-over (Permutação)** entre cromossomos homólogos (principal fonte de recombinação gênica!). • **Metáfase**: cromossomos no grau máximo de espiralização no equador (fase ideal para **Cariótipo**). • **Não-Disjunção na Meiose**: falha na separação gera **Aneuploidias** como **Síndrome de Down (Trissomia do 21: 47, XX ou XY +21)**, **Klinefelter (47, XXY)** e **Turner (Monossomia 45, X0)**.",
+    "tags": ["biologia", "divisao-celular", "modulo-04", "enem"]
+  },
+  {
+    "front": "Fisiologia Humana I: Sistema Digestório (Enzimas, pH de cada órgão e Função da Bile)?",
+    "back": "1) **Boca (pH ≈ 7, neutro)**: **Ptialina (Amilase salivar)** quebra **Amido** em maltose. 2) **Estômago (pH ≈ 2, ácido pelo HCl)**: **Pepsina** quebra **Proteínas**. 3) **Duodeno / Intestino Delgado (pH ≈ 8, básico pelo Bicarbonato pancreático)**: Suco Pancreático (**Tripsina** p/ proteínas, **Lipase** p/ lipídios, **Amilase pancreática** p/ amido) + Suco Entérico (**Maltase, Sacarase, Lactase** — intolerância à lactose é a falta da enzima lactase!). • **BILE (produzida no Fígado e guardada na Vesícula Biliar)**: **NÃO TEM ENZIMAS**! Contém sais biliares anfifílicos que **emulsificam lipídios (como um detergente)** para a lipase atuar mais rápido!",
+    "tags": ["biologia", "fisiologia-humana", "digestorio", "modulo-05", "enem"]
+  },
+  {
+    "front": "Fisiologia Humana II: Sistemas Respiratório (Controle pelo Bulbo e Transporte de CO₂) e Circulatório?",
+    "back": "• **Transporte de Gases**: O $O_2$ vai quase todo ligado ao ferro da **Hemoglobina (Oxiemoglobina)**; já o **$CO_2$ (70%) é transportado dissolvido no plasma na forma de íon BICARBONATO ($HCO_3^-$)** ($CO_2 + H_2O \\rightleftharpoons H_2CO_3 \\rightleftharpoons H^+ + HCO_3^-$). • **Controle pelo Bulbo**: quando fazemos exercício, sobe o $CO_2$ no sangue → aumenta a concentração de $H^+$ (**cai o pH do sangue = acidose**) → o **Bulbo** detecta a queda de pH e acelera a respiração! • **Coração Humano**: Lado **Esquerdo** bombeia apenas sangue **Arterial ($O_2$)** para o corpo (ventrículo esquerdo tem parede muscular muito mais grossa!); Lado **Direito** bombeia sangue **Venoso ($CO_2$)** para os pulmões (Pequena Circulação).",
+    "tags": ["biologia", "fisiologia-humana", "respiratorio-circulatorio", "modulo-05", "enem"]
+  },
+  {
+    "front": "Fisiologia Humana III: Sistema Excretor (Néfron, ADH/Vasopressina e Aldosterona) e Sistema Endócrino (Insulina, Glucagon e Ciclo Menstrual)?",
+    "back": "• **Néfron**: Filtração glomerular (Cápsula de Bowman) → Reabsorção útil de 100% da glicose/aminoácidos, sais e água nos túbulos. • **Hormônio ADH (Antidiurético)**: liberado pela neuro-hipófise quando estamos desidratados → **aumenta a reabsorção de água** nos ductos coletores (urina sai amarela/concentrada). **O Álcool INIBE o ADH** → a pessoa urina em excesso e desidrata! • **Insulina vs. Glucagon (Pâncreas)**: **Insulina** (após comer) **reduz a glicose no sangue**; **Glucagon** (em jejum) **eleva a glicose no sangue** quebrando glicogênio hepático. • **Ciclo Menstrual**: **FSH** (amadurece folículo) + **Estrogênio** (recompõe endométrio) → pico de **LH** (provoca a **Ovulação** no 14º dia) → Corpo Lúteo secreta **Progesterona** (sustenta o endométrio).",
+    "tags": ["biologia", "fisiologia-humana", "endocrino-excretor", "modulo-05", "enem"]
+  },
+  {
+    "front": "Imunologia no ENEM: Qual a diferença exata entre Vacina, Soro Terapêutico e Antibiótico?",
+    "back": "• **Vacina (Imunização ATIVA Artificial)**: contém **ANTÍGENOS** (vírus/bactérias mortos, atenuados, proteínas ou RNAm) → estimula o sistema imune a produzir seus próprios anticorpos e **CÉLULAS DE MEMÓRIA (Linfócitos B e T)** → demora alguns dias, tem efeito **PREVENTIVO e DURADOURO**. • **Soro (Imunização PASSIVA Artificial — ex: soro antiofídico contra veneno de cobra ou antitetânico)**: contém **ANTICORPOS PRONTOS** retirados de outro animal (cavalo) → ação **CURATIVA IMEDIATA de emergência**, mas **NÃO gera memória imunológica**! (Leite materno/colostro = Imunização Passiva Natural!). • **Antibiótico**: medicamento químico que mata apenas **BACTÉRIAS** (não funciona contra vírus!).",
+    "tags": ["biologia", "imunologia", "vacina-e-soro", "modulo-05", "enem"]
+  },
+  {
+    "front": "Genética I: 1ª e 2ª Leis de Mendel, Heredogramas (Como descobrir se é Dominante ou Recessivo em 3 segundos)?",
+    "back": "• **Truque de Ouro do Heredograma**: Procure no gráfico **DOIS PAIS IGUAIS QUE TIVERAM UM FILHO DIFERente DELES** (*'Pais normais tiveram filho afetado'*): 1) A característica do **FILHO diferente é 100% RECESSIVA ($aa$)**! 2) A característica dos **PAIS iguais é 100% DOMINANTE ($Aa \\times Aa$)**! • **1ª Lei de Mendel ($Aa \\times Aa$)**: $1/4\\text{ }AA : 2/4\\text{ }Aa : 1/4\\text{ }aa$ (Fenótipo **3 : 1**). • **2ª Lei de Mendel ($AaBb \\times AaBb$)**: calcule cada par separado por probabilidade e **MULTIPLIQUE** (ex: chance de $aabb$ = $1/4 \\times 1/4 = 1/16$)!",
+    "tags": ["biologia", "genetica", "heredograma", "modulo-06", "enem"]
+  },
+  {
+    "front": "Genética II: Sistema Sanguíneo ABO, Fator Rh (Eritroblastose Fetal) e Herança Ligada ao Cromossomo X?",
+    "back": "• **Sistema ABO**: Alelos $I^A = I^B > i$. **Tipo A** ($I^A I^A$ ou $I^A i$), **Tipo B** ($I^B I^B$ ou $I^B i$), **Tipo AB** ($I^A I^B$ — **Receptor Universal**, sem aglutininas no plasma), **Tipo O** ($ii$ — **Doador Universal**, sem aglutinogênios nas hemácias). • **Eritroblastose Fetal**: ocorre exclusivamente quando **Mãe é Rh⁻ ($rr$)** e gera **Filho Rh⁺ ($Rr$)** (pai Rh⁺). Na 1ª gestação Rh⁺ a mãe é sensibilizada no parto; na 2ª gestação Rh⁺ os anticorpos anti-Rh destroem as hemácias do feto. Prevenção: injeção de soro **anti-Rh (RhoGAM)** na mãe logo após o parto! • **Herança Ligada ao Sexo (Daltonismo $X^d$ e Hemofilia $X^h$)**: o pai transmite seu cromossomo $X$ para **100% das filhas mulheres**, e nunca para o filho homem!",
+    "tags": ["biologia", "genetica", "abo-rh", "modulo-06", "enem"]
+  },
+  {
+    "front": "Biotecnologia no ENEM: Transgênicos (DNA Recombinante), Clonagem, Células-Tronco, PCR, Teste de DNA e Terapia Gênica?",
+    "back": "• **Transgênico (Tecnologia do DNA Recombinante)**: organismo que recebe um gene de **OUTRA espécie** cortado por **Enzimas de Restrição** e colado por **DNA Ligase** num vetor (**Plasmídeo bacteriano**) — ex: bactéria fabricando insulina humana ou hormônio GH; plantas Bt resistentes a insetos. • **Clonagem (Transferência Nuclear)**: núcleo $2n$ de célula somática inserido em óvulo sem núcleo → gera indivíduo **geneticamente idêntico ao doador do núcleo** (sem variabilidade genética!). • **Teste de Paternidade / Forense (Eletroforese em Gel)**: No crime/estupro, a amostra do culpado tem que bater **100% das bandas** com o vestígio; na **Paternidade**, toda banda do filho que NÃO está na mãe tem que estar obrigatoriamente no pai!",
+    "tags": ["biologia", "biotecnologia", "modulo-07", "enem"]
+  },
+  {
+    "front": "Evolução I: Lamarckismo vs. Darwinismo vs. Neodarwinismo (A Pegadinha das Superbactérias e Pragas Agrícolas)?",
+    "back": "• **Lamarck (Uso e Desuso + Transmissão dos Caracteres Adquiridos)**: dizia que o meio muda e força o ser vivo a se modificar para se adaptar. **Toda alternativa do ENEM que disser que 'a bactéria sofreu mutação PARA resistir ao antibiótico' ou 'o inseto se acostumou ao veneno' é LAMARCKISTA e está ERRADA!** • **Darwin / Neodarwinismo (Teoria Sintética)**: as **Mutações** e a **Recombinação Gênica (Crossing-over/Meiose)** ocorrem **AO ACASO** antes do antibiótico; o medicamento ou agrotóxico apenas mata os indivíduos sensíveis e **SELECIONA os resistentes pré-existentes**, que se reproduzem e dominam a população!",
+    "tags": ["biologia", "evolucao", "selecao-natural", "modulo-08", "enem"]
+  },
+  {
+    "front": "Evolução II: Homologia (Irradiação Adaptativa) vs. Analogia (Convergência Evolutiva) e Especiação (Alopátrica vs. Simpátrica)?",
+    "back": "• **Órgãos Homólogos**: têm a **MESMA origem embrionária / ancestral comum**, podendo ter funções diferentes (ex: braço humano, pata do cavalo, asa do morcego e nadadeira da baleia) → fruto de **Irradiação Adaptativa (Divergência Evolutiva)**. • **Órgãos Análogos**: têm **origens embrionárias DIFERENTES**, mas exercem a **MESMA função** por viverem em ambientes semelhantes (ex: asa de ave e asa de inseto; formato hidrodinâmico de tubarão [peixe] e golfinho [mamífero]) → fruto de **Convergência Evolutiva**. • **Especiação Alopátrica**: começa com uma **Barreira Geográfica física** (rio, montanha, desmatamento) → acúmulo de mutações e seleção natural → **Isolamento Reprodutivo**.",
+    "tags": ["biologia", "evolucao", "especiacao", "modulo-08", "enem"]
+  },
+  {
+    "front": "Ecologia I: Cadeias e Teias Alimentares, Pirâmides de Energia/Biomassa e Magnificação Trófica (Bioacumulação de Mercúrio/DDT)?",
+    "back": "• **Produtores** (1º nível trófico: plantas, algas, cianobactérias) → **Consumidores Primários** (2º nível: herbívoros) → **Secundários** (3º nível: carnívoros)... • **Fluxo de Energia**: é **UNIDIRECIONAL** e perde ~90% na forma de calor/metabolismo a cada nível (a **Pirâmide de Energia NUNCA pode ser invertida**!). • **Magnificação Trófica (Bioacumulação)**: poluentes não-biodegradáveis e acumulativos (**Mercúrio de garimpo, Chumbo, agrotóxico DDT**) fazem o caminho INVERSO da energia: **acumulam-se cada vez mais nos níveis superiores**, atingindo a **concentração MÁXIMA nos predadores de TOPO de cadeia (aves marinhas, peixes carnívoros grandes e seres humanos)**!",
+    "tags": ["biologia", "ecologia", "cadeia-alimentar", "modulo-09", "enem"]
+  },
+  {
+    "front": "Ecologia II: Todas as Relações Ecológicas Harmônicas e Desarmônicas cobradas no ENEM?",
+    "back": "• **Harmônicas (+/+ ou +/0 — ninguém sai prejudicado)**: 1) **Mutualismo (+/+, obrigatório)**: líquens (alga+fungo), micorrizas (fungo+raiz), *Rhizobium*+leguminosa, cupim/boi + protozoários/bactérias digerindo celulose; 2) **Protocooperação (+/+, facultativo)**: anu/pássaro-palito e gado/jacaré, paguro e anêmona; 3) **Inquilinismo / Epifitismo (+/0)**: **orquídeas e bromélias** vivendo sobre troncos de árvores apenas para buscar luz solar (sem roubar seiva!); 4) **Comensalismo (+/0)**: rêmora e tubarão; 5) **Sociedade** (abelhas, formigas — divisão de trabalho sem união anatômica) vs. **Colônia** (corais, caravela-portuguesa — unidos fisicamente). • **Desarmônicas**: **Competição (-/-)**, **Predatismo (+/-)**, **Parasitismo (+/-)** e **Amensalismo/Antibiose (0/-)**: fungos liberando antibióticos ou algas da **Maré Vermelha** liberando toxinas! *Controle Biológico no ENEM: introduzir um predador ou parasitoide natural da praga para substituir agrotóxicos!*",
+    "tags": ["biologia", "ecologia", "relacoes-ecologicas", "modulo-09", "enem"]
+  },
+  {
+    "front": "Ecologia III: Ciclo do Nitrogênio Completo, Rotação de Culturas e Eutrofização Artificial Passo a Passo?",
+    "back": "• **Ciclo do Nitrogênio**: 1) **Fixação**: bactérias **Rizóbios (*Rhizobium*)** associadas às raízes de **Leguminosas (soja, feijão, ervilha, alfafa)** convertem $N_2$ do ar em Amônia ($NH_3/NH_4^+$) — explica por que plantar leguminosas (**Adubação Verde / Rotação de Culturas**) enriquece o solo sem adubo químico! 2) **Nitrosação** (*Nitrosomonas*: $NH_3 \\to NO_2^-$ nitrito); 3) **Nitratação** (*Nitrobacter*: $NO_2^- \\to NO_3^-$ **Nitrato** — principal forma absorvida pelas raízes!); 4) **Desnitrificação** (*Pseudomonas*: devolve $N_2$ ao ar). • **Eutrofização**: Despejo de esgoto ou fertilizantes (ricos em **N e P**) → **Floração de algas** na superfície → Bloqueio da entrada de luz solar → Morte das algas → Explosão de **bactérias aeróbicas decompositoras** → **Consumo do $O_2$ da água (alta DBO)** → **Morte dos peixes por asfixia**!",
+    "tags": ["biologia", "ecologia", "ciclo-do-nitrogenio", "eutrofizacao", "modulo-09", "enem"]
+  },
+  {
+    "front": "Doenças e Parasitologia no ENEM: Vetores, Agentes e Prevenção de Dengue, Malária, Chagas, Leishmaniose, Esquistossomose e Teníase/Cisticercose?",
+    "back": "• **Aedes aegypti (Vírus)**: Dengue, Zika, Chikungunya e Febre Amarela. • **Malária (Protozoário *Plasmodium*)**: mosquito **Anopheles (mosquito-prego)**; destrói hemácias causando febres cíclicas. • **Doença de Chagas (Protozoário *Trypanosoma cruzi*)**: fezes do inseto **Barbeiro** (frestas de casas de barro) OU **via oral por ingestão de açaí/caldo de cana não-pasteurizados** contaminados com o inseto triturado! Afeta o coração (cardiomegalia) e esôfago/cólon. • **Leishmaniose (Protozoário *Leishmania*)**: mosquito-palha (birigui). • **Esquistossomose (Verme *Schistosoma mansoni*)**: hospedeiro intermediário = **Caramujo *Biomphalaria*** em lagoas; larva cercária penetra pela pele. • **Teníase vs. Cisticercose (*Taenia solium*)**: ingerir carne de porco crua/malpassada = **Teníase**; ingerir **OVOS** na água/verdura = **Cisticercose cerebral**!",
+    "tags": ["biologia", "parasitologia", "doencas", "modulo-10", "enem"]
+  },
+  {
+    "front": "Botânica e Biomas no ENEM: Evolução das Plantas, Seiva Bruta vs. Elaborada, Hormônios (Auxina e Etileno) e Adaptações do Cerrado/Caatinga/Mangue?",
+    "back": "• **Evolução Vegetal**: **Briófitas** (avasculares) → **Pteridófitas** (1º vasos condutores: xilema e floema) → **Gimnospermas** (1ª Semente nua + **Tubo Polínico** = fim da dependência da água para fecundar!) → **Angiospermas** (1ª Flor e Fruto). • **Seivas**: **Xilema (Lenhoso)** leva **seiva bruta (água + sais)** da raiz às folhas puxada pela **transpiração foliar (Coesão-Tensão de Dixon)**; **Floema (Liberiano)** leva **seiva elaborada (glicose)** das folhas para a raiz (cortar um anel da casca — **Anel de Malpighi** — interrompe o floema e mata a raiz de fome!). • **Hormônios**: **Auxina** (fototropismo e dominância apical — podar a ponta faz crescer os ramos laterais!) e **Etileno** (gás que amadurece frutos!). • **Biomas**: **Caatinga** (xerófitas, folhas transformadas em espinhos, caules suculentos); **Cerrado** (raízes profundas p/ lençol freático, **casca grossa/cortiça contra queimadas naturais**, troncos retorcidos por solo ácido com alumínio); **Manguezal** (**raízes pneumatóforos** que saem do lodo sem $O_2$ para respirar!).",
+    "tags": ["biologia", "botanica", "biomas", "modulo-11", "enem"]
+  }
+]

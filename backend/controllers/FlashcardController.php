@@ -15,7 +15,7 @@ class FlashcardController {
         $tag = $_GET['tag'] ?? null;
         $dueOnly = isset($_GET['due']) && $_GET['due'] === '1';
         $page = max(1, (int)($_GET['page'] ?? 1));
-        $perPage = min(100, max(1, (int)($_GET['per_page'] ?? 20)));
+        $perPage = min(500, max(1, (int)($_GET['per_page'] ?? 20)));
         $offset = ($page - 1) * $perPage;
         
         $where = 'user_id = ?';

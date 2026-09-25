@@ -1,0 +1,152 @@
+[
+  {
+    "front": "O que são Ordem de Grandeza e Algarismos Significativos na Física?",
+    "back": "Notação científica: N · 10^n (com 1 ≤ N < 10). Para achar a Ordem de Grandeza (OG), compare N com √10 ≈ 3,16: se N < 3,16 → OG = 10^n; se N ≥ 3,16 → OG = 10^(n+1). Algarismos significativos: todos os dígitos corretos + o 1º duvidoso (zeros à esquerda NUNCA contam!). 💡 MACETE: 'Passou de 3,16 (π), sobe o expoente! Zero à esquerda é zero à esquerda mesmo: não vale nada!'",
+    "tags": ["fisica", "fundamentos", "modulo-01", "enem"]
+  },
+  {
+    "front": "Qual a diferença entre Velocidade Média Comum e Velocidade Média quando o percurso é dividido em duas metades iguais de distância?",
+    "back": "• Fórmula geral: Vm = ΔS / Δt. • PEGADINHA CLÁSSICA: Se o móvel faz metade da DISTÂNCIA com velocidade V1 e a outra metade com V2, a velocidade média NÃO é (V1+V2)/2, mas sim a Média Harmônica: **Vm = (2 · V1 · V2) / (V1 + V2)**. 💡 MACETE: 'Metade do caminho com V1 e V2? Dois Vezes V1·V2 dividido pela soma! (Ex: foi a 60 km/h e voltou a 40 km/h → Vm = 2·60·40/100 = 48 km/h, nunca 50!)'.",
+    "tags": ["fisica", "cinematica", "modulo-01", "enem"]
+  },
+  {
+    "front": "Como converter rapidamente m/s para km/h (e vice-versa) sem confundir se multiplica ou divide por 3,6?",
+    "back": "• De m/s → km/h: **MULTIPLICA por 3,6**. • De km/h → m/s: **DIVIDE por 3,6**. 💡 MACETE: Olhe para o tamanho da unidade: 'km' é MAIOR que 'm', então para ir para km/h o número tem que CRESCER (× 3,6). Decorar a trinca mágica do ENEM: **10 m/s = 36 km/h | 20 m/s = 72 km/h | 30 m/s = 108 km/h**.",
+    "tags": ["fisica", "cinematica", "modulo-01", "enem"]
+  },
+  {
+    "front": "Quais são todas as equações do MU e do MUV e os macetes mnemônicos de cada uma?",
+    "back": "1) **MU** (v = constante, a = 0): **S = S₀ + v·t** → *Macete: 'Sorvete'*. 2) **MUV — Velocidade**: **V = V₀ + a·t** → *Macete: 'Vovó Atômica' ou 'Vi Vovó Atrás do Toco'*. 3) **MUV — Posição**: **S = S₀ + V₀·t + (a·t²)/2** → *Macete: 'Sorvetão'*. 4) **Equação de Torricelli** (quando o problema NÃO dá o tempo t!): **V² = V₀² + 2·a·ΔS** → *Macete: 'Vovô e Vovó mais Duas Amigas num Triângulo Sexual'*. 5) **Velocidade Média no MUV**: Vm = (V + V₀)/2.",
+    "tags": ["fisica", "cinematica", "muv", "modulo-01", "enem"]
+  },
+  {
+    "front": "Quais são as propriedades gráficas fundamentais da Cinemática (Gráficos S×t, V×t e a×t)?",
+    "back": "1) No gráfico **S × t**: a inclinação (tangente) dá a **Velocidade**; parábola com concavidade para cima = a > 0 (carinha feliz 😊); concavidade para baixo = a < 0 (carinha triste ☹️). 2) No gráfico **V × t**: a **ÁREA** sob a curva é numericamente igual ao **Deslocamento (ΔS)**, e a inclinação dá a **Aceleração (a)**. 3) No gráfico **a × t**: a **ÁREA** dá a variação da velocidade (**ΔV**). 💡 MACETE: 'Área do V×t = ΔS; Área do a×t = ΔV!'",
+    "tags": ["fisica", "cinematica", "graficos", "modulo-01", "enem"]
+  },
+  {
+    "front": "Como funciona a Queda Livre e a Regra de Galileu (proporção 1 : 3 : 5 : 7)?",
+    "back": "No vácuo, TODOS os corpos caem com a mesma aceleração (g ≈ 10 m/s²), independentemente da massa (uma pena e um martelo chegam juntos!). Partindo do repouso (V₀ = 0), em intervalos iguais de tempo (1 s em 1 s), as distâncias percorridas em cada segundo seguem os números ímpares: **d, 3d, 5d, 7d...** (com g=10 m/s²: no 1º s cai 5 m; no 2º s cai 15 m; no 3º s cai 25 m). 💡 MACETE: 'Caiu do repouso? 5m, 15m, 25m, 35m em cada segundo!'",
+    "tags": ["fisica", "cinematica", "queda-livre", "modulo-01", "enem"]
+  },
+  {
+    "front": "Como resolver Lançamento Oblíquo e Decomposição Vetorial sem decorar seno vs. cosseno?",
+    "back": "O lançamento oblíquo é a soma de dois movimentos independentes: • Eixo X (Horizontal): **MU** (Vx = V₀ · cosθ = constante). • Eixo Y (Vertical): **MUV** com gravidade g (V₀y = V₀ · senθ; no ponto mais alto Vy = 0, mas Vx NÃO é zero!). 💡 MACETE DO ÂNGULO: '**CO**m o ângulo = **CO**sseno; **SE**m o ângulo = **SE**no!' E para alcance máximo no plano horizontal: o ângulo de tiro deve ser **45°** (ângulos complementares como 30° e 60° têm o MESMO alcance!).",
+    "tags": ["fisica", "cinematica", "vetores", "modulo-02", "enem"]
+  },
+  {
+    "front": "Quais são as fórmulas do Movimento Circular Uniforme (MCU) e como funcionam Polias e Engrenagens acopladas?",
+    "back": "• Período (T) e Frequência (f): **f = 1/T**. • Velocidade Linear: **v = 2·π·R·f = ω·R**. • Velocidade Angular: **ω = 2·π·f**. • Aceleração Centrípeta: **acp = v²/R = ω²·R** (aponta para o centro e muda a DIREÇÃO da velocidade!). • **Transmissão por Correia/Contato** (ex: coroa e catraca da bicicleta): têm a MESMA velocidade linear (**vA = vB** → **fA·RA = fB·RB**, ou seja, a roda MENOR gira MAIS rápido!). • **Mesmo Eixo**: têm a MESMA frequência/velocidade angular (**fA = fB** e **ωA = ωB**).",
+    "tags": ["fisica", "cinematica", "mcu", "modulo-02", "enem"]
+  },
+  {
+    "front": "Quais são as 3 Leis de Newton e a pegadinha clássica de Ação e Reação?",
+    "back": "1ª Lei (**Inércia**): todo corpo tende a manter seu estado (repouso ou MRU) se Fr = 0 (explica por que somos jogados para frente na freada — necessidade do cinto!). 2ª Lei (**Princípio Fundamental**): **Fr = m · a**. 3ª Lei (**Ação e Reação**): toda força de ação gera uma reação de mesmo módulo, mesma direção e sentido oposto. 💡 PEGADINHA ENEM: Ação e Reação **NUNCA se anulam** porque atuam em **CORPOS DIFERENTES**! E a força Peso (Terra atrai o bloco) NÃO é par ação-reação da Normal (o par do Peso está no centro da Terra!).",
+    "tags": ["fisica", "dinamica", "leis-de-newton", "modulo-03", "enem"]
+  },
+  {
+    "front": "Como decompor o Peso no Plano Inclinado e calcular a Força de Atrito (Estático vs. Dinâmico)?",
+    "back": "• No Plano Inclinado de ângulo θ: **Px = P · senθ** (puxa o bloco rampa abaixo) e **Py = P · cosθ** (comprime o bloco contra a rampa, logo N = Py). 💡 MACETE: '**SEN**o = desce **SEN**tado (Px); **COS**seno = fica **CO**lado na rampa (Py)!' • Força de Atrito: **Fat = μ · N**. O atrito estático máximo (μe · N) é MAIOR que o atrito dinâmico (μd · N). Por isso o freio **ABS** impede a roda de travar: mantém o atrito estático, parando o carro em menor distância!",
+    "tags": ["fisica", "dinamica", "atrito", "modulo-03", "enem"]
+  },
+  {
+    "front": "O que é Força Centrípeta em curvas, lombadas e depressões?",
+    "back": "A Força Centrípeta NÃO é uma força nova — é a **Resultante** das forças que apontam para o centro da curva (**Fcp = m·v²/R**). • No topo da lombada: **P - N = m·v²/R** (N diminui, sensação de ficar mais leve). • Na depressão (fundo do vale): **N - P = m·v²/R** (N aumenta, sensação de peso maior). • Na curva plana: quem faz o papel de Fcp é a **Força de Atrito** (**Fat = m·v²/R** → velocidade máxima sem derrapar: **v = √(μ·g·R)**, não depende da massa do carro!).",
+    "tags": ["fisica", "dinamica", "modulo-03", "enem"]
+  },
+  {
+    "front": "Como funcionam Torque (Momento de uma Força), Alavancas e Equilíbrio de Corpo Extenso?",
+    "back": "• **Torque (M = F · d · senθ)**: grandeza que produz rotação. Quanto maior o braço de alavanca (**d**), MENOR a força necessária (explica cabo longo de chave de roda e maçaneta longe da dobradiça). • Condições de Equilíbrio Estático: **1) Soma das Forças = 0** (não translada) e **2) Soma dos Torques = 0** (não gira). • Tipos de Alavanca (**Macete F-R-P no meio**): **Interfixa** (Ponto Fixo no meio: gangorra, tesoura), **Inter-resistente** (Resistência no meio: carrinho de mão, quebra-nozes), **Interpotente** (Força Potente no meio: pinça, vara de pesca, antebraço).",
+    "tags": ["fisica", "estatica", "modulo-04", "enem"]
+  },
+  {
+    "front": "Hidrostática Completa: Pressão, Teorema de Stevin, Princípio de Pascal e Empuxo de Arquimedes?",
+    "back": "1) **Pressão**: **P = F / A** (faca afiada corta mais porque diminui a área A, aumentando a pressão!). 2) **Stevin** (pressão no fundo de um líquido): **P = Patm + d · g · h** → pontos na mesma horizontal dentro do mesmo líquido têm a MESMA pressão! 3) **Pascal** (prensa hidráulica / freio a disco): **F₁ / A₁ = F₂ / A₂** (multiplica força, mas conserva energia/trabalho!). 4) **Arquimedes (Empuxo)**: **E = d_líquido · V_submerso · g**. Se o corpo flutua em equilíbrio: **Empuxo = Peso do corpo** (**d_corpo / d_líquido = fração do volume submerso**, ex: gelo com 90% submerso na água!).",
+    "tags": ["fisica", "hidrostatica", "modulo-04", "enem"]
+  },
+  {
+    "front": "Quais são as 3 Leis de Kepler e a Lei da Gravitação Universal de Newton?",
+    "back": "• **1ª Lei (Órbitas)**: planetas descrevem elipses com o Sol em um dos focos. • **2ª Lei (Áreas)**: a linha Sol-planeta varre áreas iguais em tempos iguais → **no Periélio (perto do Sol) o planeta é MAIS RÁPIDO; no Afélio (longe do Sol) é MAIS LENTO!** • **3ª Lei (Períodos)**: **T² / R³ = constante** (quanto mais distante a órbita, maior o ano do planeta). • **Gravitação Universal**: **F = G · M · m / d²** (se dobrar a distância d, a força cai por 4!). • Velocidade orbital de satélite: **v = √(G·M/R)** (independe da massa do satélite!).",
+    "tags": ["fisica", "gravitacao", "modulo-05", "enem"]
+  },
+  {
+    "front": "Trabalho, Potência, Rendimento e Energia Mecânica (Cinética, Potencial Gravitacional e Elástica)?",
+    "back": "• **Trabalho**: **τ = F · d · cosθ** (Força perpendicular ao deslocamento, como a Normal ou Centrípeta, realiza trabalho ZERO!). • **Potência**: **P = τ / Δt = F · v**. • **Energia Cinética**: **Ec = (m · v²)/2** (se dobrar a velocidade v, a energia cinética — e a distância de frenagem — **QUADRUPLICA**!). • **Potencial Gravitacional**: **Epg = m · g · h**. • **Potencial Elástica**: **Epe = (k · x²)/2**. • **Teorema da Energia Cinética**: **τ_resultante = ΔEc**. • Em sistemas conservativos (sem atrito): **Em_inicial = Em_final** (montanha-russa: altura vira velocidade!).",
+    "tags": ["fisica", "energia", "modulo-06", "enem"]
+  },
+  {
+    "front": "Impulso, Quantidade de Movimento e por que Airbags / Parachoques deformáveis salvam vidas?",
+    "back": "• **Impulso**: **I = F · Δt** (área do gráfico F × t). • **Quantidade de Movimento (Momento Linear)**: **Q = m · v**. • **Teorema do Impulso**: **F · Δt = ΔQ = m · Δv**. 💡 EXPLICAÇÃO ENEM (Airbag, capacete, dobrar o joelho ao pular): A variação de quantidade de movimento (ΔQ) para parar a pessoa é a mesma; o airbag **AUMENTA o tempo de colisão (Δt)**, o que **DIMINUI drasticamente a Força média (F)** sobre o corpo! • **Conservação de Q**: em colisões e explosões (sistema isolado), **Q_antes = Q_depois**.",
+    "tags": ["fisica", "dinamica-impulsiva", "modulo-06", "enem"]
+  },
+  {
+    "front": "Escalas Termométricas (°C, °F, K) e Dilatação Térmica (Linear, Superficial, Volumétrica e Anomalia da Água)?",
+    "back": "• Conversão de Escalas: **C / 5 = (F - 32) / 9 = (K - 273) / 5**. Para VARIAÇÃO de temperatura (ΔT): **ΔC / 5 = ΔF / 9 = ΔK / 5** (logo ΔC = ΔK!). • **Dilatação**: Linear **ΔL = L₀ · α · ΔT**; Superficial **ΔA = A₀ · β · ΔT** (com **β = 2α**); Volumétrica **ΔV = V₀ · γ · ΔT** (com **γ = 3α**). • **Lâmina Bimetálica** (disjuntor/ferro elétrico): ao aquecer, curva-se para o lado do metal de MENOR α. • **Comportamento Anômalo da Água (0 °C a 4 °C)**: ao aquecer de 0 °C a 4 °C, a água **CONTRAI** (densidade máxima a **4 °C**), permitindo que lagos congelem só no topo e a vida aquática sobreviva no fundo!",
+    "tags": ["fisica", "termologia", "modulo-07", "enem"]
+  },
+  {
+    "front": "Qual a diferença entre Calor Sensível (Q = m·c·ΔT) e Calor Latente (Q = m·L), e o que é Capacidade Térmica?",
+    "back": "• **Calor Sensível (Macete: 'Qui MaCeTe')**: **Q = m · c · ΔT** → muda a **TEMPERATURA** sem mudar o estado físico. • **Calor Latente (Macete: 'Qui MoLeza')**: **Q = m · L** → muda o **ESTADO FÍSICO** (fusão, vaporização) mantendo a **temperatura CONSTANTE** (patamar reto no gráfico!). • **Capacidade Térmica**: **C = m · c = Q / ΔT**. 💡 APLICAÇÃO ENEM: A água tem altíssimo calor específico (c = 1 cal/g°C), por isso o mar demora a esquentar de dia e demora a esfriar à noite (gerando as brisas marítima e terrestre e regulando o clima litorâneo!).",
+    "tags": ["fisica", "calorimetria", "modulo-07", "enem"]
+  },
+  {
+    "front": "Quais são os 3 processos de Propagação de Calor (Condução, Convecção e Irradiação) e como funciona a Garrafa Térmica?",
+    "back": "1) **Condução**: passa de partícula a partícula sem transporte de matéria (metais têm alta condutividade; ar, lã, isopor e madeira são isolantes térmicos — o casaco não esquenta, ele impede seu calor de sair!). 2) **Convecção**: movimento de massas de fluido por diferença de densidade (**ar quente sobe, ar frio desce** → ar-condicionado fica no ALTO; aquecedor fica emBAIXO!). 3) **Irradiação**: ondas eletromagnéticas (infravermelho), a ÚNICA que ocorre no **VÁCUO** (calor do Sol e efeito estufa). • **Garrafa Térmica**: vácuo evita condução/convecção; paredes espelhadas evitam irradiação; tampa evita convecção.",
+    "tags": ["fisica", "termologia", "modulo-07", "enem"]
+  },
+  {
+    "front": "Gases Ideais (Clapeyron e Lei Geral) e as Leis da Termodinâmica (Isotérmica, Isobárica, Isocórica e Adiabática)?",
+    "back": "• **Clapeyron**: **P · V = n · R · T** (*Macete: 'Por Você Nunca Chorei Tanto'*). • **Lei Geral**: **(P₁ · V₁)/T₁ = (P₂ · V₂)/T₂** (*Macete: 'Piviti Povotó'* — temperatura SEMPRE em Kelvin!). • **1ª Lei da Termodinâmica**: **ΔU = Q - τ** (conservação de energia). • Transformações: 1. **Isotérmica (T = cte)**: **ΔU = 0** → Q = τ; 2. **Isovolumétrica/Isocórica (V = cte)**: **τ = 0** → ΔU = Q (panela de pressão rígida!); 3. **Isobárica (P = cte)**: **τ = P · ΔV**; 4. **Adiabática (Q = 0, rápida ou isolada)**: **ΔU = -τ** (spray desodorante esfria ao expandir rápido!). • **2ª Lei / Máquinas Térmicas**: **η = τ / Q_quente = 1 - Q_fria / Q_quente** (jamais 100% de rendimento!).",
+    "tags": ["fisica", "termodinamica", "modulo-07", "enem"]
+  },
+  {
+    "front": "Óptica Geométrica I: Princípios da Luz, Cores dos Objetos, Espelhos Planos e Esféricos (Côncavo vs. Convexo)?",
+    "back": "• **Cor de um corpo**: um objeto AZUL iluminado por luz VERMELHA monocromática fica **PRETO** (absorve o vermelho e não tem azul para refletir). Branco reflete todas; preto absorve todas. • **Espelho Plano**: imagem virtual, direita, do mesmo tamanho e simétrica. • **Espelho Convexo** (retrovisor de carro e espelho de mercado/portaria): fornece **APENAS um tipo de imagem: Virtual, Direita e MENOR**, ampliando o **CAMPO VISUAL**! • **Espelho Côncavo** (espelho de maquiagem/dentista): quando o objeto está entre o Foco e o Vértice, gera imagem **Virtual, Direita e MAIOR**! • Equação de Gauss: **1/f = 1/p + 1/p'** (*Macete: 'Fimose = Pimba na Pimbinha'*).",
+    "tags": ["fisica", "optica", "modulo-08", "enem"]
+  },
+  {
+    "front": "Óptica Geométrica II: Refração (Lei de Snell), Reflexão Total (Fibra Óptica), Lentes e Defeitos da Visão?",
+    "back": "• **Lei de Snell**: **n₁ · senθ₁ = n₂ · senθ₂** (com **n = c / v**). Na refração, a **FREQUÊNCIA (e a cor) NUNCA muda**; mudam a velocidade (v) e o comprimento de onda (λ)! *Macete: 'Entrou no meio mais refringente (maior n, mais denso), o raio freia e fecha perto da Normal!'* • **Reflexão Total (Fibra Óptica e Miragem)**: exige 1) ir do meio MAIS para o MENOS refringente e 2) ângulo de incidência > ângulo limite (**sen L = n_menor / n_maior**). • **Visão**: **Miopia** (olho longo, imagem ANTES da retina → corrige com lente **DIVERGENTE** / negativa); **Hipermetropia** (olho curto, imagem DEPOIS da retina → corrige com lente **CONVERGENTE** / positiva). *Macete: 'Míope Não Vê Longe → Divergente; Hipermétrope → Convergente!'*",
+    "tags": ["fisica", "optica", "modulo-08", "enem"]
+  },
+  {
+    "front": "Ondulatória I: Equação Fundamental da Onda, Ondas Mecânicas vs. Eletromagnéticas e Longitudinal vs. Transversal?",
+    "back": "• **Equação Fundamental**: **v = λ · f** (*Macete: 'Vem Lamber Ferida' ou 'Vai Embora Logo Fera'*). • **ATENÇÃO ENEM**: A velocidade (**v**) de uma onda depende **EXCLUSIVAMENTE DO MEIO**; a frequência (**f**) depende **EXCLUSIVAMENTE DA FONTE** (não muda ao refratar!). • **Mecânicas** (precisam de meio material, NÃO viajam no vácuo): **SOM**, ondas em cordas, ondas do mar, ultrassom. • **Eletromagnéticas** (viajam no vácuo a c = 3·10⁸ m/s): Rádio, Micro-ondas, Infravermelho, Luz Visível, UV, Raios X, Raios Gama. • **Som no ar** é onda **Mecânica, Longitudinal e Tridimensional** (por isso o som NÃO pode ser polarizado!).",
+    "tags": ["fisica", "ondulatoria", "modulo-09", "enem"]
+  },
+  {
+    "front": "Ondulatória II: Como diferenciar Difração, Interferência, Ressonância, Polarização e Efeito Doppler?",
+    "back": "• **Difração**: capacidade da onda de **CONTORNAR obstáculos** ou espalhar-se ao passar por fendas (melhor quando λ ≈ tamanho da fenda — explica por que ouvimos alguém atrás do muro mas não vemos!). • **Interferência**: superposição de ondas (Construtiva = mesma fase, soma amplitudes; Destrutiva = fases opostas, anula — princípio dos **fones com cancelamento ativo de ruído**!). • **Ressonância**: transferência máxima de energia quando a frequência da fonte iguala a frequência natural do sistema (taça quebrando no grito, micro-ondas aquecendo moléculas de água, sintonizar rádio). • **Polarização**: filtra planos de vibração (SÓ ocorre em ondas **TRANSVERSAIS**, como a luz — óculos Polaroid e cinema 3D). • **Efeito Doppler**: som fica mais **AGUDO (maior f)** na aproximação da ambulância e mais **GRAVE (menor f)** no afastamento!",
+    "tags": ["fisica", "ondulatoria", "fenomenos-ondulatorios", "modulo-09", "enem"]
+  },
+  {
+    "front": "Acústica: Qual a diferença entre Altura, Intensidade e Timbre do Som?",
+    "back": "1) **Altura** → ligada à **FREQUÊNCIA (f)**: som Alto = **AGUDO** (alta frequência); som Baixo = **GRAVE** (baixa frequência). *Pegadinha: 'Abaixar o volume da TV' na Física é diminuir a INTENSIDADE, não a altura!* 2) **Intensidade (Volume)** → ligada à **AMPLITUDE (A)** e energia da onda: som Forte vs. som Fraco (medido em decibéis, dB). 3) **Timbre** → ligado ao **FORMATO DA ONDA** (harmônicos): permite distinguir um violino de um piano tocando a MESMA nota (mesma altura) com o MESMO volume (mesma intensidade)!",
+    "tags": ["fisica", "acustica", "modulo-09", "enem"]
+  },
+  {
+    "front": "Eletrostática: Processos de Eletrização (Atrito, Contato, Indução), Lei de Coulomb, Campo, Potencial e Gaiola de Faraday?",
+    "back": "• **Carga Elementar**: **Q = n · e** (e = 1,6 · 10⁻¹⁹ C). • **Atrito**: corpos de materiais diferentes ficam com cargas de **SINAIS OPOSTOS** e mesmo módulo. • **Contato**: terminam com cargas de **MESMO SINAL** (esferas idênticas dividem a soma por 2). • **Indução**: aproxima o indutor sem tocar, aterra o induzido e afasta → termina com carga de **SINAL OPOSTO**. • **Lei de Coulomb**: **F = k · |Q₁·Q₂| / d²**. • **Campo Elétrico**: **E = F / q** (sai da carga + e entra na -). • **Gaiola de Faraday (Blindagem Eletrostática)**: o campo elétrico no interior de um condutor em equilíbrio é **ZERO** (por isso dentro do carro ou avião é o lugar mais seguro durante uma tempestade de raios!).",
+    "tags": ["fisica", "eletrostatica", "modulo-10", "enem"]
+  },
+  {
+    "front": "Eletrodinâmica I: Corrente, 1ª e 2ª Leis de Ohm, Potência Elétrica e Energia (Conta de Luz em kWh)?",
+    "back": "• **Corrente Elétrica**: **i = ΔQ / Δt** (*Macete: 'Quitute'*). • **1ª Lei de Ohm**: **U = R · i** (*Macete: 'Quem Vê RI'*). • **2ª Lei de Ohm** (resistência do fio/chuveiro): **R = ρ · L / A** (*Macete: 'RoLA'* — no inverno, a chave do chuveiro ENCURTA o comprimento L do resistor → diminui R → aumenta a corrente i e a potência P = U²/R, esquentando mais a água!). • **Potência Elétrica (todas as fórmulas)**: **P = i · U** (*'PIU'*), **P = R · i²** (*'PRI²'* — Efeito Joule/aquecimento em fios) e **P = U² / R** (*'PURI'* — use quando a tensão U da tomada é constante!). • **Conta de Luz (Energia)**: **E = P (em kW) · Δt (em horas)**.",
+    "tags": ["fisica", "eletrodinamica", "modulo-11", "enem"]
+  },
+  {
+    "front": "Eletrodinâmica II: Associação de Resistores (Série vs. Paralelo), Curto-Circuito, Fusível/Disjuntor, Amperímetro e Voltímetro?",
+    "back": "• **Série**: mesmo caminho → **mesma corrente (i)**, a tensão se divide (**U = U₁ + U₂**) e **Req = R₁ + R₂ + ...** (se uma lâmpada queima, TODAS apagam!). • **Paralelo** (instalação residencial!): mesma ddp (**mesmo U**), a corrente se divide e **1/Req = 1/R₁ + 1/R₂** (para 2 resistores: **Req = Produto / Soma**; para N iguais: **Req = R / N**). Se uma lâmpada queima, as outras continuam funcionando normal com o mesmo brilho! • **Disjuntor/Fusível**: ligado em **SÉRIE** com o circuito para cortar a corrente em sobrecarga. • **Amperímetro**: ligado em **SÉRIE** (resistência interna ideal = **0**). • **Voltímetro**: ligado em **PARALELO** (resistência interna ideal = **∞**).",
+    "tags": ["fisica", "eletrodinamica", "circuitos", "modulo-11", "enem"]
+  },
+  {
+    "front": "Eletromagnetismo: Campo Magnético de Ímãs/Correntes, Força Magnética e Indução Eletromagnética (Lei de Faraday-Lenz)?",
+    "back": "• **Inseparabilidade dos Polos**: se quebrar um ímã ao meio, surgem **2 novos ímãs completos** (Norte e Sul nunca existem isolados!). A bússola aponta para o Norte Geográfico porque lá fica o **Sul Magnético** da Terra. • **Força Magnética**: **Fm = q · v · B · senθ** (carga perpendicular a B descreve **MCU** com **R = m·v / q·B**, pois Fm é centrípeta e NÃO realiza trabalho!) e no fio: **Fm = B · i · L · senθ** (*Macete: 'F = B·i·L'*). • **Indução de Faraday-Lenz** (usinas hidrelétricas, dínamo de bicicleta, carregador por indução, cartão aproximação): **VARIAÇÃO de fluxo magnético (ΔΦ/Δt) gera corrente elétrica induzida!** Se o ímã ficar PARADO dentro da bobina, a corrente é ZERO!",
+    "tags": ["fisica", "eletromagnetismo", "modulo-12", "enem"]
+  },
+  {
+    "front": "Física Moderna: Efeito Fotoelétrico de Einstein, Quantização de Planck, Dualidade Onda-Partícula e Radioatividade?",
+    "back": "• **Planck**: a energia do fóton depende APENAS da **frequência (f)**: **E = h · f**. • **Efeito Fotoelétrico (Einstein — placas solares e sensores de porta automática)**: a luz arranca elétrons de uma placa metálica se a **frequência da luz for maior que a frequência mínima (f > f₀)**. Aumentar a INTENSIDADE (brilho) de uma luz de baixa frequência NÃO arranca elétrons; aumentar a intensidade acima de f₀ arranca MAIS elétrons, mas só aumentar a **FREQUÊNCIA** aumenta a energia cinética de cada elétron! • **Radioatividade**: **Alfa (₂⁴α)** = pesada, baixo poder de penetração (papel barra); **Beta (₋₁⁰β)** = elétron rápido (folha de alumínio barra); **Gama (₀⁰γ)** = onda eletromagnética de altíssima frequência e penetração (exige chumbo/concreto espesso).",
+    "tags": ["fisica", "fisica-moderna", "modulo-13", "enem"]
+  }
+]

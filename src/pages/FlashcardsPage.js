@@ -24,7 +24,7 @@ export class FlashcardsPage {
 
   async loadCards() {
     try {
-      const response = await this.api.get('/flashcards?per_page=100');
+      const response = await this.api.get('/flashcards?per_page=500');
       this.cards = response?.success && Array.isArray(response.data) ? response.data.map(normalizeCard) : [];
       this.status = response?.success ? '' : 'Não foi possível carregar seus flashcards agora.';
     } catch {

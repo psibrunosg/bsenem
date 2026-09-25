@@ -1,0 +1,272 @@
+[
+  {
+    "front": "Qual a diferença entre Ditongo, Tritongo e Hiato?",
+    "back": "Ditongo: 2 sons vocálicos na MESMA sílaba (pai, série). Tritongo: 3 sons vocálicos na MESMA sílaba (Uruguai). Hiato: 2 vogais juntas em sílabas SEPARADAS (sa-ú-de, po-e-ta). 💡 MACETE: Vogal + Vogal forte (A, E, O) NUNCA ficam na mesma sílaba — sempre se separam formando Hiato ('Vogais fortes brigam e moram em quartos separados').",
+    "tags": ["portugues", "fonologia", "modulo-01", "enem"]
+  },
+  {
+    "front": "Quando há Dígrafo Consonantal vs. Dígrafo Vocálico?",
+    "back": "Dígrafo = 2 letras com 1 único som (fonema). Consonantal: LH, NH, CH, RR, SS, QU/GU (sem som de U), SC, SÇ, XC. Vocálico: vogal + M ou N na mesma sílaba fechando som nasal (cAMpo = ã, tEMpo = ẽ). 💡 MACETE: Se o 'U' não for pronunciado em QU/GU (queijo, guitarra), é dígrafo (letras > fonemas).",
+    "tags": ["portugues", "fonologia", "modulo-01", "enem"]
+  },
+  {
+    "front": "Quais são as regras gerais de acentuação das Oxítonas, Paroxítonas e Proparoxítonas?",
+    "back": "1) Proparoxítonas: TODAS são acentuadas (lâmpada, médico). 2) Oxítonas: acentuam-se as terminadas em A(s), E(s), O(s), EM, ENS (café, cipó, parabéns). 3) Paroxítonas: acentuam-se TODAS, EXCETO as terminadas em A(s), E(s), O(s), EM, ENS. 💡 MACETE: 'A regra das Oxítonas é o espelho invertido das Paroxítonas!'",
+    "tags": ["portugues", "acentuacao", "modulo-01", "enem"]
+  },
+  {
+    "front": "Qual é a regra do Hiato para acentuação de 'I' e 'U'?",
+    "back": "Acentuam-se o 'I' e o 'U' tônicos quando formam hiato com a vogal anterior, estando sozinhos na sílaba (ou com S) e não seguidos de NH (sa-í-da, ba-ú, pa-ís; mas ra-i-nha e ju-iz não têm acento). 💡 MACETE DO NOVO ACORDO: Caiu o acento em 'I' e 'U' de hiatos nas PAROXÍTONAS após ditongo (feiura, baiuca).",
+    "tags": ["portugues", "acentuacao", "modulo-01", "enem"]
+  },
+  {
+    "front": "O que mudou no Novo Acordo Ortográfico sobre trema, ditongos abertos e hiatos OO/EE?",
+    "back": "1) Trema: abolido em palavras portuguesas (linguiça, frequente). 2) Hiatos OO e EE: perderam o circunflexo (voo, enjoo, leem, veem, creem, deem). 3) Ditongos abertos ÉI, ÓI, ÉU: perderam o acento nas PAROXÍTONAS (ideia, jiboia, heroico), mas MANTIVERAM nas OXÍTONAS e MONOSSÍLABOS (herói, papéis, céu). 💡 MACETE: 'Herói no fim tem troféu (acento); ideia no meio fica sem!'",
+    "tags": ["portugues", "ortografia", "modulo-01", "enem"]
+  },
+  {
+    "front": "Como funciona o acento diferencial de TER e VIR no presente?",
+    "back": "Ele tem / Eles têm; Ele vem / Eles vêm. Nos derivados (manter, conter, intervir, convir): singular leva acento agudo e plural leva circunflexo (ele mantém / eles mantêm; ele intervém / eles intervêm). 💡 MACETE: 'Singular é magrinho (sem chapéu ou agudo); Plural é gordinho (ganha chapéu circunflexo ^)'.",
+    "tags": ["portugues", "acentuacao", "modulo-01", "enem"]
+  },
+  {
+    "front": "Qual a regra definitiva para usar o Hífen com prefixos?",
+    "back": "1) Letras IGUAIS se separam com hífen (micro-ondas, anti-inflamatório). 2) Letras DIFERENTES se juntam (autoestrada, infraestrutura, antissocial, autorretrato — dobrando R e S). 3) Antes de H usa hífen (super-homem). 💡 MACETE: 'Os opostos se atraem (junta tudo) e os iguais se repelem (separa com hífen)!' Exceções fixas com hífen: além, aquém, recém, ex, vice, pós, pré, pró.",
+    "tags": ["portugues", "ortografia", "modulo-01", "enem"]
+  },
+  {
+    "front": "Como usar corretamente os 4 'Porquês' (Por que, Por quê, Porque, Porquê)?",
+    "back": "1) POR QUE (separado/sem acento): início/meio de perguntas ou = 'pelo qual / por qual razão'. 2) POR QUÊ (separado/com acento): fim de frase antes de ponto. 3) PORQUE (junto/sem acento): resposta/explicação (= pois, já que). 4) PORQUÊ (junto/com acento): substantivo, vem com artigo 'o/um' (= o motivo). 💡 MACETE: 'Pergunta no início (por que), pergunta no fim (por quê), resposta (porque) e substantivo com O (o porquê)'.",
+    "tags": ["portugues", "ortografia", "modulo-01", "enem"]
+  },
+  {
+    "front": "Qual a diferença entre MAL vs. MAU, ONDE vs. AONDE e HÁ vs. A?",
+    "back": "• MAL ↔ BEM (advérbio/substantivo/conjunção); MAU ↔ BOM (adjetivo). • ONDE = lugar fixo (quem está, está em); AONDE = movimento/destino (quem vai, vai a). • HÁ = tempo passado (= faz) ou existir; A = tempo futuro ou distância. 💡 MACETE: Desenhe: mAl ↔ bEm (vogais se cruzam) e mAu ↔ bOm (U parece O). Para HÁ/A: 'HÁ anos não te vejo (passado); daqui A dois dias volto (futuro)'.",
+    "tags": ["portugues", "ortografia", "modulo-01", "enem"]
+  },
+  {
+    "front": "Qual a diferença entre Radical, Vogal Temática, Tema, Desinências e Afixos?",
+    "back": "• Radical: base do sentido (PEDR-a, PEDR-eiro). • Vogal temática: liga radical às desinências (cant-A-r = 1ª conj, vend-E-r = 2ª, part-I-r = 3ª). • Tema = Radical + Vogal temática. • Desinências: indicam gênero/número (nominais) ou modo/tempo/número/pessoa (verbais: cantá-VA-MOS). • Afixos: Prefixos (antes) e Sufixos (depois). 💡 MACETE: 'Desinência flexiona; Afixo cria palavra nova'.",
+    "tags": ["portugues", "morfologia", "modulo-02", "enem"]
+  },
+  {
+    "front": "Como diferenciar Derivação Prefixal e Sufixal de Derivação Parassintética?",
+    "back": "Ambas têm prefixo + sufixo. Na Prefixal e Sufixal (ex: IN-feliz-MENTE), se você tirar o prefixo ('felizmente') ou o sufixo ('infeliz'), a palavra continua existindo. Na Parassintética (ex: A-noit-ECER, EM-pobr-ECER), se tirar um dos dois, a palavra NÃO existe ('noitecer' ou 'anoite' não existem). 💡 MACETE: 'Parassíntese é casamento inseparável: tirou um, a palavra morre!'",
+    "tags": ["portugues", "morfologia", "modulo-02", "enem"]
+  },
+  {
+    "front": "O que são Derivação Regressiva e Derivação Imprópria (Conversão)?",
+    "back": "• Regressiva: um verbo perde letras e vira um substantivo abstrato que indica AÇÃO (combater → o combate; chorar → o choro; pescar → a pesca). • Imprópria: a palavra muda de classe gramatical SEM mudar nenhuma letra (ex: 'O jantar estava ótimo' — verbo virou substantivo; 'Comício monstro' — substantivo virou adjetivo). 💡 MACETE: Se o substantivo indica AÇÃO, veio do verbo (regressiva); se indica OBJETO (ex: âncora → ancorar), o verbo veio do substantivo (sufixal).",
+    "tags": ["portugues", "morfologia", "modulo-02", "enem"]
+  },
+  {
+    "front": "Qual a diferença entre Composição por Justaposição e por Aglutinação?",
+    "back": "• Justaposição: palavras se unem SEM perder fonemas/letras (passatempo, girassol, guarda-chuva, pé-de-moleque). • Aglutinação: palavras se fundem PERDENDO letras/sons (planalto = plano + alto; aguardente = água + ardente; embora = em + boa + hora; fidalgo = filho + de + algo). 💡 MACETE: 'Justaposição ficam juntas lado a lado; Aglutinação bate no liquidificador e perde pedaço!'",
+    "tags": ["portugues", "morfologia", "modulo-02", "enem"]
+  },
+  {
+    "front": "Como funcionam os pronomes demonstrativos ESTE, ESSE e AQUELE no Espaço, Tempo e Texto?",
+    "back": "1) ESPAÇO: ESTE (perto de mim, 1ª p.), ESSE (perto de você, 2ª p.), AQUELE (longe dos dois, 3ª p.). 2) TEMPO: ESTE (presente/atual), ESSE (passado ou futuro próximos), AQUELE (passado distante). 3) TEXTO (coesão): ESTE = Catáfora (aponta para o que VAI ser dito: 'O problema é este: ...'); ESSE = Anáfora (retoma o que JÁ foi dito: 'Estudar é essencial. Esse hábito...'). 💡 MACETE: 'ESTE tem T de Trás pra frente (apresenta o novo); ESSE tem SS de Passado (retoma o que passou)!'",
+    "tags": ["portugues", "morfologia", "pronomes", "modulo-03", "enem"]
+  },
+  {
+    "front": "Na retomada de dois termos anteriores (ex: 'Machado e Alencar foram grandes; este realista, aquele romântico'), quem é ESTE e quem é AQUELE?",
+    "back": "• ESTE retoma o ÚLTIMO termo mencionado (o mais próximo no texto: Alencar). • AQUELE retoma o PRIMEIRO termo mencionado (o mais distante no texto: Machado). 💡 MACETE: Olhe para a distância física até a palavra escrita: quem está colado no ponto final é ESTE; quem ficou lá no começo da frase é AQUELE.",
+    "tags": ["portugues", "morfologia", "pronomes", "modulo-03", "enem"]
+  },
+  {
+    "front": "Como usar corretamente os pronomes relativos CUJO, ONDE e QUE/QUEM?",
+    "back": "• CUJO: indica POSSE entre dois substantivos, NUNCA aceita artigo depois ('cujo o' é erro grave!) e concorda com a coisa possuída ('O autor cuja obra li'). • ONDE: exclusivo para LUGAR físico/virtual fixo (= em que). Não use para tempo ou situação ('A época onde' → errado; use 'em que'). • QUEM: só para pessoas e sempre com preposição. 💡 MACETE: 'Depois de CUJO não vem O/A jamais!'",
+    "tags": ["portugues", "morfologia", "pronomes", "modulo-03", "enem"]
+  },
+  {
+    "front": "Quais são os sentidos dos tempos verbais no ENEM (Presente, Pretérito Perfeito, Imperfeito, Mais-que-perfeito e Futuro do Pretérito)?",
+    "back": "• Presente do Indicativo: fato atual, verdade científica ou hábito. • Pretérito Perfeito (cantei): ação concluída/pontual no passado. • Pretérito Imperfeito (cantava): ação contínua, hábito antigo ou descrição de cenário no passado. • Mais-que-perfeito (cantara = tinha cantado): passado anterior a outro passado. • Futuro do Pretérito (cantaria): condição, hipótese, polidez ou incerteza jornalística. 💡 MACETE: 'Imperfeito (-VA/-IA) é o tempo da nostalgia e dos hábitos de infância'.",
+    "tags": ["portugues", "morfologia", "verbos", "modulo-03", "enem"]
+  },
+  {
+    "front": "Como funcionam as Vozes Verbais (Ativa, Passiva Analítica, Passiva Sintética e Reflexiva)?",
+    "back": "• Ativa: sujeito pratica a ação ('O corretor alugou a casa'). • Passiva Analítica: verbo SER + Particípio ('A casa foi alugada pelo corretor'). • Passiva Sintética (Pronominal): VTD + partícula apassivadora SE ('Alugam-se casas' = Casas são alugadas — verbo concorda com o sujeito paciente!). • Reflexiva: faz e recebe ('O menino feriu-se'). 💡 MACETE: Na Passiva Sintética, vire a frase para 'X são Y': 'Alugam-se casas' → 'Casas são alugadas' (plural obrigatório!).",
+    "tags": ["portugues", "morfologia", "verbos", "modulo-03", "enem"]
+  },
+  {
+    "front": "Quais são os 5 tipos de Sujeito e como identificá-los?",
+    "back": "1) Simples: 1 núcleo ('O aluno passou'). 2) Composto: 2+ núcleos ('Pai e filho vieram'). 3) Oculto/Desinencial/Elíptico: não aparece escrito, mas a desinência verbal entrega ('Estudamos muito' = nós). 4) Indeterminado: 3ª p. do plural sem referente ('Roubaram meu carro') OU VI/VTI/VL na 3ª p. singular + SE ('Precisa-se de vendedores'). 5) Inexistente (Oração sem sujeito): fenômenos da natureza, HAVER (= existir/tempo) e FAZER (tempo/clima). 💡 MACETE: 'Haver (existir) e Fazer (tempo) são solteirões convictos: não têm sujeito e ficam sempre no singular!'",
+    "tags": ["portugues", "sintaxe", "modulo-04", "enem"]
+  },
+  {
+    "front": "Como diferenciar VTD, VTI, VTDI, VI e Verbo de Ligação (VL)?",
+    "back": "• VI (Intransitivo): tem sentido completo sozinho (nascer, morrer, cair, chegar, ir). • VTD: pede complemento SEM preposição obrigatória (comprar algo). • VTI: pede complemento COM preposição obrigatória (gostar DE algo, obedecer A alguém). • VTDI: pede os dois (entregar algo A alguém). • VL: não indica ação, apenas liga o sujeito a uma característica/estado (ser, estar, permanecer, ficar, continuar, andar, parecer, tornar-se). 💡 MACETE: Decorar os VLs com a sigla **CAFE P2ST**: Continuar, Andar, Ficar, Estar, Permanecer, Parecer, Ser, Tornar-se.",
+    "tags": ["portugues", "sintaxe", "modulo-04", "enem"]
+  },
+  {
+    "front": "Qual o macete definitivo para diferenciar Adjunto Adnominal (AA) de Complemento Nominal (CN)?",
+    "back": "Dúvida surge em termos com preposição 'DE' ligados a um substantivo (ex: 'amor de mãe' vs 'amor à pátria'): 1) Se estiver ligado a ADJETIVO ou ADVÉRBIO → é 100% Complemento Nominal (CN). 2) Se estiver ligado a SUBSTANTIVO CONCRETO → é 100% Adjunto Adnominal (AA). 3) Se estiver ligado a SUBSTANTIVO ABSTRATO: se o termo PRATICA a ação ou indica posse = AA ('amor de mãe' → a mãe ama, agente); se o termo SOFRE a ação = CN ('construção do prédio' → o prédio é construído, paciente). 💡 MACETE: 'AA = Agente Ativo; CN = Coitado Nocauteado (paciente)!'",
+    "tags": ["portugues", "sintaxe", "modulo-04", "enem"]
+  },
+  {
+    "front": "Qual a diferença entre Aposto e Vocativo?",
+    "back": "• Aposto: termo que explica, resume, especifica ou enumera outro substantivo (ex: 'Machado de Assis, bruxo do Cosme Velho, escreveu Dom Casmurro'; 'A cidade de São Paulo' — aposto especificativo sem vírgula). • Vocativo: termo usado para CHAMAR ou interpelar o interlocutor, sempre isolado por vírgula (ex: 'Amigos, ouçam com atenção!'). 💡 MACETE: 'Vocativo tem VOZ (você chama alguém); Aposto está POSTO ao lado para explicar!'",
+    "tags": ["portugues", "sintaxe", "modulo-04", "enem"]
+  },
+  {
+    "front": "Quais são as 5 Orações Coordenadas Sindéticas e seus conectivos principais?",
+    "back": "1) Aditivas (soma): e, nem, não só... mas também, tampouco. 2) Adversativas (oposição/contraste): mas, porém, contudo, todavia, entretanto, no entanto. 3) Alternativas (escolha/alternância): ou... ou, ora... ora, quer... quer. 4) Conclusivas (conclusão lógica): logo, portanto, por isso, por conseguinte, pois (POSPOSTO ao verbo). 5) Explicativas (justificativa de ordem/hipótese): porque, que, porquanto, pois (ANTEPOSTO ao verbo). 💡 MACETE DO POIS: 'Antes do verbo = Explicativo; Depois do verbo (entre vírgulas) = Conclusivo (= portanto)!'",
+    "tags": ["portugues", "sintaxe", "periodo-composto", "modulo-05", "enem"]
+  },
+  {
+    "front": "Qual o macete para classificar qualquer Oração Subordinada Substantiva?",
+    "back": "Substitua toda a oração introduzida por QUE ou SE pela palavra **ISSO**! A função sintática que 'ISSO' exercer na oração principal será o nome da oração: 1) Subjetiva ('É necessário ISSO' → ISSO é necessário = sujeito). 2) Objetiva Direta ('Desejo ISSO' = OD). 3) Objetiva Indireta ('Necessito DISSO' = OI). 4) Completiva Nominal ('Tenho necessidade DISSO' = CN de substantivo/adjetivo). 5) Predicativa ('O problema é ISSO' = após VL). 6) Apositiva ('Só quero uma coisa: ISSO' = após dois-pontos). 💡 MACETE: 'Trocou por ISSO, matou o serviço!'",
+    "tags": ["portugues", "sintaxe", "periodo-composto", "modulo-05", "enem"]
+  },
+  {
+    "front": "Qual a diferença de sentido entre Oração Subordinada Adjetiva Restritiva e Explicativa (questão clássica do ENEM)?",
+    "back": "• Restritiva (SEM vírgulas): limita o sentido a apenas uma parte do grupo ('Os alunos que estudaram passaram' → só os que estudaram passaram; outros não). • Explicativa (COM vírgulas): generaliza uma característica para TODO o grupo ('Os alunos, que estudaram, passaram' → todos os alunos estudaram e todos passaram). 💡 MACETE: 'Sem vírgula RESTRINGE (só alguns); Com vírgula EXPLICA O TODO (100% do grupo)!'",
+    "tags": ["portugues", "sintaxe", "periodo-composto", "modulo-05", "enem"]
+  },
+  {
+    "front": "Como memorizar as 9 Orações Subordinadas Adverbiais?",
+    "back": "Use o macete **6 C + FTP**: • Causal (porque, já que, visto que, como [no início]). • Consecutiva (tão/tanto... que — indica consequência). • Condicional (se, caso, desde que, contanto que, a menos que). • Concessiva (embora, ainda que, mesmo que, apesar de que, conquanto — quebra de expectativa). • Comparativa (como, mais/menos... do que). • Conformativa (conforme, segundo, consoante, como). • Final (para que, a fim de que). • Temporal (quando, enquanto, assim que, mal). • Proporcional (à medida que, à proporção que, quanto mais... mais). 💡 MACETE: 'CAUSA vem antes (motivo); CONSECUTIVA vem depois (efeito: chorou tanto QUE desidratou)'.",
+    "tags": ["portugues", "sintaxe", "periodo-composto", "modulo-05", "enem"]
+  },
+  {
+    "front": "Qual a diferença entre Conjunção Adversativa (mas, porém) e Concessiva (embora, apesar de) na argumentação?",
+    "back": "Ambas indicam oposição! Porém: • A Adversativa (mas, porém, todavia) apresenta o argumento MAIS FORTE (o autor concorda com o que vem DEPOIS do 'mas'). • A Concessiva (embora, ainda que, apesar de) apresenta o argumento MAIS FRACO (admite um fato contrário, mas ele não impede a tese principal). 💡 MACETE DE REDAÇÃO: 'No EMBORA fica o argumento que você quer enfraquecer; no MAS fica a tese que você quer vencer!'",
+    "tags": ["portugues", "sintaxe", "conectivos", "modulo-05", "enem"]
+  },
+  {
+    "front": "Quais são os casos especiais de Concordância Verbal que mais cobram regra?",
+    "back": "1) HAVER (existir/tempo) e FAZER (tempo/clima): sempre no singular ('Havia muitos problemas', 'Faz dez anos'). Mas EXISTIR varia normalmente ('Existiam problemas')! 2) 'A maioria de / Grande parte de + plural': aceita verbo no singular (concorda com o coletivo) OU no plural (concorda com o especificador). 3) Horas/distâncias (verbo DAR, BATER, SOAR): concorda com o número ('Deram duas horas no relógio', 'O relógio deu duas horas'). 4) Pronome QUE vs. QUEM: 'Fui eu QUE fiz' (concorda com o antecedente) vs. 'Fui eu QUEM fez / fiz' (3ª p. ou antecedente).",
+    "tags": ["portugues", "concordancia", "modulo-06", "enem"]
+  },
+  {
+    "front": "Quais são as regras especiais de Concordância Nominal (ANEXO, MEIO, BASTANTE, É PROIBIDO, MENOS)?",
+    "back": "• ANEXO / OBRIGADO / MESMO / PRÓPRIO: variam com o substantivo ('Seguem anexas as planilhas'; 'Em anexo' é invariável). • MEIO: se = 'um pouco' (advérbio) é invariável ('Ela está meio cansada'); se = 'metade' varia ('Tomou meia garrafa'). • BASTANTE: troque por MUITO — se 'muito' for para o plural, 'bastante' vai para o plural ('Bastantes pessoas' = muitas pessoas). • É BOM / É PROIBIDO / É NECESSÁRIO: sem artigo fica invariável ('Entrada é proibida' → 'É proibido entrada'); com artigo concorda ('É proibida A entrada'). • MENOS / ALERTA: SEMPRE invariáveis ('menas' não existe!).",
+    "tags": ["portugues", "concordancia", "modulo-06", "enem"]
+  },
+  {
+    "front": "Qual a regência dos verbos críticos: ASSISTIR, ASPIRAR, VISAR e IMPLICAR?",
+    "back": "• ASSISTIR: sentido de VER = VTI (pede 'A': 'Assisti AO filme'); sentido de AJUDAR = VTD ('O médico assistiu o paciente'). • ASPIRAR: sentido de CHEIRAR/RESPIRAR = VTD ('Aspirou o ar'); sentido de DESEJAR = VTI ('Aspira AO cargo'). • VISAR: sentido de MIRAR/ASSINAR = VTD ('Visou o cheque'); sentido de OBJETIVAR = VTI ('Visa AO sucesso'). • IMPLICAR: sentido de ACARRETAR/GERAR consequência = VTD, SEM preposição 'em'! ('O atraso implicará demissão', e não 'em demissão'). 💡 MACETE: 'Ver, desejar e objetivar pedem A; implicar (acarretar) tem alergia a EM!'",
+    "tags": ["portugues", "regencia", "modulo-06", "enem"]
+  },
+  {
+    "front": "Qual a regência de ESQUECER/LEMBRAR, PREFERIR, SIMPATIZAR e CHEGAR/IR?",
+    "back": "• ESQUECER / LEMBRAR: sem pronome = VTD ('Esqueci o livro'); com pronome (me, te, se, nos) = VTI, obriga preposição DE ('Esqueci-ME DO livro'). • PREFERIR: é VTDI ('Prefiro X A Y'). NUNCA use 'prefiro mais X do que Y'! • SIMPATIZAR / ANTIPATIZAR: NÃO são pronominais ('Simpatizei com você', nunca 'me simpatizei'). • CHEGAR / IR: pedem preposição A (e não EM) para destino ('Cheguei A casa / AO trabalho', não 'no trabalho'). 💡 MACETE: 'Com pronome tem DE (Lembrei-me DE); sem pronome é direto (Lembrei o fato)'.",
+    "tags": ["portugues", "regencia", "modulo-06", "enem"]
+  },
+  {
+    "front": "Quais são as regras definitivas da Crase (Casos Proibidos, Obrigatórios e Facultativos)?",
+    "back": "Crase = fusão de preposição A + artigo A (à). • PROIBIDA antes de: Masculino, Verbo, Pronomes em geral, Palavra no plural se o 'a' estiver no singular ('Falei a pessoas'), entre palavras repetidas ('cara a cara'). • FACULTATIVA: antes de nome próprio feminino, depois da preposição 'ATÉ' e antes de pronome possessivo feminino singular (minha, tua, sua, nossa, vossa). • OBRIGATÓRIA: locuções adverbiais/prepositivas/conjuntivas femininas (às vezes, à noite, à medida que, à espera de) e horas exatas ('às 14h'). 💡 MACETE: 'Vou A, volto DA → crase HÁ! Vou A, volto DE → crase PRA QUÊ?' e para substantivos comuns: troque a palavra feminina por uma masculina — se virar AO, na feminina tem CRASE!",
+    "tags": ["portugues", "crase", "modulo-06", "enem"]
+  },
+  {
+    "front": "Como funciona a Colocação Pronominal (Próclise, Mesóclise e Ênclise)?",
+    "back": "• PRÓCLISE (antes do verbo: 'Não me diga'): obrigatória quando há PALAVRA ATRATIVA antes do verbo — **Macete 4N + PRISC**: Palavras Negativas (não, nunca, jamais), Pronomes (relativos, indefinidos, demonstrativos, interrogativos), Advérbios (sem vírgula após), Conjunções Subordinativas (que, se, embora, quando) e frases em 'Em + gerúndio'. • MESÓCLISE (no meio do verbo: 'Dir-te-ei'): verbos no Futuro do Presente ou Futuro do Pretérito sem palavra atrativa. • ÊNCLISE (depois do verbo: 'Diga-me'): início de período (NUNCA comece frase com me/te/se/o/a/lhe!) ou após vírgula/gerúndio.",
+    "tags": ["portugues", "colocacao-pronominal", "modulo-06", "enem"]
+  },
+  {
+    "front": "Qual a Regra de Ouro da Vírgula no Período Simples e Composto?",
+    "back": "1) NUNCA separe com vírgula única a ordem direta **SVC** (Sujeito + Verbo + Complemento) nem o Nome de seu Adjunto/Complemento. 2) USE vírgula para: isolar Vocativo, Aposto explicativo, Adjunto Adverbial deslocado (especialmente se longo), Orações Adjetivas Explicativas, Orações Adverbiais deslocadas (antes da principal), enumerar termos de mesma função e marcar Zeugma/Elipse do verbo ('Eu gosto de café; ela, de chá'). 💡 MACETE: 'Sujeito e Verbo são casados: nenhuma vírgula sozinha entra no meio deles!'",
+    "tags": ["portugues", "pontuacao", "modulo-07", "enem"]
+  },
+  {
+    "front": "Qual a diferença entre Homônimos (Homógrafos, Homófonos, Perfeitos) e Parônimos?",
+    "back": "• Homônimos: mesmo som ou mesma escrita. Homógrafos = mesma escrita, som diferente (colher [verbo] / colher [talher]). Homófonos = mesmo som, escrita diferente (sessão / seção / cessão; conserto / concerto). Perfeitos = mesma escrita e mesmo som (caminho [subst.] / caminho [verbo]). • Parônimos: palavras PARECIDAS na escrita e no som, mas diferentes (RATIFICAR = confirmar vs. RETIFICAR = corrigir; IMINENTE = prestes a acontecer vs. EMINENTE = ilustre/elevado; FLAGRANTE = evidente vs. FRAGRANTE = perfumado; MANDADO = ordem judicial vs. MANDATO = tempo político).",
+    "tags": ["portugues", "semantica", "modulo-07", "enem"]
+  },
+  {
+    "front": "Qual a diferença entre Polissemia, Ambiguidade, Hiperonímia e Hiponímia?",
+    "back": "• Polissemia: UMA mesma palavra com vários sentidos dependendo do contexto ('cabeça' do corpo, 'cabeça' do alho, 'cabeça' da equipe). • Ambiguidade (Anfibologia): duplicidade de sentido na construção da frase ('O policial prendeu o ladrão em sua casa' — casa de quem?). Na publicidade/humor é recurso expressivo; na dissertação é vício. • Hiperônimo: termo GERAL/amplo (Fruta, Doença, Animal). • Hipônimo: termo ESPECÍFICO (Maçã, Dengue, Gato). 💡 MACETE DE REDAÇÃO: Use hiperônimos para retomar palavras sem repetir!",
+    "tags": ["portugues", "semantica", "modulo-07", "enem"]
+  },
+  {
+    "front": "Figuras de Palavras (Tropos): Como diferenciar Metáfora, Comparação, Metonímia, Catacrese, Sinestesia e Perífrase/Antonomásia?",
+    "back": "• Comparação (Símile): comparação explícita COM conectivo ('como', 'tal qual', 'feito'). • Metáfora: comparação implícita SEM conectivo ('Meu coração é um balde despejado'). • Metonímia: substituição por relação lógica/proximidade — autor pela obra ('Li Machado'), continente pelo conteúdo ('Comeu dois pratos'), marca pelo produto ('Comprou Gilette'), parte pelo todo ('Sem teto'). • Catacrese: metáfora desgastada por falta de nome próprio ('pé da mesa', 'dente de alho', 'embarcar no avião'). • Sinestesia: mistura de sentidos físicos (visão + audição + paladar: 'voz doce', 'olhar frio', 'perfume verde'). • Perífrase/Antonomásia: apelido consagrado ('Cidade Maravilhosa' = Rio; 'Poeta dos Escravos' = Castro Alves).",
+    "tags": ["portugues", "figuras-de-linguagem", "modulo-08", "enem"]
+  },
+  {
+    "front": "Figuras de Pensamento: Como diferenciar Antítese, Paradoxo (Oxímoro), Eufemismo, Ironia, Hipérbole, Prosopopeia, Gradação e Apóstrofe?",
+    "back": "• Antítese: oposição de ideias que COEXISTEM sem quebrar a lógica ('O dia e a noite', 'Tristeza e alegria'). • Paradoxo (Oxímoro): oposição que se ANULA/contradiz a lógica ('Ferida que dói e não se sente', 'Estou cego e vejo'). • Eufemismo: suavizar ideia chocante ('Ele partiu desta para melhor' = morreu). • Ironia: dizer o oposto do que se pensa com tom crítico/sarcástico. • Hipérbole: exagero intencional ('Morri de rir'). • Prosopopeia (Personificação): dar ações humanas a seres inanimados ('O vento beijou a flor'). • Gradação (Clímax/Anticlímax): sequência crescente ou decrescente ('Andou, correu, voou'). • Apóstrofe: invocação/chamamento dramático (= vocativo literário: 'Ó Deus!').",
+    "tags": ["portugues", "figuras-de-linguagem", "modulo-08", "enem"]
+  },
+  {
+    "front": "Figuras de Sintaxe (Construção): Como diferenciar Elipse, Zeugma, Pleonasmo, Polissíndeto, Assíndeto, Anáfora, Hipérbato, Silepse e Anacoluto?",
+    "back": "• Elipse: omissão de termo subentendido ('Na sala, apenas dois alunos' — omitiu 'havia'). • Zeugma: elipse de termo que JÁ APARECEU antes na frase ('Eu estudo Física; ela, Português'). • Pleonasmo: redundância estilística ('Mar salgado') ou viciosa ('Subir para cima'). • Polissíndeto: repetição de conjunção ('E trabalha, e cansa, e sofre'). • Assíndeto: ausência de conjunções ('Vim, vi, venci'). • Anáfora: repetição da mesma palavra no INÍCIO de versos/frases. • Hipérbato: inversão brusca da ordem direta (como o Hino Nacional). • Silepse: concordância ideológica (com a ideia, não com a palavra: 'São Paulo é poluída' [gênero = a cidade]; 'Os brasileiros somos fortes' [pessoa]). • Anacoluto: termo solto no início da frase sem função sintática.",
+    "tags": ["portugues", "figuras-de-linguagem", "modulo-08", "enem"]
+  },
+  {
+    "front": "Figuras de Som (Harmonia): Aliteração, Assonância, Onomatopeia e Paronomásia?",
+    "back": "• Aliteração: repetição de sons CONSONANTAIS ('O rato roeu a roupa do rei de Roma'). • Assonância: repetição de sons VOCÁLICOS ('Sou um mulato nato no sentido lato'). • Onomatopeia: palavra que imita ruído/som real ('tique-taque', 'bum', 'miau'). • Paronomásia: trocadilho sonoro com palavras parônimas/parecidas ('Quem casa quer casa', 'Conhecer as manhas e as manhãs'). 💡 MACETE: 'Aliteração = Consoante; Assonância = Vogal (começa com A de vogal)'.",
+    "tags": ["portugues", "figuras-de-linguagem", "modulo-08", "enem"]
+  },
+  {
+    "front": "Quais são as 6 Funções da Linguagem de Roman Jakobson e o gatilho de cada uma no ENEM?",
+    "back": "1) Referencial (Denotativa) → foco no CONTEXTO/Assunto: objetiva, 3ª pessoa, dados (notícias, artigos científicos). 2) Emotiva (Expressiva) → foco no EMISSOR (Eu): subjetiva, 1ª pessoa, sentimentos, exclamações (diários, memórias, lírica). 3) Conativa (Apelativa) → foco no RECEPTOR (Você): verbos no imperativo ('Compre', 'Use', 'Previna-se'), propaganda e campanhas de saúde. 4) Fática → foco no CANAL: testar a comunicação ('Alô?', 'Né?', 'Entende?', 'Bom dia!'). 5) Metalinguística → foco no CÓDIGO: o código explicando o próprio código (dicionário, poema sobre fazer poesia, cinema sobre cinema). 6) Poética → foco na MENSAGEM: elaboração estética, ritmo, figuras, sonoridade.",
+    "tags": ["portugues", "funcoes-da-linguagem", "modulo-09", "enem"]
+  },
+  {
+    "front": "Quais são os 4 tipos de Variação Linguística (Macete D-I-A) e o que é Preconceito Linguístico?",
+    "back": "Use o macete das raízes gregas **D-I-A**: • Diatópica (Topos = LUGAR): regionalismos e sotaques ('mandioca / aipim / macaxeira'). • Diastrática (Estrato = GRUPO SOCIAL): gírias de surfistas, jargão médico/jurídico, faixa etária. • Diafásica (Fase = SITUAÇÃO/CONTEXTO): grau de formalidade — como a mesma pessoa fala num tribunal vs. num churrasco. • Diacrônica (Cronos = TEMPO): evolução histórica ('Vossa Mercê → vosmecê → você → cê'). • Preconceito Linguístico: julgar uma variedade não-padrão como 'errada' ou 'inferior', ignorando que toda variedade que cumpre a comunicação é legítima linguisticamente.",
+    "tags": ["portugues", "variacao-linguistica", "modulo-09", "enem"]
+  },
+  {
+    "front": "Qual a diferença entre Norma-Padrão e Norma Culta?",
+    "back": "• Norma-Padrão: modelo idealizado, prescritivo e rígido codificado nas gramáticas tradicionais. • Norma Culta (Variedade Urbana de Prestígio): uso real que falantes escolarizados fazem em situações monitoradas (mais flexível que o padrão rígido). 💡 GATILHO ENEM: No ENEM, a língua nunca é 'certa' ou 'errada' — ela é ADEQUADA ou INADEQUADA à situação comunicativa (gênero, interlocutor e esfera social)!",
+    "tags": ["portugues", "variacao-linguistica", "modulo-09", "enem"]
+  },
+  {
+    "front": "Qual a diferença entre Tipologia Textual (os 5 Tipos) e Gênero Textual?",
+    "back": "• Tipologia Textual (sequências estruturais internas — são apenas 5): 1. Narração (fatos no tempo, enredo, personagens); 2. Descrição (retrato estático, adjetivos); 3. Dissertação Argumentativa (defesa de tese com argumentos); 4. Exposição (explicação neutra de um tema); 5. Injunção (instruções/ordens passo a passo). • Gênero Textual (práticas comunicativas reais — são infinitos): receita, bula, edital (predomina injunção); notícia, conto, crônica, fábula (predomina narração); editorial, artigo de opinião, carta aberta (predomina argumentação). 💡 MACETE: 'Tipo é o ingrediente estrutural (5); Gênero é o prato pronto que circula na sociedade!'",
+    "tags": ["portugues", "generos-textuais", "modulo-10", "enem"]
+  },
+  {
+    "front": "Qual a diferença entre Pressuposto e Subentendido na interpretação de texto?",
+    "back": "• Pressuposto: informação implícita que está PROVADA por uma marca linguística dentro da frase ('Pedro PAROU de fumar' → pressuposto comprovado pelo verbo 'parar': Pedro fumava antes). • Subentendido: insinuação deduzida pelo contexto, SEM marca formal, pela qual o ouvinte é responsável ('Está frio aqui, né?' → subentendido: feche a janela). 💡 MACETE: 'Pressuposto tem PISTA na palavra; Subentendido é indireta do contexto!'",
+    "tags": ["portugues", "interpretacao", "modulo-10", "enem"]
+  },
+  {
+    "front": "Como diferenciar Paráfrase, Paródia, Citação, Alusão e Epígrafe na Intertextualidade?",
+    "back": "• Paráfrase: reescreve um texto-fonte com outras palavras MANTENDO a ideia original. • Paródia: retoma o texto-fonte SUBVERTENDO/invertendo seu sentido (com ironia, crítica ou humor). • Citação: transcrição literal entre aspas. • Alusão: referência indireta a um fato, mito ou obra conhecida. • Epígrafe: frase curta posta no início de uma obra/capítulo para antecipar seu espírito. 💡 MACETE: 'Paráfrase faz a PAZ com o texto original (mantém o sentido); Paródia faz PIADA/PROTESTO (inverte o sentido)!'",
+    "tags": ["portugues", "intertextualidade", "modulo-10", "enem"]
+  },
+  {
+    "front": "Trovadorismo, Humanismo, Classicismo e Quinhentismo: o que caracteriza cada um?",
+    "back": "• Trovadorismo (Id. Média): Cantigas de Amor (eu-lírico masculino, vassalagem amorosa, 'coita'), de Amigo (eu-lírico feminino, ambiente rural) e Satíricas (Escárnio = indireta; Maldizer = direta). • Humanismo (transição): antropocentrismo, Teatro de Gil Vicente (crítica social e moralizante). • Classicismo (Renascimento): Camões ('Os Lusíadas'), medida nova (decassílabos), razão, equilíbrio e mitologia pagã + fé cristã. • Quinhentismo no Brasil (1500): Literatura de Informação (Carta de Pero Vaz de Caminha — olhar exótico/mercantil sobre a terra) e Literatura de Catequese (Padre José de Anchieta).",
+    "tags": ["portugues", "literatura", "modulo-11", "enem"]
+  },
+  {
+    "front": "Barroco vs. Arcadismo: quais são as características, lemas latinos e autores?",
+    "back": "• Barroco (séc. XVII): dualismo/conflito entre Carne (pecado) x Espírito (salvação), claro-escuro, efemeridade da vida. Cultismo = jogo de palavras/imagens (Gregório de Matos — lírico, sacro e satírico 'Boca do Inferno'); Conceptismo = jogo de ideias/raciocínio lógico (Padre Antônio Vieira — Sermões). • Arcadismo/Neoclassicismo (séc. XVIII): equilíbrio iluminista, bucolismo pastoril. Lemas: *Fugere urbem* (fugir da cidade), *Carpe diem* (aproveitar o presente), *Inutilia truncat* (cortar os excessos barrocos), *Aurea mediocritas* (vida simples e feliz). Autores: Cláudio Manuel da Costa, Tomás Antônio Gonzaga ('Marília de Dirceu').",
+    "tags": ["portugues", "literatura", "modulo-11", "enem"]
+  },
+  {
+    "front": "Como se dividem as 3 Gerações da Poesia Romântica e a Prosa Romântica no Brasil?",
+    "back": "• 1ª Geração (Nacionalista/Indianista): Gonçalves Dias ('Canção do Exílio', 'I-Juca-Pirama') — índio como herói nacional mítico. • 2ª Geração (Ultrarromântica/Mal do Século/Byroniana): Álvares de Azevedo — tédio, morte, noite, pessimismo, amor idealizado e inatingível. • 3ª Geração (Condoreira/Social): Castro Alves ('O Navio Negreiro') — abolicionismo, liberdade, hipérboles grandiosas. • Prosa Romântica: José de Alencar (Indianista: Iracema, O Guarani; Urbana: Senhora, Lucíola; Regionalista), Manuel Antônio de Almeida ('Memórias de um Sargento de Milícias' — precursor do realismo pelo anti-herói malandro).",
+    "tags": ["portugues", "literatura", "modulo-11", "enem"]
+  },
+  {
+    "front": "Realismo vs. Naturalismo vs. Parnasianismo vs. Simbolismo: qual a diferença?",
+    "back": "• Realismo (Machado de Assis — 'Memórias Póstumas de Brás Cubas', 'Dom Casmurro'): análise PSICOLÓGICA, ironia fina, crítica à hipocrisia burguesa, metalinguagem, pessimismo. • Naturalismo (Aluísio Azevedo — 'O Cortiço'): análise BIOLÓGICA/SOCIAL, determinismo (meio + raça + momento), zoomorfização (humanos agindo como animais coletivos), patologias sociais. • Parnasianismo (Olavo Bilac): 'Arte pela Arte', culto à forma perfeita, soneto, rima rica, objetividade descritiva. • Simbolismo (Cruz e Sousa, Alphonsus de Guimaraens): misticismo, sinestesia, musicalidade, subconsciente, cor branca, transcendentalismo.",
+    "tags": ["portugues", "literatura", "modulo-11", "enem"]
+  },
+  {
+    "front": "O que foi o Pré-Modernismo (1902–1922) e quem são os 4 grandes autores?",
+    "back": "Período de transição que desmascara o Brasil real (favelas, sertão, subúrbio) rompendo com o Brasil idealizado: 1) Euclides da Cunha ('Os Sertões' — A Terra, O Homem, A Luta; Guerra de Canudos). 2) Lima Barreto ('Triste Fim de Policarpo Quaresma' — crítica ao nacionalismo ufanista/cego e à burocracia; linguagem acessível). 3) Monteiro Lobato ('Urupês' — criação do Jeca Tatu e denúncia do abandono do caboclo). 4) Augusto dos Anjos ('Eu' — poesia cientificista, vocabulário médico/cadavérico e angústia cósmica).",
+    "tags": ["portugues", "literatura", "modulo-11", "enem"]
+  },
+  {
+    "front": "Quais são as 5 Vanguardas Europeias (Macete F-E-C-S-D) que influenciaram o Modernismo?",
+    "back": "• **F**uturismo (Marinetti): velocidade, máquina, tecnologia, destruição do passado/museus. • **E**xpressionismo (Munch): deformação da realidade para expressar dor, angústia e subjetividade dramática. • **C**ubismo (Picasso / Apollinaire): geometrização, fragmentação, múltiplos ângulos simultâneos, colagem. • **D**adaísmo (Tristan Tzara): 'antiarte', nonsense, acaso, ironia radical contra a lógica burguesa da 1ª Guerra (Marcel Duchamp — 'A Fonte'). • **S**urrealismo (Dalí / Breton): inconsciente, sonhos, psicanálise de Freud, escrita automática sem controle da razão.",
+    "tags": ["portugues", "literatura", "vanguardas", "modulo-11", "enem"]
+  },
+  {
+    "front": "Quais são as 3 Gerações do Modernismo Brasileiro (1922, 1930 e 1945)?",
+    "back": "• 1ª Geração (1922–1930 — Heroica/Destrutiva): ruptura com o academicismo, verso livre, língua falada no Brasil, humor/paródia, Antropofagia ('deglutir o estrangeiro e criar o nacional'). Autores: Mário de Andrade ('Macunaíma'), Oswald de Andrade, Manuel Bandeira. • 2ª Geração (1930–1945 — Consolidação): Poesia reflexiva/filosófica/social (Carlos Drummond de Andrade, Cecília Meireles, Vinicius de Moraes) + Prosa Regionalista e Neorrealista de denúncia da seca/latifúndio (Graciliano Ramos — 'Vidas Secas', Jorge Amado, Rachel de Queiroz, José Lins do Rego). • 3ª Geração (Pós-1945): experimentação da linguagem e intimismo — Clarice Lispector (epifania/fluxo de consciência), Guimarães Rosa ('Grande Sertão: Veredas' — neologismos sertanejos/metafísicos) e João Cabral de Melo Neto ('Morte e Vida Severina' — poesia construtivista/seca).",
+    "tags": ["portugues", "literatura", "modernismo", "modulo-11", "enem"]
+  },
+  {
+    "front": "Quais são as 5 Competências da Redação do ENEM e o Macete GOMIF da Proposta de Intervenção?",
+    "back": "• C1: Norma-padrão da língua. • C2: Compreender o tema + texto dissertativo-argumentativo + Repertório Sociocultural legitimado, pertinente e produtivo. • C3: Projeto de texto, seleção e defesa coerente de argumentos. • C4: Coesão (operadores argumentativos interparágrafos [no início de pelo menos 2 parágrafos] e intraparágrafos). • C5: Proposta de Intervenção com Direitos Humanos e 5 elementos obrigatórios (**Macete GOMIF**): 1. **G**ente (Agente: quem faz?), 2. **O** quê (Ação: o que fará?), 3. **M**eio/Modo (Por meio de quê?), 4. **I**ntuito/Efeito (Para quê / qual finalidade?), 5. **F**ofoca (Detalhamento explicativo de um dos 4 elementos anteriores).",
+    "tags": ["portugues", "redacao", "modulo-12", "enem"]
+  }
+]

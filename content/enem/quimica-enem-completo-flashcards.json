@@ -1,0 +1,142 @@
+[
+  {
+    "front": "Como diferenciar Substância Pura, Mistura Comum, Mistura Eutética e Mistura Azeotrópica nos gráficos de mudança de estado?",
+    "back": "• Substância Pura: Temperatura de Fusão (TF) e de Ebulição (TE) são CONSTANTES (2 patamares retos). • Mistura Comum: TF e TE variam (nenhum patamar reto). • Mistura Eutética (ex: solda estanho + chumbo): comporta-se como pura na FUSÃO (TF constante, TE varia). • Mistura Azeotrópica (ex: álcool 96% + água 4%): comporta-se como pura na EBULIÇÃO (TE constante, TF varia). 💡 MACETE: 'A-Z-E-otrópica = do A ao Z ferve junto → Ebulição constante! Eutética → Fusão constante!'",
+    "tags": ["quimica", "materia-e-misturas", "modulo-01", "enem"]
+  },
+  {
+    "front": "O que são Alotropia e as formas alotrópicas do Carbono, Oxigênio, Enxofre e Fósforo?",
+    "back": "Alotropia: mesmo elemento químico formando substâncias simples diferentes (mudando a quantidade de átomos ou o arranjo cristalino). 1) Carbono: Grafite (conduz corrente elétrica, sp²), Diamante (duro, isolante, sp³), Fulereno e Grafeno. 2) Oxigênio: O₂ (gás vital) e O₃ (Ozônio — filtra raios UV na estratosfera). 3) Fósforo: Branco (P₄, tóxico, inflamável) e Vermelho (Pₙ, mais estável, lixa da caixa de fósforos). 4) Enxofre: Rômbico (mais estável) e Monoclínico. 💡 MACETE: 'C, O, P, S → Café O Povo Saboreia (os 4 que fazem alotropia)!'",
+    "tags": ["quimica", "alotropia", "modulo-01", "enem"]
+  },
+  {
+    "front": "Como separar Misturas Heterogêneas (Filtração, Decantação, Centrifugação, Flotação, Levigação e Dissolução Fracionada)?",
+    "back": "• Filtração: sólido + líquido/gás (coador de café, filtro de ar/aspirador). • Decantação: líquidos imiscíveis (água + óleo no funil de bromo) ou sólido que sedimenta no fundo. • Centrifugação: decantação acelerada pela força centrífuga (separar plasma das hemácias). • Flotação: bolhas de ar ou líquido de densidade intermediária sem dissolver (serragem + areia). • Levigação: corrente de água arrasta o menos denso (areia) e deixa o mais denso (ouro no garimpo). • Dissolução Fracionada: adiciona líquido que dissolve apenas um dos sólidos (água dissolve o sal e deixa a areia).",
+    "tags": ["quimica", "separacao-de-misturas", "modulo-01", "enem"]
+  },
+  {
+    "front": "Como separar Misturas Homogêneas (Destilação Simples, Destilação Fracionada, Extração por Solvente e Cromatografia)?",
+    "back": "• Destilação Simples: sólido dissolvido em líquido (água + sal → dessalinização). • Destilação Fracionada: líquidos miscíveis com diferentes Pontos de Ebulição (**refino do petróleo** nas torres de fracionamento e separação do ar liquefeito N₂/O₂!). Quanto MENOR a cadeia de carbonos do hidrocarboneto, MENOR o PE e mais no TOPO da torre ele sai (Gás GLP no topo → Gasolina → Querosene → Diesel → Asfalto/Piche na base!). • Extração por Solvente: colocar água na gasolina para extrair o etanol anidro (o etanol faz ligação de H com a água e passa para a fase aquosa).",
+    "tags": ["quimica", "separacao-de-misturas", "petroleo", "modulo-01", "enem"]
+  },
+  {
+    "front": "Como funciona o Tratamento de Água (ETA) passo a passo e o papel do Sulfato de Alumínio, Cal e Carvão Ativado?",
+    "back": "1) Coagulação/Floculação: adiciona-se Sulfato de Alumínio Al₂(SO₄)₃ + Cal Ca(OH)₂ → reagem formando flocos gelatinosos de Hidróxido de Alumínio Al(OH)₃ que agarram a sujeira em suspensão. 2) Decantação: flocos pesados afundam. 3) Filtração: areia, cascalho e **Carvão Ativado** (retira compostos orgânicos de mau cheiro/gosto e agrotóxicos por **ADSORÇÃO** superficial!). 4) Desinfecção/Cloração (hipoclorito mata bactérias/vírus). 5) Fluoretação (combate cárie).",
+    "tags": ["quimica", "tratamento-de-agua", "modulo-01", "enem"]
+  },
+  {
+    "front": "Quais são os 4 Modelos Atômicos (Macete B-P-M-E) e o experimento de cada um?",
+    "back": "1) Dalton (Bola de bilhar): esfera maciça, indivisível; explica as Leis Ponderais (Lavoisier/Proust). 2) Thomson (Pudim de passas): ampola de raios catódicos → descobriu o ELÉTRON (carga negativa); átomo divisível. 3) Rutherford (Sistema Planetário): bombardeou folha de ouro com partículas alfa (α) → a maioria atravessou direto (átomo tem imenso VAZIO) e poucas ricochetearam (NÚCLEO pequeno, denso e positivo). 4) Bohr (Camadas Quantizadas K..Q): elétron salta para camada externa ao absorver energia e, ao retornar, **emite fóton de luz** → explica **fogos de artifício, teste de chama e bioluminescência**!",
+    "tags": ["quimica", "atomistica", "modulo-02", "enem"]
+  },
+  {
+    "front": "Como diferenciar Isótopos, Isóbaros, Isótonos e Espécies Isoeletrônicas?",
+    "back": "Notação: ᶻXᴬ (Z = prótons/número atômico; A = massa = Z + N). • Isóto**P**os: mesmo nº de **P**rótons (Z) → mesmo elemento químico (ex: ¹H, ²H deutério, ³H trítio; ¹²C e ¹⁴C). • Isó**A**ros: mesma Massa (**A**). • Isóto**N**os: mesmo nº de **N**êutrons (N = A - Z). • Isoeletrônicos: mesmo nº de elétrons (ex: Na⁺, Mg²⁺, F⁻ e Ne têm todos 10 elétrons!). 💡 MACETE: 'A letra do meio entrega tudo: P = Prótons, A = Massa A, N = Nêutrons!'",
+    "tags": ["quimica", "atomistica", "modulo-02", "enem"]
+  },
+  {
+    "front": "Qual a pegadinha da Distribuição Eletrônica de Linus Pauling para Íons de Metais de Transição (ex: Fe²⁺ e Fe³⁺)?",
+    "back": "Ao retirar elétrons para formar um cátion (íon positivo), NUNCA retire do subnível mais energético (d) primeiro — retire SEMPRE da **CAMADA DE VALÊNCIA (maior número da frente, ex: 4s antes do 3d)**! Exemplo: Ferro (Z=26) termina em 4s² 3d⁶. Para formar Fe²⁺, saem os 2 elétrons do **4s²** (ficando 3d⁶)! Para formar Fe³⁺, saem os dois do 4s² e um do 3d⁶ (ficando 3d⁵).",
+    "tags": ["quimica", "atomistica", "modulo-02", "enem"]
+  },
+  {
+    "front": "Como variam o Raio Atômico, a Eletronegatividade e a Energia de Ionização na Tabela Periódica?",
+    "back": "• **Raio Atômico**: cresce **para BAIXO** (mais camadas) e **para a ESQUERDA** (menor carga nuclear puxando os elétrons). *Macete: 'O Raio cresce rumo ao Frâncio (canto inferior esquerdo)!'* • **Eletronegatividade, Energia de Ionização e Afinidade Eletrônica**: crescem ao contrário do raio → **para CIMA e para a DIREITA** (rumo ao Flúor, excluindo os gases nobres na eletronegatividade). • **Fila da Eletronegatividade**: **F O N Cl Br I S C P H** (*'Fui Ontem No Clube, Briguei E Saí Correndo Para o Hospital'*).",
+    "tags": ["quimica", "tabela-periodica", "modulo-03", "enem"]
+  },
+  {
+    "front": "Quais são as propriedades práticas dos compostos Iônicos, Covalentes (Moleculares) e Metálicos no ENEM?",
+    "back": "• **Iônicos** (Metal + Ametal/H, ex: NaCl, CaCO₃): sólidos cristalinos quebradiços em temperatura ambiente, altos PF e PE; **NÃO conduzem eletricidade no estado sólido**, mas **CONDUZEM quando fundidos (líquidos) ou dissolvidos em água** (íons livres!). • **Moleculares/Covalentes** (Ametal + Ametal/H, ex: H₂O, CO₂, açúcar): baixos PF/PE, não conduzem eletricidade puros (exceto ácidos ionizados em água e grafite). • **Metálicos** (Metal + Metal): 'mar de elétrons livres' → alta condutividade térmica e elétrica **no estado SÓLIDO** e maleabilidade/ductilidade.",
+    "tags": ["quimica", "ligacoes-quimicas", "modulo-04", "enem"]
+  },
+  {
+    "front": "Como descobrir a Geometria Molecular e a Polaridade de qualquer molécula em 5 segundos?",
+    "back": "Olhe para o Átomo Central: • **2 átomos no total** (HCl, O₂): sempre **Linear**. • **3 átomos**: SEM par de e⁻ livre no central (**CO₂**, CS₂) = **Linear e APOLAR**; COM par livre no central (**H₂O, SO₂, O₃**) = **Angular e POLAR**! • **4 átomos**: SEM par livre (BF₃, SO₃) = **Trigonal Plana e APOLAR**; COM par livre (**NH₃**, PH₃) = **Piramidal e POLAR**! • **5 átomos** (CH₄, CCl₄): **Tetraédrica** (se os 4 ligantes forem iguais, é **APOLAR**). 💡 MACETE: 'Sobrou par de elétrons no átomo central (ou ligantes diferentes)? Entorta a molécula e ela vira POLAR! Hidrocarbonetos (só C e H, como gasolina/óleo/metano) são SEMPRE APOLARES!'",
+    "tags": ["quimica", "geometria-e-polaridade", "modulo-04", "enem"]
+  },
+  {
+    "front": "Forças Intermoleculares: como relacionar Ligação de Hidrogênio, Dipolo Permanente e London com Ponto de Ebulição, Volatilidade e Solubilidade?",
+    "back": "Ordem de força: **Dipolo Induzido/London (apolares: hidrocarbonetos, O₂) < Dipolo Permanente (polares sem H-FON) < Ligação de Hidrogênio (H ligado a F, O ou N: água, álcoois, ácidos carboxílicos, aminas, amidas, DNA)**. • **Ponto de Ebulição (PE)**: quanto MAIS FORTE a força intermolecular e MAIOR a massa/superfície da cadeia (cadeia normal > cadeia ramificada!), **MAIOR o Ponto de Ebulição**! • **Volatilidade e Pressão de Vapor**: é o INVERSO do PE! Quem tem ligação mais fraca (ex: éter ou acetona vs. água) evapora mais rápido (maior pressão de vapor e maior volatilidade).",
+    "tags": ["quimica", "interacoes-intermoleculares", "modulo-04", "enem"]
+  },
+  {
+    "front": "Como funcionam Sabões, Detergentes, Micelas e Emulsificantes ('Semelhante dissolve Semelhante')?",
+    "back": "Água é **POLAR**; óleo, gordura e petróleo são **APOLARES**. Para limpar gordura com água, usa-se uma substância **ANFIFÍLICA (ou Anbipática / Tensoativa / Surfactante)** como o **sabão ou detergente**: • Possui uma **longa cadeia carbônica APOLAR (cauda hidrofóbica / lipofílica)** que mergulha na gota de gordura; • E uma **extremidade iônica/polar (cabeça hidrofílica)** que se liga à água por íon-dipolo. Isso forma estruturas esféricas chamadas **MICELAS**, diminuindo a tensão superficial da água e emulsificando a sujeira!",
+    "tags": ["quimica", "tensoativos-e-sabao", "modulo-04", "enem"]
+  },
+  {
+    "front": "Como classificar a força de Ácidos e Bases e prever o pH de Sais (Hidrólise Salina / Correção de Solo)?",
+    "back": "• **Ácidos Fortes**: Hidrácidos **HCl, HBr, HI**; Oxiácidos com **(nº de O - nº de H) ≥ 2** (ex: **H₂SO₄, HNO₃, HClO₄**). *Atenção: H₂CO₃ (ácido carbônico do refrigerante/chuva), HCN e ácidos orgânicos (-COOH) são FRACOS!* • **Bases Fortes**: Família **1A (LiOH, NaOH, KOH)** e **2A (Ca(OH)₂, Sr(OH)₂, Ba(OH)₂**, exceto Be e Mg). • **Hidrólise Salina ('O Sal puxa o pai mais forte!')**: 1) Base Forte + Ácido Fraco (**NaHCO₃ bicarbonato, Na₂CO₃ barrilha, CaCO₃ calcário, NaClO água sanitária**) → **Sal BÁSICO (pH > 7, usado para neutralizar acidez do solo e azia!)**; 2) Ácido Forte + Base Fraca (**NH₄Cl, Al₂(SO₄)₃, FeCl₃**) → **Sal ÁCIDO (pH < 7)**.",
+    "tags": ["quimica", "funcoes-inorganicas", "hidrolise-salina", "modulo-05", "enem"]
+  },
+  {
+    "front": "Quais são os Óxidos Ambientais cobrados no ENEM (Efeito Estufa vs. Chuva Ácida vs. Calagem)?",
+    "back": "• **Óxidos Básicos (Metais 1A e 2A)**: **CaO (cal virgem)** reage com água formando Ca(OH)₂ (cal hidratada) e neutraliza solos ácidos (**Calagem**). • **Óxidos Ácidos (Ametais)**: reagem com a água da chuva formando ácidos! 1) **CO₂** (queima de combustíveis) → forma H₂CO₃ (ácido fraco, chuva naturalmente tem pH ~ 5,6; principal gás do **Efeito Estufa** junto com o metano CH₄!); 2) **SO₂ e SO₃** (queima de carvão mineral e diesel com enxofre) → formam **H₂SO₄ (ácido sulfúrico)**; 3) **NO e NO₂ (NOₓ)** (relâmpagos e motores de carros) → formam **HNO₃ (ácido nítrico)**. **SO₂/SO₃ e NOₓ são os grandes vilões da Chuva Ácida (pH < 5)!**",
+    "tags": ["quimica", "oxidos-e-meio-ambiente", "modulo-05", "enem"]
+  },
+  {
+    "front": "Como calcular o NOX (Número de Oxidação) e identificar quem Oxida (Agente Redutor) e quem Reduz (Agente Oxidante)?",
+    "back": "• **Regras de NOX Fixo**: Substância simples (O₂, Fe, Cl₂) = **0**; Metais 1A (+1), 2A (+2), Al (+3), Ag (+1), Zn (+2); Hidrogênio = **+1** (ou -1 em hidretos metálicos); Oxigênio = **-2** (ou -1 em peróxidos como H₂O₂). A soma dos NOX num composto neutro é **0**. • **Oxidação**: **PERDE elétrons** e o **NOX AUMENTA** → quem sofre oxidação é o **Agente Redutor**! • **Redução**: **GANHA elétrons** e o **NOX REDUZ/DIMINUI** → quem sofre redução é o **Agente Oxidante**! 💡 MACETE: 'Quem **O**xida **P**erde elétrons (OP); quem **R**eduz **G**anha (RG)!'",
+    "tags": ["quimica", "oxirreducao", "modulo-06", "enem"]
+  },
+  {
+    "front": "Qual o roteiro de 4 passos para acertar qualquer questão de Estequiometria (com Pureza, Rendimento e Excesso)?",
+    "back": "1) **Balanceie a equação** (regra MACHO: Metal, Ametal, Carbono, H, O). 2) **Monte a 1ª linha (Padrão Teórico)** usando os coeficientes da reação convertidos para o que a questão pede: **Massa → Massa Molar (g)** | **Mols → próprio coeficiente** | **Volume gasoso → 22,4 L (CNTP) ou 24,5 L (CATP)** | **Moléculas → 6·10²³**. 3) **Aplique a Pureza ANTES**: multiplique a massa da amostra impura pela % de pureza. 4) **Aplique o Rendimento DEPOIS**: multiplique o resultado final pela % de rendimento. *Se der a quantidade de DOIS reagentes: divida cada um pelo seu valor da 1ª linha — o MENOR resultado é o Reagente Limitante (use ele na conta!).*",
+    "tags": ["quimica", "estequiometria", "modulo-07", "enem"]
+  },
+  {
+    "front": "Soluções: Concentração Comum, Molaridade, ppm, Diluição e Titulação Ácido-Base?",
+    "back": "• **Concentração Comum**: **C = m / V** (g/L). • **Molaridade**: **M = n / V = m / (MM · V)** (mol/L). Atalho: **C = M · MM**. • **1 ppm (parte por milhão)**: **1 mg de soluto em 1 kg (ou 1 Litro) de solução aquosa**! • **Diluição (acrescentar água)**: a massa de soluto não muda → **C₁ · V₁ = C₂ · V₂** e **M₁ · V₁ = M₂ · V₂**. • **Titulação (Neutralização total)**: o nº de mols de H⁺ do ácido iguala o nº de mols de OH⁻ da base → **x · M_ácido · V_ácido = y · M_base · V_base** (onde x é o nº de H⁺ e y é o nº de OH⁻).",
+    "tags": ["quimica", "solucoes", "modulo-08", "enem"]
+  },
+  {
+    "front": "Propriedades Coligativas (Macete T-E-C-O): por que jogamos sal no gelo e salgamos o bacalhau?",
+    "back": "Ao adicionar um soluto não-volátil (sal, açúcar, etilenoglicol) a um solvente, quanto MAIOR o número de partículas dissolvidas (**Molaridade × fator i de Van't Hoff** — cuidado: NaCl libera 2 íons, CaCl₂ libera 3 íons!), mais intensos são os 4 efeitos (**T-E-C-O**): 1) **T**onoscopia: **diminui** a pressão máxima de vapor; 2) **E**bulioscopia: **aumenta** a temperatura de ebulição (água com sal ferve acima de 100 °C); 3) **C**rioscopia: **diminui** a temperatura de congelamento (jogar sal derrete o gelo nas estradas e a mistura água + sal + gelo no isopor gela a lata de cerveja abaixo de 0 °C!); 4) **O**smoscopia: puxa água por osmose (salgar a carne desidrata bactérias).",
+    "tags": ["quimica", "propriedades-coligativas", "modulo-08", "enem"]
+  },
+  {
+    "front": "Termoquímica: Como diferenciar Endotérmico de Exotérmico e calcular ΔH por Formação, Ligação e Lei de Hess?",
+    "back": "• **Exotérmico (ΔH < 0, negativo)**: libera calor, esquenta o ambiente (toda combustão/queima, condensação do vapor, solidificação da água). No gráfico: patamar dos Produtos está ABAIXO dos Reagentes. • **Endotérmico (ΔH > 0, positivo)**: absorve calor, resfria o ambiente (fusão do gelo, **evaporação do suor na pele ou do álcool na mão**, fotossíntese). • **3 Fórmulas de ΔH**: 1) **Entalpia de Formação**: **ΔH = H_produtos - H_reagentes** (substância simples padrão = 0); 2) **Energia de Ligação (cuidado!)**: **Quebrar (Reagentes) é SEMPRE + (Endo)** e **Formar (Produtos) é SEMPRE - (Exo)** → **ΔH = Σ Lig_quebradas(+) + Σ Lig_formadas(-)**; 3) **Lei de Hess**: some as etapas como um sistema algébrico.",
+    "tags": ["quimica", "termoquimica", "modulo-09", "enem"]
+  },
+  {
+    "front": "Cinética Química: Quais são os 4 fatores que aceleram uma reação e o que exatamente o Catalisador faz?",
+    "back": "Para ocorrer reação, as moléculas precisam de **Colisão Efetiva** (geometria favorável + energia ≥ Energia de Ativação Ea). Os 4 fatores que aumentam a velocidade são: 1) **Temperatura** (aumenta a energia cinética e a frequência de choques); 2) **Superfície de Contato** (comprimido triturado/pó reage muito mais rápido que inteiro!); 3) **Concentração / Pressão dos reagentes** (mais partículas por volume = mais colisões); 4) **Catalisador** (enzimas, conversor catalítico do escapamento): cria um novo mecanismo com **MENOR Energia de Ativação (abaixa o morro do gráfico!)**, acelerando tanto a reação direta quanto a inversa, **SEM alterar o ΔH e SEM deslocar o equilíbrio químico**!",
+    "tags": ["quimica", "cinetica-quimica", "modulo-10", "enem"]
+  },
+  {
+    "front": "Equilíbrio Químico (Constante Kc/Kp, Princípio de Le Chatelier, Escala de pH e Tampão Sanguíneo)?",
+    "back": "• **Expressão de Kc**: **Kc = [Produtos]^coef / [Reagentes]^coef** — **SÓ entram GASES (g) e AQUOSOS (aq)! Sólidos (s) e Líquidos puros (l) como H₂O(l) NUNCA entram na conta!** • **Le Chatelier**: 1) Adicionou algo → foge para o lado oposto; Retirou algo → vai para o mesmo lado repor; 2) Aumentou a Pressão → vai para o lado com **MENOR nº de mols gasosos**; 3) Aumentou a Temperatura → vai para o lado **ENDOTÉRMICO** (e vice-versa). • **Sangue Humano (Tampão H₂CO₃ / HCO₃⁻, pH ≈ 7,4)**: **Hiperventilação** (respirar muito rápido) joga fora muito CO₂ → desloca o equilíbrio para a esquerda, consumindo H⁺ e causando **Alcalose (pH sobe)**; prender a respiração acumula CO₂ → aumenta H⁺ e causa **Acidose (pH cai)**!",
+    "tags": ["quimica", "equilibrio-quimico", "modulo-11", "enem"]
+  },
+  {
+    "front": "Eletroquímica I: Pilhas de Daniell (Macetes CRAO e PI-CA+), cálculo da ddp (ΔE⁰) e Proteção Catódica (Metal de Sacrifício)?",
+    "back": "• **Macete CRAO**: **C**átodo sofre **R**edução (Consoante-Consoante); **Â**nodo sofre **O**xidação (Vogal-Vogal). • **Na Pilha (ΔE⁰ > 0)**: compare os potenciais de redução ($E^0_{\\text{red}}$): 1) O **MAIOR $E^0_{\\text{red}}$** vai para o **Cátodo (+)**, ganha elétrons e **aumenta a massa da barra**; 2) O **MENOR $E^0_{\\text{red}}$** vai para o **Ânodo (-)**, perde elétrons e **corrói/desgasta a barra**; 3) **ΔE⁰ = E⁰_maior - E⁰_menor** (NUNCA multiplique o E⁰ pelos coeficientes!). • **Metal de Sacrifício (Galvanização/Casco de navio)**: para proteger o Ferro/Aço da ferrugem, prende-se um bloco de **Zinco ou Magnésio** (que têm **menor $E^0_{\\text{red}}$** que o ferro) — ele funciona como ânodo e enferruja no lugar do ferro!",
+    "tags": ["quimica", "eletroquimica", "pilhas", "modulo-12", "enem"]
+  },
+  {
+    "front": "Eletroquímica II: Eletrólise Ígnea vs. Aquosa e Cálculo Estequiométrico de Faraday (Q = i · t)?",
+    "back": "• **Eletrólise**: processo **NÃO-espontâneo** forçado por um gerador elétrico (aqui os polos se invertem em relação à pilha: o **Ânodo é +** e o **Cátodo é -**, mas **CRAO continua valendo sempre**!). • **Eletrólise Aquosa (prioridade de descarga)**: 1) No Cátodo (-), ganha do H⁺ da água quem NÃO for metal alcalino (1A), alcalino-terroso (2A) ou Alumínio (ex: em solução de NaCl aquoso, o Na⁺ não descarrega — quem reduz é o H⁺ da água liberando **gás H₂**, restando **NaOH soda cáustica** na cuba e liberando **gás Cl₂** no ânodo!). • **Lei de Faraday**: **Q = i (Ampère) · t (segundos)**, sendo que **1 mol de elétrons = 1 Faraday = 96.500 Coulombs**.",
+    "tags": ["quimica", "eletroquimica", "eletrolise", "modulo-12", "enem"]
+  },
+  {
+    "front": "Química Orgânica I: Hibridização do Carbono (sp³, sp², sp), Ligações Sigma (σ) e Pi (π) e Classificação das Cadeias?",
+    "back": "• **Hibridização**: 4 ligações simples = **sp³** (tetraédrico, 109°28'); 1 ligação dupla = **sp²** (trigonal plano, 120°); 1 tripla ou 2 duplas = **sp** (linear, 180°). • **Ligações Sigma (σ) e Pi (π)**: toda ligação simples é **1 σ**; toda dupla tem **1 σ + 1 π**; toda tripla tem **1 σ + 2 π**. (Um anel benzênico tem **3 ligações π conjugadas em ressonância**!). • **Cadeia Homogênea vs. Heterogênea**: só é **Heterogênea** se houver um **Heteroátomo (O, N, S) ENTRE DOIS CARBONOS** (ex: C-O-C éter, C-NH-C amina secundária). Se o O ou N estiver na ponta (-OH, -CHO, -COOH, -NH₂), a cadeia continua **Homogênea**!",
+    "tags": ["quimica", "quimica-organica", "cadeias-carbonicas", "modulo-13", "enem"]
+  },
+  {
+    "front": "Química Orgânica II: Como identificar sem errar as 10 Funções Orgânicas (Álcool, Fenol, Enol, Aldeído, Cetona, Ácido, Éster, Éter, Amina, Amida)?",
+    "back": "• Grupo **-OH (Hidroxila)**: em carbono saturado (sp³) = **Álcool**; ligado direto ao anel aromático (benzeno) = **Fenol**; ligado a carbono de dupla (C=C) = **Enol**. • Carbonila **(C=O)**: na ponta da cadeia (-CHO) = **Aldeído**; no meio entre carbonos = **Cetona**. • Carboxila **(-COOH na ponta)**: **Ácido Carboxílico**. • **-COO-C** (carboxila trocando o H por carbono): **Éster** (flavorizantes/aromas de frutas, óleos, gorduras e biodiesel!). • **C-O-C** (oxigênio sozinho entre carbonos): **Éter**. • Com Nitrogênio: **Amina** (C ligado a -NH₂, -NH- ou -N<, **sem C=O** — tem caráter **BÁSICO**!) vs. **Amida** (**N ligado diretamente a C=O**, ex: -CONH₂ — forma a ligação peptídica das proteínas!).",
+    "tags": ["quimica", "funcoes-organicas", "modulo-13", "enem"]
+  },
+  {
+    "front": "Química Orgânica III: Isomeria Plana, Isomeria Geométrica (Cis-Trans / E-Z) e Isomeria Óptica (Carbono Quiral)?",
+    "back": "• **Isomeria Plana** (mesma fórmula molecular, diferente fórmula estrutural plana): Função (ex: álcool e éter; aldeído e cetona; ácido e éster), Cadeia (aberta vs. fechada; normal vs. ramificada), Posição (muda número da dupla ou do grupo funcional), Metameria/Compensação (muda posição do heteroátomo entre carbonos) e Tautomeria (enol ⇄ aldeído/cetona). • **Isomeria Geométrica (Cis-Trans)**: exige **dupla C=C** (ou ciclo) com **ligantes diferentes em cada carbono da dupla** ($R_1 \\neq R_2$ e $R_3 \\neq R_4$). **Cis** = grupos iguais do MESMO lado do plano (mais polar, maior PE!); **Trans** = lados OPOSTOS (mais simétrico, maior PF!). • **Isomeria Óptica**: exige **Carbono Quiral/Assimétrico ($C^*$ com 4 grupos diferentes ligados a ele)** → desvia a luz polarizada (dextrogiro $d$ e levogiro $l$; mistura 50%/50% = mistura racêmica inativa).",
+    "tags": ["quimica", "isomeria", "modulo-14", "enem"]
+  },
+  {
+    "front": "Química Orgânica IV: Reações de Esterificação, Hidrólise, Saponificação, Transesterificação (Biodiesel) e Polímeros?",
+    "back": "• **Esterificação de Fischer**: **Ácido Carboxílico + Álcool ⇄ Éster + Água** (a reação inversa é a **Hidrólise Ácida**). • **Saponificação (Fabricação de Sabão)**: **Éster (Triglicerídeo: óleo vegetal ou sebo animal) + Base Forte (NaOH ou KOH) → Sal Orgânico de Ácido Graxo (SABÃO) + Glicerol (Glicerina)**. • **Transesterificação (Produção do BIODIESEL — cai todo ano!)**: **Triglicerídeo (óleo/gordura) + Álcool de cadeia curta (Etanol da cana ou Metanol) → Ésteres Metílicos/Etílicos (BIODIESEL) + Glicerina**. • **Polímeros**: **De Adição** (quebra a dupla C=C do monômero sem perder átomos: Polietileno PE, PVC, Polipropileno PP, Poliestireno/Isopor, Teflon) vs. **De Condensação** (une dois monômeros liberando molécula pequena como H₂O: **Poliéster PET**, **Poliamida Nylon e Kevlar**, Baquelite, Silicone).",
+    "tags": ["quimica", "reacoes-organicas", "biodiesel", "polimeros", "modulo-14", "enem"]
+  }
+]

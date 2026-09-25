@@ -1,0 +1,152 @@
+[
+  {
+    "front": "Como converter rapidamente unidades de Comprimento, Área e Volume (Litros, m³ e cm³) no ENEM?",
+    "back": "• Comprimento (1D): 1 km = 1.000 m = 100.000 cm (10⁵ cm). • Área (2D — pula de 2 em 2 zeros): 1 m² = 10.000 cm² (10⁴ cm²); 1 hectare (ha) = 10.000 m² (um campo de futebol oficial); 1 km² = 100 ha = 1.000.000 m². • Volume e Capacidade (3D — pula de 3 em 3 zeros): **1 m³ = 1.000 Litros** | **1 dm³ = 1 Litro** | **1 cm³ = 1 mL**. 💡 MACETE: 'Caixa d'água em metros cúbicos? Multiplica por 1.000 que vira Litros na hora!'",
+    "tags": ["matematica", "unidades", "modulo-01", "enem"]
+  },
+  {
+    "front": "Qual a Pegadinha Mortal de Escala Linear (1:k), Escala de Área e Escala de Volume em maquetes e mapas?",
+    "back": "• Escala Linear: E = d / D (desenho / real, na MESMA unidade!). • Se a escala linear é 1 : k, então: 1) A razão entre as ÁREAS é **(1 : k)² = 1 : k²**; 2) A razão entre os VOLUMES (ou litros) é **(1 : k)³ = 1 : k³**! 💡 MACETE: 'Maquete na escala 1:100 tem estátua de volume V? O volume real NÃO é 100·V, é 100³·V = 1.000.000·V! Comprimento = k¹; Área = k²; Volume = k³!'",
+    "tags": ["matematica", "escalas", "modulo-01", "enem"]
+  },
+  {
+    "front": "Como diferenciar Grandezas Diretamente Proporcionais de Inversamente Proporcionais nas equações e gráficos?",
+    "back": "• Diretamente Proporcionais: quando X dobra, Y dobra → a DIVISÃO é constante (**Y / X = k**). O gráfico é uma RETA que passa pela origem (0,0). • Inversamente Proporcionais: quando X dobra, Y cai pela metade → a MULTIPLICAÇÃO é constante (**Y · X = k**). O gráfico é um ramo de HIPÉRBOLE (curva que desce sem tocar os eixos). 💡 MACETE: 'Direta = Divisão constante; Inversa = Multiplicação constante!'",
+    "tags": ["matematica", "proporcao", "modulo-01", "enem"]
+  },
+  {
+    "front": "Qual o Macete 'Processo / Produto' para resolver qualquer Regra de 3 Composta sem usar setinhas?",
+    "back": "Separe apenas o que é o PRODUTO FINAL (o que foi construído, produzido, consumido ou percorrido). Todo o resto (operários, máquinas, horas por dia, dias, velocidade, dureza) faz parte do PROCESSO. Monte uma fração única: **(Processo₁) / Produto₁ = (Processo₂) / Produto₂**. Exemplo: (Operários₁ × Horas₁ × Dias₁) / Muro₁ = (Operários₂ × Horas₂ × Dias₂) / Muro₂. Multiplique cruzado só o Produto!",
+    "tags": ["matematica", "regra-de-tres", "modulo-01", "enem"]
+  },
+  {
+    "front": "Como funcionam os Aumentos e Descontos Percentuais Sucessivos e o Fator Multiplicativo?",
+    "back": "• Aumento de i% → multiplique por **(1 + i/100)** (ex: +25% → × 1,25; +8% → × 1,08). • Desconto de i% → multiplique por **(1 - i/100)** (ex: -30% → × 0,70; -5% → × 0,95). • PEGADINHA: Subir 20% e depois dar desconto de 20% NÃO dá 0%: **1,20 × 0,80 = 0,96** (dá prejuízo/desconto de 4%!). 💡 MACETE: 'Subiu X% e caiu X%? Sempre dá queda de (X/10)² %!'",
+    "tags": ["matematica", "porcentagem", "modulo-01", "enem"]
+  },
+  {
+    "front": "Qual a diferença entre Margem de Lucro sobre o Custo e Margem de Lucro sobre o Preço de Venda?",
+    "back": "Venda = Custo + Lucro (V = C + L). • Se a questão diz 'lucro de 25% SOBRE O CUSTO': V = 1,25 · C. • Se a questão diz 'lucro de 25% SOBRE O PREÇO DE VENDA': L = 0,25 · V → logo C = V - 0,25·V = 0,75·V → **V = C / 0,75** (que equivale a aumentar 33,3% sobre o custo!). 💡 MACETE: 'Leia com lupa depois da palavra SOBRE: quem vem depois de SOBRE é o 100% (o denominador)!'",
+    "tags": ["matematica", "porcentagem", "modulo-01", "enem"]
+  },
+  {
+    "front": "Qual a diferença entre Juros Simples e Juros Compostos e como resolver questões de parcelas no ENEM?",
+    "back": "• Juros Simples (cresce em PA — o juro incide SEMPRE sobre o capital inicial C): **J = C · i · t** e **M = C · (1 + i·t)**. • Juros Compostos (cresce em PG — juros sobre juros): **M = C · (1 + i)ᵗ**. • Valor Presente de Parcela Futura: para trazer uma parcela P paga daqui a t meses para o valor à vista hoje, DIVIDA por (1 + i)ᵗ: **Valor Hoje = P / (1 + i)ᵗ**! 💡 MACETE: 'Ir para o futuro MULTIPLICA por (1+i); voltar para o presente DIVIDE por (1+i)!'",
+    "tags": ["matematica", "matematica-financeira", "modulo-02", "enem"]
+  },
+  {
+    "front": "Como identificar pelo texto se a questão do ENEM é de MMC ou de MDC?",
+    "back": "• **MMC (Mínimo Múltiplo Comum)**: ideia de **ENCONTRO FUTURO DE CICLOS** — palavras-chave: *'a cada X horas e a cada Y horas', 'quando voltarão a se encontrar juntos', 'piscam simultaneamente'*. • **MDC (Máximo Divisor Comum)**: ideia de **DIVIDIR EM PEDAÇOS IGUAIS DO MAIOR TAMANHO POSSÍVEL SEM SOBRA** — palavras-chave: *'cortar toras/fitas em partes iguais de maior comprimento', 'formar o menor número de equipes iguais com o maior nº de pessoas'*. 💡 MACETE: 'Encontro no futuro = MMC; Fatiar no maior pedaço igual = MDC!'",
+    "tags": ["matematica", "mmc-e-mdc", "modulo-02", "enem"]
+  },
+  {
+    "front": "Como montar Diagrama de Venn (2 e 3 Conjuntos) sem contar pessoas duas vezes?",
+    "back": "Regra de Ouro: **COMECE SEMPRE PELO MIOLO CENTRAL (a interseção de todos os conjuntos: A ∩ B ∩ C)** e vá SUBTRAINDO esse valor ao preencher as interseções de 2 a 2 e depois os conjuntos individuais! • Fórmula para 2 conjuntos: **Total = n(A) + n(B) - n(A ∩ B) + Nenhum**. 💡 MACETE: 'Quem começa de fora pra dentro erra; quem começa de dentro pra fora desconta e acerta!'",
+    "tags": ["matematica", "conjuntos", "modulo-02", "enem"]
+  },
+  {
+    "front": "Progressão Aritmética (PA): Termo Geral, Soma dos Termos e o Atalho do Termo Central?",
+    "back": "• Razão constante: r = a₂ - a₁. • Termo Geral: **aₙ = a₁ + (n - 1) · r** (ou aₙ = aₖ + (n - k) · r). • Soma dos n termos: **Sₙ = [(a₁ + aₙ) · n] / 2**. 💡 ATALHO MATADOR DO ENEM: Em toda PA com número ÍMPAR de termos (ex: 5 dias, 7 semanas, 9 fileiras), o **Termo do Meio é exatamente a Média Aritmética da PA inteira**! Logo: **Soma = nº de termos × Termo Central**!",
+    "tags": ["matematica", "pa", "modulo-02", "enem"]
+  },
+  {
+    "front": "Progressão Geométrica (PG): Termo Geral, Soma Finita e Soma dos Infinitos Termos?",
+    "back": "• Razão constante: q = a₂ / a₁ (dobra a cada etapa → q = 2; cai pela metade → q = 1/2). • Termo Geral: **aₙ = a₁ · qⁿ⁻¹**. • Soma Finita: **Sₙ = a₁ · (qⁿ - 1) / (q - 1)**. • Soma Infinita (quando -1 < q < 1, ex: 10 + 5 + 2,5 + ...): **S∞ = a₁ / (1 - q)**. 💡 MACETE: 'Soma infinita cabe num copo: Primeiro termo dividido por (1 menos a razão)!'",
+    "tags": ["matematica", "pg", "modulo-02", "enem"]
+  },
+  {
+    "front": "Função Afim (1º Grau: f(x) = ax + b): Como achar a lei da função a partir de um gráfico ou tabela em 10 segundos?",
+    "back": "Em **f(x) = a·x + b**: 1) **b (coeficiente linear)** = valor inicial fixo (quando x = 0, onde a reta corta o eixo vertical Y); 2) **a (coeficiente angular / taxa de variação)** = quanto Y varia para cada +1 unidade de X: **a = Δy / Δx = (y₂ - y₁) / (x₂ - x₁)**. 💡 MACETE: 'Não monte sistema! Olhe na tabela quanto Y subiu e divida por quanto X andou → esse já é o valor de a!'",
+    "tags": ["matematica", "funcao-afim", "modulo-03", "enem"]
+  },
+  {
+    "front": "Função Quadrática (2º Grau: f(x) = ax² + bx + c): Raízes, Soma e Produto e Forma Fatorada?",
+    "back": "• Se a > 0: concavidade p/ cima (carinha feliz 😊 → tem ponto MÍNIMO). Se a < 0: concavidade p/ baixo (carinha triste ☹️ → tem ponto MÁXIMO). • c = onde corta o eixo Y (x = 0). • Soma das raízes: **S = x₁ + x₂ = -b/a**. Produto das raízes: **P = x₁ · x₂ = c/a**. • **Forma Fatorada (salva quando o gráfico dá as 2 raízes x₁ e x₂!)**: **f(x) = a · (x - x₁) · (x - x₂)**.",
+    "tags": ["matematica", "funcao-quadratica", "modulo-03", "enem"]
+  },
+  {
+    "front": "Vértice da Parábola no ENEM: Quando calcular o X do Vértice (xᵥ) e quando calcular o Y do Vértice (yᵥ)?",
+    "back": "Olhe para a PERGUNTA FINAL da questão: 1) Se pede a variável de entrada (**QUAL o preço, QUAL a quantidade, QUAL o desconto ou EM QUE instante t** o lucro/altura é máximo) → calcule o **xᵥ = -b / (2a)** (ou mais rápido ainda: **xᵥ é a média das duas raízes = (x₁ + x₂) / 2**!). 2) Se pede o resultado final (**QUAL É o valor do lucro máximo, da receita máxima ou da altura máxima**) → calcule o **yᵥ = -Δ / (4a)** ou simplesmente substitua o xᵥ encontrado dentro da função **f(xᵥ)**!",
+    "tags": ["matematica", "vertice-da-parabola", "modulo-03", "enem"]
+  },
+  {
+    "front": "Função Exponencial e Meia-Vida Radioativa / Medicamentosa: Como resolver sem errar?",
+    "back": "• Crescimento/Decaimento Exponencial: **f(t) = V₀ · b^(k·t)** (onde V₀ é o valor inicial quando t = 0!). • **Meia-Vida (tempo para a quantidade cair pela metade)**: **M_final = M_inicial / 2ⁿ**, onde **n = Tempo Total / Tempo de 1 Meia-Vida**. 💡 MACETE: Faça no dedo dividindo por 2 a cada meia-vida: 100g → (1ª) 50g → (2ª) 25g → (3ª) 12,5g → (4ª) 6,25g!",
+    "tags": ["matematica", "funcao-exponencial", "modulo-03", "enem"]
+  },
+  {
+    "front": "Logaritmos no ENEM: Definição, as 3 Propriedades Operatórias e o Atalho do log 5?",
+    "back": "• Definição: **log_b(a) = x ⇔ bˣ = a** (*a base b dá uma chifradas no x e iguala ao a*). • As 3 Regras que resolvem tudo: 1) **log(A · B) = log A + log B** (produto vira soma); 2) **log(A / B) = log A - log B** (divisão vira subtração); 3) **log(Aⁿ) = n · log A** (Regra do Peteleco: expoente tomba multiplicando). • **Atalho Obrigatório do ENEM**: a prova dá log 2 ≈ 0,30 e pede log 5! Nunca faça 2+3; escreva **5 = 10 / 2** → **log 5 = log 10 - log 2 = 1 - 0,30 = 0,70**!",
+    "tags": ["matematica", "logaritmos", "modulo-03", "enem"]
+  },
+  {
+    "front": "Trigonometria no Triângulo Retângulo: SOH-CAH-TOA, Ângulos Notáveis (30°, 45°, 60°) e Triângulos Pitagóricos?",
+    "back": "• **SOH-CAH-TOA**: **S**eno = **O**posto / **H**ipotenusa; **C**osseno = **A**djacente / **H**ipotenusa; **T**angente = **O**posto / **A**djacente (*'Coca-Cola = CO / CA'*). • **Triângulos Pitagóricos (poupe tempo!)**: **3 - 4 - 5** (e múltiplos: **6-8-10**, **9-12-15**, **12-16-20**, **15-20-25**), **5 - 12 - 13** e **8 - 15 - 17**. • **Triângulo Egípcio (30°-60°-90°)**: o cateto oposto a 30° é SEMPRE a **METADE da hipotenusa (H/2)**, e o oposto a 60° é **(H·√3)/2**!",
+    "tags": ["matematica", "trigonometria", "modulo-04", "enem"]
+  },
+  {
+    "front": "Lei dos Senos vs. Lei dos Cossenos: Quando usar cada uma em triângulos quaisquer?",
+    "back": "• **Lei dos Senos**: **a / sen A = b / sen B = c / sen C = 2R**. Use quando você tem **2 ângulos e 1 lado** (ou quando falar do raio R da circunferência circunscrita). • **Lei dos Cossenos**: **a² = b² + c² - 2·b·c · cos A**. Use quando você tem **2 lados e o ângulo no meio deles** (como um compasso aberto!). *Cuidado: se o ângulo for obtuso (ex: 120°), cos(120°) = -cos(60°) = -1/2, então o sinal '-' vira '+'!*",
+    "tags": ["matematica", "trigonometria", "modulo-04", "enem"]
+  },
+  {
+    "front": "Função Trigonométrica Periódica f(t) = A + B · sen(c·t + d): Como achar A, B e c olhando só para o gráfico?",
+    "back": "Como o seno (ou cosseno) só oscila entre **-1 (mínimo)** e **+1 (máximo)**: 1) **A (Eixo Central / Média)**: **A = (Máximo + Mínimo) / 2**; 2) **|B| (Amplitude / Raio da roda-gigante)**: **|B| = (Máximo - Mínimo) / 2**; 3) **Valor Máximo** = **A + |B|** e **Valor Mínimo** = **A - |B|**; 4) **c (ligado ao Período T de repetição)**: **T = 2π / |c|**, logo **|c| = 2π / T** (ex: se o ciclo é de 24 horas → c = 2π/24 = π/12; se é de 12 meses → c = 2π/12 = π/6!).",
+    "tags": ["matematica", "funcao-trigonometrica", "modulo-04", "enem"]
+  },
+  {
+    "front": "Geometria Plana I: Soma dos Ângulos Internos e Externos de um Polígono, Semelhança de Triângulos e Teorema de Tales?",
+    "back": "• Soma dos ângulos internos de polígono de n lados: **Sᵢ = (n - 2) · 180°** (Triângulo = 180°; Quadrilátero = 360°; Pentágono = 540°; Hexágono regular = 720°, sendo **120° cada ângulo interno**!). • Soma dos ângulos externos: **Sₑ = 360° SEMPRE** (para qualquer polígono convexo!). • **Semelhança de Triângulos**: se os lados aumentam na razão **k**, a altura e o perímetro aumentam na razão **k**, mas a **ÁREA aumenta na razão k²**!",
+    "tags": ["matematica", "geometria-plana", "modulo-05", "enem"]
+  },
+  {
+    "front": "Geometria Plana II: Todas as Fórmulas de Área de Triângulos, Hexágono Regular, Trapézio e Losango?",
+    "back": "• Triângulo comum: **A = (base · altura) / 2**. • Triângulo com 2 lados e o ângulo entre eles: **A = (a · b · sen θ) / 2**. • **Triângulo Equilátero (3 lados iguais L)**: Altura **h = (L·√3) / 2** e Área **A = (L²·√3) / 4**. • **Hexágono Regular (lado L)**: divide-se em **6 Triângulos Equiláteros idênticos**! Logo: **A = 6 · (L²·√3) / 4**. • Trapézio: **A = [(B + b) · h] / 2**. • Losango: **A = (D · d) / 2**.",
+    "tags": ["matematica", "areas", "geometria-plana", "modulo-05", "enem"]
+  },
+  {
+    "front": "Geometria Plana III: Círculo, Circunferência, Número de Voltas de um Pneu, Setor Circular e Coroa Circular?",
+    "back": "• **Comprimento da Circunferência (Perímetro / 1 volta do pneu)**: **C = 2 · π · R = π · D**. Para achar quantas voltas uma roda dá: **Nº de voltas = Distância Percorrida / (2·π·R)**! • **Área do Círculo**: **A = π · R²**. • **Área do Setor Circular ('fatia de pizza' de ângulo α)**: **A = (α / 360°) · π · R²**. • **Área da Coroa Circular (anel entre dois círculos)**: **A = π · (R² - r²)**.",
+    "tags": ["matematica", "circulo", "geometria-plana", "modulo-05", "enem"]
+  },
+  {
+    "front": "Geometria Espacial I: Poliedros, Relação de Euler (V + F = A + 2), Cubo e Paralelepípedo?",
+    "back": "• **Relação de Euler**: **V + F = A + 2** (*Macete: 'Vamos Fazer Amor a Dois'*). Para achar o nº de Arestas (A) sabendo o tipo das faces: **2·A = (nº de triângulos × 3) + (nº de quadriláteros × 4) + (nº de pentágonos × 5)...** • **Paralelepípedo Retângulo (a, b, c)**: Volume **V = a · b · c**; Área Total = 2(ab + ac + bc); Diagonal = **√(a² + b² + c²)**. • **Cubo (aresta a)**: Volume **V = a³**; Área Total = **6·a²**; Diagonal da face = **a·√2**; Diagonal do cubo = **a·√3**.",
+    "tags": ["matematica", "geometria-espacial", "poliedros", "modulo-06", "enem"]
+  },
+  {
+    "front": "Geometria Espacial II: Cilindro, Cone, Pirâmide, Esfera e Tronco — O Macete 'Tem Ponta, Divide por 3'?",
+    "back": "• **Sólidos SEM ponta (Prisma e Cilindro)**: **Volume = Área da Base × Altura**. No Cilindro: **V = π · R² · h** e a Área Lateral aberta é um retângulo de base **2·π·R** e altura **h** (**A_lat = 2·π·R·h**). • **Sólidos COM ponta (Pirâmide e Cone)**: **Volume = (Área da Base × Altura) / 3**. No Cone: **V = (π · R² · h) / 3**, relação pitagórica **g² = h² + R²**, Área Lateral = **π · R · g** e ângulo de planificação θ = (R / g) · 360°. • **Esfera**: Volume **V = (4/3) · π · R³** e Área da Superfície = **4 · π · R²**.",
+    "tags": ["matematica", "geometria-espacial", "volumes", "modulo-06", "enem"]
+  },
+  {
+    "front": "Projeção Ortogonal e Visão Espacial no ENEM: Quais são os 3 truques para nunca errar a sombra?",
+    "back": "1) Imagine raios de luz **100% perpendiculares** ao plano de projeção (como o Sol do meio-dia projetando a sombra no chão). 2) Qualquer deslocamento **puramente VERTICAL** (subir ou descer um poste/elevador reto) projeta-se no chão como **APENAS UM PONTO**! 3) Deslocamentos inclinados (rampas, telhados, escadas) projetam-se no chão como segmentos de reta normais; curvas na superfície de um cilindro ou esfera vistas de cima acompanham o contorno da base (círculo ou quadrado)!",
+    "tags": ["matematica", "projecao-ortogonal", "modulo-06", "enem"]
+  },
+  {
+    "front": "Geometria Analítica: Distância entre Pontos, Ponto Médio, Equação da Reta e da Circunferência?",
+    "back": "• **Distância entre A(x₁, y₁) e B(x₂, y₂)**: **d = √[(x₂ - x₁)² + (y₂ - y₁)²]** (Teorema de Pitágoras no plano cartesiano!). • **Ponto Médio**: **M = ((x₁ + x₂)/2 , (y₁ + y₂)/2)**. • **Reta (y = m·x + n)**: m = inclinação; retas paralelas têm **m₁ = m₂**; retas perpendiculares têm **m₁ · m₂ = -1**. • **Circunferência de Centro C(x₀, y₀) e Raio R**: **(x - x₀)² + (y - y₀)² = R²** (Ex: (x - 3)² + (y + 2)² = 25 tem centro C(3, -2) e raio R = √25 = 5!).",
+    "tags": ["matematica", "geometria-analitica", "modulo-07", "enem"]
+  },
+  {
+    "front": "Estatística I: Média Aritmética Simples vs. Média Ponderada e a Pegadinha da Mediana?",
+    "back": "• **Média Simples**: soma tudo e divide pela quantidade de elementos. • **Média Ponderada** (notas com pesos ou tabelas de frequência): **MP = (x₁·p₁ + x₂·p₂ + ...) / (p₁ + p₂ + ...)** (divida sempre pela **SOMA DOS PESOS**, nunca pela quantidade de linhas!). • **MEDIANA (Regra de Ouro)**: **1º PASSO OBRIGATÓRIO: ORDENE OS NÚMEROS EM ORDEM CRESCENTE (ROL)!** Se a quantidade n for **ÍMPAR**, a mediana é o número exatamente no meio; se n for **PAR**, a mediana é a **média aritmética dos 2 números centrais**!",
+    "tags": ["matematica", "estatistica", "mediana", "modulo-08", "enem"]
+  },
+  {
+    "front": "Estatística II: Moda, Amplitude, Variância e Desvio Padrão (Qual escolher quando o ENEM pede 'Mais Regular')?",
+    "back": "• **Moda**: valor que mais se repete (no gráfico de colunas/linha, é o ponto mais alto!). • **Amplitude**: Maior valor − Menor valor. • **Variância e Desvio Padrão (DP = √Variância)**: medem o grau de **ESPALHAMENTO / DISPERSÃO** dos dados em torno da média. 💡 GATILHO ENEM: Sempre que a questão pedir o atleta, aluno, máquina ou ação **MAIS REGULAR, MAIS CONSTANTE, MAIS HOMOGÊNEO, MAIS CONFIÁVEL ou MAIS ESTÁVEL**, escolha aquele que tem o **MENOR DESVIO PADRÃO** (ou os valores mais próximos entre si)!",
+    "tags": ["matematica", "estatistica", "desvio-padrao", "modulo-08", "enem"]
+  },
+  {
+    "front": "Análise Combinatória: Princípio Multiplicativo, Permutação Simples/Com Repetição/Circular e Arranjo vs. Combinação?",
+    "back": "• **Permutação de n elementos**: **Pₙ = n!**; Com letras repetidas (ex: ARARA tem 5 letras, 3 A e 2 R): **P = 5! / (3! · 2!)**; **Permutação Circular** (sentar em mesa redonda ou roda): **P_c = (n - 1)!**. • **Arranjo vs. Combinação**: Pegue um grupo exemplo (Ana, Bruno) e inverta para (Bruno, Ana): **mudou o resultado?** 1) **SIM, a ordem importa** (senha, placa, pódio 1º/2º/3º, presidente/vice) → **ARRANJO (use os tracinhos multiplicando!)**: **A(n,p) = n! / (n-p)!**; 2) **NÃO, a ordem NÃO importa** (comissão, dupla de vôlei, salada de frutas, escolher questões da prova) → **COMBINAÇÃO (divide pelo fatorial para eliminar repetições!)**: **C(n,p) = n! / [p! · (n-p)!]**.",
+    "tags": ["matematica", "analise-combinatoria", "modulo-08", "enem"]
+  },
+  {
+    "front": "Probabilidade Completa no ENEM: Regra do 'E', Regra do 'OU', Probabilidade Condicional e 'Pelo Menos Um'?",
+    "back": "• **Definição**: **P(A) = Casos Favoráveis / Casos Possíveis (Total)**. • **Regra do 'E' (eventos sucessivos/independentes)**: **MULTIPLICA (×)** → P(A e B) = P(A) × P(B). • **Regra do 'OU' (eventos alternativos)**: **SOMA (+)** descontando a interseção → P(A ou B) = P(A) + P(B) - P(A ∩ B). • **Probabilidade Condicional ('Sabendo que...', 'Dado que...')**: restrinja o **Denominador (Total)** apenas ao subgrupo que a questão garantiu que já aconteceu! • **Atalho do 'Pelo Menos Um'**: **P(pelo menos 1) = 1 - P(NENHUM / errar todas)**!",
+    "tags": ["matematica", "probabilidade", "modulo-08", "enem"]
+  }
+]
