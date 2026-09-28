@@ -313,6 +313,32 @@ describe('ExamPlayer with a remote session', () => {
     player.destroy();
   });
 
+  it('renders shared reference text and every image without exposing correctness', () => {
+    const player = new ExamPlayer({
+      session: remoteSession({
+        questions: [remoteQuestion(5, 0, {
+          images: ['/question-assets/enem/a.png', '/question-assets/enem/b.png'],
+          reference: {
+            id: 'ref-1',
+            title: 'Texto I',
+            body: 'Texto-base necessário para responder.',
+            images: ['/question-assets/enem/ref.png'],
+          },
+        })],
+        question_limit: 1,
+      }),
+    });
+    const element = mount(player);
+    player.start();
+
+    expect(element.querySelector('.question-reference-title').textContent).toBe('Texto I');
+    expect(element.querySelector('.question-reference-body').textContent).toContain('Texto-base necessário');
+    expect(element.querySelectorAll('.question-reference .question-images img')).toHaveLength(1);
+    expect(element.querySelectorAll('.question-content > .question-images img')).toHaveLength(2);
+    expect(element.querySelector('.question-answer.correct, .question-answer.wrong')).toBeNull();
+    player.destroy();
+  });
+
   it('does not expose correctness while the session is active', () => {
     const player = new ExamPlayer({ session: remoteSession({ answers: [{ question_id: 5, selected_option: 'A', flagged: false }] }) });
     const element = mount(player);

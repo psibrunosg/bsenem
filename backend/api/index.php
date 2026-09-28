@@ -15,6 +15,7 @@ require_once __DIR__ . '/../controllers/ProgressController.php';
 require_once __DIR__ . '/../controllers/ExamController.php';
 require_once __DIR__ . '/../controllers/StudyLibraryController.php';
 require_once __DIR__ . '/../controllers/SimulatorController.php';
+require_once __DIR__ . '/../controllers/SimulatorAdminController.php';
 
 initializeDatabase();
 Csrf::enforce();
@@ -46,6 +47,12 @@ $sub = getSegment(2);
 $action = getSegment(3);
 
 match(true) {
+    // Simulator administration routes
+    $resource === 'admin' && $id === 'simulators' && !$sub && $method === 'GET'
+        => SimulatorAdminController::overview(),
+    $resource === 'admin' && $id === 'simulators' && $sub === 'reference-groups' && !$action && $method === 'POST'
+        => SimulatorAdminController::createReferenceGroup(),
+
     // Simulator routes
     $resource === 'simulators' && $id === 'catalog' && !$sub && $method === 'GET'
         => SimulatorController::catalog(),

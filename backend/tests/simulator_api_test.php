@@ -119,6 +119,7 @@ try {
     $insertCatalogQuestion->execute(['enem:incompleta', $mathQuestionIds[3], 1]);
     $insertCatalogQuestion->execute(['enem:incompleta', 'inep:' . $pendingId, 2]);
 
+    $pdo->prepare("UPDATE users SET role = 'admin' WHERE id = ?")->execute([$firstUserId]);
     $firstCookie = 'bsenem_session=' . Auth::createSession($firstUserId);
     $secondCookie = 'bsenem_session=' . Auth::createSession($secondUserId);
     $root = realpath(__DIR__ . '/../..');
@@ -127,6 +128,15 @@ try {
     }
 
     expectSimulatorApiStatus(simulatorApiRequest($root, $path, '/api/simulators/catalog', 'GET'), 401, 'Catalog requires authentication');
+    expectSimulatorApiStatus(simulatorApiRequest($root, $path, '/api/admin/simulators', 'GET', $secondCookie), 403, 'Simulator administration rejects regular users');
+    expectSimulatorApiStatus(simulatorApiRequest($root, $path, '/api/admin/simulators', 'GET', $firstCookie), 200, 'Simulator administration accepts admins');
+    $reference = simulatorApiRequest($root, $path, '/api/admin/simulators/reference-groups', 'POST', $firstCookie, [
+        'title' => 'Texto-base de teste',
+        'body' => 'Leia este texto antes de responder às questões vinculadas.',
+        'question_ids' => [$mathQuestionIds[0]],
+    ]);
+    expectSimulatorApiStatus($reference, 201, 'Admin can create a reference group');
+
     expectSimulatorApiStatus(simulatorApiRequest($root, $path, '/api/simulators/sessions', 'POST', $firstCookie, ['kind' => 'practice']), 400, 'Malformed practice is rejected');
     expectSimulatorApiStatus(simulatorApiRequest($root, $path, '/api/simulators/sessions', 'POST', $firstCookie, [
         'kind' => 'custom', 'subjects' => ['Unknown'], 'count' => 1,
@@ -166,6 +176,11 @@ try {
     expectSimulatorApiSame('catalog', $catalogSessionPayload['kind'], 'Catalog session keeps its kind');
     expectSimulatorApiSame([$mathQuestionIds[2], $mathQuestionIds[0], $mathQuestionIds[1]], array_column($catalogSessionPayload['questions'], 'id'), 'Catalog session preserves the exam order');
     expectSimulatorApiSame(1800, $catalogSessionPayload['time_limit_seconds'], 'Catalog session uses the exam duration');
+    expectSimulatorApiSame(
+        'Leia este texto antes de responder às questões vinculadas.',
+        $catalogSessionPayload['questions'][1]['reference']['body'] ?? null,
+        'Catalog session carries the shared reference text with its linked question'
+    );
     expectSimulatorApiTrue(!array_key_exists('correct_option', $catalogSessionPayload['questions'][0]), 'Catalog session hides answers while active');
     expectSimulatorApiStatus(simulatorApiRequest($root, $path, '/api/simulators/sessions', 'POST', $catalogCookie, [
         'kind' => 'catalog', 'catalog_id' => 'enem:incompleta',

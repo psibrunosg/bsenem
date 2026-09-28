@@ -487,6 +487,49 @@
   margin-top: 8px;
 }
 
+.question-reference {
+  margin-bottom: 20px;
+  padding: 18px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-light);
+  border-left: 4px solid var(--primary);
+  border-radius: var(--radius-lg);
+}
+
+.question-reference-label {
+  margin-bottom: 8px;
+  color: var(--text-muted);
+  font-size: var(--text-xs);
+  font-weight: 700;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+
+.question-reference-title {
+  margin: 0 0 10px;
+  color: var(--text-primary);
+  font-size: var(--text-base);
+}
+
+.question-reference-body {
+  margin: 0;
+  color: var(--text-primary);
+  line-height: 1.7;
+  white-space: pre-wrap;
+}
+
+.question-images {
+  display: grid;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.question-images img {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--radius-md);
+}
+
 /* Question List */
 .results-details {
   text-align: left;

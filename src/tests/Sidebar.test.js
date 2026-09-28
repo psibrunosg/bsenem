@@ -14,4 +14,12 @@ describe('Sidebar', () => {
     expect(element.querySelector('.user-level').textContent).toContain('0/1000 XP');
     expect(element.querySelector('.sidebar-xp').getAttribute('aria-valuenow')).toBe('0');
   });
+
+  it('shows simulator administration only to admins', () => {
+    const regular = new Sidebar({ user: { id: 1, name: 'Aluno', role: 'student' } }).render();
+    const admin = new Sidebar({ user: { id: 2, name: 'Admin', role: 'admin' } }).render();
+
+    expect(regular.querySelector('[data-route="simulator-admin"]')).toBeNull();
+    expect(admin.querySelector('[data-route="simulator-admin"]')?.textContent).toContain('Gerenciar simulados');
+  });
 });

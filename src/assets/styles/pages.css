@@ -481,3 +481,100 @@
     flex-direction: column;
   }
 }
+
+.simulator-admin-page {
+  display: grid;
+  gap: 24px;
+}
+
+.simulator-admin-header h1 {
+  margin: 0 0 8px;
+}
+
+.simulator-admin-header p {
+  margin: 0;
+  color: var(--text-secondary);
+}
+
+.simulator-admin-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 12px;
+}
+
+.simulator-admin-stat {
+  display: grid;
+  gap: 4px;
+  padding: 18px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+}
+.simulator-admin-stat strong {
+  font-size: var(--text-2xl);
+}
+
+.simulator-admin-stat span,
+.simulator-reference-group span {
+  color: var(--text-secondary);
+  font-size: var(--text-sm);
+}
+
+.simulator-admin-section {
+  padding: 20px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-xl);
+}
+
+.simulator-admin-section h2 {
+  margin-top: 0;
+}
+
+.simulator-reference-form {
+  display: grid;
+  gap: 16px;
+}
+
+.simulator-reference-form label {
+  display: grid;
+  gap: 8px;
+}
+.simulator-reference-candidates {
+  display: grid;
+  gap: 8px;
+  max-height: 420px;
+  overflow: auto;
+}
+
+.simulator-reference-candidate {
+  grid-template-columns: auto 1fr !important;
+  align-items: start;
+  gap: 10px !important;
+  padding: 12px;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+}
+
+.simulator-reference-candidate > span {
+  display: grid;
+  gap: 4px;
+}
+
+.simulator-reference-candidate > span > span {
+  color: var(--text-secondary);
+  font-size: var(--text-sm);
+}
+
+.simulator-reference-groups {
+  display: grid;
+  gap: 8px;
+}
+
+.simulator-reference-group {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border-light);
+}

@@ -43,6 +43,15 @@ export class Sidebar {
       }
     ];
 
+    if (this.user.role === 'admin') {
+      navSections.push({
+        title: 'Administração',
+        items: [
+          { id: 'simulator-admin', icon: 'settings-2', label: 'Gerenciar simulados' }
+        ]
+      });
+    }
+
     const xpPercent = Math.min(100, (this.user.xp / this.user.xpMax) * 100);
 
     this.element = document.createElement('aside');

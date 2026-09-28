@@ -1,6 +1,13 @@
 // src/components/QuestionCard.js
 import { escapeHtml, safeResourceUrl } from '../utils/html.js';
 
+function renderImages(images, altPrefix) {
+  if (!Array.isArray(images) || images.length === 0) return '';
+  return `<div class="question-images">${images.map((src, index) => `
+    <img src="${safeResourceUrl(src)}" alt="${escapeHtml(altPrefix)} ${index + 1}">
+  `).join('')}</div>`;
+}
+
 export class QuestionCard {
   constructor(options = {}) {
     this.question = options.question ?? null;
@@ -46,12 +53,16 @@ export class QuestionCard {
       </div>
       
       <div class="question-content">
-        <p class="question-text">${escapeHtml(this.question.text)}</p>
-        ${this.question.image ? `
-          <div class="question-image">
-            <img src="${safeResourceUrl(this.question.image)}" alt="Imagem da questão">
-          </div>
+        ${this.question.reference ? `
+          <section class="question-reference" aria-label="Texto de referência">
+            <div class="question-reference-label">Texto de referência</div>
+            ${this.question.reference.title ? `<h3 class="question-reference-title">${escapeHtml(this.question.reference.title)}</h3>` : ''}
+            <p class="question-reference-body">${escapeHtml(this.question.reference.body)}</p>
+            ${renderImages(this.question.reference.images, 'Imagem do texto de referência')}
+          </section>
         ` : ''}
+        <p class="question-text">${escapeHtml(this.question.text)}</p>
+        ${renderImages(this.question.images ?? (this.question.image ? [this.question.image] : []), 'Imagem da questão')}
         ${this.question.code ? `
           <pre class="question-code"><code>${escapeHtml(this.question.code)}</code></pre>
         ` : ''}

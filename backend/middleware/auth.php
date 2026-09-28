@@ -97,6 +97,13 @@ class Auth {
         return $userId;
     }
 
+    public static function requireAdmin(): int {
+        $userId = self::requireAuth();
+        $user = Database::getInstance()->fetch('SELECT role FROM users WHERE id = ?', [$userId]);
+        if (($user['role'] ?? 'student') !== 'admin') Response::forbidden('Administrator access required');
+        return $userId;
+    }
+
     public static function getUserId(): ?int { return self::findUserIdByToken($_COOKIE[self::SESSION_COOKIE] ?? null); }
 
     public static function hashPassword(string $password): string {

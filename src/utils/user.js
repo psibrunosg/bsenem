@@ -5,6 +5,7 @@ export function normalizeUserProfile(user = {}) {
   return {
     ...user,
     id: Number(user.id),
+    role: user.role === 'admin' ? 'admin' : 'student',
     level: Number(user.level ?? 1),
     xp: Number(user.xp ?? 0),
     xpMax: Number.isFinite(xpMaxCandidate) && xpMaxCandidate > 0 ? xpMaxCandidate : 1000,

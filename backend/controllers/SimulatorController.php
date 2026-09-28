@@ -359,9 +359,15 @@ final class SimulatorController {
         $statement = $pdo->prepare(
             'SELECT questions.id, questions.subject, questions.topic, questions.statement,
                     questions.option_a, questions.option_b, questions.option_c, questions.option_d, questions.option_e,
-                    questions.images, questions.correct_option, composition.position
+                    questions.images, questions.correct_option, composition.position,
+                    reference_groups.id AS reference_id, reference_groups.title AS reference_title,
+                    reference_groups.body AS reference_body, reference_groups.images AS reference_images
              FROM simulator_session_questions AS composition
              JOIN simulator_questions AS questions ON questions.id = composition.question_id
+             LEFT JOIN simulator_reference_group_questions AS reference_members
+               ON reference_members.question_id = questions.id
+             LEFT JOIN simulator_reference_groups AS reference_groups
+               ON reference_groups.id = reference_members.group_id
              WHERE composition.session_id = ?
              ORDER BY composition.position ASC'
         );
@@ -369,11 +375,18 @@ final class SimulatorController {
 
         return array_map(static function (array $row) use ($includeCorrectOption): array {
             $images = json_decode((string) $row['images'], true);
+            $referenceImages = json_decode((string) ($row['reference_images'] ?? '[]'), true);
             $question = [
                 'id' => (string) $row['id'], 'position' => (int) $row['position'], 'subject' => (string) $row['subject'],
                 'topic' => $row['topic'], 'statement' => (string) $row['statement'],
                 'options' => ['A' => $row['option_a'], 'B' => $row['option_b'], 'C' => $row['option_c'], 'D' => $row['option_d'], 'E' => $row['option_e']],
                 'images' => is_array($images) ? $images : [],
+                'reference' => $row['reference_id'] === null ? null : [
+                    'id' => (string) $row['reference_id'],
+                    'title' => (string) $row['reference_title'],
+                    'body' => (string) $row['reference_body'],
+                    'images' => is_array($referenceImages) ? $referenceImages : [],
+                ],
             ];
             if ($includeCorrectOption) {
                 $question['correct_option'] = (string) $row['correct_option'];

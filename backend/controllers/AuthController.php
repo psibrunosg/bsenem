@@ -66,7 +66,7 @@ class AuthController {
     public static function me(): void {
         $userId = Auth::requireAuth();
         $user = Database::getInstance()->fetch(
-            'SELECT id, name, email, level, xp, streak, best_streak, created_at FROM users WHERE id = ?',
+            'SELECT id, name, email, role, level, xp, streak, best_streak, created_at FROM users WHERE id = ?',
             [$userId]
         );
         if (!$user) Response::notFound('User not found');
@@ -184,7 +184,7 @@ class AuthController {
 
         Database::getInstance()->update('users', ['name' => $name], 'id = ?', [$userId]);
         $user = Database::getInstance()->fetch(
-            'SELECT id, name, email, level, xp, streak, best_streak, created_at FROM users WHERE id = ?',
+            'SELECT id, name, email, role, level, xp, streak, best_streak, created_at FROM users WHERE id = ?',
             [$userId]
         );
         Response::success(['user' => self::profile($user)], 'Perfil atualizado.');
@@ -198,6 +198,7 @@ class AuthController {
     private static function profile(array $user): array {
         $profile = [
             'id' => (int) $user['id'], 'name' => (string) $user['name'], 'email' => (string) $user['email'],
+            'role' => (string) ($user['role'] ?? 'student'),
             'level' => (int) ($user['level'] ?? 1), 'xp' => (int) ($user['xp'] ?? 0), 'xp_max' => 1000,
             'streak' => (int) ($user['streak'] ?? 0), 'best_streak' => (int) ($user['best_streak'] ?? 0),
         ];
