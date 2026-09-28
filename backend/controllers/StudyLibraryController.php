@@ -67,13 +67,14 @@ final class StudyLibraryController {
             $params
         );
         $institutionPaths = [];
-        if ($path === '' && $query === '' && $type === '') {
+        if ($path === '' && $query === '') {
+            $institutionWhere = [...$where, "catalog_path LIKE 'Instituições / %'"];
             $institutionPaths = $db->fetchAll(
                 "SELECT catalog_path, COUNT(*) AS total
                  FROM study_library_items
-                 WHERE user_id = ? AND is_available = 1 AND catalog_path LIKE 'Instituições / %'
+                 WHERE " . implode(' AND ', $institutionWhere) . "
                  GROUP BY catalog_path",
-                [$userId]
+                $params
             );
         }
 
