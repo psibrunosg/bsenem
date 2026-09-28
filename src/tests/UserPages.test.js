@@ -8,6 +8,7 @@ const user = {
   id: 1,
   name: 'Bruno',
   email: 'bruno@example.test',
+  role: 'student',
   level: 2,
   xp: 120,
   xpMax: 1000,

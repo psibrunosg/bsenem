@@ -50,6 +50,8 @@ match(true) {
     // Simulator administration routes
     $resource === 'admin' && $id === 'simulators' && !$sub && $method === 'GET'
         => SimulatorAdminController::overview(),
+    $resource === 'admin' && $id === 'simulators' && $sub === 'questions' && !$action && $method === 'GET'
+        => SimulatorAdminController::questions(),
     $resource === 'admin' && $id === 'simulators' && $sub === 'reference-groups' && !$action && $method === 'POST'
         => SimulatorAdminController::createReferenceGroup(),
 

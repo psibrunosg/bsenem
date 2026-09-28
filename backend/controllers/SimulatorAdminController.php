@@ -26,6 +26,79 @@ final class SimulatorAdminController {
             'reference_candidates' => self::referenceCandidates($pdo),
         ]);
     }
+    public static function questions(): void {
+        Auth::requireAdmin();
+        $pdo = Database::getInstance()->getConnection();
+
+        $page = max(1, (int) ($_GET['page'] ?? 1));
+        $perPage = max(10, min(50, (int) ($_GET['per_page'] ?? 20)));
+        $source = in_array($_GET['source'] ?? 'all', ['all', 'enem', 'concursos'], true) ? (string) ($_GET['source'] ?? 'all') : 'all';
+        $status = in_array($_GET['status'] ?? 'all', ['all', 'valid', 'pending'], true) ? (string) ($_GET['status'] ?? 'all') : 'all';
+        $reference = in_array($_GET['reference'] ?? 'all', ['all', 'linked', 'unlinked'], true) ? (string) ($_GET['reference'] ?? 'all') : 'all';
+        $subject = trim((string) ($_GET['subject'] ?? ''));
+        $search = trim((string) ($_GET['q'] ?? ''));
+        $year = trim((string) ($_GET['year'] ?? ''));
+
+        $base = "WITH audit AS (
+            SELECT 'inep:' || q.id AS id, 'enem' AS source, q.status, q.year, q.day, q.question_number,
+                   q.area AS subject, q.topic, q.statement,
+                   q.option_a, q.option_b, q.option_c, q.option_d, q.option_e,
+                   q.correct_option, q.images, q.source_pdf, q.source_pages, q.source_page,
+                   q.pending_reason, q.inep_url, q.mirror_url, NULL AS provider, NULL AS source_json
+            FROM enem_questions q
+            UNION ALL
+            SELECT b.id, 'concursos', 'valid',
+                   CAST(json_extract(b.source_json, '$.year') AS INTEGER), NULL, NULL,
+                   b.subject, NULL, b.statement,
+                   json_extract(b.options_json, '$[0]'), json_extract(b.options_json, '$[1]'),
+                   json_extract(b.options_json, '$[2]'), json_extract(b.options_json, '$[3]'),
+                   json_extract(b.options_json, '$[4]'),
+                   substr('ABCDE', b.correct_option + 1, 1), '[]', NULL, '[]', NULL,
+                   NULL, NULL, NULL, b.provider, b.source_json
+            FROM simulator_question_bank b WHERE b.category = 'concursos'
+        )";
+
+        $where = ['1 = 1'];
+        $params = [];
+        if ($source !== 'all') { $where[] = 'a.source = ?'; $params[] = $source; }
+        if ($status !== 'all') { $where[] = 'a.status = ?'; $params[] = $status; }
+        if ($subject !== '') { $where[] = 'a.subject = ?'; $params[] = $subject; }
+        if ($year !== '' && ctype_digit($year)) { $where[] = 'a.year = ?'; $params[] = (int) $year; }
+        if ($search !== '') {
+            $where[] = '(a.statement LIKE ? OR a.id LIKE ?)';
+            $params[] = '%' . $search . '%';
+            $params[] = '%' . $search . '%';
+        }
+        if ($reference === 'linked') $where[] = 'rgq.question_id IS NOT NULL';
+        if ($reference === 'unlinked') $where[] = 'rgq.question_id IS NULL';
+        $whereSql = implode(' AND ', $where);
+
+        $count = $pdo->prepare($base . " SELECT COUNT(*) FROM audit a
+            LEFT JOIN simulator_reference_group_questions rgq ON rgq.question_id = a.id
+            WHERE {$whereSql}");
+        $count->execute($params);
+        $total = (int) $count->fetchColumn();
+
+        $sql = $base . " SELECT a.*, rg.id AS reference_id, rg.title AS reference_title
+            FROM audit a
+            LEFT JOIN simulator_reference_group_questions rgq ON rgq.question_id = a.id
+            LEFT JOIN simulator_reference_groups rg ON rg.id = rgq.group_id
+            WHERE {$whereSql}
+            ORDER BY COALESCE(a.year, 9999) DESC, a.source ASC, COALESCE(a.day, 0), COALESCE(a.question_number, 0), a.id
+            LIMIT ? OFFSET ?";
+        $statement = $pdo->prepare($sql);
+        $statement->execute([...$params, $perPage, ($page - 1) * $perPage]);
+
+        Response::success([
+            'items' => array_map([self::class, 'auditQuestion'], $statement->fetchAll()),
+            'pagination' => ['page' => $page, 'per_page' => $perPage, 'total' => $total, 'pages' => max(1, (int) ceil($total / $perPage))],
+            'filters' => [
+                'subjects' => self::auditSubjects($pdo),
+                'years' => self::auditYears($pdo),
+            ],
+        ]);
+    }
+
     public static function createReferenceGroup(): void {
         $userId = Auth::requireAdmin();
         $data = self::body();
@@ -68,6 +141,65 @@ final class SimulatorAdminController {
         }
 
         Response::json(['success' => true, 'data' => ['id' => $id]], 201);
+    }
+
+    private static function auditQuestion(array $row): array {
+        $images = json_decode((string) ($row['images'] ?? '[]'), true);
+        $pages = json_decode((string) ($row['source_pages'] ?? '[]'), true);
+        $source = json_decode((string) ($row['source_json'] ?? '{}'), true);
+        return [
+            'id' => (string) $row['id'],
+            'source' => (string) $row['source'],
+            'status' => (string) $row['status'],
+            'year' => $row['year'] === null ? null : (int) $row['year'],
+            'day' => $row['day'] === null ? null : (int) $row['day'],
+            'question_number' => $row['question_number'] === null ? null : (int) $row['question_number'],
+            'subject' => (string) $row['subject'],
+            'topic' => $row['topic'] === null ? null : (string) $row['topic'],
+            'statement' => (string) $row['statement'],
+            'options' => [
+                'A' => (string) ($row['option_a'] ?? ''),
+                'B' => (string) ($row['option_b'] ?? ''),
+                'C' => (string) ($row['option_c'] ?? ''),
+                'D' => (string) ($row['option_d'] ?? ''),
+                'E' => (string) ($row['option_e'] ?? ''),
+            ],
+            'correct_option' => $row['correct_option'] === null ? null : (string) $row['correct_option'],
+            'images' => is_array($images) ? $images : [],
+            'source_pdf' => $row['source_pdf'] === null ? null : (string) $row['source_pdf'],
+            'source_page' => $row['source_page'] === null ? null : (int) $row['source_page'],
+            'source_pages' => is_array($pages) ? $pages : [],
+            'pending_reason' => $row['pending_reason'] === null ? null : (string) $row['pending_reason'],
+            'inep_url' => $row['inep_url'] === null ? null : (string) $row['inep_url'],
+            'mirror_url' => $row['mirror_url'] === null ? null : (string) $row['mirror_url'],
+            'provider' => $row['provider'] === null ? null : (string) $row['provider'],
+            'source_meta' => is_array($source) ? $source : [],
+            'reference' => $row['reference_id'] === null ? null : [
+                'id' => (string) $row['reference_id'],
+                'title' => (string) $row['reference_title'],
+            ],
+        ];
+    }
+
+    private static function auditSubjects(PDO $pdo): array {
+        $rows = $pdo->query(
+            "SELECT subject FROM (
+                SELECT area AS subject FROM enem_questions
+                UNION SELECT subject FROM simulator_question_bank WHERE category = 'concursos'
+             ) WHERE subject IS NOT NULL AND subject <> '' ORDER BY subject"
+        )->fetchAll();
+        return array_values(array_map('strval', array_column($rows, 'subject')));
+    }
+
+    private static function auditYears(PDO $pdo): array {
+        $rows = $pdo->query(
+            "SELECT DISTINCT year FROM (
+                SELECT year FROM enem_questions
+                UNION ALL
+                SELECT CAST(json_extract(source_json, '$.year') AS INTEGER) FROM simulator_question_bank WHERE category = 'concursos'
+             ) WHERE year IS NOT NULL ORDER BY year DESC"
+        )->fetchAll();
+        return array_values(array_map('intval', array_column($rows, 'year')));
     }
 
     private static function referenceGroups(PDO $pdo): array {

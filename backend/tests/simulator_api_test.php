@@ -130,6 +130,15 @@ try {
     expectSimulatorApiStatus(simulatorApiRequest($root, $path, '/api/simulators/catalog', 'GET'), 401, 'Catalog requires authentication');
     expectSimulatorApiStatus(simulatorApiRequest($root, $path, '/api/admin/simulators', 'GET', $secondCookie), 403, 'Simulator administration rejects regular users');
     expectSimulatorApiStatus(simulatorApiRequest($root, $path, '/api/admin/simulators', 'GET', $firstCookie), 200, 'Simulator administration accepts admins');
+    expectSimulatorApiStatus(simulatorApiRequest($root, $path, '/api/admin/simulators/questions', 'GET', $secondCookie), 403, 'Question audit rejects regular users');
+    $auditResponse = simulatorApiRequest($root, $path, '/api/admin/simulators/questions?source=enem&status=pending&year=2024', 'GET', $firstCookie);
+    expectSimulatorApiStatus($auditResponse, 200, 'Question audit accepts admin filters');
+    $auditPayload = json_decode($auditResponse['body'], true, flags: JSON_THROW_ON_ERROR);
+    expectSimulatorApiSame(1, $auditPayload['data']['pagination']['total'] ?? null, 'Question audit filters pending ENEM questions');
+    expectSimulatorApiSame('inep:' . $pendingId, $auditPayload['data']['items'][0]['id'] ?? null, 'Question audit preserves the canonical source-prefixed id');
+    expectSimulatorApiSame('pending', $auditPayload['data']['items'][0]['status'] ?? null, 'Question audit exposes extraction status');
+    expectSimulatorApiSame('enem-2024.pdf', $auditPayload['data']['items'][0]['source_pdf'] ?? null, 'Question audit exposes source provenance');
+
     $reference = simulatorApiRequest($root, $path, '/api/admin/simulators/reference-groups', 'POST', $firstCookie, [
         'title' => 'Texto-base de teste',
         'body' => 'Leia este texto antes de responder às questões vinculadas.',

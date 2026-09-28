@@ -1,26 +1,77 @@
 import { describe, expect, it, vi } from 'vitest';
 import { SimulatorAdminPage } from '../pages/SimulatorAdminPage.js';
 
+function adminApi() {
+  const overview = {
+    success: true,
+    data: {
+      stats: { published_questions: 10, valid_enem: 8, pending_enem: 2, published_catalogs: 1, reference_groups: 0 },
+      reference_groups: [],
+      reference_candidates: [{ id: 'inep:1', subject: 'Linguagens', topic: null, statement_preview: 'De acordo com o texto...' }],
+    },
+  };
+  const audit = {
+    success: true,
+    data: {
+      items: [{
+        id: 'inep:1', source: 'enem', status: 'valid', year: 2024, day: 1, question_number: 1,
+        subject: 'Linguagens', topic: 'Interpretação', statement: 'Leia o texto e responda.',
+        options: { A: 'A', B: 'B', C: 'C', D: 'D', E: 'E' }, correct_option: 'B',
+        images: ['/question-assets/enem/teste.png'], source_pdf: 'enem.pdf', source_page: 4, source_pages: [4],
+        pending_reason: null, provider: null, source_meta: {}, reference: { id: 'ref-1', title: 'Texto I' },
+      }],
+      pagination: { page: 1, per_page: 20, total: 1, pages: 1 },
+      filters: { subjects: ['Linguagens'], years: [2024] },
+    },
+  };
+  return {
+    get: vi.fn((endpoint) => Promise.resolve(endpoint.startsWith('/admin/simulators/questions') ? audit : overview)),
+    post: vi.fn().mockResolvedValue({ success: true, data: { id: 'ref-1' } }),
+  };
+}
+
 describe('SimulatorAdminPage', () => {
+  it('renders the question audit with source, answer and reference metadata', async () => {
+    const api = adminApi();
+    const element = await new SimulatorAdminPage({ api, user: { id: 1, role: 'admin' } }).render();
+
+    expect(element.textContent).toContain('Auditoria do banco de questões');
+    expect(element.textContent).toContain('inep:1');
+    expect(element.textContent).toContain('2024');
+    expect(element.textContent).toContain('Texto-base vinculado');
+    expect(element.querySelector('.simulator-audit-options li.correct').textContent).toContain('B)');
+    expect(element.querySelectorAll('.simulator-audit-images img')).toHaveLength(1);
+  });
+
+  it('applies audit filters through the admin endpoint', async () => {
+    const api = adminApi();
+    const page = new SimulatorAdminPage({ api, user: { id: 1, role: 'admin' } });
+    const element = await page.render();
+    const form = element.querySelector('.simulator-audit-filters');
+    form.elements.q.value = 'fotossíntese';
+    form.elements.source.value = 'enem';
+    form.elements.status.value = 'pending';
+    form.dispatchEvent(new Event('submit', { bubbles: true, cancelable: true }));
+    await Promise.resolve();
+    await Promise.resolve();
+
+    expect(api.get.mock.calls.some(([endpoint]) =>
+      endpoint.includes('/admin/simulators/questions?') &&
+      endpoint.includes('q=fotoss%C3%ADntese') &&
+      endpoint.includes('source=enem') &&
+      endpoint.includes('status=pending')
+    )).toBe(true);
+  });
+
   it('loads real admin data and creates a reference group', async () => {
-    const api = {
-      get: vi.fn().mockResolvedValue({
-        success: true,
-        data: {
-          stats: { published_questions: 10, valid_enem: 8, pending_enem: 2, published_catalogs: 1, reference_groups: 0 },
-          reference_groups: [],
-          reference_candidates: [{ id: 'inep:1', subject: 'Linguagens', topic: null, statement_preview: 'De acordo com o texto...' }],
-        },
-      }),
-      post: vi.fn().mockResolvedValue({ success: true, data: { id: 'ref-1' } }),
-    };
+    const api = adminApi();
     const page = new SimulatorAdminPage({ api, user: { id: 1, role: 'admin' } });
     const element = await page.render();
 
     element.querySelector('[name="title"]').value = 'Texto I';
     element.querySelector('[name="body"]').value = 'Texto-base';
     element.querySelector('[name="question_id"]').checked = true;
-    element.querySelector('form').dispatchEvent(new Event('submit', { bubbles: true, cancelable: true }));
+    element.querySelector('.simulator-reference-form').dispatchEvent(new Event('submit', { bubbles: true, cancelable: true }));
     await Promise.resolve();
     await Promise.resolve();
 

@@ -4,6 +4,9 @@ declare(strict_types=1);
 
 $_SERVER['REQUEST_METHOD'] = getenv('TEST_METHOD') ?: 'GET';
 $_SERVER['REQUEST_URI'] = getenv('TEST_URI') ?: '/';
+$_GET = [];
+$query = parse_url($_SERVER['REQUEST_URI'], PHP_URL_QUERY);
+if (is_string($query) && $query !== '') parse_str($query, $_GET);
 $_SERVER['HTTP_HOST'] = getenv('TEST_HOST') ?: 'localhost';
 $_SERVER['HTTP_ORIGIN'] = getenv('TEST_ORIGIN') ?: 'http://localhost';
 $_SERVER['HTTP_X_FORWARDED_PROTO'] = getenv('TEST_SCHEME') ?: 'http';
