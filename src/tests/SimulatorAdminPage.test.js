@@ -5,7 +5,7 @@ function adminApi() {
   const overview = {
     success: true,
     data: {
-      stats: { published_questions: 10, valid_enem: 8, pending_enem: 2, published_catalogs: 1, reference_groups: 0 },
+      stats: { published_questions: 10, valid_enem: 8, pending_enem: 2, published_catalogs: 1, catalog_replacements: 2, reference_groups: 0 },
       reference_groups: [],
       reference_candidates: [{ id: 'inep:1', subject: 'Linguagens', topic: null, statement_preview: 'De acordo com o texto...' }],
     },
@@ -15,8 +15,13 @@ function adminApi() {
     data: {
       items: [{
         id: 'inep:1', source: 'enem', status: 'valid', year: 2024, day: 1, question_number: 1,
-        subject: 'Linguagens', topic: 'Interpretação', statement: 'Leia o texto e responda.',
-        options: { A: 'A', B: 'B', C: 'C', D: 'D', E: 'E' }, correct_option: 'B',
+        subject: 'Linguagens', topic: 'Interpretação',
+        statement: 'ENEM2024ENEM2024ENEM2024 Leia o texto e responda.',
+        presentation_statement: 'Leia o texto e responda.',
+        options: { A: 'A\t Alfa', B: 'B\t Beta', C: 'C\t Gama', D: 'D\t Delta', E: 'E\t Épsilon' },
+        presentation_options: { A: 'Alfa', B: 'Beta', C: 'Gama', D: 'Delta', E: 'Épsilon' },
+        correct_option: 'B', quality_status: 'approved', quality_reason: null,
+        quality_flags: ['presentation_watermark', 'embedded_option_labels'],
         images: ['/question-assets/enem/teste.png'], source_pdf: 'enem.pdf', source_page: 4, source_pages: [4],
         pending_reason: null, provider: null, source_meta: {}, reference: { id: 'ref-1', title: 'Texto I' },
       }],
@@ -39,8 +44,14 @@ describe('SimulatorAdminPage', () => {
     expect(element.textContent).toContain('inep:1');
     expect(element.textContent).toContain('2024');
     expect(element.textContent).toContain('Texto-base vinculado');
-    expect(element.querySelector('.simulator-audit-options li.correct').textContent).toContain('B)');
+    expect(element.querySelector('.simulator-audit-options li.correct').textContent).toContain('B) Beta');
     expect(element.querySelectorAll('.simulator-audit-images img')).toHaveLength(1);
+    expect(element.querySelector('.simulator-audit-statement').textContent).toBe('Leia o texto e responda.');
+    expect(element.textContent).toContain('Marca-d’água removida na prévia');
+    expect(element.textContent).toContain('Rótulos A–E normalizados');
+    expect(element.querySelector('.simulator-audit-raw')).not.toBeNull();
+    expect(element.querySelector('.simulator-audit-raw').textContent).toContain('ENEM2024ENEM2024ENEM2024');
+    expect(element.textContent).toContain('Substituições seguras');
   });
 
   it('applies audit filters through the admin endpoint', async () => {

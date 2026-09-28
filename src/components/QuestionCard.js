@@ -54,11 +54,11 @@ export class QuestionCard {
       
       <div class="question-content">
         ${this.question.reference ? `
-          <section class="question-reference" aria-label="Texto de referência">
-            <div class="question-reference-label">Texto de referência</div>
+          <section class="question-reference" aria-label="Material de referência">
+            <div class="question-reference-label">Material de referência</div>
             ${this.question.reference.title ? `<h3 class="question-reference-title">${escapeHtml(this.question.reference.title)}</h3>` : ''}
-            <p class="question-reference-body">${escapeHtml(this.question.reference.body)}</p>
-            ${renderImages(this.question.reference.images, 'Imagem do texto de referência')}
+            ${this.question.reference.body ? `<p class="question-reference-body">${escapeHtml(this.question.reference.body)}</p>` : ''}
+            ${renderImages(this.question.reference.images, 'Imagem do material de referência')}
           </section>
         ` : ''}
         <p class="question-text">${escapeHtml(this.question.text)}</p>

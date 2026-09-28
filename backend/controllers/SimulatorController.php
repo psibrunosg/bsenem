@@ -7,6 +7,8 @@ require_once __DIR__ . '/../config/response.php';
 require_once __DIR__ . '/../middleware/auth.php';
 require_once __DIR__ . '/../services/SimulatorCatalogImporter.php';
 require_once __DIR__ . '/../utils/PublishedQuestionRepository.php';
+require_once __DIR__ . '/../utils/QuestionAssets.php';
+require_once __DIR__ . '/../utils/QuestionContent.php';
 require_once __DIR__ . '/../utils/SimulatorRecommendation.php';
 require_once __DIR__ . '/../utils/SimulatorSessionRepository.php';
 
@@ -374,18 +376,22 @@ final class SimulatorController {
         $statement->execute([$sessionId]);
 
         return array_map(static function (array $row) use ($includeCorrectOption): array {
-            $images = json_decode((string) $row['images'], true);
-            $referenceImages = json_decode((string) ($row['reference_images'] ?? '[]'), true);
             $question = [
                 'id' => (string) $row['id'], 'position' => (int) $row['position'], 'subject' => (string) $row['subject'],
-                'topic' => $row['topic'], 'statement' => (string) $row['statement'],
-                'options' => ['A' => $row['option_a'], 'B' => $row['option_b'], 'C' => $row['option_c'], 'D' => $row['option_d'], 'E' => $row['option_e']],
-                'images' => is_array($images) ? $images : [],
+                'topic' => $row['topic'], 'statement' => QuestionContent::statement($row['statement']),
+                'options' => [
+                    'A' => QuestionContent::option($row['option_a'], 'A'),
+                    'B' => QuestionContent::option($row['option_b'], 'B'),
+                    'C' => QuestionContent::option($row['option_c'], 'C'),
+                    'D' => QuestionContent::option($row['option_d'], 'D'),
+                    'E' => QuestionContent::option($row['option_e'], 'E'),
+                ],
+                'images' => QuestionAssets::publicUrls($row['images']),
                 'reference' => $row['reference_id'] === null ? null : [
                     'id' => (string) $row['reference_id'],
                     'title' => (string) $row['reference_title'],
                     'body' => (string) $row['reference_body'],
-                    'images' => is_array($referenceImages) ? $referenceImages : [],
+                    'images' => QuestionAssets::publicUrls($row['reference_images'] ?? '[]'),
                 ],
             ];
             if ($includeCorrectOption) {

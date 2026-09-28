@@ -32,10 +32,26 @@ try {
     expectSimulator($enemCount > 3000, 'Importer loads the audited ENEM questions.');
     expectSimulator($bankCount > 2000, 'Importer keeps the validated concursos question bank.');
     expectSimulator((int) ($db->fetch("SELECT COUNT(*) AS total FROM simulator_question_bank WHERE category <> 'concursos'")['total'] ?? 0) === 0, 'ENEM questions are not duplicated into the concursos bank.');
+    expectSimulator((int) ($db->fetch("SELECT COUNT(*) AS total FROM simulator_reference_groups WHERE origin = 'official_import'")['total'] ?? 0) === 13, 'Importer loads all explicit official shared-reference groups.');
+    expectSimulator((int) ($db->fetch("SELECT COUNT(*) AS total FROM simulator_reference_group_questions")['total'] ?? 0) === 29, 'Official shared-reference groups link both dependent questions.');
     expectSimulator($catalogCount >= 10, 'Importer creates permanent ENEM and concursos catalogs.');
     expectSimulator((int) ($db->fetch('SELECT COUNT(*) AS total FROM simulator_question_bank WHERE subject = ?', ['Psicologia'])['total'] ?? 0) > 0, 'Concursos psychology questions are available as a custom-simulator subject.');
-    expectSimulator((int) ($db->fetch("SELECT COUNT(*) AS total FROM simulator_catalog_questions WHERE catalog_id LIKE 'enem:%' AND question_id LIKE 'inep:%'")['total'] ?? 0) >= 315, 'ENEM catalogs reference the audited ENEM questions.');
+    expectSimulator((int) ($db->fetch("SELECT COUNT(*) AS total FROM simulator_catalog_questions WHERE catalog_id LIKE 'enem:%' AND question_id LIKE 'inep:%'")['total'] ?? 0) === 405, 'ENEM generic catalogs preserve their complete 45/90-question compositions.');
     expectSimulator((int) ($db->fetch("SELECT COUNT(*) AS total FROM simulator_catalog_questions AS c LEFT JOIN simulator_questions AS q ON q.id = c.question_id AND q.published = 1 WHERE q.id IS NULL")['total'] ?? 0) === 0, 'Every catalog question is published.');
+    $replacementCount = (int) ($db->fetch('SELECT COUNT(*) AS total FROM simulator_catalog_replacements')['total'] ?? 0);
+    expectSimulator($replacementCount > 0, 'Quarantined or duplicate curated questions are replaced instead of leaking into a catalog.');
+    expectSimulator((int) ($db->fetch(
+        "SELECT COUNT(*) AS total
+         FROM simulator_catalog_replacements r
+         LEFT JOIN simulator_questions q ON q.id = r.replacement_question_id AND q.published = 1
+         WHERE q.id IS NULL"
+    )['total'] ?? 0) === 0, 'Every catalog replacement is an approved published question.');
+    expectSimulator((int) ($db->fetch(
+        "SELECT COUNT(*) AS total
+         FROM simulator_catalog_replacements r
+         JOIN enem_questions q ON 'inep:' || q.id = r.original_question_id
+         WHERE r.reason = 'corrupted_pdf_text' AND q.quality_status <> 'quarantined'"
+    )['total'] ?? 0) === 0, 'Corrupted source replacements remain traceable to quarantined originals.');
     expectSimulator((int) ($db->fetch('SELECT MAX(total) AS total FROM (SELECT COUNT(*) AS total FROM simulator_catalog_questions GROUP BY catalog_id)')['total'] ?? 0) <= 90, 'No published catalog exceeds 90 questions.');
     expectSimulator((int) ($db->fetch("SELECT COUNT(*) AS total FROM simulator_question_bank AS bank
         WHERE bank.category = 'concursos' AND (SELECT COUNT(*) FROM simulator_catalog_questions AS c
@@ -48,6 +64,7 @@ try {
     SimulatorCatalogImporter::ensureImported($db);
     expectSimulator((int) ($db->fetch('SELECT COUNT(*) AS total FROM simulator_question_bank')['total'] ?? 0) === $bankCount, 'Importer is idempotent.');
     expectSimulator((int) ($db->fetch('SELECT COUNT(*) AS total FROM simulator_catalogs')['total'] ?? 0) === $catalogCount, 'Catalog import is idempotent.');
+    expectSimulator((int) ($db->fetch('SELECT COUNT(*) AS total FROM simulator_catalog_replacements')['total'] ?? 0) === $replacementCount, 'Replacement audit remains stable on repeated imports.');
     $compositionCount = (int) ($db->fetch('SELECT COUNT(*) AS total FROM simulator_catalog_questions')['total'] ?? 0);
     $db->getConnection()->exec('DELETE FROM simulator_catalog_questions');
     SimulatorCatalogImporter::ensureImported($db);

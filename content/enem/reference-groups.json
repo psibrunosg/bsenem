@@ -1,0 +1,258 @@
+{
+  "schema": "bsestudos.enem-reference-groups.v1",
+  "groups": [
+    {
+      "id": "enem:2009:d2:q97-98",
+      "year": 2009,
+      "day": 2,
+      "question_numbers": [
+        97,
+        98
+      ],
+      "title": "Material de referência para as questões 97 a 98",
+      "body": "",
+      "images": [
+        "reference-assets/2009/dia-2/q97-98.png"
+      ],
+      "source_pdf": "2009/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        5
+      ],
+      "confidence": "explicit_official_label",
+      "label": "Texto para as questões 97 e 98"
+    },
+    {
+      "id": "enem:2009:d2:q101-102",
+      "year": 2009,
+      "day": 2,
+      "question_numbers": [
+        101,
+        102
+      ],
+      "title": "Material de referência para as questões 101 a 102",
+      "body": "",
+      "images": [
+        "reference-assets/2009/dia-2/q101-102.png"
+      ],
+      "source_pdf": "2009/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        7
+      ],
+      "confidence": "explicit_official_label",
+      "label": "Texto para as questões 101 e 102"
+    },
+    {
+      "id": "enem:2009:d2:q107-108",
+      "year": 2009,
+      "day": 2,
+      "question_numbers": [
+        107,
+        108
+      ],
+      "title": "Material de referência para as questões 107 a 108",
+      "body": "Texto I É praticamente impossível imaginarmos nossas vidas sem o plástico. Ele está presente em embalagens de alimentos, bebidas e remédios, além de eletrodomésticos, automóveis etc. Esse uso ocorre devido à sua atoxicidade e à inércia, isto é: quando em contato com outras substâncias, o plástico não as contamina; ao contrário, protege o produto embalado. Outras duas grandes vantagens garantem o uso dos plásticos em larga escala: são leves, quase não alteram o peso do material embalado, e são 100% recicláveis, fato que, infelizmente, não é aproveitado, visto que, em todo o mundo, a percentagem de plástico reciclado, quando comparado ao total produzido, ainda é irrelevante. Revista Mãe Terra. Minuano, ano I, n. 6 (adaptado). Texto II Sacolas plásticas são leves e voam ao vento. Por isso, elas entopem esgotos e bueiros, causando enchentes. São encontradas até no estômago de tartarugas marinhas, baleias, focas e golfinhos, mortos por sufocamento. Sacolas plásticas descartáveis são gratuitas para os consumidores, mas têm um custo incalculável para o meio ambiente. Veja, 8 jul. 2009. Fragmentos de texto publicitário do Instituto Akatu pelo Consumo Consciente. A A B C D E Q",
+      "images": [],
+      "source_pdf": "2009/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        9
+      ],
+      "confidence": "explicit_official_label",
+      "label": "Textos para as questões 107 e 108"
+    },
+    {
+      "id": "enem:2009:d2:q117-118",
+      "year": 2009,
+      "day": 2,
+      "question_numbers": [
+        117,
+        118
+      ],
+      "title": "Material de referência para as questões 117 a 118",
+      "body": "Canção do vento e da minha vida O vento varria as folhas, O vento varria os frutos, O vento varria as flores... E a minha vida ficava Cada vez mais cheia De frutos, de flores, de folhas. [...] O vento varria os sonhos E varria as amizades... O vento varria as mulheres... E a minha vida ficava Cada vez mais cheia De afetos e de mulheres. O vento varria os meses E varria os teus sorrisos... O vento varria tudo! E a minha vida ficava Cada vez mais cheia De tudo. BANDEIRA, M. Poesia completa e prosa. Rio de Janeiro: José Aguilar, 1967. s n d h h s r T d ti e c a p p jo",
+      "images": [],
+      "source_pdf": "2009/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        13
+      ],
+      "confidence": "explicit_official_label",
+      "label": "Texto para as questões 117 e 118"
+    },
+    {
+      "id": "enem:2009:d2:q122-123",
+      "year": 2009,
+      "day": 2,
+      "question_numbers": [
+        122,
+        123
+      ],
+      "title": "Material de referência para as questões 122 a 123",
+      "body": "Quando eu falo com vocês, procuro usar o código de vocês. A figura do índio no Brasil de hoje não pode ser aquela de 500 anos atrás, do passado, que representa aquele primeiro contato. Da mesma forma que o Brasil de hoje não é o Brasil de ontem, tem 160 milhões de pessoas com diferentes sobrenomes. Vieram para cá asiáticos, europeus, africanos, e todo mundo quer ser brasileiro. A importante pergunta que nós fazemos é: qual é o pedaço de índio que vocês têm? O seu cabelo? São seus olhos? Ou é o nome da sua rua? O nome da sua praça? Enfim, vocês devem ter um pedaço de índio dentro de vocês. Para nós, o importante é que vocês olhem para a gente como seres humanos, como pessoas que nem precisam de paternalismos, nem precisam ser tratadas com privilégios. Nós não queremos tomar o Brasil de vocês, nós queremos compartilhar esse Brasil com vocês. TERENA, M. Debate. MORIN, E. Saberes globais e saberes locais. Rio de Janeiro: Garamond, 2000 (adaptado). O s e e C p 2 r A B C D E",
+      "images": [],
+      "source_pdf": "2009/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        15
+      ],
+      "confidence": "explicit_official_label",
+      "label": "Texto para as questões 122 e 123"
+    },
+    {
+      "id": "enem:2009:d2:q126-127",
+      "year": 2009,
+      "day": 2,
+      "question_numbers": [
+        126,
+        127
+      ],
+      "title": "Material de referência para as questões 126 a 127",
+      "body": "",
+      "images": [
+        "reference-assets/2009/dia-2/q126-127.png"
+      ],
+      "source_pdf": "2009/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        16
+      ],
+      "confidence": "explicit_official_label",
+      "label": "Texto para as questões 126 e 127"
+    },
+    {
+      "id": "enem:2009:d2:q132-133",
+      "year": 2009,
+      "day": 2,
+      "question_numbers": [
+        132,
+        133
+      ],
+      "title": "Material de referência para as questões 132 a 133",
+      "body": "a. 3. o s, e a o a [...] já foi o tempo em que via a convivência como viável, só exigindo deste bem comum, piedosamente, o meu quinhão, já foi o tempo em que consentia num contrato, deixando muitas coisas de fora sem ceder contudo no que me era vital, já foi o tempo em que reconhecia a existência escandalosa de imaginados valores, coluna vertebral de toda ‘ordem’; mas não tive sequer o sopro necessário, e, negado o respiro, me foi imposto o sufoco; é esta consciência que me libera, é ela hoje que me empurra, são outras agora minhas preocupações, é hoje outro o meu universo de problemas; num mundo estapafúrdio — definitivamente fora de foco — cedo ou tarde tudo acaba se reduzindo a um ponto de vista, e você que vive paparicando as ciências humanas, nem suspeita que paparica uma piada: impossível ordenar o mundo dos valores, ninguém arruma a casa do capeta; me recuso pois a pensar naquilo em que não mais acredito, seja o amor, a amizade, a família, a igreja, a humanidade; me lixo com tudo isso! me apavora ainda a existência, mas não tenho medo de ficar sozinho, foi conscientemente que escolhi o exílio, me bastando hoje o cinismo dos grandes indiferentes [...]. NASSAR, R. Um copo de cólera. São Paulo: Companhia das Letras, 1992. Texto II Raduan Nassar lançou a novela Um Copo de Cólera em 1978, fervilhante narrativa de um confronto verbal entre amantes, em que a fúria das palavras cortantes se estilhaçava no ar. O embate conjugal ecoava o autoritário discurso do poder e da submissão de um Brasil que vivia sob o jugo da ditadura militar. COMODO, R. Um silêncio inquietante. IstoÉ. Disponível em: http://www.terra.com.br. Acesso em: 15 jul. 2009.",
+      "images": [],
+      "source_pdf": "2009/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        18
+      ],
+      "confidence": "explicit_official_label",
+      "label": "Textos para as questões 132 e 133"
+    },
+    {
+      "id": "enem:2009:d2:q137-138",
+      "year": 2009,
+      "day": 2,
+      "question_numbers": [
+        137,
+        138
+      ],
+      "title": "Material de referência para as questões 137 a 138",
+      "body": "",
+      "images": [
+        "reference-assets/2009/dia-2/q137-138.png"
+      ],
+      "source_pdf": "2009/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        20
+      ],
+      "confidence": "explicit_official_label",
+      "label": "Texto para as questões 137 e 138"
+    },
+    {
+      "id": "enem:2010:d1:q5-6",
+      "year": 2010,
+      "day": 1,
+      "question_numbers": [
+        5,
+        6
+      ],
+      "title": "Material de referência para as questões 5 a 6",
+      "body": "",
+      "images": [
+        "reference-assets/2010/dia-1/q5-6.png"
+      ],
+      "source_pdf": "2010/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        3
+      ],
+      "confidence": "explicit_official_label",
+      "label": "Figura para as questões 5 e 6"
+    },
+    {
+      "id": "enem:2010:d2:q125-126",
+      "year": 2010,
+      "day": 2,
+      "question_numbers": [
+        125,
+        126
+      ],
+      "title": "Material de referência para as questões 125 a 126",
+      "body": "",
+      "images": [
+        "reference-assets/2010/dia-2/q125-126.png"
+      ],
+      "source_pdf": "2010/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        17
+      ],
+      "confidence": "explicit_official_label",
+      "label": "Texto para as questões 125 e 126"
+    },
+    {
+      "id": "enem:2011:d2:q122-123",
+      "year": 2011,
+      "day": 2,
+      "question_numbers": [
+        122,
+        123
+      ],
+      "title": "Material de referência para as questões 122 a 123",
+      "body": "",
+      "images": [
+        "reference-assets/2011/dia-2/q122-123.png"
+      ],
+      "source_pdf": "2011/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        16
+      ],
+      "confidence": "explicit_official_label",
+      "label": "Texto para as questões 122 e 123"
+    },
+    {
+      "id": "enem:2011:d2:q133-134",
+      "year": 2011,
+      "day": 2,
+      "question_numbers": [
+        133,
+        134
+      ],
+      "title": "Material de referência para as questões 133 a 134",
+      "body": "",
+      "images": [
+        "reference-assets/2011/dia-2/q133-134.png"
+      ],
+      "source_pdf": "2011/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        20
+      ],
+      "confidence": "explicit_official_label",
+      "label": "Imagem para as questões 133 e 134"
+    },
+    {
+      "id": "enem:2025:d1:q6-10",
+      "year": 2025,
+      "day": 1,
+      "question_numbers": [
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "title": "Material de referência para as questões 6 a 10",
+      "body": "De próprio punho A escrita e suas tecnologias sofrem interessantes metamorfoses, numa ciranda que vai do simples bilhete aos originais de um livro Estranhei muito na primeira vez que escutei a expressão “de próprio punho”. Parecia que eu ia bater em alguém. Não era bem o caso. Foi numa situação bancária, dessas bem burocráticas, e eu devia escrever algo bem breve, mas com minhas mãos. Na verdade, o que importava era a autenticidade da minha caligrafia, que à época ainda era mais fluente e firme. Depois dos teclados de computador, ela rateia bastante. Minha letra, hoje, tem uma espécie de alternância: dia sim, dia não, trêmula e firme, forte e fraca, mais rotunda e mais cheia de arestas. É claro que já escrevi muito mais de próprio punho ou, numa palavra mais bonita, manuscrevi (prefiro a mão ao punho, embora ele também seja usado na tarefa). Mas isso não é um feito individual. Em larga medida, é social. Muita gente sente o mesmo que eu, isto é, escreve bem menos usando as mãos, ou melhor, empregando algum tipo de tecnologia (lápis, caneta etc.) para escrever com grafite ou tinta ou giz ou carvão ou sangue e o que mais. É importante lembrar que ainda há gente que não sabe escrever neste país, neste planeta, mas muita gente sabe e tem um combo de tecnologias mais ou menos à disposição para isso. Sou dessas pessoas privilegiadas que têm várias possibilidades, e uma delas nunca deixou de ser o uso das minhas mãos. Ainda hoje, são elas que batucam meu teclado de computador ou que tocam suavemente duas ou três telas sensíveis. Mas não expressam mais a minha letra. No lugar, aparecem Times New Roman, Arial, Calibri e mais uma centena de “letras” à minha escolha. Eu e Deus e o mundo. A despeito desse rol de chances e ferramentas para escrever, o manuscrito nunca deixou de pintar aqui e ali, muitas vezes como obrigação. Na escola, por exemplo, até hoje ele é soberano. No Enem também. Curioso, não? Fico pensando em que espaços e ocasiões ainda uso minha letra. Olhando ao redor, na minha casa, minha letra está em espaços muito delimitados e específicos: bilhetes. Eles estão principalmente na cozinha, em especial na porta da geladeira, a fim de manter a comunicação com meus coabitantes, sempre muito esquecidos ou relapsos. Mas também há bilhetes em post its na minha mesa do escritório, textinhos em garranchos por meio dos quais me comunico comigo mesma, a evitar um comportamento esquecido e relapso. No escritório, costumo ser mais suave comigo mesma, mas também muito mais lacônica, a ponto de nem eu me entender, se passar o tempo. Em todos os casos vai minha letra, menos e mais redonda, a lápis e a tinta azul, em post its rosa-choque, colados precariamente, e todos com destino à lixeira, em breve. Justo porque eles funcionam como lembretes de tarefas e coisas que devem ser vencidas e, claro, substituídas por outras, num fluxo infinito, às vezes ansiogênico, com que a maioria dos adultos (e mais ainda as adultas) precisa conviver. As formas de escrever mudam, as necessidades também, e o resultado é um elenco complexo, em que nada dispensa nada, a depender da tarefa ou da importância das coisas ou de suas funções, claro. A escrita e suas tecnologias incríveis vão se reposicionando, mudando de status, numa ciranda interessante e importante que pode ser vista à luz de certa diversidade que encontra suas oportunidades e seus efeitos, aqui e ali. Não adianta muito pensar sempre como se tudo fosse excludente. Estão aí minha farta comunicação por bilhetes, minha gaveta alegre de post its de toda cor, esperando para serem usados, e o cheque do cartório, em que quase tudo já é digital. “Do punho ao pixel” não é uma frase filosoficamente correta. O negócio é mais “o punho e o pixel”. RIBEIRO, A. E. Disponível em: https://rascunho.com.br",
+      "images": [],
+      "source_pdf": "2025/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        6
+      ],
+      "confidence": "explicit_official_label",
+      "label": "Texto para as Questões de 06 a 10"
+    }
+  ]
+}

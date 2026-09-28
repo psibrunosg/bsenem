@@ -10,10 +10,13 @@ CREATE TABLE simulator_reference_groups (
     source_pages TEXT NOT NULL DEFAULT '[]',
     review_status TEXT NOT NULL DEFAULT 'reviewed'
       CHECK(review_status IN ('draft', 'reviewed')),
-    created_by INTEGER NOT NULL,
+    origin TEXT NOT NULL DEFAULT 'manual'
+      CHECK(origin IN ('manual', 'official_import')),
+    confidence TEXT,
+    created_by INTEGER,
     created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
     updated_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    FOREIGN KEY (created_by) REFERENCES users(id) ON DELETE RESTRICT
+    FOREIGN KEY (created_by) REFERENCES users(id) ON DELETE SET NULL
 );
 
 CREATE TABLE simulator_reference_group_questions (

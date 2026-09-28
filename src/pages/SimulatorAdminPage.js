@@ -7,7 +7,7 @@ export class SimulatorAdminPage {
     this.element = null;
     this.data = null;
     this.audit = null;
-    this.auditFilters = { page: 1, source: 'all', status: 'all', reference: 'all', subject: '', year: '', q: '' };
+    this.auditFilters = { page: 1, source: 'all', status: 'all', reference: 'all', quality: 'all', subject: '', year: '', q: '' };
   }
 
   async render() {
@@ -53,6 +53,7 @@ export class SimulatorAdminPage {
       ['ENEM válidas', stats.valid_enem ?? 0],
       ['ENEM pendentes', stats.pending_enem ?? 0],
       ['Simulados publicados', stats.published_catalogs ?? 0],
+      ['Substituições seguras', stats.catalog_replacements ?? 0],
       ['Textos-base cadastrados', stats.reference_groups ?? 0],
     ]) cards.appendChild(this.statCard(label, value));
 
@@ -84,6 +85,7 @@ export class SimulatorAdminPage {
       <select class="input" name="source"><option value="all">Todas as fontes</option><option value="enem">ENEM</option><option value="concursos">Concursos</option></select>
       <select class="input" name="status"><option value="all">Todos os status</option><option value="valid">Válidas</option><option value="pending">Pendentes</option></select>
       <select class="input" name="reference"><option value="all">Todos os textos-base</option><option value="linked">Com texto-base</option><option value="unlinked">Sem texto-base</option></select>
+      <select class="input" name="quality"><option value="all">Toda qualidade</option><option value="flagged">Exige revisão</option><option value="clean">Sem alertas</option></select>
       <select class="input" name="subject"><option value="">Todas as matérias</option></select>
       <select class="input" name="year"><option value="">Todos os anos</option></select>
       <button class="btn btn-primary" type="submit">Filtrar</button>
@@ -91,6 +93,7 @@ export class SimulatorAdminPage {
     form.elements.source.value = this.auditFilters.source;
     form.elements.status.value = this.auditFilters.status;
     form.elements.reference.value = this.auditFilters.reference;
+    form.elements.quality.value = this.auditFilters.quality;
     for (const subject of this.audit?.filters?.subjects ?? []) form.elements.subject.add(new Option(subject, subject));
     for (const year of this.audit?.filters?.years ?? []) form.elements.year.add(new Option(String(year), String(year)));
     form.elements.subject.value = this.auditFilters.subject;
@@ -123,6 +126,7 @@ export class SimulatorAdminPage {
     badges.append(this.badge(question.source === 'enem' ? 'ENEM' : 'Concurso'));
     badges.append(this.badge(question.status === 'valid' ? 'Válida' : 'Pendente', question.status));
     if (question.reference) badges.append(this.badge('Texto-base vinculado', 'reference'));
+    for (const flag of question.quality_flags ?? []) badges.append(this.qualityBadge(flag));
     header.append(title, badges);
 
     const meta = document.createElement('div');
@@ -135,13 +139,18 @@ export class SimulatorAdminPage {
     if (question.provider) sourceParts.push(question.provider);
     meta.textContent = sourceParts.join(' · ') || 'Metadados de origem indisponíveis';
 
+    card.append(header, meta);
     if (question.pending_reason) {
       const warning = document.createElement('div');
       warning.className = 'simulator-audit-warning';
-      warning.textContent = 'Pendência: ' + question.pending_reason;
-      card.append(header, meta, warning);
-    } else {
-      card.append(header, meta);
+      warning.textContent = 'Pendência de extração: ' + question.pending_reason;
+      card.appendChild(warning);
+    }
+    if (question.quality_reason) {
+      const warning = document.createElement('div');
+      warning.className = 'simulator-audit-warning simulator-audit-quarantine';
+      warning.textContent = 'Bloqueio de qualidade: ' + question.quality_reason;
+      card.appendChild(warning);
     }
 
     if (question.reference) {
@@ -151,10 +160,14 @@ export class SimulatorAdminPage {
       card.appendChild(reference);
     }
 
+    const previewLabel = document.createElement('div');
+    previewLabel.className = 'simulator-audit-preview-label';
+    previewLabel.textContent = 'Prévia para o aluno';
+
     const statement = document.createElement('p');
     statement.className = 'simulator-audit-statement';
-    statement.textContent = question.statement;
-    card.appendChild(statement);
+    statement.textContent = question.presentation_statement ?? question.statement;
+    card.append(previewLabel, statement);
 
     if (question.images?.length) {
       const images = document.createElement('div');
@@ -170,14 +183,17 @@ export class SimulatorAdminPage {
 
     const options = document.createElement('ol');
     options.className = 'simulator-audit-options';
+    const previewOptions = question.presentation_options ?? question.options ?? {};
     for (const key of ['A', 'B', 'C', 'D', 'E']) {
       const item = document.createElement('li');
       item.dataset.option = key;
       if (question.correct_option === key) item.classList.add('correct');
-      item.textContent = key + ') ' + (question.options?.[key] || '[alternativa vazia]');
+      item.textContent = key + ') ' + (previewOptions[key] || '[alternativa vazia]');
       options.appendChild(item);
     }
     card.appendChild(options);
+
+    if (this.presentationDiffers(question)) card.appendChild(this.rawExtractionDetails(question));
 
     const source = document.createElement('div');
     source.className = 'simulator-audit-source';
@@ -193,11 +209,49 @@ export class SimulatorAdminPage {
     return card;
   }
 
+  presentationDiffers(question) {
+    if ((question.presentation_statement ?? question.statement) !== question.statement) return true;
+    for (const key of ['A', 'B', 'C', 'D', 'E']) {
+      if ((question.presentation_options?.[key] ?? question.options?.[key] ?? '') !== (question.options?.[key] ?? '')) return true;
+    }
+    return false;
+  }
+
+  rawExtractionDetails(question) {
+    const details = document.createElement('details');
+    details.className = 'simulator-audit-raw';
+    const summary = document.createElement('summary');
+    summary.textContent = 'Ver extração bruta';
+    const statement = document.createElement('pre');
+    statement.textContent = question.statement;
+    const options = document.createElement('pre');
+    options.textContent = ['A', 'B', 'C', 'D', 'E']
+      .map((key) => `${key}) ${question.options?.[key] ?? ''}`)
+      .join('\n');
+    details.append(summary, statement, options);
+    return details;
+  }
+
   badge(text, tone = '') {
     const badge = document.createElement('span');
     badge.className = 'simulator-audit-badge ' + tone;
     badge.textContent = text;
     return badge;
+  }
+
+  qualityBadge(flag) {
+    const labels = {
+      pending_extraction: 'Revisar extração',
+      quarantined: 'Bloqueada pelo quality gate',
+      question_number_misalignment: 'Numeração/conteúdo desalinhados',
+      presentation_watermark: 'Marca-d’água removida na prévia',
+      embedded_option_labels: 'Rótulos A–E normalizados',
+      incomplete_options: 'Alternativas incompletas',
+      short_without_support: 'Enunciado curto sem apoio',
+      possible_missing_reference: 'Referência possivelmente ausente',
+      possible_missing_visual: 'Visual possivelmente ausente',
+    };
+    return this.badge(labels[flag] ?? flag, 'quality');
   }
 
   metaSpan(label, value) {
@@ -236,6 +290,7 @@ export class SimulatorAdminPage {
       source: form.elements.source.value,
       status: form.elements.status.value,
       reference: form.elements.reference.value,
+      quality: form.elements.quality.value,
       subject: form.elements.subject.value,
       year: form.elements.year.value,
     };
@@ -332,7 +387,8 @@ export class SimulatorAdminPage {
       const heading = document.createElement('strong');
       heading.textContent = group.title;
       const meta = document.createElement('span');
-      meta.textContent = `${group.question_count} questão(ões) · ${group.review_status}`;
+      const origin = group.origin === 'official_import' ? 'fonte oficial' : 'manual';
+      meta.textContent = `${group.question_count} questão(ões) · ${origin} · ${group.review_status}`;
       row.append(heading, meta);
       list.appendChild(row);
     }

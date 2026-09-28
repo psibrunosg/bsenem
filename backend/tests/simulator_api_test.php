@@ -139,12 +139,34 @@ try {
     expectSimulatorApiSame('pending', $auditPayload['data']['items'][0]['status'] ?? null, 'Question audit exposes extraction status');
     expectSimulatorApiSame('enem-2024.pdf', $auditPayload['data']['items'][0]['source_pdf'] ?? null, 'Question audit exposes source provenance');
 
+    $contextQuestionId = (int) substr($mathQuestionIds[0], strlen('inep:'));
+    $pdo->prepare(
+        "UPDATE enem_questions
+         SET quality_status = 'quarantined', quality_reason = 'missing_context_or_visual'
+         WHERE id = ?"
+    )->execute([$contextQuestionId]);
+    expectSimulatorApiSame(
+        0,
+        (int) $pdo->query("SELECT published FROM simulator_questions WHERE id = '{$mathQuestionIds[0]}'")->fetchColumn(),
+        'A context-blocked question is not published before admin repair'
+    );
+
     $reference = simulatorApiRequest($root, $path, '/api/admin/simulators/reference-groups', 'POST', $firstCookie, [
         'title' => 'Texto-base de teste',
         'body' => 'Leia este texto antes de responder às questões vinculadas.',
         'question_ids' => [$mathQuestionIds[0]],
     ]);
-    expectSimulatorApiStatus($reference, 201, 'Admin can create a reference group');
+    expectSimulatorApiStatus($reference, 201, 'Admin can attach a reference even while a question is quarantined');
+    expectSimulatorApiSame(
+        'approved',
+        (string) $pdo->query("SELECT quality_status FROM enem_questions WHERE id = {$contextQuestionId}")->fetchColumn(),
+        'A verified reference releases a question blocked only for missing context'
+    );
+    expectSimulatorApiSame(
+        1,
+        (int) $pdo->query("SELECT published FROM simulator_questions WHERE id = '{$mathQuestionIds[0]}'")->fetchColumn(),
+        'Reference repair returns the question to the published pool'
+    );
 
     expectSimulatorApiStatus(simulatorApiRequest($root, $path, '/api/simulators/sessions', 'POST', $firstCookie, ['kind' => 'practice']), 400, 'Malformed practice is rejected');
     expectSimulatorApiStatus(simulatorApiRequest($root, $path, '/api/simulators/sessions', 'POST', $firstCookie, [

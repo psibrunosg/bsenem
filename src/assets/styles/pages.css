@@ -656,6 +656,11 @@
   color: var(--primary);
 }
 
+.simulator-audit-badge.quality {
+  color: var(--warning);
+  background: var(--warning-bg);
+}
+
 .simulator-audit-meta,
 .simulator-audit-source {
   display: flex;
@@ -743,4 +748,43 @@
   .simulator-audit-badges {
     justify-content: flex-start;
   }
+}
+
+.simulator-audit-preview-label {
+  color: var(--text-muted);
+  font-size: var(--text-xs);
+  font-weight: 700;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+
+.simulator-audit-quarantine {
+  border-left: 3px solid var(--error);
+}
+
+.simulator-audit-raw {
+  padding: 10px 12px;
+  border: 1px dashed var(--border-light);
+  border-radius: var(--radius-md);
+  background: var(--bg-card);
+}
+
+.simulator-audit-raw summary {
+  cursor: pointer;
+  color: var(--text-secondary);
+  font-weight: 600;
+}
+
+.simulator-audit-raw pre {
+  max-height: 240px;
+  overflow: auto;
+  margin: 10px 0 0;
+  padding: 10px;
+  white-space: pre-wrap;
+  word-break: break-word;
+  background: var(--bg-secondary);
+  border-radius: var(--radius-sm);
+  font: inherit;
+  font-size: var(--text-xs);
+  line-height: 1.5;
 }

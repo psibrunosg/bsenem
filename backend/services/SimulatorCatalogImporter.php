@@ -3,6 +3,8 @@
 declare(strict_types=1);
 
 require_once __DIR__ . '/EnemQuestionImporter.php';
+require_once __DIR__ . '/EnemReferenceGroupImporter.php';
+require_once __DIR__ . '/EnemQualityGateImporter.php';
 
 /**
  * Seeds simulator content from versioned repository files on first use:
@@ -22,17 +24,19 @@ final class SimulatorCatalogImporter {
         $pdo = $db->getConnection();
         $hasEnem = (int) $pdo->query('SELECT COUNT(*) FROM enem_questions')->fetchColumn() > 0;
         $hasCatalogs = (int) $pdo->query('SELECT COUNT(*) FROM simulator_catalog_questions')->fetchColumn() > 0;
-        if ($hasEnem && $hasCatalogs) {
-            return;
-        }
 
         $pdo->beginTransaction();
         try {
             if (!$hasEnem) {
                 EnemQuestionImporter::import($pdo);
             }
-            if (!$hasCatalogs) {
+            EnemReferenceGroupImporter::import($pdo);
+            $quality = EnemQualityGateImporter::import($pdo);
+
+            if (!$hasCatalogs || $quality['changed']) {
                 self::importEnem($pdo);
+            }
+            if (!$hasCatalogs) {
                 self::importConcursos($pdo);
             }
             $pdo->commit();
@@ -44,44 +48,118 @@ final class SimulatorCatalogImporter {
         }
     }
 
-    /** Publishes each ENEM exam only when every question maps to a published enem_questions row. */
+    /**
+     * Imports the generic ENEM simulator catalogs. If a curated item is
+     * quarantined, it is replaced deterministically by another approved
+     * official ENEM question from the same area. The replacement is logged.
+     */
     private static function importEnem(PDO $pdo): void {
         $files = glob(dirname(__DIR__, 2) . '/content/enem/*.bsestudos.exam.json') ?: [];
         sort($files, SORT_STRING);
+
         $lookup = $pdo->prepare(
-            "SELECT id FROM enem_questions
-             WHERE year = ? AND day = ? AND question_number = ?
-               AND status = 'valid' AND correct_option IN ('A', 'B', 'C', 'D', 'E')"
+            "SELECT id, area, year, status, quality_status, quality_reason, correct_option
+             FROM enem_questions
+             WHERE year = ? AND day = ? AND question_number = ?"
         );
+        $candidate = $pdo->prepare(
+            "SELECT id FROM enem_questions
+             WHERE area = ? AND status = 'valid' AND quality_status = 'approved'
+               AND correct_option IN ('A', 'B', 'C', 'D', 'E')
+             ORDER BY CASE WHEN year = ? THEN 0 ELSE 1 END,
+                      ABS(year - ?), year DESC, day ASC, question_number ASC, id ASC"
+        );
+        $deleteComposition = $pdo->prepare('DELETE FROM simulator_catalog_questions WHERE catalog_id = ?');
+        $deleteReplacements = $pdo->prepare('DELETE FROM simulator_catalog_replacements WHERE catalog_id = ?');
+        $join = $pdo->prepare(
+            'INSERT INTO simulator_catalog_questions (catalog_id, question_id, position) VALUES (?, ?, ?)'
+        );
+        $replacement = $pdo->prepare(
+            'INSERT INTO simulator_catalog_replacements
+                (catalog_id, position, original_question_id, replacement_question_id, reason)
+             VALUES (?, ?, ?, ?, ?)'
+        );
+
         foreach ($files as $file) {
             $exam = self::readJson($file);
             if (!is_array($exam) || !is_array($exam['questions'] ?? null) || $exam['questions'] === []) {
                 continue;
             }
-            $questionIds = [];
-            foreach ($exam['questions'] as $question) {
-                if (!preg_match('/^enem-(\d{4})-d(\d)-q(\d{1,3})$/', (string) ($question['id'] ?? ''), $match)) {
-                    continue 2;
-                }
-                $lookup->execute([(int) $match[1], (int) $match[2], (int) $match[3]]);
-                $enemId = $lookup->fetchColumn();
-                if ($enemId === false) {
-                    continue 2;
-                }
-                $questionIds[] = 'inep:' . $enemId;
-            }
 
             $catalogId = 'enem:' . (string) ($exam['id'] ?? basename($file));
+            $questionIds = [];
+            $replacementRows = [];
+            $used = [];
+            $validExam = true;
+
+            foreach (array_values($exam['questions']) as $position => $question) {
+                if (!preg_match('/^enem-(\d{4})-d(\d)-q(\d{1,3})$/', (string) ($question['id'] ?? ''), $match)) {
+                    $validExam = false;
+                    break;
+                }
+
+                $year = (int) $match[1];
+                $lookup->execute([$year, (int) $match[2], (int) $match[3]]);
+                $source = $lookup->fetch();
+                if (!$source) {
+                    $validExam = false;
+                    break;
+                }
+
+                $originalId = 'inep:' . (int) $source['id'];
+                $eligible = $source['status'] === 'valid'
+                    && $source['quality_status'] === 'approved'
+                    && in_array($source['correct_option'], ['A', 'B', 'C', 'D', 'E'], true);
+
+                $selectedId = $originalId;
+                if (!$eligible || isset($used[$selectedId])) {
+                    $candidate->execute([(string) $source['area'], $year, $year]);
+                    $replacementId = null;
+                    foreach ($candidate->fetchAll(PDO::FETCH_COLUMN) as $candidateId) {
+                        $candidateKey = 'inep:' . (int) $candidateId;
+                        if (!isset($used[$candidateKey]) && $candidateKey !== $originalId) {
+                            $replacementId = $candidateKey;
+                            break;
+                        }
+                    }
+                    if ($replacementId === null) {
+                        $validExam = false;
+                        break;
+                    }
+
+                    $selectedId = $replacementId;
+                    $reason = trim((string) ($source['quality_reason'] ?? ''));
+                    if ($reason === '') {
+                        $reason = $source['status'] !== 'valid'
+                            ? 'source_status:' . (string) $source['status']
+                            : 'duplicate_or_unpublished_source';
+                    }
+                    $replacementRows[] = [$catalogId, $position + 1, $originalId, $selectedId, $reason];
+                }
+
+                $used[$selectedId] = true;
+                $questionIds[] = $selectedId;
+            }
+
+            if (!$validExam || count($questionIds) !== count($exam['questions'])) {
+                continue;
+            }
+
             self::upsertCatalog($pdo, [
-                    $catalogId,
-                    trim((string) ($exam['title'] ?? 'Simulado ENEM')),
-                    'enem',
-                    trim((string) ($exam['subject'] ?? 'ENEM')),
-                    max(0, (int) ($exam['durationMinutes'] ?? 0)) ?: null,
+                $catalogId,
+                trim((string) ($exam['title'] ?? 'Simulado ENEM')),
+                'enem',
+                trim((string) ($exam['subject'] ?? 'ENEM')),
+                max(0, (int) ($exam['durationMinutes'] ?? 0)) ?: null,
             ]);
-            $join = $pdo->prepare('INSERT OR IGNORE INTO simulator_catalog_questions (catalog_id, question_id, position) VALUES (?, ?, ?)');
-            foreach (array_values(array_unique($questionIds)) as $position => $questionId) {
+
+            $deleteComposition->execute([$catalogId]);
+            $deleteReplacements->execute([$catalogId]);
+            foreach ($questionIds as $position => $questionId) {
                 $join->execute([$catalogId, $questionId, $position + 1]);
+            }
+            foreach ($replacementRows as $row) {
+                $replacement->execute($row);
             }
         }
     }
