@@ -457,6 +457,36 @@
   color: var(--text-secondary);
 }
 
+.results-breakdowns {
+  display: grid;
+  gap: 16px;
+  margin-bottom: 32px;
+  text-align: left;
+}
+
+.results-breakdown {
+  padding: 16px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+}
+
+.results-breakdown h3 {
+  margin: 0 0 12px;
+  font-size: var(--text-base);
+  color: var(--text-primary);
+}
+
+.results-breakdown-list {
+  margin: 0;
+  padding-left: 20px;
+  color: var(--text-secondary);
+}
+
+.results-breakdown-item + .results-breakdown-item {
+  margin-top: 8px;
+}
+
 /* Question List */
 .results-details {
   text-align: left;

@@ -15,9 +15,9 @@ const completedSession = {
   time_limit_seconds: 1500,
   elapsed_seconds: 754,
   questions: [
-    { id: 5, position: 0, correct_option: 'A' },
-    { id: 7, position: 1, correct_option: 'D' },
-    { id: 9, position: 2, correct_option: 'B' },
+    { id: 5, position: 0, subject: 'Matemática', topic: 'Geometria', correct_option: 'A' },
+    { id: 7, position: 1, subject: 'Matemática', topic: 'Álgebra', correct_option: 'D' },
+    { id: 9, position: 2, subject: 'Física', topic: 'Mecânica', correct_option: 'B' },
   ],
   answers: [
     { question_id: 5, selected_option: 'A', flagged: false, is_correct: true },
@@ -56,6 +56,17 @@ describe('ResultsScreen', () => {
     expect(items[1].textContent).toContain('Errada');
     expect(items[1].textContent).toContain('Marcada');
     expect(items[2].textContent).toContain('Sem resposta');
+  });
+
+  it('shows real performance breakdowns by subject and topic', () => {
+    const element = new ResultsScreen({ result: completedResult, session: completedSession }).render();
+
+    const subjects = element.querySelector('[data-dimension="subject"]').textContent;
+    const topics = element.querySelector('[data-dimension="topic"]').textContent;
+    expect(subjects).toContain('Matemática: 1 de 2 corretas (50%)');
+    expect(subjects).toContain('Física: 0 de 1 corretas (0%) · 1 sem resposta');
+    expect(topics).toContain('Geometria: 1 de 1 corretas (100%)');
+    expect(topics).toContain('Álgebra: 0 de 1 corretas (0%)');
   });
 
   it('has no emoji and no inline styles', () => {

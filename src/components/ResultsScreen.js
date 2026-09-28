@@ -48,6 +48,8 @@ export class ResultsScreen {
         ${stat('time', 'info', 'clock', formatTime(this.session.elapsed_seconds ?? 0), 'Tempo usado')}
       </div>
 
+      <div class="results-breakdowns"></div>
+
       <div class="results-details">
         <h3>Resumo por questão</h3>
         <ol class="results-question-list"></ol>
@@ -72,11 +74,24 @@ export class ResultsScreen {
     this.element.querySelector('.results-subtitle').textContent = scope || 'Simulado';
     this.element.querySelector('.results-score-value').textContent = scoreLabel;
     this.element.querySelector('.results-score-label').textContent = `${correct} de ${total} corretas`;
+    this.element.querySelector('.results-breakdowns').append(...this.breakdownSections());
     this.element.querySelector('.results-question-list').append(...this.questionItems());
 
     this.bindEvents();
 
     return this.element;
+  }
+
+  breakdownSections() {
+    const answers = new Map((this.session.answers ?? []).map((answer) => [answer.question_id, answer]));
+    const questions = this.session.questions ?? [];
+    const sections = [];
+    const subjectRows = performanceRows(questions, answers, (question) => question.subject);
+    const topicRows = performanceRows(questions, answers, (question) => question.topic);
+
+    if (subjectRows.length > 0) sections.push(performanceSection('Desempenho por matéria', subjectRows, 'subject'));
+    if (topicRows.length > 0) sections.push(performanceSection('Desempenho por tópico', topicRows, 'topic'));
+    return sections;
   }
 
   questionItems() {
@@ -136,6 +151,40 @@ export class ResultsScreen {
   destroy() {
     this.element?.remove();
   }
+}
+
+function performanceRows(questions, answers, keyOf) {
+  const groups = new Map();
+  for (const question of questions) {
+    const key = keyOf(question);
+    if (!key) continue;
+    const row = groups.get(key) ?? { label: key, total: 0, correct: 0, unanswered: 0 };
+    const answer = answers.get(question.id);
+    row.total += 1;
+    if (!answer?.selected_option) row.unanswered += 1;
+    else if (answer.is_correct) row.correct += 1;
+    groups.set(key, row);
+  }
+  return [...groups.values()].sort((a, b) => a.label.localeCompare(b.label, 'pt-BR'));
+}
+
+function performanceSection(title, rows, dimension) {
+  const section = document.createElement('section');
+  section.className = 'results-breakdown';
+  section.dataset.dimension = dimension;
+  const heading = document.createElement('h3');
+  heading.textContent = title;
+  const list = document.createElement('ul');
+  list.className = 'results-breakdown-list';
+  for (const row of rows) {
+    const item = document.createElement('li');
+    item.className = 'results-breakdown-item';
+    const accuracy = row.total === 0 ? 0 : Math.round((row.correct / row.total) * 100);
+    item.textContent = `${row.label}: ${row.correct} de ${row.total} corretas (${accuracy}%)${row.unanswered ? ` · ${row.unanswered} sem resposta` : ''}`;
+    list.appendChild(item);
+  }
+  section.append(heading, list);
+  return section;
 }
 
 const STATE_LABELS = { correct: 'Correta', wrong: 'Errada', unanswered: 'Sem resposta' };
