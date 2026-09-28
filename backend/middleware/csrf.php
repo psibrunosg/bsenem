@@ -13,12 +13,17 @@ final class Csrf {
 
         $origin = self::normalizeOrigin((string) ($_SERVER['HTTP_ORIGIN'] ?? ''));
         $expected = self::expectedOrigin();
-        if ($origin === '' || $expected === '' || !hash_equals($expected, $origin)) {
+        if ($origin === '' || $expected === '' || !self::originsMatch($expected, $origin)) {
             Response::forbidden('Origem da requisição não permitida.');
         }
     }
 
     private static function expectedOrigin(): string {
+        $configuredOrigin = self::normalizeOrigin((string) (getenv('APP_ALLOWED_ORIGIN') ?: getenv('APP_URL') ?: ''));
+        if ($configuredOrigin !== '') {
+            return $configuredOrigin;
+        }
+
         $forwardedProto = explode(',', (string) ($_SERVER['HTTP_X_FORWARDED_PROTO'] ?? ''))[0];
         $scheme = strtolower(trim($forwardedProto));
         if (!in_array($scheme, ['http', 'https'], true)) {
@@ -28,6 +33,23 @@ final class Csrf {
         $forwardedHost = explode(',', (string) ($_SERVER['HTTP_X_FORWARDED_HOST'] ?? ''))[0];
         $host = trim($forwardedHost) ?: trim((string) ($_SERVER['HTTP_HOST'] ?? ''));
         return $host === '' ? '' : self::normalizeOrigin("{$scheme}://{$host}");
+    }
+
+    private static function originsMatch(string $expected, string $origin): bool {
+        if (hash_equals($expected, $origin)) {
+            return true;
+        }
+
+        $expectedParts = parse_url($expected);
+        $originParts = parse_url($origin);
+        if (!is_array($expectedParts) || !is_array($originParts)) {
+            return false;
+        }
+
+        return ($expectedParts['scheme'] ?? '') === 'http'
+            && ($originParts['scheme'] ?? '') === 'https'
+            && strtolower((string) ($expectedParts['host'] ?? '')) === strtolower((string) ($originParts['host'] ?? ''))
+            && (int) ($expectedParts['port'] ?? 0) === (int) ($originParts['port'] ?? 0);
     }
 
     private static function normalizeOrigin(string $origin): string {
