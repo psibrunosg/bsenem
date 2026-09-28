@@ -79,6 +79,18 @@ match(true) {
     $resource === 'auth' && $id === 'login' && $method === 'POST'
         => AuthController::login(),
 
+    $resource === 'auth' && $id === 'access-key-login' && $method === 'POST'
+        => AuthController::loginWithAccessKey(),
+
+    $resource === 'auth' && $id === 'access-keys' && !$sub && $method === 'GET'
+        => AuthController::listAccessKeys(),
+
+    $resource === 'auth' && $id === 'access-keys' && !$sub && $method === 'POST'
+        => AuthController::createAccessKey(),
+
+    $resource === 'auth' && $id === 'access-keys' && ctype_digit((string)$sub) && $method === 'DELETE'
+        => AuthController::revokeAccessKey((int)$sub),
+
     $resource === 'auth' && $id === 'logout' && $method === 'POST'
         => AuthController::logout(),
 

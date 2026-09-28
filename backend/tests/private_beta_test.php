@@ -48,6 +48,8 @@ function request(
         'TEST_ORIGIN' => $origin,
         'TEST_REMOTE_ADDR' => $remoteAddress,
         'TEST_FORWARDED_HOST' => $forwardedHost,
+        'TEMP' => getenv('TEMP') ?: sys_get_temp_dir(),
+        'TMP' => getenv('TMP') ?: sys_get_temp_dir(),
     ]);
     $process = proc_open(
         [PHP_BINARY, 'backend/tests/route_request.php'],
@@ -197,8 +199,8 @@ try {
 
     $userCount = (int) $pdo->query('SELECT COUNT(*) FROM users')->fetchColumn();
     expectStatus(request($projectRoot, $path, '/api/auth/register', 'POST'), 403, 'Public registration is disabled');
-    expectStatus(request($projectRoot, $path, '/api/auth/forgot-password', 'POST'), 403, 'Password reset request is disabled');
-    expectStatus(request($projectRoot, $path, '/api/auth/reset-password', 'POST'), 403, 'Password reset is disabled');
+    expectStatus(request($projectRoot, $path, '/api/auth/forgot-password', 'POST'), 200, 'Password reset request is privacy-preserving');
+    expectStatus(request($projectRoot, $path, '/api/auth/reset-password', 'POST'), 400, 'Password reset rejects invalid requests');
     expectSame($userCount, (int) $pdo->query('SELECT COUNT(*) FROM users')->fetchColumn(), 'Disabled public auth routes do not create users');
 
     $loginPassword = 'valid-password';

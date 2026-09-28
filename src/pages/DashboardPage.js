@@ -4,9 +4,9 @@ import { XPBar } from '@components/XPBar.js';
 import { StreakCounter } from '@components/StreakCounter.js';
 import { StatsDashboard } from '@components/StatsDashboard.js';
 import { LocalLearningAnalyticsService } from '@services/LocalLearningAnalyticsService.js';
-
 import { api } from '@utils/api.js';
 import { escapeHtml } from '@utils/html.js';
+import { renderIcons } from '@utils/icons.js';
 
 export class DashboardPage {
   constructor(options = {}) {
@@ -18,13 +18,13 @@ export class DashboardPage {
     this.localAnalyticsFingerprint = null;
     this.localAnalyticsLibraryId = null;
     this.localAnalyticsBridge = { recordRange: (event) => this.recordLocalRange(event) };
-    
+
     this.heatmap = null;
     this.xpBar = null;
     this.streak = null;
     this.stats = null;
     this.element = null;
-    
+
     this.activityData = {};
     this.dashboardData = null;
     this.localSummary = unavailableLocalSummary();
@@ -51,8 +51,10 @@ export class DashboardPage {
       if (this.dataSources.account.sources.dashboard === 'ready') this.dashboardData = this.dataSources.account.data.dashboard;
       this.heatmap?.updateData(this.activityData);
     }
+
     this.localSummary = this.dataSources.local.data;
     this.stats?.updateStats(this.getUserStats());
+    this.refreshOverview();
     return this.dataSources;
   }
 
@@ -116,32 +118,125 @@ export class DashboardPage {
   }
 
   render() {
+    const firstName = escapeHtml((this.user.name || 'estudante').trim().split(/\s+/)[0]);
     this.element = document.createElement('div');
-    this.element.className = 'dashboard-page';
-    
+    this.element.className = 'dashboard-page dashboard-home';
+
     this.element.innerHTML = `
-      <div class="page-header">
-        <h1>Dashboard</h1>
-        <p>Bem-vindo de volta, ${escapeHtml(this.user.name)}!</p>
+      <section class="dashboard-hero">
+        <div class="dashboard-hero-copy">
+          <span class="dashboard-eyebrow">Hoje no BS Estudos</span>
+          <h1>Bom estudo, ${firstName}.</h1>
+          <p>Veja o que merece atenção agora e retome seu ritmo sem precisar procurar por onde começar.</p>
+          <div class="dashboard-hero-actions">
+            <button class="btn btn-primary" type="button" data-route="flashcards">
+              <i data-lucide="layers-3" class="w-4 h-4"></i>
+              Começar revisão
+            </button>
+            <button class="btn btn-ghost" type="button" data-route="exams">
+              <i data-lucide="clipboard-check" class="w-4 h-4"></i>
+              Abrir simulados
+            </button>
+          </div>
+        </div>
+        <div class="dashboard-hero-level">
+          <span>Seu nível</span>
+          <strong>${this.user.level}</strong>
+          <small>${this.user.xp} XP acumulado</small>
+        </div>
+      </section>
+
+      <section class="dashboard-overview" aria-label="Resumo de hoje">
+        <article class="dashboard-overview-card">
+          <span class="dashboard-overview-icon"><i data-lucide="clock-3" class="w-5 h-5"></i></span>
+          <div><strong data-overview="today-minutes">—</strong><span>Minutos hoje</span></div>
+        </article>
+        <article class="dashboard-overview-card">
+          <span class="dashboard-overview-icon"><i data-lucide="layers" class="w-5 h-5"></i></span>
+          <div><strong data-overview="due-cards">—</strong><span>Cards para revisar</span></div>
+        </article>
+        <article class="dashboard-overview-card">
+          <span class="dashboard-overview-icon"><i data-lucide="target" class="w-5 h-5"></i></span>
+          <div><strong data-overview="exam-score">—</strong><span>Média em simulados</span></div>
+        </article>
+        <article class="dashboard-overview-card">
+          <span class="dashboard-overview-icon"><i data-lucide="calendar-days" class="w-5 h-5"></i></span>
+          <div><strong data-overview="week-minutes">—</strong><span>Minutos na semana</span></div>
+        </article>
+      </section>
+
+      <div class="dashboard-focus-grid">
+        <main class="dashboard-main-column">
+          <section class="dashboard-section dashboard-progress-section">
+            <div class="dashboard-section-heading">
+              <div><span class="dashboard-section-kicker">Progresso</span><h2>Seu ritmo de estudo</h2></div>
+              <button class="dashboard-inline-link" type="button" data-route="profile">Ver perfil <i data-lucide="arrow-right" class="w-4 h-4"></i></button>
+            </div>
+            <div class="dashboard-xp-container"></div>
+          </section>
+
+          <section class="dashboard-section dashboard-activity-section">
+            <div class="dashboard-section-heading">
+              <div><span class="dashboard-section-kicker">Consistência</span><h2>Atividade ao longo do ano</h2></div>
+            </div>
+            <div class="dashboard-heatmap-container"></div>
+          </section>
+        </main>
+
+        <aside class="dashboard-side-column">
+          <section class="dashboard-section dashboard-streak-shell">
+            <div class="dashboard-section-heading compact">
+              <div><span class="dashboard-section-kicker">Sequência</span><h2>Constância</h2></div>
+            </div>
+            <div class="dashboard-streak-container"></div>
+          </section>
+
+          <section class="dashboard-section dashboard-next-card">
+            <div class="dashboard-section-heading compact">
+              <div><span class="dashboard-section-kicker">Próximos passos</span><h2>O que fazer agora</h2></div>
+            </div>
+            <button type="button" data-route="flashcards">
+              <span><i data-lucide="refresh-cw" class="w-5 h-5"></i></span>
+              <div><strong>Revisar flashcards</strong><small>Uma sessão curta mantém o conteúdo fresco.</small></div>
+              <i data-lucide="chevron-right" class="w-4 h-4"></i>
+            </button>
+            <button type="button" data-route="exams">
+              <span><i data-lucide="clipboard-list" class="w-5 h-5"></i></span>
+              <div><strong>Fazer questões</strong><small>Use o banco ou um simulado para testar retenção.</small></div>
+              <i data-lucide="chevron-right" class="w-4 h-4"></i>
+            </button>
+            <button type="button" data-route="notes">
+              <span><i data-lucide="notebook-pen" class="w-5 h-5"></i></span>
+              <div><strong>Rever anotações</strong><small>Organize pontos importantes antes da próxima sessão.</small></div>
+              <i data-lucide="chevron-right" class="w-4 h-4"></i>
+            </button>
+          </section>
+        </aside>
       </div>
-      
-      <div class="dashboard-top-section">
-        <div class="dashboard-xp-container"></div>
-        <div class="dashboard-streak-container"></div>
-      </div>
-      
-      <div class="dashboard-heatmap-container"></div>
-      
-      <div class="dashboard-stats-container"></div>
+
+      <section class="dashboard-detail-section">
+        <div class="dashboard-section-heading">
+          <div><span class="dashboard-section-kicker">Visão detalhada</span><h2>Seu histórico recente</h2></div>
+        </div>
+        <div class="dashboard-stats-container"></div>
+      </section>
     `;
 
+    this.bindNavigation();
     this.initComponents();
+    this.refreshOverview();
     this.loadActivityData();
+    renderIcons(this.element);
     return this.element;
   }
 
+  bindNavigation() {
+    this.element.querySelectorAll('[data-route]').forEach((button) => {
+      button.addEventListener('click', () => this.app?.navigate(button.dataset.route));
+    });
+  }
+
   initComponents() {
-    // XP Bar
     const xpContainer = this.element.querySelector('.dashboard-xp-container');
     if (xpContainer) {
       this.xpBar = new XPBar({
@@ -153,7 +248,6 @@ export class DashboardPage {
       xpContainer.appendChild(this.xpBar.render());
     }
 
-    // Streak Counter
     const streakContainer = this.element.querySelector('.dashboard-streak-container');
     if (streakContainer) {
       this.streak = new StreakCounter({
@@ -165,7 +259,6 @@ export class DashboardPage {
       streakContainer.appendChild(this.streak.render());
     }
 
-    // Heatmap Calendar
     const heatmapContainer = this.element.querySelector('.dashboard-heatmap-container');
     if (heatmapContainer) {
       this.heatmap = new HeatmapCalendar({
@@ -175,14 +268,24 @@ export class DashboardPage {
       heatmapContainer.appendChild(this.heatmap.render());
     }
 
-    // Stats Dashboard
     const statsContainer = this.element.querySelector('.dashboard-stats-container');
     if (statsContainer) {
-      this.stats = new StatsDashboard({
-        stats: this.getUserStats()
-      });
+      this.stats = new StatsDashboard({ stats: this.getUserStats() });
       statsContainer.appendChild(this.stats.render());
     }
+  }
+
+  refreshOverview() {
+    if (!this.element) return;
+    const dashboard = this.dashboardData ?? {};
+    const today = dashboard.today ?? {};
+    const week = dashboard.week ?? {};
+    const flashcards = dashboard.flashcards ?? {};
+    const exams = dashboard.exams ?? {};
+    setOverview(this.element, 'today-minutes', Number(today.study_minutes ?? 0));
+    setOverview(this.element, 'due-cards', Number(flashcards.due_now ?? 0));
+    setOverview(this.element, 'exam-score', Number(exams.total_attempts ?? 0) > 0 ? `${Math.round(Number(exams.avg_score ?? 0))}%` : '—');
+    setOverview(this.element, 'week-minutes', Number(week.total_minutes ?? 0));
   }
 
   getUserStats() {
@@ -192,7 +295,7 @@ export class DashboardPage {
     const today = dashboard.today ?? {};
     const sessionsToday = Number(today.sessions_count ?? 0);
     const totalReviews = Number(flashcards.total_reviews ?? 0);
-    
+
     return {
       totalStudyTime,
       sessionsToday,
@@ -220,17 +323,12 @@ export class DashboardPage {
   getWeeklyCompleted() {
     let count = 0;
     const today = new Date();
-    
     for (let i = 0; i < 7; i++) {
       const date = new Date(today);
       date.setDate(date.getDate() - i);
       const dateStr = date.toISOString().split('T')[0];
-      
-      if (this.activityData[dateStr]) {
-        count++;
-      }
+      if (this.activityData[dateStr]) count++;
     }
-    
     return count;
   }
 
@@ -239,17 +337,9 @@ export class DashboardPage {
     return !!this.activityData[today];
   }
 
-  handleLevelUp(level) {
-    console.log('Level up!', level);
-  }
-
-  handleFreeze() {
-    console.log('Freeze used');
-  }
-
-  handleDayClick(date, value) {
-    console.log('Day clicked:', date, value);
-  }
+  handleLevelUp(level) { console.log('Level up!', level); }
+  handleFreeze() { console.log('Freeze used'); }
+  handleDayClick(date, value) { console.log('Day clicked:', date, value); }
 
   destroy() {
     this.heatmap?.destroy();
@@ -258,6 +348,11 @@ export class DashboardPage {
     this.stats?.destroy();
     if (this.element?.parentNode) this.element.parentNode.removeChild(this.element);
   }
+}
+
+function setOverview(root, key, value) {
+  const element = root.querySelector(`[data-overview="${key}"]`);
+  if (element) element.textContent = String(value);
 }
 
 function unavailableLocalSummary(code = 'library-unavailable') {
