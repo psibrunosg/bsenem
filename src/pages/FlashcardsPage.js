@@ -26,6 +26,7 @@ export class FlashcardsPage {
     try {
       const response = await this.api.get('/flashcards?per_page=500');
       this.cards = response?.success && Array.isArray(response.data) ? response.data.map(normalizeCard) : [];
+      if (response?.success) this.subjects = deriveSubjects(this.cards, this.subjects);
       this.status = response?.success ? '' : 'Não foi possível carregar seus flashcards agora.';
     } catch {
       this.cards = [];
@@ -169,7 +170,22 @@ function normalizeCard(card) {
   return {
     ...card,
     subject: String(card.subject_id ?? ''),
+    subjectName: card.subject_name || '',
+    subjectColor: card.subject_color || '#ff6b1a',
     interval: Number(card.interval ?? 0),
     easeFactor: Number(card.ease_factor ?? card.easeFactor ?? 2.5)
   };
+}
+
+function deriveSubjects(cards, existing = []) {
+  const subjects = new Map(existing.map((subject) => [String(subject.id), subject]));
+  cards.forEach((card) => {
+    if (!card.subject || !card.subjectName) return;
+    subjects.set(card.subject, {
+      id: card.subject,
+      name: card.subjectName,
+      color: card.subjectColor || '#ff6b1a'
+    });
+  });
+  return [...subjects.values()].sort((a, b) => a.name.localeCompare(b.name, 'pt-BR'));
 }

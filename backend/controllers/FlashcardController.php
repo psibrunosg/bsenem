@@ -41,7 +41,12 @@ class FlashcardController {
         $params[] = $offset;
         
         $cards = $db->fetchAll(
-            "SELECT * FROM flashcards WHERE {$where} ORDER BY due_date ASC LIMIT ? OFFSET ?",
+            "SELECT flashcards.*, subjects.name AS subject_name, subjects.color AS subject_color
+             FROM flashcards
+             LEFT JOIN subjects ON subjects.id = flashcards.subject_id
+             WHERE {$where}
+             ORDER BY due_date ASC
+             LIMIT ? OFFSET ?",
             $params
         );
         
