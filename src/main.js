@@ -10,6 +10,9 @@ import { HelpPage } from '@pages/HelpPage.js';
 import { StudyLibraryPage } from '@pages/StudyLibraryPage.js';
 import { bootstrapAuth } from './bootstrapAuth.js';
 import { api } from '@utils/api.js';
+import { restoreThemePreference } from '@utils/theme.js';
+
+restoreThemePreference();
 
 const root = document.getElementById('app');
 const mount = (element) => root.replaceChildren(element);

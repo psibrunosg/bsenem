@@ -7,11 +7,38 @@ import { QuestionCard } from '../components/QuestionCard.js';
 import { ExamPlayer } from '../components/ExamPlayer.js';
 import { MarkdownEditor } from '../components/MarkdownEditor.js';
 import { Sidebar } from '../components/Sidebar.js';
+import { Alert } from '../components/Alert.js';
+import { safeCssColor, safeResourceUrl } from '../utils/html.js';
 
 const unsafeName = '<img src=x onerror="globalThis.pwned=true">Bruno';
 const user = { id: 1, name: unsafeName, email: 'unsafe@example.test', level: 1, xp: 0, xpMax: 1000, streak: 0 };
 
 describe('dynamic HTML safety', () => {
+  it('renders alert messages as text instead of executable HTML', () => {
+    const alert = new Alert({ message: unsafeName });
+    const element = alert.render();
+
+    expect(element.querySelector('img')).toBeNull();
+    expect(element.querySelector('.alert-message').textContent).toBe(unsafeName);
+
+    alert.setMessage('<svg onload="globalThis.pwned=true">Atualizada');
+    expect(element.querySelector('svg[onload]')).toBeNull();
+    expect(element.querySelector('.alert-message').textContent).toBe('<svg onload="globalThis.pwned=true">Atualizada');
+  });
+
+  it('blocks executable resource URL schemes', () => {
+    expect(safeResourceUrl('javascript:alert(1)')).toBe('#');
+    expect(safeResourceUrl('data:text/html,<script>alert(1)</script>')).toBe('#');
+    expect(safeResourceUrl('vbscript:msgbox(1)')).toBe('#');
+    expect(safeResourceUrl('https://example.test/image.png')).toBe('https://example.test/image.png');
+  });
+
+  it('rejects CSS colors that can break out of a style attribute', () => {
+    expect(safeCssColor('red; background:url(javascript:alert(1))')).toBe('inherit');
+    expect(safeCssColor('#1a2b3c')).toBe('#1a2b3c');
+    expect(safeCssColor('rgb(12, 34, 56)')).toBe('rgb(12, 34, 56)');
+  });
+
   it('renders authenticated profile fields as text in navigation components', () => {
     const sidebar = new Sidebar({ user }).render();
     const header = new Header({ user }).render();
@@ -43,6 +70,26 @@ describe('dynamic HTML safety', () => {
     expect(element.querySelector('.search-results svg')).toBeNull();
     expect(element.querySelector('[onclick], [onload], [autofocus]')).toBeNull();
     expect(element.querySelector('.search-result-title mark').textContent).toBe('Álgebra');
+  });
+
+  it('renders command palette fields as text instead of executable HTML', () => {
+    const header = new Header({ user: { ...user, name: 'Bruno' } });
+    header.render();
+    header.showCommandPalette([{
+      action: 'open\" onclick=\"globalThis.pwned=true',
+      icon: 'search\" onload=\"globalThis.pwned=true',
+      title: '<img src=x onerror=1>Comando',
+      description: '<svg onload=1>Descrição',
+      shortcut: '<img src=x onerror=1>Ctrl+X'
+    }]);
+
+    const input = header.commandPalette.querySelector('.command-palette-input');
+    input.value = 'Comando';
+    input.dispatchEvent(new Event('input'));
+
+    expect(header.commandPalette.querySelector('img, svg[onload], [onclick]')).toBeNull();
+    expect(header.commandPalette.querySelector('.command-palette-item-title').textContent).toContain('<img src=x onerror=1>Comando');
+    header.closeCommandPalette();
   });
 
   it('escapes route errors before inserting them into the shell', async () => {

@@ -4,6 +4,7 @@ import { triggerConfetti } from '../utils/confetti.js';
 import { api } from '../utils/api.js';
 import { normalizeUserProfile } from '../utils/user.js';
 import { escapeHtml } from '../utils/html.js';
+import { applyThemePreference } from '../utils/theme.js';
 
 export class AppShell {
   constructor(options = {}) {
@@ -253,11 +254,7 @@ export class AppShell {
   }
 
   setTheme(theme) {
-    const preference = ['light', 'dark', 'system'].includes(theme) ? theme : 'system';
-    const systemDark = window.matchMedia?.('(prefers-color-scheme: dark)').matches ?? false;
-    const resolved = preference === 'system' ? (systemDark ? 'dark' : 'light') : preference;
-    document.documentElement.setAttribute('data-theme', resolved);
-    localStorage.setItem('theme', preference);
+    const { resolved } = applyThemePreference(theme);
     this.header.updateThemeIcons(resolved === 'dark');
   }
 

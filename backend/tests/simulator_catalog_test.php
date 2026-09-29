@@ -53,6 +53,26 @@ try {
     SimulatorCatalogImporter::ensureImported($db);
     expectSimulator((int) ($db->fetch('SELECT COUNT(*) AS total FROM simulator_catalog_questions')['total'] ?? 0) === $compositionCount, 'Rebuilding the composition reproduces the same cadernos.');
     expectSimulator((int) ($db->fetch('SELECT COUNT(*) AS total FROM simulator_catalogs')['total'] ?? 0) === $catalogCount, 'Rebuilding the composition keeps the catalog rows.');
+
+    $replacementRow = $db->fetch("SELECT catalog_id, position, original_question_id, replacement_question_id, reason FROM simulator_catalog_replacements ORDER BY catalog_id, position LIMIT 1");
+    expectSimulator($replacementRow !== null, 'Quarantined catalog questions are replaced and audited.');
+    expectSimulator(($replacementRow['reason'] ?? null) === 'quality_quarantine', 'Catalog replacement records the quarantine reason.');
+    expectSimulator($replacementRow['original_question_id'] !== $replacementRow['replacement_question_id'], 'Catalog replacement keeps original and replacement IDs distinct.');
+    expectSimulator((int) ($db->fetch('SELECT COUNT(*) AS total FROM simulator_catalog_questions WHERE catalog_id = ? AND position = ? AND question_id = ?', [
+        $replacementRow['catalog_id'], $replacementRow['position'], $replacementRow['replacement_question_id'],
+    ])['total'] ?? 0) === 1, 'Catalog composition points to the audited replacement while original is quarantined.');
+
+    $originalNumericId = (int) substr((string) $replacementRow['original_question_id'], strlen('inep:'));
+    $db->query("UPDATE enem_questions SET quality_status = 'approved' WHERE id = ?", [$originalNumericId]);
+    $repair = new ReflectionMethod(SimulatorCatalogImporter::class, 'repairQuarantinedCatalogQuestions');
+    $repair->setAccessible(true);
+    $repair->invoke(null, $db->getConnection());
+    expectSimulator((int) ($db->fetch('SELECT COUNT(*) AS total FROM simulator_catalog_questions WHERE catalog_id = ? AND position = ? AND question_id = ?', [
+        $replacementRow['catalog_id'], $replacementRow['position'], $replacementRow['original_question_id'],
+    ])['total'] ?? 0) === 1, 'Approved original question is restored deterministically to its catalog position.');
+    expectSimulator((int) ($db->fetch('SELECT COUNT(*) AS total FROM simulator_catalog_replacements WHERE catalog_id = ? AND position = ?', [
+        $replacementRow['catalog_id'], $replacementRow['position'],
+    ])['total'] ?? 0) === 0, 'Replacement audit row is removed after the original is restored.');
 } finally {
     unset($db);
     Database::resetForTests();

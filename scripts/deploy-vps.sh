@@ -27,7 +27,7 @@ current_target() { remote "readlink $ROOT/current"; }
 reload_nginx() {
   # O nginx guarda descritores abertos; sem o reload ele continua servindo o
   # release antigo depois da troca do symlink.
-  remote "sudo docker exec $CONTAINER nginx -s reload"
+  remote "sudo docker exec $CONTAINER nginx -t && sudo docker exec $CONTAINER nginx -s reload"
 }
 
 if [[ "${1:-}" == "--rollback" ]]; then
