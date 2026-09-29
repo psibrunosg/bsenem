@@ -29,7 +29,7 @@ export class Alert {
       ${this.icon ? `<div class="alert-icon"><i data-lucide="${icons[this.type]}" class="w-5 h-5" aria-hidden="true"></i></div>` : ''}
       <div class="alert-content">
         ${this.title ? `<div class="alert-title">${this.escapeHtml(this.title)}</div>` : ''}
-        <div class="alert-message">${this.message}</div>
+        <div class="alert-message">${this.escapeHtml(this.message)}</div>
         ${this.action ? `
           <button type="button" class="alert-action btn btn-${this.action.variant ?? 'ghost'} btn-sm" data-action="alert-action">
             ${this.escapeHtml(this.action.label)}
@@ -81,7 +81,7 @@ export class Alert {
   setMessage(message) {
     this.message = message;
     const msgEl = this.element.querySelector('.alert-message');
-    if (msgEl) msgEl.innerHTML = message;
+    if (msgEl) msgEl.textContent = message;
   }
 
   setTitle(title) {

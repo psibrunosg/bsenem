@@ -12,7 +12,7 @@ export class Header {
     if (!options.user?.id) throw new Error('Authenticated user is required.');
     this.user = options.user;
     this.searchResults = options.searchResults ?? [];
-    this.showCommandPalette = false;
+    this.commandPaletteVisible = false;
     this.showUserMenu = false;
     this.searchResultsVisible = false;
     
@@ -429,15 +429,15 @@ export class Header {
       );
       
       results.innerHTML = filtered.map(cmd => `
-        <a href="#" class="command-palette-item" data-action="${cmd.action}">
+        <a href="#" class="command-palette-item" data-action="${escapeHtml(cmd.action)}">
           <div class="command-palette-item-content">
-            <i data-lucide="${cmd.icon}" class="w-5 h-5"></i>
+            <i data-lucide="${escapeHtml(cmd.icon)}" class="w-5 h-5"></i>
             <div>
-              <div class="command-palette-item-title">${cmd.title}</div>
-              <div class="command-palette-item-desc">${cmd.description}</div>
+              <div class="command-palette-item-title">${escapeHtml(cmd.title)}</div>
+              <div class="command-palette-item-desc">${escapeHtml(cmd.description)}</div>
             </div>
           </div>
-          <span class="command-palette-item-shortcut">${cmd.shortcut}</span>
+          <span class="command-palette-item-shortcut">${escapeHtml(cmd.shortcut)}</span>
         </a>
       `).join('');
       

@@ -8,6 +8,7 @@ export default defineConfig(() => {
     root: '.',
     base: basePath,
     server: {
+      host: '127.0.0.1',
       port: 8765,
       open: true,
       // Keep Vite's experimental agent console forwarding disabled. Explicit

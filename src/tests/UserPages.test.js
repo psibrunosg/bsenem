@@ -16,6 +16,35 @@ const user = {
 };
 
 describe('authenticated user pages', () => {
+  it('renders readonly identity and profile metrics', () => {
+    const element = new ProfilePage({ user }).render();
+
+    expect(element.querySelector('[name="email"]').readOnly).toBe(true);
+    expect(element.querySelector('[name="email"]').value).toBe(user.email);
+    const metrics = element.querySelector('.profile-metric-grid').textContent;
+    expect(metrics).toContain(String(user.streak));
+    expect(metrics).toContain(String(user.bestStreak));
+    expect(metrics).toContain(String(user.xp));
+    expect(element.querySelector('.profile-xp-label').textContent).toBe('120 / 1000 XP');
+  });
+
+  it('keeps form data and reports an error when profile update fails', async () => {
+    const api = { put: vi.fn().mockResolvedValue({ success: false, status: 503 }) };
+    const app = { setUser: vi.fn() };
+    const element = new ProfilePage({ user, app, api }).render();
+    const name = element.querySelector('[name="name"]');
+    const email = element.querySelector('[name="email"]');
+    name.value = 'Nome ainda não salvo';
+
+    element.querySelector('form').dispatchEvent(new Event('submit', { bubbles: true, cancelable: true }));
+    await vi.waitFor(() => expect(api.put).toHaveBeenCalledOnce());
+    await vi.waitFor(() => expect(element.querySelector('[role="status"]').textContent).toContain('Não foi possível atualizar'));
+
+    expect(app.setUser).not.toHaveBeenCalled();
+    expect(name.value).toBe('Nome ainda não salvo');
+    expect(email.value).toBe(user.email);
+  });
+
   it('updates the current profile and refreshes the shell user', async () => {
     const updated = { ...user, name: 'Bruno atualizado' };
     const api = { put: vi.fn().mockResolvedValue({ success: true, data: { user: updated } }) };
