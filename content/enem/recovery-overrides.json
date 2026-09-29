@@ -1,0 +1,232 @@
+{
+  "schema": "bsestudos.enem-recovery-overrides.v1",
+  "recoveries": [
+    {
+      "id": "enem:2020:d2:q103-recovery",
+      "year": 2020,
+      "day": 2,
+      "question_number": 103,
+      "source_pdf": "2020/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        5
+      ],
+      "review_status": "approved",
+      "review_basis": "visual_pdf_review",
+      "evidence": "content/enem/recovery-reports/priority-1-2026-09-28.json",
+      "fields": {
+        "statement": "A obtenção de óleos vegetais, de maneira geral, passa pelas etapas descritas no quadro.\n\nQual das subetapas do processo é realizada em função apenas da polaridade das substâncias?",
+        "images": [
+          "assets/2020/dia-2/q103_recovered_table.png"
+        ]
+      },
+      "reviewed_at": "2026-09-29"
+    },
+    {
+      "id": "enem:2020:d2:q105-recovery",
+      "year": 2020,
+      "day": 2,
+      "question_number": 105,
+      "source_pdf": "2020/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        5
+      ],
+      "review_status": "approved",
+      "review_basis": "visual_pdf_review",
+      "evidence": "content/enem/recovery-reports/priority-1-2026-09-28.json",
+      "fields": {
+        "statement": "Grupos de proteção ao meio ambiente conseguem resgatar muitas aves aquáticas vítimas de vazamentos de petróleo. Essas aves são lavadas com água e detergente neutro para a retirada completa do óleo de seu corpo e, posteriormente, são aquecidas, medicadas, desintoxicadas e alimentadas. Mesmo após esses cuidados, o retorno ao ambiente não pode ser imediato, pois elas precisam recuperar a capacidade de flutuação.\n\nPara flutuar, essas aves precisam",
+        "images": []
+      },
+      "reviewed_at": "2026-09-29"
+    },
+    {
+      "id": "enem:2020:d2:q107-recovery",
+      "year": 2020,
+      "day": 2,
+      "question_number": 107,
+      "source_pdf": "2020/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        6
+      ],
+      "review_status": "approved",
+      "review_basis": "visual_pdf_review",
+      "evidence": "content/enem/recovery-reports/priority-1-2026-09-28.json",
+      "fields": {
+        "statement": "Um microempresário do ramo de cosméticos utiliza óleos essenciais e quer produzir um creme com fragrância de rosas. O principal componente do óleo de rosas tem cadeia poli-insaturada e hidroxila em carbono terminal. O catálogo dos óleos essenciais apresenta, para escolha da essência, estas estruturas químicas:\n\nQual substância o empresário deverá utilizar?",
+        "images": [
+          "assets/2020/dia-2/q107_recovered_structures.png"
+        ],
+        "option_e": "5"
+      },
+      "reviewed_at": "2026-09-29"
+    },
+    {
+      "id": "enem:2020:d2:q161-reextract",
+      "year": 2020,
+      "day": 2,
+      "question_number": 161,
+      "source_pdf": "2020/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        25
+      ],
+      "review_status": "approved",
+      "review_basis": "visual_pdf_and_official_answer_key",
+      "fields": {
+        "statement": "Um pé de eucalipto em idade adequada para o corte rende, em média, 20 mil folhas de papel A4. A densidade superficial do papel A4, medida pela razão da massa de uma folha desse papel por sua área, é de 75 gramas por metro quadrado, e a área de uma folha de A4 é 0,062 metro quadrado. Nessas condições, quantos quilogramas de papel rende, em média, um pé de eucalipto?",
+        "option_a": "4 301",
+        "option_b": "1 500",
+        "option_c": "930",
+        "option_d": "267",
+        "option_e": "93",
+        "correct_option": "E"
+      },
+      "reviewed_at": "2026-09-29",
+      "evidence": "official PDF page + official answer key where applicable"
+    },
+    {
+      "id": "enem:2021:d2:q120-reextract",
+      "year": 2021,
+      "day": 2,
+      "question_number": 120,
+      "source_pdf": "2021/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        12
+      ],
+      "review_status": "approved",
+      "review_basis": "visual_pdf_and_official_answer_key",
+      "fields": {
+        "statement": "O rompimento da barragem de rejeitos de mineração no município mineiro de Mariana e o derramamento de produtos tóxicos nas águas do Rio Doce, ocorridos em 2015, ainda têm consequências para os organismos que habitam o Parque Nacional Marinho de Abrolhos, localizado a mais de 1 000 quilômetros de distância. Esse desastre ambiental afetou o fitoplâncton, as esponjas, as algas macroscópicas, os peixes herbívoros e os golfinhos. Concentrações mais elevadas dos compostos citados são encontradas em",
+        "option_a": "esponjas.",
+        "option_b": "golfinhos.",
+        "option_c": "fitoplâncton.",
+        "option_d": "peixes herbívoros.",
+        "option_e": "algas macroscópicas.",
+        "correct_option": "B"
+      },
+      "reviewed_at": "2026-09-29",
+      "evidence": "official PDF page + official answer key where applicable"
+    },
+    {
+      "id": "enem:2021:d2:q129-reextract",
+      "year": 2021,
+      "day": 2,
+      "question_number": 129,
+      "source_pdf": "2021/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        15
+      ],
+      "review_status": "approved",
+      "review_basis": "visual_pdf_and_official_answer_key",
+      "fields": {
+        "statement": "Os pesticidas organoclorados foram amplamente empregados na agricultura, contudo, em razão das suas elevadas toxicidades e persistências no meio ambiente, eles foram banidos. Considere a aplicação de 500 g de um pesticida organoclorado em uma cultura e que, em certas condições, o tempo de meia-vida do pesticida no solo seja de 5 anos. A massa do pesticida no decorrer de 35 anos será mais próxima de",
+        "option_a": "3,9 g.",
+        "option_b": "31,2 g.",
+        "option_c": "62,5 g.",
+        "option_d": "125,0 g.",
+        "option_e": "250,0 g.",
+        "correct_option": "A"
+      },
+      "reviewed_at": "2026-09-29",
+      "evidence": "official PDF page + official answer key where applicable"
+    },
+    {
+      "id": "enem:2021:d2:q137-reextract",
+      "year": 2021,
+      "day": 2,
+      "question_number": 137,
+      "source_pdf": "2021/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        17
+      ],
+      "review_status": "approved",
+      "review_basis": "visual_pdf_and_official_answer_key",
+      "fields": {
+        "statement": "Uma das bases mais utilizadas para representar um número é a base decimal. Entretanto, os computadores trabalham com números na base binária. Nessa base, qualquer número natural é representado usando apenas os algarismos 0 e 1. Por exemplo, as representações dos números 9 e 12, na base binária, são 1001 e 1100, respectivamente. A operação de adição, na base binária, segue um algoritmo similar ao utilizado na base decimal. No quadro: 0 + 0 = 0; 0 + 1 = 1; 1 + 0 = 1; 1 + 1 = 10. Por exemplo, na base binária, a soma dos números 10 e 10 é 100. Considerando as informações do texto, o resultado da adição 9 + 12 será representado, na base binária, por",
+        "option_a": "101.",
+        "option_b": "1101.",
+        "option_c": "1111.",
+        "option_d": "10101.",
+        "option_e": "11001.",
+        "correct_option": "D",
+        "images": [
+          "assets/2021/dia-2/q137_recovered_binary_table.png",
+          "assets/2021/dia-2/q137_recovered_binary_addition.png"
+        ]
+      },
+      "reviewed_at": "2026-09-29",
+      "evidence": "official PDF page + official answer key where applicable"
+    },
+    {
+      "id": "enem:2022:d1:q17-recovery",
+      "year": 2022,
+      "day": 1,
+      "question_number": 17,
+      "source_pdf": "2022/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        9
+      ],
+      "review_status": "approved",
+      "review_basis": "visual_pdf_review",
+      "evidence": "content/enem/recovery-reports/priority-1-2026-09-28.json",
+      "fields": {
+        "statement": "Notas\n\nSoluços, lágrimas, casa armada, veludo preto nos portais, um homem que veio vestir o cadáver, outro que tomou a medida do caixão, caixão, essa, tocheiros, convites, convidados que entravam, lentamente, a passo surdo, e apertavam a mão à família, alguns tristes, todos sérios e calados, padre e sacristão, rezas, aspersões d’água benta, o fechar do caixão, a prego e martelo, seis pessoas que o tomam da essa, e o levantam, e o descem a custo pela escada, não obstante os gritos, soluços e novas lágrimas da família, e vão até o coche fúnebre, e o colocam em cima e traspassam e apertam as correias, o rodar do coche, o rodar dos carros, um a um... Isto que parece um simples inventário eram notas que eu havia tomado para um capítulo triste e vulgar que não escrevo.\n\nASSIS, M. Memórias póstumas de Brás Cubas. Disponível em: www.dominiopublico.gov.br. Acesso em: 25 jul. 2022.\n\nO recurso linguístico que permite a Machado de Assis considerar um capítulo de Memórias póstumas de Brás Cubas como inventário é a",
+        "images": []
+      },
+      "reviewed_at": "2026-09-29"
+    },
+    {
+      "id": "enem:2022:d2:q103-recovery",
+      "year": 2022,
+      "day": 2,
+      "question_number": 103,
+      "source_pdf": "2022/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        5
+      ],
+      "review_status": "approved",
+      "review_basis": "visual_pdf_review",
+      "evidence": "content/enem/recovery-reports/priority-1-2026-09-28.json",
+      "fields": {
+        "statement": "Os resultados de um ensaio clínico randomizado na Indonésia apontaram uma redução de 77% dos casos de dengue nas áreas que receberam o mosquito Aedes aegypti infectado com a bactéria Wolbachia. Trata-se da mesma técnica utilizada no Brasil pelo Método Wolbachia, iniciativa conduzida pela Fundação Oswaldo Cruz — Fiocruz. Essa bactéria induz a redução da carga viral no mosquito e, consequentemente, o número de casos de dengue na área, sendo repassada por meio do cruzamento entre os insetos. Como essa bactéria é um organismo intracelular e o vírus também precisa entrar nas células para se reproduzir, ambos necessitarão de recursos comuns.\n\nCOSTA, G. Agência Fiocruz de Notícias. Estudo confirma eficácia do Método Wolbachia para dengue. Disponível em: https://portal.fiocruz.br. Acesso em: 3 jun. 2022 (adaptado).\n\nEssa tecnologia utilizada no combate à dengue consiste na",
+        "images": []
+      },
+      "reviewed_at": "2026-09-29"
+    },
+    {
+      "id": "enem:2023:d2:q151-recovery",
+      "year": 2023,
+      "day": 2,
+      "question_number": 151,
+      "source_pdf": "2023/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        21
+      ],
+      "review_status": "approved",
+      "review_basis": "visual_pdf_review",
+      "evidence": "content/enem/recovery-reports/priority-1-2026-09-28.json",
+      "fields": {
+        "statement": "Em janeiro do ano passado, a direção de uma fábrica abriu uma creche para os filhos de seus funcionários, com 10 salas, cada uma com capacidade para atender 10 crianças a cada ano. As vagas são sorteadas entre os filhos dos funcionários inscritos, enquanto os não contemplados pelo sorteio formam uma lista de espera. No ano passado, a lista de espera teve 400 nomes e, neste ano, esse número cresceu 10%.\n\nA direção da fábrica realizou uma pesquisa e constatou que a lista de espera para o próximo ano terá a mesma quantidade de nomes da lista de espera deste ano. Decidiu, então, construir, ao longo desse ano, novas salas para a creche, também com capacidade de atendimento para 10 crianças cada, de modo que o número de nomes na lista de espera no próximo ano seja 25% menor que o deste ano.\n\nO número mínimo de salas que deverão ser construídas é",
+        "images": []
+      },
+      "reviewed_at": "2026-09-29"
+    },
+    {
+      "id": "enem:2023:d2:q180-recovery",
+      "year": 2023,
+      "day": 2,
+      "question_number": 180,
+      "source_pdf": "2023/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        31
+      ],
+      "review_status": "approved",
+      "review_basis": "visual_pdf_review",
+      "evidence": "content/enem/recovery-reports/priority-1-2026-09-28.json",
+      "fields": {
+        "statement": "O metrô de um município oferece dois tipos de tíquetes com colorações diferentes, azul e vermelha, sendo vendidos em cartelas, cada qual com nove tíquetes da mesma cor e mesmo valor unitário. Duas cartelas de tíquetes azuis e uma cartela de tíquetes vermelhos são vendidas por R$ 32,40. Sabe-se que o preço de um tíquete azul menos o preço de um tíquete vermelho é igual ao preço de um tíquete vermelho mais cinco centavos.\n\nQual o preço, em real, de uma cartela de tíquetes vermelhos?",
+        "images": []
+      },
+      "reviewed_at": "2026-09-29"
+    }
+  ]
+}

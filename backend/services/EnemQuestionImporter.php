@@ -9,6 +9,7 @@ declare(strict_types=1);
 final class EnemQuestionImporter {
     public const DEFAULT_JSON = __DIR__ . '/../../docs/sources/enem/extracted-questions-2009-2025.json';
     public const DEFAULT_CONTENT_ROOT = __DIR__ . '/../../content/enem';
+    public const DEFAULT_RECOVERY_JSON = __DIR__ . '/../../content/enem/recovery-overrides.json';
 
     /** @return array{questions: int, valid: int, pending: int, assets: int} */
     public static function import(PDO $pdo, string $jsonPath = self::DEFAULT_JSON, string $contentRoot = self::DEFAULT_CONTENT_ROOT): array {
@@ -86,6 +87,8 @@ final class EnemQuestionImporter {
                 bytes = excluded.bytes
         ');
 
+        $recoveries = self::loadApprovedRecoveries(self::DEFAULT_RECOVERY_JSON);
+
         $importedQuestions = 0;
         $importedAssets = 0;
         $validCount = 0;
@@ -97,6 +100,7 @@ final class EnemQuestionImporter {
         }
         try {
         foreach ($data['questions'] as $q) {
+            $q = self::applyRecovery($q, $recoveries, $contentRoot);
             $insertQuestionStmt->execute([
                 ':year' => (int) $q['year'],
                 ':day' => (int) $q['day'],
@@ -173,5 +177,54 @@ final class EnemQuestionImporter {
         }
 
         return ['questions' => $importedQuestions, 'valid' => $validCount, 'pending' => $pendingCount, 'assets' => $importedAssets];
+    }
+
+    /** @return array<string, array<string, mixed>> */
+    private static function loadApprovedRecoveries(string $path): array {
+        if (!is_file($path)) return [];
+        $raw = file_get_contents($path);
+        $data = $raw === false ? null : json_decode($raw, true);
+        if (!is_array($data) || !is_array($data['recoveries'] ?? null)) {
+            throw new RuntimeException("Estrutura inválida em {$path}");
+        }
+        $result = [];
+        foreach ($data['recoveries'] as $recovery) {
+            if (!is_array($recovery) || ($recovery['review_status'] ?? null) !== 'approved' || !is_array($recovery['fields'] ?? null)) continue;
+            $key = self::recoveryKey((int) ($recovery['year'] ?? 0), (int) ($recovery['day'] ?? 0), (int) ($recovery['question_number'] ?? 0));
+            $result[$key] = $recovery;
+        }
+        return $result;
+    }
+
+    /** @param array<string, mixed> $question @param array<string, array<string, mixed>> $recoveries @return array<string, mixed> */
+    private static function applyRecovery(array $question, array $recoveries, string $contentRoot): array {
+        $key = self::recoveryKey((int) $question['year'], (int) $question['day'], (int) $question['question_number']);
+        $recovery = $recoveries[$key] ?? null;
+        if ($recovery === null) return $question;
+        if (($recovery['source_pdf'] ?? null) !== ($question['source_pdf'] ?? null)) {
+            throw new RuntimeException("Recovery source mismatch for {$key}");
+        }
+        $allowed = ['statement', 'option_a', 'option_b', 'option_c', 'option_d', 'option_e', 'correct_option', 'images'];
+        foreach ($recovery['fields'] as $field => $value) {
+            if (!in_array($field, $allowed, true)) continue;
+            $question[$field] = $value;
+        }
+        if (!is_array($question['images'] ?? null)) throw new RuntimeException("Invalid recovery images for {$key}");
+        foreach ($question['images'] as $image) {
+            if (!is_string($image) || !preg_match('#^assets/[A-Za-z0-9._/-]+$#', $image) || str_contains($image, '..') || !is_file($contentRoot . '/' . $image)) {
+                throw new RuntimeException("Missing or unsafe recovery asset for {$key}");
+            }
+        }
+        if (($question['correct_option'] ?? null) !== null && !preg_match('/^[A-E]$/', (string) $question['correct_option'])) {
+            throw new RuntimeException("Invalid recovery answer for {$key}");
+        }
+        $extra = is_array($question['extra_data'] ?? null) ? $question['extra_data'] : [];
+        $extra['recovery_overlay'] = ['reviewed_at' => $recovery['reviewed_at'] ?? null, 'evidence' => $recovery['evidence'] ?? null];
+        $question['extra_data'] = $extra;
+        return $question;
+    }
+
+    private static function recoveryKey(int $year, int $day, int $number): string {
+        return sprintf('%04d-%d-%03d', $year, $day, $number);
     }
 }

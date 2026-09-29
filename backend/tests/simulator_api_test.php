@@ -70,7 +70,7 @@ function insertSimulatorApiUser(PDO $pdo, string $email): int {
     return (int) $pdo->lastInsertId();
 }
 
-function insertSimulatorApiQuestion(PDO $pdo, int $number, string $subject, string $correctOption = 'A'): int {
+function insertSimulatorApiQuestion(PDO $pdo, int $number, string $subject, string $correctOption = 'A', array $images = []): int {
     $pdo->prepare(
         'INSERT INTO enem_questions (
             year, day, question_number, area, statement,
@@ -82,7 +82,7 @@ function insertSimulatorApiQuestion(PDO $pdo, int $number, string $subject, stri
         2024, 1, $number, $subject, "Questao {$number}",
         'A', 'B', 'C', 'D', 'E', $correctOption, 'valid', 'enem-2024.pdf', 1, '[1]',
         hash('sha256', "{$subject}-{$number}"), 'https://www.gov.br/inep/enem',
-        'https://example.test/enem', '[]',
+        'https://example.test/enem', json_encode($images, JSON_UNESCAPED_SLASHES | JSON_THROW_ON_ERROR),
     ]);
 
     return (int) $pdo->lastInsertId();
@@ -104,7 +104,13 @@ try {
     $secondUserId = insertSimulatorApiUser($pdo, 'second-simulator-api@example.test');
     $mathQuestionIds = [];
     for ($number = 1; $number <= 10; $number++) {
-        $mathQuestionIds[] = 'inep:' . insertSimulatorApiQuestion($pdo, $number, 'Matemática', $number === 1 ? 'B' : 'A');
+        $mathQuestionIds[] = 'inep:' . insertSimulatorApiQuestion(
+            $pdo,
+            $number,
+            'Matemática',
+            $number === 1 ? 'B' : 'A',
+            $number === 3 ? ['assets/2024/dia-1/q12_fig1.png'] : []
+        );
     }
     insertSimulatorApiQuestion($pdo, 11, 'História');
     $insertCatalog = $pdo->prepare('INSERT INTO simulator_catalogs (id, title, category, subject, duration_minutes) VALUES (?, ?, ?, ?, ?)');
@@ -167,6 +173,13 @@ try {
     expectSimulatorApiSame([$mathQuestionIds[2], $mathQuestionIds[0], $mathQuestionIds[1]], array_column($catalogSessionPayload['questions'], 'id'), 'Catalog session preserves the exam order');
     expectSimulatorApiSame(1800, $catalogSessionPayload['time_limit_seconds'], 'Catalog session uses the exam duration');
     expectSimulatorApiTrue(!array_key_exists('correct_option', $catalogSessionPayload['questions'][0]), 'Catalog session hides answers while active');
+    $imageUrl = '/api/simulators/questions/' . rawurlencode($mathQuestionIds[2]) . '/images/0';
+    expectSimulatorApiSame([$imageUrl], $catalogSessionPayload['questions'][0]['images'] ?? null, 'Question DTO exposes authenticated image URLs in source order');
+    expectSimulatorApiStatus(simulatorApiRequest($root, $path, $imageUrl, 'GET'), 401, 'Question images require authentication');
+    $imageResponse = simulatorApiRequest($root, $path, $imageUrl, 'GET', $catalogCookie);
+    expectSimulatorApiStatus($imageResponse, 200, 'Question owner can load an official image');
+    expectSimulatorApiTrue(strlen($imageResponse['body']) > 100, 'Question image route returns image bytes');
+    expectSimulatorApiStatus(simulatorApiRequest($root, $path, '/api/simulators/questions/' . rawurlencode($mathQuestionIds[2]) . '/images/99', 'GET', $catalogCookie), 404, 'Unknown question image index is hidden as not found');
     expectSimulatorApiStatus(simulatorApiRequest($root, $path, '/api/simulators/sessions', 'POST', $catalogCookie, [
         'kind' => 'catalog', 'catalog_id' => 'enem:incompleta',
     ]), 404, 'A catalog with an unpublished question cannot be started');

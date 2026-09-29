@@ -7,6 +7,7 @@ require_once __DIR__ . '/../config/response.php';
 require_once __DIR__ . '/../middleware/auth.php';
 require_once __DIR__ . '/../services/SimulatorCatalogImporter.php';
 require_once __DIR__ . '/../utils/PublishedQuestionRepository.php';
+require_once __DIR__ . '/../utils/QuestionContent.php';
 require_once __DIR__ . '/../utils/SimulatorRecommendation.php';
 require_once __DIR__ . '/../utils/SimulatorSessionRepository.php';
 
@@ -106,6 +107,37 @@ final class SimulatorController {
         }
 
         Response::success(['session' => self::sessionDto(self::pdo(), $session)]);
+    }
+
+    public static function questionImage(string $questionId, int $index): void {
+        Auth::requireAuth();
+        $statement = self::pdo()->prepare('SELECT images FROM simulator_questions WHERE id = ? AND published = 1');
+        $statement->execute([$questionId]);
+        $row = $statement->fetch();
+        if (!$row) Response::notFound('Questão não encontrada.');
+
+        $images = json_decode((string) $row['images'], true);
+        $path = is_array($images) ? ($images[$index] ?? null) : null;
+        if (!is_string($path) || !self::safeQuestionAssetPath($path)) Response::notFound('Imagem não encontrada.');
+
+        self::serveQuestionAsset($path);
+    }
+
+    public static function questionReferenceImage(string $questionId, int $index): void {
+        Auth::requireAuth();
+        $statement = self::pdo()->prepare(
+            "SELECT g.images
+             FROM simulator_reference_group_questions m
+             JOIN simulator_reference_groups g ON g.id = m.group_id
+             WHERE m.question_id = ?"
+        );
+        $statement->execute([$questionId]);
+        $row = $statement->fetch();
+        if (!$row) Response::notFound('Material de referência não encontrado.');
+        $images = json_decode((string) $row['images'], true);
+        $path = is_array($images) ? ($images[$index] ?? null) : null;
+        if (!is_string($path) || !self::safeReferenceAssetPath($path)) Response::notFound('Imagem não encontrada.');
+        self::serveQuestionAsset($path);
     }
 
     public static function progress(string $id): void {
@@ -239,6 +271,42 @@ final class SimulatorController {
         ], $statement->fetchAll());
     }
 
+    private static function safeQuestionAssetPath(string $path): bool {
+        return self::safeAssetPath($path, 'assets/');
+    }
+
+    private static function safeReferenceAssetPath(string $path): bool {
+        return self::safeAssetPath($path, 'reference-assets/');
+    }
+
+    private static function safeAssetPath(string $path, string $prefix): bool {
+        return $path !== ''
+            && !str_contains($path, '..')
+            && !str_contains($path, '\\')
+            && !str_starts_with($path, '/')
+            && str_starts_with($path, $prefix)
+            && preg_match('#^[A-Za-z0-9._/-]+$#', $path) === 1;
+    }
+
+    private static function serveQuestionAsset(string $path): never {
+        $root = realpath(__DIR__ . '/../../content/enem');
+        $file = realpath(__DIR__ . '/../../content/enem/' . $path);
+        if ($root === false || $file === false || !str_starts_with($file, $root . DIRECTORY_SEPARATOR) || !is_file($file)) {
+            Response::notFound('Imagem não encontrada.');
+        }
+        $mime = match (strtolower(pathinfo($file, PATHINFO_EXTENSION))) {
+            'png' => 'image/png', 'jpg', 'jpeg' => 'image/jpeg', 'webp' => 'image/webp', 'gif' => 'image/gif',
+            default => null,
+        };
+        if ($mime === null) Response::notFound('Imagem não encontrada.');
+        http_response_code(200);
+        header('Content-Type: ' . $mime);
+        header('X-Content-Type-Options: nosniff');
+        header('Cache-Control: private, max-age=3600');
+        readfile($file);
+        exit;
+    }
+
     private static function pdo(): PDO {
         return Database::getInstance()->getConnection();
     }
@@ -359,9 +427,15 @@ final class SimulatorController {
         $statement = $pdo->prepare(
             'SELECT questions.id, questions.subject, questions.topic, questions.statement,
                     questions.option_a, questions.option_b, questions.option_c, questions.option_d, questions.option_e,
-                    questions.images, questions.correct_option, composition.position
+                    questions.images, questions.correct_option, composition.position,
+                    reference_groups.id AS reference_id, reference_groups.title AS reference_title,
+                    reference_groups.body AS reference_body, reference_groups.images AS reference_images
              FROM simulator_session_questions AS composition
              JOIN simulator_questions AS questions ON questions.id = composition.question_id
+             LEFT JOIN simulator_reference_group_questions AS reference_members
+               ON reference_members.question_id = questions.id
+             LEFT JOIN simulator_reference_groups AS reference_groups
+               ON reference_groups.id = reference_members.group_id
              WHERE composition.session_id = ?
              ORDER BY composition.position ASC'
         );
@@ -369,11 +443,35 @@ final class SimulatorController {
 
         return array_map(static function (array $row) use ($includeCorrectOption): array {
             $images = json_decode((string) $row['images'], true);
+            $referenceImages = json_decode((string) ($row['reference_images'] ?? '[]'), true);
+            $referenceImages = is_array($referenceImages) ? array_values($referenceImages) : [];
             $question = [
                 'id' => (string) $row['id'], 'position' => (int) $row['position'], 'subject' => (string) $row['subject'],
-                'topic' => $row['topic'], 'statement' => (string) $row['statement'],
-                'options' => ['A' => $row['option_a'], 'B' => $row['option_b'], 'C' => $row['option_c'], 'D' => $row['option_d'], 'E' => $row['option_e']],
-                'images' => is_array($images) ? $images : [],
+                'topic' => $row['topic'], 'statement' => QuestionContent::statement($row['statement']),
+                'options' => [
+                    'A' => QuestionContent::option($row['option_a'], 'A'),
+                    'B' => QuestionContent::option($row['option_b'], 'B'),
+                    'C' => QuestionContent::option($row['option_c'], 'C'),
+                    'D' => QuestionContent::option($row['option_d'], 'D'),
+                    'E' => QuestionContent::option($row['option_e'], 'E'),
+                ],
+                'images' => is_array($images)
+                    ? array_values(array_map(
+                        static fn(mixed $_path, int $index): string => '/api/simulators/questions/' . rawurlencode((string) $row['id']) . '/images/' . $index,
+                        $images,
+                        array_keys($images)
+                    ))
+                    : [],
+                'reference' => $row['reference_id'] === null ? null : [
+                    'id' => (string) $row['reference_id'],
+                    'title' => (string) $row['reference_title'],
+                    'body' => (string) $row['reference_body'],
+                    'images' => array_values(array_map(
+                        static fn(mixed $_path, int $index): string => '/api/simulators/questions/' . rawurlencode((string) $row['id']) . '/reference-images/' . $index,
+                        $referenceImages,
+                        array_keys($referenceImages)
+                    )),
+                ],
             ];
             if ($includeCorrectOption) {
                 $question['correct_option'] = (string) $row['correct_option'];

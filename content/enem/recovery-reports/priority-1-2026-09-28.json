@@ -1,0 +1,153 @@
+{
+  "schema": "bsestudos.enem-recovery-report.v1",
+  "recoveries": [
+    {
+      "year": 2020,
+      "day": 2,
+      "question_number": 103,
+      "source_pdf": "2020/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        5
+      ],
+      "before": {
+        "statement": "A obtenção de óleos vegetais, de maneira geral, passa pelas etapas descritas no quadro.\n\nQual das subetapas do processo é realizada em função apenas da polaridade das substâncias?",
+        "images": [
+          "assets/2020/dia-2/q103_recovered_table.png"
+        ],
+        "option_e": "Destilação."
+      },
+      "after": {
+        "statement": "A obtenção de óleos vegetais, de maneira geral, passa pelas etapas descritas no quadro.\n\nQual das subetapas do processo é realizada em função apenas da polaridade das substâncias?",
+        "images": [
+          "assets/2020/dia-2/q103_recovered_table.png"
+        ],
+        "option_e": "Destilação."
+      },
+      "review": "visual comparison against official PDF page; no inferred answer/content"
+    },
+    {
+      "year": 2020,
+      "day": 2,
+      "question_number": 105,
+      "source_pdf": "2020/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        5
+      ],
+      "before": {
+        "statement": "Grupos de proteção ao meio ambiente conseguem resgatar muitas aves aquáticas vítimas de vazamentos de petróleo. Essas aves são lavadas com água e detergente neutro para a retirada completa do óleo de seu corpo e, posteriormente, são aquecidas, medicadas, desintoxicadas e alimentadas. Mesmo após esses cuidados, o retorno ao ambiente não pode ser imediato, pois elas precisam recuperar a capacidade de flutuação.\n\nPara flutuar, essas aves precisam",
+        "images": [],
+        "option_e": "refazer a camada de cera impermeabilizante das penas."
+      },
+      "after": {
+        "statement": "Grupos de proteção ao meio ambiente conseguem resgatar muitas aves aquáticas vítimas de vazamentos de petróleo. Essas aves são lavadas com água e detergente neutro para a retirada completa do óleo de seu corpo e, posteriormente, são aquecidas, medicadas, desintoxicadas e alimentadas. Mesmo após esses cuidados, o retorno ao ambiente não pode ser imediato, pois elas precisam recuperar a capacidade de flutuação.\n\nPara flutuar, essas aves precisam",
+        "images": [],
+        "option_e": "refazer a camada de cera impermeabilizante das penas."
+      },
+      "review": "visual comparison against official PDF page; no inferred answer/content"
+    },
+    {
+      "year": 2020,
+      "day": 2,
+      "question_number": 107,
+      "source_pdf": "2020/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        6
+      ],
+      "before": {
+        "statement": "Um microempresário do ramo de cosméticos utiliza óleos essenciais e quer produzir um creme com fragrância de rosas. O principal componente do óleo de rosas tem cadeia poli-insaturada e hidroxila em carbono terminal. O catálogo dos óleos essenciais apresenta, para escolha da essência, estas estruturas químicas:\n\nQual substância o empresário deverá utilizar?",
+        "images": [
+          "assets/2020/dia-2/q107_recovered_structures.png"
+        ],
+        "option_e": "5"
+      },
+      "after": {
+        "statement": "Um microempresário do ramo de cosméticos utiliza óleos essenciais e quer produzir um creme com fragrância de rosas. O principal componente do óleo de rosas tem cadeia poli-insaturada e hidroxila em carbono terminal. O catálogo dos óleos essenciais apresenta, para escolha da essência, estas estruturas químicas:\n\nQual substância o empresário deverá utilizar?",
+        "images": [
+          "assets/2020/dia-2/q107_recovered_structures.png"
+        ],
+        "option_e": "5"
+      },
+      "review": "visual comparison against official PDF page; no inferred answer/content"
+    },
+    {
+      "year": 2022,
+      "day": 1,
+      "question_number": 17,
+      "source_pdf": "2022/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        9
+      ],
+      "before": {
+        "statement": "Notas\n\nSoluços, lágrimas, casa armada, veludo preto nos portais, um homem que veio vestir o cadáver, outro que tomou a medida do caixão, caixão, essa, tocheiros, convites, convidados que entravam, lentamente, a passo surdo, e apertavam a mão à família, alguns tristes, todos sérios e calados, padre e sacristão, rezas, aspersões d’água benta, o fechar do caixão, a prego e martelo, seis pessoas que o tomam da essa, e o levantam, e o descem a custo pela escada, não obstante os gritos, soluços e novas lágrimas da família, e vão até o coche fúnebre, e o colocam em cima e traspassam e apertam as correias, o rodar do coche, o rodar dos carros, um a um... Isto que parece um simples inventário eram notas que eu havia tomado para um capítulo triste e vulgar que não escrevo.\n\nASSIS, M. Memórias póstumas de Brás Cubas. Disponível em: www.dominiopublico.gov.br. Acesso em: 25 jul. 2022.\n\nO recurso linguístico que permite a Machado de Assis considerar um capítulo de Memórias póstumas de Brás Cubas como inventário é a",
+        "images": [],
+        "option_e": "E\t presença de léxico do campo semântico de funerais."
+      },
+      "after": {
+        "statement": "Notas\n\nSoluços, lágrimas, casa armada, veludo preto nos portais, um homem que veio vestir o cadáver, outro que tomou a medida do caixão, caixão, essa, tocheiros, convites, convidados que entravam, lentamente, a passo surdo, e apertavam a mão à família, alguns tristes, todos sérios e calados, padre e sacristão, rezas, aspersões d’água benta, o fechar do caixão, a prego e martelo, seis pessoas que o tomam da essa, e o levantam, e o descem a custo pela escada, não obstante os gritos, soluços e novas lágrimas da família, e vão até o coche fúnebre, e o colocam em cima e traspassam e apertam as correias, o rodar do coche, o rodar dos carros, um a um... Isto que parece um simples inventário eram notas que eu havia tomado para um capítulo triste e vulgar que não escrevo.\n\nASSIS, M. Memórias póstumas de Brás Cubas. Disponível em: www.dominiopublico.gov.br. Acesso em: 25 jul. 2022.\n\nO recurso linguístico que permite a Machado de Assis considerar um capítulo de Memórias póstumas de Brás Cubas como inventário é a",
+        "images": [],
+        "option_e": "E\t presença de léxico do campo semântico de funerais."
+      },
+      "review": "visual comparison against official PDF page; no inferred answer/content"
+    },
+    {
+      "year": 2022,
+      "day": 2,
+      "question_number": 103,
+      "source_pdf": "2022/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        5
+      ],
+      "before": {
+        "statement": "Os resultados de um ensaio clínico randomizado na Indonésia apontaram uma redução de 77% dos casos de dengue nas áreas que receberam o mosquito Aedes aegypti infectado com a bactéria Wolbachia. Trata-se da mesma técnica utilizada no Brasil pelo Método Wolbachia, iniciativa conduzida pela Fundação Oswaldo Cruz — Fiocruz. Essa bactéria induz a redução da carga viral no mosquito e, consequentemente, o número de casos de dengue na área, sendo repassada por meio do cruzamento entre os insetos. Como essa bactéria é um organismo intracelular e o vírus também precisa entrar nas células para se reproduzir, ambos necessitarão de recursos comuns.\n\nCOSTA, G. Agência Fiocruz de Notícias. Estudo confirma eficácia do Método Wolbachia para dengue. Disponível em: https://portal.fiocruz.br. Acesso em: 3 jun. 2022 (adaptado).\n\nEssa tecnologia utilizada no combate à dengue consiste na",
+        "images": [],
+        "option_e": "E\t inserção de material genético do vírus na bactéria."
+      },
+      "after": {
+        "statement": "Os resultados de um ensaio clínico randomizado na Indonésia apontaram uma redução de 77% dos casos de dengue nas áreas que receberam o mosquito Aedes aegypti infectado com a bactéria Wolbachia. Trata-se da mesma técnica utilizada no Brasil pelo Método Wolbachia, iniciativa conduzida pela Fundação Oswaldo Cruz — Fiocruz. Essa bactéria induz a redução da carga viral no mosquito e, consequentemente, o número de casos de dengue na área, sendo repassada por meio do cruzamento entre os insetos. Como essa bactéria é um organismo intracelular e o vírus também precisa entrar nas células para se reproduzir, ambos necessitarão de recursos comuns.\n\nCOSTA, G. Agência Fiocruz de Notícias. Estudo confirma eficácia do Método Wolbachia para dengue. Disponível em: https://portal.fiocruz.br. Acesso em: 3 jun. 2022 (adaptado).\n\nEssa tecnologia utilizada no combate à dengue consiste na",
+        "images": [],
+        "option_e": "E\t inserção de material genético do vírus na bactéria."
+      },
+      "review": "visual comparison against official PDF page; no inferred answer/content"
+    },
+    {
+      "year": 2023,
+      "day": 2,
+      "question_number": 151,
+      "source_pdf": "2023/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        21
+      ],
+      "before": {
+        "statement": "Em janeiro do ano passado, a direção de uma fábrica abriu uma creche para os filhos de seus funcionários, com 10 salas, cada uma com capacidade para atender 10 crianças a cada ano. As vagas são sorteadas entre os filhos dos funcionários inscritos, enquanto os não contemplados pelo sorteio formam uma lista de espera. No ano passado, a lista de espera teve 400 nomes e, neste ano, esse número cresceu 10%.\n\nA direção da fábrica realizou uma pesquisa e constatou que a lista de espera para o próximo ano terá a mesma quantidade de nomes da lista de espera deste ano. Decidiu, então, construir, ao longo desse ano, novas salas para a creche, também com capacidade de atendimento para 10 crianças cada, de modo que o número de nomes na lista de espera no próximo ano seja 25% menor que o deste ano.\n\nO número mínimo de salas que deverão ser construídas é",
+        "images": [],
+        "option_e": "E\t 33."
+      },
+      "after": {
+        "statement": "Em janeiro do ano passado, a direção de uma fábrica abriu uma creche para os filhos de seus funcionários, com 10 salas, cada uma com capacidade para atender 10 crianças a cada ano. As vagas são sorteadas entre os filhos dos funcionários inscritos, enquanto os não contemplados pelo sorteio formam uma lista de espera. No ano passado, a lista de espera teve 400 nomes e, neste ano, esse número cresceu 10%.\n\nA direção da fábrica realizou uma pesquisa e constatou que a lista de espera para o próximo ano terá a mesma quantidade de nomes da lista de espera deste ano. Decidiu, então, construir, ao longo desse ano, novas salas para a creche, também com capacidade de atendimento para 10 crianças cada, de modo que o número de nomes na lista de espera no próximo ano seja 25% menor que o deste ano.\n\nO número mínimo de salas que deverão ser construídas é",
+        "images": [],
+        "option_e": "E\t 33."
+      },
+      "review": "visual comparison against official PDF page; no inferred answer/content"
+    },
+    {
+      "year": 2023,
+      "day": 2,
+      "question_number": 180,
+      "source_pdf": "2023/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        31
+      ],
+      "before": {
+        "statement": "O metrô de um município oferece dois tipos de tíquetes com colorações diferentes, azul e vermelha, sendo vendidos em cartelas, cada qual com nove tíquetes da mesma cor e mesmo valor unitário. Duas cartelas de tíquetes azuis e uma cartela de tíquetes vermelhos são vendidas por R$ 32,40. Sabe-se que o preço de um tíquete azul menos o preço de um tíquete vermelho é igual ao preço de um tíquete vermelho mais cinco centavos.\n\nQual o preço, em real, de uma cartela de tíquetes vermelhos?",
+        "images": [],
+        "option_e": "E\t 10,65"
+      },
+      "after": {
+        "statement": "O metrô de um município oferece dois tipos de tíquetes com colorações diferentes, azul e vermelha, sendo vendidos em cartelas, cada qual com nove tíquetes da mesma cor e mesmo valor unitário. Duas cartelas de tíquetes azuis e uma cartela de tíquetes vermelhos são vendidas por R$ 32,40. Sabe-se que o preço de um tíquete azul menos o preço de um tíquete vermelho é igual ao preço de um tíquete vermelho mais cinco centavos.\n\nQual o preço, em real, de uma cartela de tíquetes vermelhos?",
+        "images": [],
+        "option_e": "E\t 10,65"
+      },
+      "review": "visual comparison against official PDF page; no inferred answer/content"
+    }
+  ]
+}

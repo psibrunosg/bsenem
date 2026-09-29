@@ -429,6 +429,8 @@ function toCardQuestion(question) {
     text: question.statement,
     answers: OPTION_KEYS.map((key) => question.options?.[key] ?? ''),
     correctAnswer: correctIndex >= 0 ? correctIndex : null,
+    images: Array.isArray(question.images) ? question.images : [],
+    reference: question.reference ?? null,
   };
 }
 

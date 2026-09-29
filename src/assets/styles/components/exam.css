@@ -237,6 +237,34 @@
   line-height: 1.6;
 }
 
+.question-reference {
+  margin-bottom: 18px;
+  padding: 16px;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  background: var(--bg-secondary);
+}
+
+.question-reference-label {
+  margin-bottom: 6px;
+  font-size: var(--text-xs);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  color: var(--text-secondary);
+}
+
+.question-reference-title {
+  margin: 0 0 8px;
+  font-size: var(--text-base);
+}
+
+.question-reference-body {
+  margin: 0;
+  white-space: pre-line;
+  line-height: 1.6;
+}
+
 .question-image {
   margin-top: 16px;
   text-align: center;

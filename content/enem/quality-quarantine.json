@@ -1,0 +1,7571 @@
+{
+  "schema": "bsestudos.enem-quality-quarantine.v1",
+  "policy": {
+    "scope": "valid ENEM questions only",
+    "blocking_effect": "exclude from simulator publication without mutating official content",
+    "presentation_effect": "keep raw source immutable and clean deterministic extraction noise only in student-facing DTOs",
+    "automatic_release": "regenerate after extraction/reference fixes and review"
+  },
+  "summary": {
+    "quarantined": 247,
+    "reasons": {
+      "corrupted_pdf_text": 247
+    },
+    "presentation_warnings": 376,
+    "presentation_warning_reasons": {
+      "embedded_option_labels": 289,
+      "repeated_watermark": 158
+    }
+  },
+  "issues": [
+    {
+      "year": 2017,
+      "day": 1,
+      "question_number": 3,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2017/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        2
+      ]
+    },
+    {
+      "year": 2017,
+      "day": 1,
+      "question_number": 6,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2017/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        5
+      ]
+    },
+    {
+      "year": 2017,
+      "day": 1,
+      "question_number": 7,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2017/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        6
+      ]
+    },
+    {
+      "year": 2017,
+      "day": 1,
+      "question_number": 8,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2017/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        6
+      ]
+    },
+    {
+      "year": 2017,
+      "day": 1,
+      "question_number": 9,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2017/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        6
+      ]
+    },
+    {
+      "year": 2017,
+      "day": 1,
+      "question_number": 10,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2017/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        7
+      ]
+    },
+    {
+      "year": 2017,
+      "day": 1,
+      "question_number": 12,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2017/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        7
+      ]
+    },
+    {
+      "year": 2017,
+      "day": 1,
+      "question_number": 13,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2017/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        8
+      ]
+    },
+    {
+      "year": 2017,
+      "day": 1,
+      "question_number": 14,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2017/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        8
+      ]
+    },
+    {
+      "year": 2017,
+      "day": 1,
+      "question_number": 15,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2017/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        8
+      ]
+    },
+    {
+      "year": 2017,
+      "day": 1,
+      "question_number": 17,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2017/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        9
+      ]
+    },
+    {
+      "year": 2017,
+      "day": 1,
+      "question_number": 19,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2017/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        9
+      ]
+    },
+    {
+      "year": 2017,
+      "day": 1,
+      "question_number": 20,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2017/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        10
+      ]
+    },
+    {
+      "year": 2017,
+      "day": 1,
+      "question_number": 22,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2017/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        10
+      ]
+    },
+    {
+      "year": 2017,
+      "day": 1,
+      "question_number": 23,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2017/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        11
+      ]
+    },
+    {
+      "year": 2017,
+      "day": 1,
+      "question_number": 27,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2017/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        12
+      ]
+    },
+    {
+      "year": 2017,
+      "day": 1,
+      "question_number": 28,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2017/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        13
+      ]
+    },
+    {
+      "year": 2017,
+      "day": 1,
+      "question_number": 30,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2017/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        13
+      ]
+    },
+    {
+      "year": 2017,
+      "day": 1,
+      "question_number": 32,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2017/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        14
+      ]
+    },
+    {
+      "year": 2017,
+      "day": 1,
+      "question_number": 35,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2017/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        15
+      ]
+    },
+    {
+      "year": 2017,
+      "day": 1,
+      "question_number": 37,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2017/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        15
+      ]
+    },
+    {
+      "year": 2017,
+      "day": 1,
+      "question_number": 40,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2017/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        17
+      ]
+    },
+    {
+      "year": 2017,
+      "day": 1,
+      "question_number": 42,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2017/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        17
+      ]
+    },
+    {
+      "year": 2017,
+      "day": 1,
+      "question_number": 45,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2017/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        18
+      ]
+    },
+    {
+      "year": 2017,
+      "day": 1,
+      "question_number": 46,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2017/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        20
+      ]
+    },
+    {
+      "year": 2017,
+      "day": 1,
+      "question_number": 47,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2017/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        20
+      ]
+    },
+    {
+      "year": 2017,
+      "day": 1,
+      "question_number": 48,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2017/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        20
+      ]
+    },
+    {
+      "year": 2017,
+      "day": 1,
+      "question_number": 51,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2017/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        22
+      ]
+    },
+    {
+      "year": 2017,
+      "day": 1,
+      "question_number": 52,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2017/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        22
+      ]
+    },
+    {
+      "year": 2017,
+      "day": 1,
+      "question_number": 54,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2017/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        22
+      ]
+    },
+    {
+      "year": 2017,
+      "day": 1,
+      "question_number": 55,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2017/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        22
+      ]
+    },
+    {
+      "year": 2017,
+      "day": 1,
+      "question_number": 56,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2017/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        23
+      ]
+    },
+    {
+      "year": 2017,
+      "day": 1,
+      "question_number": 57,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2017/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        23
+      ]
+    },
+    {
+      "year": 2017,
+      "day": 1,
+      "question_number": 58,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2017/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        23
+      ]
+    },
+    {
+      "year": 2017,
+      "day": 1,
+      "question_number": 59,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2017/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        23
+      ]
+    },
+    {
+      "year": 2017,
+      "day": 1,
+      "question_number": 61,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2017/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        24
+      ]
+    },
+    {
+      "year": 2017,
+      "day": 1,
+      "question_number": 62,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2017/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        24
+      ]
+    },
+    {
+      "year": 2017,
+      "day": 1,
+      "question_number": 63,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2017/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        24
+      ]
+    },
+    {
+      "year": 2017,
+      "day": 1,
+      "question_number": 64,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2017/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        25
+      ]
+    },
+    {
+      "year": 2017,
+      "day": 1,
+      "question_number": 65,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2017/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        25
+      ]
+    },
+    {
+      "year": 2017,
+      "day": 1,
+      "question_number": 66,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2017/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        25
+      ]
+    },
+    {
+      "year": 2017,
+      "day": 1,
+      "question_number": 68,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2017/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        26
+      ]
+    },
+    {
+      "year": 2017,
+      "day": 1,
+      "question_number": 69,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2017/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        26
+      ]
+    },
+    {
+      "year": 2017,
+      "day": 1,
+      "question_number": 70,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2017/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        26
+      ]
+    },
+    {
+      "year": 2017,
+      "day": 1,
+      "question_number": 71,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2017/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        27
+      ]
+    },
+    {
+      "year": 2017,
+      "day": 1,
+      "question_number": 72,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2017/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        27
+      ]
+    },
+    {
+      "year": 2017,
+      "day": 1,
+      "question_number": 73,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2017/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        27
+      ]
+    },
+    {
+      "year": 2017,
+      "day": 1,
+      "question_number": 75,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2017/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        28
+      ]
+    },
+    {
+      "year": 2017,
+      "day": 1,
+      "question_number": 76,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2017/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        28
+      ]
+    },
+    {
+      "year": 2017,
+      "day": 1,
+      "question_number": 77,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2017/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        28
+      ]
+    },
+    {
+      "year": 2017,
+      "day": 1,
+      "question_number": 78,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2017/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        28
+      ]
+    },
+    {
+      "year": 2017,
+      "day": 1,
+      "question_number": 81,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2017/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        29
+      ]
+    },
+    {
+      "year": 2017,
+      "day": 1,
+      "question_number": 82,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2017/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        29
+      ]
+    },
+    {
+      "year": 2017,
+      "day": 1,
+      "question_number": 83,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2017/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        30
+      ]
+    },
+    {
+      "year": 2017,
+      "day": 1,
+      "question_number": 84,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2017/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        30
+      ]
+    },
+    {
+      "year": 2017,
+      "day": 1,
+      "question_number": 85,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2017/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        30
+      ]
+    },
+    {
+      "year": 2017,
+      "day": 1,
+      "question_number": 86,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2017/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        31
+      ]
+    },
+    {
+      "year": 2017,
+      "day": 1,
+      "question_number": 87,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2017/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        31
+      ]
+    },
+    {
+      "year": 2017,
+      "day": 1,
+      "question_number": 88,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2017/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        31
+      ]
+    },
+    {
+      "year": 2017,
+      "day": 1,
+      "question_number": 89,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2017/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        31
+      ]
+    },
+    {
+      "year": 2018,
+      "day": 2,
+      "question_number": 91,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2018/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        2
+      ]
+    },
+    {
+      "year": 2018,
+      "day": 2,
+      "question_number": 92,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2018/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        2
+      ]
+    },
+    {
+      "year": 2018,
+      "day": 2,
+      "question_number": 94,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2018/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        2
+      ]
+    },
+    {
+      "year": 2018,
+      "day": 2,
+      "question_number": 95,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2018/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        2
+      ]
+    },
+    {
+      "year": 2018,
+      "day": 2,
+      "question_number": 96,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2018/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        3
+      ]
+    },
+    {
+      "year": 2018,
+      "day": 2,
+      "question_number": 97,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2018/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        3
+      ]
+    },
+    {
+      "year": 2018,
+      "day": 2,
+      "question_number": 98,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2018/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        3
+      ]
+    },
+    {
+      "year": 2018,
+      "day": 2,
+      "question_number": 101,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2018/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        5
+      ]
+    },
+    {
+      "year": 2018,
+      "day": 2,
+      "question_number": 102,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2018/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        5
+      ]
+    },
+    {
+      "year": 2018,
+      "day": 2,
+      "question_number": 103,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2018/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        5
+      ]
+    },
+    {
+      "year": 2018,
+      "day": 2,
+      "question_number": 104,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2018/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        5
+      ]
+    },
+    {
+      "year": 2018,
+      "day": 2,
+      "question_number": 105,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2018/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        6
+      ]
+    },
+    {
+      "year": 2018,
+      "day": 2,
+      "question_number": 106,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2018/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        6
+      ]
+    },
+    {
+      "year": 2018,
+      "day": 2,
+      "question_number": 108,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2018/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        6
+      ]
+    },
+    {
+      "year": 2018,
+      "day": 2,
+      "question_number": 109,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2018/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        6
+      ]
+    },
+    {
+      "year": 2018,
+      "day": 2,
+      "question_number": 110,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2018/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        7
+      ]
+    },
+    {
+      "year": 2018,
+      "day": 2,
+      "question_number": 111,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2018/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        7
+      ]
+    },
+    {
+      "year": 2018,
+      "day": 2,
+      "question_number": 112,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2018/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        7
+      ]
+    },
+    {
+      "year": 2018,
+      "day": 2,
+      "question_number": 114,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2018/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        8
+      ]
+    },
+    {
+      "year": 2018,
+      "day": 2,
+      "question_number": 115,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2018/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        9
+      ]
+    },
+    {
+      "year": 2018,
+      "day": 2,
+      "question_number": 116,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2018/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        9
+      ]
+    },
+    {
+      "year": 2018,
+      "day": 2,
+      "question_number": 117,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2018/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        9
+      ]
+    },
+    {
+      "year": 2018,
+      "day": 2,
+      "question_number": 118,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2018/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        9
+      ]
+    },
+    {
+      "year": 2018,
+      "day": 2,
+      "question_number": 119,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2018/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        9
+      ]
+    },
+    {
+      "year": 2018,
+      "day": 2,
+      "question_number": 120,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2018/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        10
+      ]
+    },
+    {
+      "year": 2018,
+      "day": 2,
+      "question_number": 122,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2018/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        11
+      ]
+    },
+    {
+      "year": 2018,
+      "day": 2,
+      "question_number": 123,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2018/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        11
+      ]
+    },
+    {
+      "year": 2018,
+      "day": 2,
+      "question_number": 124,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2018/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        11
+      ]
+    },
+    {
+      "year": 2018,
+      "day": 2,
+      "question_number": 125,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2018/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        12
+      ]
+    },
+    {
+      "year": 2018,
+      "day": 2,
+      "question_number": 130,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2018/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        14
+      ]
+    },
+    {
+      "year": 2018,
+      "day": 2,
+      "question_number": 132,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2018/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        15
+      ]
+    },
+    {
+      "year": 2018,
+      "day": 2,
+      "question_number": 133,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2018/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        15
+      ]
+    },
+    {
+      "year": 2018,
+      "day": 2,
+      "question_number": 134,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2018/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        15
+      ]
+    },
+    {
+      "year": 2018,
+      "day": 2,
+      "question_number": 135,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2018/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        15
+      ]
+    },
+    {
+      "year": 2018,
+      "day": 2,
+      "question_number": 139,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2018/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        17
+      ]
+    },
+    {
+      "year": 2018,
+      "day": 2,
+      "question_number": 140,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2018/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        17
+      ]
+    },
+    {
+      "year": 2018,
+      "day": 2,
+      "question_number": 141,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2018/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        17
+      ]
+    },
+    {
+      "year": 2018,
+      "day": 2,
+      "question_number": 142,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2018/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        17
+      ]
+    },
+    {
+      "year": 2018,
+      "day": 2,
+      "question_number": 143,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2018/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        18
+      ]
+    },
+    {
+      "year": 2018,
+      "day": 2,
+      "question_number": 144,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2018/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        18
+      ]
+    },
+    {
+      "year": 2018,
+      "day": 2,
+      "question_number": 145,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2018/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        18
+      ]
+    },
+    {
+      "year": 2018,
+      "day": 2,
+      "question_number": 147,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2018/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        20
+      ]
+    },
+    {
+      "year": 2018,
+      "day": 2,
+      "question_number": 148,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2018/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        20
+      ]
+    },
+    {
+      "year": 2018,
+      "day": 2,
+      "question_number": 149,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2018/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        20
+      ]
+    },
+    {
+      "year": 2018,
+      "day": 2,
+      "question_number": 150,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2018/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        20
+      ]
+    },
+    {
+      "year": 2018,
+      "day": 2,
+      "question_number": 151,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2018/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        21
+      ]
+    },
+    {
+      "year": 2018,
+      "day": 2,
+      "question_number": 153,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2018/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        21
+      ]
+    },
+    {
+      "year": 2018,
+      "day": 2,
+      "question_number": 154,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2018/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        21
+      ]
+    },
+    {
+      "year": 2018,
+      "day": 2,
+      "question_number": 155,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2018/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        22
+      ]
+    },
+    {
+      "year": 2018,
+      "day": 2,
+      "question_number": 156,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2018/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        22
+      ]
+    },
+    {
+      "year": 2018,
+      "day": 2,
+      "question_number": 157,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2018/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        23
+      ]
+    },
+    {
+      "year": 2018,
+      "day": 2,
+      "question_number": 158,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2018/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        23
+      ]
+    },
+    {
+      "year": 2018,
+      "day": 2,
+      "question_number": 159,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2018/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        23
+      ]
+    },
+    {
+      "year": 2018,
+      "day": 2,
+      "question_number": 160,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2018/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        24
+      ]
+    },
+    {
+      "year": 2018,
+      "day": 2,
+      "question_number": 161,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2018/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        24
+      ]
+    },
+    {
+      "year": 2018,
+      "day": 2,
+      "question_number": 162,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2018/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        24
+      ]
+    },
+    {
+      "year": 2018,
+      "day": 2,
+      "question_number": 163,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2018/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        24
+      ]
+    },
+    {
+      "year": 2018,
+      "day": 2,
+      "question_number": 164,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2018/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        25
+      ]
+    },
+    {
+      "year": 2018,
+      "day": 2,
+      "question_number": 165,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2018/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        25
+      ]
+    },
+    {
+      "year": 2018,
+      "day": 2,
+      "question_number": 166,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2018/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        25
+      ]
+    },
+    {
+      "year": 2018,
+      "day": 2,
+      "question_number": 167,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2018/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        26
+      ]
+    },
+    {
+      "year": 2018,
+      "day": 2,
+      "question_number": 168,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2018/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        26
+      ]
+    },
+    {
+      "year": 2018,
+      "day": 2,
+      "question_number": 169,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2018/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        26
+      ]
+    },
+    {
+      "year": 2018,
+      "day": 2,
+      "question_number": 170,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2018/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        26
+      ]
+    },
+    {
+      "year": 2018,
+      "day": 2,
+      "question_number": 171,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2018/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        27
+      ]
+    },
+    {
+      "year": 2018,
+      "day": 2,
+      "question_number": 172,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2018/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        27
+      ]
+    },
+    {
+      "year": 2018,
+      "day": 2,
+      "question_number": 173,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2018/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        27
+      ]
+    },
+    {
+      "year": 2018,
+      "day": 2,
+      "question_number": 175,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2018/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        29
+      ]
+    },
+    {
+      "year": 2018,
+      "day": 2,
+      "question_number": 176,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2018/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        30
+      ]
+    },
+    {
+      "year": 2018,
+      "day": 2,
+      "question_number": 178,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2018/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        30
+      ]
+    },
+    {
+      "year": 2018,
+      "day": 2,
+      "question_number": 179,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2018/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        31
+      ]
+    },
+    {
+      "year": 2018,
+      "day": 2,
+      "question_number": 180,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2018/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        31
+      ]
+    },
+    {
+      "year": 2020,
+      "day": 2,
+      "question_number": 166,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2020/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        27
+      ]
+    },
+    {
+      "year": 2021,
+      "day": 1,
+      "question_number": 1,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2021/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        2
+      ]
+    },
+    {
+      "year": 2021,
+      "day": 1,
+      "question_number": 3,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2021/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        2
+      ]
+    },
+    {
+      "year": 2021,
+      "day": 1,
+      "question_number": 4,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2021/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        3
+      ]
+    },
+    {
+      "year": 2021,
+      "day": 1,
+      "question_number": 5,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2021/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        3
+      ]
+    },
+    {
+      "year": 2021,
+      "day": 1,
+      "question_number": 6,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2021/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        6
+      ]
+    },
+    {
+      "year": 2021,
+      "day": 1,
+      "question_number": 8,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2021/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        6
+      ]
+    },
+    {
+      "year": 2021,
+      "day": 1,
+      "question_number": 10,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2021/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        7
+      ]
+    },
+    {
+      "year": 2021,
+      "day": 1,
+      "question_number": 12,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2021/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        7
+      ]
+    },
+    {
+      "year": 2021,
+      "day": 1,
+      "question_number": 15,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2021/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        8
+      ]
+    },
+    {
+      "year": 2021,
+      "day": 1,
+      "question_number": 16,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2021/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        9
+      ]
+    },
+    {
+      "year": 2021,
+      "day": 1,
+      "question_number": 17,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2021/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        9
+      ]
+    },
+    {
+      "year": 2021,
+      "day": 1,
+      "question_number": 20,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2021/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        10
+      ]
+    },
+    {
+      "year": 2021,
+      "day": 1,
+      "question_number": 22,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2021/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        10
+      ]
+    },
+    {
+      "year": 2021,
+      "day": 1,
+      "question_number": 23,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2021/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        11
+      ]
+    },
+    {
+      "year": 2021,
+      "day": 1,
+      "question_number": 25,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2021/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        11
+      ]
+    },
+    {
+      "year": 2021,
+      "day": 1,
+      "question_number": 26,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2021/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        12
+      ]
+    },
+    {
+      "year": 2021,
+      "day": 1,
+      "question_number": 27,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2021/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        12
+      ]
+    },
+    {
+      "year": 2021,
+      "day": 1,
+      "question_number": 28,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2021/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        13
+      ]
+    },
+    {
+      "year": 2021,
+      "day": 1,
+      "question_number": 30,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2021/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        13
+      ]
+    },
+    {
+      "year": 2021,
+      "day": 1,
+      "question_number": 31,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2021/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        14
+      ]
+    },
+    {
+      "year": 2021,
+      "day": 1,
+      "question_number": 32,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2021/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        14
+      ]
+    },
+    {
+      "year": 2021,
+      "day": 1,
+      "question_number": 33,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2021/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        15
+      ]
+    },
+    {
+      "year": 2021,
+      "day": 1,
+      "question_number": 34,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2021/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        15
+      ]
+    },
+    {
+      "year": 2021,
+      "day": 1,
+      "question_number": 35,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2021/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        16
+      ]
+    },
+    {
+      "year": 2021,
+      "day": 1,
+      "question_number": 36,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2021/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        16
+      ]
+    },
+    {
+      "year": 2021,
+      "day": 1,
+      "question_number": 37,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2021/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        17
+      ]
+    },
+    {
+      "year": 2021,
+      "day": 1,
+      "question_number": 38,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2021/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        17
+      ]
+    },
+    {
+      "year": 2021,
+      "day": 1,
+      "question_number": 39,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2021/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        17
+      ]
+    },
+    {
+      "year": 2021,
+      "day": 1,
+      "question_number": 40,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2021/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        18
+      ]
+    },
+    {
+      "year": 2021,
+      "day": 1,
+      "question_number": 41,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2021/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        18
+      ]
+    },
+    {
+      "year": 2021,
+      "day": 1,
+      "question_number": 42,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2021/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        19
+      ]
+    },
+    {
+      "year": 2021,
+      "day": 1,
+      "question_number": 43,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2021/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        19
+      ]
+    },
+    {
+      "year": 2021,
+      "day": 1,
+      "question_number": 44,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2021/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        20
+      ]
+    },
+    {
+      "year": 2021,
+      "day": 1,
+      "question_number": 45,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2021/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        20
+      ]
+    },
+    {
+      "year": 2021,
+      "day": 1,
+      "question_number": 48,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2021/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        23
+      ]
+    },
+    {
+      "year": 2021,
+      "day": 1,
+      "question_number": 49,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2021/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        23
+      ]
+    },
+    {
+      "year": 2021,
+      "day": 1,
+      "question_number": 50,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2021/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        23
+      ]
+    },
+    {
+      "year": 2021,
+      "day": 1,
+      "question_number": 51,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2021/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        23
+      ]
+    },
+    {
+      "year": 2021,
+      "day": 1,
+      "question_number": 52,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2021/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        23
+      ]
+    },
+    {
+      "year": 2021,
+      "day": 1,
+      "question_number": 53,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2021/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        24
+      ]
+    },
+    {
+      "year": 2021,
+      "day": 1,
+      "question_number": 54,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2021/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        24
+      ]
+    },
+    {
+      "year": 2021,
+      "day": 1,
+      "question_number": 55,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2021/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        24
+      ]
+    },
+    {
+      "year": 2021,
+      "day": 1,
+      "question_number": 56,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2021/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        24
+      ]
+    },
+    {
+      "year": 2021,
+      "day": 1,
+      "question_number": 57,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2021/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        25
+      ]
+    },
+    {
+      "year": 2021,
+      "day": 1,
+      "question_number": 58,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2021/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        25
+      ]
+    },
+    {
+      "year": 2021,
+      "day": 1,
+      "question_number": 59,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2021/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        25
+      ]
+    },
+    {
+      "year": 2021,
+      "day": 1,
+      "question_number": 60,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2021/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        25
+      ]
+    },
+    {
+      "year": 2021,
+      "day": 1,
+      "question_number": 62,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2021/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        26
+      ]
+    },
+    {
+      "year": 2021,
+      "day": 1,
+      "question_number": 64,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2021/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        26
+      ]
+    },
+    {
+      "year": 2021,
+      "day": 1,
+      "question_number": 65,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2021/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        26
+      ]
+    },
+    {
+      "year": 2021,
+      "day": 1,
+      "question_number": 66,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2021/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        27
+      ]
+    },
+    {
+      "year": 2021,
+      "day": 1,
+      "question_number": 67,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2021/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        27
+      ]
+    },
+    {
+      "year": 2021,
+      "day": 1,
+      "question_number": 69,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2021/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        27
+      ]
+    },
+    {
+      "year": 2021,
+      "day": 1,
+      "question_number": 70,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2021/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        27
+      ]
+    },
+    {
+      "year": 2021,
+      "day": 1,
+      "question_number": 71,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2021/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        28
+      ]
+    },
+    {
+      "year": 2021,
+      "day": 1,
+      "question_number": 72,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2021/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        28
+      ]
+    },
+    {
+      "year": 2021,
+      "day": 1,
+      "question_number": 74,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2021/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        28
+      ]
+    },
+    {
+      "year": 2021,
+      "day": 1,
+      "question_number": 75,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2021/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        28
+      ]
+    },
+    {
+      "year": 2021,
+      "day": 1,
+      "question_number": 79,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2021/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        29
+      ]
+    },
+    {
+      "year": 2021,
+      "day": 1,
+      "question_number": 80,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2021/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        29
+      ]
+    },
+    {
+      "year": 2021,
+      "day": 1,
+      "question_number": 81,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2021/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        29
+      ]
+    },
+    {
+      "year": 2021,
+      "day": 1,
+      "question_number": 84,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2021/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        30
+      ]
+    },
+    {
+      "year": 2021,
+      "day": 1,
+      "question_number": 85,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2021/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        30
+      ]
+    },
+    {
+      "year": 2021,
+      "day": 1,
+      "question_number": 86,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2021/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        30
+      ]
+    },
+    {
+      "year": 2021,
+      "day": 1,
+      "question_number": 87,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2021/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        31
+      ]
+    },
+    {
+      "year": 2021,
+      "day": 1,
+      "question_number": 88,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2021/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        31
+      ]
+    },
+    {
+      "year": 2021,
+      "day": 1,
+      "question_number": 90,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2021/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        31
+      ]
+    },
+    {
+      "year": 2021,
+      "day": 2,
+      "question_number": 91,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2021/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        2
+      ]
+    },
+    {
+      "year": 2021,
+      "day": 2,
+      "question_number": 93,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2021/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        2
+      ]
+    },
+    {
+      "year": 2021,
+      "day": 2,
+      "question_number": 95,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2021/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        3
+      ]
+    },
+    {
+      "year": 2021,
+      "day": 2,
+      "question_number": 96,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2021/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        3
+      ]
+    },
+    {
+      "year": 2021,
+      "day": 2,
+      "question_number": 97,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2021/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        3
+      ]
+    },
+    {
+      "year": 2021,
+      "day": 2,
+      "question_number": 98,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2021/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        3
+      ]
+    },
+    {
+      "year": 2021,
+      "day": 2,
+      "question_number": 99,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2021/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        3
+      ]
+    },
+    {
+      "year": 2021,
+      "day": 2,
+      "question_number": 113,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2021/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        9
+      ]
+    },
+    {
+      "year": 2021,
+      "day": 2,
+      "question_number": 116,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2021/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        11
+      ]
+    },
+    {
+      "year": 2021,
+      "day": 2,
+      "question_number": 117,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2021/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        11
+      ]
+    },
+    {
+      "year": 2021,
+      "day": 2,
+      "question_number": 118,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2021/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        11
+      ]
+    },
+    {
+      "year": 2021,
+      "day": 2,
+      "question_number": 122,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2021/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        13
+      ]
+    },
+    {
+      "year": 2021,
+      "day": 2,
+      "question_number": 123,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2021/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        13
+      ]
+    },
+    {
+      "year": 2021,
+      "day": 2,
+      "question_number": 125,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2021/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        13
+      ]
+    },
+    {
+      "year": 2021,
+      "day": 2,
+      "question_number": 126,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2021/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        13
+      ]
+    },
+    {
+      "year": 2021,
+      "day": 2,
+      "question_number": 130,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2021/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        15
+      ]
+    },
+    {
+      "year": 2021,
+      "day": 2,
+      "question_number": 139,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2021/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        17
+      ]
+    },
+    {
+      "year": 2021,
+      "day": 2,
+      "question_number": 140,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2021/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        17
+      ]
+    },
+    {
+      "year": 2021,
+      "day": 2,
+      "question_number": 143,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2021/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        18
+      ]
+    },
+    {
+      "year": 2021,
+      "day": 2,
+      "question_number": 149,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2021/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        20
+      ]
+    },
+    {
+      "year": 2021,
+      "day": 2,
+      "question_number": 151,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2021/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        20
+      ]
+    },
+    {
+      "year": 2021,
+      "day": 2,
+      "question_number": 153,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2021/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        20
+      ]
+    },
+    {
+      "year": 2021,
+      "day": 2,
+      "question_number": 156,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2021/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        23
+      ]
+    },
+    {
+      "year": 2021,
+      "day": 2,
+      "question_number": 157,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2021/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        23
+      ]
+    },
+    {
+      "year": 2021,
+      "day": 2,
+      "question_number": 159,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2021/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        23
+      ]
+    },
+    {
+      "year": 2021,
+      "day": 2,
+      "question_number": 161,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2021/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        24
+      ]
+    },
+    {
+      "year": 2021,
+      "day": 2,
+      "question_number": 164,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2021/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        25
+      ]
+    },
+    {
+      "year": 2021,
+      "day": 2,
+      "question_number": 166,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2021/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        26
+      ]
+    },
+    {
+      "year": 2021,
+      "day": 2,
+      "question_number": 167,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2021/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        26
+      ]
+    },
+    {
+      "year": 2021,
+      "day": 2,
+      "question_number": 170,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2021/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        28
+      ]
+    },
+    {
+      "year": 2021,
+      "day": 2,
+      "question_number": 171,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2021/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        28
+      ]
+    },
+    {
+      "year": 2021,
+      "day": 2,
+      "question_number": 173,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2021/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        28
+      ]
+    },
+    {
+      "year": 2021,
+      "day": 2,
+      "question_number": 177,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2021/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        29
+      ]
+    },
+    {
+      "year": 2021,
+      "day": 2,
+      "question_number": 179,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2021/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        31
+      ]
+    },
+    {
+      "year": 2022,
+      "day": 1,
+      "question_number": 40,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2022/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        17
+      ]
+    },
+    {
+      "year": 2022,
+      "day": 2,
+      "question_number": 101,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2022/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        4
+      ]
+    },
+    {
+      "year": 2022,
+      "day": 2,
+      "question_number": 111,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2022/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        9
+      ]
+    },
+    {
+      "year": 2022,
+      "day": 2,
+      "question_number": 129,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2022/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        14
+      ]
+    },
+    {
+      "year": 2022,
+      "day": 2,
+      "question_number": 150,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2022/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        20
+      ]
+    },
+    {
+      "year": 2022,
+      "day": 2,
+      "question_number": 174,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2022/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        29
+      ]
+    },
+    {
+      "year": 2023,
+      "day": 2,
+      "question_number": 160,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2023/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        24
+      ]
+    },
+    {
+      "year": 2024,
+      "day": 1,
+      "question_number": 7,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2024/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        5
+      ]
+    },
+    {
+      "year": 2024,
+      "day": 2,
+      "question_number": 137,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2024/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        16
+      ]
+    },
+    {
+      "year": 2024,
+      "day": 2,
+      "question_number": 141,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2024/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        17
+      ]
+    },
+    {
+      "year": 2024,
+      "day": 2,
+      "question_number": 150,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2024/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        21
+      ]
+    },
+    {
+      "year": 2025,
+      "day": 2,
+      "question_number": 115,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2025/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        9
+      ]
+    },
+    {
+      "year": 2025,
+      "day": 2,
+      "question_number": 159,
+      "reasons": [
+        "corrupted_pdf_text"
+      ],
+      "source_pdf": "2025/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        25
+      ]
+    }
+  ],
+  "presentation_warnings": [
+    {
+      "year": 2016,
+      "day": 2,
+      "question_number": 149,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2016/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        21
+      ]
+    },
+    {
+      "year": 2022,
+      "day": 1,
+      "question_number": 1,
+      "reasons": [
+        "embedded_option_labels",
+        "repeated_watermark"
+      ],
+      "source_pdf": "2022/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        2
+      ]
+    },
+    {
+      "year": 2022,
+      "day": 1,
+      "question_number": 2,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2022/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        2
+      ]
+    },
+    {
+      "year": 2022,
+      "day": 1,
+      "question_number": 3,
+      "reasons": [
+        "embedded_option_labels",
+        "repeated_watermark"
+      ],
+      "source_pdf": "2022/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        2
+      ]
+    },
+    {
+      "year": 2022,
+      "day": 1,
+      "question_number": 4,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2022/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        2
+      ]
+    },
+    {
+      "year": 2022,
+      "day": 1,
+      "question_number": 6,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2022/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        3
+      ]
+    },
+    {
+      "year": 2022,
+      "day": 1,
+      "question_number": 7,
+      "reasons": [
+        "embedded_option_labels",
+        "repeated_watermark"
+      ],
+      "source_pdf": "2022/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        6
+      ]
+    },
+    {
+      "year": 2022,
+      "day": 1,
+      "question_number": 9,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2022/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        6
+      ]
+    },
+    {
+      "year": 2022,
+      "day": 1,
+      "question_number": 10,
+      "reasons": [
+        "embedded_option_labels",
+        "repeated_watermark"
+      ],
+      "source_pdf": "2022/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        7
+      ]
+    },
+    {
+      "year": 2022,
+      "day": 1,
+      "question_number": 12,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2022/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        7
+      ]
+    },
+    {
+      "year": 2022,
+      "day": 1,
+      "question_number": 13,
+      "reasons": [
+        "embedded_option_labels",
+        "repeated_watermark"
+      ],
+      "source_pdf": "2022/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        8
+      ]
+    },
+    {
+      "year": 2022,
+      "day": 1,
+      "question_number": 15,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2022/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        8
+      ]
+    },
+    {
+      "year": 2022,
+      "day": 1,
+      "question_number": 16,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2022/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        9
+      ]
+    },
+    {
+      "year": 2022,
+      "day": 1,
+      "question_number": 17,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2022/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        9
+      ]
+    },
+    {
+      "year": 2022,
+      "day": 1,
+      "question_number": 18,
+      "reasons": [
+        "embedded_option_labels",
+        "repeated_watermark"
+      ],
+      "source_pdf": "2022/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        10
+      ]
+    },
+    {
+      "year": 2022,
+      "day": 1,
+      "question_number": 20,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2022/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        10
+      ]
+    },
+    {
+      "year": 2022,
+      "day": 1,
+      "question_number": 21,
+      "reasons": [
+        "embedded_option_labels",
+        "repeated_watermark"
+      ],
+      "source_pdf": "2022/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        11
+      ]
+    },
+    {
+      "year": 2022,
+      "day": 1,
+      "question_number": 23,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2022/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        11
+      ]
+    },
+    {
+      "year": 2022,
+      "day": 1,
+      "question_number": 24,
+      "reasons": [
+        "embedded_option_labels",
+        "repeated_watermark"
+      ],
+      "source_pdf": "2022/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        12
+      ]
+    },
+    {
+      "year": 2022,
+      "day": 1,
+      "question_number": 26,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2022/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        12
+      ]
+    },
+    {
+      "year": 2022,
+      "day": 1,
+      "question_number": 27,
+      "reasons": [
+        "embedded_option_labels",
+        "repeated_watermark"
+      ],
+      "source_pdf": "2022/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        13
+      ]
+    },
+    {
+      "year": 2022,
+      "day": 1,
+      "question_number": 29,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2022/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        13
+      ]
+    },
+    {
+      "year": 2022,
+      "day": 1,
+      "question_number": 30,
+      "reasons": [
+        "embedded_option_labels",
+        "repeated_watermark"
+      ],
+      "source_pdf": "2022/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        14
+      ]
+    },
+    {
+      "year": 2022,
+      "day": 1,
+      "question_number": 32,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2022/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        14
+      ]
+    },
+    {
+      "year": 2022,
+      "day": 1,
+      "question_number": 33,
+      "reasons": [
+        "embedded_option_labels",
+        "repeated_watermark"
+      ],
+      "source_pdf": "2022/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        15
+      ]
+    },
+    {
+      "year": 2022,
+      "day": 1,
+      "question_number": 35,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2022/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        15
+      ]
+    },
+    {
+      "year": 2022,
+      "day": 1,
+      "question_number": 36,
+      "reasons": [
+        "embedded_option_labels",
+        "repeated_watermark"
+      ],
+      "source_pdf": "2022/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        16
+      ]
+    },
+    {
+      "year": 2022,
+      "day": 1,
+      "question_number": 37,
+      "reasons": [
+        "embedded_option_labels",
+        "repeated_watermark"
+      ],
+      "source_pdf": "2022/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        16
+      ]
+    },
+    {
+      "year": 2022,
+      "day": 1,
+      "question_number": 38,
+      "reasons": [
+        "embedded_option_labels",
+        "repeated_watermark"
+      ],
+      "source_pdf": "2022/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        17
+      ]
+    },
+    {
+      "year": 2022,
+      "day": 1,
+      "question_number": 40,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2022/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        17
+      ]
+    },
+    {
+      "year": 2022,
+      "day": 1,
+      "question_number": 41,
+      "reasons": [
+        "embedded_option_labels",
+        "repeated_watermark"
+      ],
+      "source_pdf": "2022/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        18
+      ]
+    },
+    {
+      "year": 2022,
+      "day": 1,
+      "question_number": 42,
+      "reasons": [
+        "embedded_option_labels",
+        "repeated_watermark"
+      ],
+      "source_pdf": "2022/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        18
+      ]
+    },
+    {
+      "year": 2022,
+      "day": 1,
+      "question_number": 43,
+      "reasons": [
+        "embedded_option_labels",
+        "repeated_watermark"
+      ],
+      "source_pdf": "2022/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        19
+      ]
+    },
+    {
+      "year": 2022,
+      "day": 1,
+      "question_number": 45,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2022/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        19
+      ]
+    },
+    {
+      "year": 2022,
+      "day": 1,
+      "question_number": 46,
+      "reasons": [
+        "embedded_option_labels",
+        "repeated_watermark"
+      ],
+      "source_pdf": "2022/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        21
+      ]
+    },
+    {
+      "year": 2022,
+      "day": 1,
+      "question_number": 49,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2022/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        21
+      ]
+    },
+    {
+      "year": 2022,
+      "day": 1,
+      "question_number": 50,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2022/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        21
+      ]
+    },
+    {
+      "year": 2022,
+      "day": 1,
+      "question_number": 51,
+      "reasons": [
+        "embedded_option_labels",
+        "repeated_watermark"
+      ],
+      "source_pdf": "2022/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        22
+      ]
+    },
+    {
+      "year": 2022,
+      "day": 1,
+      "question_number": 52,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2022/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        22
+      ]
+    },
+    {
+      "year": 2022,
+      "day": 1,
+      "question_number": 53,
+      "reasons": [
+        "embedded_option_labels",
+        "repeated_watermark"
+      ],
+      "source_pdf": "2022/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        22
+      ]
+    },
+    {
+      "year": 2022,
+      "day": 1,
+      "question_number": 54,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2022/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        22
+      ]
+    },
+    {
+      "year": 2022,
+      "day": 1,
+      "question_number": 55,
+      "reasons": [
+        "embedded_option_labels",
+        "repeated_watermark"
+      ],
+      "source_pdf": "2022/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        23
+      ]
+    },
+    {
+      "year": 2022,
+      "day": 1,
+      "question_number": 56,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2022/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        23
+      ]
+    },
+    {
+      "year": 2022,
+      "day": 1,
+      "question_number": 57,
+      "reasons": [
+        "embedded_option_labels",
+        "repeated_watermark"
+      ],
+      "source_pdf": "2022/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        23
+      ]
+    },
+    {
+      "year": 2022,
+      "day": 1,
+      "question_number": 58,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2022/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        23
+      ]
+    },
+    {
+      "year": 2022,
+      "day": 1,
+      "question_number": 59,
+      "reasons": [
+        "embedded_option_labels",
+        "repeated_watermark"
+      ],
+      "source_pdf": "2022/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        24
+      ]
+    },
+    {
+      "year": 2022,
+      "day": 1,
+      "question_number": 60,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2022/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        24
+      ]
+    },
+    {
+      "year": 2022,
+      "day": 1,
+      "question_number": 61,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2022/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        24
+      ]
+    },
+    {
+      "year": 2022,
+      "day": 1,
+      "question_number": 62,
+      "reasons": [
+        "embedded_option_labels",
+        "repeated_watermark"
+      ],
+      "source_pdf": "2022/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        24
+      ]
+    },
+    {
+      "year": 2022,
+      "day": 1,
+      "question_number": 63,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2022/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        24
+      ]
+    },
+    {
+      "year": 2022,
+      "day": 1,
+      "question_number": 64,
+      "reasons": [
+        "embedded_option_labels",
+        "repeated_watermark"
+      ],
+      "source_pdf": "2022/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        25
+      ]
+    },
+    {
+      "year": 2022,
+      "day": 1,
+      "question_number": 65,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2022/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        25
+      ]
+    },
+    {
+      "year": 2022,
+      "day": 1,
+      "question_number": 66,
+      "reasons": [
+        "embedded_option_labels",
+        "repeated_watermark"
+      ],
+      "source_pdf": "2022/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        25
+      ]
+    },
+    {
+      "year": 2022,
+      "day": 1,
+      "question_number": 67,
+      "reasons": [
+        "embedded_option_labels",
+        "repeated_watermark"
+      ],
+      "source_pdf": "2022/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        26
+      ]
+    },
+    {
+      "year": 2022,
+      "day": 1,
+      "question_number": 68,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2022/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        26
+      ]
+    },
+    {
+      "year": 2022,
+      "day": 1,
+      "question_number": 69,
+      "reasons": [
+        "embedded_option_labels",
+        "repeated_watermark"
+      ],
+      "source_pdf": "2022/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        26
+      ]
+    },
+    {
+      "year": 2022,
+      "day": 1,
+      "question_number": 70,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2022/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        26
+      ]
+    },
+    {
+      "year": 2022,
+      "day": 1,
+      "question_number": 71,
+      "reasons": [
+        "embedded_option_labels",
+        "repeated_watermark"
+      ],
+      "source_pdf": "2022/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        27
+      ]
+    },
+    {
+      "year": 2022,
+      "day": 1,
+      "question_number": 72,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2022/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        27
+      ]
+    },
+    {
+      "year": 2022,
+      "day": 1,
+      "question_number": 73,
+      "reasons": [
+        "embedded_option_labels",
+        "repeated_watermark"
+      ],
+      "source_pdf": "2022/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        27
+      ]
+    },
+    {
+      "year": 2022,
+      "day": 1,
+      "question_number": 74,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2022/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        27
+      ]
+    },
+    {
+      "year": 2022,
+      "day": 1,
+      "question_number": 75,
+      "reasons": [
+        "embedded_option_labels",
+        "repeated_watermark"
+      ],
+      "source_pdf": "2022/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        28
+      ]
+    },
+    {
+      "year": 2022,
+      "day": 1,
+      "question_number": 76,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2022/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        28
+      ]
+    },
+    {
+      "year": 2022,
+      "day": 1,
+      "question_number": 77,
+      "reasons": [
+        "embedded_option_labels",
+        "repeated_watermark"
+      ],
+      "source_pdf": "2022/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        28
+      ]
+    },
+    {
+      "year": 2022,
+      "day": 1,
+      "question_number": 78,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2022/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        28
+      ]
+    },
+    {
+      "year": 2022,
+      "day": 1,
+      "question_number": 79,
+      "reasons": [
+        "embedded_option_labels",
+        "repeated_watermark"
+      ],
+      "source_pdf": "2022/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        29
+      ]
+    },
+    {
+      "year": 2022,
+      "day": 1,
+      "question_number": 80,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2022/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        29
+      ]
+    },
+    {
+      "year": 2022,
+      "day": 1,
+      "question_number": 81,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2022/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        29
+      ]
+    },
+    {
+      "year": 2022,
+      "day": 1,
+      "question_number": 82,
+      "reasons": [
+        "embedded_option_labels",
+        "repeated_watermark"
+      ],
+      "source_pdf": "2022/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        29
+      ]
+    },
+    {
+      "year": 2022,
+      "day": 1,
+      "question_number": 83,
+      "reasons": [
+        "embedded_option_labels",
+        "repeated_watermark"
+      ],
+      "source_pdf": "2022/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        30
+      ]
+    },
+    {
+      "year": 2022,
+      "day": 1,
+      "question_number": 84,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2022/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        30
+      ]
+    },
+    {
+      "year": 2022,
+      "day": 1,
+      "question_number": 85,
+      "reasons": [
+        "embedded_option_labels",
+        "repeated_watermark"
+      ],
+      "source_pdf": "2022/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        30
+      ]
+    },
+    {
+      "year": 2022,
+      "day": 1,
+      "question_number": 86,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2022/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        30
+      ]
+    },
+    {
+      "year": 2022,
+      "day": 1,
+      "question_number": 87,
+      "reasons": [
+        "embedded_option_labels",
+        "repeated_watermark"
+      ],
+      "source_pdf": "2022/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        31
+      ]
+    },
+    {
+      "year": 2022,
+      "day": 1,
+      "question_number": 88,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2022/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        31
+      ]
+    },
+    {
+      "year": 2022,
+      "day": 1,
+      "question_number": 89,
+      "reasons": [
+        "embedded_option_labels",
+        "repeated_watermark"
+      ],
+      "source_pdf": "2022/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        31
+      ]
+    },
+    {
+      "year": 2022,
+      "day": 1,
+      "question_number": 90,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2022/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        31
+      ]
+    },
+    {
+      "year": 2022,
+      "day": 2,
+      "question_number": 91,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2022/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        2
+      ]
+    },
+    {
+      "year": 2022,
+      "day": 2,
+      "question_number": 92,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2022/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        2
+      ]
+    },
+    {
+      "year": 2022,
+      "day": 2,
+      "question_number": 93,
+      "reasons": [
+        "repeated_watermark"
+      ],
+      "source_pdf": "2022/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        2
+      ]
+    },
+    {
+      "year": 2022,
+      "day": 2,
+      "question_number": 94,
+      "reasons": [
+        "embedded_option_labels",
+        "repeated_watermark"
+      ],
+      "source_pdf": "2022/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        3
+      ]
+    },
+    {
+      "year": 2022,
+      "day": 2,
+      "question_number": 96,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2022/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        3
+      ]
+    },
+    {
+      "year": 2022,
+      "day": 2,
+      "question_number": 97,
+      "reasons": [
+        "embedded_option_labels",
+        "repeated_watermark"
+      ],
+      "source_pdf": "2022/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        4
+      ]
+    },
+    {
+      "year": 2022,
+      "day": 2,
+      "question_number": 98,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2022/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        4
+      ]
+    },
+    {
+      "year": 2022,
+      "day": 2,
+      "question_number": 100,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2022/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        4
+      ]
+    },
+    {
+      "year": 2022,
+      "day": 2,
+      "question_number": 101,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2022/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        4
+      ]
+    },
+    {
+      "year": 2022,
+      "day": 2,
+      "question_number": 102,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2022/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        5
+      ]
+    },
+    {
+      "year": 2022,
+      "day": 2,
+      "question_number": 103,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2022/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        5
+      ]
+    },
+    {
+      "year": 2022,
+      "day": 2,
+      "question_number": 104,
+      "reasons": [
+        "embedded_option_labels",
+        "repeated_watermark"
+      ],
+      "source_pdf": "2022/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        6
+      ]
+    },
+    {
+      "year": 2022,
+      "day": 2,
+      "question_number": 105,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2022/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        6
+      ]
+    },
+    {
+      "year": 2022,
+      "day": 2,
+      "question_number": 106,
+      "reasons": [
+        "embedded_option_labels",
+        "repeated_watermark"
+      ],
+      "source_pdf": "2022/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        6
+      ]
+    },
+    {
+      "year": 2022,
+      "day": 2,
+      "question_number": 107,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2022/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        6
+      ]
+    },
+    {
+      "year": 2022,
+      "day": 2,
+      "question_number": 111,
+      "reasons": [
+        "embedded_option_labels",
+        "repeated_watermark"
+      ],
+      "source_pdf": "2022/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        9
+      ]
+    },
+    {
+      "year": 2022,
+      "day": 2,
+      "question_number": 112,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2022/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        9
+      ]
+    },
+    {
+      "year": 2022,
+      "day": 2,
+      "question_number": 113,
+      "reasons": [
+        "embedded_option_labels",
+        "repeated_watermark"
+      ],
+      "source_pdf": "2022/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        9
+      ]
+    },
+    {
+      "year": 2022,
+      "day": 2,
+      "question_number": 114,
+      "reasons": [
+        "embedded_option_labels",
+        "repeated_watermark"
+      ],
+      "source_pdf": "2022/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        10
+      ]
+    },
+    {
+      "year": 2022,
+      "day": 2,
+      "question_number": 115,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2022/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        10
+      ]
+    },
+    {
+      "year": 2022,
+      "day": 2,
+      "question_number": 116,
+      "reasons": [
+        "embedded_option_labels",
+        "repeated_watermark"
+      ],
+      "source_pdf": "2022/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        10
+      ]
+    },
+    {
+      "year": 2022,
+      "day": 2,
+      "question_number": 117,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2022/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        10
+      ]
+    },
+    {
+      "year": 2022,
+      "day": 2,
+      "question_number": 120,
+      "reasons": [
+        "embedded_option_labels",
+        "repeated_watermark"
+      ],
+      "source_pdf": "2022/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        12
+      ]
+    },
+    {
+      "year": 2022,
+      "day": 2,
+      "question_number": 121,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2022/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        12
+      ]
+    },
+    {
+      "year": 2022,
+      "day": 2,
+      "question_number": 122,
+      "reasons": [
+        "embedded_option_labels",
+        "repeated_watermark"
+      ],
+      "source_pdf": "2022/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        13
+      ]
+    },
+    {
+      "year": 2022,
+      "day": 2,
+      "question_number": 123,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2022/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        13
+      ]
+    },
+    {
+      "year": 2022,
+      "day": 2,
+      "question_number": 124,
+      "reasons": [
+        "embedded_option_labels",
+        "repeated_watermark"
+      ],
+      "source_pdf": "2022/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        13
+      ]
+    },
+    {
+      "year": 2022,
+      "day": 2,
+      "question_number": 125,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2022/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        13
+      ]
+    },
+    {
+      "year": 2022,
+      "day": 2,
+      "question_number": 126,
+      "reasons": [
+        "embedded_option_labels",
+        "repeated_watermark"
+      ],
+      "source_pdf": "2022/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        14
+      ]
+    },
+    {
+      "year": 2022,
+      "day": 2,
+      "question_number": 127,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2022/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        14
+      ]
+    },
+    {
+      "year": 2022,
+      "day": 2,
+      "question_number": 128,
+      "reasons": [
+        "embedded_option_labels",
+        "repeated_watermark"
+      ],
+      "source_pdf": "2022/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        14
+      ]
+    },
+    {
+      "year": 2022,
+      "day": 2,
+      "question_number": 129,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2022/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        14
+      ]
+    },
+    {
+      "year": 2022,
+      "day": 2,
+      "question_number": 130,
+      "reasons": [
+        "embedded_option_labels",
+        "repeated_watermark"
+      ],
+      "source_pdf": "2022/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        15
+      ]
+    },
+    {
+      "year": 2022,
+      "day": 2,
+      "question_number": 132,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2022/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        15
+      ]
+    },
+    {
+      "year": 2022,
+      "day": 2,
+      "question_number": 134,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2022/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        16
+      ]
+    },
+    {
+      "year": 2022,
+      "day": 2,
+      "question_number": 139,
+      "reasons": [
+        "embedded_option_labels",
+        "repeated_watermark"
+      ],
+      "source_pdf": "2022/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        17
+      ]
+    },
+    {
+      "year": 2022,
+      "day": 2,
+      "question_number": 140,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2022/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        17
+      ]
+    },
+    {
+      "year": 2022,
+      "day": 2,
+      "question_number": 141,
+      "reasons": [
+        "embedded_option_labels",
+        "repeated_watermark"
+      ],
+      "source_pdf": "2022/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        18
+      ]
+    },
+    {
+      "year": 2022,
+      "day": 2,
+      "question_number": 143,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2022/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        18
+      ]
+    },
+    {
+      "year": 2022,
+      "day": 2,
+      "question_number": 144,
+      "reasons": [
+        "embedded_option_labels",
+        "repeated_watermark"
+      ],
+      "source_pdf": "2022/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        19
+      ]
+    },
+    {
+      "year": 2022,
+      "day": 2,
+      "question_number": 145,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2022/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        19
+      ]
+    },
+    {
+      "year": 2022,
+      "day": 2,
+      "question_number": 146,
+      "reasons": [
+        "embedded_option_labels",
+        "repeated_watermark"
+      ],
+      "source_pdf": "2022/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        19
+      ]
+    },
+    {
+      "year": 2022,
+      "day": 2,
+      "question_number": 147,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2022/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        19
+      ]
+    },
+    {
+      "year": 2022,
+      "day": 2,
+      "question_number": 148,
+      "reasons": [
+        "embedded_option_labels",
+        "repeated_watermark"
+      ],
+      "source_pdf": "2022/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        20
+      ]
+    },
+    {
+      "year": 2022,
+      "day": 2,
+      "question_number": 149,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2022/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        20
+      ]
+    },
+    {
+      "year": 2022,
+      "day": 2,
+      "question_number": 150,
+      "reasons": [
+        "embedded_option_labels",
+        "repeated_watermark"
+      ],
+      "source_pdf": "2022/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        20
+      ]
+    },
+    {
+      "year": 2022,
+      "day": 2,
+      "question_number": 151,
+      "reasons": [
+        "embedded_option_labels",
+        "repeated_watermark"
+      ],
+      "source_pdf": "2022/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        21
+      ]
+    },
+    {
+      "year": 2022,
+      "day": 2,
+      "question_number": 152,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2022/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        21
+      ]
+    },
+    {
+      "year": 2022,
+      "day": 2,
+      "question_number": 153,
+      "reasons": [
+        "embedded_option_labels",
+        "repeated_watermark"
+      ],
+      "source_pdf": "2022/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        21
+      ]
+    },
+    {
+      "year": 2022,
+      "day": 2,
+      "question_number": 154,
+      "reasons": [
+        "embedded_option_labels",
+        "repeated_watermark"
+      ],
+      "source_pdf": "2022/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        22
+      ]
+    },
+    {
+      "year": 2022,
+      "day": 2,
+      "question_number": 155,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2022/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        22
+      ]
+    },
+    {
+      "year": 2022,
+      "day": 2,
+      "question_number": 156,
+      "reasons": [
+        "embedded_option_labels",
+        "repeated_watermark"
+      ],
+      "source_pdf": "2022/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        22
+      ]
+    },
+    {
+      "year": 2022,
+      "day": 2,
+      "question_number": 157,
+      "reasons": [
+        "embedded_option_labels",
+        "repeated_watermark"
+      ],
+      "source_pdf": "2022/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        23
+      ]
+    },
+    {
+      "year": 2022,
+      "day": 2,
+      "question_number": 158,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2022/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        23
+      ]
+    },
+    {
+      "year": 2022,
+      "day": 2,
+      "question_number": 159,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2022/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        23
+      ]
+    },
+    {
+      "year": 2022,
+      "day": 2,
+      "question_number": 160,
+      "reasons": [
+        "embedded_option_labels",
+        "repeated_watermark"
+      ],
+      "source_pdf": "2022/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        24
+      ]
+    },
+    {
+      "year": 2022,
+      "day": 2,
+      "question_number": 161,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2022/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        24
+      ]
+    },
+    {
+      "year": 2022,
+      "day": 2,
+      "question_number": 162,
+      "reasons": [
+        "embedded_option_labels",
+        "repeated_watermark"
+      ],
+      "source_pdf": "2022/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        24
+      ]
+    },
+    {
+      "year": 2022,
+      "day": 2,
+      "question_number": 164,
+      "reasons": [
+        "embedded_option_labels",
+        "repeated_watermark"
+      ],
+      "source_pdf": "2022/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        26
+      ]
+    },
+    {
+      "year": 2022,
+      "day": 2,
+      "question_number": 166,
+      "reasons": [
+        "embedded_option_labels",
+        "repeated_watermark"
+      ],
+      "source_pdf": "2022/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        27
+      ]
+    },
+    {
+      "year": 2022,
+      "day": 2,
+      "question_number": 167,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2022/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        27
+      ]
+    },
+    {
+      "year": 2022,
+      "day": 2,
+      "question_number": 168,
+      "reasons": [
+        "embedded_option_labels",
+        "repeated_watermark"
+      ],
+      "source_pdf": "2022/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        27
+      ]
+    },
+    {
+      "year": 2022,
+      "day": 2,
+      "question_number": 169,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2022/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        27
+      ]
+    },
+    {
+      "year": 2022,
+      "day": 2,
+      "question_number": 171,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2022/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        28
+      ]
+    },
+    {
+      "year": 2022,
+      "day": 2,
+      "question_number": 172,
+      "reasons": [
+        "embedded_option_labels",
+        "repeated_watermark"
+      ],
+      "source_pdf": "2022/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        29
+      ]
+    },
+    {
+      "year": 2022,
+      "day": 2,
+      "question_number": 173,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2022/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        29
+      ]
+    },
+    {
+      "year": 2022,
+      "day": 2,
+      "question_number": 174,
+      "reasons": [
+        "embedded_option_labels",
+        "repeated_watermark"
+      ],
+      "source_pdf": "2022/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        29
+      ]
+    },
+    {
+      "year": 2022,
+      "day": 2,
+      "question_number": 179,
+      "reasons": [
+        "embedded_option_labels",
+        "repeated_watermark"
+      ],
+      "source_pdf": "2022/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        31
+      ]
+    },
+    {
+      "year": 2022,
+      "day": 2,
+      "question_number": 180,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2022/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        31
+      ]
+    },
+    {
+      "year": 2023,
+      "day": 1,
+      "question_number": 1,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2023/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        2
+      ]
+    },
+    {
+      "year": 2023,
+      "day": 1,
+      "question_number": 2,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2023/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        2
+      ]
+    },
+    {
+      "year": 2023,
+      "day": 1,
+      "question_number": 3,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2023/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        2
+      ]
+    },
+    {
+      "year": 2023,
+      "day": 1,
+      "question_number": 4,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2023/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        3
+      ]
+    },
+    {
+      "year": 2023,
+      "day": 1,
+      "question_number": 5,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2023/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        3
+      ]
+    },
+    {
+      "year": 2023,
+      "day": 1,
+      "question_number": 6,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2023/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        6
+      ]
+    },
+    {
+      "year": 2023,
+      "day": 1,
+      "question_number": 8,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2023/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        6
+      ]
+    },
+    {
+      "year": 2023,
+      "day": 1,
+      "question_number": 9,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2023/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        7
+      ]
+    },
+    {
+      "year": 2023,
+      "day": 1,
+      "question_number": 11,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2023/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        7
+      ]
+    },
+    {
+      "year": 2023,
+      "day": 1,
+      "question_number": 12,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2023/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        8
+      ]
+    },
+    {
+      "year": 2023,
+      "day": 1,
+      "question_number": 14,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2023/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        8
+      ]
+    },
+    {
+      "year": 2023,
+      "day": 1,
+      "question_number": 15,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2023/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        9
+      ]
+    },
+    {
+      "year": 2023,
+      "day": 1,
+      "question_number": 16,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2023/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        9
+      ]
+    },
+    {
+      "year": 2023,
+      "day": 1,
+      "question_number": 17,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2023/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        9
+      ]
+    },
+    {
+      "year": 2023,
+      "day": 1,
+      "question_number": 18,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2023/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        9
+      ]
+    },
+    {
+      "year": 2023,
+      "day": 1,
+      "question_number": 19,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2023/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        10
+      ]
+    },
+    {
+      "year": 2023,
+      "day": 1,
+      "question_number": 21,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2023/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        10
+      ]
+    },
+    {
+      "year": 2023,
+      "day": 1,
+      "question_number": 22,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2023/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        11
+      ]
+    },
+    {
+      "year": 2023,
+      "day": 1,
+      "question_number": 23,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2023/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        11
+      ]
+    },
+    {
+      "year": 2023,
+      "day": 1,
+      "question_number": 24,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2023/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        11
+      ]
+    },
+    {
+      "year": 2023,
+      "day": 1,
+      "question_number": 25,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2023/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        11
+      ]
+    },
+    {
+      "year": 2023,
+      "day": 1,
+      "question_number": 26,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2023/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        12
+      ]
+    },
+    {
+      "year": 2023,
+      "day": 1,
+      "question_number": 28,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2023/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        12
+      ]
+    },
+    {
+      "year": 2023,
+      "day": 1,
+      "question_number": 29,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2023/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        13
+      ]
+    },
+    {
+      "year": 2023,
+      "day": 1,
+      "question_number": 30,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2023/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        13
+      ]
+    },
+    {
+      "year": 2023,
+      "day": 1,
+      "question_number": 31,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2023/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        13
+      ]
+    },
+    {
+      "year": 2023,
+      "day": 1,
+      "question_number": 32,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2023/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        13
+      ]
+    },
+    {
+      "year": 2023,
+      "day": 1,
+      "question_number": 33,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2023/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        14
+      ]
+    },
+    {
+      "year": 2023,
+      "day": 1,
+      "question_number": 34,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2023/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        14
+      ]
+    },
+    {
+      "year": 2023,
+      "day": 1,
+      "question_number": 35,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2023/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        15
+      ]
+    },
+    {
+      "year": 2023,
+      "day": 1,
+      "question_number": 36,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2023/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        15
+      ]
+    },
+    {
+      "year": 2023,
+      "day": 1,
+      "question_number": 37,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2023/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        16
+      ]
+    },
+    {
+      "year": 2023,
+      "day": 1,
+      "question_number": 39,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2023/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        16
+      ]
+    },
+    {
+      "year": 2023,
+      "day": 1,
+      "question_number": 40,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2023/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        17
+      ]
+    },
+    {
+      "year": 2023,
+      "day": 1,
+      "question_number": 42,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2023/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        17
+      ]
+    },
+    {
+      "year": 2023,
+      "day": 1,
+      "question_number": 43,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2023/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        18
+      ]
+    },
+    {
+      "year": 2023,
+      "day": 1,
+      "question_number": 44,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2023/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        18
+      ]
+    },
+    {
+      "year": 2023,
+      "day": 1,
+      "question_number": 45,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2023/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        18
+      ]
+    },
+    {
+      "year": 2023,
+      "day": 1,
+      "question_number": 46,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2023/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        20
+      ]
+    },
+    {
+      "year": 2023,
+      "day": 1,
+      "question_number": 48,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2023/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        21
+      ]
+    },
+    {
+      "year": 2023,
+      "day": 1,
+      "question_number": 50,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2023/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        21
+      ]
+    },
+    {
+      "year": 2023,
+      "day": 1,
+      "question_number": 51,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2023/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        21
+      ]
+    },
+    {
+      "year": 2023,
+      "day": 1,
+      "question_number": 52,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2023/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        22
+      ]
+    },
+    {
+      "year": 2023,
+      "day": 1,
+      "question_number": 53,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2023/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        22
+      ]
+    },
+    {
+      "year": 2023,
+      "day": 1,
+      "question_number": 54,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2023/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        22
+      ]
+    },
+    {
+      "year": 2023,
+      "day": 1,
+      "question_number": 55,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2023/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        22
+      ]
+    },
+    {
+      "year": 2023,
+      "day": 1,
+      "question_number": 56,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2023/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        23
+      ]
+    },
+    {
+      "year": 2023,
+      "day": 1,
+      "question_number": 57,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2023/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        23
+      ]
+    },
+    {
+      "year": 2023,
+      "day": 1,
+      "question_number": 58,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2023/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        23
+      ]
+    },
+    {
+      "year": 2023,
+      "day": 1,
+      "question_number": 59,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2023/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        24
+      ]
+    },
+    {
+      "year": 2023,
+      "day": 1,
+      "question_number": 60,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2023/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        24
+      ]
+    },
+    {
+      "year": 2023,
+      "day": 1,
+      "question_number": 61,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2023/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        24
+      ]
+    },
+    {
+      "year": 2023,
+      "day": 1,
+      "question_number": 62,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2023/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        24
+      ]
+    },
+    {
+      "year": 2023,
+      "day": 1,
+      "question_number": 63,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2023/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        25
+      ]
+    },
+    {
+      "year": 2023,
+      "day": 1,
+      "question_number": 64,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2023/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        25
+      ]
+    },
+    {
+      "year": 2023,
+      "day": 1,
+      "question_number": 65,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2023/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        25
+      ]
+    },
+    {
+      "year": 2023,
+      "day": 1,
+      "question_number": 66,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2023/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        25
+      ]
+    },
+    {
+      "year": 2023,
+      "day": 1,
+      "question_number": 67,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2023/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        26
+      ]
+    },
+    {
+      "year": 2023,
+      "day": 1,
+      "question_number": 68,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2023/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        26
+      ]
+    },
+    {
+      "year": 2023,
+      "day": 1,
+      "question_number": 69,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2023/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        26
+      ]
+    },
+    {
+      "year": 2023,
+      "day": 1,
+      "question_number": 70,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2023/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        26
+      ]
+    },
+    {
+      "year": 2023,
+      "day": 1,
+      "question_number": 71,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2023/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        27
+      ]
+    },
+    {
+      "year": 2023,
+      "day": 1,
+      "question_number": 72,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2023/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        27
+      ]
+    },
+    {
+      "year": 2023,
+      "day": 1,
+      "question_number": 74,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2023/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        27
+      ]
+    },
+    {
+      "year": 2023,
+      "day": 1,
+      "question_number": 75,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2023/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        27
+      ]
+    },
+    {
+      "year": 2023,
+      "day": 1,
+      "question_number": 79,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2023/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        29
+      ]
+    },
+    {
+      "year": 2023,
+      "day": 1,
+      "question_number": 80,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2023/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        29
+      ]
+    },
+    {
+      "year": 2023,
+      "day": 1,
+      "question_number": 81,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2023/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        29
+      ]
+    },
+    {
+      "year": 2023,
+      "day": 1,
+      "question_number": 82,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2023/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        29
+      ]
+    },
+    {
+      "year": 2023,
+      "day": 1,
+      "question_number": 83,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2023/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        30
+      ]
+    },
+    {
+      "year": 2023,
+      "day": 1,
+      "question_number": 84,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2023/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        30
+      ]
+    },
+    {
+      "year": 2023,
+      "day": 1,
+      "question_number": 85,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2023/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        30
+      ]
+    },
+    {
+      "year": 2023,
+      "day": 1,
+      "question_number": 86,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2023/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        30
+      ]
+    },
+    {
+      "year": 2023,
+      "day": 1,
+      "question_number": 87,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2023/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        31
+      ]
+    },
+    {
+      "year": 2023,
+      "day": 1,
+      "question_number": 88,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2023/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        31
+      ]
+    },
+    {
+      "year": 2023,
+      "day": 1,
+      "question_number": 89,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2023/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        31
+      ]
+    },
+    {
+      "year": 2023,
+      "day": 1,
+      "question_number": 90,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2023/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        31
+      ]
+    },
+    {
+      "year": 2023,
+      "day": 2,
+      "question_number": 96,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2023/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        4
+      ]
+    },
+    {
+      "year": 2023,
+      "day": 2,
+      "question_number": 97,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2023/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        4
+      ]
+    },
+    {
+      "year": 2023,
+      "day": 2,
+      "question_number": 98,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2023/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        4
+      ]
+    },
+    {
+      "year": 2023,
+      "day": 2,
+      "question_number": 99,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2023/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        5
+      ]
+    },
+    {
+      "year": 2023,
+      "day": 2,
+      "question_number": 100,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2023/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        5
+      ]
+    },
+    {
+      "year": 2023,
+      "day": 2,
+      "question_number": 103,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2023/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        6
+      ]
+    },
+    {
+      "year": 2023,
+      "day": 2,
+      "question_number": 104,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2023/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        6
+      ]
+    },
+    {
+      "year": 2023,
+      "day": 2,
+      "question_number": 105,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2023/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        6
+      ]
+    },
+    {
+      "year": 2023,
+      "day": 2,
+      "question_number": 106,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2023/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        6
+      ]
+    },
+    {
+      "year": 2023,
+      "day": 2,
+      "question_number": 107,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2023/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        7
+      ]
+    },
+    {
+      "year": 2023,
+      "day": 2,
+      "question_number": 108,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2023/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        7
+      ]
+    },
+    {
+      "year": 2023,
+      "day": 2,
+      "question_number": 109,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2023/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        7
+      ]
+    },
+    {
+      "year": 2023,
+      "day": 2,
+      "question_number": 110,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2023/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        7
+      ]
+    },
+    {
+      "year": 2023,
+      "day": 2,
+      "question_number": 111,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2023/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        7
+      ]
+    },
+    {
+      "year": 2023,
+      "day": 2,
+      "question_number": 112,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2023/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        8
+      ]
+    },
+    {
+      "year": 2023,
+      "day": 2,
+      "question_number": 113,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2023/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        8
+      ]
+    },
+    {
+      "year": 2023,
+      "day": 2,
+      "question_number": 114,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2023/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        8
+      ]
+    },
+    {
+      "year": 2023,
+      "day": 2,
+      "question_number": 115,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2023/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        9
+      ]
+    },
+    {
+      "year": 2023,
+      "day": 2,
+      "question_number": 116,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2023/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        9
+      ]
+    },
+    {
+      "year": 2023,
+      "day": 2,
+      "question_number": 117,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2023/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        9
+      ]
+    },
+    {
+      "year": 2023,
+      "day": 2,
+      "question_number": 118,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2023/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        9
+      ]
+    },
+    {
+      "year": 2023,
+      "day": 2,
+      "question_number": 122,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2023/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        11
+      ]
+    },
+    {
+      "year": 2023,
+      "day": 2,
+      "question_number": 123,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2023/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        12
+      ]
+    },
+    {
+      "year": 2023,
+      "day": 2,
+      "question_number": 124,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2023/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        12
+      ]
+    },
+    {
+      "year": 2023,
+      "day": 2,
+      "question_number": 125,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2023/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        12
+      ]
+    },
+    {
+      "year": 2023,
+      "day": 2,
+      "question_number": 126,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2023/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        12
+      ]
+    },
+    {
+      "year": 2023,
+      "day": 2,
+      "question_number": 127,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2023/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        12
+      ]
+    },
+    {
+      "year": 2023,
+      "day": 2,
+      "question_number": 128,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2023/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        12
+      ]
+    },
+    {
+      "year": 2023,
+      "day": 2,
+      "question_number": 130,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2023/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        14
+      ]
+    },
+    {
+      "year": 2023,
+      "day": 2,
+      "question_number": 131,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2023/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        14
+      ]
+    },
+    {
+      "year": 2023,
+      "day": 2,
+      "question_number": 132,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2023/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        14
+      ]
+    },
+    {
+      "year": 2023,
+      "day": 2,
+      "question_number": 133,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2023/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        14
+      ]
+    },
+    {
+      "year": 2023,
+      "day": 2,
+      "question_number": 136,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2023/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        16
+      ]
+    },
+    {
+      "year": 2023,
+      "day": 2,
+      "question_number": 138,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2023/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        16
+      ]
+    },
+    {
+      "year": 2023,
+      "day": 2,
+      "question_number": 139,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2023/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        17
+      ]
+    },
+    {
+      "year": 2023,
+      "day": 2,
+      "question_number": 141,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2023/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        18
+      ]
+    },
+    {
+      "year": 2023,
+      "day": 2,
+      "question_number": 143,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2023/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        18
+      ]
+    },
+    {
+      "year": 2023,
+      "day": 2,
+      "question_number": 144,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2023/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        19
+      ]
+    },
+    {
+      "year": 2023,
+      "day": 2,
+      "question_number": 145,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2023/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        19
+      ]
+    },
+    {
+      "year": 2023,
+      "day": 2,
+      "question_number": 146,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2023/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        20
+      ]
+    },
+    {
+      "year": 2023,
+      "day": 2,
+      "question_number": 148,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2023/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        20
+      ]
+    },
+    {
+      "year": 2023,
+      "day": 2,
+      "question_number": 151,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2023/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        21
+      ]
+    },
+    {
+      "year": 2023,
+      "day": 2,
+      "question_number": 152,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2023/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        22
+      ]
+    },
+    {
+      "year": 2023,
+      "day": 2,
+      "question_number": 154,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2023/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        23
+      ]
+    },
+    {
+      "year": 2023,
+      "day": 2,
+      "question_number": 155,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2023/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        23
+      ]
+    },
+    {
+      "year": 2023,
+      "day": 2,
+      "question_number": 156,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2023/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        23
+      ]
+    },
+    {
+      "year": 2023,
+      "day": 2,
+      "question_number": 157,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2023/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        23
+      ]
+    },
+    {
+      "year": 2023,
+      "day": 2,
+      "question_number": 158,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2023/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        24
+      ]
+    },
+    {
+      "year": 2023,
+      "day": 2,
+      "question_number": 160,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2023/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        24
+      ]
+    },
+    {
+      "year": 2023,
+      "day": 2,
+      "question_number": 161,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2023/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        25
+      ]
+    },
+    {
+      "year": 2023,
+      "day": 2,
+      "question_number": 162,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2023/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        25
+      ]
+    },
+    {
+      "year": 2023,
+      "day": 2,
+      "question_number": 163,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2023/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        25
+      ]
+    },
+    {
+      "year": 2023,
+      "day": 2,
+      "question_number": 164,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2023/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        26
+      ]
+    },
+    {
+      "year": 2023,
+      "day": 2,
+      "question_number": 165,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2023/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        26
+      ]
+    },
+    {
+      "year": 2023,
+      "day": 2,
+      "question_number": 166,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2023/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        26
+      ]
+    },
+    {
+      "year": 2023,
+      "day": 2,
+      "question_number": 167,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2023/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        27
+      ]
+    },
+    {
+      "year": 2023,
+      "day": 2,
+      "question_number": 168,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2023/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        27
+      ]
+    },
+    {
+      "year": 2023,
+      "day": 2,
+      "question_number": 169,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2023/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        27
+      ]
+    },
+    {
+      "year": 2023,
+      "day": 2,
+      "question_number": 170,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2023/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        28
+      ]
+    },
+    {
+      "year": 2023,
+      "day": 2,
+      "question_number": 171,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2023/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        28
+      ]
+    },
+    {
+      "year": 2023,
+      "day": 2,
+      "question_number": 173,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2023/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        29
+      ]
+    },
+    {
+      "year": 2023,
+      "day": 2,
+      "question_number": 174,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2023/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        29
+      ]
+    },
+    {
+      "year": 2023,
+      "day": 2,
+      "question_number": 175,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2023/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        29
+      ]
+    },
+    {
+      "year": 2023,
+      "day": 2,
+      "question_number": 176,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2023/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        29
+      ]
+    },
+    {
+      "year": 2023,
+      "day": 2,
+      "question_number": 178,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2023/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        30
+      ]
+    },
+    {
+      "year": 2023,
+      "day": 2,
+      "question_number": 179,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2023/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        31
+      ]
+    },
+    {
+      "year": 2023,
+      "day": 2,
+      "question_number": 180,
+      "reasons": [
+        "embedded_option_labels"
+      ],
+      "source_pdf": "2023/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        31
+      ]
+    },
+    {
+      "year": 2024,
+      "day": 1,
+      "question_number": 3,
+      "reasons": [
+        "repeated_watermark"
+      ],
+      "source_pdf": "2024/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        2
+      ]
+    },
+    {
+      "year": 2024,
+      "day": 1,
+      "question_number": 4,
+      "reasons": [
+        "repeated_watermark"
+      ],
+      "source_pdf": "2024/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        3
+      ]
+    },
+    {
+      "year": 2024,
+      "day": 1,
+      "question_number": 6,
+      "reasons": [
+        "repeated_watermark"
+      ],
+      "source_pdf": "2024/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        5
+      ]
+    },
+    {
+      "year": 2024,
+      "day": 1,
+      "question_number": 8,
+      "reasons": [
+        "repeated_watermark"
+      ],
+      "source_pdf": "2024/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        5
+      ]
+    },
+    {
+      "year": 2024,
+      "day": 1,
+      "question_number": 9,
+      "reasons": [
+        "repeated_watermark"
+      ],
+      "source_pdf": "2024/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        6
+      ]
+    },
+    {
+      "year": 2024,
+      "day": 1,
+      "question_number": 12,
+      "reasons": [
+        "repeated_watermark"
+      ],
+      "source_pdf": "2024/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        7
+      ]
+    },
+    {
+      "year": 2024,
+      "day": 1,
+      "question_number": 14,
+      "reasons": [
+        "repeated_watermark"
+      ],
+      "source_pdf": "2024/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        7
+      ]
+    },
+    {
+      "year": 2024,
+      "day": 1,
+      "question_number": 15,
+      "reasons": [
+        "repeated_watermark"
+      ],
+      "source_pdf": "2024/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        8
+      ]
+    },
+    {
+      "year": 2024,
+      "day": 1,
+      "question_number": 20,
+      "reasons": [
+        "repeated_watermark"
+      ],
+      "source_pdf": "2024/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        10
+      ]
+    },
+    {
+      "year": 2024,
+      "day": 1,
+      "question_number": 21,
+      "reasons": [
+        "repeated_watermark"
+      ],
+      "source_pdf": "2024/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        10
+      ]
+    },
+    {
+      "year": 2024,
+      "day": 1,
+      "question_number": 22,
+      "reasons": [
+        "repeated_watermark"
+      ],
+      "source_pdf": "2024/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        11
+      ]
+    },
+    {
+      "year": 2024,
+      "day": 1,
+      "question_number": 24,
+      "reasons": [
+        "repeated_watermark"
+      ],
+      "source_pdf": "2024/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        11
+      ]
+    },
+    {
+      "year": 2024,
+      "day": 1,
+      "question_number": 25,
+      "reasons": [
+        "repeated_watermark"
+      ],
+      "source_pdf": "2024/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        12
+      ]
+    },
+    {
+      "year": 2024,
+      "day": 1,
+      "question_number": 28,
+      "reasons": [
+        "repeated_watermark"
+      ],
+      "source_pdf": "2024/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        13
+      ]
+    },
+    {
+      "year": 2024,
+      "day": 1,
+      "question_number": 31,
+      "reasons": [
+        "repeated_watermark"
+      ],
+      "source_pdf": "2024/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        14
+      ]
+    },
+    {
+      "year": 2024,
+      "day": 1,
+      "question_number": 32,
+      "reasons": [
+        "repeated_watermark"
+      ],
+      "source_pdf": "2024/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        14
+      ]
+    },
+    {
+      "year": 2024,
+      "day": 1,
+      "question_number": 34,
+      "reasons": [
+        "repeated_watermark"
+      ],
+      "source_pdf": "2024/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        15
+      ]
+    },
+    {
+      "year": 2024,
+      "day": 1,
+      "question_number": 36,
+      "reasons": [
+        "repeated_watermark"
+      ],
+      "source_pdf": "2024/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        15
+      ]
+    },
+    {
+      "year": 2024,
+      "day": 1,
+      "question_number": 37,
+      "reasons": [
+        "repeated_watermark"
+      ],
+      "source_pdf": "2024/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        16
+      ]
+    },
+    {
+      "year": 2024,
+      "day": 1,
+      "question_number": 39,
+      "reasons": [
+        "repeated_watermark"
+      ],
+      "source_pdf": "2024/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        16
+      ]
+    },
+    {
+      "year": 2024,
+      "day": 1,
+      "question_number": 40,
+      "reasons": [
+        "repeated_watermark"
+      ],
+      "source_pdf": "2024/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        17
+      ]
+    },
+    {
+      "year": 2024,
+      "day": 1,
+      "question_number": 42,
+      "reasons": [
+        "repeated_watermark"
+      ],
+      "source_pdf": "2024/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        17
+      ]
+    },
+    {
+      "year": 2024,
+      "day": 1,
+      "question_number": 43,
+      "reasons": [
+        "repeated_watermark"
+      ],
+      "source_pdf": "2024/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        18
+      ]
+    },
+    {
+      "year": 2024,
+      "day": 1,
+      "question_number": 48,
+      "reasons": [
+        "repeated_watermark"
+      ],
+      "source_pdf": "2024/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        20
+      ]
+    },
+    {
+      "year": 2024,
+      "day": 1,
+      "question_number": 49,
+      "reasons": [
+        "repeated_watermark"
+      ],
+      "source_pdf": "2024/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        21
+      ]
+    },
+    {
+      "year": 2024,
+      "day": 1,
+      "question_number": 51,
+      "reasons": [
+        "repeated_watermark"
+      ],
+      "source_pdf": "2024/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        21
+      ]
+    },
+    {
+      "year": 2024,
+      "day": 1,
+      "question_number": 53,
+      "reasons": [
+        "repeated_watermark"
+      ],
+      "source_pdf": "2024/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        22
+      ]
+    },
+    {
+      "year": 2024,
+      "day": 1,
+      "question_number": 55,
+      "reasons": [
+        "repeated_watermark"
+      ],
+      "source_pdf": "2024/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        22
+      ]
+    },
+    {
+      "year": 2024,
+      "day": 1,
+      "question_number": 57,
+      "reasons": [
+        "repeated_watermark"
+      ],
+      "source_pdf": "2024/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        23
+      ]
+    },
+    {
+      "year": 2024,
+      "day": 1,
+      "question_number": 59,
+      "reasons": [
+        "repeated_watermark"
+      ],
+      "source_pdf": "2024/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        23
+      ]
+    },
+    {
+      "year": 2024,
+      "day": 1,
+      "question_number": 61,
+      "reasons": [
+        "repeated_watermark"
+      ],
+      "source_pdf": "2024/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        24
+      ]
+    },
+    {
+      "year": 2024,
+      "day": 1,
+      "question_number": 63,
+      "reasons": [
+        "repeated_watermark"
+      ],
+      "source_pdf": "2024/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        24
+      ]
+    },
+    {
+      "year": 2024,
+      "day": 1,
+      "question_number": 65,
+      "reasons": [
+        "repeated_watermark"
+      ],
+      "source_pdf": "2024/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        25
+      ]
+    },
+    {
+      "year": 2024,
+      "day": 1,
+      "question_number": 67,
+      "reasons": [
+        "repeated_watermark"
+      ],
+      "source_pdf": "2024/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        25
+      ]
+    },
+    {
+      "year": 2024,
+      "day": 1,
+      "question_number": 69,
+      "reasons": [
+        "repeated_watermark"
+      ],
+      "source_pdf": "2024/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        26
+      ]
+    },
+    {
+      "year": 2024,
+      "day": 1,
+      "question_number": 71,
+      "reasons": [
+        "repeated_watermark"
+      ],
+      "source_pdf": "2024/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        26
+      ]
+    },
+    {
+      "year": 2024,
+      "day": 1,
+      "question_number": 73,
+      "reasons": [
+        "repeated_watermark"
+      ],
+      "source_pdf": "2024/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        27
+      ]
+    },
+    {
+      "year": 2024,
+      "day": 1,
+      "question_number": 75,
+      "reasons": [
+        "repeated_watermark"
+      ],
+      "source_pdf": "2024/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        27
+      ]
+    },
+    {
+      "year": 2024,
+      "day": 1,
+      "question_number": 80,
+      "reasons": [
+        "repeated_watermark"
+      ],
+      "source_pdf": "2024/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        29
+      ]
+    },
+    {
+      "year": 2024,
+      "day": 1,
+      "question_number": 82,
+      "reasons": [
+        "repeated_watermark"
+      ],
+      "source_pdf": "2024/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        29
+      ]
+    },
+    {
+      "year": 2024,
+      "day": 1,
+      "question_number": 84,
+      "reasons": [
+        "repeated_watermark"
+      ],
+      "source_pdf": "2024/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        30
+      ]
+    },
+    {
+      "year": 2024,
+      "day": 1,
+      "question_number": 86,
+      "reasons": [
+        "repeated_watermark"
+      ],
+      "source_pdf": "2024/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        30
+      ]
+    },
+    {
+      "year": 2024,
+      "day": 1,
+      "question_number": 87,
+      "reasons": [
+        "repeated_watermark"
+      ],
+      "source_pdf": "2024/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        31
+      ]
+    },
+    {
+      "year": 2024,
+      "day": 1,
+      "question_number": 89,
+      "reasons": [
+        "repeated_watermark"
+      ],
+      "source_pdf": "2024/regular/prova/prova-dia1.pdf",
+      "source_pages": [
+        31
+      ]
+    },
+    {
+      "year": 2024,
+      "day": 2,
+      "question_number": 91,
+      "reasons": [
+        "repeated_watermark"
+      ],
+      "source_pdf": "2024/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        2
+      ]
+    },
+    {
+      "year": 2024,
+      "day": 2,
+      "question_number": 93,
+      "reasons": [
+        "repeated_watermark"
+      ],
+      "source_pdf": "2024/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        2
+      ]
+    },
+    {
+      "year": 2024,
+      "day": 2,
+      "question_number": 95,
+      "reasons": [
+        "repeated_watermark"
+      ],
+      "source_pdf": "2024/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        3
+      ]
+    },
+    {
+      "year": 2024,
+      "day": 2,
+      "question_number": 96,
+      "reasons": [
+        "repeated_watermark"
+      ],
+      "source_pdf": "2024/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        3
+      ]
+    },
+    {
+      "year": 2024,
+      "day": 2,
+      "question_number": 98,
+      "reasons": [
+        "repeated_watermark"
+      ],
+      "source_pdf": "2024/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        4
+      ]
+    },
+    {
+      "year": 2024,
+      "day": 2,
+      "question_number": 101,
+      "reasons": [
+        "repeated_watermark"
+      ],
+      "source_pdf": "2024/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        5
+      ]
+    },
+    {
+      "year": 2024,
+      "day": 2,
+      "question_number": 103,
+      "reasons": [
+        "repeated_watermark"
+      ],
+      "source_pdf": "2024/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        5
+      ]
+    },
+    {
+      "year": 2024,
+      "day": 2,
+      "question_number": 104,
+      "reasons": [
+        "repeated_watermark"
+      ],
+      "source_pdf": "2024/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        6
+      ]
+    },
+    {
+      "year": 2024,
+      "day": 2,
+      "question_number": 109,
+      "reasons": [
+        "repeated_watermark"
+      ],
+      "source_pdf": "2024/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        8
+      ]
+    },
+    {
+      "year": 2024,
+      "day": 2,
+      "question_number": 110,
+      "reasons": [
+        "repeated_watermark"
+      ],
+      "source_pdf": "2024/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        8
+      ]
+    },
+    {
+      "year": 2024,
+      "day": 2,
+      "question_number": 112,
+      "reasons": [
+        "repeated_watermark"
+      ],
+      "source_pdf": "2024/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        9
+      ]
+    },
+    {
+      "year": 2024,
+      "day": 2,
+      "question_number": 114,
+      "reasons": [
+        "repeated_watermark"
+      ],
+      "source_pdf": "2024/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        9
+      ]
+    },
+    {
+      "year": 2024,
+      "day": 2,
+      "question_number": 116,
+      "reasons": [
+        "repeated_watermark"
+      ],
+      "source_pdf": "2024/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        10
+      ]
+    },
+    {
+      "year": 2024,
+      "day": 2,
+      "question_number": 118,
+      "reasons": [
+        "repeated_watermark"
+      ],
+      "source_pdf": "2024/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        10
+      ]
+    },
+    {
+      "year": 2024,
+      "day": 2,
+      "question_number": 119,
+      "reasons": [
+        "repeated_watermark"
+      ],
+      "source_pdf": "2024/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        11
+      ]
+    },
+    {
+      "year": 2024,
+      "day": 2,
+      "question_number": 120,
+      "reasons": [
+        "repeated_watermark"
+      ],
+      "source_pdf": "2024/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        11
+      ]
+    },
+    {
+      "year": 2024,
+      "day": 2,
+      "question_number": 122,
+      "reasons": [
+        "repeated_watermark"
+      ],
+      "source_pdf": "2024/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        12
+      ]
+    },
+    {
+      "year": 2024,
+      "day": 2,
+      "question_number": 124,
+      "reasons": [
+        "repeated_watermark"
+      ],
+      "source_pdf": "2024/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        13
+      ]
+    },
+    {
+      "year": 2024,
+      "day": 2,
+      "question_number": 126,
+      "reasons": [
+        "repeated_watermark"
+      ],
+      "source_pdf": "2024/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        13
+      ]
+    },
+    {
+      "year": 2024,
+      "day": 2,
+      "question_number": 128,
+      "reasons": [
+        "repeated_watermark"
+      ],
+      "source_pdf": "2024/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        14
+      ]
+    },
+    {
+      "year": 2024,
+      "day": 2,
+      "question_number": 130,
+      "reasons": [
+        "repeated_watermark"
+      ],
+      "source_pdf": "2024/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        14
+      ]
+    },
+    {
+      "year": 2024,
+      "day": 2,
+      "question_number": 133,
+      "reasons": [
+        "repeated_watermark"
+      ],
+      "source_pdf": "2024/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        15
+      ]
+    },
+    {
+      "year": 2024,
+      "day": 2,
+      "question_number": 138,
+      "reasons": [
+        "repeated_watermark"
+      ],
+      "source_pdf": "2024/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        16
+      ]
+    },
+    {
+      "year": 2024,
+      "day": 2,
+      "question_number": 140,
+      "reasons": [
+        "repeated_watermark"
+      ],
+      "source_pdf": "2024/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        17
+      ]
+    },
+    {
+      "year": 2024,
+      "day": 2,
+      "question_number": 142,
+      "reasons": [
+        "repeated_watermark"
+      ],
+      "source_pdf": "2024/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        17
+      ]
+    },
+    {
+      "year": 2024,
+      "day": 2,
+      "question_number": 143,
+      "reasons": [
+        "repeated_watermark"
+      ],
+      "source_pdf": "2024/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        18
+      ]
+    },
+    {
+      "year": 2024,
+      "day": 2,
+      "question_number": 145,
+      "reasons": [
+        "repeated_watermark"
+      ],
+      "source_pdf": "2024/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        18
+      ]
+    },
+    {
+      "year": 2024,
+      "day": 2,
+      "question_number": 151,
+      "reasons": [
+        "repeated_watermark"
+      ],
+      "source_pdf": "2024/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        22
+      ]
+    },
+    {
+      "year": 2024,
+      "day": 2,
+      "question_number": 152,
+      "reasons": [
+        "repeated_watermark"
+      ],
+      "source_pdf": "2024/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        22
+      ]
+    },
+    {
+      "year": 2024,
+      "day": 2,
+      "question_number": 154,
+      "reasons": [
+        "repeated_watermark"
+      ],
+      "source_pdf": "2024/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        24
+      ]
+    },
+    {
+      "year": 2024,
+      "day": 2,
+      "question_number": 157,
+      "reasons": [
+        "repeated_watermark"
+      ],
+      "source_pdf": "2024/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        25
+      ]
+    },
+    {
+      "year": 2024,
+      "day": 2,
+      "question_number": 159,
+      "reasons": [
+        "repeated_watermark"
+      ],
+      "source_pdf": "2024/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        25
+      ]
+    },
+    {
+      "year": 2024,
+      "day": 2,
+      "question_number": 163,
+      "reasons": [
+        "repeated_watermark"
+      ],
+      "source_pdf": "2024/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        27
+      ]
+    },
+    {
+      "year": 2024,
+      "day": 2,
+      "question_number": 164,
+      "reasons": [
+        "repeated_watermark"
+      ],
+      "source_pdf": "2024/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        27
+      ]
+    },
+    {
+      "year": 2024,
+      "day": 2,
+      "question_number": 166,
+      "reasons": [
+        "repeated_watermark"
+      ],
+      "source_pdf": "2024/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        28
+      ]
+    },
+    {
+      "year": 2024,
+      "day": 2,
+      "question_number": 168,
+      "reasons": [
+        "repeated_watermark"
+      ],
+      "source_pdf": "2024/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        28
+      ]
+    },
+    {
+      "year": 2024,
+      "day": 2,
+      "question_number": 169,
+      "reasons": [
+        "repeated_watermark"
+      ],
+      "source_pdf": "2024/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        29
+      ]
+    },
+    {
+      "year": 2024,
+      "day": 2,
+      "question_number": 171,
+      "reasons": [
+        "repeated_watermark"
+      ],
+      "source_pdf": "2024/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        29
+      ]
+    },
+    {
+      "year": 2024,
+      "day": 2,
+      "question_number": 173,
+      "reasons": [
+        "repeated_watermark"
+      ],
+      "source_pdf": "2024/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        30
+      ]
+    },
+    {
+      "year": 2024,
+      "day": 2,
+      "question_number": 175,
+      "reasons": [
+        "repeated_watermark"
+      ],
+      "source_pdf": "2024/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        30
+      ]
+    },
+    {
+      "year": 2024,
+      "day": 2,
+      "question_number": 177,
+      "reasons": [
+        "repeated_watermark"
+      ],
+      "source_pdf": "2024/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        31
+      ]
+    },
+    {
+      "year": 2024,
+      "day": 2,
+      "question_number": 179,
+      "reasons": [
+        "repeated_watermark"
+      ],
+      "source_pdf": "2024/regular/prova/prova-dia2.pdf",
+      "source_pages": [
+        31
+      ]
+    }
+  ]
+}

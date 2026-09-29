@@ -39,5 +39,7 @@ backend/database/bsenem.db
 
 # Temporary scratch
 .tmp/
+.tmp_*
 tmp/
 .superpowers/
+content/enem/corrupted-text-recovery-report.json

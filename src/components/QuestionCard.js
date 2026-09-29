@@ -1,6 +1,11 @@
 // src/components/QuestionCard.js
 import { escapeHtml, safeResourceUrl } from '../utils/html.js';
 
+function questionImages(question) {
+  if (Array.isArray(question?.images)) return question.images.filter(Boolean);
+  return question?.image ? [question.image] : [];
+}
+
 export class QuestionCard {
   constructor(options = {}) {
     this.question = options.question ?? null;
@@ -46,12 +51,22 @@ export class QuestionCard {
       </div>
       
       <div class="question-content">
-        <p class="question-text">${escapeHtml(this.question.text)}</p>
-        ${this.question.image ? `
-          <div class="question-image">
-            <img src="${safeResourceUrl(this.question.image)}" alt="Imagem da questão">
-          </div>
+        ${this.question.reference ? `
+          <section class="question-reference" aria-label="Material de referência">
+            <div class="question-reference-label">Material de referência</div>
+            ${this.question.reference.title ? `<h3 class="question-reference-title">${escapeHtml(this.question.reference.title)}</h3>` : ''}
+            ${this.question.reference.body ? `<p class="question-reference-body">${escapeHtml(this.question.reference.body)}</p>` : ''}
+            ${questionImages(this.question.reference).map((image) => `
+              <div class="question-image"><img src="${safeResourceUrl(image)}" alt="Imagem do material de referência" loading="lazy"></div>
+            `).join('')}
+          </section>
         ` : ''}
+        <p class="question-text">${escapeHtml(this.question.text)}</p>
+        ${questionImages(this.question).map((image) => `
+          <div class="question-image">
+            <img src="${safeResourceUrl(image)}" alt="Imagem oficial da questão" loading="lazy">
+          </div>
+        `).join('')}
         ${this.question.code ? `
           <pre class="question-code"><code>${escapeHtml(this.question.code)}</code></pre>
         ` : ''}

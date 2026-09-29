@@ -313,6 +313,42 @@ describe('ExamPlayer with a remote session', () => {
     player.destroy();
   });
 
+  it('renders recovered official reference material before the question text', () => {
+    const player = new ExamPlayer({
+      session: remoteSession({
+        questions: [remoteQuestion(5, 0, {
+          reference: {
+            title: 'Contexto oficial recuperado',
+            body: 'Trecho oficial do PDF.',
+            images: ['/api/simulators/questions/inep%3A5/reference-images/0'],
+          },
+        })],
+      }),
+    });
+    const element = mount(player);
+    const reference = element.querySelector('.question-reference');
+    expect(reference).not.toBeNull();
+    expect(reference.textContent).toContain('Trecho oficial do PDF.');
+    expect(reference.querySelector('img').getAttribute('src')).toBe('/api/simulators/questions/inep%3A5/reference-images/0');
+    player.destroy();
+  });
+
+  it('renders all official question images in order during play and review', () => {
+    const images = ['/api/simulators/questions/inep%3A5/images/0', '/api/simulators/questions/inep%3A5/images/1'];
+    const active = new ExamPlayer({ session: remoteSession({ questions: [remoteQuestion(5, 0, { images })] }) });
+    const activeElement = mount(active);
+    expect([...activeElement.querySelectorAll('.question-image img')].map((image) => image.getAttribute('src'))).toEqual(images);
+    expect([...activeElement.querySelectorAll('.question-image img')].every((image) => image.alt === 'Imagem oficial da questão')).toBe(true);
+    active.destroy();
+
+    const review = new ExamPlayer({ session: completedSession() });
+    review.session.questions[0].images = images;
+    review.questions[0].images = images;
+    const reviewElement = mount(review);
+    expect([...reviewElement.querySelectorAll('.question-image img')].map((image) => image.getAttribute('src'))).toEqual(images);
+    review.destroy();
+  });
+
   it('does not expose correctness while the session is active', () => {
     const player = new ExamPlayer({ session: remoteSession({ answers: [{ question_id: 5, selected_option: 'A', flagged: false }] }) });
     const element = mount(player);

@@ -1,0 +1,9 @@
+{
+  "schema": "bsestudos.enem-corrupted-text-mappings.v1",
+  "policy": {
+    "purpose": "Deterministic, human-reviewed substitutions only",
+    "automatic_guessing": false,
+    "required_for_use": ["deterministic=true", "review_status=approved"]
+  },
+  "mappings": []
+}

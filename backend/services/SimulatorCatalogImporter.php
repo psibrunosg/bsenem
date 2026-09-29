@@ -3,6 +3,8 @@
 declare(strict_types=1);
 
 require_once __DIR__ . '/EnemQuestionImporter.php';
+require_once __DIR__ . '/EnemQualityGateImporter.php';
+require_once __DIR__ . '/EnemReferenceGroupImporter.php';
 
 /**
  * Seeds simulator content from versioned repository files on first use:
@@ -22,7 +24,12 @@ final class SimulatorCatalogImporter {
         $pdo = $db->getConnection();
         $hasEnem = (int) $pdo->query('SELECT COUNT(*) FROM enem_questions')->fetchColumn() > 0;
         $hasCatalogs = (int) $pdo->query('SELECT COUNT(*) FROM simulator_catalog_questions')->fetchColumn() > 0;
+        if ($hasEnem) {
+            EnemReferenceGroupImporter::import($pdo);
+            EnemQualityGateImporter::import($pdo);
+        }
         if ($hasEnem && $hasCatalogs) {
+            self::repairQuarantinedCatalogQuestions($pdo);
             return;
         }
 
@@ -30,17 +37,76 @@ final class SimulatorCatalogImporter {
         try {
             if (!$hasEnem) {
                 EnemQuestionImporter::import($pdo);
+                EnemReferenceGroupImporter::import($pdo);
+                EnemQualityGateImporter::import($pdo);
             }
             if (!$hasCatalogs) {
                 self::importEnem($pdo);
                 self::importConcursos($pdo);
             }
+            self::repairQuarantinedCatalogQuestions($pdo);
             $pdo->commit();
         } catch (Throwable $error) {
             if ($pdo->inTransaction()) {
                 $pdo->rollBack();
             }
             throw $error;
+        }
+    }
+
+    private static function repairQuarantinedCatalogQuestions(PDO $pdo): void {
+        $restore = $pdo->query(
+            "SELECT r.catalog_id, r.position, r.original_question_id
+             FROM simulator_catalog_replacements r
+             JOIN simulator_questions q ON q.id = r.original_question_id AND q.published = 1
+             ORDER BY r.catalog_id, r.position"
+        );
+        $restoreComposition = $pdo->prepare(
+            'UPDATE simulator_catalog_questions SET question_id = ? WHERE catalog_id = ? AND position = ?'
+        );
+        $deleteReplacement = $pdo->prepare(
+            'DELETE FROM simulator_catalog_replacements WHERE catalog_id = ? AND position = ?'
+        );
+        foreach ($restore->fetchAll() as $row) {
+            $restoreComposition->execute([$row['original_question_id'], $row['catalog_id'], $row['position']]);
+            $deleteReplacement->execute([$row['catalog_id'], $row['position']]);
+        }
+
+        $broken = $pdo->query(
+            "SELECT c.catalog_id, c.position, c.question_id, q.subject
+             FROM simulator_catalog_questions c
+             JOIN simulator_questions q ON q.id = c.question_id
+             WHERE q.published <> 1 AND c.question_id LIKE 'inep:%'
+             ORDER BY c.catalog_id, c.position"
+        );
+        $replacement = $pdo->prepare(
+            "SELECT q.id
+             FROM simulator_questions q
+             WHERE q.published = 1 AND q.id LIKE 'inep:%' AND q.subject = ?
+               AND q.id NOT IN (SELECT question_id FROM simulator_catalog_questions WHERE catalog_id = ?)
+             ORDER BY q.sort_key, q.id
+             LIMIT 1"
+        );
+        $update = $pdo->prepare(
+            'UPDATE simulator_catalog_questions SET question_id = ? WHERE catalog_id = ? AND position = ?'
+        );
+        $record = $pdo->prepare(
+            "INSERT INTO simulator_catalog_replacements
+                (catalog_id, position, original_question_id, replacement_question_id, reason)
+             VALUES (?, ?, ?, ?, ?)
+             ON CONFLICT(catalog_id, position) DO UPDATE SET
+                original_question_id = excluded.original_question_id,
+                replacement_question_id = excluded.replacement_question_id,
+                reason = excluded.reason"
+        );
+        foreach ($broken->fetchAll() as $row) {
+            $replacement->execute([$row['subject'], $row['catalog_id']]);
+            $replacementId = $replacement->fetchColumn();
+            if ($replacementId === false) continue;
+            $update->execute([$replacementId, $row['catalog_id'], $row['position']]);
+            $record->execute([
+                $row['catalog_id'], $row['position'], $row['question_id'], $replacementId, 'quality_quarantine'
+            ]);
         }
     }
 

@@ -32,7 +32,7 @@ $uri = rtrim($uri, '/');
 $uri = preg_replace('#^/api#', '', $uri);
 
 // Split into segments
-$segments = array_values(array_filter(explode('/', $uri)));
+$segments = array_values(array_filter(explode('/', $uri), static fn(string $segment): bool => $segment !== ''));
 
 function getSegment($index) {
     global $segments;
@@ -61,6 +61,10 @@ match(true) {
         => SimulatorController::progress($sub),
     $resource === 'simulators' && $id === 'sessions' && is_string($sub) && $action === 'complete' && !getSegment(4) && $method === 'POST'
         => SimulatorController::complete($sub),
+    $resource === 'simulators' && $id === 'questions' && is_string($sub) && $action === 'images' && ctype_digit((string) getSegment(4)) && $method === 'GET'
+        => SimulatorController::questionImage(rawurldecode($sub), (int) getSegment(4)),
+    $resource === 'simulators' && $id === 'questions' && is_string($sub) && $action === 'reference-images' && ctype_digit((string) getSegment(4)) && $method === 'GET'
+        => SimulatorController::questionReferenceImage(rawurldecode($sub), (int) getSegment(4)),
 
     $resource === 'notes' && ctype_digit((string)$id) && $sub === 'flashcards' && $method === 'POST'
         => NoteController::generateFlashcards((int)$id),
