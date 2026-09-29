@@ -1,0 +1,9 @@
+.question-bank-builder { margin: 0 0 28px; padding: 20px; border: 1px solid var(--color-border); border-radius: var(--radius-lg); background: var(--color-surface); }
+.question-bank-heading { display: flex; gap: 16px; align-items: start; justify-content: space-between; margin-bottom: 18px; }
+.question-bank-heading h2 { margin: 0 0 4px; font-size: var(--font-size-lg); }
+.question-bank-heading p, .question-bank-message { margin: 0; color: var(--color-text-secondary); }
+.question-bank-message.error { color: var(--color-error); }
+.question-bank-fields { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 14px; }
+.question-bank-field { display: grid; gap: 6px; font-size: var(--font-size-sm); font-weight: 600; color: var(--color-text); }
+.question-bank-actions { display: flex; align-items: center; gap: 14px; margin-top: 18px; }
+@media (max-width: 640px) { .question-bank-heading, .question-bank-actions { align-items: stretch; flex-direction: column; } }
