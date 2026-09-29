@@ -73,6 +73,7 @@ try {
     $requiredAssignments = [];
     $imported = 0;
     $skippedIncomplete = 0;
+    $skippedUnreviewed = 0;
     foreach ($questions as $question) {
         $answer = $question['gabarito_oficial'] ?? null;
         if (!is_string($answer) || !preg_match('/^[A-E]$/', $answer)) continue;
@@ -86,11 +87,18 @@ try {
         }
         $questionId = requireString($question, 'id');
         $role = requireString($question, 'cargo_alvo');
-        $insertQuestion->execute([$questionId, requireString($question, 'estado'), (int) ($question['ano'] ?? 0), requireString($question, 'orgao'), requireString($question, 'banca'), $role, $subjectSlug, $subjectLabel, (int) ($question['numero_questao'] ?? 0), requireString($question, 'enunciado'), trim($alternatives['A']), trim($alternatives['B']), trim($alternatives['C']), trim($alternatives['D']), trim($alternatives['E']), $answer, implode(' · ', [requireString($question, 'orgao'), requireString($question, 'banca'), (string) $question['ano'], $role])]);
+        $specialty = null;
+        $assignment = null;
         if ($subjectSlug === 'conhecimentos-especificos') {
             $specialty = SPECIALTIES[$role] ?? null;
             $assignment = $assignments[$questionId] ?? null;
-            if ($specialty === null || !is_array($assignment) || $assignment['specialty_slug'] !== $specialty) throw new RuntimeException("Missing approved editorial assignment for {$questionId}.");
+            if ($specialty === null || !is_array($assignment) || $assignment['specialty_slug'] !== $specialty) {
+                $skippedUnreviewed++;
+                continue;
+            }
+        }
+        $insertQuestion->execute([$questionId, requireString($question, 'estado'), (int) ($question['ano'] ?? 0), requireString($question, 'orgao'), requireString($question, 'banca'), $role, $subjectSlug, $subjectLabel, (int) ($question['numero_questao'] ?? 0), requireString($question, 'enunciado'), trim($alternatives['A']), trim($alternatives['B']), trim($alternatives['C']), trim($alternatives['D']), trim($alternatives['E']), $answer, implode(' · ', [requireString($question, 'orgao'), requireString($question, 'banca'), (string) $question['ano'], $role])]);
+        if ($subjectSlug === 'conhecimentos-especificos') {
             $requiredAssignments[$questionId] = true;
             $insertAssignment->execute([$questionId, $specialty, $assignment['topic_slug'], $version, 'approved', requireString($assignment, 'reviewed_by'), requireString($assignment, 'reviewed_at')]);
         }
@@ -98,7 +106,7 @@ try {
     }
     if (count($requiredAssignments) !== count($assignments) || array_diff_key($assignments, $requiredAssignments)) throw new RuntimeException('Assignments do not exactly cover answerable specific questions.');
     $pdo->commit();
-    echo "Imported {$imported} complete concurso questions and " . count($assignments) . " approved topic assignments; skipped {$skippedIncomplete} answerable records with incomplete alternatives.\n";
+    echo "Imported {$imported} complete concurso questions and " . count($assignments) . " approved topic assignments; skipped {$skippedIncomplete} answerable records with incomplete alternatives and {$skippedUnreviewed} specific questions without approved editorial assignment.\n";
 } catch (Throwable $error) {
     if ($pdo->inTransaction()) $pdo->rollBack();
     throw $error;

@@ -140,7 +140,7 @@ final class QuestionBank {
     private function selectEnem(string $subject, int $limit): array {
         $area = self::ENEM_SUBJECTS[$subject] ?? null;
         if ($area === null) throw new InvalidArgumentException('Matéria ENEM inválida.');
-        $query = $this->pdo->prepare("SELECT id, year, day, question_number, statement, option_a, option_b, option_c, option_d, option_e, correct_option, images FROM enem_questions WHERE area = ? AND status = 'valid' AND correct_option IN ('A', 'B', 'C', 'D', 'E') ORDER BY RANDOM() LIMIT ?");
+        $query = $this->pdo->prepare("SELECT id, year, day, question_number, statement, option_a, option_b, option_c, option_d, option_e, correct_option, images FROM enem_questions WHERE area = ? AND status = 'valid' AND quality_status = 'approved' AND correct_option IN ('A', 'B', 'C', 'D', 'E') ORDER BY RANDOM() LIMIT ?");
         $query->bindValue(1, $area, PDO::PARAM_STR);
         $query->bindValue(2, $limit, PDO::PARAM_INT);
         $query->execute();
@@ -167,13 +167,13 @@ final class QuestionBank {
         return array_map(fn(array $row): array => ['id' => 'concurso:' . $row['id'], 'text' => $row['statement'], 'answers' => [$row['option_a'], $row['option_b'], $row['option_c'], $row['option_d'], $row['option_e']], 'correctOption' => $this->optionIndex($row['correct_option']), 'images' => [], 'source' => $row['source_label']], $query->fetchAll());
     }
 
-    private function enemCount(): int { return (int) $this->pdo->query("SELECT COUNT(*) FROM enem_questions WHERE status = 'valid' AND correct_option IN ('A', 'B', 'C', 'D', 'E')")->fetchColumn(); }
+    private function enemCount(): int { return (int) $this->pdo->query("SELECT COUNT(*) FROM enem_questions WHERE status = 'valid' AND quality_status = 'approved' AND correct_option IN ('A', 'B', 'C', 'D', 'E')")->fetchColumn(); }
     private function concursoCount(): int { return (int) $this->pdo->query('SELECT COUNT(*) FROM concurso_questions')->fetchColumn(); }
 
     private function enemSubjects(): array {
         $result = [];
         foreach (self::ENEM_SUBJECTS as $slug => $label) {
-            $query = $this->pdo->prepare("SELECT COUNT(*) FROM enem_questions WHERE area = ? AND status = 'valid' AND correct_option IN ('A', 'B', 'C', 'D', 'E')");
+            $query = $this->pdo->prepare("SELECT COUNT(*) FROM enem_questions WHERE area = ? AND status = 'valid' AND quality_status = 'approved' AND correct_option IN ('A', 'B', 'C', 'D', 'E')");
             $query->execute([$label]);
             $count = (int) $query->fetchColumn();
             if ($count > 0) $result[] = compact('slug', 'label', 'count');
@@ -210,7 +210,14 @@ final class QuestionBank {
     }
 
     private function publicQuestion(array $question): array {
-        return ['id' => $question['id'], 'text' => $question['text'], 'answers' => $question['answers'], 'images' => array_map(fn(string $path): string => '/question-assets/enem/' . $path, $question['images']), 'source' => $question['source']];
+        $images = [];
+        if (str_starts_with((string) $question['id'], 'enem:')) {
+            $simulatorId = 'inep:' . substr((string) $question['id'], strlen('enem:'));
+            foreach (array_keys($question['images']) as $index) {
+                $images[] = '/api/simulators/questions/' . rawurlencode($simulatorId) . '/images/' . $index;
+            }
+        }
+        return ['id' => $question['id'], 'text' => $question['text'], 'answers' => $question['answers'], 'images' => $images, 'source' => $question['source']];
     }
     private function reviewQuestion(array $question): array { return $this->publicQuestion($question) + ['correctAnswer' => $question['correctOption']]; }
 
