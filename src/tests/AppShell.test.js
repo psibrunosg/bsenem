@@ -28,6 +28,21 @@ describe('AppShell', () => {
     expect(app.miniPlayer).toBeUndefined();
   });
 
+  it('normalizes progress before propagating the user to navigation and routes', async () => {
+    let routeUser;
+    class ProgressRoute {
+      constructor(options) { routeUser = options.user; }
+      render() { return document.createElement('section'); }
+    }
+    const app = new AppShell({ user: { id: 9, name: 'Minimal', email: 'minimal@example.test' } });
+    const element = app.render();
+    app.registerRoute('progress-check', ProgressRoute);
+
+    expect(element.querySelector('.user-level').textContent).toContain('0/1000 XP');
+    await app.renderRoute('progress-check');
+    expect(routeUser).toEqual(expect.objectContaining({ xp: 0, xpMax: 1000, streak: 0, bestStreak: 0 }));
+  });
+
   it('returns a promise that resolves after the requested initial route is mounted', async () => {
     const app = new AppShell({ user });
     const element = app.render();

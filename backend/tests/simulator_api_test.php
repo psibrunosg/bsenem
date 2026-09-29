@@ -180,6 +180,7 @@ try {
     expectSimulatorApiStatus($imageResponse, 200, 'Question owner can load an official image');
     expectSimulatorApiTrue(strlen($imageResponse['body']) > 100, 'Question image route returns image bytes');
     expectSimulatorApiStatus(simulatorApiRequest($root, $path, '/api/simulators/questions/' . rawurlencode($mathQuestionIds[2]) . '/images/99', 'GET', $catalogCookie), 404, 'Unknown question image index is hidden as not found');
+    expectSimulatorApiStatus(simulatorApiRequest($root, $path, '/api/simulators/questions/' . rawurlencode('inep:missing-question') . '/images/0', 'GET', $catalogCookie), 404, 'Unknown question image route is hidden as not found');
     expectSimulatorApiStatus(simulatorApiRequest($root, $path, '/api/simulators/sessions', 'POST', $catalogCookie, [
         'kind' => 'catalog', 'catalog_id' => 'enem:incompleta',
     ]), 404, 'A catalog with an unpublished question cannot be started');
