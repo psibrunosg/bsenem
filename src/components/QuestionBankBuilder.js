@@ -118,6 +118,8 @@ export class QuestionBankBuilder {
       };
       const response = await this.api.post('/question-bank/sessions', payload);
       if (!response?.success || !response.data) throw new Error(response?.message || 'Não foi possível iniciar esta prática.');
+      this.starting = false;
+      this.update();
       this.onStart(response.data);
     } catch (error) {
       this.error = error.message || 'Não foi possível iniciar esta prática.';
