@@ -1,4 +1,5 @@
 import { ExamPlayer } from '@components/ExamPlayer.js';
+import { QuestionBankBuilder } from '@components/QuestionBankBuilder.js';
 import { ResultsScreen } from '@components/ResultsScreen.js';
 import { SimulatorApiService } from '@services/SimulatorApiService.js';
 import { overviewViewModel } from '@services/simulatorViewModel.js';
@@ -13,6 +14,7 @@ const CATALOG_GROUPS = [['enem', 'ENEM'], ['concursos', 'Concursos']];
 export class ExamsPage {
   constructor({ apiClient = defaultApi, user } = {}) {
     this.user = user;
+    this.api = apiClient;
     this.service = new SimulatorApiService(apiClient);
     this.view = null;
     this.loadError = null;
@@ -22,6 +24,8 @@ export class ExamsPage {
     this.player = null;
     this.results = null;
     this.sessionOrigins = new Map();
+    this.questionBankBuilder = null;
+    this.questionBankDraft = null;
     this.element = null;
   }
 
@@ -76,7 +80,7 @@ export class ExamsPage {
     if (this.actionError) nodes.push(this.actionErrorBanner());
     nodes.push(this.hero(), this.masteryMap());
     if (this.view.resume) nodes.push(this.resumeRow());
-    nodes.push(this.catalogList(), this.customBuilder());
+    nodes.push(this.catalogList(), this.questionBankSection(), this.customBuilder());
     this.element.replaceChildren(...nodes);
   }
 
@@ -320,6 +324,16 @@ export class ExamsPage {
     return card;
   }
 
+  questionBankSection() {
+    if (!this.questionBankBuilder) {
+      this.questionBankBuilder = new QuestionBankBuilder({
+        apiClient: this.api,
+        onStart: (session) => this.openQuestionBankPlayer(session),
+      });
+    }
+    return this.questionBankBuilder.element ?? this.questionBankBuilder.render();
+  }
+
   customBuilder() {
     const section = document.createElement('section');
     section.className = 'simulator-builder';
@@ -449,6 +463,40 @@ export class ExamsPage {
     }
   }
 
+  openQuestionBankPlayer(bankSession) {
+    this.questionBankDraft = null;
+    const session = questionBankSessionForPlayer(bankSession);
+    this.showFlow('player', new ExamPlayer({
+      session,
+      onProgressSaved: async (progress) => { this.questionBankDraft = progress; },
+      onComplete: () => this.completeQuestionBankSession(bankSession, session),
+      onExit: () => this.returnHome({ refresh: false }),
+    }));
+  }
+
+  async completeQuestionBankSession(bankSession, playerSession) {
+    const draft = this.questionBankDraft ?? { elapsed_seconds: 0, answers: [] };
+    const answers = (draft.answers ?? []).map((answer) => ({
+      questionId: answer.question_id,
+      selectedOption: questionBankOptionIndex(answer.selected_option),
+      flagged: Boolean(answer.flagged),
+    }));
+    const response = await this.api.post(`/question-bank/sessions/${encodeURIComponent(bankSession.sessionId)}/submit`, { answers });
+    if (!response?.success || !response.data) throw new Error(response?.message || 'Não foi possível corrigir esta prática.');
+    const session = completedQuestionBankSession(playerSession, response.data, draft);
+    this.showQuestionBankResult(session, response.data);
+  }
+
+  showQuestionBankResult(session, result) {
+    this.showFlow('result', new ResultsScreen({
+      session,
+      result,
+      onReview: () => this.showFlow('review', new ExamPlayer({ session, onExit: () => this.showQuestionBankResult(session, result) })),
+      onRetry: () => this.returnHome({ refresh: false }),
+      onBack: () => this.returnHome(),
+    }));
+  }
+
   openPlayer(session) {
     this.showFlow('player', new ExamPlayer({
       session,
@@ -515,8 +563,60 @@ export class ExamsPage {
 
   destroy() {
     this.clearFlow();
+    this.questionBankBuilder?.destroy();
+    this.questionBankBuilder = null;
     this.element?.remove();
   }
+}
+
+const QUESTION_BANK_OPTION_KEYS = ['A', 'B', 'C', 'D', 'E'];
+
+function questionBankSessionForPlayer(bankSession) {
+  const questions = (bankSession.questions ?? []).map((question) => ({
+    id: question.id,
+    statement: question.text,
+    options: Object.fromEntries(QUESTION_BANK_OPTION_KEYS.map((key, index) => [key, question.answers?.[index] ?? ''])),
+    images: Array.isArray(question.images) ? question.images : [],
+    reference: question.source ? { title: question.source } : null,
+  }));
+  return {
+    id: bankSession.sessionId,
+    kind: 'custom',
+    status: 'active',
+    subject: bankSession.title ?? 'Banco de questões',
+    topic: null,
+    question_limit: questions.length,
+    time_limit_seconds: Math.max(1, questions.length) * 180,
+    current_position: 0,
+    elapsed_seconds: 0,
+    questions,
+    answers: [],
+  };
+}
+
+function completedQuestionBankSession(session, result, draft) {
+  const results = new Map((result.questionResults ?? []).map((item) => [item.questionId, item]));
+  return {
+    ...session,
+    status: 'completed',
+    elapsed_seconds: result.totalTime ?? draft.elapsed_seconds ?? 0,
+    questions: session.questions.map((question) => {
+      const item = results.get(question.id);
+      return { ...question, correct_option: QUESTION_BANK_OPTION_KEYS[item?.correctAnswer] ?? null };
+    }),
+    answers: (result.questionResults ?? []).map((item) => ({
+      question_id: item.questionId,
+      selected_option: QUESTION_BANK_OPTION_KEYS[item.selectedAnswer] ?? null,
+      flagged: Boolean(item.flagged),
+      is_correct: Boolean(item.isCorrect),
+    })),
+  };
+}
+
+function questionBankOptionIndex(option) {
+  if (option === null || option === undefined) return null;
+  const index = QUESTION_BANK_OPTION_KEYS.indexOf(option);
+  return index >= 0 ? index : null;
 }
 
 function heroAction(kind) {

@@ -9,6 +9,5 @@ if ($uri !== '/' && file_exists(__DIR__ . '/public' . $uri)) {
     return false;
 }
 
-// Route all requests to index.php
-$_SERVER['REQUEST_URI'] = $uri;
+// Route all requests to index.php while preserving the original URI/query string.
 require __DIR__ . '/public/index.php';

@@ -5,6 +5,7 @@ import packageManifest from '../../package.json' with { type: 'json' };
 
 const indexHtml = readFileSync(resolve(process.cwd(), 'index.html'), 'utf8');
 const deployScript = readFileSync(resolve(process.cwd(), 'scripts/deploy-vps.sh'), 'utf8');
+const phpRouter = readFileSync(resolve(process.cwd(), 'backend/router.php'), 'utf8');
 
 describe('toolchain manifest', () => {
   it('declares reproducible verification commands', () => {
@@ -14,7 +15,10 @@ describe('toolchain manifest', () => {
     expect(packageManifest.scripts['test:backend']).toContain('backend/tests/auth_hardening_test.php');
     expect(packageManifest.scripts['test:backend']).toContain('backend/tests/provision_user_test.php');
     expect(packageManifest.scripts['test:backend']).toContain('backend/tests/private_beta_test.php');
+    expect(packageManifest.scripts['test:backend']).toContain('backend/tests/question_bank_test.php');
+    expect(packageManifest.scripts['test:backend']).toContain('backend/tests/question_bank_import_test.php');
     expect(packageManifest.scripts.build).toBe('vite build');
+    expect(packageManifest.scripts['import:question-bank']).toBe('php scripts/concursos/import-concursos-database.php');
   });
 
   it('validates nginx configuration before every scripted reload', () => {
@@ -23,6 +27,11 @@ describe('toolchain manifest', () => {
     expect(reloadFunction).toContain('nginx -t');
     expect(reloadFunction).toContain('nginx -s reload');
     expect(reloadFunction.indexOf('nginx -t')).toBeLessThan(reloadFunction.indexOf('nginx -s reload'));
+  });
+
+  it('preserves query strings when the PHP dev router forwards API requests', () => {
+    expect(phpRouter).not.toContain("$_SERVER['REQUEST_URI'] = $uri;");
+    expect(phpRouter).toContain("parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH)");
   });
 
   it('declares the standard mobile web app capability meta tag', () => {

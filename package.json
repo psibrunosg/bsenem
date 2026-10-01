@@ -10,8 +10,9 @@
     "preview": "vite preview",
     "test": "vitest run",
     "test:watch": "vitest",
-    "test:backend": "php backend/tests/auth_test.php && php backend/tests/auth_hardening_test.php && php backend/tests/provision_user_test.php && php backend/tests/private_beta_test.php",
+    "test:backend": "php backend/tests/auth_test.php && php backend/tests/auth_hardening_test.php && php backend/tests/provision_user_test.php && php backend/tests/private_beta_test.php && php backend/tests/question_bank_test.php && php backend/tests/question_bank_import_test.php",
     "lint:php": "php backend/tests/lint_test.php",
+    "import:question-bank": "php scripts/concursos/import-concursos-database.php",
     "provision-user": "php backend/cli/provision-user.php"
   },
   "devDependencies": {

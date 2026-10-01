@@ -30,6 +30,7 @@
 @import './components/flashcard.css';
 @import './components/notes.css';
 @import './components/exam.css';
+@import './components/question-bank.css';
 @import './components/dashboard.css';
 @import './components/library.css';
 @import './components/course-library.css';

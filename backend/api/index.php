@@ -15,6 +15,7 @@ require_once __DIR__ . '/../controllers/ProgressController.php';
 require_once __DIR__ . '/../controllers/ExamController.php';
 require_once __DIR__ . '/../controllers/StudyLibraryController.php';
 require_once __DIR__ . '/../controllers/SimulatorController.php';
+require_once __DIR__ . '/../controllers/QuestionBankController.php';
 
 initializeDatabase();
 Csrf::enforce();
@@ -164,6 +165,22 @@ match(true) {
         => ExamController::attempt(),
     $resource === 'exams' && $id === 'local-attempt' && $method === 'POST'
         => ExamController::localAttempt(),
+
+    // Question bank routes
+    $resource === 'question-bank' && $id === 'facets' && $method === 'GET'
+        => QuestionBankController::facets(),
+
+    $resource === 'question-bank' && $id === 'sessions' && !$sub && $method === 'POST'
+        => QuestionBankController::createSession(),
+
+    $resource === 'question-bank' && $id === 'sessions' && is_string($sub) && $action === 'submit' && $method === 'POST'
+        => QuestionBankController::submitSession($sub),
+
+    $resource === 'question-bank' && $id === 'errors' && $method === 'GET'
+        => QuestionBankController::errors(),
+
+    $resource === 'question-bank' && $id === 'history' && $method === 'GET'
+        => QuestionBankController::history(),
 
     // Fallback
     default => Response::notFound('Endpoint not found')
